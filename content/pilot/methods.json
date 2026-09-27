@@ -1,0 +1,593 @@
+[
+  {
+    "thinkingSkillId": "F01",
+    "title": "抽象与多种表示",
+    "observableAction": "从故事提取对象与关系，图、表、式互译",
+    "applicationStructures": [
+      "数的位值",
+      "应用题建模"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F02",
+    "title": "数形结合与可视化",
+    "observableAction": "用图解释数，用数检验图",
+    "applicationStructures": [
+      "数线上的分数",
+      "几何计数"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": {
+      "question": "数字看不清楚时，能画出它们的关系吗？",
+      "condition": "先说清每块图形表示什么量。同一种量用同一种标记；比较长度时，要用同一个比例。",
+      "why": "图把原来藏在句子里的部分、整体、相差和相等摆在一起，方便对照。",
+      "example": "画一条有9格的纸带，划掉其中5格，余下4格。图上的“原来9格、去掉5格、留下4格”对应9−5＝4。",
+      "counterexample": "随手画出的长条不一定按比例。不能因为纸上甲看起来是乙的两倍，就认定题目中的甲也是乙的两倍。",
+      "lessonIds": [
+        "numbers.subtraction.meaning",
+        "geometry.area.perimeter"
+      ]
+    }
+  },
+  {
+    "thinkingSkillId": "F03",
+    "title": "单位量与单位“1”",
+    "observableAction": "明确以什么为一份、什么为整体",
+    "applicationStructures": [
+      "平均分",
+      "分数、比例和工程"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": {
+      "question": "这句话里的“一份”和“全部”，分别指什么？",
+      "condition": "先固定所说的整体，再确定怎样等分。比较实际多少，还要知道两个整体是否同样大。",
+      "why": "分数说明取了整体的几份；知道整体的实际大小，才能求取出的实际量。",
+      "example": "1米纸带的1/3长1/3米；2米纸带的1/3长2/3米。占比相同，实际长度不同。",
+      "counterexample": "不能只因为两份蛋糕都叫“一半”，就说它们一样大。还要比较两块完整蛋糕的大小。",
+      "lessonIds": [
+        "numbers.fractions.meaning"
+      ]
+    }
+  },
+  {
+    "thinkingSkillId": "F04",
+    "title": "关系建模",
+    "observableAction": "写出条件、未知量、单位与约束",
+    "applicationStructures": [
+      "单价总价",
+      "行程与浓度"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F05",
+    "title": "分解与组合",
+    "observableAction": "拆成可解决部分再合并",
+    "applicationStructures": [
+      "乘法分配律",
+      "组合面积"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F06",
+    "title": "凑整与补偿",
+    "observableAction": "说明补了多少、为什么要还回",
+    "applicationStructures": [
+      "简便计算",
+      "盈亏比较"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F07",
+    "title": "等价转化",
+    "observableAction": "换表示或问题形式并保持解的条件",
+    "applicationStructures": [
+      "分数通分",
+      "割补转化"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F08",
+    "title": "整体与等量替换",
+    "observableAction": "把一个完整对象换成相等表达",
+    "applicationStructures": [
+      "两袋物品",
+      "间接测量"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": {
+      "question": "已知两样东西一样多，能用其中一个换掉另一个吗？",
+      "condition": "相等关系必须已经知道；要换的是完整的一份，外面的乘法、减法和其他部分都要保留。",
+      "why": "每份的数量没变，换一种写法后，整个式子表达的数量也不会变。",
+      "example": "一盒里有一袋糖和2颗散糖。一袋记作x，三盒就写成3×(x＋2)。每盒都有2颗散糖，所以也等于3x＋6。",
+      "counterexample": "3×(x＋2)不能写成3x＋2，那样只记了一盒的散糖，漏了另外两盒。",
+      "lessonIds": [
+        "algebra.substitution.intro",
+        "algebra.balance.intro"
+      ]
+    }
+  },
+  {
+    "thinkingSkillId": "F09",
+    "title": "假设与比较",
+    "observableAction": "先选基准情形，再根据差量修正",
+    "applicationStructures": [
+      "鸡兔同笼",
+      "混合配比"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F10",
+    "title": "消元与消去共同部分",
+    "observableAction": "让相同未知部分抵消",
+    "applicationStructures": [
+      "线段和差",
+      "两条等量关系"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F11",
+    "title": "逆向与还原",
+    "observableAction": "从终点反推并检查每一步可逆",
+    "applicationStructures": [
+      "逆运算",
+      "赠送、反弹"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": {
+      "question": "知道最后剩下多少，能倒着找回原来多少吗？",
+      "condition": "倒着走的每一步都要和原来的动作对应；若原动作丢掉了信息，可能不能唯一还原。",
+      "why": "加上再减去同一个数会回到原处，乘以再除以同一个非零数也一样。",
+      "example": "送出5张贴纸后还剩4张。倒着把送出的5张放回来：4＋5＝9。再检查9−5确实是4。",
+      "counterexample": "把一个数乘0得到0，仅知道结果是0，无法找回原数；很多不同的数都可能。",
+      "lessonIds": [
+        "numbers.subtraction.meaning",
+        "algebra.balance.intro"
+      ]
+    }
+  },
+  {
+    "thinkingSkillId": "F12",
+    "title": "分类讨论",
+    "observableAction": "明确互斥或重叠边界，并覆盖全部",
+    "applicationStructures": [
+      "三角形分类",
+      "计数分情况"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F13",
+    "title": "有序枚举",
+    "observableAction": "固定顺序列出有限情况并检漏",
+    "applicationStructures": [
+      "数字谜",
+      "选组和路线"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F14",
+    "title": "一一对应",
+    "observableAction": "构造对应并说明不重不漏",
+    "applicationStructures": [
+      "比较数量",
+      "配对计数"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": {
+      "question": "能让每个对象恰好配上一个伙伴吗？",
+      "condition": "每个对象都要配到，不能漏；同一个伙伴不能重复配给两个对象。",
+      "why": "配完以后，两边如果都没有剩下，数量就相等；哪边有剩下，哪边更多。",
+      "example": "7个饭盒，每个放1个苹果。饭盒和苹果一对一配好，需要7个苹果。把饭盒摆远一点，不会多需要苹果。",
+      "counterexample": "一个苹果先配给左边饭盒，又被算到右边饭盒里，就重复计算了，不能据此判断苹果够了。",
+      "lessonIds": [
+        "numbers.quantity.intro"
+      ]
+    }
+  },
+  {
+    "thinkingSkillId": "F15",
+    "title": "不变量与守恒",
+    "observableAction": "说明允许操作中哪个量保持",
+    "applicationStructures": [
+      "年龄差",
+      "面积、总量与棋盘"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": {
+      "question": "做了一个动作，究竟什么变了，什么没有变？",
+      "condition": "先说清允许做什么，再确定要观察的量。不同动作可能保留不同的量。",
+      "why": "抓住没有变的量，就能解释外表不同的状态为什么仍有同一关系。",
+      "example": "左筐3个、右筐2个苹果。从右筐移1个到左筐，变成4个和1个，总数仍是5。两人的贴纸数同时加1，原来的差也不变。",
+      "counterexample": "从外面新添1个苹果，总数就变了。又如12块方砖重新拼成长方形，面积不变，周长却可能改变。",
+      "lessonIds": [
+        "numbers.addition.meaning",
+        "numbers.subtraction.meaning",
+        "geometry.area.perimeter"
+      ]
+    }
+  },
+  {
+    "thinkingSkillId": "F16",
+    "title": "奇偶分析",
+    "observableAction": "用配对和余数说明可能与不可能",
+    "applicationStructures": [
+      "整数运算",
+      "染色和取物"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F17",
+    "title": "周期与余数",
+    "observableAction": "找周期、起点与循环中的位置",
+    "applicationStructures": [
+      "星期报数",
+      "末位与环形运动"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F18",
+    "title": "对称与配对",
+    "observableAction": "找到对称对象和对应操作",
+    "applicationStructures": [
+      "等差求和",
+      "几何和策略游戏"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F19",
+    "title": "极端、界限与最优化",
+    "observableAction": "考察边界并比较可行方案",
+    "applicationStructures": [
+      "数位最值",
+      "平均分配与统筹"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F20",
+    "title": "最坏情况与抽屉原理",
+    "observableAction": "先构造仍不能保证的情况",
+    "applicationStructures": [
+      "摸球保证",
+      "余数分类"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F21",
+    "title": "容斥与重复计数修正",
+    "observableAction": "标出重叠部分并修正重复次数",
+    "applicationStructures": [
+      "集合人数",
+      "边框和覆盖"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F22",
+    "title": "由小到大与递推",
+    "observableAction": "把新情况联系到已解决的小情况",
+    "applicationStructures": [
+      "路径、铺砖",
+      "图形数列"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F23",
+    "title": "构造与试验",
+    "observableAction": "主动造一个符合条件的对象",
+    "applicationStructures": [
+      "幻方",
+      "几何拼搭和方案设计"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F24",
+    "title": "猜想与概括",
+    "observableAction": "从例子猜规律，再说明证据边界",
+    "applicationStructures": [
+      "运算规律",
+      "数列与图形规律"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F25",
+    "title": "反例与矛盾检验",
+    "observableAction": "找反例或推出与条件冲突之处",
+    "applicationStructures": [
+      "判断命题",
+      "不可能铺砌"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F26",
+    "title": "估算与合理性检查",
+    "observableAction": "用数量级、单位和上下界检查",
+    "applicationStructures": [
+      "竖式结果",
+      "测量与应用题"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F27",
+    "title": "论证与多路径验证",
+    "observableAction": "连接理由，代回或用另一表示核对",
+    "applicationStructures": [
+      "等式变换",
+      "计数与几何解释"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  },
+  {
+    "thinkingSkillId": "F28",
+    "title": "数据推断与模型修订",
+    "observableAction": "区分观察与结论，按新数据修正",
+    "applicationStructures": [
+      "随机实验",
+      "调查与生活项目"
+    ],
+    "requiredAuthoring": [
+      "适用条件",
+      "为什么成立",
+      "两种不同结构的应用",
+      "失效例或反例",
+      "独立迁移任务",
+      "保持证据规则"
+    ],
+    "status": "planned",
+    "guide": null
+  }
+]

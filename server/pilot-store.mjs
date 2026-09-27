@@ -1,0 +1,118 @@
+import {randomUUID} from 'node:crypto';
+import {validateTask} from '../shared/pilot-math.mjs';
+import {ensureFriend} from './pet-care.mjs';
+import {prepareReview,finishReview,validReviewSchedule} from './review-schedule.mjs';
+
+const DAY=86400000;
+const key=v=>typeof v==='string'&&/^[a-zA-Z0-9._:-]{1,180}$/.test(v)&&!['__proto__','constructor','prototype'].includes(v);
+const object=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
+function check(ok,message,code='INVALID_INPUT'){if(!ok){const e=new Error(message);e.code=code;e.status=code==='STALE_REVISION'?409:400;throw e;}}
+export const initPilot=p=>p.studio??={version:1,reading:{},sessions:{},notes:[],events:[],entitlements:{},daily:{},review:{}};
+const publicTask=({expected,hint,solution,diagnostic,fields,...t})=>({...t,...(fields?{fields:fields.map(({expected,...f})=>f)}:{})});
+export const publicLesson=l=>({...l,taskSets:Object.fromEntries(Object.entries(l.taskSets).map(([k,tasks])=>[k,tasks.map(publicTask)]))});
+export const publicSession=s=>({...s,tasks:s.tasks.map(publicTask)});
+const day=now=>new Date(now+8*3600000).toISOString().slice(0,10);
+const findLesson=(lessons,id)=>{const l=lessons.find(x=>x.lessonId===id);check(l,'这节课还没有安装到本机。可以返回学习地图选择其他课。','CONTENT_NOT_INSTALLED');return l;};
+function sessionOf(p,id){const s=initPilot(p).sessions[id];check(s,'找不到这次练习，请从课程重新进入。','CONTENT_NOT_INSTALLED');return s;}
+function revision(s,r){check(Number.isInteger(r)&&s.revision===r,'另一个页面保存了较新的进度。请重新载入，避免覆盖它。','STALE_REVISION');}
+function answerCheck(a){check(object(a)&&Object.keys(a).length<=12&&Object.entries(a).every(([k,v])=>key(k)&&typeof v==='string'&&v.length<=200),'答案格式不正确。');}
+function credit(p,id,amount,label,now){if(amount<=0||p.wallet.ledger.some(e=>e.id===id))return; p.wallet.coins+=amount;p.wallet.earned+=amount;p.wallet.ledger.push({id,amount,label,at:new Date(now).toISOString()});}
+export function saveReading(p,input,lessons,now=Date.now()){
+  const l=findLesson(lessons,input.lessonId),state=initPilot(p);const old=state.reading[l.lessonId]??{revision:0};revision(old,input.revision);
+  check(l.articleBlocks.some(b=>b.blockId===input.blockId),'阅读位置不存在。');check(object(input.widgets)&&JSON.stringify(input.widgets).length<30000,'实验状态太大，请重置后再保存。');
+  const result={revision:old.revision+1,blockId:input.blockId,widgets:input.widgets,savedAt:new Date(now).toISOString()};state.reading[l.lessonId]=result;state.lastLessonId=l.lessonId;return result;
+}
+export function createSession(p,input,lessons,now=Date.now()){
+  const l=findLesson(lessons,input.lessonId),st=initPilot(p);check(['warmup','core','transfer','challenge','review'].includes(input.setName),'请选择练习组。');
+  const existing=Object.values(st.sessions).find(s=>s.lessonId===l.lessonId&&s.setName===input.setName&&!s.completedAt&&s.contentVersion===l.contentVersion);
+  if(existing){
+    // Wording edits refresh unfinished sessions without resetting answers or reward rights.
+    if(existing.editorialRevision!==l.editorialRevision){existing.tasks=structuredClone(l.taskSets[input.setName]);existing.editorialRevision=l.editorialRevision;existing.revision++;}
+    existing.selfChecks??={};return existing;
+  }
+  const at=new Date(now).toISOString();const review=st.review?.[l.lessonId];
+  const s={id:randomUUID(),lessonId:l.lessonId,contentVersion:l.contentVersion,setName:input.setName,taskIds:l.taskSets[input.setName].map(t=>t.id),tasks:structuredClone(l.taskSets[input.setName]),revision:0,index:0,answers:{},help:{},results:{},selfChecks:{},createdAt:at,savedAt:at,completedAt:null,reviewDue:input.setName==='review'&&review&&Date.parse(review.dueAt)<=now?review.dueAt:null};
+  st.sessions[s.id]=s;st.lastLessonId=l.lessonId;return s;
+}
+export function saveSession(p,input,now=Date.now()){
+  const s=sessionOf(p,input.sessionId);revision(s,input.revision);check(Number.isInteger(input.index)&&input.index>=0&&input.index<s.taskIds.length,'题目位置不正确。');
+  check(object(input.answers)&&Object.entries(input.answers).every(([id,a])=>s.taskIds.includes(id)&&object(a)),'练习草稿不正确。');
+  for(const a of Object.values(input.answers))answerCheck(a);
+  s.answers=input.answers;s.index=input.index;s.revision++;s.savedAt=new Date(now).toISOString();return s;
+}
+function receipt(st,eventId,payload,fn){check(key(eventId),'保存编号不正确。');const previous=st.events.find(e=>e.id===eventId);const signature=JSON.stringify(payload);if(previous){check(previous.signature===signature,'同一个保存编号不能用于不同操作。');return previous.result;}const result=fn();st.events.push({id:eventId,signature,result});return result;}
+export function revealHelp(p,input,now=Date.now()){
+  const st=initPilot(p);return receipt(st,input.eventId,{action:'help',...input},()=>{
+    const s=sessionOf(p,input.sessionId);revision(s,input.revision);const task=s.tasks.find(t=>t.id===input.taskId);check(task&&['hint','solution','article'].includes(input.kind),'提示不存在。');
+    if(s.help[task.id]!=='solution')s.help[task.id]=input.kind;if(s.selfChecks?.[task.id])s.selfChecks[task.id].helpLevel=s.help[task.id];s.revision++;s.savedAt=new Date(now).toISOString();
+    return {text:input.kind==='solution'?task.solution:input.kind==='hint'?task.hint:'可以回看讲解；这道题会记录为参考辅助。',revision:s.revision};
+  });
+}
+export function selfCheckTask(p,input,now=Date.now()){
+  const st=initPilot(p);return receipt(st,input.eventId,{action:'self-check',...input},()=>{
+    const s=sessionOf(p,input.sessionId);revision(s,input.revision);const task=s.tasks.find(t=>t.id===input.taskId);check(task,'题目不存在。');answerCheck(input.answer);
+    const shape=validateTask(task,input.answer);if(shape.status==='invalidInput')return {...shape,revision:s.revision};
+    s.selfChecks??={};
+    if(!s.selfChecks[task.id])s.selfChecks[task.id]={firstAnswer:structuredClone(input.answer),checkedAt:new Date(now).toISOString(),helpLevel:s.help[task.id]??null,modelStateVersion:String(input.modelStateVersion??s.contentVersion),selfCorrection:null};
+    s.answers[task.id]=input.answer;s.revision++;s.savedAt=new Date(now).toISOString();
+    return {status:'selfCheck',message:'先别看对错。请重新读一遍题目，检查单位、第一步和整条算式；想改就改，再提交最终答案。',revision:s.revision};
+  });
+}
+export function submitTask(p,input,lessons,now=Date.now()){
+  const st=initPilot(p);return receipt(st,input.eventId,{action:'submit',...input},()=>{
+    const s=sessionOf(p,input.sessionId);revision(s,input.revision);const task=s.tasks.find(t=>t.id===input.taskId);check(task,'题目不存在。');answerCheck(input.answer);s.selfChecks??={};check(s.selfChecks[task.id],'请先完成一次不显示对错的自查。');
+    const verdict=validateTask(task,input.answer);if(verdict.status==='invalidInput')return {...verdict,paid:0,revision:s.revision};
+    const assisted=Boolean(s.help[task.id]),at=new Date(now).toISOString();s.answers[task.id]=input.answer;
+    if(verdict.status==='incorrect'){st.review??={};st.review[s.lessonId]??={dueAt:new Date(now+DAY).toISOString(),stage:0};if(s.setName==='review')s.hadIncorrect=true;}
+    const d=st.daily[day(now)]??={tasks:0,completion:0};let paid=0;
+    if(verdict.status==='correct'){
+      const eligibility=`${s.contentVersion}:${task.id}${s.setName==='review'?`:${s.reviewDue??'preview'}`:''}`;
+      const nominal=s.help[task.id]==='solution'?0:2+(!assisted&&s.setName==='transfer'?1:0)+(!assisted&&task.reasonEvidence?1:0);
+      const earnedBefore=st.entitlements[eligibility]??0;
+      const rewardAllowed=s.setName!=='review'||Boolean(s.reviewDue);
+      paid=rewardAllowed?Math.min(Math.max(0,nominal-earnedBefore),Math.max(0,30-d.tasks)):0;
+      st.entitlements[eligibility]=Math.max(earnedBefore,nominal);d.tasks+=paid;
+      credit(p,`pilot:${input.eventId}`,paid,'互动课程任务',now);
+    }
+    const evidence=s.selfChecks[task.id];evidence.selfCorrection=JSON.stringify(evidence.firstAnswer)!==JSON.stringify(input.answer);
+    const result={...verdict,paid,assisted,at,solution:verdict.status==='correct'?task.solution:undefined,diagnostic:verdict.status==='incorrect'?task.diagnostic:undefined,firstAnswer:evidence.firstAnswer,finalAnswer:structuredClone(input.answer),selfCorrection:evidence.selfCorrection,helpLevel:evidence.helpLevel,modelStateVersion:evidence.modelStateVersion};
+    // A later retry does not erase evidence that a task was already successfully completed.
+    if(s.results[task.id]?.status!=='correct'||verdict.status==='correct')s.results[task.id]=result;
+    if(verdict.status==='correct'){const next=s.taskIds.findIndex(id=>s.results[id]?.status!=='correct');s.index=next<0?s.taskIds.length-1:next;}
+    s.revision++;s.savedAt=at;
+    let completionPaid=0;
+    if(!s.completedAt&&s.taskIds.every(id=>s.results[id]?.status==='correct')){
+      s.completedAt=at;
+      if(s.setName==='core'){
+        if(!d.completion){d.completion=5;completionPaid=5;credit(p,`pilot:complete:${day(now)}`,5,'完成今天的核心练习',now);ensureFriend(p,now);for(const id of p.pets.owned){const f=p.pets.care.friends[id];if(f)f.growth+=10;}p.pets.xp+=10*p.pets.owned.length;p.pets.care.memories.unshift({pet:p.pets.active,kind:'learn',text:`一起完成「${findLesson(lessons,s.lessonId).shortTitle}」的核心练习。`,at,lessonId:s.lessonId});p.pets.care.memories=p.pets.care.memories.slice(0,160);}
+        st.review??={};st.review[s.lessonId]??={dueAt:new Date(now+DAY).toISOString(),stage:0};
+        const first=Object.values(st.sessions).filter(item=>item.lessonId===s.lessonId&&item.setName==='core'&&item.completedAt).map(item=>item.completedAt).sort()[0];
+        prepareReview(st.review[s.lessonId],now,first);
+      }
+      if(s.setName==='review'&&s.reviewDue&&st.review?.[s.lessonId]?.dueAt===s.reviewDue){
+        const first=Object.values(st.sessions).filter(item=>item.lessonId===s.lessonId&&item.setName==='core'&&item.completedAt).map(item=>item.completedAt).sort()[0];
+        finishReview(st.review[s.lessonId],now,!s.hadIncorrect&&s.taskIds.every(id=>!s.results[id].assisted),p.settings.reviewDays,first);
+      }
+    }
+    return {...result,revision:s.revision,completionPaid,completed:Boolean(s.completedAt),dailyCap:d.tasks>=30};
+  });
+}
+export function saveNote(p,input,lessons,now=Date.now()){
+  findLesson(lessons,input.lessonId);check(key(input.id)&&typeof input.text==='string'&&input.text.trim().length>0&&input.text.length<=1200,'写下一点想法再保存。');const st=initPilot(p);const prior=st.notes.find(n=>n.id===input.id);if(prior)return prior;
+  const note={id:input.id,lessonId:input.lessonId,text:input.text.trim(),status:'ungraded',at:new Date(now).toISOString()};st.notes.push(note);return note;
+}
+export function validatePilot(st){
+  if(st===undefined)return;
+  check(object(st)&&st.version===1&&object(st.reading)&&object(st.sessions)&&Array.isArray(st.notes)&&Array.isArray(st.events)&&object(st.entitlements)&&object(st.daily),'互动课程存档不完整。');
+  check(JSON.stringify(st).length<6*1024*1024,'互动课程存档超过大小限制。');
+  for(const [id,r] of Object.entries(st.reading))check(key(id)&&object(r)&&Number.isInteger(r.revision)&&r.revision>=0&&typeof r.blockId==='string'&&object(r.widgets),'阅读记录不完整。');
+  for(const [id,s] of Object.entries(st.sessions)){
+    check(key(id)&&s.id===id&&key(s.lessonId)&&Number.isInteger(s.revision)&&s.revision>=0&&Array.isArray(s.taskIds)&&s.taskIds.length>0&&Array.isArray(s.tasks)&&s.tasks.length===s.taskIds.length&&Number.isInteger(s.index)&&s.index>=0&&s.index<s.taskIds.length&&object(s.answers)&&object(s.help)&&object(s.results)&&(s.selfChecks===undefined||object(s.selfChecks)),'练习记录不完整。');
+    for(const a of Object.values(s.answers))answerCheck(a);
+    check(Object.values(s.help).every(h=>['hint','solution','article'].includes(h)),'帮助记录不正确。');
+  }
+  for(const n of st.notes)check(key(n.id)&&key(n.lessonId)&&typeof n.text==='string'&&n.text.length<=1200&&n.status==='ungraded','发现手册格式不正确。');
+  for(const e of st.events)check(key(e.id)&&typeof e.signature==='string'&&object(e.result),'保存回执格式不正确。');
+  for(const d of Object.values(st.daily))check(Number.isInteger(d.tasks)&&d.tasks>=0&&d.tasks<=30&&[0,5].includes(d.completion),'星点上限记录不正确。');
+  if(st.review!==undefined){check(object(st.review),'复习记录不完整。');for(const [id,r] of Object.entries(st.review))check(key(id)&&object(r)&&Number.isFinite(Date.parse(r.dueAt))&&Number.isInteger(r.stage)&&r.stage>=0&&validReviewSchedule(r),'复习日期记录不完整。');}
+}

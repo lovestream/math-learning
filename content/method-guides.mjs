@@ -1,0 +1,9 @@
+// First reviewed method cards. The other F01–F28 entries remain an index, not completed lessons.
+export const methodGuides={
+  F02:{question:'数字看不清楚时，能画出它们的关系吗？',condition:'先说清每块图形表示什么量。同一种量用同一种标记；比较长度时，要用同一个比例。',why:'图把原来藏在句子里的部分、整体、相差和相等摆在一起，方便对照。',example:'画一条有9格的纸带，划掉其中5格，余下4格。图上的“原来9格、去掉5格、留下4格”对应9−5＝4。',counterexample:'随手画出的长条不一定按比例。不能因为纸上甲看起来是乙的两倍，就认定题目中的甲也是乙的两倍。',lessonIds:['numbers.subtraction.meaning','geometry.area.perimeter']},
+  F03:{question:'这句话里的“一份”和“全部”，分别指什么？',condition:'先固定所说的整体，再确定怎样等分。比较实际多少，还要知道两个整体是否同样大。',why:'分数说明取了整体的几份；知道整体的实际大小，才能求取出的实际量。',example:'1米纸带的1/3长1/3米；2米纸带的1/3长2/3米。占比相同，实际长度不同。',counterexample:'不能只因为两份蛋糕都叫“一半”，就说它们一样大。还要比较两块完整蛋糕的大小。',lessonIds:['numbers.fractions.meaning']},
+  F08:{question:'已知两样东西一样多，能用其中一个换掉另一个吗？',condition:'相等关系必须已经知道；要换的是完整的一份，外面的乘法、减法和其他部分都要保留。',why:'每份的数量没变，换一种写法后，整个式子表达的数量也不会变。',example:'一盒里有一袋糖和2颗散糖。一袋记作x，三盒就写成3×(x＋2)。每盒都有2颗散糖，所以也等于3x＋6。',counterexample:'3×(x＋2)不能写成3x＋2，那样只记了一盒的散糖，漏了另外两盒。',lessonIds:['algebra.substitution.intro','algebra.balance.intro']},
+  F11:{question:'知道最后剩下多少，能倒着找回原来多少吗？',condition:'倒着走的每一步都要和原来的动作对应；若原动作丢掉了信息，可能不能唯一还原。',why:'加上再减去同一个数会回到原处，乘以再除以同一个非零数也一样。',example:'送出5张贴纸后还剩4张。倒着把送出的5张放回来：4＋5＝9。再检查9−5确实是4。',counterexample:'把一个数乘0得到0，仅知道结果是0，无法找回原数；很多不同的数都可能。',lessonIds:['numbers.subtraction.meaning','algebra.balance.intro']},
+  F14:{question:'能让每个对象恰好配上一个伙伴吗？',condition:'每个对象都要配到，不能漏；同一个伙伴不能重复配给两个对象。',why:'配完以后，两边如果都没有剩下，数量就相等；哪边有剩下，哪边更多。',example:'7个饭盒，每个放1个苹果。饭盒和苹果一对一配好，需要7个苹果。把饭盒摆远一点，不会多需要苹果。',counterexample:'一个苹果先配给左边饭盒，又被算到右边饭盒里，就重复计算了，不能据此判断苹果够了。',lessonIds:['numbers.quantity.intro']},
+  F15:{question:'做了一个动作，究竟什么变了，什么没有变？',condition:'先说清允许做什么，再确定要观察的量。不同动作可能保留不同的量。',why:'抓住没有变的量，就能解释外表不同的状态为什么仍有同一关系。',example:'左筐3个、右筐2个苹果。从右筐移1个到左筐，变成4个和1个，总数仍是5。两人的贴纸数同时加1，原来的差也不变。',counterexample:'从外面新添1个苹果，总数就变了。又如12块方砖重新拼成长方形，面积不变，周长却可能改变。',lessonIds:['numbers.addition.meaning','numbers.subtraction.meaning','geometry.area.perimeter']}
+};

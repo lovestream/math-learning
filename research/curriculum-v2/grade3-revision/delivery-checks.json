@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-25",
+  "html": [
+    {
+      "file": "Kevin三年级_全单元提升题预览.html",
+      "articles": 48,
+      "embeddedSVGs": 11,
+      "hiddenHintSVGs": 1,
+      "defaultOpenAnswers": 0,
+      "externalResources": 0,
+      "uniqueElementIds": true
+    },
+    {
+      "file": "Kevin三年级_提升题图文预览.html",
+      "articles": 32,
+      "embeddedSVGs": 15,
+      "hiddenHintSVGs": 0,
+      "defaultOpenAnswers": 0,
+      "externalResources": 0,
+      "uniqueElementIds": true
+    }
+  ],
+  "markdownImageLinks": "all resolve; full grade3 has26",
+  "frozenFilesVerified": 9,
+  "browserClickTest": "not_run_file_url_blocked_by_browser_security_policy"
+}

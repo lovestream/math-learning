@@ -1,0 +1,94 @@
+{
+  "retrievedAt": "2026-09-07",
+  "rights": "Original character/image/audio rights belong to their respective rights holders. Publicly accessible does not imply an open reuse license; no redistribution or commercial license is claimed.",
+  "assets": [
+    {
+      "file": "public/assets/pets/eggy/dongdong.png",
+      "sourceUrl": "https://nie.res.netease.com/r/pic/20231117/2a2d7a96-8161-4e81-8f28-9df83ada954d.png",
+      "sourcePage": "https://party.163.com/official/20231117/35180_1120685.html",
+      "sourceType": "official-original-image",
+      "alterations": "none",
+      "sha256": "f6bbaab13977ec92cecb840ae8043f4e1432658df37177b8b7b57f2f02e43a8c"
+    },
+    {
+      "file": "public/assets/pets/eggy/honey.png",
+      "sourceUrl": "https://nie.res.netease.com/r/pic/20231117/6088d380-c8dc-46ef-908f-7c64b2092f58.png",
+      "sourcePage": "https://party.163.com/official/20231117/35180_1120685.html",
+      "sourceType": "official-original-image",
+      "alterations": "none",
+      "sha256": "5f80ae2da77dcd89c1cbde9d1c186b4099d1e65ea4e9b23dda9e90f1fb13727e"
+    },
+    {
+      "file": "public/assets/pets/eggy/ducky.png",
+      "sourceUrl": "https://nie.res.netease.com/r/pic/20240621/657d89a8-7cc5-4fec-86f4-5da26dd9a2f5.png",
+      "sourcePage": "https://party.163.com/official/20240621/35180_1162457.html",
+      "sourceType": "official-original-image",
+      "alterations": "none",
+      "sha256": "18c0ae18d29738c6abe5d6597e1d9b1322c49a5027d9788ab540d6b60fabcb39"
+    },
+    {
+      "file": "public/assets/pets/eggy/icecream.png",
+      "sourceUrl": "https://nie.res.netease.com/r/pic/20240621/b50f0a02-0ad7-4484-becf-6d26c394a4c2.png",
+      "sourcePage": "https://party.163.com/official/20240621/35180_1162457.html",
+      "sourceType": "official-original-image",
+      "alterations": "none",
+      "sha256": "a97c94b23843987dcb64d39f22f1da87924a2a96504e7c84b68f776d5e56f7a9"
+    },
+    {
+      "file": "public/assets/pets/eggy/flowers.png",
+      "sourceUrl": "https://nie.res.netease.com/r/pic/20231117/a0cf7c80-7e93-4119-9949-5fd61492f816.png",
+      "sourcePage": "https://party.163.com/official/20231117/35180_1120685.html",
+      "sourceType": "official-original-image",
+      "alterations": "none",
+      "sha256": "f3e03f0ae2c141ae60e186d9d3995aadd0fb3b5dd6ec083f230dc9e9b57daf2e"
+    },
+    {
+      "file": "public/assets/pets/eggy/voices/ducky-travel.mp3",
+      "sourceUrl": "https://nie.v.netease.com/r/video/20240617/6c1ae007-aae9-4634-87d2-85cc2f0097fa.mp4",
+      "sourcePage": "https://party.163.com/media/index.html?tab=1",
+      "sourceTitle": "鸭鸭DongDong联动pv",
+      "sourceType": "official-video-short-audio-excerpt",
+      "startSeconds": 72.67,
+      "endSeconds": 75.04,
+      "alterations": "Extracted original audio; mono 96kbps MP3 with 40ms/60ms fades. Original background music remains. No voice synthesis.",
+      "verification": "Official video captions cross-checked with local speech recognition timestamps; not a clean game voice asset.",
+      "sha256": "b26b12c87cc7df5d0a2b6d770c450dd68b428d54a16b20057f6ca41dff606a89"
+    },
+    {
+      "file": "public/assets/pets/eggy/voices/dongdong-good-day.mp3",
+      "sourceUrl": "https://nie.v.netease.com/r/video/20240617/6c1ae007-aae9-4634-87d2-85cc2f0097fa.mp4",
+      "sourcePage": "https://party.163.com/media/index.html?tab=1",
+      "sourceTitle": "鸭鸭DongDong联动pv",
+      "sourceType": "official-video-short-audio-excerpt",
+      "startSeconds": 75.5,
+      "endSeconds": 78.06,
+      "alterations": "Extracted original audio; mono 96kbps MP3 with 40ms/60ms fades. Original background music remains. No voice synthesis.",
+      "verification": "Official video captions cross-checked with local speech recognition timestamps; not a clean game voice asset.",
+      "sha256": "43ad2389c3c3d22befda4e8d29a70fbaab155519f7b4e09404800e2a755e586d"
+    },
+    {
+      "file": "public/assets/pets/eggy/voices/dongdong-likes-you.mp3",
+      "sourceUrl": "https://nie.v.netease.com/r/video/20240617/6c1ae007-aae9-4634-87d2-85cc2f0097fa.mp4",
+      "sourcePage": "https://party.163.com/media/index.html?tab=1",
+      "sourceTitle": "鸭鸭DongDong联动pv",
+      "sourceType": "official-video-short-audio-excerpt",
+      "startSeconds": 79.93,
+      "endSeconds": 82.47,
+      "alterations": "Extracted original audio; mono 96kbps MP3 with 40ms/60ms fades. Original background music remains. No voice synthesis.",
+      "verification": "Official video captions cross-checked with local speech recognition timestamps; not a clean game voice asset.",
+      "sha256": "e6517b469406cb29caa42ebe93b6fdf511563f882e3c98745491614d1ee9e612"
+    },
+    {
+      "file": "public/assets/pets/eggy/voices/honey-hello.mp3",
+      "sourceUrl": "https://nie.v.netease.com/r/video/20240617/6c1ae007-aae9-4634-87d2-85cc2f0097fa.mp4",
+      "sourcePage": "https://party.163.com/media/index.html?tab=1",
+      "sourceTitle": "鸭鸭DongDong联动pv",
+      "sourceType": "official-video-short-audio-excerpt",
+      "startSeconds": 84.08,
+      "endSeconds": 86.34,
+      "alterations": "Extracted original audio; mono 96kbps MP3 with 40ms/60ms fades. Original background music remains. No voice synthesis.",
+      "verification": "Official video captions cross-checked with local speech recognition timestamps; not a clean game voice asset.",
+      "sha256": "091134c0855658d445ce58020b4a636d0a3466622d0c49c10ac01adb4267a4fa"
+    }
+  ]
+}

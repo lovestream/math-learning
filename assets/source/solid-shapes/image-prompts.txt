@@ -1,0 +1,80 @@
+IMAGE 1
+
+Use case: scientific-educational.
+Create an exceptionally clear, beautiful Chinese illustrated learning poster for Kevin, a grade-3 child, portrait 3:4, high resolution. This is page 1 of a coherent three-page mini lesson. White/light warm ivory background, large dark navy Simplified Chinese sans-serif lettering, soft blue / warm yellow / coral colors, precise diagram lines, generous whitespace, refined illustrated primary-school mathematics workbook. All words must be crisp, accurate, readable. Exact geometrical accuracy has priority over decoration. No worksheet photo, no handwriting, no watermark.
+Title exact: "Kevin 的立体图形小课堂"
+Subtitle exact: "① 先认识盒子的 6 个面"
+Top section occupies 45%: Draw a large horizontal rectangular cuboid like a thin closed gift box, width 3 units, depth 2 units, height 1 unit, shown in a clean isometric view. Its TOP face is pale blue labeled 上, its FRONT long low face is pale yellow labeled 前, its RIGHT short low face is pale coral labeled 右. Show hidden outer edges with unobtrusive gray dashed lines ONLY if geometrically correct. To its right, a simple precise exploded view of the SAME cuboid, exactly six separated flat rectangular panels pulled a short distance outward along each panel's normal. Label all six panels 上、下、前、后、左、右 with carefully attached leader lines. Top/bottom blue, front/back yellow, left/right coral. The top/bottom are congruent 3×2 rectangles, front/back congruent 3×1, left/right congruent 2×1. There must be exactly six panels, no extra body faces behind the exploded panels.
+Small caption below: "看不见的面，也要数进去。"
+Middle section occupies 30%: heading "相对的面，形状和大小一样". Three spacious columns, each shows TWO matching separated flat rectangles of the correct proportions, each labeled with one Chinese face name. Blue pair 上 and 下, aspect ratio 3:2; yellow pair 前 and 后, aspect ratio 3:1; coral pair 左 and 右, aspect ratio 2:1. Under the entire row exact: "6 个面，分成 3 对。每一对都不共用一条边。"
+Bottom section occupies 25%: on left one clean line-art cuboid, exactly one edge emphasized dark blue and one vertex emphasized coral dot. Leader labels "边（棱）" points to that edge; "顶点" points to that corner. Big clear text "6 个面 · 12 条边 · 8 个顶点". On right a single isometric cube, with caption "正方体：6 个面都是一样大的正方形". Do not draw a cube net on this page.
+Educational mood: friendly and visual, no busy characters or stickers, diagram content should occupy most space.
+
+====================
+
+IMAGE 2
+
+Use case: scientific-educational.
+Create page 2 of a three-page Chinese illustrated learning mini lesson for Kevin, grade 3, portrait 3:4, high resolution, white/light warm ivory background, navy Simplified Chinese sans-serif, pale blue/warm yellow/coral rectangular faces, mathematically precise geometries, clean modern textbook infographic, generous whitespace, absolutely legible text, no watermark.
+Title exact: "② 盒子展开，面没有变"
+Subtitle exact: "沿一些边剪开，连着的地方留下来。"
+
+Main section: make one LARGE ACCURATE rectangular cuboid net with physical proportions width=3, depth=2, height=0.8, dominant left/center. Arrange it EXACTLY as this map, with axis-aligned RECTANGLES and NO perspective distortion:
+           [ 下 ] 3 units wide ×2 tall, BLUE
+           [ 后 ] 3 units wide ×0.8 tall, YELLOW
+ [ 左 ]    [ 上 ]    [ 右 ]
+           [ 前 ]
+The central 上 is blue and exactly 3 wide ×2 tall. 左 and 右 are coral, each 0.8 wide ×2 tall, attached directly to the full left/right edges of 上. 前 is yellow, 3 wide ×0.8 tall, attached directly to bottom edge of 上. 后 is yellow, 3 wide ×0.8 tall, attached directly to TOP edge of 上. 下 is blue, 3 wide ×2 tall, attached directly to TOP edge of 后. Thus a vertical strip 下、后、上、前 and two wings attached to 上. Exactly SIX rectangles. Draw all five shared complete edges as thick dark DASHED fold lines. Draw perimeter boundaries as thin solid lines. Label each face centrally in LARGE Chinese: 下、后、上、前、左、右. Do NOT include glue tabs. Near upper left of net add exact small note "按图摆放：中间的大面是“上”". Leader below clearly identifies a dashed shared line as "虚线：留下来折叠的边". Solid outside edge label "实线：剪开的外轮廓". Do not count the outside planar segments as original cube edges.
+
+To the RIGHT of the net draw a visually clear pair of small isometric diagrams of the same rectangular box that show folding DOWN from the fixed 上 panel:
+Stage 1: blue TOP roof fixed horizontally; front, rear, left and right side panels hanging partly down, bottom flap attached to rear edge, geometric fidelity. Under it exact "四个侧面向下折".
+Stage 2: fully closed thin rectangular cuboid, TOP BLUE labeled 上, FRONT YELLOW labeled 前, RIGHT CORAL labeled 右, dashed hidden BOTTOM BLUE only if clearly separable. Under it exact "再把“下”合上".
+A curved arrow connects stages 1 to 2. The net diagrams must match top-roof folding direction. Do not fold it as a blue floor, since center is labeled 上.
+
+Bottom section, below main diagrams, separated by a pale neutral band:
+Big title "为什么剪开 7 条边？"
+Text exact: "原来有 12 条边，留下 5 条连接边。"
+Very large equation "12 − 5 = 7（条）"
+Then a three-item horizontal answer strip:
+"剪开 7 条边"  "3 组相同的面"  "每组的两个面不直接相连"
+Footer short tip: "找相对面：上 ↔ 下，前 ↔ 后，左 ↔ 右。"
+No extra words, no additional net, no inconsistent labels.
+
+====================
+
+IMAGE 3
+
+Use case: scientific-educational.
+Create page 3 of a three-page Chinese illustrated mini lesson for Kevin grade 3. Portrait 3:4, high resolution, ivory white background, clear dark navy Simplified Chinese sans serif, refined friendly textbook diagram illustration, exact geometry, generous spacing. Primary purpose: correctly explain three SPECIFIC six-square cube nets. All grid cells must be perfect squares of IDENTICAL SIZE. Geometry is nonnegotiable; never add/delete a square. No decorative stickers or extra nets.
+Title exact: "③ 有 6 个正方形，就一定能折成盒子吗？"
+Subtitle exact: "还要看：折好后，6 个面能不能各占一个位置。"
+Use THREE wide horizontal rows with enough vertical space, each row shows a LARGE flat net on left, exact answer and helpful compact visualization on right. Dashed fold lines on every shared cell edge, solid outline on outer edges, each square carries a distinct letter. Use dark legible single uppercase letters and pale face colors. Coordinate convention: x increases right, y increases DOWN.
+
+ROW 1:
+Title "① 可以 ✓"
+Draw EXACTLY these SIX squares, coordinates and labels:
+E=(0,0), A=(0,1), B=(1,1), C=(2,1), D=(3,1), F=(3,2).
+Thus a horizontal FOUR-square strip A B C D; E is ABOVE its left end A; F is BELOW its right end D. A B C D are four slightly different very pale blue shades. E yellow, F coral.
+At right show a small mathematically correct closed cube with three visible faces and a green check, no letters on tiny faces required.
+Explanation exact: "A、B、C、D 围成四周。" and "E、F 分别盖住上面和下面。"
+
+ROW 2:
+Title "② 不可以 ×"
+Draw EXACTLY SIX squares:
+A=(0,0), B=(1,0), C=(2,0), D=(3,0), E=(0,1), F=(3,1).
+Thus horizontal FOUR-square strip A B C D, E BELOW leftmost A, F BELOW rightmost D. E yellow, F coral, belt pale blue. The net outline resembles an upside-down U with four squares across the top and ONE extra beneath each end. No added central bottom squares.
+At right: clean schematic of an open-top cubical sleeve with four walls, and TWO colored bottom flaps folding into exactly the SAME bottom plane, slightly separated in depth solely for visibility, labeled E and F. A small red arrow marks their overlap at bottom. This is a visual of overlap, never a closed cube. Tiny callout "这里重叠了！".
+Explanation exact: "E、F 都折到同一个位置，叠在一起。" and "另一面却没有盖子，所以不可以。"
+
+ROW 3:
+Title "③ 可以 ✓"
+Draw EXACTLY SIX squares:
+A=(0,0), B=(1,0), C=(2,0), D=(2,1), E=(3,1), F=(4,1).
+Thus TOP ROW A B C spans x=0,1,2; BOTTOM ROW D E F spans x=2,3,4. C directly ABOVE D; those two share a horizontal edge. Top row three blue-ish pastel shades, D yellow, E coral, F mint. Never draw top row four squares. This is the bent zigzag net from an elementary worksheet.
+At right one small closed cube with green check.
+Explanation exact: "沿着虚线一格一格折，" and "6 个面刚好围成正方体，没有重叠。"
+
+Bottom footer inside a light blue rounded box:
+"判断三步：数一数 6 个面 → 沿虚线折 → 看有没有重叠或缺口"
+Below, small text "动手验证：画在纸上，沿外轮廓剪下，再沿虚线折。"
+Ensure page is instructive, not a collage, exact Chinese and accurate geometry.

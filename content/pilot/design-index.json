@@ -1,0 +1,358 @@
+{
+  "version": "0.3",
+  "strands": [
+    {
+      "strand": "numbers",
+      "prefix": "N",
+      "title": "数与运算",
+      "access": "open"
+    },
+    {
+      "strand": "algebra",
+      "prefix": "A",
+      "title": "数量关系与代数",
+      "access": "open"
+    },
+    {
+      "strand": "geometry",
+      "prefix": "G",
+      "title": "图形、几何与测量",
+      "access": "open"
+    },
+    {
+      "strand": "number_theory",
+      "prefix": "T",
+      "title": "整数结构与数论",
+      "access": "open"
+    },
+    {
+      "strand": "counting",
+      "prefix": "C",
+      "title": "计数与组合",
+      "access": "open"
+    },
+    {
+      "strand": "logic",
+      "prefix": "L",
+      "title": "逻辑、策略与证明萌芽",
+      "access": "open"
+    },
+    {
+      "strand": "data",
+      "prefix": "S",
+      "title": "数据、统计与概率",
+      "access": "open"
+    },
+    {
+      "strand": "practice",
+      "prefix": "P",
+      "title": "综合实践与数学探究",
+      "access": "open"
+    }
+  ],
+  "units": [
+    {
+      "unitId": "N01",
+      "scope": "数量、一一对应、数与数字、顺序、数轴入门",
+      "strand": "numbers"
+    },
+    {
+      "unitId": "N02",
+      "scope": "位值、0、大数、数的组成、估计、近似",
+      "strand": "numbers"
+    },
+    {
+      "unitId": "N03",
+      "scope": "加减的含义、大小比较、进退位",
+      "strand": "numbers"
+    },
+    {
+      "unitId": "N04",
+      "scope": "等量成组、乘法阵列、两种除法、有余数初步",
+      "strand": "numbers"
+    },
+    {
+      "unitId": "N05",
+      "scope": "加减与乘除互逆、括号、混合运算、检验",
+      "strand": "numbers"
+    },
+    {
+      "unitId": "N06",
+      "scope": "交换、结合、分配、拆数、凑整、估算检查",
+      "strand": "numbers"
+    },
+    {
+      "unitId": "N07",
+      "scope": "整体与等分、分数数轴、等值、比较、约通分、四则",
+      "strand": "numbers"
+    },
+    {
+      "unitId": "N08",
+      "scope": "小数位值、小数运算、分小互化、百分数",
+      "strand": "numbers"
+    },
+    {
+      "unitId": "N09",
+      "scope": "长度、质量、容量、货币、时间、日历及换算",
+      "strand": "numbers"
+    },
+    {
+      "unitId": "A01",
+      "scope": "相等关系、非标准等式、未知盒子、字母表示",
+      "strand": "algebra"
+    },
+    {
+      "unitId": "A02",
+      "scope": "部分整体、比较、线段图、单位一致、条件翻译",
+      "strand": "algebra"
+    },
+    {
+      "unitId": "A03",
+      "scope": "几倍与几份、和差、和倍、差倍、单位量",
+      "strand": "algebra"
+    },
+    {
+      "unitId": "A04",
+      "scope": "等量替换、两边同步操作、方程、代入与消元",
+      "strand": "algebra"
+    },
+    {
+      "unitId": "A05",
+      "scope": "平均数中的总量、移多补少、归一归总、盈亏",
+      "strand": "algebra"
+    },
+    {
+      "unitId": "A06",
+      "scope": "比、比例、单位率、正反比例的适龄模型",
+      "strand": "algebra"
+    },
+    {
+      "unitId": "A07",
+      "scope": "路程速度时间、相遇追及、流水、工程效率",
+      "strand": "algebra"
+    },
+    {
+      "unitId": "A08",
+      "scope": "数列、数表、图形数、输入输出、变量",
+      "strand": "algebra"
+    },
+    {
+      "unitId": "A09",
+      "scope": "守恒建模、浓度混合、持续增减、购物问题",
+      "strand": "algebra"
+    },
+    {
+      "unitId": "G01",
+      "scope": "位置方向、数对、路线与比例尺、线和角、平行垂直、作图工具",
+      "strand": "geometry"
+    },
+    {
+      "unitId": "G02",
+      "scope": "三角形、四边形、多边形及性质",
+      "strand": "geometry"
+    },
+    {
+      "unitId": "G03",
+      "scope": "平移、旋转、对称、拼搭",
+      "strand": "geometry"
+    },
+    {
+      "unitId": "G04",
+      "scope": "周长与面积、单位、矩形及基本图形面积",
+      "strand": "geometry"
+    },
+    {
+      "unitId": "G05",
+      "scope": "割补、等积、组合与阴影面积、面积比",
+      "strand": "geometry"
+    },
+    {
+      "unitId": "G06",
+      "scope": "圆、圆周长、圆面积、扇形初步",
+      "strand": "geometry"
+    },
+    {
+      "unitId": "G07",
+      "scope": "长方体、正方体、柱锥初步、表面积体积容积",
+      "strand": "geometry"
+    },
+    {
+      "unitId": "G08",
+      "scope": "视图、展开折回、堆叠、可见与隐藏方块、截面探究",
+      "strand": "geometry"
+    },
+    {
+      "unitId": "G09",
+      "scope": "数线段角三角形、网格、最短路线与空间构造",
+      "strand": "geometry"
+    },
+    {
+      "unitId": "T01",
+      "scope": "奇偶、奇偶运算、配对",
+      "strand": "number_theory"
+    },
+    {
+      "unitId": "T02",
+      "scope": "整除、因数倍数、整除特征",
+      "strand": "number_theory"
+    },
+    {
+      "unitId": "T03",
+      "scope": "质数合数、质因数分解、最大公因数、最小公倍数",
+      "strand": "number_theory"
+    },
+    {
+      "unitId": "T04",
+      "scope": "被除数除数商余数、余数范围、周期尾数",
+      "strand": "number_theory"
+    },
+    {
+      "unitId": "T05",
+      "scope": "同余直观、多组余数条件、范围与整数解",
+      "strand": "number_theory"
+    },
+    {
+      "unitId": "T06",
+      "scope": "数位结构、数码约束、数字谜、竖式谜",
+      "strand": "number_theory"
+    },
+    {
+      "unitId": "T07",
+      "scope": "整数条件与分数、因数结构综合、数论最值",
+      "strand": "number_theory"
+    },
+    {
+      "unitId": "C01",
+      "scope": "有序枚举、分类、表格、树状图",
+      "strand": "counting"
+    },
+    {
+      "unitId": "C02",
+      "scope": "分步与分类、加法与乘法计数原理",
+      "strand": "counting"
+    },
+    {
+      "unitId": "C03",
+      "scope": "排列组合的直观、顺序是否重要、相同物体",
+      "strand": "counting"
+    },
+    {
+      "unitId": "C04",
+      "scope": "重复计数、两类三类容斥、对应计数",
+      "strand": "counting"
+    },
+    {
+      "unitId": "C05",
+      "scope": "路径计数、拆分、递推、由小到大",
+      "strand": "counting"
+    },
+    {
+      "unitId": "C06",
+      "scope": "抽屉原理、最坏情况、至少与至多",
+      "strand": "counting"
+    },
+    {
+      "unitId": "C07",
+      "scope": "棋盘染色、配对、构造、覆盖",
+      "strand": "counting"
+    },
+    {
+      "unitId": "L01",
+      "scope": "条件、判断、且或非、确定与可能",
+      "strand": "logic"
+    },
+    {
+      "unitId": "L02",
+      "scope": "对应表、排除、顺序、约束传播",
+      "strand": "logic"
+    },
+    {
+      "unitId": "L03",
+      "scope": "逆推、还原、假设、替换、比较方案",
+      "strand": "logic"
+    },
+    {
+      "unitId": "L04",
+      "scope": "不变量、守恒、奇偶与对称策略",
+      "strand": "logic"
+    },
+    {
+      "unitId": "L05",
+      "scope": "最值、极端、统筹安排、策略游戏",
+      "strand": "logic"
+    },
+    {
+      "unitId": "L06",
+      "scope": "举例与反例、分类讨论、理由链、猜想与验证",
+      "strand": "logic"
+    },
+    {
+      "unitId": "S01",
+      "scope": "分类收集、统计表、条形图、折线图、扇形图及读图",
+      "strand": "data"
+    },
+    {
+      "unitId": "S02",
+      "scope": "平均数、中位数、众数、加权直观",
+      "strand": "data"
+    },
+    {
+      "unitId": "S03",
+      "scope": "随机、必然、不可能、可能性比较",
+      "strand": "data"
+    },
+    {
+      "unitId": "S04",
+      "scope": "等可能模型、简单概率、与计数结合",
+      "strand": "data"
+    },
+    {
+      "unitId": "S05",
+      "scope": "重复试验、频数频率、波动与预测",
+      "strand": "data"
+    },
+    {
+      "unitId": "S06",
+      "scope": "小调查、数据来源、比较公平性、综合建模",
+      "strand": "data"
+    },
+    {
+      "unitId": "P01",
+      "scope": "测量、估计、单位选择、误差与记录",
+      "strand": "practice"
+    },
+    {
+      "unitId": "P02",
+      "scope": "时间、日历、购物、预算与生活安排",
+      "strand": "practice"
+    },
+    {
+      "unitId": "P03",
+      "scope": "图形设计、路线、包装、比例模型",
+      "strand": "practice"
+    },
+    {
+      "unitId": "P04",
+      "scope": "提问、调查、实验、整理数据与表达结论",
+      "strand": "practice"
+    },
+    {
+      "unitId": "P05",
+      "scope": "数字编码、规则与流程、数学文化",
+      "strand": "practice"
+    },
+    {
+      "unitId": "P06",
+      "scope": "自主提出问题、建立模型、检验与交流",
+      "strand": "practice"
+    }
+  ],
+  "counts": {
+    "strands": 8,
+    "units": 59,
+    "foundation": 96,
+    "olympiad": 64,
+    "methods": 28,
+    "plans": 168
+  }
+}

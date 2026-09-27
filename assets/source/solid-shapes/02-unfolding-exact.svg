@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1536" viewBox="0 0 1024 1536" role="img" aria-label="长方体展开图与剪开七条边的解释">
+<rect width="1024" height="1536" fill="#fffefa"/>
+<g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, sans-serif" fill="#13294a">
+<text x="512" y="85" text-anchor="middle" font-size="53" font-weight="700">② 盒子展开，面没有变</text>
+<text x="512" y="140" text-anchor="middle" font-size="29">沿一些边剪开，连着的地方留下来。</text>
+<text x="110" y="206" font-size="26">按图摆放：中间的大面是“上”</text>
+<g font-size="47" text-anchor="middle" font-weight="600">
+<rect x="220" y="240" width="240" height="160" fill="#c7e1fc"/><text x="340" y="337">下</text>
+<rect x="220" y="400" width="240" height="80" fill="#ffe69b"/><text x="340" y="457">后</text>
+<rect x="220" y="480" width="240" height="160" fill="#c7e1fc"/><text x="340" y="577">上</text>
+<rect x="220" y="640" width="240" height="80" fill="#ffe69b"/><text x="340" y="697">前</text>
+<rect x="140" y="480" width="80" height="160" fill="#ffc4b4"/><text x="180" y="577">左</text>
+<rect x="460" y="480" width="80" height="160" fill="#ffc4b4"/><text x="500" y="577">右</text>
+</g>
+<path d="M220 240H460V480H540V640H460V720H220V640H140V480H220Z" fill="none" stroke="#13294a" stroke-width="3"/>
+<path d="M220 400H460 M220 480H460 M220 640H460 M220 480V640 M460 480V640" fill="none" stroke="#13294a" stroke-width="3" stroke-dasharray="11 8"/>
+<g font-size="28" font-weight="600">
+<text x="600" y="300">① 把“上”当作屋顶</text><text x="600" y="373">② 前后左右向下折</text><text x="600" y="446">③ 最后把“下”合上</text>
+</g>
+<path d="M747 487Q821 519 784 565 M768 548L784 567L797 544" fill="none" stroke="#13294a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<g stroke="#13294a" stroke-width="3" stroke-linejoin="round">
+<path d="M650 660L740 600L920 645L830 705Z" fill="#c7e1fc"/>
+<path d="M650 660L830 705V780L650 735Z" fill="#ffe69b"/>
+<path d="M830 705L920 645V720L830 780Z" fill="#ffc4b4"/>
+</g>
+<g font-size="38" font-weight="600" text-anchor="middle"><text x="785" y="661">上</text><text x="741" y="733">前</text><text x="877" y="729">右</text></g>
+<text x="786" y="833" text-anchor="middle" font-size="25">折回去，变回完整的盒子</text>
+<path d="M98 832H180" stroke="#13294a" stroke-width="3" stroke-dasharray="11 8"/><text x="203" y="842" font-size="25">虚线：留下来折叠的边</text>
+<path d="M98 889H180" stroke="#13294a" stroke-width="3"/><text x="203" y="899" font-size="25">实线：剪开的外轮廓</text>
+<rect x="42" y="969" width="940" height="514" rx="25" fill="#fff8e9" stroke="#efdfbc"/>
+<text x="512" y="1047" text-anchor="middle" font-size="43" font-weight="700">为什么剪开 7 条边？</text>
+<text x="512" y="1110" text-anchor="middle" font-size="28">原来有 12 条边，图中留下 5 条连接边。</text>
+<text x="512" y="1192" text-anchor="middle" font-size="58" font-weight="700">12 − 5 = 7（条）</text>
+<rect x="70" y="1234" width="272" height="108" rx="15" fill="#e0edfd"/>
+<rect x="376" y="1234" width="272" height="108" rx="15" fill="#fff0bb"/>
+<rect x="682" y="1234" width="272" height="108" rx="15" fill="#ffe3dc"/>
+<g text-anchor="middle" font-size="27" font-weight="600"><text x="206" y="1298">剪开 7 条边</text><text x="512" y="1279">3 组</text><text x="512" y="1319">相同的面</text><text x="818" y="1279">每组的两个面</text><text x="818" y="1319">不直接相连</text></g>
+<text x="512" y="1427" text-anchor="middle" font-size="29" font-weight="600">找相对面：上 ↔ 下，前 ↔ 后，左 ↔ 右</text>
+</g></svg>

@@ -1,0 +1,1396 @@
+{
+  "schemaVersion": 1,
+  "scope": "grade3-only",
+  "revision": "2026-09-24",
+  "routes": [
+    {
+      "unitId": "G3-U01",
+      "term": "upper",
+      "textbookTitle": "观察物体",
+      "sourceId": "G3-upper",
+      "printedPages": "1–5",
+      "textbookCore": "看清正面、侧面、上面；区分看见部分与完整物体；追踪纸盒六面。",
+      "coreLessonIds": [
+        "G3-U01-B01",
+        "G3-U01-B02",
+        "G3-U01-B03"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-U01-B02:P07",
+        "G3-U01-B03:P06"
+      ],
+      "connection": "同一视图能来自不同物体；用另一方向或实折补证据。",
+      "methods": "信息是否足够、反例与实际验证",
+      "methodLessonIds": [
+        "G3-U01-B02",
+        "G3-U01-B03"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-U01-TH1",
+        "G3-U01-TH2"
+      ]
+    },
+    {
+      "unitId": "G3-U02",
+      "term": "upper",
+      "textbookTitle": "混合运算",
+      "sourceId": "G3-upper",
+      "printedPages": "6–19",
+      "textbookCore": "B01同级→B02先乘除→B03括号→B04/B05两步建模。只要求算对、讲清第一步和中间量。",
+      "coreLessonIds": [
+        "G3-U02-B01",
+        "G3-U02-B02",
+        "G3-U02-B03",
+        "G3-U02-B04",
+        "G3-U02-B05"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-U02-E01",
+        "G3-U02-E03",
+        "G3-U02-E02",
+        "G3-U02-E04",
+        "G3-U02-E05"
+      ],
+      "connection": "由课本章末比较题进入等值添去括号与连续除，再用点阵体验运算律。",
+      "methods": "逆向推理、整体替换、不变量",
+      "methodLessonIds": [
+        "G3-U02-O01",
+        "G3-U02-O02"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-U02-TH1",
+        "G3-U02-TH2",
+        "G3-U02-S02",
+        "G3-U02-S05",
+        "G3-U02-S06",
+        "G3-U02-S07",
+        "G3-U02-S17",
+        "G3-U02-S18"
+      ]
+    },
+    {
+      "unitId": "G3-U03",
+      "term": "upper",
+      "textbookTitle": "毫米、分米和千米",
+      "sourceId": "G3-upper",
+      "printedPages": "20–30",
+      "textbookCore": "用尺读起终点；掌握毫米/厘米/分米/米/千米换算与路程估计。",
+      "coreLessonIds": [
+        "G3-U03-B01",
+        "G3-U03-B02"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-U03-B01:P08",
+        "G3-U03-B02:P05"
+      ],
+      "connection": "从断尺量长度和标准段估计，追问换的是单位还是实物长度。",
+      "methods": "参照与不变量",
+      "methodLessonIds": [
+        "G3-U03-B01",
+        "G3-U03-B02"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-U03-TH1",
+        "G3-U03-TH2",
+        "G3-U03-TH3",
+        "G3-U03-TH4",
+        "G3-U03-TH5",
+        "G3-U03-TH6",
+        "G3-U03-TH7",
+        "G3-U03-TH8"
+      ]
+    },
+    {
+      "unitId": "G3-UP01",
+      "term": "upper",
+      "textbookTitle": "曹冲称象的故事",
+      "sourceId": "G3-upper",
+      "printedPages": "31–38",
+      "textbookCore": "克、千克、吨与读秤；固定条件下用可称的小物替代大物。",
+      "coreLessonIds": [
+        "G3-UP01-B01",
+        "G3-UP01-B02"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-UP01-B02:P03",
+        "G3-UP01-B02:P11"
+      ],
+      "connection": "加入乘客破坏相等条件；比较不同质量砝码但总质量相同。",
+      "methods": "等量替换、控制条件",
+      "methodLessonIds": [
+        "G3-UP01-B02",
+        "G3-U02-O02"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-UP01-TH1",
+        "G3-UP01-TH2",
+        "G3-UP01-S09",
+        "G3-UP01-S20"
+      ]
+    },
+    {
+      "unitId": "G3-U04",
+      "term": "upper",
+      "textbookTitle": "多位数乘一位数",
+      "sourceId": "G3-upper",
+      "printedPages": "39–56",
+      "textbookCore": "口算拆分→一次进位→连续进位→0占位→估算与应用。",
+      "coreLessonIds": [
+        "G3-U04-B01",
+        "G3-U04-B02",
+        "G3-U04-B03",
+        "G3-U04-B04",
+        "G3-U04-B05"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-U04-B01:P06",
+        "G3-U04-B05:P04",
+        "G3-U02-E05"
+      ],
+      "connection": "从19×4借20×4补偿，解释每组多算1；估大超过预算不能直接判不足。",
+      "methods": "分配、拆补、上下界",
+      "methodLessonIds": [
+        "G3-U02-E05",
+        "G3-U04-B05"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-U04-TH1",
+        "G3-U04-TH2",
+        "G3-U04-S01",
+        "G3-U04-S03",
+        "G3-U04-S04",
+        "G3-U04-S10",
+        "G3-U04-S15"
+      ]
+    },
+    {
+      "unitId": "G3-UP02",
+      "term": "upper",
+      "textbookTitle": "数字编码",
+      "sourceId": "G3-upper",
+      "printedPages": "57–60",
+      "textbookCore": "理解编码各字段；按同一规则读位置、生成唯一编号。",
+      "coreLessonIds": [
+        "G3-UP02-B01"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-UP02-B01:P05",
+        "G3-UP02-B01:P06"
+      ],
+      "connection": "每一层选择对应一个字段，从编码容量转向搭配计数与冲突核对。",
+      "methods": "有序枚举、分类",
+      "methodLessonIds": [
+        "G3-UP02-B01",
+        "G3-U07-B01"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-UP02-TH1",
+        "G3-UP02-TH2"
+      ]
+    },
+    {
+      "unitId": "G3-U05",
+      "term": "upper",
+      "textbookTitle": "线和角",
+      "sourceId": "G3-upper",
+      "printedPages": "61–72",
+      "textbookCore": "有限端点与延伸；比较线段；对齐顶点一边比较角；用直角分类。",
+      "coreLessonIds": [
+        "G3-U05-B01",
+        "G3-U05-B02",
+        "G3-U05-B03"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-U05-B03:P06",
+        "G3-U05-B02:P06"
+      ],
+      "connection": "系统列出三条射线两两成角；旋转整体与拉长边不改变角的大小。",
+      "methods": "有序枚举、不变量",
+      "methodLessonIds": [
+        "G3-U05-B03",
+        "G3-U05-B02"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-U05-TH1",
+        "G3-U05-TH2"
+      ]
+    },
+    {
+      "unitId": "G3-U06",
+      "term": "upper",
+      "textbookTitle": "分数的初步认识",
+      "sourceId": "G3-upper",
+      "printedPages": "73–91",
+      "textbookCore": "整体与等分→数小份→同分母加减→一组物品的分数→先一份后几份。",
+      "coreLessonIds": [
+        "G3-U06-B01",
+        "G3-U06-B02",
+        "G3-U06-B03",
+        "G3-U06-B04",
+        "G3-U06-B05"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-U06-E01",
+        "G3-U06-B05:P06"
+      ],
+      "connection": "原涂色不动只换分格；已知一份反推整体，连接倍数与逆向。",
+      "methods": "单位改变而量不变、逆向",
+      "methodLessonIds": [
+        "G3-U06-E01",
+        "G3-U02-O01"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-U06-TH1",
+        "G3-U06-TH2",
+        "G3-U06-S19"
+      ]
+    },
+    {
+      "unitId": "G3-U07",
+      "term": "upper",
+      "textbookTitle": "复习与关联",
+      "sourceId": "G3-upper",
+      "printedPages": "92–102",
+      "textbookCore": "按错因选择计算、测量、分数的诊断；教材册末数学广角单独显示为子入口。",
+      "coreLessonIds": [],
+      "reviewLessonIds": [
+        "G3-U07-R01"
+      ],
+      "optionalExtensionRefs": [
+        "G3-U07-B01:P06",
+        "G3-U07-B01:P11"
+      ],
+      "connection": "先完整枚举再排除受限搭配；前后两段路线分步相乘。",
+      "methods": "分类计数、有序枚举",
+      "methodLessonIds": [
+        "G3-U07-B01"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "textbookSubsection": {
+        "title": "数学广角：搭配问题",
+        "printedPages": "101–102",
+        "lessonIds": [
+          "G3-U07-B01"
+        ],
+        "note": "实际册末内容子入口，不冒充目录上的新编号单元；不另复制一份O课。"
+      },
+      "optionalThinkingTaskIds": [
+        "G3-U07-TH1",
+        "G3-U07-TH2"
+      ]
+    },
+    {
+      "unitId": "G3-L01",
+      "term": "lower",
+      "textbookTitle": "生活中的运动现象",
+      "sourceId": "G3-lower",
+      "printedPages": "1–9",
+      "textbookCore": "整图对折重合；辨别平移与绕点旋转；实际剪纸体验。",
+      "coreLessonIds": [
+        "G3-L01-B01",
+        "G3-L01-B02"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-L01-B01:P06",
+        "G3-L01-B02:P06"
+      ],
+      "connection": "枚举不同折痕；末位置相同不等于中途没运动。",
+      "methods": "完整验证、变与不变",
+      "methodLessonIds": [
+        "G3-L01-B01",
+        "G3-L01-B02"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-L01-TH1",
+        "G3-L01-TH2"
+      ]
+    },
+    {
+      "unitId": "G3-L02",
+      "term": "lower",
+      "textbookTitle": "除数是一位数的除法",
+      "sourceId": "G3-lower",
+      "printedPages": "10–38",
+      "textbookCore": "按计数单位除→高位余量换单位→余数验算→商0→连乘连除→归一归总。",
+      "coreLessonIds": [
+        "G3-L02-B01",
+        "G3-L02-B02",
+        "G3-L02-B03",
+        "G3-L02-B04",
+        "G3-L02-B05",
+        "G3-L02-B06"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-L02-B03:P05",
+        "G3-L02-B03:P06",
+        "G3-L02-B06:P06"
+      ],
+      "connection": "相同余数在坐车与整盒销售中决策不同；单价不变与总量不变决定路线。",
+      "methods": "归一归总、边界与不变量",
+      "methodLessonIds": [
+        "G3-L02-B06",
+        "G3-U02-E02"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-L02-TH1",
+        "G3-L02-TH2",
+        "G3-L02-S08",
+        "G3-L02-S11",
+        "G3-L02-S13",
+        "G3-L02-S14",
+        "G3-L02-S16"
+      ]
+    },
+    {
+      "unitId": "G3-L03",
+      "term": "lower",
+      "textbookTitle": "长方形和正方形",
+      "sourceId": "G3-lower",
+      "printedPages": "39–51",
+      "textbookCore": "用边角判形；走完整外边界求周长；长方形和正方形的包含关系。",
+      "coreLessonIds": [
+        "G3-L03-B01",
+        "G3-L03-B02"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-L03-E01"
+      ],
+      "connection": "拼接处原计两次、现在不外露；有限候选拼法逐一比较。",
+      "methods": "分类、系统比较、补偿",
+      "methodLessonIds": [
+        "G3-L03-E01"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-L03-TH1",
+        "G3-L03-TH2"
+      ]
+    },
+    {
+      "unitId": "G3-L04",
+      "term": "lower",
+      "textbookTitle": "图形的面积",
+      "sourceId": "G3-lower",
+      "printedPages": "52–64",
+      "textbookCore": "统一单位铺内部→按行列推出面积→平方单位进率；区分周长与面积。",
+      "coreLessonIds": [
+        "G3-L04-B01",
+        "G3-L04-B02",
+        "G3-L04-B03"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-L04-B03:P04",
+        "G3-L04-B03:P05",
+        "G3-L04-B03:P06"
+      ],
+      "connection": "同面积不同周长，同周长不同面积；角部剪拼分别追踪边和面。",
+      "methods": "分割拼补、守恒、有限枚举",
+      "methodLessonIds": [
+        "G3-L04-B03",
+        "G3-L03-E01"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-L04-TH1",
+        "G3-L04-TH2"
+      ]
+    },
+    {
+      "unitId": "G3-L05",
+      "term": "lower",
+      "textbookTitle": "数据的收集与整理",
+      "sourceId": "G3-lower",
+      "printedPages": "65–76",
+      "textbookCore": "明确对象规则→不重不漏记录→单/复式表→分组边界→有范围的结论。",
+      "coreLessonIds": [
+        "G3-L05-B01",
+        "G3-L05-B02"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-L05-B01:P06",
+        "G3-L05-B02:P05"
+      ],
+      "connection": "局部样本不能替代全体；不同组人数不同，不能只比达标人数。",
+      "methods": "分类、证据与反例",
+      "methodLessonIds": [
+        "G3-L05-B02",
+        "G3-L07-B01"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-L05-TH1",
+        "G3-L05-TH2"
+      ]
+    },
+    {
+      "unitId": "G3-LP01",
+      "term": "lower",
+      "textbookTitle": "年、月、日的秘密",
+      "sourceId": "G3-lower",
+      "printedPages": "77–85",
+      "textbookCore": "读年历、大小月与平闰年；24时计时和时长；端点与间隔分开。",
+      "coreLessonIds": [
+        "G3-LP01-B01",
+        "G3-LP01-B02"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-LP01-E01"
+      ],
+      "connection": "星期每7天复现，先算日期差，再取整周与余天；制作月历验证。",
+      "methods": "周期、余数、间隔计数",
+      "methodLessonIds": [
+        "G3-LP01-E01"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-LP01-TH1",
+        "G3-LP01-TH2",
+        "G3-LP01-S12"
+      ]
+    },
+    {
+      "unitId": "G3-L06",
+      "term": "lower",
+      "textbookTitle": "小数的初步认识",
+      "sourceId": "G3-lower",
+      "printedPages": "86–94",
+      "textbookCore": "测量货币中的小数→同单位比较→一位小数加减，0占位不可漏。",
+      "coreLessonIds": [
+        "G3-L06-B01",
+        "G3-L06-B02",
+        "G3-L06-B03"
+      ],
+      "reviewLessonIds": [],
+      "optionalExtensionRefs": [
+        "G3-L06-B01:P06",
+        "G3-L06-B02:P06",
+        "G3-L06-B03:P06"
+      ],
+      "connection": "0.5米和0.50米是同量；数轴寻找中间数；进位仍沿用十进位。",
+      "methods": "单位迁移、不变量",
+      "methodLessonIds": [
+        "G3-L06-B01",
+        "G3-U06-E01"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "optionalThinkingTaskIds": [
+        "G3-L06-TH1",
+        "G3-L06-TH2"
+      ]
+    },
+    {
+      "unitId": "G3-L07",
+      "term": "lower",
+      "textbookTitle": "复习与关联",
+      "sourceId": "G3-lower",
+      "printedPages": "95–104",
+      "textbookCore": "综合活动按需求、费用、时间、面积分别列量；册末重叠问题设子入口。",
+      "coreLessonIds": [],
+      "reviewLessonIds": [
+        "G3-L07-R01"
+      ],
+      "optionalExtensionRefs": [
+        "G3-L07-B01:P05",
+        "G3-L07-B01:P08"
+      ],
+      "connection": "从正向扣重复到已知总人数反求交集；共同者最后必须保留一次。",
+      "methods": "容斥、逆向、建模检查",
+      "methodLessonIds": [
+        "G3-L07-B01",
+        "G3-U02-O01"
+      ],
+      "entryRule": "可直接进入任何节点；基础目标独立达标，不要求完成提升或方法专题。",
+      "textbookSubsection": {
+        "title": "数学广角：重叠问题",
+        "printedPages": "102–104",
+        "lessonIds": [
+          "G3-L07-B01"
+        ],
+        "note": "实际册末内容子入口，不冒充目录上的新编号单元；不另复制一份O课。"
+      },
+      "optionalThinkingTaskIds": [
+        "G3-L07-TH1",
+        "G3-L07-TH2"
+      ]
+    }
+  ],
+  "concepts": {
+    "geometry.viewpoint": [
+      {
+        "lessonId": "G3-U01-B01",
+        "exposure": "first",
+        "scope": "能说清观察位置与所见面的对应。"
+      }
+    ],
+    "reasoning.sufficient-evidence": [
+      {
+        "lessonId": "G3-U01-B02",
+        "exposure": "first",
+        "scope": "知道线索可能不足，能提出补充观察。"
+      }
+    ],
+    "geometry.faces-adjacency": [
+      {
+        "lessonId": "G3-U01-B03",
+        "exposure": "first",
+        "scope": "能在展开的纸盒上追踪相邻面，并实际验证折回。"
+      }
+    ],
+    "arithmetic.order.same-level": [
+      {
+        "lessonId": "G3-U02-B01",
+        "exposure": "first",
+        "scope": "能识别同一级运算，并从左往右计算。"
+      }
+    ],
+    "arithmetic.order.precedence": [
+      {
+        "lessonId": "G3-U02-B02",
+        "exposure": "first",
+        "scope": "会按先乘除后加减计算，并区分运算顺序约定与情境中列式的理由。"
+      }
+    ],
+    "arithmetic.parentheses.model": [
+      {
+        "lessonId": "G3-U02-B03",
+        "exposure": "first",
+        "scope": "能按情境添加括号，并正确读取括号内外的含义。"
+      }
+    ],
+    "arithmetic.subtract-total": [
+      {
+        "lessonId": "G3-U02-B04",
+        "exposure": "first",
+        "scope": "能用逐次减与先合并再减表示同一情境。"
+      }
+    ],
+    "model.two-step.quantity": [
+      {
+        "lessonId": "G3-U02-B05",
+        "exposure": "deepen",
+        "scope": "能从目标倒找所需数量，区分求差后乘与分别相除后求差。"
+      },
+      {
+        "lessonId": "G3-U07-R01",
+        "exposure": "review",
+        "scope": "综合选择运算结构，找出需要回补的单元而非重做全册。"
+      },
+      {
+        "lessonId": "G3-L07-R01",
+        "exposure": "review",
+        "scope": "综合处理预算、平均分、周长面积与时间，解释各量意义。"
+      }
+    ],
+    "arithmetic.parentheses.equivalent": [
+      {
+        "lessonId": "G3-U02-E01",
+        "exposure": "first",
+        "scope": "用扣款和退款解释减去一个和、减去一个差及加上一个差的等值去括号；只用中间量非负的具体数。"
+      },
+      {
+        "lessonId": "G3-U02-E03",
+        "exposure": "deepen",
+        "scope": "能按“保持值不变”的要求，把连续加减中的两项合成一个整体，并用数量动作和反例检查。"
+      }
+    ],
+    "arithmetic.divide.product": [
+      {
+        "lessonId": "G3-U02-E02",
+        "exposure": "first",
+        "scope": "用具体整除例子区分a÷b÷c与a÷(b÷c)，不把除法当成结合律。"
+      },
+      {
+        "lessonId": "G3-L02-B05",
+        "exposure": "transfer",
+        "scope": "在多层等量组情境中构造连乘连除，并解释合并分组。"
+      }
+    ],
+    "arithmetic.laws.commute-associate": [
+      {
+        "lessonId": "G3-U02-E04",
+        "exposure": "first",
+        "scope": "用点阵与三组物品区分交换和结合，解释加法乘法的改写，并反驳减法除法随意照搬。"
+      }
+    ],
+    "arithmetic.law.distribution": [
+      {
+        "lessonId": "G3-U02-E05",
+        "exposure": "first",
+        "scope": "用同一矩形点阵说明乘法对加减法的分配，能补出漏乘部分，区分除以和。"
+      },
+      {
+        "lessonId": "G3-U04-B01",
+        "exposure": "transfer",
+        "scope": "用位值拆分解释整十整百和两位数口算乘法。"
+      }
+    ],
+    "reasoning.reverse-process": [
+      {
+        "lessonId": "G3-U02-O01",
+        "exposure": "first",
+        "scope": "能沿运算流程逆推未知数并检验，不依赖猜口诀。"
+      }
+    ],
+    "reasoning.whole-substitution": [
+      {
+        "lessonId": "G3-U02-O02",
+        "exposure": "first",
+        "scope": "用方框代表一个确定的整体数量；解释整体相等时可在同一运算位置替换，不把任意片段乱换。"
+      }
+    ],
+    "measure.length-unit": [
+      {
+        "lessonId": "G3-U03-B01",
+        "exposure": "deepen",
+        "scope": "用毫米和分米表示长度，理解换单位时长度不变。"
+      }
+    ],
+    "measure.reference-estimate": [
+      {
+        "lessonId": "G3-U03-B02",
+        "exposure": "first",
+        "scope": "理解1千米=1000米，能借标准段估计并说明误差。"
+      }
+    ],
+    "measure.mass-unit": [
+      {
+        "lessonId": "G3-UP01-B01",
+        "exposure": "first",
+        "scope": "认识质量单位的大小关系并会读、估、称、比较。"
+      }
+    ],
+    "reasoning.equal-substitution": [
+      {
+        "lessonId": "G3-UP01-B02",
+        "exposure": "first",
+        "scope": "理解保持同一状态的等量替换和测量限制。"
+      }
+    ],
+    "arithmetic.carry.place-value": [
+      {
+        "lessonId": "G3-U04-B02",
+        "exposure": "first",
+        "scope": "理解个位起算、数位对齐和一次进位。"
+      },
+      {
+        "lessonId": "G3-U04-B03",
+        "exposure": "deepen",
+        "scope": "正确计算两三位数乘一位数的连续进位并核查。"
+      },
+      {
+        "lessonId": "G3-L06-B03",
+        "exposure": "transfer",
+        "scope": "理解小数点对齐背后的同单位相加与满十进退。"
+      }
+    ],
+    "arithmetic.zero.place-value": [
+      {
+        "lessonId": "G3-U04-B04",
+        "exposure": "deepen",
+        "scope": "理解0乘任何数得0，区分中间0和末尾0。"
+      },
+      {
+        "lessonId": "G3-L02-B04",
+        "exposure": "transfer",
+        "scope": "掌握中间或末尾商0与0除以非零数，避免除以0。"
+      }
+    ],
+    "reasoning.bounds": [
+      {
+        "lessonId": "G3-U04-B05",
+        "exposure": "first",
+        "scope": "能按问题选用上界或下界估计，并处理多步费用。"
+      }
+    ],
+    "representation.code": [
+      {
+        "lessonId": "G3-UP02-B01",
+        "exposure": "first",
+        "scope": "设计不重复、可解释的编码，区分标识与数量。"
+      }
+    ],
+    "geometry.line-types": [
+      {
+        "lessonId": "G3-U05-B01",
+        "exposure": "first",
+        "scope": "区分线段、射线、直线，会测量和复制线段。"
+      }
+    ],
+    "geometry.angle-invariance": [
+      {
+        "lessonId": "G3-U05-B02",
+        "exposure": "first",
+        "scope": "识别角的顶点和两边，用重叠比较角。"
+      }
+    ],
+    "geometry.angle-class": [
+      {
+        "lessonId": "G3-U05-B03",
+        "exposure": "deepen",
+        "scope": "辨认直角、锐角、钝角，明确本课比较范围。"
+      }
+    ],
+    "fraction.unit-whole": [
+      {
+        "lessonId": "G3-U06-B01",
+        "exposure": "first",
+        "scope": "理解整体、平均分和几分之一的关系。"
+      }
+    ],
+    "fraction.count-units": [
+      {
+        "lessonId": "G3-U06-B02",
+        "exposure": "deepen",
+        "scope": "理解几分之几并比较同分母分数及简单同分子分数。"
+      }
+    ],
+    "fraction.same-denominator": [
+      {
+        "lessonId": "G3-U06-B03",
+        "exposure": "deepen",
+        "scope": "解释同分母分数加减和1减几分之几。"
+      }
+    ],
+    "fraction.set-whole": [
+      {
+        "lessonId": "G3-U06-B04",
+        "exposure": "deepen",
+        "scope": "区分一个物体和一组物品作为整体，找到一组物品的单位分数。"
+      }
+    ],
+    "fraction.quantity": [
+      {
+        "lessonId": "G3-U06-B05",
+        "exposure": "deepen",
+        "scope": "用“总量÷等分份数×取的份数”求一组物品的几分之几。"
+      }
+    ],
+    "fraction.equivalence": [
+      {
+        "lessonId": "G3-U06-E01",
+        "exposure": "first",
+        "scope": "通过同一纸带重分组理解等值分数，为五年级分数性质铺垫。"
+      }
+    ],
+    "reasoning.systematic-enumeration": [
+      {
+        "lessonId": "G3-U07-B01",
+        "exposure": "first",
+        "scope": "用表格或连线数完整搭配，区分任选一种与分两步组合。"
+      }
+    ],
+    "geometry.symmetry": [
+      {
+        "lessonId": "G3-L01-B01",
+        "exposure": "first",
+        "scope": "用折叠判断对称，并辨认常见图形对称轴。"
+      }
+    ],
+    "geometry.motion": [
+      {
+        "lessonId": "G3-L01-B02",
+        "exposure": "first",
+        "scope": "辨别整体平移、绕点旋转，明确物体与观察视角。"
+      }
+    ],
+    "arithmetic.divide.place-value": [
+      {
+        "lessonId": "G3-L02-B01",
+        "exposure": "deepen",
+        "scope": "用位值理解口算除法，选合适近似数估商。"
+      }
+    ],
+    "arithmetic.divide.exchange": [
+      {
+        "lessonId": "G3-L02-B02",
+        "exposure": "first",
+        "scope": "理解高位分得多少、剩余换成低位单位继续分。"
+      }
+    ],
+    "arithmetic.remainder": [
+      {
+        "lessonId": "G3-L02-B03",
+        "exposure": "deepen",
+        "scope": "理解余数小于除数及被除数=商×除数+余数。"
+      }
+    ],
+    "reasoning.constant-quantity": [
+      {
+        "lessonId": "G3-L02-B06",
+        "exposure": "first",
+        "scope": "区分单价不变和总量不变，选择先求每份还是总量。"
+      }
+    ],
+    "geometry.rectangle-properties": [
+      {
+        "lessonId": "G3-L03-B01",
+        "exposure": "deepen",
+        "scope": "辨认多边形、长方形、正方形，理解包含关系。"
+      }
+    ],
+    "measure.perimeter": [
+      {
+        "lessonId": "G3-L03-B02",
+        "exposure": "first",
+        "scope": "把周长理解为封闭图形外边界一周长度，推导长方形正方形公式。"
+      }
+    ],
+    "measure.perimeter-join": [
+      {
+        "lessonId": "G3-L03-E01",
+        "exposure": "deepen",
+        "scope": "解释拼接周长变化，系统比较同数量方格的外边界。"
+      }
+    ],
+    "measure.area-unit": [
+      {
+        "lessonId": "G3-L04-B01",
+        "exposure": "first",
+        "scope": "把面积理解为覆盖内部的大小，建立统一平方单位。"
+      }
+    ],
+    "measure.area-array": [
+      {
+        "lessonId": "G3-L04-B02",
+        "exposure": "deepen",
+        "scope": "把长方形面积公式连接到单位方格的行列计数。"
+      }
+    ],
+    "measure.square-unit-conversion": [
+      {
+        "lessonId": "G3-L04-B03",
+        "exposure": "deepen",
+        "scope": "解释相邻常用面积单位进率100，比较同面积/同周长图形。"
+      }
+    ],
+    "data.collection-rule": [
+      {
+        "lessonId": "G3-L05-B01",
+        "exposure": "first",
+        "scope": "设计明确调查、逐项记录，用单式与复式表整理。"
+      }
+    ],
+    "data.exhaustive-groups": [
+      {
+        "lessonId": "G3-L05-B02",
+        "exposure": "first",
+        "scope": "用不重叠不遗漏的区间整理数据，依据数据作有范围的结论。"
+      }
+    ],
+    "time.calendar": [
+      {
+        "lessonId": "G3-LP01-B01",
+        "exposure": "first",
+        "scope": "读年历，区分大小月、二月和平闰年，谨慎处理计数边界。"
+      }
+    ],
+    "time.elapsed": [
+      {
+        "lessonId": "G3-LP01-B02",
+        "exposure": "first",
+        "scope": "转换常用时刻与24时计时法，计算跨整时和跨日时长。"
+      }
+    ],
+    "reasoning.period": [
+      {
+        "lessonId": "G3-LP01-E01",
+        "exposure": "first",
+        "scope": "用7天周期推算星期，结合日期规则制作并验证月历。"
+      }
+    ],
+    "decimal.unit": [
+      {
+        "lessonId": "G3-L06-B01",
+        "exposure": "first",
+        "scope": "用米分米厘米或元角分理解一位两位小数的位值。"
+      }
+    ],
+    "decimal.compare": [
+      {
+        "lessonId": "G3-L06-B02",
+        "exposure": "deepen",
+        "scope": "根据位值或同单位测量比较简单小数。"
+      }
+    ],
+    "reasoning.inclusion-exclusion": [
+      {
+        "lessonId": "G3-L07-B01",
+        "exposure": "first",
+        "scope": "解释两个集合的重叠与容斥，不将两类计数机械相加。"
+      }
+    ]
+  },
+  "verticalLinks": [
+    {
+      "conceptId": "arithmetic.parentheses.equivalent",
+      "grade3": [
+        "G3-U02-E01",
+        "G3-U02-E03"
+      ],
+      "laterReference": [
+        "G4-L03-E01"
+      ],
+      "boundary": "三上两项、具体钱物、非负中间量；四下三项与字母。仅记录以后连接，不修改四年级。"
+    },
+    {
+      "conceptId": "arithmetic.divide.product",
+      "grade3": [
+        "G3-U02-E02",
+        "G3-L02-B05"
+      ],
+      "laterReference": [
+        "G4-L03-E02"
+      ],
+      "boundary": "三上选学体验；三下如未学提升则首次建立分组模型，已会则迁移；四下推广边界。"
+    },
+    {
+      "conceptId": "arithmetic.laws.commute-associate",
+      "grade3": [
+        "G3-U02-E04"
+      ],
+      "laterReference": [
+        "G4-L03-B01",
+        "G4-L03-B02"
+      ],
+      "boundary": "三上实物与具体数，分两小次；四下一般化。"
+    },
+    {
+      "conceptId": "arithmetic.law.distribution",
+      "grade3": [
+        "G3-U02-E05",
+        "G3-U04-B01"
+      ],
+      "laterReference": [
+        "G4-L03-B03"
+      ],
+      "boundary": "三上可选阵列解释，多位数乘法必要拆分另有完整模型，不依赖选学；四下字母通式。"
+    },
+    {
+      "conceptId": "reasoning.whole-substitution",
+      "grade3": [
+        "G3-U02-O02"
+      ],
+      "laterReference": [],
+      "boundary": "仅方框命名和代入；五六年级方程/分数迁移是规划方向，本轮不修改或声称已完成节点映射。"
+    }
+  ],
+  "unitDiagnostics": [
+    {
+      "id": "G3-U02-D01",
+      "label": "同级与第二步",
+      "question": "计算36÷6×2，写出第一步和最终结果。",
+      "answer": "36÷6=6，再6×2=12。",
+      "reason": "不把6×2先算；不能只停在6。",
+      "lessonIds": [
+        "G3-U02-B01"
+      ],
+      "phase": "unit-diagnostic",
+      "scoring": "adult_review",
+      "role": "independent_unseen",
+      "exposureRule": "讲解与常规练习不展示；仅单元检查发题。已看过答案的重做不能作为独立样本。",
+      "audit": {
+        "status": "auto_checked",
+        "date": "2026-09-25",
+        "checks": [
+          "required_fields",
+          "stable_id",
+          "self_contained_prompt_screen",
+          "answer_reason_present"
+        ],
+        "contentDigest": "21b17b967e3e446b276071933fb47c98c6c15598c000d539b0507527c2613ec5",
+        "meaning": "仅自动结构筛查；不是数学语义全证明或人工确认。"
+      },
+      "editorReview": {
+        "reviewerType": "AI",
+        "status": "reviewed",
+        "date": "2026-09-24",
+        "contentDigest": "21b17b967e3e446b276071933fb47c98c6c15598c000d539b0507527c2613ec5",
+        "scope": [
+          "题意与所求量",
+          "答案及理由",
+          "基本边界与先修",
+          "是否可独立抽题"
+        ],
+        "limitation": "AI教研复核仍可能遗漏；开放题参考示例不是所有可行答案集合。未发生具名教师审核或Kevin试学。"
+      }
+    },
+    {
+      "id": "G3-U02-D02",
+      "label": "先乘除与自查",
+      "question": "计算40−4×6，保留首答，检查后再确认最终答。",
+      "answer": "先4×6=24，再40−24=16。",
+      "reason": "运算顺序按约定；不把36×6作为原式。",
+      "lessonIds": [
+        "G3-U02-B02"
+      ],
+      "phase": "unit-diagnostic",
+      "scoring": "adult_review",
+      "role": "independent_unseen",
+      "exposureRule": "讲解与常规练习不展示；仅单元检查发题。已看过答案的重做不能作为独立样本。",
+      "audit": {
+        "status": "auto_checked",
+        "date": "2026-09-25",
+        "checks": [
+          "required_fields",
+          "stable_id",
+          "self_contained_prompt_screen",
+          "answer_reason_present"
+        ],
+        "contentDigest": "95f63769e1f4311e3eba2c3f2ebb02e8233785720ba1b338f13e09e8808c5033",
+        "meaning": "仅自动结构筛查；不是数学语义全证明或人工确认。"
+      },
+      "editorReview": {
+        "reviewerType": "AI",
+        "status": "reviewed",
+        "date": "2026-09-24",
+        "contentDigest": "95f63769e1f4311e3eba2c3f2ebb02e8233785720ba1b338f13e09e8808c5033",
+        "scope": [
+          "题意与所求量",
+          "答案及理由",
+          "基本边界与先修",
+          "是否可独立抽题"
+        ],
+        "limitation": "AI教研复核仍可能遗漏；开放题参考示例不是所有可行答案集合。未发生具名教师审核或Kevin试学。"
+      }
+    },
+    {
+      "id": "G3-U02-D03",
+      "label": "按题意列括号",
+      "question": "红纸14张、蓝纸10张，把所有纸平均分给4人。每人几张？写一个综合算式，说明括号中的量。",
+      "answer": "(14+10)÷4=6张。",
+      "reason": "括号表示要平均分的总张数24。",
+      "lessonIds": [
+        "G3-U02-B03"
+      ],
+      "phase": "unit-diagnostic",
+      "scoring": "adult_review",
+      "role": "independent_unseen",
+      "exposureRule": "讲解与常规练习不展示；仅单元检查发题。已看过答案的重做不能作为独立样本。",
+      "audit": {
+        "status": "auto_checked",
+        "date": "2026-09-25",
+        "checks": [
+          "required_fields",
+          "stable_id",
+          "self_contained_prompt_screen",
+          "answer_reason_present"
+        ],
+        "contentDigest": "5796e7c69882ab31d970d91ae92ad0850c46126891b47d14c8968b86b55628d1",
+        "meaning": "仅自动结构筛查；不是数学语义全证明或人工确认。"
+      },
+      "editorReview": {
+        "reviewerType": "AI",
+        "status": "reviewed",
+        "date": "2026-09-24",
+        "contentDigest": "5796e7c69882ab31d970d91ae92ad0850c46126891b47d14c8968b86b55628d1",
+        "scope": [
+          "题意与所求量",
+          "答案及理由",
+          "基本边界与先修",
+          "是否可独立抽题"
+        ],
+        "limitation": "AI教研复核仍可能遗漏；开放题参考示例不是所有可行答案集合。未发生具名教师审核或Kevin试学。"
+      }
+    },
+    {
+      "id": "G3-U02-D04",
+      "label": "两步中间量",
+      "question": "每盒彩笔8支，买3盒后送出5支。还剩多少支？先说明每一步求什么。",
+      "answer": "先8×3=24支，再24−5=19支。",
+      "reason": "乘积是总支数，减的是同一种支数。",
+      "lessonIds": [
+        "G3-U02-B05"
+      ],
+      "phase": "unit-diagnostic",
+      "scoring": "adult_review",
+      "role": "independent_unseen",
+      "exposureRule": "讲解与常规练习不展示；仅单元检查发题。已看过答案的重做不能作为独立样本。",
+      "audit": {
+        "status": "auto_checked",
+        "date": "2026-09-25",
+        "checks": [
+          "required_fields",
+          "stable_id",
+          "self_contained_prompt_screen",
+          "answer_reason_present"
+        ],
+        "contentDigest": "d35a6ec37bf9bbc610cf066da8d78c977ba1a843e573eeb714c0eb62cdd1d8f2",
+        "meaning": "仅自动结构筛查；不是数学语义全证明或人工确认。"
+      },
+      "editorReview": {
+        "reviewerType": "AI",
+        "status": "reviewed",
+        "date": "2026-09-24",
+        "contentDigest": "d35a6ec37bf9bbc610cf066da8d78c977ba1a843e573eeb714c0eb62cdd1d8f2",
+        "scope": [
+          "题意与所求量",
+          "答案及理由",
+          "基本边界与先修",
+          "是否可独立抽题"
+        ],
+        "limitation": "AI教研复核仍可能遗漏；开放题参考示例不是所有可行答案集合。未发生具名教师审核或Kevin试学。"
+      }
+    },
+    {
+      "id": "G3-U02-D05",
+      "label": "逆过程验算",
+      "question": "盒中原有50张贴纸，取走16张又放回6张。剩多少？从结果倒着检查能否回到50。",
+      "answer": "40张；40−6+16=50。",
+      "reason": "依次撤销放回和取走，不把逆算和新题的规则混淆。",
+      "lessonIds": [
+        "G3-U02-B01",
+        "G3-U02-B04"
+      ],
+      "phase": "unit-diagnostic",
+      "scoring": "adult_review",
+      "role": "independent_unseen",
+      "exposureRule": "讲解与常规练习不展示；仅单元检查发题。已看过答案的重做不能作为独立样本。",
+      "audit": {
+        "status": "auto_checked",
+        "date": "2026-09-25",
+        "checks": [
+          "required_fields",
+          "stable_id",
+          "self_contained_prompt_screen",
+          "answer_reason_present"
+        ],
+        "contentDigest": "c68abc467a1a9d2ecd53b4ee210f32ec499835b9d1fb6c333dd3c131905e8514",
+        "meaning": "仅自动结构筛查；不是数学语义全证明或人工确认。"
+      },
+      "editorReview": {
+        "reviewerType": "AI",
+        "status": "reviewed",
+        "date": "2026-09-24",
+        "contentDigest": "c68abc467a1a9d2ecd53b4ee210f32ec499835b9d1fb6c333dd3c131905e8514",
+        "scope": [
+          "题意与所求量",
+          "答案及理由",
+          "基本边界与先修",
+          "是否可独立抽题"
+        ],
+        "limitation": "AI教研复核仍可能遗漏；开放题参考示例不是所有可行答案集合。未发生具名教师审核或Kevin试学。"
+      }
+    }
+  ],
+  "releasePolicy": {
+    "firstPilot": [
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-E01",
+      "G3-U02-O01"
+    ],
+    "firstCodeBatch": [
+      "G3-U02-B01",
+      "G3-U02-B03"
+    ],
+    "note": "先写五课规格，先编码两课；B04/B05基础未学时用诊断决定是否补，不强推E01/O01。"
+  },
+  "foundationGate": {
+    "taskIds": [
+      "G3-U02-D01",
+      "G3-U02-D02",
+      "G3-U02-D03",
+      "G3-U02-D04",
+      "G3-U02-D05"
+    ],
+    "criterion": "独立完成5道代表题，至少包括括号列式解释和一次逆过程验算；自查改对与首答正确分别保留。未达标只标明目标和建议回补，不禁止进入提升。",
+    "limit": "这五题只支持混合运算基础本次判断，不证明完整三年级或长期掌握。"
+  },
+  "trial": {
+    "lessonMinutes": 30,
+    "optionalMaximumMinutes": 60,
+    "record": [
+      "questionUnderstood",
+      "modelPrediction",
+      "explanationInOwnWords",
+      "independentTransfer",
+      "selfCorrection",
+      "helpLevel",
+      "durationForPlanningOnly"
+    ],
+    "success": "Kevin能不看动画解释关系、完成未曝光的独立题；家长观察和原话作为证据，不以速度奖励。",
+    "failureAction": "读不懂则改写题干；只会操作则减操作并增联系；提示后会但独立题失败则回补；E/O过难可结束。"
+  },
+  "methodThinkingIndex": {
+    "reasoning.sufficient-evidence": [
+      "G3-U01-TH1",
+      "G3-U03-TH7"
+    ],
+    "reasoning.exhaustive-cases": [
+      "G3-U01-TH2"
+    ],
+    "arithmetic.parentheses.model": [
+      "G3-U02-TH1"
+    ],
+    "reasoning.invariant-difference": [
+      "G3-U02-TH2"
+    ],
+    "reasoning.segment-compensation": [
+      "G3-U03-TH1"
+    ],
+    "reasoning.intervals": [
+      "G3-U03-TH2"
+    ],
+    "reasoning.equal-elimination": [
+      "G3-UP01-TH1"
+    ],
+    "reasoning.branching": [
+      "G3-UP01-TH2"
+    ],
+    "arithmetic.law.distribution": [
+      "G3-U04-TH1"
+    ],
+    "reasoning.constrained-enumeration": [
+      "G3-U04-TH2"
+    ],
+    "representation.code-ambiguity": [
+      "G3-UP02-TH1"
+    ],
+    "reasoning.ordered-choice": [
+      "G3-UP02-TH2"
+    ],
+    "reasoning.counterexample": [
+      "G3-U05-TH1"
+    ],
+    "reasoning.systematic-enumeration": [
+      "G3-U05-TH2"
+    ],
+    "fraction.whole-versus-quantity": [
+      "G3-U06-TH1"
+    ],
+    "reasoning.changing-whole": [
+      "G3-U06-TH2"
+    ],
+    "reasoning.constrained-combinations": [
+      "G3-U07-TH1"
+    ],
+    "reasoning.path-enumeration": [
+      "G3-U07-TH2"
+    ],
+    "geometry.symmetry-unfold": [
+      "G3-L01-TH1"
+    ],
+    "reasoning.coloring-invariant": [
+      "G3-L01-TH2"
+    ],
+    "reasoning.remainder-range": [
+      "G3-L02-TH1"
+    ],
+    "reasoning.systematic-filter": [
+      "G3-L02-TH2"
+    ],
+    "reasoning.fixed-sum-enumeration": [
+      "G3-L03-TH1"
+    ],
+    "reasoning.boundary-compensation": [
+      "G3-L03-TH2"
+    ],
+    "geometry.equal-area-decomposition": [
+      "G3-L04-TH1"
+    ],
+    "reasoning.count-by-size": [
+      "G3-L04-TH2"
+    ],
+    "reasoning.table-constraints": [
+      "G3-L05-TH1"
+    ],
+    "reasoning.pigeonhole": [
+      "G3-L05-TH2"
+    ],
+    "reasoning.period-remainder": [
+      "G3-LP01-TH1"
+    ],
+    "reasoning.equalize-pair": [
+      "G3-LP01-TH2"
+    ],
+    "reasoning.decimal-combinations": [
+      "G3-L06-TH1"
+    ],
+    "reasoning.finite-optimization": [
+      "G3-L06-TH2"
+    ],
+    "reasoning.inclusion-exclusion": [
+      "G3-L07-TH1"
+    ],
+    "reasoning.sum-difference": [
+      "G3-L07-TH2"
+    ],
+    "measurement.overlap": [
+      "G3-U03-TH3",
+      "G3-U03-TH4",
+      "G3-U03-TH6"
+    ],
+    "reasoning.inverse": [
+      "G3-U03-TH5",
+      "G3-U02-S17",
+      "G3-U06-S19"
+    ],
+    "reasoning.overcount": [
+      "G3-U03-TH8",
+      "G3-U02-S05"
+    ],
+    "reasoning.cancellation": [
+      "G3-U04-S01"
+    ],
+    "arithmetic.difference-change": [
+      "G3-U02-S02"
+    ],
+    "reasoning.ordered-search": [
+      "G3-U04-S03"
+    ],
+    "reasoning.optimization": [
+      "G3-U04-S04",
+      "G3-L02-S08"
+    ],
+    "reasoning.substitution": [
+      "G3-U02-S06",
+      "G3-L02-S14",
+      "G3-UP01-S20"
+    ],
+    "reasoning.equivalent-relations": [
+      "G3-U02-S07",
+      "G3-UP01-S09"
+    ],
+    "reasoning.part-unit": [
+      "G3-U04-S10",
+      "G3-U04-S15"
+    ],
+    "reasoning.remainder-search": [
+      "G3-L02-S11",
+      "G3-L02-S13"
+    ],
+    "reasoning.cycle": [
+      "G3-LP01-S12",
+      "G3-L02-S16"
+    ],
+    "reasoning.transfer-invariant": [
+      "G3-U02-S18"
+    ]
+  },
+  "thinkingUse": "17个教材单元均有提升/奥数入口；按基础理解与方法联系选题，不强求每章同样题数。每天最多1张，复杂题可跨日；60张是备选库，不是60节必修课。 暑假专项20天方法已逐项挂靠，独立来源页码与改写范围记录在题卡中。"
+}

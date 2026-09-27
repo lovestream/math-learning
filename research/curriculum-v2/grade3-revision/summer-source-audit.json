@@ -1,0 +1,587 @@
+{
+  "source": "docs/review/Kevin_数学20天专项练习_指定页码版.pdf",
+  "sha256": "1547ae2db7cdd89c78bf2e125187e8a817aacc45a2c8f550698f6d83bdda4b30",
+  "scope": "60道思维题的数学模型与参考答案；不包含300道口算。数值吻合不消除语句歧义。",
+  "verifiedThinkingProblems": 60,
+  "sourcePages": 26,
+  "days": [
+    {
+      "day": 1,
+      "pdfPage": 2,
+      "answerPdfPage": 22,
+      "recomputedAnswers": [
+        [
+          3573
+        ],
+        [
+          5675
+        ],
+        [
+          2472
+        ]
+      ],
+      "expectedAnswers": [
+        [
+          3573
+        ],
+        [
+          5675
+        ],
+        [
+          2472
+        ]
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "30616c90813e7621bc392f990db5ff4a06231271302767fd6a4071c904e407a3",
+      "answerPageDigest": "e25b048d8af514939e67945dd1bfca18458ab2095e0ace64dac6a004dd98a50d",
+      "note": ""
+    },
+    {
+      "day": 2,
+      "pdfPage": 3,
+      "answerPdfPage": 22,
+      "recomputedAnswers": [
+        530,
+        635,
+        555
+      ],
+      "expectedAnswers": [
+        530,
+        635,
+        555
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "4a8936fd6cad2623aff54d2794276ed7a179ee343fb8b3b49168663b03430dde",
+      "answerPageDigest": "e25b048d8af514939e67945dd1bfca18458ab2095e0ace64dac6a004dd98a50d",
+      "note": ""
+    },
+    {
+      "day": 3,
+      "pdfPage": 4,
+      "answerPdfPage": 22,
+      "recomputedAnswers": [
+        1503,
+        2307,
+        3106
+      ],
+      "expectedAnswers": [
+        1503,
+        2307,
+        3106
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "7df62433d7a0f10d1f1d15d096faf34574863b5d56700198e2f1d2d55007212e",
+      "answerPageDigest": "e25b048d8af514939e67945dd1bfca18458ab2095e0ace64dac6a004dd98a50d",
+      "note": ""
+    },
+    {
+      "day": 4,
+      "pdfPage": 5,
+      "answerPdfPage": 22,
+      "recomputedAnswers": [
+        1310,
+        1710,
+        1110
+      ],
+      "expectedAnswers": [
+        1310,
+        1710,
+        1110
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "32b7db64f0bb2f5f3b51cc876711356a88941df3565d92bcd0e88d2d11ad7f89",
+      "answerPageDigest": "e25b048d8af514939e67945dd1bfca18458ab2095e0ace64dac6a004dd98a50d",
+      "note": "每次用同一批珠拨数，再收回重拨；不是分配给两个计数器。"
+    },
+    {
+      "day": 5,
+      "pdfPage": 6,
+      "answerPdfPage": 23,
+      "recomputedAnswers": [
+        130,
+        100,
+        170
+      ],
+      "expectedAnswers": [
+        130,
+        100,
+        170
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "d31985e5a3b984bb7e6486611b89b0a28f575e822cd6f9b6e0b11853ca4e2616",
+      "answerPageDigest": "db713326b1369e878c3d9fe4d3efd7d37d73ba903d25f8b8804758cbb447b270",
+      "note": ""
+    },
+    {
+      "day": 6,
+      "pdfPage": 7,
+      "answerPdfPage": 23,
+      "recomputedAnswers": [
+        [
+          5,
+          15
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          6,
+          18
+        ]
+      ],
+      "expectedAnswers": [
+        [
+          5,
+          15
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          6,
+          18
+        ]
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "ed614febb5613be3ec0a68e1680032d619da944bce26fa458949f161f9b862a8",
+      "answerPageDigest": "db713326b1369e878c3d9fe4d3efd7d37d73ba903d25f8b8804758cbb447b270",
+      "note": ""
+    },
+    {
+      "day": 7,
+      "pdfPage": 8,
+      "answerPdfPage": 23,
+      "recomputedAnswers": [
+        [
+          12,
+          44
+        ],
+        [
+          9,
+          51
+        ],
+        [
+          9,
+          43
+        ]
+      ],
+      "expectedAnswers": [
+        [
+          12,
+          44
+        ],
+        [
+          9,
+          51
+        ],
+        [
+          9,
+          43
+        ]
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "de5834c830cd70b8b8b26a7c4f3579228248ad44e089cc360e62d186ca1e4a77",
+      "answerPageDigest": "db713326b1369e878c3d9fe4d3efd7d37d73ba903d25f8b8804758cbb447b270",
+      "note": ""
+    },
+    {
+      "day": 8,
+      "pdfPage": 9,
+      "answerPdfPage": 23,
+      "recomputedAnswers": [
+        [
+          10,
+          6
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          11,
+          9
+        ]
+      ],
+      "expectedAnswers": [
+        [
+          10,
+          6
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          11,
+          9
+        ]
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "573cf3c0ed08a63c546cdf6fb317d525c3e7e168c4fde1d3ff3485fe1493ce3b",
+      "answerPageDigest": "db713326b1369e878c3d9fe4d3efd7d37d73ba903d25f8b8804758cbb447b270",
+      "note": ""
+    },
+    {
+      "day": 9,
+      "pdfPage": 10,
+      "answerPdfPage": 24,
+      "recomputedAnswers": [
+        [
+          [
+            6,
+            10
+          ]
+        ],
+        [
+          [
+            8,
+            14
+          ]
+        ],
+        [
+          [
+            12,
+            15
+          ]
+        ]
+      ],
+      "expectedAnswers": [
+        [
+          [
+            6,
+            10
+          ]
+        ],
+        [
+          [
+            8,
+            14
+          ]
+        ],
+        [
+          [
+            12,
+            15
+          ]
+        ]
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "356b1c1e35a861c095576efbcc4e980c54782e427e7d5da7fee3993b15c7e02a",
+      "answerPageDigest": "5256b93fdbe9695ae7bc1c50c472d6b787430740c36ba1ef230facea550abc2e",
+      "note": "原题两次操作时序含糊。按答案应分别从原状开始；新卡S09已明说恢复原状。"
+    },
+    {
+      "day": 10,
+      "pdfPage": 11,
+      "answerPdfPage": 24,
+      "recomputedAnswers": [
+        [
+          36,
+          9
+        ],
+        [
+          27,
+          9
+        ],
+        [
+          40,
+          8
+        ]
+      ],
+      "expectedAnswers": [
+        [
+          36,
+          9
+        ],
+        [
+          27,
+          9
+        ],
+        [
+          40,
+          8
+        ]
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "dbd18b54e4c3ab81b4581eb6a5535b6fd9124e76b343b3761ba1dfb8610d197c",
+      "answerPageDigest": "5256b93fdbe9695ae7bc1c50c472d6b787430740c36ba1ef230facea550abc2e",
+      "note": ""
+    },
+    {
+      "day": 11,
+      "pdfPage": 12,
+      "answerPdfPage": 24,
+      "recomputedAnswers": [
+        46,
+        51,
+        107
+      ],
+      "expectedAnswers": [
+        46,
+        51,
+        107
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "ee08783fd79f32e3aa1d82b3967bd8fd11d0012fdc881cfa644bcbc4da84a9fd",
+      "answerPageDigest": "5256b93fdbe9695ae7bc1c50c472d6b787430740c36ba1ef230facea550abc2e",
+      "note": "最小数枚举从1开始，原解列举未写出1/3/2等初始候选；它们虽不满足末条件，教学时仍解释为何排除。"
+    },
+    {
+      "day": 12,
+      "pdfPage": 13,
+      "answerPdfPage": 24,
+      "recomputedAnswers": [
+        [
+          7,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "expectedAnswers": [
+        [
+          7,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "2e22efc79e18c8fac1a6f14ee4fbadf24352b1b93671eb2553358c92122a5456",
+      "answerPageDigest": "5256b93fdbe9695ae7bc1c50c472d6b787430740c36ba1ef230facea550abc2e",
+      "note": "开始1号持球不计接球，端点不重复停留；新卡写明。"
+    },
+    {
+      "day": 13,
+      "pdfPage": 14,
+      "answerPdfPage": 25,
+      "recomputedAnswers": [
+        [
+          37
+        ],
+        [
+          52
+        ],
+        [
+          77
+        ]
+      ],
+      "expectedAnswers": [
+        [
+          37
+        ],
+        [
+          52
+        ],
+        [
+          77
+        ]
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "da43996cc5eccaadc00cd9d91a427bb9e5c55c6c1ab56d0ad77841b89276860c",
+      "answerPageDigest": "9f8e19dde4badcaf4e3593df2405dcb469246438f5318ea90a97520713f130f3",
+      "note": ""
+    },
+    {
+      "day": 14,
+      "pdfPage": 15,
+      "answerPdfPage": 25,
+      "recomputedAnswers": [
+        [
+          [
+            51,
+            8
+          ]
+        ],
+        [
+          [
+            37,
+            7
+          ]
+        ],
+        [
+          [
+            76,
+            9
+          ]
+        ]
+      ],
+      "expectedAnswers": [
+        [
+          [
+            51,
+            8
+          ]
+        ],
+        [
+          [
+            37,
+            7
+          ]
+        ],
+        [
+          [
+            76,
+            9
+          ]
+        ]
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "90486c06ae25e6be8857792774d2b1a90432ef8603036036b834fd8bc0d8b826",
+      "answerPageDigest": "9f8e19dde4badcaf4e3593df2405dcb469246438f5318ea90a97520713f130f3",
+      "note": ""
+    },
+    {
+      "day": 15,
+      "pdfPage": 16,
+      "answerPdfPage": 25,
+      "recomputedAnswers": [
+        60,
+        60,
+        72
+      ],
+      "expectedAnswers": [
+        60,
+        60,
+        72
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "29a686d6e469999c1eb68206fc5a1fffb078632891fdee6cac793e37670a5d99",
+      "answerPageDigest": "9f8e19dde4badcaf4e3593df2405dcb469246438f5318ea90a97520713f130f3",
+      "note": ""
+    },
+    {
+      "day": 16,
+      "pdfPage": 17,
+      "answerPdfPage": 25,
+      "recomputedAnswers": [
+        [
+          35
+        ],
+        [
+          29
+        ],
+        [
+          55
+        ]
+      ],
+      "expectedAnswers": [
+        [
+          35
+        ],
+        [
+          29
+        ],
+        [
+          55
+        ]
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "0de371c784b27bd47e3f05a9bf4cb0f0dae2c0df5dc798539d49e0781e36910e",
+      "answerPageDigest": "9f8e19dde4badcaf4e3593df2405dcb469246438f5318ea90a97520713f130f3",
+      "note": ""
+    },
+    {
+      "day": 17,
+      "pdfPage": 18,
+      "answerPdfPage": 26,
+      "recomputedAnswers": [
+        6,
+        5,
+        12
+      ],
+      "expectedAnswers": [
+        6,
+        5,
+        12
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "8765b5c5dd4a4c5c8cb71390025c05d8ee42cdba668b81a7b4a4313e94f0fb4c",
+      "answerPageDigest": "73d6a448a37fc299c6e3bf71f25adaac0f50480f6d136f8127c53c2b7fbb2f62",
+      "note": ""
+    },
+    {
+      "day": 18,
+      "pdfPage": 19,
+      "answerPdfPage": 26,
+      "recomputedAnswers": [
+        [
+          20
+        ],
+        [
+          54
+        ],
+        [
+          24
+        ]
+      ],
+      "expectedAnswers": [
+        [
+          20
+        ],
+        [
+          54
+        ],
+        [
+          24
+        ]
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "64e6faf0f553e3b09a9618d4015d837a933253cdca27bd63b5c4182c20b12fb9",
+      "answerPageDigest": "73d6a448a37fc299c6e3bf71f25adaac0f50480f6d136f8127c53c2b7fbb2f62",
+      "note": "比较现金；新卡改用转移，避开借款债务的歧义。"
+    },
+    {
+      "day": 19,
+      "pdfPage": 20,
+      "answerPdfPage": 26,
+      "recomputedAnswers": [
+        24,
+        40,
+        24
+      ],
+      "expectedAnswers": [
+        24,
+        40,
+        24
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "71230e28e2e08121dc53fb2f462e3f17534995a64e8783dd9ee01acf6bc7fb87",
+      "answerPageDigest": "73d6a448a37fc299c6e3bf71f25adaac0f50480f6d136f8127c53c2b7fbb2f62",
+      "note": "只求第1次反弹高，不求初始落高或总路程；不是经验物理定律。"
+    },
+    {
+      "day": 20,
+      "pdfPage": 21,
+      "answerPdfPage": 26,
+      "recomputedAnswers": [
+        6,
+        6,
+        4
+      ],
+      "expectedAnswers": [
+        6,
+        6,
+        4
+      ],
+      "status": "computed_matches_manually_read_key",
+      "questionDigest": "11b9c9db445cb667e14dec0d6b00da115c43f7d276577fe0a97016f674672bbd",
+      "answerPageDigest": "73d6a448a37fc299c6e3bf71f25adaac0f50480f6d136f8127c53c2b7fbb2f62",
+      "note": "新卡换成同种等重的模型砝码，不把虚构真实动物重量当常识。"
+    }
+  ]
+}

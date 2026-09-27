@@ -1,0 +1,12 @@
+.course-search{display:flex;align-items:center;gap:16px;padding:18px 22px;background:#fffefa;border:1px solid #d6e7de;border-radius:18px;margin:0 0 26px;color:#2e716a;flex-wrap:wrap}
+.course-search>label{flex:1;font-size:13px;font-weight:700;min-width:180px}
+.course-search input:not([type=checkbox]){display:block;border:0;border-bottom:1px solid #b9d1c6;background:transparent;width:100%;padding:10px 0 8px;font:inherit;font-size:17px;color:#254e49;outline-offset:4px}
+.course-search .methods-filter{flex:0 1 auto;display:flex;align-items:center;gap:8px;font-weight:400}
+.method-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.method-card{border:1px solid #d6e7de;border-radius:20px;background:#fffefa;overflow:hidden}
+.method-card>summary{padding:25px;cursor:pointer;list-style:none}.method-card>summary::-webkit-details-marker{display:none}
+.method-card h3{font-size:22px;color:#264f49;margin:10px 0}.method-card summary small{font-size:12px;color:#6c7d64}.method-card summary p{font-size:16px;line-height:1.8;color:#537366;margin-bottom:18px}
+.method-card summary>span{display:flex;gap:8px;align-items:center;color:#287b6b;font-size:14px}
+.method-body{padding:0 25px 25px}.method-body h4{font-size:18px;line-height:1.8;margin:18px 0}.method-body dt{font-size:14px;font-weight:800;color:#2f7162;margin-top:22px}.method-body dd{margin:9px 0 0;line-height:1.85;font-size:16px;color:#46665c}.method-body>button{display:flex;align-items:center;justify-content:space-between;width:100%;text-align:left;margin:10px 0;padding:15px;background:#eaf4ee;color:#286558;border-radius:10px;font:inherit;line-height:1.7}.method-body p{line-height:1.8;font-size:15px}.method-body .muted{font-size:13px;margin-top:20px}
+@media(max-width:850px){.method-grid{grid-template-columns:1fr}.course-search{padding:16px}}
+.resume-learning{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;padding:23px 27px;background:#fff9e9;border:1px solid #e7d6a3;border-radius:20px;margin:25px 0}.resume-learning small{color:#8a703a}.resume-learning h3{font-size:22px;margin:9px 0}.resume-learning p{margin:0;color:#657866}.resume-learning button{display:flex;align-items:center;gap:12px;background:#276f63;color:#fff;padding:13px 19px;border-radius:12px;font:inherit}

@@ -1,0 +1,5309 @@
+[
+  {
+    "id": "place-value",
+    "world": "numbers",
+    "title": "数位小仓库",
+    "subtitle": "同一个数字，换个位置就不同",
+    "kind": "foundation",
+    "minutes": 8,
+    "concept": "十个一组成一个十，十个十组成一个百。数字所在的位置决定它表示几个一、几个十或几个百；某个数位没有计数单位，要用0占位。",
+    "prerequisites": [],
+    "thinkingSkills": [
+      "分组计数",
+      "理解位值"
+    ],
+    "story": "蛋形伙伴泡泡来到星光仓库，把散放的能量豆装进十豆袋，再把十袋装进百豆箱。它要给每堆豆子写上准确的号码。",
+    "discovery": "画出3个百豆箱、4个十豆袋和6颗散豆：图上共有346颗。数字4站在十位，表示40，而不是4。",
+    "steps": [
+      "先看图中有几个百、几个十、几个一，分别放入百位、十位、个位。",
+      "把每一位表示的数量写出来：346=300+40+6。",
+      "遇到空数位也保留位置：3个百和6个一写成306，十位用0占位。"
+    ],
+    "takeaway": "先认位置，再说大小；0能帮空数位守住位置。",
+    "lab": "table",
+    "labConfig": {
+      "a": 346,
+      "b": 10,
+      "total": 346,
+      "parts": 3,
+      "mode": "place-value"
+    },
+    "questions": [
+      {
+        "id": "pv-1",
+        "prompt": "泡泡的仓库编号是462。数字6在这个数里表示多少？",
+        "answer": 60,
+        "unit": "",
+        "hints": [
+          "先找6在个位、十位还是百位。",
+          "6在十位，表示6个十。"
+        ],
+        "explanation": "462=400+60+2，所以数字6表示60。",
+        "misconception": "把数字6的字形当作它在十位表示的数量，会误答6。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "pv-2",
+        "prompt": "4个百、0个十和7个一合起来是多少？",
+        "answer": 407,
+        "unit": "",
+        "hints": [
+          "百位放4，个位放7。",
+          "十位没有十，也要用0占位。"
+        ],
+        "explanation": "400+0+7=407，0保留了十位的位置。",
+        "misconception": "漏写十位的0，会把407写成47。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "pv-3",
+        "prompt": "泡泡有23袋能量豆，每袋10颗，另外还有5颗散豆。一共有多少颗？",
+        "answer": 235,
+        "unit": "颗",
+        "hints": [
+          "23袋就是23个十。",
+          "先算23×10，再加5。"
+        ],
+        "explanation": "23个十是230，230+5=235颗。",
+        "misconception": "23袋不是23颗，要先把袋数换成豆子数。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "pv-4",
+        "prompt": "泡泡把368中的十位数字6换成2，其他数位不变。新数比原数少多少？",
+        "answer": 40,
+        "unit": "",
+        "hints": [
+          "改变的是十位，百位和个位没有变。",
+          "6个十变成2个十，少了4个十。"
+        ],
+        "explanation": "368变成328，368−328=40。",
+        "misconception": "数字少了4，但它们在十位，实际少了40。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "人为什么要把很多东西分组计数？",
+    "mathIdea": "位值把很多个对象压缩成可读、可比较的记号。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "numbers",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "number-line",
+    "world": "numbers",
+    "title": "数轴上的跳跃",
+    "subtitle": "加法向右走，减法向左走",
+    "kind": "foundation",
+    "minutes": 8,
+    "concept": "数轴上相邻整数之间的距离相等。加上一个数，就是从起点向右走相应的距离；减去一个数，就是向左走。可以把一步拆成几步，但总距离要相同。",
+    "prerequisites": [
+      "place-value"
+    ],
+    "thinkingSkills": [
+      "数形结合",
+      "拆分计算"
+    ],
+    "story": "泡泡在数字桥上探险。桥面每一格长1米，路牌上的数字从左往右越来越大，它用跳跃记录前进和后退。",
+    "discovery": "从28出发向右跳17格，可以先跳2格到30，再跳15格到45。拆成两跳，终点仍然不变。",
+    "steps": [
+      "标出起点28和行走方向；加17就向右。",
+      "把17拆成2和15，在数轴上画两段跳跃，先凑到整十数30。",
+      "读出终点45，写28+17=45；反向走17格又能回到28。"
+    ],
+    "takeaway": "数轴上的终点由起点、方向和距离共同决定。",
+    "lab": "numberline",
+    "labConfig": {
+      "a": 28,
+      "b": 17,
+      "total": 45,
+      "parts": 2,
+      "mode": "add"
+    },
+    "questions": [
+      {
+        "id": "nl-1",
+        "prompt": "泡泡站在数轴的36处，向右走8格，每格表示1。它到达哪个数？",
+        "answer": 44,
+        "unit": "",
+        "hints": [
+          "向右走，数字变大。",
+          "先走4格到40，还要走4格。"
+        ],
+        "explanation": "36+8=36+4+4=44。",
+        "misconception": "数的是走过的8段距离，不能把起点36当作第1步。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "nl-2",
+        "prompt": "泡泡站在52处，向左走17格，每格表示1。终点是几？",
+        "answer": 35,
+        "unit": "",
+        "hints": [
+          "向左走要做减法。",
+          "先退2格到50，再退15格。"
+        ],
+        "explanation": "52−17=52−2−15=35。",
+        "misconception": "减17要走17格，不能只把个位相减。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "nl-3",
+        "prompt": "泡泡从19出发，先向右走15格，再向左走6格，每格表示1。最后停在几？",
+        "answer": 28,
+        "unit": "",
+        "hints": [
+          "先算第一次跳跃的终点。",
+          "19+15=34，再从34退6格。"
+        ],
+        "explanation": "19+15−6=34−6=28。",
+        "misconception": "第二次要从34出发，不能又从19出发。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "nl-4",
+        "prompt": "数轴每格表示1。泡泡从27处一直向右走到40处，共走了多少格？",
+        "answer": 13,
+        "unit": "格",
+        "hints": [
+          "求的是两个数之间的距离。",
+          "从27到30走3格，从30到40走10格。"
+        ],
+        "explanation": "40−27=13，也可以算3+10=13格。",
+        "misconception": "从27到40有14个整数标记，但相邻标记间只有13段。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "怎样记录不断增加或减少的数量？",
+    "mathIdea": "数轴把数量和方向放在一条可走的路上。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "numbers",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "arrays",
+    "world": "numbers",
+    "title": "乘法小花田",
+    "subtitle": "把相同的加数排成行",
+    "kind": "foundation",
+    "minutes": 8,
+    "concept": "当每组数量相同时，可以用乘法求总数。阵列把物体排成整齐的行和列，帮助我们看见有几组、每组几个。转动阵列只改变观察方向，不改变总数。",
+    "prerequisites": [],
+    "thinkingSkills": [
+      "等组意识",
+      "数形结合"
+    ],
+    "story": "泡泡在云朵花园种星星花。它把每行种成同样多，好让巡游的小萤火虫一眼看清花的总数。",
+    "discovery": "画3行小圆点，每行4个。按行看是4+4+4，按列看是3+3+3+3，两种看法都数到12个。",
+    "steps": [
+      "先确认每行都一样多，再圈出一整行，作为一组。",
+      "数出3组、每组4个，写成3×4=12。",
+      "换个方向看成4组、每组3个，写4×3=12，核对图中的总数。"
+    ],
+    "takeaway": "组数×每组数量=总数；先确认每组一样多。",
+    "lab": "array",
+    "labConfig": {
+      "a": 3,
+      "b": 4,
+      "total": 12,
+      "parts": 3,
+      "mode": "multiply"
+    },
+    "questions": [
+      {
+        "id": "ar-1",
+        "prompt": "花田有4行星星花，每行6朵，一共有多少朵？",
+        "answer": 24,
+        "unit": "朵",
+        "hints": [
+          "每行6朵，每一行是一组。",
+          "共有4个6，可以用乘法。"
+        ],
+        "explanation": "4×6=24朵，也就是6+6+6+6。",
+        "misconception": "4和6表示组数与每组数量，不能相加求花的总数。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "ar-2",
+        "prompt": "泡泡把20颗石子排成5行，每行同样多。每行有几颗？",
+        "answer": 4,
+        "unit": "颗",
+        "hints": [
+          "要把20平均分成5组。",
+          "想5乘几等于20。"
+        ],
+        "explanation": "20÷5=4，每行4颗。",
+        "misconception": "题目求每行数量，不能把总数20再乘5。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "ar-3",
+        "prompt": "泡泡的果盘有3行，每行7颗果子。它又加了一整行7颗。现在共有多少颗？",
+        "answer": 28,
+        "unit": "颗",
+        "hints": [
+          "增加的是一整行。",
+          "现在有3+1=4行，每行仍是7颗。"
+        ],
+        "explanation": "(3+1)×7=4×7=28颗。",
+        "misconception": "加一行是加7颗，不能只在21后面加1。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "ar-4",
+        "prompt": "灯墙有6行，每行5盏灯。只点亮前2行，其他行都不亮。没点亮的灯有多少盏？",
+        "answer": 20,
+        "unit": "盏",
+        "hints": [
+          "先求没点亮的行数。",
+          "6−2=4行，每行5盏。"
+        ],
+        "explanation": "(6−2)×5=4×5=20盏。",
+        "misconception": "亮了2行共10盏，不能把2行当成2盏来减。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "重复的相同组怎样快速数完？",
+    "mathIdea": "乘法是等量重复的压缩，也能在阵列里看见分配。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "numbers",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "division",
+    "world": "numbers",
+    "title": "分装与余数",
+    "subtitle": "装满几组，还剩几个",
+    "kind": "foundation",
+    "minutes": 9,
+    "concept": "把物体按每组相同的数量分装，可以用除法。不能再装满一组的部分叫余数。总数=每组数量×完整组数+余数，而且余数一定小于每组数量。",
+    "prerequisites": [
+      "arrays"
+    ],
+    "thinkingSkills": [
+      "分组检验",
+      "联系实际"
+    ],
+    "story": "泡泡给探险队装点心，每盒只能装同样多。它既要记录装满了几盒，也要认真照顾还没有装进盒子的点心。",
+    "discovery": "把17个圆点每5个圈成一组，可圈出3个完整组，剩2个。若还剩5个，就能再圈一组，不能叫作余数5。",
+    "steps": [
+      "用圈一圈的办法，把17个圆点按每组5个分开。",
+      "数出3个完整组和2个剩余，写17÷5=3……2。",
+      "用5×3+2=17检查；再根据问题判断要答完整组数、剩余数，还是够用的容器数。"
+    ],
+    "takeaway": "余数比每组数量小；实际问题还要想一想剩下的部分怎么办。",
+    "lab": "array",
+    "labConfig": {
+      "a": 17,
+      "b": 5,
+      "total": 17,
+      "parts": 5,
+      "mode": "remainder"
+    },
+    "questions": [
+      {
+        "id": "dv-1",
+        "prompt": "23颗糖每袋装6颗。最多能装满几袋？",
+        "answer": 3,
+        "unit": "袋",
+        "hints": [
+          "只数装满6颗的袋子。",
+          "6×3=18，6×4=24超过23。"
+        ],
+        "explanation": "23÷6=3……5，最多装满3袋。",
+        "misconception": "剩下5颗没装满一袋，所以完整袋数不能答4。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "dv-2",
+        "prompt": "29块饼干每盒装4块，尽量装满盒子后还剩几块？",
+        "answer": 1,
+        "unit": "块",
+        "hints": [
+          "先找不超过29的最大4的倍数。",
+          "4×7=28，再看29比28多多少。"
+        ],
+        "explanation": "29÷4=7……1，所以剩1块。",
+        "misconception": "余数必须小于4；如果剩5块，还能再装满一盒。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "dv-3",
+        "prompt": "26名队员乘船，每条船最多坐5人。让所有队员都上船，至少需要几条船？",
+        "answer": 6,
+        "unit": "条",
+        "hints": [
+          "先看5条船一共能坐多少人。",
+          "5条船坐25人，还有1人也需要船。"
+        ],
+        "explanation": "26÷5=5……1，5条船不够，至少要6条。",
+        "misconception": "商5只表示5条坐满的船，不能丢下余下的1人。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "dv-4",
+        "prompt": "泡泡装满了4袋珠子，每袋7颗，另有3颗散珠子。珠子原来一共有多少颗？",
+        "answer": 31,
+        "unit": "颗",
+        "hints": [
+          "先求4袋里的珠子数量。",
+          "袋里有4×7颗，还要加上散珠子。"
+        ],
+        "explanation": "7×4+3=28+3=31颗。",
+        "misconception": "余下的3颗也属于原来的总数，需要加回去。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "怎样公平地分东西？分不完怎么办？",
+    "mathIdea": "除法描述每组多少或能分几组，余数记录尚未成组的量。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "numbers",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "equality",
+    "world": "relations",
+    "title": "等号天平",
+    "subtitle": "两边表示同样多",
+    "kind": "foundation",
+    "minutes": 8,
+    "concept": "等号表示左右两边的数量相等。方框里的数暂时不知道，可以借助两边一样多的图来找到它。加法与减法能互相检查，乘法与除法也能互相检查。",
+    "prerequisites": [
+      "number-line"
+    ],
+    "thinkingSkills": [
+      "等量关系",
+      "逆向验证"
+    ],
+    "story": "泡泡在月亮关卡遇到一架小天平。一边放着已知数量的星石，另一边有一个盖住数量的小盒子，它要让两边一样多。",
+    "discovery": "左边画7颗星石和一个未知盒子，右边画18颗。把两边都配走7颗，盒子里就应有剩下的11颗。",
+    "steps": [
+      "先读等号两边各表示什么，确认它们必须一样多。",
+      "对7+□=18，画两条同样长的数量条，在18里划掉已知的7。",
+      "剩下18−7=11，把11放回原式检查：7+11=18。"
+    ],
+    "takeaway": "找到方框后，放回原式检查两边是否相等。",
+    "lab": "balance",
+    "labConfig": {
+      "a": 7,
+      "b": 18,
+      "total": 18,
+      "parts": 2,
+      "mode": "unknown-addend"
+    },
+    "questions": [
+      {
+        "id": "eq-1",
+        "prompt": "泡泡有9颗星石，再拿来一些后共有24颗。9+□=24，方框里填几？",
+        "answer": 15,
+        "unit": "",
+        "hints": [
+          "未知的是增加的部分。",
+          "从总数24中去掉原有的9。"
+        ],
+        "explanation": "24−9=15，检验9+15=24。",
+        "misconception": "等号不是“接着算”的符号，它要求左右数量相等。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "eq-2",
+        "prompt": "一盒贴纸取出8张后剩17张。□−8=17，方框里填几？",
+        "answer": 25,
+        "unit": "",
+        "hints": [
+          "原来的贴纸包括取出的和剩下的。",
+          "把取出的8张加回17张。"
+        ],
+        "explanation": "17+8=25，检验25−8=17。",
+        "misconception": "未知的是原数，不能继续用17−8。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "eq-3",
+        "prompt": "天平左边有14颗和6颗星石，右边有一些星石和9颗。14+6=□+9，方框里填几？",
+        "answer": 11,
+        "unit": "",
+        "hints": [
+          "先求左边的总数量。",
+          "左边20颗，右边已知9颗。"
+        ],
+        "explanation": "14+6=20，20−9=11；两边都是20。",
+        "misconception": "方框加上9才等于20，不能直接把20填入方框。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "eq-4",
+        "prompt": "4个相同的小袋一共有28颗种子。4×□=28，方框里填几？",
+        "answer": 7,
+        "unit": "",
+        "hints": [
+          "4表示相同的袋数。",
+          "把28平均分成4份。"
+        ],
+        "explanation": "28÷4=7，检验4×7=28。",
+        "misconception": "每袋相同，所以用平均分；用28−4求不出每袋数量。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "两边怎样表示同样多？",
+    "mathIdea": "等号表示数量关系的平衡，不只是算出答案。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "relations",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "sum-difference",
+    "world": "relations",
+    "title": "和差双宝箱",
+    "subtitle": "把多出来的一段先放一边",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "知道两个数量的总和与相差数量时，可以把较多的数量中多出的一段暂时移开。剩下的是两份同样多的较小数量，平均分就能找到它。",
+    "prerequisites": [
+      "equality"
+    ],
+    "thinkingSkills": [
+      "线段图",
+      "化不同为相同"
+    ],
+    "story": "泡泡找到红、蓝两个宝箱。两个箱子共18颗宝石，红箱比蓝箱多4颗。它画两条数量条，寻找两个箱子的秘密。",
+    "discovery": "画一长一短两条，长条末尾多4。把这4颗放到旁边，18颗中还剩14颗，正好对应两个一样长的短条。",
+    "steps": [
+      "画两条左端对齐的数量条，标出总和18和长条多出的4。",
+      "从总和里去掉多出的4，得到两份较小数量：18−4=14。",
+      "每份14÷2=7，较大数量7+4=11；检查7+11=18，11−7=4。"
+    ],
+    "takeaway": "先拿走多出来的一段，再把剩下的总数平均分成两份。",
+    "lab": "bar",
+    "labConfig": {
+      "a": 18,
+      "b": 4,
+      "total": 18,
+      "parts": 2,
+      "mode": "sum-difference"
+    },
+    "questions": [
+      {
+        "id": "sd-1",
+        "prompt": "红、蓝两个宝箱共26颗宝石，红箱比蓝箱多6颗。蓝箱有几颗？",
+        "answer": 10,
+        "unit": "颗",
+        "hints": [
+          "蓝箱较少，先去掉红箱多出的6颗。",
+          "26−6是两个蓝箱那么多。"
+        ],
+        "explanation": "(26−6)÷2=10颗；红箱16颗，两箱共26颗。",
+        "misconception": "总和减去差得到的是两份较少量，还需要除以2。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "sd-2",
+        "prompt": "泡泡与小队友共收集34枚徽章，泡泡比队友多8枚。泡泡有几枚？",
+        "answer": 21,
+        "unit": "枚",
+        "hints": [
+          "先把多出的8枚拿走，求队友的数量。",
+          "队友有(34−8)÷2枚，泡泡还要多8枚。"
+        ],
+        "explanation": "队友有13枚，泡泡13+8=21枚；21+13=34。",
+        "misconception": "算出的13是较少的队友数量，题目问的是泡泡。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "sd-3",
+        "prompt": "两条彩带共长42厘米，长彩带比短彩带长10厘米。短彩带长多少厘米？",
+        "answer": 16,
+        "unit": "厘米",
+        "hints": [
+          "画两条线段，让左端对齐。",
+          "去掉长彩带多的10厘米后，两条一样长。"
+        ],
+        "explanation": "(42−10)÷2=16厘米，长彩带26厘米。",
+        "misconception": "直接用42÷2得到平均长度，不是原来的短彩带长度。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "sd-4",
+        "prompt": "两个篮子共装18个苹果，大篮比小篮多4个。大篮有几个苹果？",
+        "answer": 11,
+        "unit": "个",
+        "hints": [
+          "小篮有(18−4)÷2个。",
+          "先得小篮7个，再求大篮。"
+        ],
+        "explanation": "小篮7个，大篮7+4=11个；11−7=4。",
+        "misconception": "从总数18减4得到14，14是两个小篮的数量。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "只知道总数和相差，怎样找出各自数量？",
+    "mathIdea": "把总量拆成相同部分与多出部分，问题就能反向还原。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "relations",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "sum-multiple",
+    "world": "relations",
+    "title": "和倍分一分",
+    "subtitle": "先看一共占几份",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "说甲是乙的几倍，就是把乙看作1份，甲有这样的几份。知道两者总数时，先数出总份数，再把总数平均分成这些份。",
+    "prerequisites": [
+      "arrays",
+      "equality"
+    ],
+    "thinkingSkills": [
+      "单位份",
+      "线段图"
+    ],
+    "story": "泡泡给两只信号塔分配能量球。高塔的球数是矮塔的3倍，两塔共24颗，它用同样长的小格表示相同的一份。",
+    "discovery": "矮塔画1格，高塔画3格，合起来有4格。24颗平均铺进4格，每格6颗，高塔占3格就是18颗。",
+    "steps": [
+      "把较少的矮塔数量画成1份，高塔画成同样的3份。",
+      "合起来是1+3=4份，24÷4=6，找到每份数量。",
+      "矮塔有6颗，高塔6×3=18颗；检查总数24，倍数3。"
+    ],
+    "takeaway": "总份数包含两边：1份和几份都要数进去。",
+    "lab": "bar",
+    "labConfig": {
+      "a": 3,
+      "b": 6,
+      "total": 24,
+      "parts": 4,
+      "mode": "sum-multiple"
+    },
+    "questions": [
+      {
+        "id": "sm-1",
+        "prompt": "大盒与小盒共30颗珠子，大盒的珠子数是小盒的4倍。小盒有几颗？",
+        "answer": 6,
+        "unit": "颗",
+        "hints": [
+          "小盒1份，大盒4份。",
+          "30颗对应1+4=5份。"
+        ],
+        "explanation": "30÷(1+4)=6颗；大盒24颗，共30颗。",
+        "misconception": "4倍表示大盒有4份，两盒合起来是5份，不是4份。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "sm-2",
+        "prompt": "泡泡与队友共收集28片叶子，泡泡的片数是队友的3倍。泡泡收集了几片？",
+        "answer": 21,
+        "unit": "片",
+        "hints": [
+          "队友1份，泡泡3份，总共4份。",
+          "先求每份28÷4，再取3份。"
+        ],
+        "explanation": "每份7片，泡泡有7×3=21片。",
+        "misconception": "28÷4=7求的是一份，也就是队友的数量。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "sm-3",
+        "prompt": "大瓶和小瓶共装18杯果汁，大瓶装的是小瓶的2倍。小瓶装了几杯？",
+        "answer": 6,
+        "unit": "杯",
+        "hints": [
+          "把小瓶画成1格，大瓶画成2格。",
+          "3格合起来是18杯。"
+        ],
+        "explanation": "18÷(1+2)=6杯，大瓶12杯。",
+        "misconception": "“是2倍”表示大瓶共2份，不表示比小瓶多2份。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "sm-4",
+        "prompt": "两支探险队共有40面旗，甲队的旗数是乙队的4倍。甲队有几面旗？",
+        "answer": 32,
+        "unit": "面",
+        "hints": [
+          "乙队1份，甲队4份。",
+          "一共5份，每份40÷5面。"
+        ],
+        "explanation": "40÷5=8，甲队8×4=32面。",
+        "misconception": "不能用40×4，因为40是两队的总数，不是乙队的1份。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "一份和几份合起来，怎样找出一份？",
+    "mathIdea": "总量对应若干份，先找到份数，再找到单位量。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "relations",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "difference-multiple",
+    "world": "relations",
+    "title": "差倍找一份",
+    "subtitle": "多出来的几份有多大",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "把较少数量看成1份，较多数量是几倍就画几份。两者相差的数量，对应较多一边多出的份数。先找每份，再还原两边。",
+    "prerequisites": [
+      "sum-multiple"
+    ],
+    "thinkingSkills": [
+      "对应关系",
+      "线段图"
+    ],
+    "story": "泡泡给月光树和星光树浇水。月光树得到的水是星光树的4倍，多了9杯。它想知道星光树得到多少水。",
+    "discovery": "星光树画1格，月光树画4格。对齐后，多出来3格对应9杯，所以每格3杯；并不是把9平均分成4份。",
+    "steps": [
+      "把少的数量画成1份，多的数量画成4份，让左端对齐。",
+      "圈出多出的4−1=3份，标上相差的9杯。",
+      "9÷3=3，每份3杯；多的有3×4=12杯，检查12−3=9。"
+    ],
+    "takeaway": "相差的数量对应“多出的份数”，先把这两样对上。",
+    "lab": "bar",
+    "labConfig": {
+      "a": 4,
+      "b": 9,
+      "total": 12,
+      "parts": 3,
+      "mode": "difference-multiple"
+    },
+    "questions": [
+      {
+        "id": "dm-1",
+        "prompt": "红袋珠子数是蓝袋的3倍，红袋比蓝袋多12颗。蓝袋有几颗？",
+        "answer": 6,
+        "unit": "颗",
+        "hints": [
+          "蓝袋1份，红袋3份。",
+          "多出的2份对应12颗。"
+        ],
+        "explanation": "12÷(3−1)=6颗，红袋18颗，差12颗。",
+        "misconception": "差12颗只对应多出的2份，不能除以3。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "dm-2",
+        "prompt": "大筐苹果数是小筐的4倍，大筐比小筐多18个。大筐有几个？",
+        "answer": 24,
+        "unit": "个",
+        "hints": [
+          "多出的4−1=3份是18个。",
+          "先求一份，再取4份。"
+        ],
+        "explanation": "18÷3=6，大筐6×4=24个。",
+        "misconception": "6是小筐的一份，题目问大筐，还要乘4。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "dm-3",
+        "prompt": "长绳长度是短绳的2倍，长绳比短绳长7厘米。短绳长多少厘米？",
+        "answer": 7,
+        "unit": "厘米",
+        "hints": [
+          "长绳2份，短绳1份。",
+          "多出的1份正好是7厘米。"
+        ],
+        "explanation": "7÷(2−1)=7厘米；长绳14厘米。",
+        "misconception": "差的一段与短绳同样长，不必再把7除以2。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "dm-4",
+        "prompt": "泡泡的卡片数是队友的5倍，比队友多20张。两人一共有多少张卡片？",
+        "answer": 30,
+        "unit": "张",
+        "hints": [
+          "差20张对应5−1=4份。",
+          "每份5张；两人合起来有5+1份。"
+        ],
+        "explanation": "20÷4=5，合计5×6=30张；两人分别25张和5张。",
+        "misconception": "求总数要数6份，不能只算泡泡的5份。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "知道多出的几份，怎样找出一份？",
+    "mathIdea": "差量对应份数差，数量关系可以用份来度量。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "relations",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "perimeter",
+    "world": "geometry",
+    "title": "给花园围一圈",
+    "subtitle": "周长是边界走过的总长度",
+    "kind": "foundation",
+    "minutes": 9,
+    "concept": "周长描述图形边界一圈有多长。计算长方形周长时，要把四条边都算进去；长和宽各出现两次。周长使用长度单位。",
+    "prerequisites": [
+      "arrays"
+    ],
+    "thinkingSkills": [
+      "边界意识",
+      "有序测量"
+    ],
+    "story": "泡泡要给长方形花圃围篱笆。它沿着边界走了一圈，在每条边上放一块长度牌，防止漏掉或重复。",
+    "discovery": "长6米、宽4米的花圃有两条6米边和两条4米边。沿边界走一圈是6+4+6+4=20米。",
+    "steps": [
+      "用手指沿图形边界完整走一圈，标出起点。",
+      "把四条边按顺序写下来，确认回到起点。",
+      "把边长相加并写长度单位，再用(长+宽)×2检查。"
+    ],
+    "takeaway": "周长只沿边界走一圈；先找全每一条边。",
+    "lab": "geometry",
+    "labConfig": {
+      "a": 6,
+      "b": 4,
+      "total": 20,
+      "parts": 4,
+      "mode": "perimeter"
+    },
+    "questions": [
+      {
+        "id": "pe-1",
+        "prompt": "长方形花圃长8米、宽5米。围一圈篱笆需要多少米？",
+        "answer": 26,
+        "unit": "米",
+        "hints": [
+          "长和宽都各有两条。",
+          "列成8+5+8+5。"
+        ],
+        "explanation": "8+5+8+5=26米，也可以算(8+5)×2。",
+        "misconception": "只算8+5会漏掉另外两条边。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "pe-2",
+        "prompt": "一个正方形徽章每条边长7厘米，它的周长是多少厘米？",
+        "answer": 28,
+        "unit": "厘米",
+        "hints": [
+          "正方形有4条同样长的边。",
+          "把4个7相加。"
+        ],
+        "explanation": "7×4=28厘米。",
+        "misconception": "边长7厘米不是一圈的总长度。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "pe-3",
+        "prompt": "一根36厘米长的铁丝正好围成一个正方形。正方形边长多少厘米？",
+        "answer": 9,
+        "unit": "厘米",
+        "hints": [
+          "36厘米是4条边的总长。",
+          "平均分成4条一样长的边。"
+        ],
+        "explanation": "36÷4=9厘米。",
+        "misconception": "求一条边，要用周长除以4。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "pe-4",
+        "prompt": "长方形卡片长9厘米、宽4厘米。泡泡沿边框贴彩带，留出3厘米不贴。实际贴了多少厘米？",
+        "answer": 23,
+        "unit": "厘米",
+        "hints": [
+          "先求完整边框的周长。",
+          "(9+4)×2后再减去3。"
+        ],
+        "explanation": "完整周长26厘米，26−3=23厘米。",
+        "misconception": "留出的3厘米属于边界长度，要从完整周长中减去。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "怎样给一块地围上边界？",
+    "mathIdea": "周长只沿边界走一圈，长度和面积是不同的量。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "geometry",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "area",
+    "world": "geometry",
+    "title": "用小方格铺满",
+    "subtitle": "面积数的是里面有多少个单位方格",
+    "kind": "foundation",
+    "minutes": 9,
+    "concept": "面积描述图形表面有多大。用同样大小的单位方格无缝铺满，方格总数就是面积。长方形每行方格数乘行数，得到平方单位数。",
+    "prerequisites": [
+      "arrays",
+      "perimeter"
+    ],
+    "thinkingSkills": [
+      "单位方格",
+      "割补转化"
+    ],
+    "story": "泡泡给实验室铺地砖。每块都是边长1米的正方形，它要铺满里面，不重叠，也不留下空隙。",
+    "discovery": "长6米、宽4米的地面可以摆4行，每行6块，共24块1平方米地砖，所以面积是24平方米。",
+    "steps": [
+      "先确定单位方格大小，观察每行能摆几块。",
+      "数出有几行，写每行块数×行数。",
+      "检查铺的是内部，不把边框长度混进来，并写平方单位。"
+    ],
+    "takeaway": "周长看边界，面积看里面；面积单位是平方单位。",
+    "lab": "geometry",
+    "labConfig": {
+      "a": 6,
+      "b": 4,
+      "total": 24,
+      "parts": 6,
+      "mode": "area"
+    },
+    "questions": [
+      {
+        "id": "area-1",
+        "prompt": "长方形实验台长7米、宽3米，台面面积是多少平方米？",
+        "answer": 21,
+        "unit": "平方米",
+        "hints": [
+          "每行能铺7个1平方米方格。",
+          "一共有3行。"
+        ],
+        "explanation": "7×3=21平方米。",
+        "misconception": "7+3求的是一组长和宽，不是铺满内部的方格数。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "area-2",
+        "prompt": "一块正方形拼板边长6厘米，它的面积是多少平方厘米？",
+        "answer": 36,
+        "unit": "平方厘米",
+        "hints": [
+          "可以想成6行方格。",
+          "每行也有6个方格。"
+        ],
+        "explanation": "6×6=36平方厘米。",
+        "misconception": "正方形面积不是4条边相加。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "area-3",
+        "prompt": "一张长方形纸面积32平方厘米，宽4厘米。它的长是多少厘米？",
+        "answer": 8,
+        "unit": "厘米",
+        "hints": [
+          "面积=长×宽。",
+          "想4乘几等于32。"
+        ],
+        "explanation": "32÷4=8厘米。",
+        "misconception": "32是方格总数，平均分成4行得到每行8格。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "area-4",
+        "prompt": "长8米、宽5米的地面中，有一块2平方米的地方不铺砖。需要铺多少平方米？",
+        "answer": 38,
+        "unit": "平方米",
+        "hints": [
+          "先求完整长方形面积。",
+          "8×5后减去不铺的2平方米。"
+        ],
+        "explanation": "8×5−2=38平方米。",
+        "misconception": "不铺区域是面积，要从总面积中减去。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "怎样比较一块地方有多大？",
+    "mathIdea": "用相同大小的小方格铺满，面积就能被数出来。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "geometry",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "planting",
+    "world": "geometry",
+    "title": "路灯与间隔",
+    "subtitle": "先分清数的是点还是两点之间的段",
+    "kind": "thinking",
+    "minutes": 11,
+    "concept": "在一条线段上等距离摆点，间隔是相邻两点之间的一段。两端都摆时，点数比间隔数多1；围成一圈时，最后一个间隔会回到起点，点数与间隔数相同。",
+    "prerequisites": [
+      "perimeter"
+    ],
+    "thinkingSkills": [
+      "点与间隔",
+      "画简单情况"
+    ],
+    "story": "泡泡要沿直路安装路灯。它先画只有1个、2个、3个间隔的小图，发现路灯和空隙的数量总是差一个。",
+    "discovery": "直路两端都装灯：1段有2盏，2段有3盏，3段有4盏。画图比背口诀更可靠。",
+    "steps": [
+      "先判断道路是直线还是一圈，并看两端是否都摆。",
+      "画出少量点，用短线连接相邻的点，分别数点和段。",
+      "把小图规律用到题目，再用总长÷间距检查间隔数。"
+    ],
+    "takeaway": "先画点，再数段；边界条件决定点与间隔的关系。",
+    "lab": "geometry",
+    "labConfig": {
+      "a": 8,
+      "b": 2,
+      "total": 5,
+      "parts": 4,
+      "mode": "planting"
+    },
+    "questions": [
+      {
+        "id": "pl-1",
+        "prompt": "一条12米长的直路，每隔3米放一盏灯，两端都放。共放几盏灯？",
+        "answer": 5,
+        "unit": "盏",
+        "hints": [
+          "12÷3得到间隔数。",
+          "直路两端都有灯，点数比间隔数多1。"
+        ],
+        "explanation": "12÷3=4个间隔，4+1=5盏灯。",
+        "misconception": "4是间隔数；两端都放时还要多一个点。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "pl-2",
+        "prompt": "泡泡沿正方形花坛一圈放8面旗，相邻旗之间距离相同。这一圈有几个间隔？",
+        "answer": 8,
+        "unit": "个",
+        "hints": [
+          "围成一圈，最后一面旗还能连回第一面。",
+          "每面旗后面对应一个间隔。"
+        ],
+        "explanation": "封闭一圈时点数=间隔数，所以有8个间隔。",
+        "misconception": "不能套用直线两端都放的“加1”。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "pl-3",
+        "prompt": "一条步道分成6个相等的间隔，两端都种树。需要几棵树？",
+        "answer": 7,
+        "unit": "棵",
+        "hints": [
+          "画6段短线。",
+          "6段短线需要7个端点。"
+        ],
+        "explanation": "6+1=7棵树。",
+        "misconception": "题目已经给出间隔数，不需要再除。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "pl-4",
+        "prompt": "从第1盏路灯走到第9盏路灯，相邻灯相距4米。共走多少米？",
+        "answer": 32,
+        "unit": "米",
+        "hints": [
+          "第1盏到第9盏之间不是9段。",
+          "画点可看出有9−1=8个间隔。"
+        ],
+        "explanation": "8×4=32米。",
+        "misconception": "9盏灯之间只有8个相邻间隔。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "为什么树的棵数和间隔数不总是一样？",
+    "mathIdea": "先数间隔，再根据开头和结尾是否放树判断棵数。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "geometry",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "matchstick",
+    "world": "geometry",
+    "title": "火柴棒方阵",
+    "subtitle": "相邻图形会共享一条边",
+    "kind": "thinking",
+    "minutes": 11,
+    "concept": "用火柴棒连续拼正方形时，相邻正方形共享一条边。第一个正方形要4根，以后每增加一个相邻正方形只增加3根。也可以分类数横边与竖边。",
+    "prerequisites": [
+      "perimeter",
+      "arrays"
+    ],
+    "thinkingSkills": [
+      "共享边",
+      "递推"
+    ],
+    "story": "泡泡用等长小棒在桌上排一列正方形。第二个正方形贴着第一个，它发现中间那条边只需要摆一次。",
+    "discovery": "1个正方形用4根；再拼1个只加上上、下、右3根，所以2个用7根，3个用10根。",
+    "steps": [
+      "先摆第一个完整正方形，记录4根。",
+      "把下一个正方形贴在旁边，圈出共享的那条边。",
+      "每多一个加3根，用4+3×(个数−1)计算并画图检查。"
+    ],
+    "takeaway": "共享的边只数一次；从小情况长出规律。",
+    "lab": "geometry",
+    "labConfig": {
+      "a": 4,
+      "b": 3,
+      "total": 13,
+      "parts": 4,
+      "mode": "matchstick"
+    },
+    "questions": [
+      {
+        "id": "ms-1",
+        "prompt": "用火柴棒横着连拼4个正方形，至少需要多少根火柴棒？",
+        "answer": 13,
+        "unit": "根",
+        "hints": [
+          "第一个用4根。",
+          "后面3个各增加3根。"
+        ],
+        "explanation": "4+3×3=13根。",
+        "misconception": "若算4×4会把三条共享边各数两次。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "ms-2",
+        "prompt": "横着连拼6个正方形，比连拼5个多用几根火柴棒？",
+        "answer": 3,
+        "unit": "根",
+        "hints": [
+          "新增正方形会共享左边。",
+          "只需补上另外3条边。"
+        ],
+        "explanation": "无论原来有几个，队尾增加1个都多3根。",
+        "misconception": "新增正方形不是独立摆放，所以不多4根。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "ms-3",
+        "prompt": "泡泡有19根火柴棒，恰好横着连拼一些正方形。能拼几个？",
+        "answer": 6,
+        "unit": "个",
+        "hints": [
+          "第一个用4根，剩下每个增加3根。",
+          "19−4=15，15÷3=5个新增正方形。"
+        ],
+        "explanation": "1+15÷3=6个。",
+        "misconception": "15÷3只数出了第一个之后新增的5个。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "ms-4",
+        "prompt": "横着连拼3个正方形后，再在最右边接1个。现在一共有多少根火柴棒？",
+        "answer": 13,
+        "unit": "根",
+        "hints": [
+          "现在合计是4个连续正方形。",
+          "3个用10根，再接一个加3根。"
+        ],
+        "explanation": "10+3=13根。",
+        "misconception": "接上的正方形共享一条边，只新增3根。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "图形一个接一个拼时，为什么增加量不一样？",
+    "mathIdea": "相邻图形会共享边，变化量来自没有共享的新部分。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "geometry",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "patterns-parity",
+    "world": "patterns",
+    "title": "奇偶配对站",
+    "subtitle": "两个一组后有没有剩下",
+    "kind": "foundation",
+    "minutes": 8,
+    "concept": "能刚好两个一组、没有剩余的整数是偶数；最后剩1个的是奇数。偶数加偶数、奇数加奇数得到偶数，奇数加偶数得到奇数。关键是配对后是否剩下。",
+    "prerequisites": [
+      "division"
+    ],
+    "thinkingSkills": [
+      "配对",
+      "分类"
+    ],
+    "story": "泡泡给能量球找搭档，每两个站成一队。有时所有球都有伙伴，有时最后一颗只能独自等待。",
+    "discovery": "7颗球配成3对还剩1颗，所以7是奇数；8颗球配成4对没有剩余，所以8是偶数。",
+    "steps": [
+      "把数量画成小圆点，每两个圈成一组。",
+      "观察有没有剩余：0个剩余是偶数，1个剩余是奇数。",
+      "合并两堆时把原本剩下的单个重新配对，解释和的奇偶性。"
+    ],
+    "takeaway": "奇偶看两两配对后的余数，不只看数字名称。",
+    "lab": "array",
+    "labConfig": {
+      "a": 3,
+      "b": 5,
+      "total": 15,
+      "parts": 2,
+      "mode": "parity"
+    },
+    "questions": [
+      {
+        "id": "pa-1",
+        "prompt": "17颗能量球每2颗配成一对，配完后剩几颗？",
+        "answer": 1,
+        "unit": "颗",
+        "hints": [
+          "17不是2的整倍数。",
+          "2×8=16。"
+        ],
+        "explanation": "17÷2=8……1，剩1颗，所以17是奇数。",
+        "misconception": "题目问余数，不是问能配成的8对。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "pa-2",
+        "prompt": "一个奇数和另一个奇数相加，结果一定是奇数还是偶数？若用0表示偶数、1表示奇数，应填几？",
+        "answer": 0,
+        "unit": "",
+        "hints": [
+          "每堆各剩1个没有配对。",
+          "把两个剩下的单个配成一对。"
+        ],
+        "explanation": "奇数+奇数时两个单个重新成对，所以结果是偶数，填0。",
+        "misconception": "看到两个“奇”不能直接判断和仍然奇。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "pa-3",
+        "prompt": "三个连续整数是12、13、14，其中有几个偶数？",
+        "answer": 2,
+        "unit": "个",
+        "hints": [
+          "能被2整除的是偶数。",
+          "12和14都能两个一组。"
+        ],
+        "explanation": "12、14是偶数，共2个。",
+        "misconception": "连续三个数的奇偶交替，要逐个判断。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "pa-4",
+        "prompt": "泡泡把25颗珠子拿走7颗，剩下的是奇数还是偶数？若0表示偶数、1表示奇数，填几？",
+        "answer": 0,
+        "unit": "",
+        "hints": [
+          "25和7都是奇数。",
+          "奇数减奇数，两个单个可以同时去掉。"
+        ],
+        "explanation": "25−7=18，是偶数，所以填0。",
+        "misconception": "减法也可以用实际结果或配对解释。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "一堆东西能不能两两配完？",
+    "mathIdea": "奇偶性来自配对后是否留下一个，和具体大小无关。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "patterns",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "periods",
+    "world": "patterns",
+    "title": "循环星轨",
+    "subtitle": "完整周期之后看余数",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "按固定顺序重复出现的现象具有周期。先确定一个完整周期包含几项，再用总位置除以周期长度；余数指向周期中的位置，余数0表示落在周期最后一项。",
+    "prerequisites": [
+      "division",
+      "patterns-parity"
+    ],
+    "thinkingSkills": [
+      "周期",
+      "余数定位"
+    ],
+    "story": "星轨灯按“红、黄、蓝、绿”不停循环。泡泡不想从头数到第几十盏，于是把每4盏圈成一组。",
+    "discovery": "第14盏：14÷4=3……2，完整走过3个周期后落在周期第2项，也就是黄色。",
+    "steps": [
+      "写出一个最短完整周期，并标出周期长度。",
+      "用目标位置÷周期长度，找到余数。",
+      "余数1、2、3…对应周期第1、2、3…项；余数0对应最后一项。"
+    ],
+    "takeaway": "先找最短周期，再让余数帮你定位。",
+    "lab": "table",
+    "labConfig": {
+      "a": 4,
+      "b": 14,
+      "total": 16,
+      "parts": 4,
+      "mode": "period"
+    },
+    "questions": [
+      {
+        "id": "cy-1",
+        "prompt": "灯光按“红、黄、蓝”循环，第20盏灯在周期中的第几个位置？",
+        "answer": 2,
+        "unit": "",
+        "hints": [
+          "一个周期有3盏。",
+          "20÷3的余数是2。"
+        ],
+        "explanation": "20÷3=6……2，所以在周期第2个位置，是黄色。",
+        "misconception": "商6表示完整周期数，定位要看余数2。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "cy-2",
+        "prompt": "鼓声按“强、弱、弱、停”循环，第24拍是周期中的第几个位置？",
+        "answer": 4,
+        "unit": "",
+        "hints": [
+          "周期长度是4。",
+          "24除以4没有余数。"
+        ],
+        "explanation": "余数0表示正好落在周期最后一项，所以是第4个位置。",
+        "misconception": "余数0不表示第0个位置。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "cy-3",
+        "prompt": "旗帜按“红、蓝、蓝、黄、绿”循环。第37面是红色吗？是填1，不是填0。",
+        "answer": 0,
+        "unit": "",
+        "hints": [
+          "周期有5面。",
+          "37÷5余2，对应第二面。"
+        ],
+        "explanation": "第37面落在周期第2项，是蓝色，不是红色，填0。",
+        "misconception": "只看个位7不能判断周期位置。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "cy-4",
+        "prompt": "泡泡每4天完成一次星轨观察。第3、7、11天都观察，接下来第几天观察？",
+        "answer": 15,
+        "unit": "天",
+        "hints": [
+          "相邻观察日都相差4天。",
+          "11+4。"
+        ],
+        "explanation": "11+4=15天。",
+        "misconception": "周期规律看相邻同类事件的间隔。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "重复出现的现象怎样预测？",
+    "mathIdea": "周期问题先找周期长度，再用余数定位。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "patterns",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "pairing-sums",
+    "world": "patterns",
+    "title": "首尾牵手求和",
+    "subtitle": "把和相同的数配成一对",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "一串等差排列的数可以首尾配对。第一项与最后一项、第二项与倒数第二项的和相同。偶数项可以全部配对；奇数项会留下中间一项，需要单独处理。",
+    "prerequisites": [
+      "number-line",
+      "patterns-parity"
+    ],
+    "thinkingSkills": [
+      "配对",
+      "整体计算"
+    ],
+    "story": "泡泡要给1到10的数字排队。1牵10，2牵9，3牵8，它发现每对都等于11。",
+    "discovery": "1到10共有10个数，配成5对，每对和11，所以总和是11×5=55。",
+    "steps": [
+      "确认数列每次增加相同数量，并数清一共有几项。",
+      "从两端向中间配对，检查每对的和是否相同。",
+      "用每对和×对数；若剩中间项，再把它加上。"
+    ],
+    "takeaway": "配对把许多次不同加法，变成几次相同加法。",
+    "lab": "table",
+    "labConfig": {
+      "a": 1,
+      "b": 10,
+      "total": 55,
+      "parts": 5,
+      "mode": "pair-sum"
+    },
+    "questions": [
+      {
+        "id": "ps-1",
+        "prompt": "把1到8相加，首尾配对后总和是多少？",
+        "answer": 36,
+        "unit": "",
+        "hints": [
+          "1+8、2+7都等于9。",
+          "8个数能配成4对。"
+        ],
+        "explanation": "每对9，共4对，9×4=36。",
+        "misconception": "8是项数；每对含2项，所以只有4对。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "ps-2",
+        "prompt": "把2、4、6、8、10、12相加，总和是多少？",
+        "answer": 42,
+        "unit": "",
+        "hints": [
+          "首尾2+12=14。",
+          "一共有6项，配3对。"
+        ],
+        "explanation": "每对14，共3对，14×3=42。",
+        "misconception": "不能把公差2当作对数。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "ps-3",
+        "prompt": "把1到9相加，配对后还有中间的5。总和是多少？",
+        "answer": 45,
+        "unit": "",
+        "hints": [
+          "1和9、2和8等可配成4对。",
+          "每对10，再加中间的5。"
+        ],
+        "explanation": "10×4+5=45。",
+        "misconception": "奇数个项会留下一个中间项，不能漏掉5。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "ps-4",
+        "prompt": "从11到20的十个连续整数相加，结果是多少？",
+        "answer": 155,
+        "unit": "",
+        "hints": [
+          "11+20=31。",
+          "10个数配成5对。"
+        ],
+        "explanation": "每对31，共5对，31×5=155。",
+        "misconception": "不是从1开始也能首尾配对。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "连续很多数怎样不用一个个相加？",
+    "mathIdea": "首尾配对保持和不变，把长清单变成重复结构。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "patterns",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "age-invariant",
+    "world": "patterns",
+    "title": "年龄差不会跑",
+    "subtitle": "大家同时长大，相差保持不变",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "两个人经过同样的时间都会增加相同岁数，所以年龄差保持不变。年龄倍数通常会改变，不能把“现在几倍”直接搬到未来。",
+    "prerequisites": [
+      "sum-difference"
+    ],
+    "thinkingSkills": [
+      "不变量",
+      "时间关系"
+    ],
+    "story": "泡泡翻看两张生日照片：哥哥和妹妹每年都长1岁。它把两人的年龄放在同一条数轴上，发现两个点一起向右移动。",
+    "discovery": "哥哥10岁、妹妹6岁，相差4岁。5年后是15岁和11岁，仍相差4岁。",
+    "steps": [
+      "先求现在的年龄差，并画两个年龄点。",
+      "经过若干年，让两个点同时增加相同数；若问若干年前，则同时减少。",
+      "检查年龄差不变，再根据题目求未知年龄。"
+    ],
+    "takeaway": "时间让两个人一起变化，同加同减不会改变年龄差。",
+    "lab": "numberline",
+    "labConfig": {
+      "a": 6,
+      "b": 4,
+      "total": 15,
+      "parts": 2,
+      "mode": "age"
+    },
+    "questions": [
+      {
+        "id": "ag-1",
+        "prompt": "姐姐12岁，弟弟8岁。6年后姐姐比弟弟大几岁？",
+        "answer": 4,
+        "unit": "岁",
+        "hints": [
+          "先算现在相差多少。",
+          "两人都增加6岁。"
+        ],
+        "explanation": "12−8=4岁；同加6后差仍是4岁。",
+        "misconception": "年龄都变大，但年龄差不变。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "ag-2",
+        "prompt": "爸爸35岁，Kevin 9岁。3年前爸爸比Kevin大几岁？",
+        "answer": 26,
+        "unit": "岁",
+        "hints": [
+          "现在的差是35−9。",
+          "3年前两人都少3岁。"
+        ],
+        "explanation": "35−9=26岁，同减3不改变差。",
+        "misconception": "不能只从爸爸年龄里减3来当年龄差。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "ag-3",
+        "prompt": "哥哥今年14岁，比妹妹大5岁。4年后妹妹几岁？",
+        "answer": 13,
+        "unit": "岁",
+        "hints": [
+          "妹妹今年14−5岁。",
+          "再给妹妹增加4岁。"
+        ],
+        "explanation": "妹妹今年9岁，4年后9+4=13岁。",
+        "misconception": "大5岁是固定差，不是妹妹4年后的增加量。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "ag-4",
+        "prompt": "6年前妈妈28岁，孩子4岁。现在两人的年龄和是多少岁？",
+        "answer": 44,
+        "unit": "岁",
+        "hints": [
+          "现在两人都增加6岁。",
+          "妈妈34岁，孩子10岁。"
+        ],
+        "explanation": "(28+6)+(4+6)=44岁。",
+        "misconception": "年龄和每过1年会增加2岁，因为有两个人。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "年龄在变，哪些关系却不变？",
+    "mathIdea": "同时增加相同量，差保持不变，这是不变量思想。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "patterns",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "enumeration",
+    "world": "logic",
+    "title": "不漏不重的清单",
+    "subtitle": "按固定顺序列出所有可能",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "枚举不是随便猜，而是选择一个量按固定顺序变化，并根据条件写出另一个量。这样能证明所有情况都考虑过，而且没有重复。",
+    "prerequisites": [
+      "equality"
+    ],
+    "thinkingSkills": [
+      "系统枚举",
+      "检查完整性"
+    ],
+    "story": "泡泡要把8颗星石分进红、蓝两个盒子，两个盒子都可以为空。它让红盒从0颗开始，每次增加1颗，蓝盒就相应减少1颗。",
+    "discovery": "按“红盒数量从小到大”列：(0,8)、(1,7)…(8,0)，一共9种有顺序的分法。",
+    "steps": [
+      "先说明两种位置或角色是否有区别，本关红盒和蓝盒有区别。",
+      "固定红盒从最小值开始，每次只增加1，算出蓝盒。",
+      "检查第一种、最后一种和相邻变化，确认不漏、不重。"
+    ],
+    "takeaway": "给变化排好顺序，枚举才能成为证明。",
+    "lab": "table",
+    "labConfig": {
+      "a": 0,
+      "b": 8,
+      "total": 9,
+      "parts": 2,
+      "mode": "enumeration"
+    },
+    "questions": [
+      {
+        "id": "en-1",
+        "prompt": "把5颗相同珠子分进有区别的甲、乙两个盒子，盒子可以空。共有多少种分法？",
+        "answer": 6,
+        "unit": "种",
+        "hints": [
+          "让甲盒依次装0、1、2、3、4、5颗。",
+          "乙盒的数量由总数5决定。"
+        ],
+        "explanation": "甲盒有0到5颗共6种选择，因此有6种有顺序分法。",
+        "misconception": "(1,4)和(4,1)不同，因为甲乙盒有区别。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "en-2",
+        "prompt": "两个非负整数的和是7。把第一个数按0到7列出，共有多少组有顺序的数对？",
+        "answer": 8,
+        "unit": "组",
+        "hints": [
+          "第一个数可以从0取到7。",
+          "每确定第一个数，第二个数唯一。"
+        ],
+        "explanation": "0到7共有8个整数，所以有8组。",
+        "misconception": "不要漏掉含0的(0,7)和(7,0)。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "en-3",
+        "prompt": "用1元、2元两种硬币凑成6元。只问各用几枚，不计排列顺序。共有多少种方案？",
+        "answer": 4,
+        "unit": "种",
+        "hints": [
+          "让2元硬币枚数依次为0、1、2、3。",
+          "对应1元硬币为6、4、2、0枚。"
+        ],
+        "explanation": "四种方案：(6,0)、(4,1)、(2,2)、(0,3)。",
+        "misconception": "同一批硬币的摆放先后不形成新方案。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "en-4",
+        "prompt": "泡泡从数字1、2、3中选两个不同数字，组成两位数。可以组成多少个？",
+        "answer": 6,
+        "unit": "个",
+        "hints": [
+          "十位有3种选择。",
+          "个位只能从剩下2个数字选。"
+        ],
+        "explanation": "3×2=6个：12、13、21、23、31、32。",
+        "misconception": "12和21是不同的两位数，都要保留。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "怎样把所有可能列全而不重复？",
+    "mathIdea": "固定一个选择，再系统改变另一个选择，清单才可靠。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "logic",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "chicken-rabbit",
+    "world": "logic",
+    "title": "脚印侦探案",
+    "subtitle": "先假设全是同一种，再替换修正",
+    "kind": "thinking",
+    "minutes": 12,
+    "concept": "当两类动物的头数和脚数已知，可先假设全部是脚较少的动物。每把一只替换成脚较多的动物，脚数增加固定数量，由总差求替换次数。",
+    "prerequisites": [
+      "difference-multiple",
+      "enumeration"
+    ],
+    "thinkingSkills": [
+      "假设替换",
+      "差量分析"
+    ],
+    "story": "泡泡在沙滩看见鸡和兔的20个头、56只脚。动物躲在石头后，只留下脚印，它决定先假设全是鸡。",
+    "discovery": "20只全是鸡应有40只脚，比实际少16只。每把1只鸡换成兔会多2只脚，所以要换8只，兔有8只。",
+    "steps": [
+      "假设全部是脚较少的鸡，用头数×2求假设脚数。",
+      "实际脚数减假设脚数，得到需要增加的脚数。",
+      "每次替换增加4−2=2只脚，用总差÷2求兔数，再检查头和脚。"
+    ],
+    "takeaway": "假设不是乱猜，它提供一个能一步步修正的起点。",
+    "lab": "table",
+    "labConfig": {
+      "a": 20,
+      "b": 56,
+      "total": 20,
+      "parts": 2,
+      "mode": "chicken-rabbit"
+    },
+    "questions": [
+      {
+        "id": "cr-1",
+        "prompt": "鸡兔共10只，共有28只脚。兔有几只？",
+        "answer": 4,
+        "unit": "只",
+        "hints": [
+          "假设10只全是鸡，有20只脚。",
+          "比实际少8只脚，每换1只多2只脚。"
+        ],
+        "explanation": "(28−20)÷2=4只兔，鸡6只。",
+        "misconception": "脚数差8不是兔数，每只兔相对鸡只多2只脚。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "cr-2",
+        "prompt": "自行车和三轮车共8辆，共有21个轮子。三轮车有几辆？",
+        "answer": 5,
+        "unit": "辆",
+        "hints": [
+          "假设全是两轮自行车，共16个轮子。",
+          "每换成一辆三轮车多1个轮子。"
+        ],
+        "explanation": "21−16=5，所以有5辆三轮车。",
+        "misconception": "三轮车比自行车只多1个轮子。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "cr-3",
+        "prompt": "鸡兔共15只，共有44只脚。鸡有几只？",
+        "answer": 8,
+        "unit": "只",
+        "hints": [
+          "先假设全是鸡，求兔数。",
+          "兔数=(44−15×2)÷2。"
+        ],
+        "explanation": "兔有7只，所以鸡15−7=8只。",
+        "misconception": "假设法先得到兔数，题目问鸡还要用总数减。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "cr-4",
+        "prompt": "蜘蛛有8条腿，甲虫有6条腿，共5只昆虫、34条腿。蜘蛛有几只？",
+        "answer": 2,
+        "unit": "只",
+        "hints": [
+          "假设5只全是甲虫，有30条腿。",
+          "每换1只蜘蛛多2条腿。"
+        ],
+        "explanation": "(34−30)÷2=2只蜘蛛。",
+        "misconception": "比较的是8条腿与6条腿的差2。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "只看到头和脚，怎样还原动物组合？",
+    "mathIdea": "先假设全是同类，再看每次替换带来的固定变化。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "logic",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "reverse",
+    "world": "logic",
+    "title": "时间倒带机",
+    "subtitle": "把最后一步的运算反过来",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "已知一连串操作后的结果，可以从最后一步开始，按相反顺序使用逆运算：加对应减、减对应加、乘对应除、除对应乘。每倒退一步都可正向检查。",
+    "prerequisites": [
+      "equality",
+      "division"
+    ],
+    "thinkingSkills": [
+      "倒推",
+      "逆运算"
+    ],
+    "story": "泡泡把一个神秘数先乘3，再加5，最后得到26。它启动时间倒带机，从26先退掉最后增加的5。",
+    "discovery": "26先减5得到21，再除以3得到7。正向检查：7×3+5=26。",
+    "steps": [
+      "把每一步操作按顺序写成箭头，圈出最终结果。",
+      "从最后一个箭头开始，使用对应逆运算，并把顺序倒过来。",
+      "找到起始数后正向重做所有操作，确认回到题目结果。"
+    ],
+    "takeaway": "倒推既要反运算，也要反顺序。",
+    "lab": "numberline",
+    "labConfig": {
+      "a": 7,
+      "b": 5,
+      "total": 26,
+      "parts": 2,
+      "mode": "reverse"
+    },
+    "questions": [
+      {
+        "id": "rv-1",
+        "prompt": "一个数加8后等于23。这个数是多少？",
+        "answer": 15,
+        "unit": "",
+        "hints": [
+          "把“加8”反过来。",
+          "23−8。"
+        ],
+        "explanation": "23−8=15，检查15+8=23。",
+        "misconception": "倒推时加法用减法。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "rv-2",
+        "prompt": "一个数先乘4，再减3，结果是29。原来的数是多少？",
+        "answer": 8,
+        "unit": "",
+        "hints": [
+          "从29先撤销最后的减3。",
+          "29+3=32，再撤销乘4。"
+        ],
+        "explanation": "(29+3)÷4=8，检查8×4−3=29。",
+        "misconception": "必须先加回3，再除以4，倒序撤销。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "rv-3",
+        "prompt": "一个数先加6，再除以3，结果是7。原来的数是多少？",
+        "answer": 15,
+        "unit": "",
+        "hints": [
+          "先撤销最后的除以3。",
+          "7×3=21，再减6。"
+        ],
+        "explanation": "7×3−6=15，检查(15+6)÷3=7。",
+        "misconception": "不能先从7减6；操作顺序也要倒过来。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "rv-4",
+        "prompt": "泡泡有一些星石，送出一半后又得到4颗，现在有10颗。原来有几颗？",
+        "answer": 12,
+        "unit": "颗",
+        "hints": [
+          "先撤销最后得到的4颗。",
+          "10−4=6，这是原来的一半。"
+        ],
+        "explanation": "(10−4)×2=12颗。",
+        "misconception": "6是送出一半后剩下的数量，还要乘2。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "只知道结果，怎样倒着找起点？",
+    "mathIdea": "逆运算把每一步撤销，倒推就是沿过程反向走。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "logic",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "pigeonhole",
+    "world": "logic",
+    "title": "一定会相遇",
+    "subtitle": "从最不走运的情况推出保证",
+    "kind": "thinking",
+    "minutes": 11,
+    "concept": "“至少保证”问题要考虑最不利情况。把物品放入有限类别，先让每个类别尽量不重复；再多一个物品时，必有某一类达到第二个。这是抽屉思想的起点。",
+    "prerequisites": [
+      "enumeration"
+    ],
+    "thinkingSkills": [
+      "最坏情况",
+      "保证"
+    ],
+    "story": "泡泡从只装红、黄、蓝三种颜色的袋子里闭眼拿球。它问：至少拿几颗，才能保证有两颗同色？",
+    "discovery": "最不走运时先拿到红、黄、蓝各1颗，共3颗仍没有同色对。第4颗无论什么颜色，都和已有的一颗同色。",
+    "steps": [
+      "列出所有类别，构造“尽量不重复”的最坏情况。",
+      "数出最坏情况下还能不满足要求的最大数量。",
+      "再加1，解释新增物品为什么无论放哪都必然满足。"
+    ],
+    "takeaway": "保证数=还能避开的最大数量+1；关键是证明“无论怎样”。",
+    "lab": "table",
+    "labConfig": {
+      "a": 3,
+      "b": 4,
+      "total": 4,
+      "parts": 3,
+      "mode": "pigeonhole"
+    },
+    "questions": [
+      {
+        "id": "ph-1",
+        "prompt": "袋里只有红、黄、蓝3种颜色的球。至少拿几颗，保证有2颗同色？",
+        "answer": 4,
+        "unit": "颗",
+        "hints": [
+          "最坏时先拿到3种颜色各1颗。",
+          "第4颗只能属于这3种颜色之一。"
+        ],
+        "explanation": "3+1=4颗能保证同色一对。",
+        "misconception": "拿3颗可能恰好各色1颗，不能保证。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "ph-2",
+        "prompt": "袜子只有黑、白两种颜色。天黑看不见，至少拿几只，保证有2只同色？",
+        "answer": 3,
+        "unit": "只",
+        "hints": [
+          "最坏时前2只一黑一白。",
+          "第3只不是黑就是白。"
+        ],
+        "explanation": "2+1=3只。",
+        "misconception": "两只可能颜色不同，不能保证配成同色。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "ph-3",
+        "prompt": "一周有7种星期。一个班至少有多少人，才能保证有2个人出生在同一星期几？",
+        "answer": 8,
+        "unit": "人",
+        "hints": [
+          "最坏时7个人分在7个不同星期。",
+          "第8个人一定落入已有人所在的星期。"
+        ],
+        "explanation": "7+1=8人。",
+        "misconception": "这里按星期几分7类，不按具体日期分。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "ph-4",
+        "prompt": "盒里只有4种形状的卡片。至少抽几张，保证有3张形状相同？",
+        "answer": 9,
+        "unit": "张",
+        "hints": [
+          "要避免3张同形，每种最多先拿2张。",
+          "4种各拿2张共8张仍可避开。"
+        ],
+        "explanation": "8+1=9张时，必有一种达到3张。",
+        "misconception": "目标是3张同类，最坏情况每类可先放2张。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "为什么有些结果不用试完就能保证发生？",
+    "mathIdea": "对象比容器多时，至少一个容器必然装下两个。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "logic",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "fraction-meaning",
+    "world": "fractions",
+    "title": "把一个整体公平分",
+    "subtitle": "分数先说明平均分，再说明取几份",
+    "kind": "foundation",
+    "minutes": 9,
+    "concept": "把同一个整体平均分成若干相等部分，分母表示平均分成的份数，分子表示取了其中几份。整体大小必须明确，不平均分不能用这样的分数描述。",
+    "prerequisites": [
+      "division"
+    ],
+    "thinkingSkills": [
+      "平均分",
+      "整体意识"
+    ],
+    "story": "泡泡把一条能量棒平均分给4位伙伴。它先确认四段同样长，再给其中3段涂上星光。",
+    "discovery": "整体平均分成4份，每份是四分之一；取3份是四分之三。分母4来自总份数，分子3来自取的份数。",
+    "steps": [
+      "先圈出“一个整体”，不要把不同大小的整体混在一起。",
+      "把整体平均分，检查每份确实同样大。",
+      "数总份数写分母，再数取出的份数写分子。"
+    ],
+    "takeaway": "分数的第一句话总是：把谁平均分成了几份。",
+    "lab": "fraction",
+    "labConfig": {
+      "a": 3,
+      "b": 4,
+      "total": 4,
+      "parts": 4,
+      "mode": "fraction-meaning"
+    },
+    "questions": [
+      {
+        "id": "fm-1",
+        "prompt": "一块蛋糕平均切成8份，Kevin吃了3份。分数的分母是多少？",
+        "answer": 8,
+        "unit": "",
+        "hints": [
+          "分母记录平均分成的总份数。",
+          "蛋糕一共切成8份。"
+        ],
+        "explanation": "表示吃掉部分的分数是3/8，分母是8。",
+        "misconception": "吃了3份是分子，不是分母。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "fm-2",
+        "prompt": "一张纸平均分成6份，涂色部分是4份。分数的分子是多少？",
+        "answer": 4,
+        "unit": "",
+        "hints": [
+          "分子记录取出或涂色的份数。",
+          "总份数6写在分母。"
+        ],
+        "explanation": "涂色部分是4/6，分子是4。",
+        "misconception": "不能把总份数6写到分子位置。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "fm-3",
+        "prompt": "24颗糖平均分给6位伙伴，每人得到几颗？",
+        "answer": 4,
+        "unit": "颗",
+        "hints": [
+          "平均分成6份。",
+          "24÷6。"
+        ],
+        "explanation": "24÷6=4颗；每一份是总数的1/6，对应4颗。",
+        "misconception": "六分之一描述份数关系，具体颗数要做平均分。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "fm-4",
+        "prompt": "一盒有20支笔，Kevin拿走其中的四分之一。他拿了几支？",
+        "answer": 5,
+        "unit": "支",
+        "hints": [
+          "四分之一是平均分成4份取1份。",
+          "20÷4。"
+        ],
+        "explanation": "20÷4=5支。",
+        "misconception": "分母4表示把20平均分4份，不是拿走4支。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "一个整体怎样公平地分成几份？",
+    "mathIdea": "分数同时记录整体被等分成几份和取了几份。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "fractions",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "fraction-compare",
+    "world": "fractions",
+    "title": "分数条上的大小",
+    "subtitle": "同一个整体、同分母时看取了几份",
+    "kind": "foundation",
+    "minutes": 9,
+    "concept": "比较分数要先确认整体相同。同分母表示每一份同样大，分子越大，取的份数越多；同分子时，整体相同且分得越多，每一份反而越小。",
+    "prerequisites": [
+      "fraction-meaning"
+    ],
+    "thinkingSkills": [
+      "比较",
+      "数形结合"
+    ],
+    "story": "泡泡把两条同样长的能量条都平均分成8份，一条涂3份，另一条涂5份。它把两条左端对齐。",
+    "discovery": "每小份同样大，5份覆盖的长度比3份多，所以5/8大于3/8。",
+    "steps": [
+      "先检查两个分数说的是不是同样大的整体。",
+      "画成长度相同的分数条，并按分母平均分。",
+      "从左端涂出分子对应的份数，比较终点位置并用符号记录。"
+    ],
+    "takeaway": "比较分数时，先比较每份有多大，再比较取了多少份。",
+    "lab": "fraction",
+    "labConfig": {
+      "a": 3,
+      "b": 8,
+      "total": 8,
+      "parts": 8,
+      "mode": "fraction-compare"
+    },
+    "questions": [
+      {
+        "id": "fc-1",
+        "prompt": "同样大的两张纸都平均分成7份。4/7和□/7一样大，方框填几？",
+        "answer": 4,
+        "unit": "",
+        "hints": [
+          "分母相同，每一小份一样大。",
+          "要一样大，取的份数也应相同。"
+        ],
+        "explanation": "4/7=4/7，所以填4。",
+        "misconception": "分母相同的等值分数，分子也相同。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "fc-2",
+        "prompt": "同一个整体平均分成9份。7/9比□/9多2份，方框填几？",
+        "answer": 5,
+        "unit": "",
+        "hints": [
+          "两者每份一样大。",
+          "7份比几份多2份？"
+        ],
+        "explanation": "7−2=5，所以7/9比5/9多2个九分之一。",
+        "misconception": "这里减的是份数，分母保持9。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "fc-3",
+        "prompt": "同样大的蛋糕，1/4和1/8中，每份较大的是几分之一？答案填它的分母。",
+        "answer": 4,
+        "unit": "",
+        "hints": [
+          "分子都是1，比较一份的大小。",
+          "同样整体分得越少，每份越大。"
+        ],
+        "explanation": "1/4比1/8大，所以填分母4。",
+        "misconception": "分母数字大表示分得更细，每份反而更小。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "fc-4",
+        "prompt": "同一条彩带，3/6和5/6相差几个六分之一？",
+        "answer": 2,
+        "unit": "个",
+        "hints": [
+          "分母相同，直接比较份数。",
+          "5−3。"
+        ],
+        "explanation": "5/6−3/6=2/6，相差2个六分之一。",
+        "misconception": "题目问相差几份，分母不参与相减。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "份数不同的分数怎样比较？",
+    "mathIdea": "比较分数要先确认整体相同，再比较取的份数或每份大小。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "fractions",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "equivalent-fractions",
+    "world": "fractions",
+    "title": "分数的变装术",
+    "subtitle": "细分每一份，整体长度保持不变",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "把分数的每一份继续平均细分，分子和分母会同时乘相同的非零整数，但分数表示的长度不变。反过来同时除以相同的因数，也不会改变大小。",
+    "prerequisites": [
+      "fraction-compare",
+      "area"
+    ],
+    "thinkingSkills": [
+      "等量变换",
+      "不变量"
+    ],
+    "story": "泡泡先把一条能量条分2份涂1份，又把每一份再平均分成2小份。涂色长度没有变，标签却从1/2变成2/4。",
+    "discovery": "每个二分之一被切成2小份：总份数2×2=4，涂色份数1×2=2，所以1/2=2/4。",
+    "steps": [
+      "画出第一条分数条并涂色，固定整体长度。",
+      "让每一个原小份都按相同方式继续细分。",
+      "同时数新的总份数和涂色份数，比较涂色终点是否重合。"
+    ],
+    "takeaway": "分子、分母一起同倍变化，分数所表示的大小可以不变。",
+    "lab": "fraction",
+    "labConfig": {
+      "a": 1,
+      "b": 2,
+      "total": 4,
+      "parts": 4,
+      "mode": "equivalent"
+    },
+    "questions": [
+      {
+        "id": "ef-1",
+        "prompt": "1/3=□/6，方框填几？",
+        "answer": 2,
+        "unit": "",
+        "hints": [
+          "分母3变成6，乘了2。",
+          "分子也乘同样的2。"
+        ],
+        "explanation": "1×2=2，所以1/3=2/6。",
+        "misconception": "只改变分母会改变分数大小。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "ef-2",
+        "prompt": "3/4=6/□，方框填几？",
+        "answer": 8,
+        "unit": "",
+        "hints": [
+          "分子3变成6，乘了2。",
+          "分母4也乘2。"
+        ],
+        "explanation": "4×2=8，所以3/4=6/8。",
+        "misconception": "分子和分母要同时同倍变化。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "ef-3",
+        "prompt": "8/12同时把分子、分母除以4，可得到1个更简单的分数。新分母是多少？",
+        "answer": 3,
+        "unit": "",
+        "hints": [
+          "12÷4。",
+          "分子也会变成8÷4=2。"
+        ],
+        "explanation": "8/12=2/3，新分母是3。",
+        "misconception": "约分时分子和分母必须除以同一个数。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "ef-4",
+        "prompt": "2/5的分子和分母都乘3，新分数的分子是多少？",
+        "answer": 6,
+        "unit": "",
+        "hints": [
+          "题目问新分子。",
+          "2×3。"
+        ],
+        "explanation": "2×3=6，新分数是6/15，与2/5相等。",
+        "misconception": "不能只把分母乘3。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "同一部分为什么能写出不同分数？",
+    "mathIdea": "整体和取的部分同时细分，表示的量不变。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "fractions",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "time-scale",
+    "world": "fractions",
+    "title": "时钟跨刻度",
+    "subtitle": "经过时间是走过的刻度，不是钟面数字相减",
+    "kind": "foundation",
+    "minutes": 9,
+    "concept": "1小时=60分钟，1分钟=60秒。计算跨整点的经过时间，可以先走到下一个整点，再走剩余部分；起点与终点之间数的是时间段。",
+    "prerequisites": [
+      "number-line",
+      "fraction-meaning"
+    ],
+    "thinkingSkills": [
+      "分段",
+      "单位换算"
+    ],
+    "story": "泡泡在14:45出发，15:20到达星塔。它把钟面看成一条首尾相接的数轴，先走到15:00。",
+    "discovery": "14:45到15:00经过15分钟，15:00到15:20经过20分钟，共35分钟。",
+    "steps": [
+      "标出开始和结束时刻，确认求的是时刻还是经过时间。",
+      "跨整点时先走到整点，记录第一段时间。",
+      "加上整点后的第二段，并用60进制检查单位转换。"
+    ],
+    "takeaway": "经过时间数的是两时刻之间走过的刻度。",
+    "lab": "numberline",
+    "labConfig": {
+      "a": 45,
+      "b": 20,
+      "total": 80,
+      "parts": 2,
+      "mode": "time"
+    },
+    "questions": [
+      {
+        "id": "tm-1",
+        "prompt": "Kevin 9:35开始学习，10:05结束。学习了多少分钟？",
+        "answer": 30,
+        "unit": "分钟",
+        "hints": [
+          "9:35到10:00是25分钟。",
+          "10:00到10:05是5分钟。"
+        ],
+        "explanation": "25+5=30分钟。",
+        "misconception": "跨小时不能直接用05−35。",
+        "level": "warmup",
+        "representation": "story"
+      },
+      {
+        "id": "tm-2",
+        "prompt": "1小时20分钟一共有多少分钟？",
+        "answer": 80,
+        "unit": "分钟",
+        "hints": [
+          "1小时是60分钟。",
+          "60+20。"
+        ],
+        "explanation": "60+20=80分钟。",
+        "misconception": "1小时不是100分钟。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "tm-3",
+        "prompt": "泡泡从16:50等待到17:25，共等待多少分钟？",
+        "answer": 35,
+        "unit": "分钟",
+        "hints": [
+          "16:50到17:00是10分钟。",
+          "再从17:00到17:25走25分钟。"
+        ],
+        "explanation": "10+25=35分钟。",
+        "misconception": "钟面分钟数25比50小，但时间跨过了整点。",
+        "level": "transfer",
+        "representation": "equation"
+      },
+      {
+        "id": "tm-4",
+        "prompt": "一段动画长2分钟15秒，一共有多少秒？",
+        "answer": 135,
+        "unit": "秒",
+        "hints": [
+          "2分钟是2个60秒。",
+          "120秒再加15秒。"
+        ],
+        "explanation": "2×60+15=135秒。",
+        "misconception": "分钟换秒要乘60。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "origin": "钟表上的刻度怎样转成经过的时间？",
+    "mathIdea": "时间是有方向的量，跨刻度要数间隔而不是只看数字差。",
+    "representations": [
+      "生活情境",
+      "图形或表格",
+      "算式语言"
+    ],
+    "strand": "fractions",
+    "sourceRefs": [
+      "人教版三年级上、下册：思想线索参考"
+    ]
+  },
+  {
+    "id": "viewpoint-models",
+    "world": "geometry",
+    "title": "同一个物体，为什么长得不一样",
+    "subtitle": "从不同方向观察，学会给信息换一个角度",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "同一物体从不同方向观察会得到不同图形；三视图是在平面上记录立体信息的方式。",
+    "origin": "搭积木、看地图、读包装盒时，我们要把立体物体的信息交给没有站在现场的人。",
+    "mathIdea": "观察角度改变的是表示，物体本身并没有改变。",
+    "representations": [
+      "实物视角",
+      "平面图",
+      "立体想象"
+    ],
+    "thinkingSkills": [
+      "空间想象",
+      "对应关系"
+    ],
+    "story": "泡泡把三个木盒摆在桌上。它和 Kevin 站在不同位置，却都说自己看到的图形才是“真的”。",
+    "discovery": "先固定物体，再移动观察者：视图是信息的投影，不是物体本身。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "table",
+    "labConfig": {
+      "total": 9,
+      "parts": 3,
+      "mode": "table"
+    },
+    "prerequisites": [],
+    "sourceRefs": [
+      "教材单元思想锚点：上册·观察物体"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "vm-1",
+        "prompt": "一个盒子从正面、上面、右面各看到1个面，三次一共记录了几个“面视图”？",
+        "answer": 3,
+        "unit": "个",
+        "hints": [
+          "每次只记录一个方向。",
+          "把三个不同方向相加。"
+        ],
+        "explanation": "1+1+1=3个视图。",
+        "misconception": "把看到几个面和有几个视图混成一件事。",
+        "level": "warmup",
+        "representation": "viewpoint"
+      },
+      {
+        "id": "vm-2",
+        "prompt": "一个正方体有6个面，已经从3个互相垂直的方向观察过，还剩几个面没有被直接观察？",
+        "answer": 3,
+        "unit": "个",
+        "hints": [
+          "总面数是6。",
+          "用6减去已经观察的3个。"
+        ],
+        "explanation": "6−3=3个。",
+        "misconception": "把方向误当成所有面。",
+        "level": "core",
+        "representation": "viewpoint"
+      },
+      {
+        "id": "vm-3",
+        "prompt": "三块积木从正面看到的高度分别是2、1、3层，正面图中共有几层积木？",
+        "answer": 6,
+        "unit": "层",
+        "hints": [
+          "正面图记录每列的高度。",
+          "把三列高度相加。"
+        ],
+        "explanation": "2+1+3=6层。",
+        "misconception": "只取最高的一列。",
+        "level": "transfer",
+        "representation": "bar"
+      },
+      {
+        "id": "vm-4",
+        "prompt": "一个物体从上面看是4个小方格，从正面看也是4个小方格。至少可以确定它有几个小方格？",
+        "answer": 4,
+        "unit": "个",
+        "hints": [
+          "两个视图都必须由同一批方格组成。",
+          "至少取两个视图中都需要的4个。"
+        ],
+        "explanation": "至少4格；只凭两个视图不能断定更多。",
+        "misconception": "认为两个视图的方格要相加。",
+        "level": "challenge",
+        "representation": "viewpoint"
+      }
+    ]
+  },
+  {
+    "id": "symmetry-fold",
+    "world": "geometry",
+    "title": "对折以后，另一半去哪儿了",
+    "subtitle": "从生活图案发现轴对称",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "沿一条直线对折后两边能够完全重合的图形是轴对称图形。",
+    "origin": "剪纸、窗花、叶片和脸部都在利用折过去能重合的结构。",
+    "mathIdea": "对称是一种不变性：翻到另一边，形状和距离关系仍然保持。",
+    "representations": [
+      "折纸",
+      "对称轴",
+      "网格镜像"
+    ],
+    "thinkingSkills": [
+      "空间变换",
+      "不变性"
+    ],
+    "story": "芽芽只画出窗花的一半，想让另一半自动出现。它发现复制之前要先找到一条折痕。",
+    "discovery": "对称轴像镜子：每个点到轴的距离相等，方向相反。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "geometry",
+    "labConfig": {
+      "a": 6,
+      "b": 4,
+      "mode": "geometry"
+    },
+    "prerequisites": [
+      "viewpoint-models"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：下册·生活中的运动现象"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "sf-1",
+        "prompt": "一张纸沿中线对折，原来的1个整体被分成几部分？",
+        "answer": 2,
+        "unit": "部分",
+        "hints": [
+          "一次对折会把整体分成两半。",
+          "数左右两边。"
+        ],
+        "explanation": "一次对折得到2个相等部分。",
+        "misconception": "把折痕也当成一部分。",
+        "level": "warmup",
+        "representation": "fold"
+      },
+      {
+        "id": "sf-2",
+        "prompt": "一个对称图形左边有4个格子，右边会有几个对应格子？",
+        "answer": 4,
+        "unit": "个",
+        "hints": [
+          "对称轴两侧完全对应。",
+          "右边数量与左边相同。"
+        ],
+        "explanation": "4个左侧格子对应4个右侧格子。",
+        "misconception": "认为镜像会改变数量。",
+        "level": "core",
+        "representation": "grid"
+      },
+      {
+        "id": "sf-3",
+        "prompt": "正方形有4个顶点，沿一条对称轴折叠时，有几对顶点会与另一个顶点重合？",
+        "answer": 2,
+        "unit": "对",
+        "hints": [
+          "对称轴两侧的顶点成对对应。",
+          "4个顶点两两配对。"
+        ],
+        "explanation": "4个顶点组成2对对应顶点。",
+        "misconception": "把位于对称轴上的点也重复计算。",
+        "level": "transfer",
+        "representation": "fold"
+      },
+      {
+        "id": "sf-4",
+        "prompt": "一个图案有3条彼此不同的对称轴，每条轴上都能折出同一个图案，至少有几种不同折法？",
+        "answer": 3,
+        "unit": "种",
+        "hints": [
+          "每条对称轴对应一种折法。",
+          "数对称轴。"
+        ],
+        "explanation": "有3条对称轴，就有3种折法。",
+        "misconception": "把连续折叠的过程重复计数。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ]
+  },
+  {
+    "id": "operation-meaning",
+    "world": "relations",
+    "title": "运算符号是在说什么",
+    "subtitle": "先读懂动作，再决定用哪种运算",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "加、减、乘、除分别描述合并、比较差、等量重复和公平分配。",
+    "origin": "人们需要记录合并、拿走、重复和平均分配，运算才从动作中产生。",
+    "mathIdea": "运算不是四个孤立按钮，而是数量关系的语言。",
+    "representations": [
+      "动作故事",
+      "条形图",
+      "算式翻译"
+    ],
+    "thinkingSkills": [
+      "语言建模",
+      "运算选择"
+    ],
+    "story": "星光仓库里有四扇门：合并门、比较门、重复门和分配门。",
+    "discovery": "先问数量发生了什么变化，再写运算符号。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "bar",
+    "labConfig": {
+      "a": 4,
+      "b": 9,
+      "mode": "compare"
+    },
+    "prerequisites": [
+      "place-value"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：上册·混合运算"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "om-1",
+        "prompt": "3袋星石，每袋4颗，又找到2颗，一共有多少颗？",
+        "answer": 14,
+        "unit": "颗",
+        "hints": [
+          "先算3袋有多少颗。",
+          "再把2颗合并进去。"
+        ],
+        "explanation": "3×4+2=14颗。",
+        "misconception": "把每袋4颗误写成3+4。",
+        "level": "warmup",
+        "representation": "bar"
+      },
+      {
+        "id": "om-2",
+        "prompt": "18颗糖平均分给3个伙伴，每个伙伴得到多少颗？",
+        "answer": 6,
+        "unit": "颗",
+        "hints": [
+          "平均分用除法。",
+          "算18里面有几个3。"
+        ],
+        "explanation": "18÷3=6颗。",
+        "misconception": "看到3个伙伴就直接做18−3。",
+        "level": "core",
+        "representation": "group"
+      },
+      {
+        "id": "om-3",
+        "prompt": "一本书原有25页，读了9页，还剩多少页？",
+        "answer": 16,
+        "unit": "页",
+        "hints": [
+          "读掉的部分从总量中减少。",
+          "用25减9。"
+        ],
+        "explanation": "25−9=16页。",
+        "misconception": "把读了9页误当成增加9页。",
+        "level": "transfer",
+        "representation": "bar"
+      },
+      {
+        "id": "om-4",
+        "prompt": "4盒彩笔，每盒6支，送出5支后还剩多少支？",
+        "answer": 19,
+        "unit": "支",
+        "hints": [
+          "先求总支数，再减送出的。",
+          "4×6−5。"
+        ],
+        "explanation": "4×6−5=19支。",
+        "misconception": "只做6−5，漏掉4盒。",
+        "level": "challenge",
+        "representation": "bar"
+      }
+    ]
+  },
+  {
+    "id": "mixed-operation",
+    "world": "relations",
+    "title": "一串算式，先做哪一步",
+    "subtitle": "用结构读混合运算",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "含有乘除和加减的算式，要根据括号和运算关系确定顺序。",
+    "origin": "购物、路线和生产常把几步动作连在一起，需要约定大家都能读懂的顺序。",
+    "mathIdea": "运算顺序是共同语言，让同一串符号只对应一种过程。",
+    "representations": [
+      "分步流程",
+      "括号",
+      "算式树"
+    ],
+    "thinkingSkills": [
+      "结构识别",
+      "过程追踪"
+    ],
+    "story": "泡泡收到一张没有标箭头的任务单：先装箱还是先加星石？",
+    "discovery": "先看括号，再看乘除，最后看加减；每一步都说清现在算的是什么。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "table",
+    "labConfig": {
+      "total": 12,
+      "parts": 3,
+      "mode": "enumeration"
+    },
+    "prerequisites": [
+      "operation-meaning"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：上册·混合运算"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "mo-1",
+        "prompt": "计算：3×4+2，先算乘法后结果是多少？",
+        "answer": 14,
+        "unit": "",
+        "hints": [
+          "先算3×4。",
+          "12再加2。"
+        ],
+        "explanation": "3×4+2=14。",
+        "misconception": "从左到右先算3+2。",
+        "level": "warmup",
+        "representation": "flow"
+      },
+      {
+        "id": "mo-2",
+        "prompt": "计算：(18−6)÷3，括号里的数先算，结果是多少？",
+        "answer": 4,
+        "unit": "",
+        "hints": [
+          "先求18和6相差多少。",
+          "12平均分成3份。"
+        ],
+        "explanation": "(18−6)÷3=4。",
+        "misconception": "忘记先算括号。",
+        "level": "core",
+        "representation": "flow"
+      },
+      {
+        "id": "mo-3",
+        "prompt": "4盒彩笔每盒6支，再平均分给2组，每组几支？",
+        "answer": 12,
+        "unit": "支",
+        "hints": [
+          "先求4盒总数。",
+          "24÷2。"
+        ],
+        "explanation": "4×6÷2=12支。",
+        "misconception": "直接用6÷2，漏掉盒数。",
+        "level": "transfer",
+        "representation": "bar"
+      },
+      {
+        "id": "mo-4",
+        "prompt": "小队有5人，每人收集7片叶子，后来又找到9片，平均放入4个篮子，每篮多少片？",
+        "answer": 11,
+        "unit": "片",
+        "hints": [
+          "先求5×7+9。",
+          "最后除以4。"
+        ],
+        "explanation": "(5×7+9)÷4=11片。",
+        "misconception": "把最后的除法提前。",
+        "level": "challenge",
+        "representation": "flow"
+      }
+    ]
+  },
+  {
+    "id": "length-measure",
+    "world": "numbers",
+    "title": "给长度找到合适的尺子",
+    "subtitle": "单位是测量世界的共同刻度",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "毫米、厘米、分米、米、千米是不同尺度的长度单位，换算依靠进率。",
+    "origin": "手、步、绳子会因人而异，统一单位让测量结果可以比较和复现。",
+    "mathIdea": "单位是数量的尺度；换单位就是换一把尺子。",
+    "representations": [
+      "实物估测",
+      "刻度尺",
+      "单位换算"
+    ],
+    "thinkingSkills": [
+      "量感",
+      "单位意识"
+    ],
+    "story": "芽芽要给一条探险路线贴标签：米适合房间，千米适合城市，毫米适合纸片边缘。",
+    "discovery": "先判断尺度，再选择单位；换算时数量和单位一起变化。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "numberline",
+    "labConfig": {
+      "a": 0,
+      "b": 10,
+      "total": 20
+    },
+    "prerequisites": [
+      "place-value"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：上册·毫米、分米和千米"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "lm-1",
+        "prompt": "1米等于多少厘米？",
+        "answer": 100,
+        "unit": "厘米",
+        "hints": [
+          "米和厘米相差100倍。",
+          "把1米分成100个1厘米。"
+        ],
+        "explanation": "1米=100厘米。",
+        "misconception": "把进率记成10。",
+        "level": "warmup",
+        "representation": "scale"
+      },
+      {
+        "id": "lm-2",
+        "prompt": "3分米等于多少厘米？",
+        "answer": 30,
+        "unit": "厘米",
+        "hints": [
+          "1分米=10厘米。",
+          "3个10厘米。"
+        ],
+        "explanation": "3×10=30厘米。",
+        "misconception": "把分米当成厘米直接写3。",
+        "level": "core",
+        "representation": "scale"
+      },
+      {
+        "id": "lm-3",
+        "prompt": "2千米等于多少米？",
+        "answer": 2000,
+        "unit": "米",
+        "hints": [
+          "1千米=1000米。",
+          "2个1000米。"
+        ],
+        "explanation": "2×1000=2000米。",
+        "misconception": "只在数字后添一个0。",
+        "level": "transfer",
+        "representation": "scale"
+      },
+      {
+        "id": "lm-4",
+        "prompt": "4米6厘米一共是多少厘米？",
+        "answer": 406,
+        "unit": "厘米",
+        "hints": [
+          "4米先换成400厘米。",
+          "再加6厘米。"
+        ],
+        "explanation": "400+6=406厘米。",
+        "misconception": "把4米6厘米写成46厘米。",
+        "level": "challenge",
+        "representation": "scale"
+      }
+    ]
+  },
+  {
+    "id": "mass-equivalence",
+    "world": "numbers",
+    "title": "曹冲为什么能称象",
+    "subtitle": "用等量替换测量无法直接放上秤的东西",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "克和千克是质量单位；保持总质量相等，可以用可测量物体替换难以直接测量的对象。",
+    "origin": "大物体不能直接放进小秤，古人用同样下沉把难测量变成许多次可测量。",
+    "mathIdea": "等量替换把不可操作的问题变成可操作的问题，核心是保持关系不变。",
+    "representations": [
+      "天平",
+      "等量替换",
+      "单位换算"
+    ],
+    "thinkingSkills": [
+      "守恒",
+      "替换策略"
+    ],
+    "story": "星星遇到一块不能搬上小秤的陨石，想起曹冲的办法。",
+    "discovery": "秤的是等量，不一定要把目标物直接放上秤。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "balance",
+    "labConfig": {
+      "a": 8,
+      "b": 3,
+      "mode": "balance"
+    },
+    "prerequisites": [
+      "length-measure"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：上册·曹冲称象的故事"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "me-1",
+        "prompt": "3千克等于多少克？",
+        "answer": 3000,
+        "unit": "克",
+        "hints": [
+          "1千克=1000克。",
+          "3个1000克。"
+        ],
+        "explanation": "3×1000=3000克。",
+        "misconception": "把进率记成100。",
+        "level": "warmup",
+        "representation": "balance"
+      },
+      {
+        "id": "me-2",
+        "prompt": "2千克500克一共是多少克？",
+        "answer": 2500,
+        "unit": "克",
+        "hints": [
+          "2千克先换成2000克。",
+          "再加500克。"
+        ],
+        "explanation": "2000+500=2500克。",
+        "misconception": "把2千克500克写成205克。",
+        "level": "core",
+        "representation": "scale"
+      },
+      {
+        "id": "me-3",
+        "prompt": "4盒饼干，每盒250克，一共是多少千克？",
+        "answer": 1,
+        "unit": "千克",
+        "hints": [
+          "先算4×250克。",
+          "1000克就是1千克。"
+        ],
+        "explanation": "4×250=1000克=1千克。",
+        "misconception": "只算出1000后忘了换单位。",
+        "level": "transfer",
+        "representation": "bar"
+      },
+      {
+        "id": "me-4",
+        "prompt": "一块石头和6千克砝码平衡，拿走800克后还需放回多少克？",
+        "answer": 800,
+        "unit": "克",
+        "hints": [
+          "拿走多少就补回多少。",
+          "平衡要求两边质量相等。"
+        ],
+        "explanation": "少了800克，补回800克即可。",
+        "misconception": "把6千克减800克当成补回量。",
+        "level": "challenge",
+        "representation": "balance"
+      }
+    ]
+  },
+  {
+    "id": "multi-digit-multiply",
+    "world": "numbers",
+    "title": "把大阵列拆成小阵列",
+    "subtitle": "多位数乘一位数从位值和面积模型长出来",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "多位数乘一位数可以按百、十、个分解，再把各部分积合并。",
+    "origin": "座位、箱子和砖块都按组重复，逐个数太慢，于是需要拆开计算。",
+    "mathIdea": "分配律让复杂计算拆成局部，再把局部合并。",
+    "representations": [
+      "点阵",
+      "位值分解",
+      "竖式"
+    ],
+    "thinkingSkills": [
+      "分解重组",
+      "位值计算"
+    ],
+    "story": "泡泡要给24排座位各放3颗星石，把24拆成20和4。",
+    "discovery": "24×3=(20+4)×3=20×3+4×3。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "array",
+    "labConfig": {
+      "a": 4,
+      "b": 6,
+      "mode": "multiply",
+      "total": 24
+    },
+    "prerequisites": [
+      "arrays",
+      "place-value"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：上册·多位数乘一位数"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "mm-1",
+        "prompt": "23×3等于多少？",
+        "answer": 69,
+        "unit": "",
+        "hints": [
+          "把23拆成20和3。",
+          "60+9。"
+        ],
+        "explanation": "23×3=69。",
+        "misconception": "把23×3写成23+3。",
+        "level": "warmup",
+        "representation": "array"
+      },
+      {
+        "id": "mm-2",
+        "prompt": "204×4等于多少？",
+        "answer": 816,
+        "unit": "",
+        "hints": [
+          "200×4=800，4×4=16。",
+          "中间的0占住十位。"
+        ],
+        "explanation": "204×4=816。",
+        "misconception": "漏掉个位4或把204看成24。",
+        "level": "core",
+        "representation": "place-value"
+      },
+      {
+        "id": "mm-3",
+        "prompt": "37×6等于多少？",
+        "answer": 222,
+        "unit": "",
+        "hints": [
+          "30×6=180，7×6=42。",
+          "180+42。"
+        ],
+        "explanation": "37×6=222。",
+        "misconception": "只乘个位。",
+        "level": "transfer",
+        "representation": "array"
+      },
+      {
+        "id": "mm-4",
+        "prompt": "125×8等于多少？",
+        "answer": 1000,
+        "unit": "",
+        "hints": [
+          "100、20、5分别乘8。",
+          "800+160+40。"
+        ],
+        "explanation": "125×8=1000。",
+        "misconception": "没有检查数量级。",
+        "level": "challenge",
+        "representation": "array"
+      }
+    ]
+  },
+  {
+    "id": "multiply-distributive",
+    "world": "patterns",
+    "title": "乘法的捷径从哪里来",
+    "subtitle": "用拆分、补偿和凑整减少计算",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "利用分配律、交换律和结合律，可以把难算乘法改写成容易计算的等值算式。",
+    "origin": "算盘和心算都在寻找更短的路线：拆成好算部分，结果仍保持不变。",
+    "mathIdea": "改变表达式结构，不改变数量本身，这是代数思维的早期形式。",
+    "representations": [
+      "阵列切分",
+      "等值算式",
+      "凑整"
+    ],
+    "thinkingSkills": [
+      "结构改写",
+      "灵活计算"
+    ],
+    "story": "星星发现99×5比100×5难算，于是先借一个整百再扣回来。",
+    "discovery": "99×5=(100−1)×5=500−5。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "array",
+    "labConfig": {
+      "a": 5,
+      "b": 8,
+      "mode": "multiply",
+      "total": 40
+    },
+    "prerequisites": [
+      "multi-digit-multiply"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：上册·多位数乘一位数"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "md-1",
+        "prompt": "25×4等于多少？",
+        "answer": 100,
+        "unit": "",
+        "hints": [
+          "4个25可以凑成100。",
+          "25+25+25+25。"
+        ],
+        "explanation": "25×4=100。",
+        "misconception": "把25×4算成25+4。",
+        "level": "warmup",
+        "representation": "array"
+      },
+      {
+        "id": "md-2",
+        "prompt": "99×5等于多少？",
+        "answer": 495,
+        "unit": "",
+        "hints": [
+          "把99看成100−1。",
+          "500−5。"
+        ],
+        "explanation": "99×5=495。",
+        "misconception": "只算100×5没有补回。",
+        "level": "core",
+        "representation": "array"
+      },
+      {
+        "id": "md-3",
+        "prompt": "125×8等于多少？",
+        "answer": 1000,
+        "unit": "",
+        "hints": [
+          "125×4=500，再乘2。",
+          "或拆成100、20、5。"
+        ],
+        "explanation": "125×8=1000。",
+        "misconception": "错误取整。",
+        "level": "transfer",
+        "representation": "array"
+      },
+      {
+        "id": "md-4",
+        "prompt": "48×5等于多少？",
+        "answer": 240,
+        "unit": "",
+        "hints": [
+          "48×10再除以2。",
+          "480÷2。"
+        ],
+        "explanation": "48×5=240。",
+        "misconception": "把乘5当成加5。",
+        "level": "challenge",
+        "representation": "array"
+      }
+    ]
+  },
+  {
+    "id": "coding-information",
+    "world": "logic",
+    "title": "数字也能当作地址",
+    "subtitle": "把复杂信息编码成可读、可检查的数字",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "编码用位置和规则表示类别、顺序或属性；编码中的数字不一定表示数量。",
+    "origin": "车牌、座位号、快递单和学号都需要信息短、唯一、容易查找。",
+    "mathIdea": "先读规则再解释数字；符号是否表示数量取决于所在系统。",
+    "representations": [
+      "编码表",
+      "位置值",
+      "分类规则"
+    ],
+    "thinkingSkills": [
+      "规则阅读",
+      "信息压缩"
+    ],
+    "story": "探险岛给每颗星石贴了三位编码：颜色、大小、序号各占一位。",
+    "discovery": "编码的关键不是算出多大，而是每个位置约定了什么。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "table",
+    "labConfig": {
+      "total": 12,
+      "parts": 3,
+      "mode": "enumeration"
+    },
+    "prerequisites": [
+      "place-value"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：上册·数字编码"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "ci-1",
+        "prompt": "编码由颜色3种×大小4种组成，不考虑序号，最多有多少种组合？",
+        "answer": 12,
+        "unit": "种",
+        "hints": [
+          "每种颜色都能和4种大小搭配。",
+          "3×4。"
+        ],
+        "explanation": "3×4=12种。",
+        "misconception": "把3和4相加。",
+        "level": "warmup",
+        "representation": "table"
+      },
+      {
+        "id": "ci-2",
+        "prompt": "一个日期编码写成20260906，共有几位数字？",
+        "answer": 8,
+        "unit": "位",
+        "hints": [
+          "2026、09、06分别是4、2、2位。",
+          "逐个数数字字符。"
+        ],
+        "explanation": "4+2+2=8位。",
+        "misconception": "把年份当成一个整体只数一次。",
+        "level": "core",
+        "representation": "code"
+      },
+      {
+        "id": "ci-3",
+        "prompt": "三位密码每位可用0到9，允许重复，共有多少种密码？",
+        "answer": 1000,
+        "unit": "种",
+        "hints": [
+          "每一位都有10种选择。",
+          "10×10×10。"
+        ],
+        "explanation": "10×10×10=1000种。",
+        "misconception": "把三位数字相加。",
+        "level": "transfer",
+        "representation": "tree"
+      },
+      {
+        "id": "ci-4",
+        "prompt": "编码307中各位数字相加是多少？",
+        "answer": 10,
+        "unit": "",
+        "hints": [
+          "把3、0、7相加。",
+          "0不会改变和。"
+        ],
+        "explanation": "3+0+7=10。",
+        "misconception": "把307当成三百零七做别的运算。",
+        "level": "challenge",
+        "representation": "place-value"
+      }
+    ]
+  },
+  {
+    "id": "lines-angles",
+    "world": "geometry",
+    "title": "线把世界切出方向",
+    "subtitle": "从边界和转弯认识线段、直线和角",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "线段有两个端点，直线向两端延伸，角由顶点和两条边组成。",
+    "origin": "道路、墙角、折痕和钟表指针都需要描述方向和转弯。",
+    "mathIdea": "几何先研究关系和形状，再研究长度。",
+    "representations": [
+      "实物边缘",
+      "线段图",
+      "角的张口"
+    ],
+    "thinkingSkills": [
+      "抽象图形",
+      "空间语言"
+    ],
+    "story": "芽芽沿着地图边界走，发现有的线有尽头，有的可以继续延伸，转弯处出现了一个张口。",
+    "discovery": "边是线段，转弯形成角；先辨认对象，再测量它。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "geometry",
+    "labConfig": {
+      "a": 7,
+      "b": 4,
+      "mode": "geometry"
+    },
+    "prerequisites": [
+      "viewpoint-models"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：上册·线和角"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "la-1",
+        "prompt": "直角是多少度？",
+        "answer": 90,
+        "unit": "度",
+        "hints": [
+          "直角是四分之一圈。",
+          "一整圈360度。"
+        ],
+        "explanation": "360÷4=90度。",
+        "misconception": "把直角和180度平角混淆。",
+        "level": "warmup",
+        "representation": "angle"
+      },
+      {
+        "id": "la-2",
+        "prompt": "长方形有4个直角，4个直角一共是多少度？",
+        "answer": 360,
+        "unit": "度",
+        "hints": [
+          "每个直角90度。",
+          "4×90。"
+        ],
+        "explanation": "4×90=360度。",
+        "misconception": "把4个角当成4度。",
+        "level": "core",
+        "representation": "angle"
+      },
+      {
+        "id": "la-3",
+        "prompt": "从一个点向外画出3条射线，能组成几个不同的角？",
+        "answer": 3,
+        "unit": "个",
+        "hints": [
+          "两条射线确定一个角。",
+          "三条射线两两配对。"
+        ],
+        "explanation": "三条射线两两组合得到3个角。",
+        "misconception": "只数射线条数。",
+        "level": "transfer",
+        "representation": "angle"
+      },
+      {
+        "id": "la-4",
+        "prompt": "4个点中任意两点连一条线段，最多能得到几条不同线段？",
+        "answer": 6,
+        "unit": "条",
+        "hints": [
+          "每条线段由一对点决定。",
+          "4×3÷2。"
+        ],
+        "explanation": "4×3÷2=6条。",
+        "misconception": "把AB和BA重复计算。",
+        "level": "challenge",
+        "representation": "graph"
+      }
+    ]
+  },
+  {
+    "id": "fraction-quantity",
+    "world": "fractions",
+    "title": "分数可以去量一堆东西",
+    "subtitle": "从分数条走向一个数的几分之几",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "求一个数量的几分之几，先按分母平均分，再按分子取份。",
+    "origin": "配方、路程和分配常需要取一个量的一部分，不能只停留在涂色图上。",
+    "mathIdea": "分数不只描述形状，也能作用在数量上。",
+    "representations": [
+      "数量条",
+      "分组模型",
+      "除乘算式"
+    ],
+    "thinkingSkills": [
+      "模型迁移",
+      "分步计算"
+    ],
+    "story": "探险队带了24颗能量豆，要取总数的2/3给导航器。",
+    "discovery": "先求一份，再求几份：24的2/3=24÷3×2。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "fraction",
+    "labConfig": {
+      "a": 2,
+      "parts": 3
+    },
+    "prerequisites": [
+      "fraction-meaning",
+      "arrays"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：上册·分数的初步认识"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "fq-1",
+        "prompt": "18颗星石的1/3是多少颗？",
+        "answer": 6,
+        "unit": "颗",
+        "hints": [
+          "先平均分成3份。",
+          "18÷3。"
+        ],
+        "explanation": "18÷3=6颗。",
+        "misconception": "把18除以1或乘3。",
+        "level": "warmup",
+        "representation": "fraction"
+      },
+      {
+        "id": "fq-2",
+        "prompt": "20米路程的2/5是多少米？",
+        "answer": 8,
+        "unit": "米",
+        "hints": [
+          "先求1/5。",
+          "20÷5×2。"
+        ],
+        "explanation": "20÷5×2=8米。",
+        "misconception": "只算1/5。",
+        "level": "core",
+        "representation": "fraction"
+      },
+      {
+        "id": "fq-3",
+        "prompt": "30页故事书读了2/3，还剩多少页？",
+        "answer": 10,
+        "unit": "页",
+        "hints": [
+          "先求读了20页。",
+          "总页数减去读了的。"
+        ],
+        "explanation": "30÷3×2=20，剩10页。",
+        "misconception": "把2/3当成剩下部分。",
+        "level": "transfer",
+        "representation": "bar"
+      },
+      {
+        "id": "fq-4",
+        "prompt": "一篮水果36个，先拿走1/4，又拿走剩下的1/3，共拿走多少个？",
+        "answer": 18,
+        "unit": "个",
+        "hints": [
+          "第一次9个，剩27个。",
+          "第二次27÷3=9个。"
+        ],
+        "explanation": "9+9=18个。",
+        "misconception": "第二次仍按原总数36的1/3计算。",
+        "level": "challenge",
+        "representation": "bar"
+      }
+    ]
+  },
+  {
+    "id": "division-algorithm",
+    "world": "numbers",
+    "title": "把大数公平分组",
+    "subtitle": "一位数除法是反复分配和位值的记录",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "除数是一位数的除法可以按百、十、个逐步分配；商写在对应数位。",
+    "origin": "大量物品要按相同规则分组，逐个分太慢，于是人们把分组过程写成竖式。",
+    "mathIdea": "竖式是从高位开始分配、把剩余带下去的流程图。",
+    "representations": [
+      "分组物",
+      "位值分解",
+      "除法竖式"
+    ],
+    "thinkingSkills": [
+      "算法理解",
+      "位值追踪"
+    ],
+    "story": "仓库有432颗星石，要平均装进4个箱子。泡泡先分百，再分十，最后分个。",
+    "discovery": "每一步都在问当前这一级平均给每组多少。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "array",
+    "labConfig": {
+      "total": 32,
+      "b": 4,
+      "mode": "remainder"
+    },
+    "prerequisites": [
+      "division"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：下册·除数是一位数的除法"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "da-1",
+        "prompt": "96÷3等于多少？",
+        "answer": 32,
+        "unit": "",
+        "hints": [
+          "90÷3=30，6÷3=2。",
+          "用分组图检查。"
+        ],
+        "explanation": "96÷3=32。",
+        "misconception": "把96÷3算成96−3。",
+        "level": "warmup",
+        "representation": "group"
+      },
+      {
+        "id": "da-2",
+        "prompt": "432÷4等于多少？",
+        "answer": 108,
+        "unit": "",
+        "hints": [
+          "400÷4=100，32÷4=8。",
+          "合起来是108。"
+        ],
+        "explanation": "432÷4=108。",
+        "misconception": "把432看成42。",
+        "level": "core",
+        "representation": "place-value"
+      },
+      {
+        "id": "da-3",
+        "prompt": "738÷3等于多少？",
+        "answer": 246,
+        "unit": "",
+        "hints": [
+          "用乘法246×3检查。",
+          "商的每一位都要有意义。"
+        ],
+        "explanation": "246×3=738，所以商246。",
+        "misconception": "只做73÷3而忘记个位。",
+        "level": "transfer",
+        "representation": "group"
+      },
+      {
+        "id": "da-4",
+        "prompt": "250÷5等于多少？",
+        "answer": 50,
+        "unit": "",
+        "hints": [
+          "25÷5=5，再考虑末尾0。",
+          "5个50是250。"
+        ],
+        "explanation": "250÷5=50。",
+        "misconception": "去掉末尾0后忘记补回。",
+        "level": "challenge",
+        "representation": "place-value"
+      }
+    ]
+  },
+  {
+    "id": "division-remainder",
+    "world": "numbers",
+    "title": "余数在告诉我们什么",
+    "subtitle": "分不完的部分也有规则",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "有余数除法表示装满若干组后剩下多少，余数必须小于除数。",
+    "origin": "物品、座位和轮班不能整齐分完时，剩下的量决定下一步安排。",
+    "mathIdea": "余数是周期、分组和整除关系的证据。",
+    "representations": [
+      "分组",
+      "余数图",
+      "乘加关系"
+    ],
+    "thinkingSkills": [
+      "余数解释",
+      "条件检查"
+    ],
+    "story": "27颗星石每4颗装一袋，装满6袋后还剩3颗。",
+    "discovery": "被除数=除数×商+余数，余数必须比除数小。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "array",
+    "labConfig": {
+      "total": 27,
+      "b": 4,
+      "mode": "remainder"
+    },
+    "prerequisites": [
+      "division-algorithm"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：下册·除数是一位数的除法"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "dr-1",
+        "prompt": "27÷4的商是多少？",
+        "answer": 6,
+        "unit": "组",
+        "hints": [
+          "4×6=24。",
+          "还能装满6组。"
+        ],
+        "explanation": "27÷4=6余3，商是6。",
+        "misconception": "把余数3误当商。",
+        "level": "warmup",
+        "representation": "group"
+      },
+      {
+        "id": "dr-2",
+        "prompt": "27÷4的余数是多少？",
+        "answer": 3,
+        "unit": "个",
+        "hints": [
+          "装满6组用了24个。",
+          "27−24。"
+        ],
+        "explanation": "余数是3。",
+        "misconception": "写成余数4，违反余数小于除数。",
+        "level": "core",
+        "representation": "group"
+      },
+      {
+        "id": "dr-3",
+        "prompt": "每辆车坐5人，23人至少需要几辆车？",
+        "answer": 5,
+        "unit": "辆",
+        "hints": [
+          "23÷5=4余3。",
+          "剩下的人也要一辆车。"
+        ],
+        "explanation": "需要5辆。",
+        "misconception": "把商4直接当车辆数。",
+        "level": "transfer",
+        "representation": "story"
+      },
+      {
+        "id": "dr-4",
+        "prompt": "一个数除以6，商7，余数4，这个数是多少？",
+        "answer": 46,
+        "unit": "",
+        "hints": [
+          "被除数=除数×商+余数。",
+          "6×7+4。"
+        ],
+        "explanation": "6×7+4=46。",
+        "misconception": "只算6×7。",
+        "level": "challenge",
+        "representation": "equation"
+      }
+    ]
+  },
+  {
+    "id": "perimeter-area-bridge",
+    "world": "geometry",
+    "title": "围一圈和铺满地是两种量",
+    "subtitle": "同一块地，边界和内部要用不同方法描述",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "周长是边界一周长度，面积是内部大小；同一形状可以分别研究两者。",
+    "origin": "围栏要买边界长度的材料，铺地要买覆盖内部的材料。",
+    "mathIdea": "区分对象是建模的第一步：沿边走和铺满格子不是一件事。",
+    "representations": [
+      "围栏",
+      "方格",
+      "长方形公式"
+    ],
+    "thinkingSkills": [
+      "量的区分",
+      "模型选择"
+    ],
+    "story": "数学工坊要给花园围栏，还要铺地砖。芽芽发现绕一圈和铺满得到的数字不同。",
+    "discovery": "周长沿边界，面积看内部，单位也不同。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "geometry",
+    "labConfig": {
+      "a": 8,
+      "b": 5,
+      "mode": "geometry"
+    },
+    "prerequisites": [
+      "perimeter",
+      "area"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：下册·长方形和正方形、图形的面积"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "pab-1",
+        "prompt": "长8米、宽5米的长方形花园，周长是多少米？",
+        "answer": 26,
+        "unit": "米",
+        "hints": [
+          "两条长加两条宽。",
+          "2×(8+5)。"
+        ],
+        "explanation": "周长26米。",
+        "misconception": "把长×宽当周长。",
+        "level": "warmup",
+        "representation": "geometry"
+      },
+      {
+        "id": "pab-2",
+        "prompt": "同一个花园的面积是多少平方米？",
+        "answer": 40,
+        "unit": "平方米",
+        "hints": [
+          "面积是长×宽。",
+          "8×5。"
+        ],
+        "explanation": "面积40平方米。",
+        "misconception": "把面积写成26平方米。",
+        "level": "core",
+        "representation": "grid"
+      },
+      {
+        "id": "pab-3",
+        "prompt": "正方形边长6米，周长是多少米？",
+        "answer": 24,
+        "unit": "米",
+        "hints": [
+          "四条边一样长。",
+          "6×4。"
+        ],
+        "explanation": "周长24米。",
+        "misconception": "只算两条边。",
+        "level": "transfer",
+        "representation": "geometry"
+      },
+      {
+        "id": "pab-4",
+        "prompt": "6×4方格长方形沿中线分成两个相同图形，每个面积是多少平方格？",
+        "answer": 12,
+        "unit": "平方格",
+        "hints": [
+          "总面积24平方格。",
+          "平均分成2份。"
+        ],
+        "explanation": "每个12平方格。",
+        "misconception": "把每个图形周长当面积。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ]
+  },
+  {
+    "id": "area-decomposition",
+    "world": "geometry",
+    "title": "剪开、拼回，面积不会消失",
+    "subtitle": "用分割和添补处理不规则图形",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "图形分割或拼接时，若没有重叠和空缺，总面积保持不变。",
+    "origin": "铺地、裁纸和设计窗台常遇到缺角形状，要拆成可数的部分。",
+    "mathIdea": "分解与重组是几何中的守恒思想：换形状不一定换面积。",
+    "representations": [
+      "方格图",
+      "分割线",
+      "长方形"
+    ],
+    "thinkingSkills": [
+      "分割添补",
+      "守恒"
+    ],
+    "story": "一块L形花圃没有现成长方形公式，泡泡先补出大长方形再扣掉缺口。",
+    "discovery": "补进去和扣掉的部分必须标记清楚，面积才不会重复。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "geometry",
+    "labConfig": {
+      "a": 7,
+      "b": 5,
+      "mode": "geometry"
+    },
+    "prerequisites": [
+      "perimeter-area-bridge"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：下册·图形的面积"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "ad-1",
+        "prompt": "一个5×4长方形面积是多少平方格？",
+        "answer": 20,
+        "unit": "平方格",
+        "hints": [
+          "每行5格，共4行。",
+          "5×4。"
+        ],
+        "explanation": "面积20平方格。",
+        "misconception": "把5+4当面积。",
+        "level": "warmup",
+        "representation": "grid"
+      },
+      {
+        "id": "ad-2",
+        "prompt": "L形由5×4和3×2两个不重叠长方形组成，面积是多少平方格？",
+        "answer": 26,
+        "unit": "平方格",
+        "hints": [
+          "先算20和6。",
+          "不重叠所以相加。"
+        ],
+        "explanation": "5×4+3×2=26。",
+        "misconception": "把边长相加。",
+        "level": "core",
+        "representation": "grid"
+      },
+      {
+        "id": "ad-3",
+        "prompt": "大长方形面积30平方格，挖去6平方格缺口，剩下多少？",
+        "answer": 24,
+        "unit": "平方格",
+        "hints": [
+          "缺口从总面积减去。",
+          "30−6。"
+        ],
+        "explanation": "剩下24平方格。",
+        "misconception": "把缺口再加一次。",
+        "level": "transfer",
+        "representation": "grid"
+      },
+      {
+        "id": "ad-4",
+        "prompt": "把24平方格拼成3个面积相同的图形，每个面积是多少？",
+        "answer": 8,
+        "unit": "平方格",
+        "hints": [
+          "平均分成3份。",
+          "24÷3。"
+        ],
+        "explanation": "每个8平方格。",
+        "misconception": "把24−3或24×3。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ]
+  },
+  {
+    "id": "data-table",
+    "world": "logic",
+    "title": "先收集，再让数据说话",
+    "subtitle": "从一堆记录到表格和结论",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "数据要按同一标准收集、分类、计数和整理，结论要回到数据证据。",
+    "origin": "调查水果、记录天气和统计运动次数，都需要把零散观察变成可比较信息。",
+    "mathIdea": "表格固定了谁、多少和比较什么。",
+    "representations": [
+      "计数符号",
+      "表格",
+      "条形图"
+    ],
+    "thinkingSkills": [
+      "分类整理",
+      "证据表达"
+    ],
+    "story": "四个伙伴口头报告喜欢的水果，记录很快乱成一团。Kevin 设计表格让每个答案都有位置。",
+    "discovery": "同一类别只计一次，表头要说明对象和单位。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "table",
+    "labConfig": {
+      "total": 12,
+      "parts": 3,
+      "mode": "table"
+    },
+    "prerequisites": [
+      "enumeration"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：下册·数据的收集与整理"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "dt-1",
+        "prompt": "三类水果分别有8、5、7人喜欢，一共调查了多少人？",
+        "answer": 20,
+        "unit": "人",
+        "hints": [
+          "把三类人数相加。",
+          "8+5+7。"
+        ],
+        "explanation": "一共20人。",
+        "misconception": "只取最多的一类。",
+        "level": "warmup",
+        "representation": "table"
+      },
+      {
+        "id": "dt-2",
+        "prompt": "上题中喜欢人数最多和最少的水果相差多少人？",
+        "answer": 3,
+        "unit": "人",
+        "hints": [
+          "最多8，最少5。",
+          "8−5。"
+        ],
+        "explanation": "相差3人。",
+        "misconception": "把5和7比较。",
+        "level": "core",
+        "representation": "table"
+      },
+      {
+        "id": "dt-3",
+        "prompt": "一周运动次数为2、4、3、4、1、4、2，出现最多的数字是几？",
+        "answer": 4,
+        "unit": "次",
+        "hints": [
+          "数每个数字出现次数。",
+          "4出现3次。"
+        ],
+        "explanation": "出现最多的是4。",
+        "misconception": "把总次数14当答案。",
+        "level": "transfer",
+        "representation": "table"
+      },
+      {
+        "id": "dt-4",
+        "prompt": "条形图每格代表2人，某柱高6格，表示多少人？",
+        "answer": 12,
+        "unit": "人",
+        "hints": [
+          "每格2人，共6格。",
+          "2×6。"
+        ],
+        "explanation": "表示12人。",
+        "misconception": "把柱高6当人数。",
+        "level": "challenge",
+        "representation": "bar"
+      }
+    ]
+  },
+  {
+    "id": "calendar-cycles",
+    "world": "patterns",
+    "title": "日历上藏着周期",
+    "subtitle": "用7天循环预测日期",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "一周7天形成周期；日期推移可以用整周和余数描述。",
+    "origin": "安排课程、旅行和轮班都要预测未来某天，日历把循环规律公开出来。",
+    "mathIdea": "周期本质是走了多少个完整周期，还剩几步。",
+    "representations": [
+      "日历",
+      "时间轴",
+      "余数"
+    ],
+    "thinkingSkills": [
+      "周期建模",
+      "跨单位计算"
+    ],
+    "story": "探险队每7天补给一次。泡泡把日期差拆成整周和余数。",
+    "discovery": "差7天星期不变，差1天星期前进一格。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "table",
+    "labConfig": {
+      "total": 28,
+      "parts": 7,
+      "mode": "period"
+    },
+    "prerequisites": [
+      "time-scale"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：下册·年、月、日的秘密"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "cc-1",
+        "prompt": "2024年是闰年，全年有多少天？",
+        "answer": 366,
+        "unit": "天",
+        "hints": [
+          "闰年比平年多一天。",
+          "平年365天。"
+        ],
+        "explanation": "闰年366天。",
+        "misconception": "把闰年也写成365天。",
+        "level": "warmup",
+        "representation": "calendar"
+      },
+      {
+        "id": "cc-2",
+        "prompt": "4月有多少天？",
+        "answer": 30,
+        "unit": "天",
+        "hints": [
+          "4月是小月。",
+          "小月有30天。"
+        ],
+        "explanation": "4月30天。",
+        "misconception": "把所有月份都记成31天。",
+        "level": "core",
+        "representation": "calendar"
+      },
+      {
+        "id": "cc-3",
+        "prompt": "3周一共有多少天？",
+        "answer": 21,
+        "unit": "天",
+        "hints": [
+          "1周7天。",
+          "3×7。"
+        ],
+        "explanation": "3周21天。",
+        "misconception": "把3周写成3天。",
+        "level": "transfer",
+        "representation": "calendar"
+      },
+      {
+        "id": "cc-4",
+        "prompt": "若1月1日是星期一，7天后是星期几？约定星期一编号为1。",
+        "answer": 1,
+        "unit": "星期序号",
+        "hints": [
+          "7天正好一个周期。",
+          "星期回到起点。"
+        ],
+        "explanation": "7天后仍是星期一，编号1。",
+        "misconception": "把7天后当成星期日。",
+        "level": "challenge",
+        "representation": "period"
+      }
+    ]
+  },
+  {
+    "id": "decimal-money",
+    "world": "fractions",
+    "title": "小数把一元钱继续分下去",
+    "subtitle": "从元角分理解十分位和小数点",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "小数表示把1平均分成10份或100份后的量，小数点分开整数和小数部分。",
+    "origin": "钱、长度和重量经常不够一个完整单位，元角分让不到1元也能精确记录。",
+    "mathIdea": "小数是十进分割后的记号，与分数和位值系统相连。",
+    "representations": [
+      "货币",
+      "十格条",
+      "小数位值"
+    ],
+    "thinkingSkills": [
+      "单位连接",
+      "位值迁移"
+    ],
+    "story": "商店里一支笔3元5角，收银台要把它写成一个数。",
+    "discovery": "小数点左边是完整元，右边第一位是角。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "fraction",
+    "labConfig": {
+      "a": 5,
+      "parts": 10
+    },
+    "prerequisites": [
+      "fraction-meaning"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：下册·小数的初步认识"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "de-1",
+        "prompt": "3元5角写成多少元？",
+        "answer": 3.5,
+        "unit": "元",
+        "hints": [
+          "5角是0.5元。",
+          "3+0.5。"
+        ],
+        "explanation": "3元5角=3.5元。",
+        "misconception": "把3元5角写成35元。",
+        "level": "warmup",
+        "representation": "money"
+      },
+      {
+        "id": "de-2",
+        "prompt": "0.7元和0.2元合起来是多少元？",
+        "answer": 0.9,
+        "unit": "元",
+        "hints": [
+          "十分位相加7+2。",
+          "0.7+0.2。"
+        ],
+        "explanation": "合起来0.9元。",
+        "misconception": "小数点没有对齐。",
+        "level": "core",
+        "representation": "decimal"
+      },
+      {
+        "id": "de-3",
+        "prompt": "1.2米比0.5米长多少米？",
+        "answer": 0.7,
+        "unit": "米",
+        "hints": [
+          "同单位直接相减。",
+          "1.2−0.5。"
+        ],
+        "explanation": "长0.7米。",
+        "misconception": "只算整数部分。",
+        "level": "transfer",
+        "representation": "decimal"
+      },
+      {
+        "id": "de-4",
+        "prompt": "2元8分写成多少元？",
+        "answer": 2.08,
+        "unit": "元",
+        "hints": [
+          "8分是0.08元，要保留百分位。",
+          "2+0.08。"
+        ],
+        "explanation": "2元8分=2.08元。",
+        "misconception": "漏掉十分位的0写成2.8元。",
+        "level": "challenge",
+        "representation": "money"
+      }
+    ]
+  },
+  {
+    "id": "motion-transformations",
+    "world": "geometry",
+    "title": "图形会平移、旋转和翻折",
+    "subtitle": "用动作描述图形怎样变化",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "平移保持形状和方向，旋转改变方向，翻折产生镜像；运动前后图形大小保持。",
+    "origin": "风车、滑梯、推拉门和剪纸都在展示图形的运动。",
+    "mathIdea": "研究变化时要区分变了什么和保持什么。",
+    "representations": [
+      "动作动画",
+      "网格",
+      "对应点"
+    ],
+    "thinkingSkills": [
+      "变换观察",
+      "保持量"
+    ],
+    "story": "游乐场的风车转起来，滑梯沿直线移动，窗花沿折痕翻过去。",
+    "discovery": "变换可以改变位置或方向，但不会凭空改变图形的大小。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "table",
+    "labConfig": {
+      "total": 20,
+      "parts": 4,
+      "mode": "period"
+    },
+    "prerequisites": [
+      "viewpoint-models"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：下册·生活中的运动现象"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "mt-1",
+        "prompt": "图形旋转半圈是几度？",
+        "answer": 180,
+        "unit": "度",
+        "hints": [
+          "一整圈360度。",
+          "360÷2。"
+        ],
+        "explanation": "半圈180度。",
+        "misconception": "把半圈和四分之一圈混淆。",
+        "level": "warmup",
+        "representation": "rotation"
+      },
+      {
+        "id": "mt-2",
+        "prompt": "图形旋转四分之一圈是几度？",
+        "answer": 90,
+        "unit": "度",
+        "hints": [
+          "一整圈分成4份。",
+          "360÷4。"
+        ],
+        "explanation": "四分之一圈90度。",
+        "misconception": "写成45度。",
+        "level": "core",
+        "representation": "rotation"
+      },
+      {
+        "id": "mt-3",
+        "prompt": "平移一个图形5格后，图形的面积改变多少？",
+        "answer": 0,
+        "unit": "平方格",
+        "hints": [
+          "平移只改变位置。",
+          "大小保持。"
+        ],
+        "explanation": "面积改变0平方格。",
+        "misconception": "把移动距离当面积变化。",
+        "level": "transfer",
+        "representation": "grid"
+      },
+      {
+        "id": "mt-4",
+        "prompt": "先向右平移3格，再向左平移3格，最后离起点几格？",
+        "answer": 0,
+        "unit": "格",
+        "hints": [
+          "方向相反的位移抵消。",
+          "3−3。"
+        ],
+        "explanation": "最后回到起点，距离0格。",
+        "misconception": "把两段路程相加。",
+        "level": "challenge",
+        "representation": "numberline"
+      }
+    ]
+  },
+  {
+    "id": "factors-multiples",
+    "world": "patterns",
+    "title": "数可以被怎样整齐分组",
+    "subtitle": "从分组和余数发现因数与倍数",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "若一个数能被另一个数整除，后者是前者的因数，前者是后者的倍数。",
+    "origin": "排座位、装箱和制作方阵时，人们关心哪些数量能恰好分组。",
+    "mathIdea": "整除关系把乘法、除法和数的结构连接起来，是数论的入口。",
+    "representations": [
+      "阵列",
+      "因数对",
+      "整除检验"
+    ],
+    "thinkingSkills": [
+      "结构分类",
+      "整除意识"
+    ],
+    "story": "24颗星石可以排成1×24、2×12、3×8、4×6的方阵。",
+    "discovery": "因数成对出现，乘法和除法是同一关系的两种读法。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "array",
+    "labConfig": {
+      "total": 24,
+      "b": 4,
+      "mode": "remainder"
+    },
+    "prerequisites": [
+      "arrays",
+      "division"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：教材目录思想延展·数与运算"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "fx-1",
+        "prompt": "12÷3的商是多少？",
+        "answer": 4,
+        "unit": "",
+        "hints": [
+          "3×4=12。",
+          "商是另一条因数。"
+        ],
+        "explanation": "12÷3=4。",
+        "misconception": "把除数3当成商。",
+        "level": "warmup",
+        "representation": "array"
+      },
+      {
+        "id": "fx-2",
+        "prompt": "24排成3行，每行几个？",
+        "answer": 8,
+        "unit": "个",
+        "hints": [
+          "24÷3。",
+          "3×8=24。"
+        ],
+        "explanation": "每行8个。",
+        "misconception": "把3行当成每行3个。",
+        "level": "core",
+        "representation": "array"
+      },
+      {
+        "id": "fx-3",
+        "prompt": "小于30的5的正倍数有几个？",
+        "answer": 5,
+        "unit": "个",
+        "hints": [
+          "列出5、10、15、20、25。",
+          "题目说小于30。"
+        ],
+        "explanation": "共有5个。",
+        "misconception": "把0也算成正倍数。",
+        "level": "transfer",
+        "representation": "period"
+      },
+      {
+        "id": "fx-4",
+        "prompt": "一个数除以4余1，哪个数可能是它：17、18、20？请填选项序号（17为1）。",
+        "answer": 1,
+        "unit": "号",
+        "hints": [
+          "逐个看除以4的余数。",
+          "17=4×4+1。"
+        ],
+        "explanation": "选项序号1。",
+        "misconception": "只看个位不验证。",
+        "level": "challenge",
+        "representation": "group"
+      }
+    ]
+  },
+  {
+    "id": "estimation-check",
+    "world": "numbers",
+    "title": "先估一估，答案才有方向",
+    "subtitle": "估算不是随便猜，是带着数量级检查",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "估算用接近的整十或整百替代精确数，快速判断结果范围。",
+    "origin": "购物预算、路程时间和仓库盘点常不需要精确到个位，但需要及时发现错误。",
+    "mathIdea": "估算把复杂问题压缩成可比较的尺度，是数学判断力的一部分。",
+    "representations": [
+      "数轴",
+      "近似数",
+      "范围"
+    ],
+    "thinkingSkills": [
+      "数量级",
+      "合理性检查"
+    ],
+    "story": "商店结账前，泡泡先在脑中估计总价，避免把18元算成180元。",
+    "discovery": "估算不是精确答案，却能告诉我们精算是否值得相信。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "numberline",
+    "labConfig": {
+      "a": 0,
+      "b": 10,
+      "total": 20
+    },
+    "prerequisites": [
+      "place-value"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：教材目录思想延展·数感"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "ec-1",
+        "prompt": "198+304估算到百位约是多少？",
+        "answer": 500,
+        "unit": "",
+        "hints": [
+          "198约200，304约300。",
+          "200+300。"
+        ],
+        "explanation": "约500。",
+        "misconception": "把198约成100。",
+        "level": "warmup",
+        "representation": "numberline"
+      },
+      {
+        "id": "ec-2",
+        "prompt": "49×6估算到整十约是多少？",
+        "answer": 300,
+        "unit": "",
+        "hints": [
+          "49约50。",
+          "50×6。"
+        ],
+        "explanation": "约300。",
+        "misconception": "把49约成40。",
+        "level": "core",
+        "representation": "numberline"
+      },
+      {
+        "id": "ec-3",
+        "prompt": "602−298估算到百位约是多少？",
+        "answer": 300,
+        "unit": "",
+        "hints": [
+          "602约600，298约300。",
+          "600−300。"
+        ],
+        "explanation": "约300。",
+        "misconception": "直接写精确差。",
+        "level": "transfer",
+        "representation": "numberline"
+      },
+      {
+        "id": "ec-4",
+        "prompt": "97÷3的商大约是几十？填最接近的整十数。",
+        "answer": 30,
+        "unit": "个",
+        "hints": [
+          "97约100，商约33。",
+          "最接近30。"
+        ],
+        "explanation": "最接近30。",
+        "misconception": "把估算当精确商32。",
+        "level": "challenge",
+        "representation": "numberline"
+      }
+    ]
+  },
+  {
+    "id": "counting-combinations",
+    "world": "logic",
+    "title": "选择可以画成树",
+    "subtitle": "把一个接一个的选择变成乘法",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "若每个第一步选择都能和每个第二步选择搭配，组合总数等于各步选择数相乘。",
+    "origin": "穿衣、点餐、路线和密码都要求把多个选择系统地组合起来。",
+    "mathIdea": "乘法不仅表示重复数量，也表示独立选择的组合数。",
+    "representations": [
+      "树状图",
+      "列表",
+      "乘法"
+    ],
+    "thinkingSkills": [
+      "系统计数",
+      "乘法迁移"
+    ],
+    "story": "Kevin 有3种帽子和2种围巾，泡泡先固定一顶帽子，再接上两条分支。",
+    "discovery": "每一顶帽子都拥有同样多的围巾选择，所以可以用3×2。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "table",
+    "labConfig": {
+      "total": 9,
+      "parts": 3,
+      "mode": "enumeration"
+    },
+    "prerequisites": [
+      "enumeration"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：下册·数据整理、教材目录思想延展·搭配"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "co-1",
+        "prompt": "2种口味和3种配料，每种口味都能配任意配料，有多少种搭配？",
+        "answer": 6,
+        "unit": "种",
+        "hints": [
+          "每种口味有3种配料。",
+          "2×3。"
+        ],
+        "explanation": "共有6种。",
+        "misconception": "把2和3相加。",
+        "level": "warmup",
+        "representation": "tree"
+      },
+      {
+        "id": "co-2",
+        "prompt": "3件上衣和2条裤子共有多少种穿法？",
+        "answer": 6,
+        "unit": "种",
+        "hints": [
+          "每件上衣都能配2条裤子。",
+          "3×2。"
+        ],
+        "explanation": "共有6种。",
+        "misconception": "只数一类衣物。",
+        "level": "core",
+        "representation": "tree"
+      },
+      {
+        "id": "co-3",
+        "prompt": "家到公园2条路，公园到学校3条路，共有多少条不同路线？",
+        "answer": 6,
+        "unit": "条",
+        "hints": [
+          "每条第一段都能接3条第二段。",
+          "2×3。"
+        ],
+        "explanation": "共有6条。",
+        "misconception": "把两段路线相加。",
+        "level": "transfer",
+        "representation": "tree"
+      },
+      {
+        "id": "co-4",
+        "prompt": "3×3个点组成的方格网中，从左上角点到右下角点，只能向右或向下，最短路线有几条？",
+        "answer": 6,
+        "unit": "条",
+        "hints": [
+          "要走2次右和2次下。",
+          "4步中选2步向右。"
+        ],
+        "explanation": "共有6条。",
+        "misconception": "把所有乱走路线也算进去。",
+        "level": "challenge",
+        "representation": "path"
+      }
+    ]
+  },
+  {
+    "id": "reverse-thinking",
+    "world": "logic",
+    "title": "把过程倒放",
+    "subtitle": "用逆运算找回未知的起点",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "加减、乘除互为逆运算；倒推时从结果开始按相反顺序撤销每一步。",
+    "origin": "解密码、查账和修复错误记录时，人们常知道结果却要找回起点。",
+    "mathIdea": "过程可以正着执行，也可以反着还原，这是方程和算法的共同思想。",
+    "representations": [
+      "流程箭头",
+      "逆运算",
+      "检查链"
+    ],
+    "thinkingSkills": [
+      "倒推",
+      "结果验证"
+    ],
+    "story": "星星把一个数经过两道门变成36，却忘了起点。",
+    "discovery": "倒推顺序与正推相反，每一步都用相反运算。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "balance",
+    "labConfig": {
+      "a": 8,
+      "b": 3,
+      "mode": "unknown-addend"
+    },
+    "prerequisites": [
+      "reverse"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：教材目录思想延展·问题解决"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "rt-1",
+        "prompt": "一个数加15后变成42，这个数是多少？",
+        "answer": 27,
+        "unit": "",
+        "hints": [
+          "倒过来做减法。",
+          "42−15。"
+        ],
+        "explanation": "42−15=27。",
+        "misconception": "仍然做42+15。",
+        "level": "warmup",
+        "representation": "flow"
+      },
+      {
+        "id": "rt-2",
+        "prompt": "一个数乘3后变成36，这个数是多少？",
+        "answer": 12,
+        "unit": "",
+        "hints": [
+          "乘法的逆运算是除法。",
+          "36÷3。"
+        ],
+        "explanation": "36÷3=12。",
+        "misconception": "用36−3。",
+        "level": "core",
+        "representation": "flow"
+      },
+      {
+        "id": "rt-3",
+        "prompt": "一篮水果拿走7个后还剩18个，原来有多少个？",
+        "answer": 25,
+        "unit": "个",
+        "hints": [
+          "把拿走的加回来。",
+          "18+7。"
+        ],
+        "explanation": "原来25个。",
+        "misconception": "再减7得到更小的数。",
+        "level": "transfer",
+        "representation": "bar"
+      },
+      {
+        "id": "rt-4",
+        "prompt": "一个数先加6，再乘2，结果30。原数是多少？",
+        "answer": 9,
+        "unit": "",
+        "hints": [
+          "先撤销乘2：30÷2。",
+          "再撤销加6：15−6。"
+        ],
+        "explanation": "原数9。",
+        "misconception": "按正向顺序先减6再除2。",
+        "level": "challenge",
+        "representation": "flow"
+      }
+    ]
+  },
+  {
+    "id": "invariant-relations",
+    "world": "patterns",
+    "title": "有些关系不会变",
+    "subtitle": "同时变化，差和总量的规律仍在",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "两个量同时增加或减少相同数，差不变；一个量增加另一个量减少相同数，总和不变。",
+    "origin": "年龄、队伍和物品转移中，数字一直变，但关系可能保持稳定。",
+    "mathIdea": "不变量是复杂问题的锚点：先找不会变的量，再追踪变化。",
+    "representations": [
+      "时间线",
+      "条形图",
+      "变化箭头"
+    ],
+    "thinkingSkills": [
+      "寻找不变量",
+      "关系推理"
+    ],
+    "story": "两只蛋仔一起长大，年龄在变，但年龄差像一根不会松的绳子。",
+    "discovery": "变化不等于所有关系都变化，先比较变化量再找保持量。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "balance",
+    "labConfig": {
+      "a": 8,
+      "b": 3,
+      "mode": "balance"
+    },
+    "prerequisites": [
+      "age-invariant"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：教材目录思想延展·数学关系"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "ir-1",
+        "prompt": "哥哥12岁，妹妹8岁，4年后两人的年龄差是多少岁？",
+        "answer": 4,
+        "unit": "岁",
+        "hints": [
+          "两人都增加4岁。",
+          "12−8。"
+        ],
+        "explanation": "年龄差仍是4岁。",
+        "misconception": "把4年加进年龄差。",
+        "level": "warmup",
+        "representation": "timeline"
+      },
+      {
+        "id": "ir-2",
+        "prompt": "两个数相差7，两数同时加3，新的差是多少？",
+        "answer": 7,
+        "unit": "",
+        "hints": [
+          "两边一起加，间隔不变。",
+          "差仍为7。"
+        ],
+        "explanation": "新差仍为7。",
+        "misconception": "把差也加3。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "ir-3",
+        "prompt": "篮子里15个红球和9个蓝球，拿走2个红球并放入2个蓝球，总数改变多少？",
+        "answer": 0,
+        "unit": "个",
+        "hints": [
+          "拿走2个又放入2个。",
+          "一减一加抵消。"
+        ],
+        "explanation": "总数改变0个。",
+        "misconception": "只看到拿走。",
+        "level": "transfer",
+        "representation": "balance"
+      },
+      {
+        "id": "ir-4",
+        "prompt": "甲比乙多12，甲减少5、乙增加5，新的差是多少？",
+        "answer": 2,
+        "unit": "",
+        "hints": [
+          "差减少两个5。",
+          "12−5−5。"
+        ],
+        "explanation": "新的差是2。",
+        "misconception": "只减一个5得到7。",
+        "level": "challenge",
+        "representation": "bar"
+      }
+    ]
+  },
+  {
+    "id": "optimization-modeling",
+    "world": "geometry",
+    "title": "同样的材料，怎样安排更合适",
+    "subtitle": "把最大、最省、最公平变成可比较的模型",
+    "kind": "thinking",
+    "minutes": 10,
+    "concept": "在总长度、总数或面积固定时，不同安排会产生不同结果；系统比较才能找到最优。",
+    "origin": "围栏、分组、铺地和路线设计都不只问能不能，还问怎样更省、更大、更均匀。",
+    "mathIdea": "最优化先明确目标和限制，再系统比较可行方案。",
+    "representations": [
+      "方案表",
+      "方格图",
+      "比较量"
+    ],
+    "thinkingSkills": [
+      "条件建模",
+      "方案比较"
+    ],
+    "story": "花园有20米围栏，泡泡想围出面积尽可能大的长方形，于是画出方案表。",
+    "discovery": "周长固定时，边长越接近，面积通常越大。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "geometry",
+    "labConfig": {
+      "a": 6,
+      "b": 4,
+      "mode": "geometry"
+    },
+    "prerequisites": [
+      "area-decomposition",
+      "patterns-parity"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：教材目录思想延展·问题解决"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "op-1",
+        "prompt": "用20根1米小棒围成长方形，边长为整数，面积最大是多少？",
+        "answer": 25,
+        "unit": "平方米",
+        "hints": [
+          "长+宽=10。",
+          "5×5。"
+        ],
+        "explanation": "面积最大25平方米。",
+        "misconception": "把周长当面积。",
+        "level": "warmup",
+        "representation": "grid"
+      },
+      {
+        "id": "op-2",
+        "prompt": "24颗星石平均分成3组，每组多少颗？",
+        "answer": 8,
+        "unit": "颗",
+        "hints": [
+          "公平分配用除法。",
+          "24÷3。"
+        ],
+        "explanation": "每组8颗。",
+        "misconception": "把24−3。",
+        "level": "core",
+        "representation": "group"
+      },
+      {
+        "id": "op-3",
+        "prompt": "6×4方格剪成两个面积相同长方形，每个面积多少？",
+        "answer": 12,
+        "unit": "平方格",
+        "hints": [
+          "总面积24。",
+          "平均分2份。"
+        ],
+        "explanation": "每个12平方格。",
+        "misconception": "把6和4直接平均。",
+        "level": "transfer",
+        "representation": "grid"
+      },
+      {
+        "id": "op-4",
+        "prompt": "用12米围成长方形，边长为整数，面积可能是5、8、9中的最大值是多少？",
+        "answer": 9,
+        "unit": "平方米",
+        "hints": [
+          "长+宽=6。",
+          "最接近3和3。"
+        ],
+        "explanation": "最大值9平方米。",
+        "misconception": "忽略周长限制。",
+        "level": "challenge",
+        "representation": "grid"
+      }
+    ]
+  },
+  {
+    "id": "multi-step-modeling",
+    "world": "relations",
+    "title": "把真实问题拆成几步",
+    "subtitle": "从读题到模型，再从模型回到生活",
+    "kind": "foundation",
+    "minutes": 10,
+    "concept": "复杂问题先识别对象、单位和数量关系，再分步计算并把结果放回情境检查。",
+    "origin": "买东西、安排时间和准备材料都需要连续决策。",
+    "mathIdea": "数学建模是现实、图表和算式之间的来回翻译。",
+    "representations": [
+      "情境图",
+      "线段图",
+      "分步算式"
+    ],
+    "thinkingSkills": [
+      "建模",
+      "单位检查",
+      "表达理由"
+    ],
+    "story": "探险队要准备早餐：按人数买面包，加水果，最后平均分到篮子里。",
+    "discovery": "每一个中间结果都应有单位和意义。",
+    "steps": [
+      "先把问题说成自己的话。",
+      "画出或操作一个模型。",
+      "用算式表达并检查结果。"
+    ],
+    "lab": "bar",
+    "labConfig": {
+      "a": 6,
+      "b": 14,
+      "mode": "sum-difference",
+      "total": 20
+    },
+    "prerequisites": [
+      "mixed-operation",
+      "data-table"
+    ],
+    "sourceRefs": [
+      "教材单元思想锚点：上、下册·问题解决与复习关联"
+    ],
+    "gradeBand": "三年级",
+    "learningCycle": "现实问题→数学对象→图形模型→符号语言→规律→迁移",
+    "assessment": [
+      "能说清数量关系",
+      "能选择合适表示",
+      "能检查答案是否合理"
+    ],
+    "questions": [
+      {
+        "id": "mb-1",
+        "prompt": "3盒面包，每盒8片，又买5片水果，一共多少片？",
+        "answer": 29,
+        "unit": "片",
+        "hints": [
+          "先算3×8。",
+          "再加5。"
+        ],
+        "explanation": "3×8+5=29片。",
+        "misconception": "把3、8、5直接相加。",
+        "level": "warmup",
+        "representation": "bar"
+      },
+      {
+        "id": "mb-2",
+        "prompt": "60颗星石用掉18颗，剩下的平均装进3袋，每袋多少颗？",
+        "answer": 14,
+        "unit": "颗",
+        "hints": [
+          "先算剩42颗。",
+          "42÷3。"
+        ],
+        "explanation": "(60−18)÷3=14颗。",
+        "misconception": "先除60再减18。",
+        "level": "core",
+        "representation": "bar"
+      },
+      {
+        "id": "mb-3",
+        "prompt": "一条路长2千米，已经走了600米，还剩多少米？",
+        "answer": 1400,
+        "unit": "米",
+        "hints": [
+          "2千米=2000米。",
+          "2000−600。"
+        ],
+        "explanation": "还剩1400米。",
+        "misconception": "单位不一致仍直接计算。",
+        "level": "transfer",
+        "representation": "scale"
+      },
+      {
+        "id": "mb-4",
+        "prompt": "4天每天收集12、9、15、14片叶子，平均每天多少片？",
+        "answer": 12.5,
+        "unit": "片",
+        "hints": [
+          "总数50。",
+          "50÷4。"
+        ],
+        "explanation": "总数50，平均12.5片。",
+        "misconception": "忘记平均要除以4。",
+        "level": "challenge",
+        "representation": "table"
+      }
+    ]
+  }
+]

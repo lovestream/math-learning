@@ -1,0 +1,18 @@
+Edit this existing Chinese educational poster. Preserve its title, exact Chinese wording, colors, bottom explanation band, and overall style. Correct two things ONLY: (1) make the net an exact rectangular cuboid net; (2) replace the confusing upper-right partly folded drawing with simple clear numbered folding instructions and one arrow leading to the lower-right finished box.
+
+CRITICAL NET GEOMETRY: all net rectangles perfectly axis aligned. Use a common unit 95 pixels for the current 1024x1536 canvas. Put central 上 bounding box x=190 to 475, y=480 to 670 (width285 height190). Put 下 at x=190 to475,y=214 to404 (EXACT SAME width285 height190). Put 后 at x=190 to475,y=404 to480 (width285 height76). Put 前 at x=190 to475,y=670 to746 (EXACT SAME width285 height76). Put 左 at x=114 to190,y=480 to670 (width76 height190). Put 右 at x=475 to551,y=480 to670 (EXACT SAME width76 height190). These SIX rectangles meet flush along their entire shared edges; all four central-strip rectangles MUST align at the very same x=190 and x=475. Blue 上 and 下 are EXACTLY congruent 3:2 rectangles; yellow 前/后 3:0.8; coral 左/右 0.8:2. FIVE dashed interior fold lines; solid outer outline. Face labels large. Place note "按图摆放：中间的大面是“上”" above-left without touching net. Place the line-style legend below net.
+UPPER RIGHT: entirely remove the partly folded 3D illustration. In its place, a clean white area with three stacked short numbered instructions and simple small arrows:
+"1  把“上”当作屋顶"
+"2  前后左右向下折"
+"3  最后把“下”合上"
+Have a curved navy arrow point DOWN to the existing finished cuboid.
+LOWER RIGHT FINISHED BOX: preserve a SINGLE simple correct cuboid with blue top 上, yellow front 前, coral right 右. Make width 3, depth 2, height 0.8 in visual proportion. DELETE all internal dashed lines; opaque faces only, 9 visible outline edges. It may be positioned x640..940,y650..850, with caption below "折回去，变回一个完整的盒子".
+Keep the entire explanation section below y1040 unchanged: 12−5=7, 3组, nonadjacent etc. Do not add any new words or diagrams. This is a precision mathematical correction, not a redesign.
+
+==================
+
+Edit this Chinese educational poster. Keep ALL text, ALL THREE NETS, their exact square coordinates, labels, colors, every other detail completely unchanged. Change ONLY the small incorrect open-box illustration to the RIGHT of the SECOND (② 不可以 ×) net.
+
+REMOVE that entire small open blue box with its two separated yellow/pink flaps. REPLACE within the same area by a clean schematic showing TWO LARGE IDENTICAL SQUARES ALMOST COMPLETELY OVERLAPPING in the plane: a yellow E square behind, a semi-transparent coral F square over it, offset diagonally by only 15 percent of a side so the yellow square remains visible at lower-left. The two squares should each be about 140x140 pixels, no blue box, no third square. E label on the visible lower-left yellow region, F on the coral top square. Use modest dark navy outline. Their large shared area must read as obvious overlap, NOT two side-by-side shapes. Put a small red arrow aimed into the overlapping area and the existing callout "这里重叠了！" below. A small exact caption above the overlapping squares "折好后的位置示意".
+The explanatory text already below this graphic should remain exact: "E、F 都折到同一个位置，叠在一起。" and "另一面却没有盖子，所以不可以。"
+No other changes at all, preserve clean style and all correct nets.

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 840 1188" role="img" aria-label="长方体：找一找每个面">
+<rect width="840" height="1188" fill="white"/>
+<g fill="#152e50" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<text x="60" y="70" font-size="18" text-anchor="start" font-weight="600">KEVIN  /  动手折一折</text>
+<text x="60" y="130" font-size="34" text-anchor="start" font-weight="700">长方体：找一找每个面</text>
+<text x="60" y="174" font-size="22" text-anchor="start" font-weight="400">蓝色、黄色、红色各有一对；每一对的形状和大小相同。</text>
+<rect x="270" y="220" width="300" height="200" fill="#d9eaff"/>
+<text x="420.0" y="332.0" font-size="34" text-anchor="middle" font-weight="600">下</text>
+<rect x="270" y="420" width="300" height="100" fill="#fff0ab"/>
+<text x="420.0" y="482.0" font-size="34" text-anchor="middle" font-weight="600">后</text>
+<rect x="270" y="520" width="300" height="200" fill="#d9eaff"/>
+<text x="420.0" y="632.0" font-size="34" text-anchor="middle" font-weight="600">上</text>
+<rect x="170" y="520" width="100" height="200" fill="#ffd2c7"/>
+<text x="220.0" y="632.0" font-size="34" text-anchor="middle" font-weight="600">左</text>
+<rect x="570" y="520" width="100" height="200" fill="#ffd2c7"/>
+<text x="620.0" y="632.0" font-size="34" text-anchor="middle" font-weight="600">右</text>
+<rect x="270" y="720" width="300" height="100" fill="#fff0ab"/>
+<text x="420.0" y="782.0" font-size="34" text-anchor="middle" font-weight="600">前</text>
+<line x1="270" y1="220" x2="570" y2="220" stroke="#152e50" stroke-width="2"/>
+<line x1="570" y1="220" x2="570" y2="420" stroke="#152e50" stroke-width="2"/>
+<line x1="270" y1="420" x2="570" y2="420" stroke="#152e50" stroke-width="2" stroke-dasharray="9 7"/>
+<line x1="270" y1="220" x2="270" y2="420" stroke="#152e50" stroke-width="2"/>
+<line x1="570" y1="420" x2="570" y2="520" stroke="#152e50" stroke-width="2"/>
+<line x1="270" y1="520" x2="570" y2="520" stroke="#152e50" stroke-width="2" stroke-dasharray="9 7"/>
+<line x1="270" y1="420" x2="270" y2="520" stroke="#152e50" stroke-width="2"/>
+<line x1="570" y1="520" x2="570" y2="720" stroke="#152e50" stroke-width="2" stroke-dasharray="9 7"/>
+<line x1="270" y1="720" x2="570" y2="720" stroke="#152e50" stroke-width="2" stroke-dasharray="9 7"/>
+<line x1="270" y1="520" x2="270" y2="720" stroke="#152e50" stroke-width="2" stroke-dasharray="9 7"/>
+<line x1="170" y1="520" x2="270" y2="520" stroke="#152e50" stroke-width="2"/>
+<line x1="170" y1="720" x2="270" y2="720" stroke="#152e50" stroke-width="2"/>
+<line x1="170" y1="520" x2="170" y2="720" stroke="#152e50" stroke-width="2"/>
+<line x1="570" y1="520" x2="670" y2="520" stroke="#152e50" stroke-width="2"/>
+<line x1="670" y1="520" x2="670" y2="720" stroke="#152e50" stroke-width="2"/>
+<line x1="570" y1="720" x2="670" y2="720" stroke="#152e50" stroke-width="2"/>
+<line x1="570" y1="720" x2="570" y2="820" stroke="#152e50" stroke-width="2"/>
+<line x1="270" y1="820" x2="570" y2="820" stroke="#152e50" stroke-width="2"/>
+<line x1="270" y1="720" x2="270" y2="820" stroke="#152e50" stroke-width="2"/>
+<line x1="60" y1="918" x2="125" y2="918" stroke="#152e50" stroke-width="2"/>
+<text x="142" y="926" font-size="21" text-anchor="start" font-weight="400">实线：沿外轮廓剪下</text>
+<line x1="455" y1="918" x2="520" y2="918" stroke="#152e50" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="536" y="926" font-size="21" text-anchor="start" font-weight="400">虚线：保留并折叠</text>
+<text x="60" y="990" font-size="21" text-anchor="start" font-weight="400">把“上”当作屋顶，四个侧面向下折，最后合上“下”。</text>
+<text x="60" y="1034" font-size="21" text-anchor="start" font-weight="400">先折出形状，需要固定时再用少量透明胶带。</text>
+<text x="60" y="1117" font-size="18" text-anchor="start" font-weight="400">A4 等比例模板 · 打印选择“实际大小 / 100%”</text>
+</g></svg>

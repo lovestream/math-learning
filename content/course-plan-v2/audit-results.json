@@ -1,0 +1,144 @@
+{
+  "stats": [
+    {
+      "grade": 3,
+      "units": 17,
+      "lessons": 60,
+      "practice": 720,
+      "tiers": {
+        "B": 48,
+        "E": 8,
+        "O": 2,
+        "R": 2
+      }
+    },
+    {
+      "grade": 4,
+      "units": 21,
+      "lessons": 71,
+      "practice": 852,
+      "tiers": {
+        "B": 44,
+        "E": 19,
+        "R": 6,
+        "O": 2
+      }
+    },
+    {
+      "grade": 5,
+      "units": 21,
+      "lessons": 75,
+      "practice": 900,
+      "tiers": {
+        "B": 47,
+        "E": 12,
+        "O": 9,
+        "R": 7
+      }
+    },
+    {
+      "grade": 6,
+      "units": 22,
+      "lessons": 75,
+      "practice": 900,
+      "tiers": {
+        "B": 47,
+        "E": 10,
+        "R": 17,
+        "O": 1
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "arithmeticEqualitiesChecked": 681,
+  "arithmeticFlags": [],
+  "duplicatePrompts": [],
+  "arithmeticContextSkips": [
+    {
+      "id": "G3-L02-B03",
+      "field": "explanation",
+      "text": "53÷4=13余1。",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G3-L02-B03",
+      "field": "answer-reason",
+      "text": "8辆。 29÷4=7余1，剩下1人也需要座位。",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G4-X01-B04",
+      "field": "answer-reason",
+      "text": "10包剩50张 95÷9=10余5，恢复10倍",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G4-X01-B04",
+      "field": "answer-reason",
+      "text": "21包，余10张。 85÷4=21余1，原问题的1份单位是10张。",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G5-U03-B02",
+      "field": "example-answer",
+      "text": "5÷6=0.833…≈0.83。",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G5-U03-B04",
+      "field": "example",
+      "text": "4.6÷0.7=6.571…",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G5-L04-B02",
+      "field": "answer-reason",
+      "text": "3又2/5。 17÷5=3余2。",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G5-L04-B05",
+      "field": "answer-reason",
+      "text": "3/2=1又1/2 先同除7，再分整份。",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G5-L04-B08",
+      "field": "explanation",
+      "text": "1/3=0.333…，若保留两位只能写约0.33。",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G5-L06-B01",
+      "field": "example",
+      "text": "13/10=1又3/10",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G5-L06-B01",
+      "field": "example-answer",
+      "text": "13/10=1又3/10。",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G5-L06-B01",
+      "field": "answer-reason",
+      "text": "5/3=1又2/3 10/6约分。",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G6-U03-B04",
+      "field": "answer-reason",
+      "text": "30人。 总人数×3/5=18，所以18÷(3/5)。",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    },
+    {
+      "id": "G6-L09-R01",
+      "field": "answer-reason",
+      "text": "0.67更大。 2/3=0.666…，0.67高于它。",
+      "reason": "余数、带分数、循环小数或符号表达；需人工语境核对"
+    }
+  ],
+  "limitation": "Equality extraction is a screening aid, not a proof of every exercise. Wrong worked statements, units, rounding and context require human review. Complete semantic and classroom validation is not implied."
+}

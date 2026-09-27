@@ -1,0 +1,7 @@
+{
+  "name": "kevin-math-lab", "version": "0.1.0", "private": true, "type": "module",
+  "scripts": {"dev": "node server/index.mjs --dev", "build:catalog": "node scripts/build-grade3-catalog.mjs && node scripts/build-upper-primary-catalog.mjs && node scripts/build-pilot.mjs", "prebuild": "npm run build:catalog", "pretest": "npm run build:catalog", "build": "tsc --noEmit && vite build", "start": "node server/index.mjs", "test": "node --test tests/*.test.mjs", "content:check": "node scripts/check-pilot.mjs", "coverage:report": "node scripts/check-pilot.mjs --report", "test:math": "node --test tests/pilot-math.test.mjs", "test:flows": "node --test tests/pilot-store.test.mjs"},
+  "engines": {"node": ">=24"},
+  "dependencies": {"react": "19.2.8", "react-dom": "19.2.8", "lucide-react": "0.468.0"},
+  "devDependencies": {"@types/react": "^19.2.0", "@types/react-dom": "^19.2.0", "typescript": "^5.9.3", "vite": "^7.3.0"}
+}

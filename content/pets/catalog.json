@@ -1,0 +1,198 @@
+{
+  "pets": {
+    "dongdong": {
+      "name": "咚咚羊",
+      "english": "DongDong",
+      "price": 0,
+      "image": "/assets/pets/eggy/dongdong.png",
+      "note": "爱吃冰淇淋的冬日小太阳",
+      "favorite": "icecream",
+      "color": "#e4efe9",
+      "legacy": false
+    },
+    "honey": {
+      "name": "蜜蜂 DongDong",
+      "english": "HONEY BEE",
+      "price": 160,
+      "image": "/assets/pets/eggy/honey.png",
+      "note": "把每一点发现酿成甜甜的蜜",
+      "favorite": "honeytoast",
+      "color": "#fbebba",
+      "legacy": false
+    },
+    "ducky": {
+      "name": "鸭鸭 DongDong",
+      "english": "LITTLE TRAVELER",
+      "price": 280,
+      "image": "/assets/pets/eggy/ducky.png",
+      "note": "喜欢出发，也喜欢有你一起",
+      "favorite": "cookie",
+      "color": "#d7ebf4",
+      "legacy": false
+    },
+    "bubble": {
+      "name": "泡泡",
+      "english": "FIRST FRIEND",
+      "price": 0,
+      "image": "/assets/pets/bubble.png",
+      "note": "最初的探险向导",
+      "favorite": "berry",
+      "color": "#dcefeb",
+      "legacy": true
+    },
+    "sprout": {
+      "name": "芽芽",
+      "english": "FIRST FRIEND",
+      "price": 150,
+      "image": "/assets/pets/sprout.png",
+      "note": "最初的规律伙伴",
+      "favorite": "berry",
+      "color": "#dcefeb",
+      "legacy": true
+    },
+    "nova": {
+      "name": "星星",
+      "english": "FIRST FRIEND",
+      "price": 350,
+      "image": "/assets/pets/nova.png",
+      "note": "最初的星光伙伴",
+      "favorite": "cookie",
+      "color": "#ece6f5",
+      "legacy": true
+    }
+  },
+  "items": {
+    "berry": {
+      "name": "星莓",
+      "price": 10,
+      "emoji": "🍓",
+      "kind": "food",
+      "growth": 2,
+      "bond": 2,
+      "note": "成长 +2 · 亲密 +2",
+      "image": ""
+    },
+    "cookie": {
+      "name": "几何饼干",
+      "price": 20,
+      "emoji": "🍪",
+      "kind": "food",
+      "growth": 4,
+      "bond": 3,
+      "note": "成长 +4 · 鸭鸭的最爱",
+      "image": ""
+    },
+    "icecream": {
+      "name": "冰淇淋咩",
+      "price": 25,
+      "emoji": "🍦",
+      "kind": "food",
+      "growth": 5,
+      "bond": 3,
+      "note": "成长 +5 · 咚咚羊的最爱",
+      "image": "/assets/pets/eggy/icecream.png"
+    },
+    "honeytoast": {
+      "name": "蜂蜜吐司",
+      "price": 20,
+      "emoji": "🍯",
+      "kind": "food",
+      "growth": 4,
+      "bond": 3,
+      "note": "成长 +4 · 蜜蜂羊的最爱",
+      "image": ""
+    },
+    "scarf": {
+      "name": "探险围巾",
+      "price": 60,
+      "emoji": "🧣",
+      "kind": "accessory",
+      "growth": 0,
+      "bond": 0,
+      "note": "可以穿戴，也可以收起来",
+      "image": ""
+    },
+    "plant": {
+      "name": "数芽盆栽",
+      "price": 40,
+      "emoji": "🌱",
+      "kind": "decoration",
+      "growth": 0,
+      "bond": 0,
+      "note": "在小屋种下一点绿意",
+      "image": ""
+    },
+    "flowers": {
+      "name": "雏菊花束",
+      "price": 45,
+      "emoji": "🌼",
+      "kind": "decoration",
+      "growth": 0,
+      "bond": 0,
+      "note": "窗边开出一簇小太阳",
+      "image": "/assets/pets/eggy/flowers.png"
+    },
+    "cushion": {
+      "name": "云朵软垫",
+      "price": 55,
+      "emoji": "☁️",
+      "kind": "decoration",
+      "growth": 0,
+      "bond": 0,
+      "note": "给伙伴准备一个软软的家",
+      "image": ""
+    },
+    "pinwheel": {
+      "name": "彩虹风车",
+      "price": 80,
+      "emoji": "🎐",
+      "kind": "decoration",
+      "growth": 0,
+      "bond": 0,
+      "note": "点击风车，让微风转起来",
+      "image": ""
+    },
+    "lantern": {
+      "name": "星星灯",
+      "price": 90,
+      "emoji": "⭐",
+      "kind": "decoration",
+      "growth": 0,
+      "bond": 0,
+      "note": "一盏灯，照亮晚间的小屋",
+      "image": ""
+    }
+  },
+  "levels": [
+    {
+      "xp": 0,
+      "name": "初次见面",
+      "gift": null,
+      "detail": "相识，从一声招呼开始"
+    },
+    {
+      "xp": 20,
+      "name": "小小伙伴",
+      "gift": "flowers",
+      "detail": "成长礼：雏菊花束"
+    },
+    {
+      "xp": 60,
+      "name": "默契搭档",
+      "gift": "cushion",
+      "detail": "成长礼：云朵软垫 · 开放晚霞小屋"
+    },
+    {
+      "xp": 150,
+      "name": "闪亮冒险家",
+      "gift": "lantern",
+      "detail": "成长礼：星星灯 · 开放星夜小屋"
+    },
+    {
+      "xp": 300,
+      "name": "数学好搭子",
+      "gift": "pinwheel",
+      "detail": "成长礼：彩虹风车"
+    }
+  ]
+}

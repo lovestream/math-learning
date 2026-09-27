@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {lessons} from '../content/pilot/source.mjs';
+import {methodGuides} from '../content/method-guides.mjs';
+const root=new URL('../',import.meta.url);
+const blueprint=JSON.parse(fs.readFileSync(new URL('content/Kevin_数学课程结构清单.json',root),'utf8'));
+fs.writeFileSync(new URL('content/pilot/lessons.json',root),JSON.stringify(lessons,null,2)+'\n');
+const summary={version:blueprint.designVersion,strands:blueprint.strands,units:blueprint.units.map(({unitId,scope,strand})=>({unitId,scope,strand})),counts:{strands:blueprint.strands.length,units:blueprint.units.length,foundation:blueprint.foundation.length,olympiad:blueprint.olympiad.length,methods:blueprint.thinkingSkills.length,plans:blueprint.coursePlans.length}};
+fs.writeFileSync(new URL('content/pilot/design-index.json',root),JSON.stringify(summary,null,2)+'\n');
+fs.writeFileSync(new URL('content/pilot/methods.json',root),JSON.stringify(blueprint.thinkingSkills.map(m=>({...m,guide:methodGuides[m.thinkingSkillId]??null})),null,2)+'\n');
+console.log(`互动样板：${lessons.length}课，${lessons.reduce((n,l)=>n+Object.values(l.taskSets).flat().length,0)}道任务；全量蓝图仍为 planned。`);
