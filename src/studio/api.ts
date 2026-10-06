@@ -1,5 +1,5 @@
 import type {Progress} from '../types';
-import type {PilotLesson, PilotSession, SetName, StudioData, WidgetState} from './types';
+import type {PilotLesson, PilotSession, SelfCheckEvidence, SetName, StudioData, WidgetState} from './types';
 
 type Envelope<T>={result:T;progress:Progress};
 async function request<T>(url:string, body?:Record<string,unknown>):Promise<T>{
@@ -15,7 +15,8 @@ export const studioApi={
   draft:(sessionId:string,revision:number,index:number,answers:Record<string,Record<string,string>>)=>request<Envelope<PilotSession>>('/api/studio/draft',{sessionId,revision,index,answers}),
   help:(sessionId:string,revision:number,taskId:string,kind:'hint'|'solution'|'article',eventId:string)=>request<Envelope<{text:string;revision:number}>>('/api/studio/help',{sessionId,revision,taskId,kind,eventId}),
   selfCheck:(sessionId:string,revision:number,taskId:string,answer:Record<string,string>,modelStateVersion:string,eventId:string)=>request<Envelope<{status:'selfCheck'|'invalidInput';message:string;revision:number}>>('/api/studio/self-check',{sessionId,revision,taskId,answer,modelStateVersion,eventId}),
-  attempt:(sessionId:string,revision:number,taskId:string,answer:Record<string,string>,eventId:string)=>request<Envelope<{status:'correct'|'incorrect'|'invalidInput';message:string;paid:number;revision:number;completed:boolean;completionPaid:number;solution?:string}>>('/api/studio/attempt',{sessionId,revision,taskId,answer,eventId}),
+  selfCheckEvidence:(sessionId:string,revision:number,taskId:string,evidence:SelfCheckEvidence,eventId:string)=>request<Envelope<{status:'selfCheckComplete';message:string;revision:number}>>('/api/studio/self-check',{sessionId,revision,taskId,phase:'evidence',evidence,eventId}),
+  attempt:(sessionId:string,revision:number,taskId:string,answer:Record<string,string>,eventId:string)=>request<Envelope<{status:'correct'|'incorrect'|'invalidInput'|'pendingReview';message:string;paid:number;revision:number;completed:boolean;completionPaid:number;solution?:string}>>('/api/studio/attempt',{sessionId,revision,taskId,answer,eventId}),
   note:(lessonId:string,id:string,text:string)=>request<Envelope<{id:string;status:'ungraded'}>>('/api/studio/note',{lessonId,id,text})
 };
 export type StudioLesson=PilotLesson;

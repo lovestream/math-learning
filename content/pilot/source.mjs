@@ -4,7 +4,7 @@ import {foundations} from './foundations.mjs';
 import {taskObjective} from './objective-tasks.mjs';
 import {mixedOperationLessons} from './mixed-operations.mjs';
 import {lengthMeasurementLessons} from './length-measurement.mjs';
-import {grade3CompleteLessons} from './grade3-complete.mjs';
+import {grade3CompleteLessons,grade3UnitMetadata} from './grade3-complete.mjs';
 const number=(id,prompt,expected,unit,solution,hint)=>({id,kind:'number',prompt,expected,unit,solution,hint});
 const choice=(id,prompt,options,expected,solution,hint)=>({id,kind:'choice',prompt,options:options.map((text,i)=>({id:String(i+1),text})),expected:String(expected),solution,hint,reasonEvidence:true});
 const expression=(id,prompt,expected,solution,hint)=>({id,kind:'expression',prompt,expected,solution,hint});
@@ -57,4 +57,8 @@ const existingById=new Map(existingLessons.map(item=>[item.lessonId,item]));
 const planIds=new Set(grade3CompleteLessons.map(item=>item.lessonId));
 const compiledGrade3=grade3CompleteLessons.map(item=>existingById.get(item.lessonId)??lesson(item));
 const extraLessons=existingLessons.filter(item=>!planIds.has(item.lessonId));
-export const lessons=[...compiledGrade3,...extraLessons];
+export const lessons=[...compiledGrade3,...extraLessons].map(item=>{
+  const unit=grade3UnitMetadata.find(u=>u.id===item.parentUnitId);
+  return {...item,contentVersion:'2026-10-02.1',editorialRevision:'2026-10-02.1',masteryRuleId:'pilot.evidence.v2',mathScenes:item.mathScenes?.map(scene=>({...scene,contentVersion:'2026-10-02.1'})),textbookUnit:unit,sourceAnchors:unit?[{id:unit.sourceId,purpose:`教材单元：${unit.title}，印刷页${unit.printedPages}`,status:'local-textbook-reference'}]:item.sourceAnchors,
+    taskSets:Object.fromEntries(Object.entries(item.taskSets).map(([set,tasks])=>[set,tasks.map(t=>({...t,responseSpec:t.responseSpec??{type:t.kind},reasonEvidence:undefined}))]))};
+});

@@ -9,6 +9,7 @@ import {ConceptPreview} from './concept/ConceptVisual';
 type Props={lesson:PilotLesson;progress:Progress;setProgress:(p:Progress)=>void;notify:(m:string)=>void;onBack:()=>void;onPractice:()=>void};
 
 export function Checkpoint({block,value,onChange}:{block:ArticleBlock;value:WidgetState;onChange:(s:WidgetState)=>void}){
+  if(block.responseSpec?.type==='self-explanation')return <div className="try-yourself"><p className="checkpoint-purpose">先自己回答，再和参考过程比一比。这次对照用于学习，结果不计入掌握。</p><p className="checkpoint-question">{block.prompt}</p><label className="explanation-answer">我的想法<textarea maxLength={240} value={typeof value.explanation==='string'?value.explanation:''} onChange={e=>onChange({...value,explanation:e.target.value,compared:false})}/></label><button className="studio-primary" disabled={typeof value.explanation!=='string'||value.explanation.trim().length<2} onClick={()=>onChange({...value,compared:true})}>写好了，对照参考过程</button>{value.compared&&<div className="checkpoint-feedback"><b>找找相同的关系，再看看有什么不同</b><p>{block.referenceAnswer}</p><a href={`#lesson-${block.revisit??'try'}`}>回到上面的模型核对</a></div>}</div>;
   const selected=typeof value.choice==='number'?value.choice:null;
   const option=selected===null?undefined:block.options?.[selected];
   return <div className="try-yourself">
@@ -16,7 +17,7 @@ export function Checkpoint({block,value,onChange}:{block:ArticleBlock;value:Widg
     <p className="checkpoint-question">{block.prompt}</p>
     {block.diagram&&<TeachingDiagram kind={block.diagram} reveal={Boolean(option?.correct)}/>}
     <div className="checkpoint-options">{block.options?.map((o,i)=><button key={o.text} aria-pressed={selected===i} className={selected===i?'chosen':''} onClick={()=>onChange({choice:i})}><i aria-hidden="true">{String.fromCharCode(65+i)}</i><span>{o.text}</span></button>)}</div>
-    {option&&<div className={`checkpoint-feedback ${option.correct?'right':'again'}`} aria-live="polite"><b>{option.correct?'对，你把原因也找到了！':'先看图，再想一想。'}</b><p>{option.reason}</p><div><button onClick={()=>onChange({})}>重新选一次</button><a href={`#lesson-${block.revisit??'try'}`}>回到上面的图再看</a></div></div>}
+    {option&&<div className={`checkpoint-feedback ${option.correct?'right':'again'}`} aria-live="polite"><b>{option.correct?'这个判断符合题目条件，接着看看理由。':'先看图，再想一想。'}</b><p>{option.reason}</p><div><button onClick={()=>onChange({})}>重新选一次</button><a href={`#lesson-${block.revisit??'try'}`}>回到上面的图再看</a></div></div>}
   </div>;
 }
 

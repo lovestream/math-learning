@@ -1,26 +1,207 @@
 {
-  "version": "2026-09-13.1",
-  "sourceBlueprint": "Kevin_数学课程结构清单.json",
-  "currentBatch": "B01",
-  "nextBatch": "B02",
-  "currentFocus": "完成B00/B01本机验证，并优先补齐功能核查中的保存、复习与奖励一致性",
-  "quotaPolicy": {"checkAt": ["batchStart", "batchEnd"], "stopOpeningNewLessonsAtFiveHourUsedPercent": 80, "stopOpeningNewLessonsAtWeeklyUsedPercent": 70, "purpose": "项目自定的收尾余量，并非平台规则或用量保证"},
+  "version": "2026-10-02.1",
+  "generated": true,
+  "authority": {
+    "teachingPlan": "content/course-plan-v2/grade-3.json",
+    "runtimeSource": "content/pilot/source.mjs",
+    "runtimeArtifact": "content/pilot/lessons.json",
+    "history": "docs/history/rollout-20260913.json"
+  },
+  "currentFocus": "三年级：数学模型、响应规格、自查证据、迁移与复习；其它年级冻结",
+  "counts": {
+    "lessons": 70,
+    "tasks": 849,
+    "registeredModelLessons": 17,
+    "staticReviewLessons": 46
+  },
   "batches": [
-    {"id":"B00","title":"修订四节样板的文字、操作与答题","status":"verified-local","lessonIds":["numbers.fractions.meaning","geometry.area.perimeter","algebra.substitution.intro","algebra.balance.intro"]},
-    {"id":"B01","title":"数数、加法、减法的现实需要","status":"verified-local","lessonIds":["numbers.quantity.intro","numbers.addition.meaning","numbers.subtraction.meaning"]},
-    {"id":"B02","title":"数位、数线、等号","status":"planned","lessonIds":["numbers.place_value.intro","numbers.number_line.intro","algebra.equality.intro"]},
-    {"id":"B03","title":"乘法、两种除法、互逆检查","status":"planned","lessonIds":["numbers.multiplication.meaning","numbers.division.meaning","numbers.inverse_operations"]},
-    {"id":"B04","title":"运算律、未知数、线段图","status":"planned","lessonIds":["numbers.operation_laws","algebra.unknowns.intro","algebra.bar_models"]},
-    {"id":"B05","title":"消元、余数、搭配计数","status":"planned","lessonIds":["algebra.elimination.intro","number_theory.remainders","counting.ordered_choices"]},
-    {"id":"B06","title":"立体视图、真假条件、数据平均","status":"planned","lessonIds":["geometry.solids.views","logic.truth_constraints","data.mean_and_charts"]},
-    {"id":"B07","title":"测量实践与比例缩放","status":"planned","lessonIds":["practice.measure_and_estimate","algebra.ratio_scaling"]}
+    {
+      "id": "G3-U01",
+      "title": "观察物体",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-U01-B01",
+        "G3-U01-B02",
+        "G3-U01-B03"
+      ]
+    },
+    {
+      "id": "G3-U02",
+      "title": "混合运算",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-U02-B01",
+        "G3-U02-B02",
+        "G3-U02-B03",
+        "G3-U02-B04",
+        "G3-U02-B05",
+        "G3-U02-E01",
+        "G3-U02-E03",
+        "G3-U02-E02",
+        "G3-U02-E04",
+        "G3-U02-E05",
+        "G3-U02-O01",
+        "G3-U02-O02"
+      ]
+    },
+    {
+      "id": "G3-U03",
+      "title": "毫米、分米和千米",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-U03-B01",
+        "G3-U03-B02",
+        "G3-U03-E01",
+        "G3-U03-E02",
+        "G3-U03-O01"
+      ]
+    },
+    {
+      "id": "G3-UP01",
+      "title": "曹冲称象的故事：质量与替换测量",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-UP01-B01",
+        "G3-UP01-B02"
+      ]
+    },
+    {
+      "id": "G3-U04",
+      "title": "多位数乘一位数",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-U04-B01",
+        "G3-U04-B02",
+        "G3-U04-B03",
+        "G3-U04-B04",
+        "G3-U04-B05"
+      ]
+    },
+    {
+      "id": "G3-UP02",
+      "title": "数字编码",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-UP02-B01"
+      ]
+    },
+    {
+      "id": "G3-U05",
+      "title": "线和角",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-U05-B01",
+        "G3-U05-B02",
+        "G3-U05-B03"
+      ]
+    },
+    {
+      "id": "G3-U06",
+      "title": "分数的初步认识",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-U06-B01",
+        "G3-U06-B02",
+        "G3-U06-B03",
+        "G3-U06-B04",
+        "G3-U06-B05",
+        "G3-U06-E01"
+      ]
+    },
+    {
+      "id": "G3-U07",
+      "title": "复习与关联（含搭配问题）",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-U07-R01",
+        "G3-U07-B01"
+      ]
+    },
+    {
+      "id": "G3-L01",
+      "title": "生活中的运动现象",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-L01-B01",
+        "G3-L01-B02"
+      ]
+    },
+    {
+      "id": "G3-L02",
+      "title": "除数是一位数的除法",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-L02-B01",
+        "G3-L02-B02",
+        "G3-L02-B03",
+        "G3-L02-B04",
+        "G3-L02-B05",
+        "G3-L02-B06"
+      ]
+    },
+    {
+      "id": "G3-L03",
+      "title": "长方形和正方形",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-L03-B01",
+        "G3-L03-B02",
+        "G3-L03-E01"
+      ]
+    },
+    {
+      "id": "G3-L04",
+      "title": "图形的面积",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-L04-B01",
+        "G3-L04-B02",
+        "G3-L04-B03"
+      ]
+    },
+    {
+      "id": "G3-L05",
+      "title": "数据的收集与整理",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-L05-B01",
+        "G3-L05-B02"
+      ]
+    },
+    {
+      "id": "G3-LP01",
+      "title": "年、月、日的秘密",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-LP01-B01",
+        "G3-LP01-B02",
+        "G3-LP01-E01"
+      ]
+    },
+    {
+      "id": "G3-L06",
+      "title": "小数的初步认识",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-L06-B01",
+        "G3-L06-B02",
+        "G3-L06-B03"
+      ]
+    },
+    {
+      "id": "G3-L07",
+      "title": "复习与关联（含重叠问题）",
+      "status": "installed-awaiting-teaching-review",
+      "lessonIds": [
+        "G3-L07-R01",
+        "G3-L07-B01"
+      ]
+    }
   ],
-  "fullPrimaryPhases": [
-    {"id":"P1","title":"数与运算","units":["N01","N02","N03","N04","N05","N06","N07","N08","N09"]},
-    {"id":"P2","title":"数量关系与代数","units":["A01","A02","A03","A04","A05","A06","A07","A08","A09"]},
-    {"id":"P3","title":"几何与空间","units":["G01","G02","G03","G04","G05","G06","G07","G08","G09"]},
-    {"id":"P4","title":"数论","units":["T01","T02","T03","T04","T05","T06","T07"]},
-    {"id":"P5","title":"计数与逻辑","units":["C01","C02","C03","C04","C05","C06","C07","L01","L02","L03","L04","L05","L06"]},
-    {"id":"P6","title":"数据、概率与数学实践","units":["S01","S02","S03","S04","S05","S06","P01","P02","P03","P04","P05","P06"]}
-  ]
+  "validation": {
+    "structure": "automated",
+    "registeredMathModels": "automated-fixture-and-property-tests",
+    "allTaskSemantics": "not-fully-reviewed",
+    "kevinTrial": "not-performed-by-agent"
+  }
 }

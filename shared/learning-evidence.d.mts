@@ -1,0 +1,1 @@
+export function lessonEvidence(progress:unknown,lessonId:string,contentVersion?:string):{status:'new'|'explored'|'practiced'|'independent';explored:boolean;practiced:boolean;independent:boolean;transfer:number;retained:number;selfCorrections:number;pending:number};

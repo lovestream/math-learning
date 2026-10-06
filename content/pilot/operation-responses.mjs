@@ -1,0 +1,61 @@
+// Individually authored response demands for the mixed-operation extensions.
+// Stable task IDs connect these to the textbook-led teaching plan.
+const expression=(expected,rules={})=>({kind:'expression',expected,responseSpec:{type:'expression',preserveOperands:true,optionalResult:expected.includes('='),...rules}});
+const fields=(values)=>({kind:'fields',fields:values.map(([key,label,expected,unit])=>({key,label,expected:String(expected),unit})),responseSpec:{type:'fields'}});
+const rotate=items=>{const offset=items.map(x=>x.text).join('').split('').reduce((sum,c)=>sum+c.charCodeAt(0),0)%items.length;return [...items.slice(offset),...items.slice(0,offset)]};
+const claim=(claims,claimIndex,evidence,evidenceIndex)=>({kind:'choice',options:rotate(claims.map((text,i)=>({id:`c${i}`,text}))),expected:`c${claimIndex}`,responseSpec:{type:'claim-evidence',evidenceOptions:rotate(evidence.map((text,i)=>({id:`e${i}`,text}))),expectedEvidence:`e${evidenceIndex}`}});
+const expand={requiredOperators:['*'],forbidBrackets:true};
+const brackets={requireBrackets:true};
+export const operationResponses={
+ 'G3-U02-E03-P01':expression('80-(25+15)',{...brackets,requiredOperators:['-','+']}),
+ 'G3-U02-E03-P02':expression('80-(25-15)',{...brackets,requiredOperators:['-']}),
+ 'G3-U02-E03-P03':fields([['before','原式40＋18－5',53],['after','添括号后40＋(18－5)',53]]),
+ 'G3-U02-E03-P04':fields([['before','原式40－18＋5',27],['after','改写40－(18＋5)',17]]),
+ 'G3-U02-E03-P05':expression('90-(32-12)',brackets),
+ 'G3-U02-E03-P06':claim(['填＋：24−(8＋4)与原式等值','填−：24−(8−4)与原式等值，填＋就不等值','两种填法都与原式等值'],1,['扣去8再增加4，相当于扣去8－4','扣去8再增加4，相当于扣去8＋4','括号只改变书写长度，不影响执行顺序'],0),
+ 'G3-U02-E03-P08':fields([['increase','前者净增加',10],['decrease','后者净减少',10]]),
+ 'G3-U02-E03-P09':expression('100-(37+13)=50',brackets),
+ 'G3-U02-E03-P10':expression('70-(28-8)=50',brackets),
+ 'G3-U02-E03-P11':expression('45-(18-6)=33',brackets),
+ 'G3-U02-E02-P02':fields([['whole','一共分成',24,'等份'],['perShare','每等份',3]]),
+ 'G3-U02-E02-P04':claim(['添成96÷(8×2)','添成96÷(8÷2)','添成(96÷8)÷2'],1,['乘2使96÷8的结果变成两倍，等于把除数8减为原来的一半','乘2使96÷8的结果变成一半，等于把除数8变成两倍','除法和乘法都有任意改变分组的结合律'],0),
+ 'G3-U02-E02-P05':expression('96/4/3=8',{requiredOperators:['/']}),
+ 'G3-U02-E02-P06':fields([['left','(48÷6)÷2',4],['right','48÷(6÷2)',16]]),
+ 'G3-U02-E02-P07':expression('96/(6*4)=4',brackets),
+ 'G3-U02-E02-P08':fields([['before','96÷(8÷2)',24],['after','96÷8÷2',6]]),
+ 'G3-U02-E02-P09':fields([['divisor','合并后的除数',15],['result','120÷15',8]]),
+ 'G3-U02-E02-P10':fields([['before','48÷6÷2',4],['after','48÷(6÷2)',16]]),
+ 'G3-U02-E02-P11':fields([['boxes','144÷6÷4',6,'箱'],['combined','144÷(6×4)',6,'箱']]),
+ 'G3-U02-E02-P12':fields([['product','72÷(3×4)',6],['sum','72÷(3＋5)',9]]),
+ 'G3-U02-E04-P02':claim(['都是18，只改变先合并哪两个数','都是18，同时交换了6和8的位置','第一个18，第二个22'],0,['6、4、8的位置不动，只把先合并的对象从6和4换为4和8','把6放到最后，就会得到原来的两种写法','括号里的数总是应该比括号外的数大'],0),
+ 'G3-U02-E04-P03':fields([['rows','3行5列',15,'点'],['columns','5行3列',15,'点']]),
+ 'G3-U02-E04-P06':fields([['before','20－(8－3)',15],['after','(20－8)－3',9]]),
+ 'G3-U02-E04-P07':claim(['数字顺序未变，两式都为30','数字顺序交换，两式都为30','数字顺序未变，两式分别30和15'],0,['从左到右仍是2、5、3；先合2与5或5与3，改变的是分组','先算右边的乘法就把3移动到了2前面','只要数字顺序相同，任意运算的分组都能改变'],0),
+ 'G3-U02-E04-P09':expression('9+1+5=15',{requiredOperators:['+']}),
+ 'G3-U02-E04-P10':fields([['before','18－6－2',10],['after','18－(6－2)',14]]),
+ 'G3-U02-E04-P11':fields([['boxesFirst','(4×2)×5',40,'颗'],['perBoxFirst','4×(2×5)',40,'颗']]),
+ 'G3-U02-E05-P01':expression('3*4+3*2=18',{...expand,requiredOperators:['*','+']}),
+ 'G3-U02-E05-P02':expression('5*7-5*2=25',{...expand,requiredOperators:['*','-']}),
+ 'G3-U02-E05-P03':fields([['missing','漏掉的数量',15,'个']]),
+ 'G3-U02-E05-P04':expression('4*(8+2)=40',{...brackets,requiredOperators:['*','+']}),
+ 'G3-U02-E05-P05':fields([['subtract','从60减去',6,'颗'],['result','实际糖果总数',54,'颗']]),
+ 'G3-U02-E05-P06':fields([['before','30÷(3＋2)',6],['after','30÷3＋30÷2',25]]),
+ 'G3-U02-E05-P07':claim(['4×7＋2×7能合成(4＋2)×7','4×7＋2×5能合成(4＋2)×7','两式都能合成(4＋2)×7'],0,['前式每份都是7；后式两部分每份分别为7和5','出现相同的4和2，就足以合并为六份','两部分只要都有乘号，每份数量就相同'],0),
+ 'G3-U02-E05-P09':expression('8*5+8*2=56',{...expand,requiredOperators:['*','+']}),
+ 'G3-U02-E05-P10':expression('9*6-9*1=45',{...expand,requiredOperators:['*','-']}),
+ 'G3-U02-E05-P11':expression('4*(5+4)-4*4=20',{...brackets,requiredOperators:['*','-']}),
+ 'G3-U02-O01-P04':claim(['应先35÷5，再减2','应先35－2，再除5','应先35÷2，再减5'],0,['正向最后是乘5，逆向先除5；正向先加2，逆向最后减2','逆向只把运算换成相反运算，先后顺序保持','逆向只把动作顺序倒过来，运算保持'],0),
+ 'G3-U02-O01-P06':fields([['original','原来的数',10],['changed','改成先乘3再减4的结果',26]]),
+ 'G3-U02-O01-P08':fields([['original','原来的数',10],['intended','按减6再乘4算的结果',16]]),
+ 'G3-U02-O01-P10':fields([['subtractFirst','先17－3',14],['original','再除2还原的数',7]]),
+ 'G3-U02-O01-P11':fields([['position','起点的位置',13,'格']]),
+ 'G3-U02-O02-P01':fields([['whole','□代表的每份数量',12],['total','□×2',24]]),
+ 'G3-U02-O02-P03':claim(['□应遮住7＋5整个表达式','□只遮住5，也表示7＋5','□只遮住7，也表示7＋5'],0,['名字必须对应其约定的完整对象，7和5都属于这个整体','只要遮住了一个数字，就代表原算式中全部数字','方框只代表被遮住的数，因此两部分永远不能一起命名'],0),
+ 'G3-U02-O02-P04':claim(['可以替换，两卡都代表10','不可以替换，卡上的算式不同','可以替换，因为都只有两个数'],0,['6＋4和15－5表示相等的完整数量，外面的乘3保留','符号长得不同，就必须代表不同数量','两个算式用了同样多的数字，就表示相同数量'],0),
+ 'G3-U02-O02-P05':fields([['perPack','每包张数',10,'张'],['total','五包总张数',50,'张']]),
+ 'G3-U02-O02-P06':fields([['a','甲卡8＋2',10],['b','乙卡8×2',16]]),
+ 'G3-U02-O02-P07':fields([['net','小包：净支出',5,'元'],['remaining','余额',15,'元']]),
+ 'G3-U02-O02-P08':claim(['下一题要重新看□的定义','任何题里的□都表示12','下道题的□必定表示更大的数'],0,['名字只在当前约定范围里代表一个量；新问题可以重新定义','同一个图形在所有题中都具有固定数值','题目顺序越靠后，符号代表的数越大'],0),
+ 'G3-U02-O02-P10':fields([['whole','(9－3)×2',12],['partial','9－3×2',3]]),
+ 'G3-U02-O02-P11':fields([['whole','□代表总苹果数',30,'个'],['perBag','每袋苹果数',6,'个']])
+};

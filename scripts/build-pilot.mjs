@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import {lessons} from '../content/pilot/source.mjs';
+import {grade3UnitMetadata} from '../content/pilot/grade3-complete.mjs';
 import {methodGuides} from '../content/method-guides.mjs';
 const root=new URL('../',import.meta.url);
 const blueprint=JSON.parse(fs.readFileSync(new URL('content/Kevin_数学课程结构清单.json',root),'utf8'));
@@ -8,3 +9,6 @@ const summary={version:blueprint.designVersion,strands:blueprint.strands,units:b
 fs.writeFileSync(new URL('content/pilot/design-index.json',root),JSON.stringify(summary,null,2)+'\n');
 fs.writeFileSync(new URL('content/pilot/methods.json',root),JSON.stringify(blueprint.thinkingSkills.map(m=>({...m,guide:methodGuides[m.thinkingSkillId]??null})),null,2)+'\n');
 console.log(`互动样板：${lessons.length}课，${lessons.reduce((n,l)=>n+Object.values(l.taskSets).flat().length,0)}道任务；全量蓝图仍为 planned。`);
+
+const rollout={version:'2026-10-02.1',generated:true,authority:{teachingPlan:'content/course-plan-v2/grade-3.json',runtimeSource:'content/pilot/source.mjs',runtimeArtifact:'content/pilot/lessons.json',history:'docs/history/rollout-20260913.json'},currentFocus:'三年级：数学模型、响应规格、自查证据、迁移与复习；其它年级冻结',counts:{lessons:lessons.length,tasks:lessons.reduce((n,l)=>n+Object.values(l.taskSets).flat().length,0),registeredModelLessons:lessons.filter(l=>l.mathScenes?.length||l.lengthScenes?.length||l.conceptScenes?.some(s=>s.modelSpec)).length,staticReviewLessons:lessons.filter(l=>l.conceptScenes?.some(s=>s.modelStatus==='static-review')).length},batches:grade3UnitMetadata.map(unit=>({id:unit.id,title:unit.title,status:'installed-awaiting-teaching-review',lessonIds:lessons.filter(l=>l.parentUnitId===unit.id).map(l=>l.lessonId)})),validation:{structure:'automated',registeredMathModels:'automated-fixture-and-property-tests',allTaskSemantics:'not-fully-reviewed',kevinTrial:'not-performed-by-agent'}};
+fs.writeFileSync(new URL('content/rollout.json',root),JSON.stringify(rollout,null,2)+'\n');

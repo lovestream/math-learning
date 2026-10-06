@@ -2,8 +2,8 @@ import type {CSSProperties,KeyboardEvent} from 'react';
 import FoundationWidget,{FoundationDiagram} from './FoundationWidgets';
 import LengthWorkbench from './LengthWorkbench';
 import ConceptWorkbench from './concept/ConceptWorkbench';
-import {formatFraction,rational,gridMeasure,rectangleCells,evaluateExpressionAST,expressionASTText} from '../../shared/pilot-math.mjs';
-import type {ConceptScene,DiagramKind,ExpressionAST,LengthScene,MathScene,WidgetKind,WidgetState} from './types';
+import {formatFraction,rational,gridMeasure,rectangleCells,evaluateExpressionAST,expressionASTText,firstOperationOptions,parseNumber} from '../../shared/pilot-math.mjs';
+import type {ConceptScene,DiagramKind,ExpressionAST,LengthScene,MathScene,WidgetFields,WidgetKind,WidgetState} from './types';
 
 type Segment=[number,number,number,number];
 const outline=(rows:number,cols:number):Segment[]=>[
@@ -60,7 +60,7 @@ export function TeachingDiagram({kind,reveal=false}:{kind:DiagramKind;reveal?:bo
 }
 
 function AreaWidget({value,onChange}:{value:WidgetState;onChange:(s:WidgetState)=>void}){
-  const rows=[1,2,3].includes(value.rows)?value.rows:3,cols=12/rows;
+  const rows=[1,2,3].includes(Number(value.rows))?Number(value.rows):3,cols=12/rows;
   const marked:number[]=Array.isArray(value.marked)?value.marked:[],walk=Number(value.walk)||0;
   const size=gridMeasure(rectangleCells(rows,cols));
   return <div className="hands-on area-lab">
@@ -75,7 +75,7 @@ function AreaWidget({value,onChange}:{value:WidgetState;onChange:(s:WidgetState)
 }
 
 function FractionWidget({value,onChange}:{value:WidgetState;onChange:(s:WidgetState)=>void}){
-  const parts=[3,4,6,8].includes(value.parts)?value.parts:6,take=Math.max(0,Math.min(parts,value.take??2)),whole=value.whole===2?2:1;
+  const parts=[3,4,6,8].includes(Number(value.parts))?Number(value.parts):6,take=Math.max(0,Math.min(parts,value.take??2)),whole=value.whole===2?2:1;
   const reduced=formatFraction(rational(take,parts)),length=formatFraction(rational(whole*take,parts));
   const change=(s:WidgetState)=>onChange({parts,take,whole,...s});
   return <div className="hands-on fraction-lab">
@@ -116,19 +116,28 @@ function operationNodes(node:ExpressionAST,out:ExpressionAST[]=[]){if(node.type=
 function MixedOperationsWidget({value,onChange,scenes=[]}:{value:WidgetState;onChange:(s:WidgetState)=>void;scenes?:MathScene[]}){
   const scene=scenes.find(s=>s.sceneId===value.sceneId)??scenes[0];
   if(!scene)return <div className="hands-on mixed-operations-lab"><p>这节课的场景正在整理。</p></div>;
-  const operations=operationNodes(scene.expressionAST),step=Math.min(Number(value.step)||0,operations.length);
-  const first=operations[0],firstText=first&&`${expressionASTText(first)}＝${astValue(first)}`;
-  const reset=(sceneId=scene.sceneId)=>onChange({sceneId,step:0,prediction:'',error:'',modelStateVersion:`${scene.contentVersion}:${sceneId}`});
-  const advance=()=>{if(step>=operations.length){reset();return}if(step===0&&value.prediction!=='correct'){onChange({...value,error:value.prediction==='unit-error'?'这两个数的单位不同，原式保持不动。请改选能先得到“多少支”的那一步。':'请先选出你认为应该先算的那一小步。'});return}onChange({...value,step:step+1,error:''})};
-  const onKey=(e:KeyboardEvent<HTMLDivElement>)=>{if(e.key==='Enter'){e.preventDefault();advance()}else if(e.key==='Backspace'){e.preventDefault();onChange({...value,step:Math.max(0,step-1),error:''})}};
+  const operations=operationNodes(scene.expressionAST),step=Math.max(0,Math.min(Math.trunc(Number(value.step))||0,operations.length));
+  const first=operations[0],choices=firstOperationOptions(scene.expressionAST,scene.sceneId);
+  const commit=(patch:WidgetFields)=>onChange({...value,...patch,stateKind:'mixed-operations',sceneId:scene.sceneId,modelStateVersion:`${scene.contentVersion}:${scene.sceneId}`,step:patch.step??step});
+  const reset=(sceneId=scene.sceneId)=>onChange({stateKind:'mixed-operations',sceneId,step:0,prediction:'',intermediate:'',error:'',modelStateVersion:`${scene.contentVersion}:${sceneId}`});
+  const advance=()=>{
+    if(step>=operations.length){reset();return}
+    if(step===0&&!choices.find(option=>option.id===value.prediction)?.correct){commit({error:'先确定这一个小步骤。读清单位、括号与先后关系，保留其余数字和符号。'});return}
+    const expected=astValue(operations[step]);
+    let agrees=false;try{agrees=formatFraction(parseNumber(value.intermediate??''))===expected}catch{/* Keep incomplete input in the experiment. */}
+    if(!agrees){commit({error:'这一步的中间结果还需要核对；先只计算当前这一小块。'});return}
+    commit({step:step+1,intermediate:'',error:'',actions:[...(Array.isArray(value.actions)?value.actions:[]).slice(-29),{action:'evaluate-operation',before:expressionASTText(operations[step]),after:expected,valid:true}]});
+  };
+  const onKey=(e:KeyboardEvent<HTMLDivElement>)=>{if(e.key==='Enter'&&!(e.target instanceof HTMLButtonElement)){e.preventDefault();advance()}else if(e.key==='Backspace'&&!(e.target instanceof HTMLInputElement)&&!(e.target instanceof HTMLTextAreaElement)){e.preventDefault();commit({step:Math.max(0,step-1),error:''})}};
   return <div className="hands-on mixed-operations-lab" tabIndex={0} onKeyDown={onKey}>
     {scenes.length>1&&<div className="scene-switcher" aria-label="切换完整故事">{scenes.map((s,i)=><button key={s.sceneId} aria-pressed={s.sceneId===scene.sceneId} onClick={()=>reset(s.sceneId)}>场景 {String.fromCharCode(65+i)}</button>)}</div>}
     <div className="mixed-story"><small>{scene.taskMode==='A_order_and_model'?'A · 顺序与模型':scene.taskMode==='B_equivalent_rewrite'?'B · 等值改写':'C · 运算律'}</small><h3>{scene.story.text}</h3><div className="quantity-cards">{scene.story.quantities.map(item=><span key={item.id}><b>{item.value}</b><em>{item.unit}</em><small>{item.role}</small></span>)}</div></div>
     <div className="operation-track" aria-label={`算式 ${expressionASTText(scene.expressionAST)}`}><p>要解决：{scene.target.prompt}</p><strong>{expressionASTText(scene.expressionAST)}</strong><div>{operations.map((item,i)=><span key={i} className={i<step?'done':i===step?'current':''}>{i<step?'✓':i+1}<small>{i<step?`${expressionASTText(item)}＝${astValue(item)}`:i===step?'下一小步':'还没轮到'}</small></span>)}</div></div>
-    {step===0&&<div className="prediction-panel"><b>先预测：第一步算什么？</b><button aria-pressed={value.prediction==='correct'} onClick={()=>onChange({...value,prediction:'correct',error:''})}>{firstText}</button>{scene.sceneId==='G3-U02-B02-A'&&<button aria-pressed={value.prediction==='unit-error'} onClick={()=>onChange({...value,prediction:'unit-error',error:'现在不能算4＋3：4的单位是“支”，3的单位是“盒”。先把3盒换成铅笔的支数。'})}>4＋3＝7</button>}</div>}
+    {step===0&&<div className="prediction-panel"><b>先预测：第一步算哪一小块？</b>{choices.map(option=><button key={option.id} aria-pressed={value.prediction===option.id} onClick={()=>commit({prediction:option.id,error:''})}>{option.text}</button>)}</div>}
+    {step<operations.length&&<label className="lab-prediction">这一小步得到多少？<input value={value.intermediate??''} maxLength={40} onChange={e=>commit({intermediate:e.target.value,error:''})} placeholder="自己算出中间结果，再操作核对"/></label>}
     {value.error&&<p className="operation-error" role="alert"><b>先停一下：</b>{value.error}</p>}
     <div className="operation-stage"><div className={`model-board model-${scene.model.type}`}>{scene.story.quantities.map(item=><i key={item.id}><b>{item.value}</b><span>{item.unit}</span><small>{item.role}</small></i>)}</div><div className="operation-readout" aria-live="polite">{step===0?<p>图和算式都还保持原样。选好第一步再操作。</p>:step<operations.length?<><b>刚算出：{expressionASTText(operations[step-1])}＝{astValue(operations[step-1])}</b><p>这是中间量，还要看看整条算式有没有未完成的运算。</p></>:<><b>整条算式完成：{scene.expected.value}{scene.expected.unit}</b><p>{scene.expected.explanation}</p></>}</div></div>
-    <div className="experiment-actions"><button className="studio-primary" onClick={advance}>{step>=operations.length?'再讲一遍':step===0?'按预测算第一步':'算下一步'}</button><button disabled={step===0} onClick={()=>onChange({...value,step:Math.max(0,step-1),error:''})}>撤销一步</button><button onClick={()=>reset()}>恢复初始状态</button></div>
+    <div className="experiment-actions"><button className="studio-primary" onClick={advance}>{step>=operations.length?'再讲一遍':step===0?'按预测算第一步':'算下一步'}</button><button disabled={step===0} onClick={()=>commit({step:Math.max(0,step-1),error:''})}>撤销一步</button><button onClick={()=>reset()}>恢复初始状态</button></div>
     <p className="keyboard-tip">键盘也能操作：Enter 算下一步，Backspace 撤销。</p>
   </div>;
 }

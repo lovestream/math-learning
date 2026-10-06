@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {evaluateExpressionAST,formatFraction} from '../shared/pilot-math.mjs';
+import {evaluateExpressionAST,formatFraction,validateTask,equivalent} from '../shared/pilot-math.mjs';
+import {measureOperationModel} from '../shared/operation-models.mjs';
 import {boardMeasure,chainMeasure,intervalMeasure,rulerReading,validateLengthScene} from '../shared/length-model.mjs';
 
 const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -29,15 +30,21 @@ for(const lesson of lessons){
   for(const scene of lesson.lengthScenes??[])try{validateLengthScene(scene)}catch(error){fail(error.message)}
   for(const scene of lesson.conceptScenes??[]){
     if(!scene.sceneId||!allowedConceptFamilies.has(scene.family)||!scene.title||!scene.prompt||!scene.initialState||!scene.learnerAction||!scene.observableChange||!scene.expectedExplanation)fail(`${lesson.lessonId} 的概念实验场景不完整`);
+    if(scene.modelSpec)try{measureOperationModel(scene.modelSpec)}catch(error){fail(`${scene.sceneId}: ${error.message}`)}
     if(!Array.isArray(scene.steps)||scene.steps.length<3||scene.steps.some(step=>!step.label||!step.explanation))fail(`${scene.sceneId} 至少需要3个可解释的操作步骤`);
   }
   if(!Array.isArray(lesson.articleBlocks)||lesson.articleBlocks.length<8)fail(`${lesson.lessonId} 的讲解段少于8段`);
   for(const block of lesson.articleBlocks){
+    for(const step of (block.examples??[]).flatMap(example=>example.steps))for(const equation of step.math.split('；')){
+      if(!/^[\d＋+－−×÷*/.（）()＝=\s]+$/.test(equation)||!/[=＝]/.test(equation))continue;
+      const sides=equation.replaceAll('＝','=').split('=');
+      for(let i=1;i<sides.length;i++)if(!equivalent(sides[i-1],sides[i]))fail(`${lesson.lessonId} 例题等号不成立：${equation}`);
+    }
     if(!allowedBlocks.has(block.type))fail(`${lesson.lessonId} 使用了未登记的讲解类型 ${block.type}`);
     if(block.diagram&&!allowedDiagrams.has(block.diagram))fail(`${lesson.lessonId} 缺少图解组件 ${block.diagram}`);
     if(block.type==='leadQuestion'&&((!block.diagram&&!lesson.mathScenes?.length&&!lesson.lengthScenes?.length&&!lesson.conceptScenes?.length)||!block.paragraphs?.length))fail(`${lesson.lessonId} 开场要同时有具体场景和图`);
-    if(block.type==='checkpoint'){
-      if(!block.prompt||(!block.diagram&&!lesson.mathScenes?.length&&!lesson.lengthScenes?.length&&!lesson.conceptScenes?.length)||!block.options?.length)fail(`${lesson.lessonId} 自己试缺少题干、图或选项`);
+    if(block.type==='checkpoint'&&block.responseSpec?.type!=='self-explanation'){
+      if(!block.prompt||(!block.diagram&&!lesson.mathScenes?.length&&!lesson.lengthScenes?.length&&!lesson.conceptScenes?.length)||!block.options?.length)fail(`${lesson.lessonId} 课内核对缺少题干、图或选项`);
       if(block.options.filter(o=>o.correct).length!==1||block.options.some(o=>!o.reason))fail(`${lesson.lessonId} 每个选项都要有解释，且只有一个正确选项`);
       if(!lesson.articleBlocks.some(b=>b.blockId===block.revisit))fail(`${lesson.lessonId} 回看入口无效`);
     }
@@ -63,11 +70,18 @@ for(const lesson of lessons){
         if(d.progressMm!==undefined&&(!Number.isFinite(d.progressMm)||d.progressMm<0||d.progressMm>total))throw new Error('已走路程超出全程');
       }else throw new Error('未注册的测量题图');
     }catch(error){fail(`${task.id} 的题图无效：${error.message}`)}
+    if(!task.responseSpec)fail(`${task.id} 缺少显式响应规格`);
+    if(task.kind==='choice'){
+      if(!task.options?.some(o=>o.id===task.expected)||new Set(task.options.map(o=>o.text)).size!==task.options.length)fail(`${task.id} 选项或答案键不完整`);
+      if(task.options.some(o=>/这样判断不对|按这种想法判断|正确值|错误写法/.test(o.text)))fail(`${task.id} 选项含答案提示标签`);
+    }
+    if(task.kind==='explanation'&&(task.responseSpec.type!=='self-explanation'||task.reasonEvidence))fail(`${task.id} 解释题不能冒充自动判分或理由奖励`);
+    if(['number','expression'].includes(task.kind)&&validateTask(task,{value:task.expected}).status!=='correct')fail(`${task.id} 标准答案不能通过其响应检查`);
     if(task.diagram?.type==='concept'){
       if(!allowedConceptFamilies.has(task.diagram.family)||!task.diagram.variant||!Array.isArray(task.diagram.values)||task.diagram.values.some(n=>!Number.isFinite(n)))fail(`${task.id} 的概念题图无效`);
     }
   }
 }
-const report=`# 互动样板内容检查报告\n\n- 生成版本：${lessons[0]?.contentVersion??'unknown'}\n- 当前样板：${lessons.length} 节\n- 当前任务：${lessons.reduce((n,l)=>n+Object.values(l.taskSets).flat().length,0)} 道\n- 讲解段：每节至少 8 段，含真实问题、实验、例题、比较、小检查与方法桥\n- 全量蓝图：${blueprint.units.length} 个单元、${blueprint.counts.foundation} 个基础覆盖项、${blueprint.counts.olympiad} 个奥数覆盖项、${blueprint.counts.methods} 个思维方法\n\n当前文件是可体验的 draft 样板，不代表全量蓝图已经发布。\n`;
+const report=`# 互动样板内容检查报告\n\n- 生成版本：${lessons[0]?.contentVersion??'unknown'}\n- 当前样板：${lessons.length} 节\n- 当前任务：${lessons.reduce((n,l)=>n+Object.values(l.taskSets).flat().length,0)} 道\n- 讲解段：每节至少 8 段，含真实问题、实验、例题、比较、小检查与方法桥\n- 全量蓝图：${blueprint.units.length} 个单元、${blueprint.counts.foundation} 个基础覆盖项、${blueprint.counts.olympiad} 个奥数覆盖项、${blueprint.counts.methods} 个思维方法\n\n结构校验和数学模型求值通过，不表示全体任务已逐题语义审计，也不表示Kevin已真实试学。\n`;
 if(process.argv.includes('--report'))fs.writeFileSync(path.join(root,'docs/pilot-content-report.md'),report);
 console.log(`样板内容通过：${lessons.length} 课，${lessons.reduce((n,l)=>n+Object.values(l.taskSets).flat().length,0)} 道任务；全量蓝图 ${blueprint.units.length} 单元仍标记为 planned。`);
