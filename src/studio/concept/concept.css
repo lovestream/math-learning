@@ -19,3 +19,15 @@
 @media(max-width:1100px){.concept-layout{grid-template-columns:1fr}.concept-notebook{border-left:0;border-top:1px solid #cbd8cf}.concept-step-list{grid-template-columns:1fr 1fr 1fr}}
 @media(max-width:720px){.concept-lab{border-radius:12px}.concept-lab-heading{padding:17px}.concept-lab-heading>span{display:none}.concept-mission{padding:12px 15px}.concept-stage-panel{padding:13px 10px 17px}.concept-initial{grid-template-columns:1fr}.concept-svg{min-width:0}.concept-step-list{grid-template-columns:1fr}.concept-step-list li small{font-size:11px}.concept-notebook{padding:17px}.concept-preview .concept-svg,.concept-question .concept-svg{min-width:0;max-height:none}.concept-question{margin-inline:0}.concept-question figcaption{padding:9px 11px}.concept-svg text{font-size:15px}.concept-svg .visual-result{font-size:21px}}
 @media(prefers-reduced-motion:reduce){.concept-lab *{animation:none!important;transition:none!important}}
+
+.operation-object-view{display:block;width:100%;height:auto;max-height:390px;margin:18px 0;background:radial-gradient(ellipse at top,#fff,#edf3ec);border:1px solid #b9cdc1;border-radius:15px;overflow:visible}
+.operation-object-view text{font:600 15px "PingFang SC","Microsoft YaHei",sans-serif;fill:#304e55}.operation-object-view .operation-object-total{font-size:27px;font-weight:800}.operation-object-view text[fill="#fff"]{fill:white}
+.array-cut-handle{cursor:col-resize;touch-action:none}.array-object-view{touch-action:none}
+.operation-visual-arrival{animation:operation-visual-arrival .45s ease-out both}@keyframes operation-visual-arrival{from{opacity:0;translate:0 -12px}to{opacity:1;translate:0 0}}
+.sharing-object-view{padding:18px;background:radial-gradient(ellipse at top,#fff,#edf3ec);border:1px solid #b9cdc1;border-radius:15px;margin:18px 0}.card-source{display:flex;justify-content:center;align-items:center;gap:12px;color:#304e55}.card-source>span{color:#469684;font-size:30px;transition:opacity .5s}.card-source .is-distributed{opacity:.15}.sharing-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}.sharing-groups>div{border:1px solid #b9cdc1;border-radius:12px;background:#fff;padding:10px;text-align:center;font-size:13px}.sharing-groups>div>div{display:flex;justify-content:center}.sharing-person{flex:1;max-width:65px}.sharing-person svg{width:100%;display:block}.sharing-person text{font:700 13px sans-serif;fill:#304e55}
+@media(max-width:600px){.sharing-groups{grid-template-columns:repeat(2,minmax(0,1fr))}.operation-object-view{margin:12px 0}}
+@media(prefers-reduced-motion:reduce){.operation-visual-arrival{animation:none}.sharing-object-view *{transition:none}}
+
+.scene-object-present,.scene-object-removed{transition:opacity .45s,filter .45s}.scene-object-removed{opacity:.16;filter:grayscale(1)}
+.operation-stage>.operation-object-view{margin:0;min-width:0}.operation-stage{align-items:center}
+@media(prefers-reduced-motion:reduce){.scene-object-present,.scene-object-removed{transition:none}}

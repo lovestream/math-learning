@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": [
+    "fold-continuous-pause-rotate",
+    "direct-face-picking",
+    "flat-view-fold-recovery",
+    "reduced-motion",
+    "continuous-linked-balance",
+    "continuous-loaded-hull",
+    "direct-cut-transpose-conservation"
+  ],
+  "errors": []
+}

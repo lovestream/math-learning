@@ -6,4 +6,5 @@ export type OperationModel=
  |{type:'reverse';addend:number;multiplier:number;target:number}
  |{type:'substitution';left:number;right:number;copies:number};
 export const operationModels:Record<string,OperationModel>;
+export function arrayTurnPoint(col:number,row:number,cols:number,rows:number,turn:number):{x:number;y:number};
 export function measureOperationModel(model:OperationModel,state?:{rows?:number;cols?:number;cut?:number}):Record<string,number|string>;

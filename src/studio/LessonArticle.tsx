@@ -51,6 +51,7 @@ export default function LessonArticle({lesson,progress,setProgress,notify,onBack
   const first=lesson.articleBlocks[0];
   const measurement=lesson.widget==='lengthWorkbench';
   const concept=lesson.widget==='conceptLab';
+  const staticCard=concept&&lesson.conceptScenes?.every(scene=>!scene.handsOnSpec&&!scene.modelSpec);
   const childMode=!!lesson.childClassroom&&!widgets.classroom?.parentMode;
   const trackName=lesson.track==='foundation'?'课本主线':lesson.track==='enhancement'?'本章提升':'思维挑战';
   return <div className={`studio-lesson child-lesson lesson-${lesson.widget}`}>
@@ -60,7 +61,7 @@ export default function LessonArticle({lesson,progress,setProgress,notify,onBack
       {lesson.childClassroom&&<div className="lesson-mode-toggle" role="group" aria-label="课堂阅读方式"><button aria-pressed={childMode} onClick={()=>change('classroom',{...widgets.classroom,parentMode:false})}>Kevin 短课堂</button><button aria-pressed={!childMode} onClick={()=>change('classroom',{...widgets.classroom,parentMode:true})}>家长完整教案</button></div>}
       {childMode?<ChildClassroom lesson={lesson} widgets={widgets} change={change} onPractice={()=>void leave(onPractice)}/>:<>
       {!measurement&&<section className="story-opening" id={`lesson-${first.blockId}`}><div><h2>{first.title}</h2>{first.paragraphs?.map(p=><p key={p}>{p}</p>)}{first.text&&<p>{first.text}</p>}</div>{first.diagram&&<TeachingDiagram kind={first.diagram}/>} {concept&&lesson.conceptScenes?.[0]&&<ConceptPreview scene={lesson.conceptScenes[0]}/>}</section>}
-      <nav className="lesson-jumps" aria-label="跳到本课内容"><a href="#lesson-try">动手试试</a><a href="#lesson-meaning">{measurement?'弄懂为什么':'认识数学名字'}</a><a href="#lesson-check">轮到你来试</a><a href="#lesson-retell">讲给家人听</a></nav>
+      <nav className="lesson-jumps" aria-label="跳到本课内容"><a href="#lesson-try">{staticCard?'画图想一想':'动手试试'}</a><a href="#lesson-meaning">{measurement?'弄懂为什么':'认识数学名字'}</a><a href="#lesson-check">轮到你来试</a><a href="#lesson-retell">讲给家人听</a></nav>
       {lesson.articleBlocks.slice(1).map(block=><section id={`lesson-${block.blockId}`} key={block.blockId} className={`article-block block-${block.type}`}><div className="block-content">
         <h2>{block.title}</h2>{block.text&&<p className="block-text">{block.text}</p>}{block.paragraphs?.map(p=><p key={p} className="block-text">{p}</p>)}
         {block.diagram&&block.type!=='checkpoint'&&<TeachingDiagram kind={block.diagram}/>}

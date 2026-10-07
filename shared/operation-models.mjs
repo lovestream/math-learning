@@ -8,6 +8,12 @@ export const operationModels={
   'G3-U02-O02':{type:'substitution',left:12,right:8,copies:3}
 };
 const integer=(v,min,max,label)=>{if(!Number.isSafeInteger(v)||v<min||v>max)throw Error(`${label}超出模型允许的范围。`);return v;};
+// Turn the SAME array rigidly clockwise. Interpolating x/y swaps would collapse
+// all beads onto a diagonal halfway through the animation.
+export function arrayTurnPoint(col,row,cols,rows,turn){
+ const angle=turn*Math.PI/2,x=col-(cols-1)/2,y=row-(rows-1)/2;
+ return {x:x*Math.cos(angle)-y*Math.sin(angle),y:x*Math.sin(angle)+y*Math.cos(angle)};
+}
 export function measureOperationModel(model,state={}){
   if(model.type==='split-array'||model.type==='laws'){
     const rows=integer(state.rows??model.rows,1,9,'行数'),cols=integer(state.cols??model.cols,2,12,'列数'),cut=integer(state.cut??model.cut??1,1,cols-1,'切割线');

@@ -2,6 +2,7 @@ import type {CSSProperties,KeyboardEvent} from 'react';
 import FoundationWidget,{FoundationDiagram} from './FoundationWidgets';
 import LengthWorkbench from './LengthWorkbench';
 import ConceptWorkbench from './concept/ConceptWorkbench';
+import MathSceneVisual from './MathSceneVisual';
 import {formatFraction,rational,gridMeasure,rectangleCells,evaluateExpressionAST,expressionASTText,firstOperationOptions,parseNumber} from '../../shared/pilot-math.mjs';
 import type {ConceptScene,DiagramKind,ExpressionAST,LengthScene,MathScene,WidgetFields,WidgetKind,WidgetState} from './types';
 
@@ -136,7 +137,7 @@ function MixedOperationsWidget({value,onChange,scenes=[]}:{value:WidgetState;onC
     {step===0&&<div className="prediction-panel"><b>先预测：第一步算哪一小块？</b>{choices.map(option=><button key={option.id} aria-pressed={value.prediction===option.id} onClick={()=>commit({prediction:option.id,error:''})}>{option.text}</button>)}</div>}
     {step<operations.length&&<label className="lab-prediction">这一小步得到多少？<input value={value.intermediate??''} maxLength={40} onChange={e=>commit({intermediate:e.target.value,error:''})} placeholder="自己算出中间结果，再操作核对"/></label>}
     {value.error&&<p className="operation-error" role="alert"><b>先停一下：</b>{value.error}</p>}
-    <div className="operation-stage"><div className={`model-board model-${scene.model.type}`}>{scene.story.quantities.map(item=><i key={item.id}><b>{item.value}</b><span>{item.unit}</span><small>{item.role}</small></i>)}</div><div className="operation-readout" aria-live="polite">{step===0?<p>图和算式都还保持原样。选好第一步再操作。</p>:step<operations.length?<><b>刚算出：{expressionASTText(operations[step-1])}＝{astValue(operations[step-1])}</b><p>这是中间量，还要看看整条算式有没有未完成的运算。</p></>:<><b>整条算式完成：{scene.expected.value}{scene.expected.unit}</b><p>{scene.expected.explanation}</p></>}</div></div>
+    <div className="operation-stage"><MathSceneVisual scene={scene} step={step}/><div className="operation-readout" aria-live="polite">{step===0?<p>图和算式都还保持原样。选好第一步再操作。</p>:step<operations.length?<><b>刚算出：{expressionASTText(operations[step-1])}＝{astValue(operations[step-1])}</b><p>这是中间量，还要看看整条算式有没有未完成的运算。</p></>:<><b>整条算式完成：{scene.expected.value}{scene.expected.unit}</b><p>{scene.expected.explanation}</p></>}</div></div>
     <div className="experiment-actions"><button className="studio-primary" onClick={advance}>{step>=operations.length?'再讲一遍':step===0?'按预测算第一步':'算下一步'}</button><button disabled={step===0} onClick={()=>commit({step:Math.max(0,step-1),error:''})}>撤销一步</button><button onClick={()=>reset()}>恢复初始状态</button></div>
     <p className="keyboard-tip">键盘也能操作：Enter 算下一步，Backspace 撤销。</p>
   </div>;

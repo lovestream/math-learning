@@ -13,13 +13,15 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--url', required=True, help='URL of the isolated test server')
 parser.add_argument('--session', default='kevin-v2-audit')
 parser.add_argument('--cli', default=shutil.which('playwright-cli') or str(Path.home() / '.codex/skills/playwright/scripts/playwright_cli.sh'))
+scripts = ['verify-hands-on-browser', 'verify-classroom-flow', 'verify-motion-browser', 'verify-lab-inventory']
+parser.add_argument('--only', nargs='+', choices=scripts, help='Run selected callbacks against the same isolated server')
 args = parser.parse_args()
 root = Path(__file__).resolve().parent.parent
 output = root / 'output/playwright/v2-audit'
 output.mkdir(parents=True, exist_ok=True)
 
 def run(name, *commands):
-    result = subprocess.run([args.cli, '--session', args.session, *commands], cwd=root, capture_output=True, text=True, timeout=120)
+    result = subprocess.run([args.cli, '--session', args.session, *commands], cwd=root, capture_output=True, text=True, timeout=180)
     log = result.stdout + result.stderr
     (output / (name + '.log')).write_text(log)
     if result.returncode or '### Error' in log:
@@ -31,5 +33,5 @@ def run(name, *commands):
         print(json.dumps(summary, ensure_ascii=False))
 
 run('open', 'open', args.url)
-for script in ['verify-hands-on-browser', 'verify-classroom-flow']:
+for script in args.only or scripts:
     run(script, 'run-code', (root / 'scripts' / (script + '.js')).read_text())
