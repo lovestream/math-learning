@@ -1,0 +1,3 @@
+// A genuine rhombus: all four sides have length 100 (60² + 80² = 100²).
+export const rhombusPoints=[[442,94],[542,94],[602,174],[502,174]];
+export const introVisualTypes=new Set(['box-camera','hidden-blocks','cube-net','cup-scale','boat-replacement','lines','angles','angle-reference','fraction-strip','fraction-collection','symmetry','movement','frame-shapes','rectangle','joined-squares','area-grid','unit-square','calendar','week-calendar','timeline','length-comparison','overlapping-sets','outfits','shelves','dot-array','groups']);

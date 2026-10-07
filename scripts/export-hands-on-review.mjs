@@ -8,7 +8,7 @@ const groups={warmup:'热身',core:'核心独立练习',transfer:'新情境迁�
 for(const lesson of lessons.filter(l=>l.childClassroom)){
  const teaching=lesson.childClassroom,model=lesson.conceptScenes[0].handsOnSpec;
  lines.push(`## ${lesson.lessonId} ${lesson.title}`,'',`内容版本：${lesson.contentVersion}。教材单元：${lesson.textbookUnit.title}，印刷页${lesson.textbookUnit.printedPages}。建议先修：${lesson.recommendedPrerequisites.join('；')||'无需强制先修，可直接进入'}。`,'',`学习目标：${lesson.objectives.map(o=>o.action).join('；')}`,'',
-  '### 第1屏：真实问题','',teaching.story,'','### 第2屏：预测','',teaching.predictQuestion,'',...teaching.predictionOptions.map(text=>`- ${text}`),'', '可以点选、口头想过后进入；一句话输入可选，预测不会直接判分。','',
+  '### 第1屏：真实问题','',teaching.story,'',`对应图形：${teaching.storyVisual.title}。${teaching.storyVisual.caption}`,'','### 第2屏：预测','',teaching.predictQuestion,'',`预测图形：${teaching.predictionVisual.title}。${teaching.predictionVisual.caption}`,'',...teaching.predictionOptions.map(text=>`- ${text}`),'', '可以点选、口头想过后进入；一句话输入可选，预测不会直接判分。图形展示已知条件，不展示待猜的新照片、折好后的面关系、净重或替换质量。','',
   '### 第3屏：操作与证据','',teaching.modelText,'',`具体任务：${teaching.mission}`,'',`模型：${model.type} / ${model.mode} / ${model.version}。必须呈现的证据：${model.requiredEvidence.join('、')}。`,'',
   '允许试错、撤销、重来；状态、参数和动作快照随课程保存。操作表示探索，不发答对积分、不直接记掌握。','',
   '### 第4屏：自己复述与发现','',teaching.retell,'', '先自己讲，再按需展开参考关系：','',...teaching.discovery.map(text=>`- ${text}`),'',

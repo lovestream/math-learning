@@ -26,6 +26,6 @@ export default function SolidView({solid,azimuth,elevation,selected,onFace,onRot
     {(onFace||marked)&&visibleArea>90&&<g transform={`matrix(${a*flipU} ${b*flipU} ${c*flipV} ${d*flipV} ${tx} ${ty})`} pointerEvents="none"><circle r=".7" fill="#ffffff" fillOpacity={marked?'.83':'.16'}/><text y=".32" textAnchor="middle" fill={marked?def.color:'#fff'} fontSize={marked?1.1:1} fontWeight="800">{marked?def.mark:face.id}</text></g>}
    </g>;
   })}
-  <g pointerEvents="none"><rect x="107" y="311" width="206" height="27" rx="13" fill="#ffffff" fillOpacity=".9"/><text x="210" y="329" textAnchor="middle" fill="#426568" fontSize="12">拖动画面转动 · 方向键也能转</text></g>
+  {onRotate&&<g pointerEvents="none"><rect x="107" y="311" width="206" height="27" rx="13" fill="#ffffff" fillOpacity=".9"/><text x="210" y="329" textAnchor="middle" fill="#426568" fontSize="12">拖动画面转动 · 方向键也能转</text></g>}
  </svg>;
 }

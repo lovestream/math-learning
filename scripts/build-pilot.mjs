@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import {lessons} from '../content/pilot/source.mjs';
 import {grade3UnitMetadata} from '../content/pilot/grade3-complete.mjs';
 import {methodGuides} from '../content/method-guides.mjs';
+import {validateIntroVisualCoverage} from '../content/pilot/intro-visuals.mjs';
+validateIntroVisualCoverage(lessons);
 const root=new URL('../',import.meta.url);
 // Only the existing exact SVG paper templates are served, not source textbooks.
 const paperDir=new URL('public/math-paper-folding/',root);fs.mkdirSync(paperDir,{recursive:true});

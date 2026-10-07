@@ -13,7 +13,7 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--url', required=True, help='URL of the isolated test server')
 parser.add_argument('--session', default='kevin-v2-audit')
 parser.add_argument('--cli', default=shutil.which('playwright-cli') or str(Path.home() / '.codex/skills/playwright/scripts/playwright_cli.sh'))
-scripts = ['verify-hands-on-browser', 'verify-classroom-flow', 'verify-motion-browser', 'verify-lab-inventory']
+scripts = ['verify-hands-on-browser', 'verify-classroom-flow', 'verify-motion-browser', 'verify-lab-inventory', 'verify-intro-visuals']
 parser.add_argument('--only', nargs='+', choices=scripts, help='Run selected callbacks against the same isolated server')
 args = parser.parse_args()
 root = Path(__file__).resolve().parent.parent

@@ -46,7 +46,21 @@
       ],
       "mission": "拍三张不同方向的照片，指出观察者在哪里。",
       "modelText": "盒子固定在桌上，前面贴红圆点、右面贴蓝菱形、上面贴黄星星。移动观察者，不转动物体；用正面、右面、上面照片比较。",
-      "retell": "指着你的三张照片讲：盒子哪里没动？为什么看到的标记变了？"
+      "retell": "指着你的三张照片讲：盒子哪里没动？为什么看到的标记变了？",
+      "storyVisual": {
+        "type": "box-camera",
+        "title": "桌上这个盒子与拍照位置",
+        "caption": "盒子不动。先认清三个标记，再看相机站在哪里。",
+        "values": [],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "box-camera",
+        "title": "相机从前方移到右侧：新照片先不揭晓",
+        "caption": "盒子不动。先认清三个标记，再看相机站在哪里。",
+        "values": [],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -665,6 +679,13 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "box-camera",
+      "title": "桌上这个盒子与拍照位置",
+      "caption": "盒子不动。先认清三个标记，再看相机站在哪里。",
+      "values": [],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-U01",
       "title": "观察物体",
@@ -726,7 +747,21 @@
       ],
       "mission": "保留同样的正面照片，搭出两种不同的积木总数。",
       "modelText": "前排固定竖叠2块。后排可放0、1、2块；分别观察正面、右面、上面。重点比较后排1块与2块：前面与上面的投影都相同，侧面不同。",
-      "retell": "正面都是2格时，为什么不能直接说总共2块？哪张新照片能帮助你？"
+      "retell": "正面都是2格时，为什么不能直接说总共2块？哪张新照片能帮助你？",
+      "storyVisual": {
+        "type": "hidden-blocks",
+        "title": "两种搭法：前排一样，后排不同",
+        "caption": "这是从斜上方看的搭法示意，不是机器人拍到的正面照片。",
+        "values": [],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "hidden-blocks",
+        "title": "后排由1块变成2块：哪种照片能看出变化？",
+        "caption": "这是从斜上方看的搭法示意，不是机器人拍到的正面照片。",
+        "values": [],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -1358,6 +1393,13 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "hidden-blocks",
+      "title": "两种搭法：前排一样，后排不同",
+      "caption": "这是从斜上方看的搭法示意，不是机器人拍到的正面照片。",
+      "values": [],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-U01",
       "title": "观察物体",
@@ -1419,7 +1461,21 @@
       ],
       "mission": "从完全展开折到一半，再折成盒子；跟踪同一个编号。",
       "modelText": "选正方体作为纸盒样本。3号前面固定；1上、2左、4右、5下围着3号，6号连在5号外边。折叠角从0°到90°连续改变，六个面的颜色、编号与边长不变。",
-      "retell": "选择两面，先猜相邻还是相对，再折回并转动视角，讲出你的证据。"
+      "retell": "选择两面，先猜相邻还是相对，再折回并转动视角，讲出你的证据。",
+      "storyVisual": {
+        "type": "cube-net",
+        "title": "六个面摊开后的编号",
+        "caption": "虚线是折痕。2号、3号、4号在同一行；折好后的关系留给你猜。",
+        "values": [],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "cube-net",
+        "title": "只看展开图，先追踪2号与4号",
+        "caption": "虚线是折痕。2号、3号、4号在同一行；折好后的关系留给你猜。",
+        "values": [],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -2026,6 +2082,13 @@
           ]
         }
       ]
+    },
+    "introVisual": {
+      "type": "cube-net",
+      "title": "六个面摊开后的编号",
+      "caption": "虚线是折痕。2号、3号、4号在同一行；折好后的关系留给你猜。",
+      "values": [],
+      "labels": []
     },
     "textbookUnit": {
       "id": "G3-U01",
@@ -7128,6 +7191,16 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "dot-array",
+      "title": "3袋珠子，排成3行4列",
+      "caption": "每个圆点是一颗珠子。这里只摆出原来的3行4列，还没有换位置。",
+      "values": [
+        3,
+        4
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -7825,6 +7898,17 @@
           "editorialStatus": "parent-assessment"
         }
       ]
+    },
+    "introVisual": {
+      "type": "dot-array",
+      "title": "教室的左右两区座位",
+      "caption": "每个圆点是一个座位；每排左5个、右3个，一共7排。",
+      "values": [
+        7,
+        8,
+        5
+      ],
+      "labels": []
     },
     "textbookUnit": {
       "id": "G3-U02",
@@ -9216,6 +9300,20 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "groups",
+      "title": "三盒一样的彩笔",
+      "caption": "每个盒子里12支红笔、8支蓝笔；问号表示三盒合起来的总数。",
+      "values": [
+        3,
+        12,
+        8
+      ],
+      "labels": [
+        "红笔",
+        "蓝笔"
+      ]
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -10260,7 +10358,21 @@
       ],
       "mission": "完成换单位、杯与水、天平三个小实验，允许先试错。",
       "modelText": "电子秤可以放回形针、苹果、米袋和书。杯水实验使用空杯120克与水260克；合在一起380克。天平左盘400克，右盘可放100、200、500克砝码，允许少放或多放。",
-      "retell": "为什么不能直接把“杯和水”的读数当作水的质量？指着两次称量讲一遍。"
+      "retell": "为什么不能直接把“杯和水”的读数当作水的质量？指着两次称量讲一遍。",
+      "storyVisual": {
+        "type": "cup-scale",
+        "title": "秤上放的是杯子和水",
+        "caption": "图中读数是杯和水的总质量，水本身的质量还不知道。",
+        "values": [],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "cup-scale",
+        "title": "同一个米袋，换一种显示单位",
+        "caption": "左边是原来的读数。右边仍是同一个米袋，只把显示单位换成千克；先猜质量是否改变。",
+        "values": [],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -10785,6 +10897,13 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "cup-scale",
+      "title": "秤上放的是杯子和水",
+      "caption": "图中读数是杯和水的总质量，水本身的质量还不知道。",
+      "values": [],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-UP01",
       "title": "曹冲称象的故事：质量与替换测量",
@@ -10846,7 +10965,21 @@
       ],
       "mission": "自己标水线、换石块、逐块称重，核对是否满足替换条件。",
       "modelText": "在同一只理想模型船与静水环境中，先只装模型象并标水线。象下船后放小石块，直到红色水线标记回到水面。逐块称船上的石头，再求和。额外乘员用于展示替换条件被破坏的反例。",
-      "retell": "指着水线说：为什么同水线能替代？为什么称完后要把所有石块的读数加起来？"
+      "retell": "指着水线说：为什么同水线能替代？为什么称完后要把所有石块的读数加起来？",
+      "storyVisual": {
+        "type": "boat-replacement",
+        "title": "同一只船：象上船与象下船",
+        "caption": "红线画在船身上；蓝线是水面。象下船后船浮高，船身红线也跟着上移。",
+        "values": [],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "boat-replacement",
+        "title": "象下船以后，怎样用石块替代？",
+        "caption": "红线画在船身上；蓝线是水面。象下船后船浮高，船身红线也跟着上移。",
+        "values": [],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -11376,6 +11509,13 @@
           ]
         }
       ]
+    },
+    "introVisual": {
+      "type": "boat-replacement",
+      "title": "同一只船：象上船与象下船",
+      "caption": "红线画在船身上；蓝线是水面。象下船后船浮高，船身红线也跟着上移。",
+      "values": [],
+      "labels": []
     },
     "textbookUnit": {
       "id": "G3-UP01",
@@ -11967,6 +12107,18 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "groups",
+      "title": "每盒12支笔，买3盒",
+      "caption": "框是一盒，每盒同样12支；先看每盒，再想三盒合起来。",
+      "values": [
+        3,
+        12
+      ],
+      "labels": [
+        "支笔"
+      ]
+    },
     "textbookUnit": {
       "id": "G3-U04",
       "title": "多位数乘一位数",
@@ -12554,6 +12706,18 @@
           },
           "editorialStatus": "parent-assessment"
         }
+      ]
+    },
+    "introVisual": {
+      "type": "groups",
+      "title": "16个一份，共有3份",
+      "caption": "每个框表示一组16根小棒。先看每组的根数，再思考三组怎样整理进数位表。",
+      "values": [
+        3,
+        16
+      ],
+      "labels": [
+        "根小棒"
       ]
     },
     "textbookUnit": {
@@ -13146,6 +13310,18 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "groups",
+      "title": "8箱饮料，每箱147瓶",
+      "caption": "图是分组示意，每箱标的是瓶数，没有把147瓶缩成一个瓶子的数量。",
+      "values": [
+        8,
+        147
+      ],
+      "labels": [
+        "瓶"
+      ]
+    },
     "textbookUnit": {
       "id": "G3-U04",
       "title": "多位数乘一位数",
@@ -13733,6 +13909,18 @@
           },
           "editorialStatus": "parent-assessment"
         }
+      ]
+    },
+    "introVisual": {
+      "type": "groups",
+      "title": "8个区，每区604个座位",
+      "caption": "每个框是一个区，604表示这个区里的座位数，十位的0也保留。",
+      "values": [
+        8,
+        604
+      ],
+      "labels": [
+        "个座位"
       ]
     },
     "textbookUnit": {
@@ -14935,6 +15123,16 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "shelves",
+      "title": "书架的位置可以变成地址",
+      "caption": "示意一个书架的4层、每层8格。编号表示位置，不表示这里有多少本书。",
+      "values": [
+        4,
+        8
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-UP02",
       "title": "数字编码",
@@ -15526,6 +15724,15 @@
           "editorialStatus": "parent-assessment"
         }
       ]
+    },
+    "introVisual": {
+      "type": "lines",
+      "title": "路线、光线与向两边延伸的线",
+      "caption": "实心点表示端点，箭头表示还可以沿这个方向延伸。",
+      "values": [
+        5
+      ],
+      "labels": []
     },
     "textbookUnit": {
       "id": "G3-U05",
@@ -16127,6 +16334,16 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "angles",
+      "title": "剪刀的张口",
+      "caption": "两把剪刀的刀片画得一样长，只改变张口；图中不标角度答案。",
+      "values": [
+        25,
+        65
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-U05",
       "title": "线和角",
@@ -16723,6 +16940,13 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "angle-reference",
+      "title": "把书本角贴到墙角",
+      "caption": "左边是书本的直角，右边是待比较的墙角。让两个顶点和一条边对齐，再判断。",
+      "values": [],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-U05",
       "title": "线和角",
@@ -17307,6 +17531,16 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "fraction-strip",
+      "title": "一块饼，平均分成4份",
+      "caption": "用纸带代替这块饼。四份一样大，蓝色表示其中一个人的那一份。",
+      "values": [
+        4,
+        1
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-U06",
       "title": "分数的初步认识",
@@ -17878,6 +18112,16 @@
           "editorialStatus": "parent-assessment"
         }
       ]
+    },
+    "introVisual": {
+      "type": "fraction-strip",
+      "title": "贴纸分8格，涂前3格",
+      "caption": "整条贴纸是一个整体；蓝色是已经涂好的部分。",
+      "values": [
+        8,
+        3
+      ],
+      "labels": []
     },
     "textbookUnit": {
       "id": "G3-U06",
@@ -18452,6 +18696,17 @@
           "editorialStatus": "parent-assessment"
         }
       ]
+    },
+    "introVisual": {
+      "type": "fraction-strip",
+      "title": "同一块饼的两次取用",
+      "caption": "蓝色表示上午吃的2份，橙色表示下午吃的3份，每份都是这块饼的八分之一。",
+      "values": [
+        8,
+        2,
+        3
+      ],
+      "labels": []
     },
     "textbookUnit": {
       "id": "G3-U06",
@@ -19052,6 +19307,19 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "fraction-collection",
+      "title": "一盒12颗糖",
+      "caption": "大框表示这一整盒。先看清总数，再想平均分成3份；图中还没有替你分组。",
+      "values": [
+        12,
+        3,
+        1
+      ],
+      "labels": [
+        "糖"
+      ]
+    },
     "textbookUnit": {
       "id": "G3-U06",
       "title": "分数的初步认识",
@@ -19640,6 +19908,19 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "fraction-collection",
+      "title": "24张贴纸是一个整体",
+      "caption": "大框是全部24张。需要平均分成8份，取其中3份；图中还没有分好。",
+      "values": [
+        24,
+        8,
+        3
+      ],
+      "labels": [
+        "贴纸"
+      ]
+    },
     "textbookUnit": {
       "id": "G3-U06",
       "title": "分数的初步认识",
@@ -20225,6 +20506,18 @@
           "editorialStatus": "parent-assessment"
         }
       ]
+    },
+    "introVisual": {
+      "type": "fraction-strip",
+      "title": "同一条纸带：只改变看格子的方式",
+      "caption": "两幅图代表同一条纸带。细格与大格的线不同，蓝色部分的起点和终点没有移动。",
+      "values": [
+        6,
+        2,
+        0,
+        2
+      ],
+      "labels": []
     },
     "textbookUnit": {
       "id": "G3-U06",
@@ -21383,6 +21676,16 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "outfits",
+      "title": "2种上衣、3种裤子",
+      "caption": "一次穿一件上衣和一条裤子。图中只列可选衣服，还没有替你配好所有套装。",
+      "values": [
+        2,
+        3
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-U07",
       "title": "复习与关联（含搭配问题）",
@@ -21964,6 +22267,13 @@
           "editorialStatus": "parent-assessment"
         }
       ]
+    },
+    "introVisual": {
+      "type": "symmetry",
+      "title": "沿中间折痕对折的窗花",
+      "caption": "虚线是准备对折的位置。两侧的图案是否能重合，要通过对折来检查。",
+      "values": [],
+      "labels": []
     },
     "textbookUnit": {
       "id": "G3-L01",
@@ -22563,6 +22873,13 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "movement",
+      "title": "抽屉拉开与风车转动",
+      "caption": "箭头表示准备怎样移动：抽屉向外滑，风车绕中心转。",
+      "values": [],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-L01",
       "title": "生活中的运动现象",
@@ -23145,6 +23462,18 @@
           },
           "editorialStatus": "parent-assessment"
         }
+      ]
+    },
+    "introVisual": {
+      "type": "groups",
+      "title": "90张纸，准备平分给3人",
+      "caption": "每捆是10张纸，9捆合计90张；三个人的框还空着。",
+      "values": [
+        3,
+        90
+      ],
+      "labels": [
+        "张纸"
       ]
     },
     "textbookUnit": {
@@ -23733,6 +24062,18 @@
           },
           "editorialStatus": "parent-assessment"
         }
+      ]
+    },
+    "introVisual": {
+      "type": "groups",
+      "title": "52颗糖，准备平分给4人",
+      "caption": "每捆表示10颗，散点表示1颗。下面四个分配框还没有放糖。",
+      "values": [
+        4,
+        52
+      ],
+      "labels": [
+        "颗糖"
       ]
     },
     "textbookUnit": {
@@ -24328,6 +24669,19 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "groups",
+      "title": "53颗糖，每4颗装一袋",
+      "caption": "每捆代表10颗，不是一个袋子；袋子每袋能装4颗，袋数暂时未知。",
+      "values": [
+        0,
+        53,
+        4
+      ],
+      "labels": [
+        "颗糖"
+      ]
+    },
     "textbookUnit": {
       "id": "G3-L02",
       "title": "除数是一位数的除法",
@@ -24915,6 +25269,18 @@
           },
           "editorialStatus": "parent-assessment"
         }
+      ]
+    },
+    "introVisual": {
+      "type": "groups",
+      "title": "408本书，准备平分给4班",
+      "caption": "这里用数位记录总数：4个百、0个十、8个一。四个班的分配框还空着。",
+      "values": [
+        4,
+        408
+      ],
+      "labels": [
+        "本书"
       ]
     },
     "textbookUnit": {
@@ -26695,6 +27061,16 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "frame-shapes",
+      "title": "做相框之前，先看形状",
+      "caption": "长方形和正方形有四个直角；右边的斜菱形四边一样长，但角不同。",
+      "values": [
+        7,
+        4
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-L03",
       "title": "长方形和正方形",
@@ -27264,6 +27640,18 @@
           },
           "editorialStatus": "parent-assessment"
         }
+      ]
+    },
+    "introVisual": {
+      "type": "rectangle",
+      "title": "花坛的里面与外边一圈",
+      "caption": "红线表示准备装围栏的外边界。已知长8米、宽5米，围栏总长还不知道。",
+      "values": [
+        8,
+        5
+      ],
+      "labels": [
+        "米"
       ]
     },
     "textbookUnit": {
@@ -27845,6 +28233,17 @@
           },
           "editorialStatus": "parent-assessment"
         }
+      ]
+    },
+    "introVisual": {
+      "type": "joined-squares",
+      "title": "两个方形相框并排拼接",
+      "caption": "每块边长3厘米。虚线是两块之间的接缝，不是拼好后外边界上的一段。",
+      "values": [
+        3
+      ],
+      "labels": [
+        "厘米"
       ]
     },
     "textbookUnit": {
@@ -28432,6 +28831,18 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "area-grid",
+      "title": "花坛：外面围一圈，里面铺满",
+      "caption": "红线表示围栏位置，绿色方格表示要铺砖的位置；两件事要数不同的量。",
+      "values": [
+        3,
+        4
+      ],
+      "labels": [
+        "示意图，不代表题目另给了尺寸"
+      ]
+    },
     "textbookUnit": {
       "id": "G3-L04",
       "title": "图形的面积",
@@ -29006,6 +29417,18 @@
           },
           "editorialStatus": "parent-assessment"
         }
+      ]
+    },
+    "introVisual": {
+      "type": "area-grid",
+      "title": "长6米、宽4米的地面",
+      "caption": "每个方格表示1平方米的方砖，地面要铺满；砖的总数留给你求。",
+      "values": [
+        4,
+        6
+      ],
+      "labels": [
+        "每格1平方米"
       ]
     },
     "textbookUnit": {
@@ -29590,6 +30013,18 @@
           },
           "editorialStatus": "parent-assessment"
         }
+      ]
+    },
+    "introVisual": {
+      "type": "unit-square",
+      "title": "边长1分米的方纸",
+      "caption": "每一小段是1厘米，每个小格是1平方厘米。两个方向都分成10段。",
+      "values": [
+        10,
+        10
+      ],
+      "labels": [
+        "1分米＝10厘米"
       ]
     },
     "textbookUnit": {
@@ -31350,6 +31785,16 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "calendar",
+      "title": "两张真实的二月月历",
+      "caption": "2023年与2024年的二月：每格是一天，空格不算一天。",
+      "values": [
+        2023,
+        2024
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-LP01",
       "title": "年、月、日的秘密",
@@ -31925,6 +32370,19 @@
           "editorialStatus": "parent-assessment"
         }
       ]
+    },
+    "introVisual": {
+      "type": "timeline",
+      "title": "一天里的上午与下午",
+      "caption": "“3点”可以出现在上午或下午。图中标出两个位置，先认清说的是哪一个。",
+      "values": [
+        0,
+        3,
+        12,
+        15,
+        24
+      ],
+      "labels": []
     },
     "textbookUnit": {
       "id": "G3-LP01",
@@ -32529,6 +32987,13 @@
         }
       ]
     },
+    "introVisual": {
+      "type": "week-calendar",
+      "title": "某月1日是星期二",
+      "caption": "只填好已知的1日；其他日期与星期的对应关系由你来排。",
+      "values": [],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-LP01",
       "title": "年、月、日的秘密",
@@ -33099,6 +33564,19 @@
           },
           "editorialStatus": "parent-assessment"
         }
+      ]
+    },
+    "introVisual": {
+      "type": "length-comparison",
+      "title": "1米3分米的纸条",
+      "caption": "长的整段是1米，后面接3个1分米的小段。图上还没有写出用米表示的小数。",
+      "values": [
+        100,
+        130
+      ],
+      "labels": [
+        "1米",
+        "1米3分米"
       ]
     },
     "textbookUnit": {
@@ -33689,6 +34167,19 @@
           },
           "editorialStatus": "parent-assessment"
         }
+      ]
+    },
+    "introVisual": {
+      "type": "length-comparison",
+      "title": "在同一把米尺上比较跳高",
+      "caption": "两个标记分别是0.9米和0.85米。先看标记，再比较；尺子从同一个0开始。",
+      "values": [
+        90,
+        85
+      ],
+      "labels": [
+        "0.9米",
+        "0.85米"
       ]
     },
     "textbookUnit": {
@@ -35426,6 +35917,17 @@
           "editorialStatus": "parent-assessment"
         }
       ]
+    },
+    "introVisual": {
+      "type": "overlapping-sets",
+      "title": "两个小组里有相同的人",
+      "caption": "中间3个位置是两个组共有的人。读书组8人包含这3人，绘画组7人也包含这3人。",
+      "values": [
+        8,
+        7,
+        3
+      ],
+      "labels": []
     },
     "textbookUnit": {
       "id": "G3-L07",

@@ -2,7 +2,7 @@ import {boardMeasure,chainMeasure,intervalMeasure} from '../../../shared/length-
 import type {MeasurementTaskDiagram} from '../types';
 import {cm,Dimension,Ring} from './Primitives';
 
-export default function TaskDiagram({diagram}:{diagram:MeasurementTaskDiagram}){
+export default function TaskDiagram({diagram,intro=false}:{diagram:MeasurementTaskDiagram;intro?:boolean}){
   if(diagram.mode==='chain'){
     const length=diagram.pieceLengthMm??40,t=diagram.thicknessMm??5,count=diagram.count??4,model=chainMeasure(length,t,count),scale=480/Math.max(model.totalMm,160),x0=46;
     return <figure className="measurement-question"><svg viewBox="0 0 620 220" role="img" aria-label={`${count}个外长${length}毫米、厚${t}毫米的链环依次扣接`}>
@@ -26,7 +26,7 @@ export default function TaskDiagram({diagram}:{diagram:MeasurementTaskDiagram}){
       <rect x={x0-12} y="91" width={maxTick*s+24} height="76" rx="5" className="lab-ruler-body"/>
       {Array.from({length:maxTick+1},(_,i)=><g key={i}><line x1={x0+i*s} x2={x0+i*s} y1="91" y2={i%10===0?127:i%5===0?118:106}/>{i%10===0&&<text x={x0+i*s} y="151" textAnchor="middle">{i/10}</text>}</g>)}
       <text x="577" y="160" textAnchor="end" className="ruler-unit">厘米</text>
-      <Dimension x1={x0+start*s} x2={x0+end*s} y={199} label="小棒长度＝右端读数－左端读数"/>
+      <Dimension x1={x0+start*s} x2={x0+end*s} y={199} label={intro?'小棒的长度是多少？':'小棒长度＝右端读数－左端读数'}/>
     </svg><figcaption>{diagram.caption??`左端读数${cm(start)}，右端读数${cm(end)}。`}</figcaption></figure>;
   }
   if(diagram.mode==='route'){
@@ -46,6 +46,6 @@ export default function TaskDiagram({diagram}:{diagram:MeasurementTaskDiagram}){
   return <figure className="measurement-question"><svg viewBox="0 0 620 210" role="img" aria-label={`${closed?'环形':'直线'}共有${segments}个相等间隔`}>
     {closed?<circle cx="310" cy="98" r="82" className="lab-rope"/>:<path d="M50 100H570" className="lab-rope"/>}
     {Array.from({length:closed?segments:segments+1},(_,i)=>{const p=point(i);return <g key={i} className="lab-rope-pin"><circle cx={p.x} cy={p.y} r="10"/><text x={p.x} y={p.y+(closed&&p.y>98?28:-18)} textAnchor="middle">{i+1}</text></g>})}
-    <text x="310" y="201" textAnchor="middle" className="lab-svg-small">{length/1000}米 ÷ {spacing/1000}米＝{segments}段；请判断有几个不同标记。</text>
+    <text x="310" y="201" textAnchor="middle" className="lab-svg-small">{intro?`绳长${length/1000}米，每${spacing/1000}米作标记；请你数不同标记。`:`${length/1000}米 ÷ ${spacing/1000}米＝${segments}段；请判断有几个不同标记。`}</text>
   </svg><figcaption>{diagram.caption??`${closed?'首尾接成环':'两端都标记'}；图中数字只是标记编号。`}</figcaption></figure>;
 }
