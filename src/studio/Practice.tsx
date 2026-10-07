@@ -14,6 +14,7 @@ const groups:{id:SetName;name:string;description:string}[]=[
 ];
 type Answer=Record<string,string>;
 const selfCheckItems=(task:Task,lesson:PilotLesson)=>{
+  if(task.selfCheckItems?.length===3)return task.selfCheckItems;
   const plans:Record<string,string[]>={
     'G3-U03-B01':['两端读数是否写成了同一种单位？','用的是“右端－左端”，还是把右端读数直接当长度？','算出的长度是否符合图中两个端点之间的距离？'],
     'G3-U03-B02':['题目问的是米还是千米？','每一份有多长，一共有几份？','量的是实际路线，还是把直线距离混进来了？'],

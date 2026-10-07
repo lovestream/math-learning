@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+import {handsOnModels} from '../../shared/hands-on-models.mjs';
+import {handsOnTeaching,handsOnResponses,handsOnSelfChecks} from './hands-on-teaching.mjs';
 import {operationResponses} from './operation-responses.mjs';
 import {operationModels} from '../../shared/operation-models.mjs';
 import {parseLinear} from '../../shared/pilot-math.mjs';
@@ -20,8 +22,10 @@ const diagnosticTail={
 
 function task(practice,lesson,fam,setName){
   const rawMatch=String(practice.answer).match(simpleNumber),match=rawMatch&&numericUnits.has(rawMatch[2]||'')?rawMatch:null,base={id:practice.id,level:setName,objectiveId:lesson.objectives[0].id,prompt:practice.question,solution:`${practice.answer}${practice.reason?`。${practice.reason}`:''}`.replace(/。。/g,'。'),hint:practice.hints?.[0]?.text??`先回到“${inline(lesson.model)}”，把题目里的对象逐一对应。`,diagnostic:`${lesson.misconception?.correction??lesson.why} ${diagnosticTail[fam]??diagnosticTail.planning}`,diagram:{type:'concept',family:fam,variant:`${lesson.id}:task-static`,values:[],labels:[practice.question,lesson.title],caption:'这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。'}};
+  if(handsOnModels[lesson.id])base.diagram=undefined;
+  if(handsOnResponses[practice.id])return {...base,...handsOnResponses[practice.id],selfCheckItems:handsOnSelfChecks[practice.id]};
   if(operationResponses[practice.id])return {...base,...operationResponses[practice.id]};
-  if(match)return {...base,kind:'number',responseSpec:{type:'number'},expected:match[1],unit:match[2]||undefined};
+  if(match)return {...base,kind:'number',selfCheckItems:handsOnSelfChecks[practice.id],responseSpec:{type:'number'},expected:match[1],unit:match[2]||undefined};
   // A prose answer is not evidence that a meaningful multiple-choice item exists.
   // Preserve the original response demand and ask a parent to assess the explanation.
   return {...base,kind:'explanation',responseSpec:{type:'self-explanation',rubric:['回答题目所问的结论','写出算式、图示关系或关键一步','说明这一步为什么符合题目条件']},editorialStatus:'parent-assessment'};
@@ -54,10 +58,12 @@ function workedStep(text){
 }
 
 function compile(lesson){
-  const fam=family(lesson.id),interaction=lesson.interaction,cp=checkpoint(lesson,fam),steps=lesson.explanation.slice(0,3).map((explanation,i)=>({label:compact(explanation),explanation}));
-  const scene={sceneId:`${lesson.id}-MODEL1`,family:fam,variant:lesson.id,title:compact(lesson.title),prompt:lesson.objective,initialState:interaction.initialState,learnerAction:interaction.learnerAction,observableChange:interaction.observableChange,question:interaction.question,expectedExplanation:interaction.expectedExplanation,wrongActionFeedback:interaction.wrongActionFeedback,steps,values:[],labels:[lesson.title,lesson.model],modelSpec:operationModels[lesson.id],modelStatus:operationModels[lesson.id]?'registered':'static-review'};
+  const authored=handsOnTeaching[lesson.id];
+  if(authored)lesson={...lesson,realProblem:authored.story,model:authored.modelText,explanation:authored.discovery};
+  const fam=family(lesson.id),interaction=authored?{...lesson.interaction,initialState:authored.modelText,learnerAction:authored.mission,observableChange:authored.discovery.join(' '),question:authored.predictQuestion,expectedExplanation:authored.discovery.join(' ')}:lesson.interaction,cp=checkpoint(lesson,fam),guidance=lesson.explanation.map(explanation=>({label:compact(explanation),explanation}));
+  const scene={sceneId:`${lesson.id}-MODEL1`,family:fam,variant:lesson.id,title:compact(lesson.title),prompt:lesson.objective,initialState:interaction.initialState,learnerAction:interaction.learnerAction,observableChange:interaction.observableChange,question:interaction.question,expectedExplanation:interaction.expectedExplanation,wrongActionFeedback:interaction.wrongActionFeedback,guidance,values:[],labels:[lesson.title,lesson.model],modelSpec:operationModels[lesson.id],handsOnSpec:handsOnModels[lesson.id],modelStatus:operationModels[lesson.id]||handsOnModels[lesson.id]?'registered':'static-review'};
   const exampleSteps=[...(lesson.example.steps??[]).map(workedStep),{math:`结论：${lesson.example.answer}`,why:'把答案放回真实问题，检查单位、条件和结果是否对应。'}];
-  return {contentSource:'grade3-complete',editorialStatus:'review-required',contentVersion:'2026-10-02.1',editorialRevision:'2026-10-02.1',lessonId:lesson.id,exampleId:`FULL-${lesson.id}`,title:lesson.title,shortTitle:lesson.title.length>15?`${lesson.title.slice(0,15)}…`:lesson.title,question:lesson.realProblem,subtitle:lesson.why,grade:[3],strand:strand(lesson.id),track:track(lesson),parentUnitId:lesson.unitId,coverageIds:[lesson.id],coveredSubitemIds:[],thinkingSkills:skills[fam],recommendedPrerequisites:lesson.prerequisites??[],relatedLessonIds:plan.lessons.filter(other=>other.unitId===lesson.unitId&&other.id!==lesson.id).map(other=>other.id),representation:['real-problem','interactive-model','symbol-language','self-explanation'],estimatedActiveMinutes:lesson.minutes??30,color:colors[fam],widget:'conceptLab',prerequisiteNote:'可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。',objectives:[{id:lesson.objectives[0].id,action:lesson.objectives[0].description,scope:lesson.objective}],conceptScenes:[scene],retellPrompt:lesson.retell,articleBlocks:[
+  return {childClassroom:handsOnTeaching[lesson.id],contentSource:'grade3-complete',editorialStatus:'review-required',contentVersion:'2026-10-02.1',editorialRevision:'2026-10-02.1',lessonId:lesson.id,exampleId:`FULL-${lesson.id}`,title:lesson.title,shortTitle:lesson.title.length>15?`${lesson.title.slice(0,15)}…`:lesson.title,question:lesson.realProblem,subtitle:lesson.why,grade:[3],strand:strand(lesson.id),track:track(lesson),parentUnitId:lesson.unitId,coverageIds:[lesson.id],coveredSubitemIds:[],thinkingSkills:skills[fam],recommendedPrerequisites:lesson.prerequisites??[],relatedLessonIds:plan.lessons.filter(other=>other.unitId===lesson.unitId&&other.id!==lesson.id).map(other=>other.id),representation:['real-problem','interactive-model','symbol-language','self-explanation'],estimatedActiveMinutes:lesson.minutes??30,color:colors[fam],widget:'conceptLab',prerequisiteNote:'可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。',objectives:[{id:lesson.objectives[0].id,action:lesson.objectives[0].description,scope:lesson.objective}],conceptScenes:[scene],retellPrompt:handsOnTeaching[lesson.id]?.retell??lesson.retell,articleBlocks:[
     block('start','leadQuestion','把问题放进一个真实故事',{paragraphs:[lesson.realProblem,lesson.why]}),
     block('try','manipulative','先想一想，再用模型核对关系',{widget:'conceptLab',text:lesson.model}),
     block('meaning','text','图里的每一部分分别代表什么',{paragraphs:[lesson.model,...lesson.explanation]}),

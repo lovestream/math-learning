@@ -11,14 +11,14 @@ test('三年级完整教案60课、720题全部进入可编译课程源',()=>{
   for(const id of grade3CompletePlan.lessonIds)assert.equal(lessons.filter(l=>l.lessonId===id).length,1,`${id}应且只应出现一次`);
 });
 
-test('未精修课程保留教案说明与12道任务，不等同已具备操作模型',()=>{
+test('课程保留12道分层任务，精修课撤掉教具，静态课不冒充操作模型',()=>{
   for(const lesson of grade3CompleteLessons){
     assert.equal(lesson.articleBlocks.length,8,lesson.lessonId);
     assert.equal(lesson.conceptScenes.length,1,lesson.lessonId);
-    assert(lesson.conceptScenes[0].steps.length>=3,lesson.lessonId);
+    assert(lesson.conceptScenes[0].guidance.length>=3,lesson.lessonId);
     assert.equal(Object.values(lesson.taskSets).flat().length,12,lesson.lessonId);
     assert.equal(lesson.taskSets.review.length,4,lesson.lessonId);
-    assert(Object.values(lesson.taskSets).flat().every(task=>task.diagram?.type==='concept'),lesson.lessonId);
+    assert(Object.values(lesson.taskSets).flat().every(task=>lesson.childClassroom?task.diagram===undefined:task.diagram?.type==='concept'),lesson.lessonId);
   }
 });
 
@@ -34,16 +34,18 @@ test('非数值题保持解释响应，编译器不制造提示答案的模板�
       assert.equal(task.responseSpec.type,'self-explanation');assert.equal(task.options,undefined);assert.equal(task.reasonEvidence,undefined);
       assert.equal(task.editorialStatus,'parent-assessment');
     }
-    assert.equal(task.diagram.values.length,0,`${task.id}不能抓题干数字当模型`);
-    assert(task.diagram.variant.endsWith(':task-static'));
-    assert(!JSON.stringify(task.diagram).includes(String(task.solution)),`${task.id}题图不应包含完整解答`);
+    if(task.diagram){
+      assert.equal(task.diagram.values.length,0,`${task.id}不能抓题干数字当模型`);
+      assert(task.diagram.variant.endsWith(':task-static'));
+      assert(!JSON.stringify(task.diagram).includes(String(task.solution)),`${task.id}题图不应包含完整解答`);
+    }else assert(lesson.childClassroom,`${task.id}只有新版独立练习撤掉关系卡`);
   }
 });
 test('例题保留实际过程而非第N步占位；专用模型和静态审阅状态明确',()=>{
   for(const lesson of grade3CompleteLessons){
     assert.equal(lesson.editorialStatus,'review-required');
     for(const step of lesson.articleBlocks.flatMap(b=>b.examples??[]).flatMap(e=>e.steps))assert(!/^第\d+步$/.test(step.math),lesson.lessonId);
-    const scene=lesson.conceptScenes[0];assert.equal(scene.values.length,0);assert.equal(scene.modelStatus,scene.modelSpec?'registered':'static-review');
+    const scene=lesson.conceptScenes[0];assert.equal(scene.values.length,0);assert.equal(scene.modelStatus,scene.modelSpec||scene.handsOnSpec?'registered':'static-review');
   }
   const arithmetic=grade3CompleteLessons.find(l=>l.lessonId==='G3-U02-B02');
   assert(arithmetic.articleBlocks.find(b=>b.type==='workedExample').examples[0].steps.some(s=>s.math.includes('24÷6=4')));

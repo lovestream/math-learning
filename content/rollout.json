@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-02.1",
+  "version": "2026-10-07.2",
   "generated": true,
   "authority": {
     "teachingPlan": "content/course-plan-v2/grade-3.json",
@@ -7,12 +7,13 @@
     "runtimeArtifact": "content/pilot/lessons.json",
     "history": "docs/history/rollout-20260913.json"
   },
-  "currentFocus": "三年级：数学模型、响应规格、自查证据、迁移与复习；其它年级冻结",
+  "currentFocus": "三年级第一批：观察物体三课、质量与曹冲称象两课；其它年级冻结",
   "counts": {
+    "v2HandsOnLessons": 5,
     "lessons": 70,
     "tasks": 849,
-    "registeredModelLessons": 17,
-    "staticReviewLessons": 46
+    "registeredModelLessons": 22,
+    "staticReviewLessons": 41
   },
   "batches": [
     {

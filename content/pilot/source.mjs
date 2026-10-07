@@ -59,6 +59,6 @@ const compiledGrade3=grade3CompleteLessons.map(item=>existingById.get(item.lesso
 const extraLessons=existingLessons.filter(item=>!planIds.has(item.lessonId));
 export const lessons=[...compiledGrade3,...extraLessons].map(item=>{
   const unit=grade3UnitMetadata.find(u=>u.id===item.parentUnitId);
-  return {...item,contentVersion:'2026-10-02.1',editorialRevision:'2026-10-02.1',masteryRuleId:'pilot.evidence.v2',mathScenes:item.mathScenes?.map(scene=>({...scene,contentVersion:'2026-10-02.1'})),textbookUnit:unit,sourceAnchors:unit?[{id:unit.sourceId,purpose:`教材单元：${unit.title}，印刷页${unit.printedPages}`,status:'local-textbook-reference'}]:item.sourceAnchors,
+  return {...item,contentVersion:item.childClassroom?'2026-10-07.2':'2026-10-02.1',editorialRevision:item.childClassroom?'2026-10-07.2':'2026-10-02.1',masteryRuleId:'pilot.evidence.v2',mathScenes:item.mathScenes?.map(scene=>({...scene,contentVersion:'2026-10-02.1'})),textbookUnit:unit,sourceAnchors:unit?[{id:unit.sourceId,purpose:`教材单元：${unit.title}，印刷页${unit.printedPages}`,status:'local-textbook-reference'}]:item.sourceAnchors,
     taskSets:Object.fromEntries(Object.entries(item.taskSets).map(([set,tasks])=>[set,tasks.map(t=>({...t,responseSpec:t.responseSpec??{type:t.kind},reasonEvidence:undefined}))]))};
 });

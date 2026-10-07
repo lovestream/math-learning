@@ -69,7 +69,7 @@ test('仅保存首答不能越过自查门槛，检查草稿不制造自我订�
   assert.deepEqual(validateEnvelope(exportEnvelope(p),[]),p);
 });
 test('解释题保存为待核对，既不冒充正确，也不获得理由积分',()=>{
-  const p=freshProgress(),l=lessons.find(l=>Object.values(l.taskSets).flat().some(t=>t.kind==='explanation')),s=createSession(p,{lessonId:l.lessonId,setName:'core'},lessons),t=s.tasks.find(t=>t.kind==='explanation');
+  const p=freshProgress(),l=lessons.find(l=>l.taskSets.core.some(t=>t.kind==='explanation')),s=createSession(p,{lessonId:l.lessonId,setName:'core'},lessons),t=s.tasks.find(t=>t.kind==='explanation');
   const answer={value:'先找出整体，再根据关系比较。'};completeSelfCheck(p,{sessionId:s.id,revision:s.revision,taskId:t.id,answer,eventId:'audit:explanation'});
   const r=submitTask(p,{sessionId:s.id,revision:s.revision,taskId:t.id,answer,eventId:'audit:explanation-submit'},lessons);
   assert.equal(r.status,'pendingReview');assert.equal(r.paid,0);assert.equal(p.wallet.coins,0);assert.equal(lessonEvidence(p,l.lessonId,l.contentVersion).independent,false);

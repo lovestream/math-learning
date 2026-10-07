@@ -31,7 +31,7 @@ for(const lesson of lessons){
   for(const scene of lesson.conceptScenes??[]){
     if(!scene.sceneId||!allowedConceptFamilies.has(scene.family)||!scene.title||!scene.prompt||!scene.initialState||!scene.learnerAction||!scene.observableChange||!scene.expectedExplanation)fail(`${lesson.lessonId} 的概念实验场景不完整`);
     if(scene.modelSpec)try{measureOperationModel(scene.modelSpec)}catch(error){fail(`${scene.sceneId}: ${error.message}`)}
-    if(!Array.isArray(scene.steps)||scene.steps.length<3||scene.steps.some(step=>!step.label||!step.explanation))fail(`${scene.sceneId} 至少需要3个可解释的操作步骤`);
+    if(!Array.isArray(scene.guidance)||scene.guidance.length<3||scene.guidance.some(step=>!step.label||!step.explanation))fail(`${scene.sceneId} 至少需要3条讲解提示（不作为操作证据）`);
   }
   if(!Array.isArray(lesson.articleBlocks)||lesson.articleBlocks.length<8)fail(`${lesson.lessonId} 的讲解段少于8段`);
   for(const block of lesson.articleBlocks){

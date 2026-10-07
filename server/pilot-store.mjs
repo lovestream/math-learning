@@ -26,7 +26,7 @@ function evidenceCheck(e,operationMode){
 function credit(p,id,amount,label,now){if(amount<=0||p.wallet.ledger.some(e=>e.id===id))return; p.wallet.coins+=amount;p.wallet.earned+=amount;p.wallet.ledger.push({id,amount,label,at:new Date(now).toISOString()});}
 export function saveReading(p,input,lessons,now=Date.now()){
   const l=findLesson(lessons,input.lessonId),state=initPilot(p);const old=state.reading[l.lessonId]??{revision:0};revision(old,input.revision);
-  check(l.articleBlocks.some(b=>b.blockId===input.blockId),'阅读位置不存在。');check(object(input.widgets)&&JSON.stringify(input.widgets).length<30000,'实验状态太大，请重置后再保存。');
+  check(l.articleBlocks.some(b=>b.blockId===input.blockId)||(input.blockId==='classroom'&&l.childClassroom),'阅读位置不存在。');check(object(input.widgets)&&JSON.stringify(input.widgets).length<30000,'实验状态太大，请重置后再保存。');
   for(const [id,widget] of Object.entries(input.widgets)){check(key(id),'实验位置不合法。');try{validateWidgetState(widget,l.lessonId,l)}catch(error){check(false,error.message)}}
   const result={revision:old.revision+1,blockId:input.blockId,widgets:input.widgets,savedAt:new Date(now).toISOString()};state.reading[l.lessonId]=result;state.lastLessonId=l.lessonId;return result;
 }

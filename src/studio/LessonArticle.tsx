@@ -4,6 +4,7 @@ import type {Progress} from '../types';
 import type {ArticleBlock,PilotLesson,ReadingRecord,WidgetState} from './types';
 import {studioApi} from './api';
 import TeachingWidget,{TeachingDiagram} from './TeachingDiagrams';
+import ChildClassroom from './ChildClassroom';
 import {ConceptPreview} from './concept/ConceptVisual';
 
 type Props={lesson:PilotLesson;progress:Progress;setProgress:(p:Progress)=>void;notify:(m:string)=>void;onBack:()=>void;onPractice:()=>void};
@@ -50,11 +51,14 @@ export default function LessonArticle({lesson,progress,setProgress,notify,onBack
   const first=lesson.articleBlocks[0];
   const measurement=lesson.widget==='lengthWorkbench';
   const concept=lesson.widget==='conceptLab';
+  const childMode=!!lesson.childClassroom&&!widgets.classroom?.parentMode;
   const trackName=lesson.track==='foundation'?'课本主线':lesson.track==='enhancement'?'本章提升':'思维挑战';
   return <div className={`studio-lesson child-lesson lesson-${lesson.widget}`}>
     <div className="studio-breadcrumb"><button onClick={()=>void leave(onBack)}><ArrowLeft size={17}/>返回学习地图</button><span>{lesson.shortTitle}</span><small role="status">{saveState}{saveState.startsWith('暂未')&&<button onClick={()=>void save().catch(()=>{})}>重试保存</button>}</small><button onClick={()=>void leave(onPractice)}>直接做练习 <ChevronRight size={16}/></button></div>
     <article className="lesson-article">
-      <header className="article-hero"><p className="eyebrow">{measurement?`三年级 · 测量 · ${trackName}`:concept?`三年级 · ${trackName} · 数学模型实验室`:`${lesson.shortTitle} · 一起弄明白`}</p><h1>{lesson.title}</h1><p className="article-question">{lesson.question}</p></header>
+      <header className="article-hero"><p className="eyebrow">{measurement?`三年级 · 测量 · ${trackName}`:concept?`三年级 · ${trackName} · 数学模型实验室`:`${lesson.shortTitle} · 一起弄明白`}</p><h1>{lesson.title}</h1><p className="article-question">{!childMode&&lesson.question}</p></header>
+      {lesson.childClassroom&&<div className="lesson-mode-toggle" role="group" aria-label="课堂阅读方式"><button aria-pressed={childMode} onClick={()=>change('classroom',{...widgets.classroom,parentMode:false})}>Kevin 短课堂</button><button aria-pressed={!childMode} onClick={()=>change('classroom',{...widgets.classroom,parentMode:true})}>家长完整教案</button></div>}
+      {childMode?<ChildClassroom lesson={lesson} widgets={widgets} change={change} onPractice={()=>void leave(onPractice)}/>:<>
       {!measurement&&<section className="story-opening" id={`lesson-${first.blockId}`}><div><h2>{first.title}</h2>{first.paragraphs?.map(p=><p key={p}>{p}</p>)}{first.text&&<p>{first.text}</p>}</div>{first.diagram&&<TeachingDiagram kind={first.diagram}/>} {concept&&lesson.conceptScenes?.[0]&&<ConceptPreview scene={lesson.conceptScenes[0]}/>}</section>}
       <nav className="lesson-jumps" aria-label="跳到本课内容"><a href="#lesson-try">动手试试</a><a href="#lesson-meaning">{measurement?'弄懂为什么':'认识数学名字'}</a><a href="#lesson-check">轮到你来试</a><a href="#lesson-retell">讲给家人听</a></nav>
       {lesson.articleBlocks.slice(1).map(block=><section id={`lesson-${block.blockId}`} key={block.blockId} className={`article-block block-${block.type}`}><div className="block-content">
@@ -67,7 +71,7 @@ export default function LessonArticle({lesson,progress,setProgress,notify,onBack
         {block.methods?.map(m=><details className="method-detail" key={m.id}><summary><Lightbulb size={18}/>这个办法有个名字：{m.name}</summary><p>{m.action}</p><p>注意：{m.condition}</p><p>{m.counterexample}</p></details>)}
         {block.type==='practice'&&<button className="studio-primary" onClick={()=>void leave(onPractice)}><BookOpenCheck size={18}/>去做这节课的练习 <ChevronRight size={16}/></button>}
       </div></section>)}
-      <Reflection lesson={lesson} progress={progress} setProgress={setProgress} notify={notify}/>
+      <Reflection lesson={lesson} progress={progress} setProgress={setProgress} notify={notify}/></>}
     </article>
   </div>;
 }
