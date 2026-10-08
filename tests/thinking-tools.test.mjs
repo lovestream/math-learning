@@ -21,6 +21,7 @@ test("同时取走相同盒子或砝码保持平衡，单边操作倾斜；多�
       i ? thinkingVariant("G3-UP01-TH1", i) : undefined,
     );
     let s = initialThinkingTool(spec);
+    assert.throws(()=>validateThinkingTool(spec,{...s,values:[s.values[0],5,s.values[2],s.values[3]]}));
     assert(measureThinkingTool(spec, s).balanced);
     s = moveThinkingTool(spec, s, "remove-both-box");
     assert(measureThinkingTool(spec, s).balanced);

@@ -46,8 +46,8 @@ export function validateThinkingTool(spec, s) {
   if (spec.type === "balance")
     check(
       s.values.length === 4 &&
-        s.values.every((n, i) => n <= spec.conditions[i]),
-      "不能取走超过原有材料的数量",
+        s.values.every((n, i) => n <= spec.conditions[i]) && s.values[1]%10===0 && s.values[3]%10===0,
+      "材料不能超过原量；本教具砝码以10克为一小块",
     );
   if (spec.type === "views")
     check(

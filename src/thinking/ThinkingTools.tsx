@@ -69,6 +69,7 @@ export default function ThinkingTools({
                       </text>
                     </g>
                   ))}
+                  {Array.from({length:values[side+1]/10},(_,n)=><rect data-weight-grams="10" key={'weight-'+n} x={values[side]*40+5+(n%5)*7} y={150-(Math.floor(n/5)+1)*7} width="6" height="6" fill="#8a9394" stroke="#606c6e" strokeWidth=".5"><title>10克小砝码</title></rect>)}
                   <text x="10" y="75">
                     {values[side]}
                     {spec.names![0]}＋{values[side + 1]}克
@@ -77,6 +78,7 @@ export default function ThinkingTools({
               ))}
             </g>
           </svg>
+          <p>黄色是待称的{spec.names![0]}；每个灰色小砝码10克。拿走20克，就是两边各拿走2个灰色小块。</p>
           <div className="thinking-help">
             <button
               disabled={busy || Math.min(values[0], values[2]) === 0}

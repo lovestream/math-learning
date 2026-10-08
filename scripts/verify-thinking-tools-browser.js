@@ -18,7 +18,7 @@ async (page) => {
   const mobileShot=async(lab,name)=>{
     await page.setViewportSize({width:390,height:844});
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),name+"手机溢出");
-    await lab.screenshot({path:`output/playwright/v2-audit/thinking-${name}-390.png`,style:'.sidebar{visibility:hidden}'});
+    await lab.screenshot({path:`output/playwright/v2-audit/thinking-${name}-390.png`,style:'.sidebar{display:none!important}'});
     await page.setViewportSize({width:1440,height:1000});
   };
   let lab = await open("G3-UP01-TH1");
@@ -39,6 +39,7 @@ async (page) => {
     (await lab.getByRole("status").innerText()).includes("仍平衡"),
     "撤销未恢复平衡",
   );
+  assert(await lab.locator('[data-weight-grams="10"]').count()===15,"15个10克小砝码必须对应右侧150克");
   await lab.screenshot({
     path: "output/playwright/v2-audit/thinking-balance-1440.png",
   });
@@ -126,7 +127,7 @@ async (page) => {
   );
   await lab.screenshot({
     path: "output/playwright/v2-audit/thinking-venn-390.png",
-    style:".sidebar{visibility:hidden}",
+    style:".sidebar{display:none!important}",
   });
   assert(after.progress.wallet.coins === 0, "教具操作错误发积分");
   assert(errors.length === 0, JSON.stringify(errors));

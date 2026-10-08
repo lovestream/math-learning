@@ -250,7 +250,7 @@ async (page) => {
     );
     await lab.screenshot({
       path: `output/playwright/v2-audit/core-${lesson.lessonId}-390.png`,
-      style:".sidebar{visibility:hidden}",
+      style:".sidebar{display:none!important}",
     });
     checked.push({
       id: lesson.lessonId,
