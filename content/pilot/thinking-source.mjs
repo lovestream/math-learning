@@ -1,3 +1,4 @@
+import {thinkingHints} from "./thinking-hints.mjs";
 import {isApprovedThinkingCard} from './thinking-publication.mjs';
 import fs from 'node:fs';
 const source=JSON.parse(fs.readFileSync(new URL('../course-plan-v2/grade-3-thinking.json',import.meta.url),'utf8'));
@@ -7,7 +8,8 @@ const methodLabels={
 const bridges=new Set(['G3-U04-S01','G3-U04-S03','G3-U04-S04','G3-U04-S10','G3-U04-S15','G3-U06-S19']);
 // First release: exactly one explicitly illustrated/worded transfer per textbook unit.
 // Remaining cards retain their original problem and provenance; they are not pretend published lessons.
-export const thinkingCards=source.tasks.map(t=>{
+export const thinkingCards=source.tasks.map(original=>{
+ const t=original.id.endsWith("-TH1")?{...original,hints:thinkingHints(original.id)}:original;
  const published=isApprovedThinkingCard(t.id,t);
  const bucket=t.layer==='奥数思想选学'||bridges.has(t.id)?'bridge':'direct';
  return {...t,originUnit:t.unitId,thinkingDomain:['G3-U04-S03','G3-U04-S04'].includes(t.id)?'enumeration.extremum':t.conceptId,thinkingLabel:methodLabels[t.conceptId]??domains[t.unitId.replace('G3-','')],classification:bucket==='direct'?'本章直接提升':'数学思想桥梁',releaseBucket:published?bucket:'deferred',publicationStatus:published?'guided-study':'prepared-not-published',releaseReason:published?'本章首张迁移卡已逐题整理；解释由家长核对。':'保留原题与来源，待专用题图、操作及教学核对；不计入已发布课程。',recommended:published,contentVersion:'thinking.2026-10-08.1',scoring:'adult_review'};

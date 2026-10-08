@@ -3,6 +3,7 @@ import {
   initialThinkingTool,
   validateThinkingTool,
   moveThinkingTool,
+  measureThinkingTool,
 } from "../shared/thinking-tools.mjs";
 import { thinkingCards } from "../content/pilot/thinking-source.mjs";
 import {
@@ -22,6 +23,7 @@ const text = (v, min = 1, max = 1200) =>
 const date = (v) => typeof v === "string" && Number.isFinite(Date.parse(v));
 export const reviewVerdicts = [
   "independent-mastered",
+  "model-supported",
   "corrected-with-help",
   "needs-remediation",
   "deferred",
@@ -35,7 +37,28 @@ export const errorCauses = [
 ];
 const delays = [1, 3, 7, 21],
   DAY = 86400000;
+export function scaffoldEvidence(r) {
+  const history = r.toolHistory ?? [];
+  return r.scaffold ?? {usedManipulative:Boolean(r.tool), usedAnswerValidation:Boolean(r.tool), validationAttempts:history.length, matchedAttempts:0, withVisualScaffold:true, legacyEstimate:Boolean(r.tool)};
+}
+export function hasStrongDelayedChain(r) {
+  const attempts=[...(r.attempts??[]),r];
+  let previous=attempts[0]?.reviews?.at(-1);
+  if(!previous)return false;
+  for(let stage=1;stage<=4;stage++){
+    const eligible=attempts.filter(a=>a.reviewStage===stage && a.phase==='reviewed' && a.reviews?.at(-1)?.verdict==='independent-mastered' && a.reviews.at(-1).evidence?.mode==='challenge' && !a.reviews.at(-1).evidence.scaffold.usedAnswerValidation && a.reviews.at(-1).evidence.help.length===0);
+    const current=eligible.find(a=>Date.parse(a.firstAt)>=Date.parse(previous.scheduleAt)+delays[stage-1]*DAY);
+    if(!current)return false;
+    previous=current.reviews.at(-1);
+  }
+  return true;
+}
 function validateAttempt(r) {
+  if(r.seenVariantIds) check(Array.isArray(r.seenVariantIds) && r.seenVariantIds.length<=12 && new Set(r.seenVariantIds).size===r.seenVariantIds.length && r.seenVariantIds.every(id=>Array.from({length:12},(_,i)=>`${r.taskId}-R${i+1}`).includes(id)), "已见复习题目记录无效。");
+  check(r.recordSchemaVersion === undefined || [1,2].includes(r.recordSchemaVersion), "此学习证据格式暂不支持，请使用匹配版本的程序。");
+  if (r.mode !== undefined) check(["explore", "challenge"].includes(r.mode), "作答模式无效。");
+  if(r.scaffold) check(object(r.scaffold) && ["usedManipulative","usedAnswerValidation","withVisualScaffold"].every(k=>typeof r.scaffold[k] === "boolean") && Number.isSafeInteger(r.scaffold.validationAttempts) && r.scaffold.validationAttempts >= 0 && Number.isSafeInteger(r.scaffold.matchedAttempts) && r.scaffold.matchedAttempts >= 0 && r.scaffold.matchedAttempts <= r.scaffold.validationAttempts, "教具支架证据无效。");
+  if(r.postReviewStudy) check(Array.isArray(r.postReviewStudy) && r.postReviewStudy.length <= 100 && r.postReviewStudy.every(h=>["hint","solution","reference"].includes(h.kind) && date(h.at) && Number.isInteger(h.level) && h.level>=0 && h.level<=3 && text(h.text,1,4000) && h.stage === "post-review"), "批阅后复盘记录无效。");
   check(
     object(r) &&
       ["first", "self-checked", "pendingReview", "reviewed"].includes(r.phase),
@@ -96,7 +119,7 @@ function validateAttempt(r) {
     check(
       Number.isInteger(r.variantIndex) &&
         r.variantIndex >= 0 &&
-        r.variantIndex <= 4 &&
+        r.variantIndex <= 12 &&
         text(r.attemptId, 1, 180),
       "复习情境无效。",
     );
@@ -140,6 +163,10 @@ function validateAttempt(r) {
           v.helpCount <= r.help.length,
         "审核帮助快照无效。",
       );
+      if(v.evidence) {
+        check(object(v.evidence) && v.evidence.firstAnswer===r.firstAnswer && v.evidence.firstAt===r.firstAt && v.evidence.finalAnswer===r.finalAnswer && v.evidence.reflection===r.reflection && v.evidence.submittedAt===r.submittedAt && Array.isArray(v.evidence.help) && v.evidence.help.length===v.helpCount && object(v.evidence.scaffold), "批阅时的证据快照与原作答不一致。");
+        if(v.verdict === "independent-mastered")check(!v.evidence.scaffold.usedAnswerValidation, "有模型验证的快照不能作为无反馈独立作答。");
+      }
       if (v.verdict === "independent-mastered")
         check(
           !r.firstAssisted && v.helpCount === 0,
@@ -208,6 +235,7 @@ export function validateThinking(records) {
     }
     if (r.review !== undefined) {
       const v = r.review;
+      if(v.strongEvidence !== undefined) check(typeof v.strongEvidence === "boolean" && v.strongEvidence === (v.completed && hasStrongDelayedChain(r)), "四轮无自动验证的延迟证据链不一致。");
       check(
         object(v) &&
           reviewVerdicts.includes(v.verdict) &&
@@ -319,6 +347,8 @@ export function applyThinking(p, input, now = Date.now()) {
       help: [],
       attemptId: input.eventId,
       variantIndex: 0,
+      recordSchemaVersion: 2,
+      mode: "explore",
     };
   check(
     input.revision === old.revision,
@@ -326,6 +356,10 @@ export function applyThinking(p, input, now = Date.now()) {
     "STALE_REVISION",
   );
   let r = structuredClone(old);
+  check(r.recordSchemaVersion === undefined || [1,2].includes(r.recordSchemaVersion), "此学习证据来自更新版本，请升级程序后再打开。");
+  if(r.tool && !r.scaffold) r.scaffold=scaffoldEvidence(r);
+  r.recordSchemaVersion = 2;
+  r.seenVariantIds ??= [...new Set([...(r.attempts??[]).map(a=>a.variant?.id),r.variant?.id].filter(Boolean))];
   if (input.action === "review-start") {
     check(
       r.phase === "reviewed" &&
@@ -335,7 +369,9 @@ export function applyThinking(p, input, now = Date.now()) {
     );
     check((r.attempts?.length ?? 0) < 64, "请先导出长期学习记录。");
     const { attempts = [], review, revision, savedAt, ...archived } = r,
-      index = (attempts.length % 4) + 1;
+      seen = new Set([...attempts, archived].map(a => a.variantIndex ?? 0)),
+      index = Array.from({length: 12}, (_, i) => i + 1).find(i => !seen.has(i));
+    check(index, "当前审定的新题已用完。请先做针对性回补，由家长核对；重复题不会算作新的独立迁移。", "REVIEW_BANK_EXHAUSTED");
     r = {
       taskId: t.id,
       contentVersion: t.contentVersion,
@@ -345,8 +381,11 @@ export function applyThinking(p, input, now = Date.now()) {
       help: [],
       attemptId: input.eventId,
       variantIndex: index,
+      recordSchemaVersion: 2,
+      mode: "challenge",
       reviewStage: review.stage + 1,
       variant: publicVariant(thinkingVariant(t.id, index)),
+      seenVariantIds: [...new Set([...(archived.seenVariantIds??[]), `${t.id}-R${index}`])],
       attempts: [
         ...attempts,
         {
@@ -357,13 +396,15 @@ export function applyThinking(p, input, now = Date.now()) {
       ],
       review,
     };
-  } else if (input.action === "tool") {
+  } else if (["tool", "tool-open"].includes(input.action)) {
+    check(r.mode !== "challenge", "独立新题不显示教具的自动验证；可以使用纸笔，提示会如实留痕。");
+    check(r.phase !== "reviewed", "已批阅的操作证据已归档，请回基础课继续探索。");
     const spec = thinkingToolSpec(t.id, r.variant);
     check(spec, "本卡没有专用操作模型。");
     const before = r.tool ?? initialThinkingTool(spec);
     r.toolHistory ??= [];
     const next =
-      input.command === "undo"
+      input.action === "tool-open" ? initialThinkingTool(spec) : input.command === "undo"
         ? r.toolHistory.at(-1)?.before
         : moveThinkingTool(
             spec,
@@ -374,12 +415,19 @@ export function applyThinking(p, input, now = Date.now()) {
           );
     check(next, "没有可撤销的操作。");
     r.tool = next;
+    const feedback = measureThinkingTool(spec, next);
+    r.scaffold ??= {usedManipulative:false, usedAnswerValidation:false, validationAttempts:0, withVisualScaffold:true, matchedAttempts:0};
+    r.scaffold.usedManipulative = true;
+    r.scaffold.usedAnswerValidation = true;
+    r.scaffold.validationAttempts++;
+    if (feedback.matches || feedback.balanced) r.scaffold.matchedAttempts++;
+    // Cumulative evidence survives undo/reset and the bounded operation history.
     if (input.command === "undo") r.toolHistory.pop();
     else
       r.toolHistory = [
         ...r.toolHistory.slice(-29),
         {
-          command: input.command,
+          command: input.action === "tool-open" ? "open-model" : input.command,
           before,
           after: next,
           at,
@@ -399,6 +447,7 @@ export function applyThinking(p, input, now = Date.now()) {
     r.firstAnswer = input.answer.trim();
     r.firstAt = at;
     r.firstAssisted = r.help.length > 0;
+    r.firstScaffold = structuredClone(scaffoldEvidence(r));
   } else if (input.action === "check") {
     check(
       r.firstAnswer !== null &&
@@ -421,6 +470,7 @@ export function applyThinking(p, input, now = Date.now()) {
     r.phase = "pendingReview";
     r.status = "pendingReview";
     r.submittedAt = at;
+    r.submittedScaffold = structuredClone(scaffoldEvidence(r));
   } else if (["hint", "solution", "reference"].includes(input.action)) {
     const level = input.action === "hint" ? input.level : 0;
     check(
@@ -434,37 +484,19 @@ export function applyThinking(p, input, now = Date.now()) {
       input.action !== "solution" || r.firstAnswer !== null,
       "先保存自己的想法，再看参考解释。",
     );
-    // New help after grading invalidates independent evidence until a parent explicitly rechecks it.
-    if (!r.help.some((h) => h.kind === input.action && h.level === level)) {
-      r.help.push({
-        kind: input.action,
-        level,
-        text:
-          input.action === "hint"
-            ? hint.text
-            : input.action === "solution"
-              ? `${source.answer}\n${source.reason}\n${source.solutionSteps.join("\n")}`
-              : "已回看本章基础讲解；本次迁移会记为参考辅助。",
-        at,
-        stage:
-          r.firstAnswer === null
-            ? "before-first"
-            : r.submittedAt
-              ? "after-submission"
-              : "after-first",
-      });
-      if (r.phase === "reviewed") {
-        r.phase = "pendingReview";
-        r.status = "pendingReview";
-        r.review = {
-          verdict: "corrected-with-help",
-          stage: 0,
-          completed: false,
-          dueAt: new Date(now + DAY).toISOString(),
-          anchorAt: at,
-        };
-      }
-    }
+    const event = {
+      kind: input.action, level,
+      text: input.action === "hint" ? hint.text : input.action === "solution"
+        ? `${source.answer}\n${source.reason}\n${source.solutionSteps.join("\n")}`
+        : "已回看本章基础讲解。", at,
+      stage: r.firstAnswer === null ? "before-first" : r.submittedAt ? "after-submission" : "after-first",
+    };
+    if (r.phase === "reviewed") {
+      r.postReviewStudy ??= [];
+      check(r.postReviewStudy.length < 100, "复盘记录较多，请先导出归档。");
+      r.postReviewStudy.push({...event, stage:"post-review"});
+      // Studying after a verdict never rewrites the evidence of the graded attempt.
+    } else if (!r.help.some(h => h.kind === event.kind && h.level === level)) r.help.push(event);
   } else check(false, "未知思维卡操作。");
   return finish(st, t, r, input, receipt.signature, now);
 }
@@ -489,8 +521,8 @@ export function applyThinkingReview(p, input, now = Date.now()) {
   );
   if (input.verdict === "independent-mastered")
     check(
-      !r.firstAssisted && r.help.length === 0,
-      "本次有辅助记录，请选辅助订正，安排后续独立迁移。",
+      !r.firstAssisted && r.help.length === 0 && !scaffoldEvidence(r).usedAnswerValidation,
+      "本次使用过提示或教具自动验证，请选操作支持下理解／辅助订正，下一轮撤去验证再独立做。",
     );
   const at = new Date(now).toISOString();
   r.reviews ??= [];
@@ -507,6 +539,7 @@ export function applyThinkingReview(p, input, now = Date.now()) {
     reviewer: input.reviewer.trim(),
     source: "parent-workbench",
     helpCount: r.help.length,
+    evidence: {firstAnswer:r.firstAnswer, firstAt:r.firstAt, finalAnswer:r.finalAnswer, reflection:r.reflection, submittedAt:r.submittedAt, scaffold:structuredClone(scaffoldEvidence(r)), help:structuredClone(r.help), mode:r.mode ?? "legacy"},
     causes: [...new Set(input.causes)],
     at,
     scheduleAt: anchorAt,
@@ -520,6 +553,7 @@ export function applyThinkingReview(p, input, now = Date.now()) {
     verdict: input.verdict,
     stage,
     completed,
+    strongEvidence: completed && hasStrongDelayedChain(r),
     anchorAt,
     dueAt:
       completed || input.verdict === "deferred"

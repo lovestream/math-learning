@@ -25,7 +25,7 @@ async (page) => {
     const model = lesson.conceptScenes[0].textbookSpec;
     for (const choice of [0, 5]) {
       await lab
-        .getByRole("combobox", { name: "选择练习情境" })
+        .getByRole("combobox", { name: "选择操作情境" })
         .selectOption(String(choice));
       const c = model.cases[choice],
         context = model.contexts[choice];

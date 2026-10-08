@@ -1,3 +1,4 @@
+import {parentFormalTasks, reviewFormalTask} from "./pilot-store.mjs";
 import {thinkingCards,publicThinkingCard} from '../content/pilot/thinking-source.mjs';
 import {applyThinking,applyThinkingReview,parentThinkingCards} from './thinking-store.mjs';
 import {createParentAccess,assertLocalWrite} from './parent-access.mjs';
@@ -48,9 +49,9 @@ async function api(req,res,url){
   try{
     if(url.pathname==='/api/parent/access'){
       if(req.method==='GET')return json(res,200,parentAccess.status(req));
-      if(req.method==='POST'){const b=await readJson(req);const cookie=b.action==='lock'?parentAccess.lock(req):parentAccess.unlock(req,b.pin,b.action==='setup');return json(res,200,parentAccess.status({...req,headers:{...req.headers,cookie:cookie.split(';')[0]}}),{'Set-Cookie':cookie});}
+      if(req.method==='POST'){const b=await readJson(req);if(b.action==='recovery-code')return json(res,200,{recoveryCode:parentAccess.issueRecovery(req)});const cookie=b.action==='lock'?parentAccess.lock(req):b.action==='recover'?parentAccess.recover(req,b.code,b.pin):parentAccess.unlock(req,b.pin,b.action==='setup');return json(res,200,parentAccess.status({...req,headers:{...req.headers,cookie:cookie.split(';')[0]}}),{'Set-Cookie':cookie});}
     }
-    if(url.pathname.startsWith('/api/parent/')){parentAccess.requireParent(req);if(req.method==='GET'&&url.pathname==='/api/parent/thinking')return json(res,200,{cards:parentThinkingCards(store.get())});if(req.method==='POST'&&url.pathname==='/api/parent/thinking/review'){const body=await readJson(req);const out=store.mutate(p=>applyThinkingReview(p,body));return json(res,200,{result:out.result,progress:out.progress});}}
+    if(url.pathname.startsWith('/api/parent/')){parentAccess.requireParent(req);if(req.method==='GET'&&url.pathname==='/api/parent/formal')return json(res,200,{tasks:parentFormalTasks(store.get())});if(req.method==='POST'&&url.pathname==='/api/parent/formal/review'){const body=await readJson(req);const out=store.mutate(p=>reviewFormalTask(p,body));return json(res,200,{result:out.result,progress:out.progress});}if(req.method==='GET'&&url.pathname==='/api/parent/thinking')return json(res,200,{cards:parentThinkingCards(store.get())});if(req.method==='POST'&&url.pathname==='/api/parent/thinking/review'){const body=await readJson(req);const out=store.mutate(p=>applyThinkingReview(p,body));return json(res,200,{result:out.result,progress:out.progress});}}
     if(req.method==='GET'&&url.pathname==='/api/studio')return json(res,200,{progress:clientProgress(store.get()),lessons:pilotLessons.map(publicLesson),design:pilotDesign});
     const pilotActions={
       '/api/studio/thinking':(p,b)=>applyThinking(p,b),

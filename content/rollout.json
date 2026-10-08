@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-08.2",
+  "version": "2026-10-08.3",
   "generated": true,
   "authority": {
     "teachingPlan": "content/course-plan-v2/grade-3.json",
@@ -7,7 +7,7 @@
     "runtimeArtifact": "content/pilot/lessons.json",
     "history": "docs/history/rollout-20260913.json"
   },
-  "currentFocus": "三年级证据隔离与家长审核闭环；35课教材模型、11课计算精修、17张迁移卡及68组复习；其它年级冻结",
+  "currentFocus": "三年级证据隔离与家长审核闭环；35课教材模型、11课计算精修、17张迁移卡及204组去重复习；11课撤教具五题小测复用55个正式任务ID；其它年级冻结",
   "counts": {
     "thinkingPrepared": 60,
     "thinkingPublished": 17,

@@ -116,7 +116,7 @@ test("17张卡各有4组已知条件一致的复习变式，公开题干不发�
   assert.match(thinkingVariant("G3-U01-TH1", 3).answer, /共6块/);
   assert.match(thinkingVariant("G3-L07-TH1", 1).answer, /都喜欢8/);
   assert.throws(() => thinkingVariant("G3-U01-TH2", 1));
-  assert.throws(() => thinkingVariant(id, 5));
+  assert.throws(() => thinkingVariant(id, 13));
 });
 test("家长更正保留历史、版本保护与幂等；有辅助不允许批成独立", () => {
   const p = freshProgress();
@@ -143,11 +143,12 @@ test("家长更正保留历史、版本保护与幂等；有辅助不允许批�
   );
   assert.equal(p.wallet.coins, 0);
   applyThinking(p, input(p, "solution"), base + 7);
-  assert.equal(p.studio.thinking[id].phase, "pendingReview");
-  assert.throws(() => grade(p, "independent-mastered", base + 8), /辅助/);
+  assert.equal(p.studio.thinking[id].phase, "reviewed");
+  assert.equal(p.studio.thinking[id].review.verdict, "independent-mastered");
+  assert.equal(p.studio.thinking[id].postReviewStudy[0].stage, "post-review");
   grade(p, "corrected-with-help", base + 9);
   assert.equal(p.studio.thinking[id].reviews.length, 3);
-  assert.equal(p.studio.thinking[id].help[0].stage, "after-submission");
+  assert.equal(p.studio.thinking[id].help.length, 0);
   assert.deepEqual(validateEnvelope(exportEnvelope(p), []), p);
 });
 test("从首答到审核到1/3/7/21天的4轮不同情境，未到期不得提前冒充复习", () => {

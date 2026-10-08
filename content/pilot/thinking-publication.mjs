@@ -5,87 +5,87 @@ const approved = [
   {
     id: "G3-U01-TH1",
     contentHash:
-      "8ed11835e6d8f254efb6aaf30eb4d453bfdd414b3c97a8954a61e5b98cbcaf5b",
+      "ad55e925921a12793f72975fb9739c172bd21650efbcdebad9e3d7a1272662e6",
   },
   {
     id: "G3-U02-TH1",
     contentHash:
-      "61c517fad239b4d9bd67beff4e0559712ea63d495b3f27c8bb7c21fa93add7a1",
+      "1baafa667488563ff26905fb06f21c8a794bb6018e6a24e10faf5610a3c48a2a",
   },
   {
     id: "G3-U03-TH1",
     contentHash:
-      "35973512cded772063296e6bebfd516276eefb5592ccf0a0722c0654d73e0c9b",
+      "0a1010f2af1c6864cfb86813a6011bf565e49c2d0e098ebb5e0219d33082c05c",
   },
   {
     id: "G3-UP01-TH1",
     contentHash:
-      "30a497216ccb8b695db8ac5a5d9c63b43a2a4ca77f1ced34ab3955fb871f4f23",
+      "1fcf81f14c91ae9b48cf3d479fe2d38ab087c7896836098134a6ee64b21701a1",
   },
   {
     id: "G3-U04-TH1",
     contentHash:
-      "28396e139f91a045925ade81c8690ba0e220c4577d7fc4cc1cb4d81c4cd1438c",
+      "ed47b9e975c473fb80715c6824a0cf3a2b34bba6885d689180030d544627a827",
   },
   {
     id: "G3-UP02-TH1",
     contentHash:
-      "d30a5d3e8aaf430b0525597aedfd1db0527e290aca1f32e9c220d05326d0ce6c",
+      "80c634bd5a6c066295fcbc8212bae37784cf48e691709eb5aaadbdb0f7a3be65",
   },
   {
     id: "G3-U05-TH1",
     contentHash:
-      "43ab176afd4d250d404d3b405bf6be5f2ab19a98447fa138bc79b5d399bc80e9",
+      "4c3d1cd3383e0ea41b65ea1063647c9d4b1bb1c83a92feb3c3e1f474c37a21c4",
   },
   {
     id: "G3-U06-TH1",
     contentHash:
-      "f6cab72f8cfdd1531b920a00ac88c412295797948ae07f3f9de5f47fbd3dfa21",
+      "cb5c7d18e5f5b12ed9f9f8e5f1c75faf4d51edcb308dc6101d80991adbd616a3",
   },
   {
     id: "G3-U07-TH1",
     contentHash:
-      "3eb16039fb24bf8dfa38f2a29632c1b6e41f4975e52fbaf06bc8e9b120182c85",
+      "0a784e44569c5289489d2a082e960f7d25cac9ed209e5773e0bbd93b3b8d4462",
   },
   {
     id: "G3-L01-TH1",
     contentHash:
-      "9d220aa5024a81123e38d61edc38ab61ba398804f381d0098da308b803065007",
+      "8450707a64761d3fb93f39b46a9d9e1c1523ffe53924aefa1b7b30677c9e413f",
   },
   {
     id: "G3-L02-TH1",
     contentHash:
-      "d8e4bf01be85affeb8b6cc25ebf88f6ca5e0e98f77017b9a88dc3a3296b51069",
+      "889a03547a50c2cae9ddc651e2f5aeb5d0c1c708bedf0ccdbc0a6716e1e9137a",
   },
   {
     id: "G3-L03-TH1",
     contentHash:
-      "45ee519913fd1d4307499be2a492748eb78806dbdf44529655b607a4f407336a",
+      "eab7e03d0ba5fa3c745be94758b9a84e504152f8fec7e53df0b4184116372789",
   },
   {
     id: "G3-L04-TH1",
     contentHash:
-      "58770734f4a752fd23606bf2748881c75b1421074ba7a6f4b261b818bc842d80",
+      "b108f5317cc98af31f19a7cf1bdada51ce9fe73985d2e3346c0a39344ae82d19",
   },
   {
     id: "G3-L05-TH1",
     contentHash:
-      "297246a09c7a640398818637f6837d960e3999536ea5f7f96bcdaf44ddd4145f",
+      "e32207aa339f474577f2659217b9dd765c027bc1d156b45e3c0d1f3b570d5652",
   },
   {
     id: "G3-LP01-TH1",
     contentHash:
-      "0f39b01a9d86a73f992e0767b98e3bce9ecb4c74fb954296086da6567f35b883",
+      "64e0a8dbcb9480aff5dd67b1306996ff5b4c6aa13eb7e4b72951112b2db615b1",
   },
   {
     id: "G3-L06-TH1",
     contentHash:
-      "6dbb2336bd4e37668d77f7fa34ac0f3eec4819a20fdb0338a3b84412e3021b04",
+      "2486c2bc79efb72362e38f8ebd72b17a1cf52de4e8f6dded883995fdb76bdfac",
   },
   {
     id: "G3-L07-TH1",
     contentHash:
-      "11573566a4e5fae016acd6c3841a92d5ba63ff2b12742c52c652ed4b0c64586c",
+      "6dbaa02a8262a6817eba47c99c24b32ad5e675ae18f56de01e2a0414a1e803b3",
   },
 ];
 export const publicationManifest = Object.freeze(

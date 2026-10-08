@@ -22,9 +22,9 @@ export default function ThinkingVariantFigure({
                 <rect
                   key={col + "-" + n}
                   x={col * 65}
-                  y={230 - (n + 1) * 36}
+                  y={230 - (n + 1) * Math.min(36,200/height)}
                   width="50"
-                  height="36"
+                  height={Math.min(36,200/height)}
                   fill={blue}
                   fillOpacity=".3"
                   stroke={blue}
@@ -35,6 +35,32 @@ export default function ThinkingVariantFigure({
         ))}
       </>
     );
+  else if(unit === "U01-single") {
+    const cell=Math.min(40,180/v[0]);
+    picture=<><text x="55" y="35">只有正面照片：最高 {v[0]}、1 块</text>{[v[0],1].map((height,col)=>Array.from({length:height},(_,i)=><rect key={col+'-'+i} x={90+col*65} y={230-(i+1)*cell} width="50" height={cell} fill={blue} fillOpacity=".3" stroke={blue}/>))}<text x="345" y="45">地面已知位置（高度未知）</text>{['后左？','后右空','前左？','前右？'].map((label,i)=><g key={label}><rect x={345+i%2*115} y={75+Math.floor(i/2)*80} width="110" height="75" fill="#e3ebde" stroke={green}/><text x={360+i%2*115} y={120+Math.floor(i/2)*80}>{label}</text></g>)}</>;
+  }
+  else if(unit === "U03-reverse") {
+    picture=<>{v.map((len,i)=><g key={i}><text x="55" y={55+i*110}>{i?'拼接后目标线段':'已知短纸条'}：{len}厘米</text><rect x="55" y={70+i*110} width={450*len/Math.max(...v)} height="35" fill={i?blue:gold}/></g>)}<text x="55" y="290">原来长纸条：？厘米</text></>;
+  }
+  else if(unit === "UP01-reverse") {
+    picture=<><path d="M100 190H540M320 190V265M265 265H375" stroke={green} strokeWidth="5"/>{[v[0],v[2]].map((count,side)=>Array.from({length:count},(_,i)=><g key={side+'-'+i}><rect x={95+side*275+i*40} y="130" width="32" height="50" fill={gold}/><text x={111+side*275+i*40} y="160" textAnchor="middle">袋</text></g>))}<text x="70" y="65">左：{v[0]}袋＋{v[1]}克</text><text x="365" y="65">右：{v[2]}袋＋？克</text><text x="95" y="225">{v[1]}克砝码</text><text x="380" y="225">未知砝码重量</text><text x="215" y="300">每袋已知 {v[3]} 克</text></>;
+  }
+  else if(unit === "U06-reverse" || unit === "U06-unknown") {
+    const unknownBoth=unit==='U06-unknown';
+    picture=<>{[0,1].map(i=><g key={i}><text x="55" y={45+i*115}>{i?'绿带':'黄带'}：{!unknownBoth&&i===0?`整体${v[0]}厘米，取1/2`:`整体未知，取1/${unknownBoth?v[i]:3}`}</text><rect x="55" y={65+i*115} width="475" height="40" fill={i?green:gold} fillOpacity={(unknownBoth||i===1)?0.12:0.5} stroke={i?green:gold} strokeDasharray={unknownBoth||i===1?'8 5':undefined}/></g>)}<text x="55" y="295">未知长度的虚线条不表示实际比例。</text></>;
+  }
+  else if(unit === "L01-reverse") {
+    picture=<><rect x="70" y="55" width="220" height="220" fill="#ead8ae" stroke={gold}/><path d="M180 55V275M70 165H290" stroke={blue} strokeDasharray="7 5"/><text x="70" y="35">展开共 {v[1]} 个孔</text><path d="M325 170H365" stroke={green} strokeWidth="4"/><rect x="415" y="100" width="115" height="115" fill="#d8b9a6" stroke={green}/><text x="438" y="165">？个孔</text><text x="360" y="265">倒回两次对折后</text></>;
+  }
+  else if(unit === "L03-reverse") {
+    picture=<><rect x="90" y="75" width="310" height={310*v[1]/v[0]} fill="#e3ebde" stroke={green} strokeWidth="4"/><text x="180" y="65">原长 {v[0]} 厘米</text><text x="415" y={75+155*v[1]/v[0]}>原宽 {v[1]} 厘米</text><text x="65" y="305">新长增加 {v[2]} 厘米；同一根绳子，新宽？</text></>;
+  }
+  else if(unit === "L04-reverse") {
+    picture=<><rect x="90" y="75" width="310" height="175" fill="#e3ebde" stroke={green} strokeWidth="4"/><path d="M90 250L400 75" stroke={blue} strokeWidth="4"/><text x="180" y="50">长 {v[0]} 厘米</text><text x="425" y="165">宽？厘米</text><text x="215" y="215">一块 {v[1]} 平方厘米</text><text x="65" y="290">示意结构，未知宽度不由图的比例决定。</text></>;
+  }
+  else if(unit === "LP01-reverse") {
+    picture=<>{['一','二','三','四','五','六','日'].map((label,i)=>{const extra=Array.from({length:v[0]},(_,n)=>(v[1]+n)%7).includes(i);return <g key={label}><text x={60+i*78} y="75">周{label}</text><rect x={48+i*78} y="105" width="64" height="95" fill={extra?gold:blue} fillOpacity=".25"/><text x={60+i*78} y="160">{extra?5:4}次</text></g>})}<text x="70" y="260">这个月的总天数和1日的星期：？</text></>;
+  }
   else if (unit === "U03")
     picture = (
       <>
@@ -92,28 +118,15 @@ export default function ThinkingVariantFigure({
         </text>
       </>
     );
-  else if (unit === "U05")
-    picture = (
-      <>
-        <path
-          d="M215 45V250H465"
-          fill="#e8eddc"
-          stroke={green}
-          strokeWidth="5"
-        />
-        <path d="M215 250L270 75" stroke={blue} strokeWidth="4" />
-        <path d="M215 220H245V250" fill="none" stroke={gold} strokeWidth="3" />
-        <text x="65" y="55">
-          整个角是直角
-        </text>
-        <text x="165" y="140">
-          左
-        </text>
-        <text x="320" y="180">
-          右（更大）
-        </text>
-      </>
-    );
+  else if (unit === "U05") {
+    const straight=v[0]===180, small=v[1]??20;
+    const ray=straight?180-small:90-small;
+    const x=260+170*Math.cos(ray*Math.PI/180), y=245-170*Math.sin(ray*Math.PI/180);
+    picture=<><path d={straight?"M65 245H525":"M260 55V245H500"} fill="none" stroke={green} strokeWidth="5"/><path d={`M260 245L${x} ${y}`} stroke={blue} strokeWidth="4"/>{!straight&&<path d="M260 215H290V245" fill="none" stroke={gold} strokeWidth="3"/>}<text x="65" y="35">整个角：{straight?'一条直线形成的角':'直角'}</text><text x="170" y="160">左（较小）</text><text x="355" y="180">右（较大）</text></>;
+  }
+  else if (unit === "L01-fold") {
+    picture=<><rect x="45" y="50" width="205" height="205" fill="#ead8ae" stroke={gold}/><path d="M148 50V255" stroke={blue} strokeDasharray="6 4"/>{v[0]>1&&<path d="M45 153H250" stroke={blue} strokeDasharray="6 4"/>}{v[0]>2&&<path d="M148 153L250 255" stroke={blue} strokeDasharray="6 4"/>}{v[0]>3&&<path d="M148 153L250 204" stroke={blue} strokeDasharray="6 4"/>}<text x="45" y="30">依次对折 {v[0]} 次</text><path d="M280 155H335" stroke={green} strokeWidth="4"/><path d={v[0]<3?'M365 100H505V235H365Z':v[0]===3?'M365 100H505V235Z':'M365 100H505L505 170Z'} fill="#d8b9a6" stroke={green}/>{Array.from({length:v[1]},(_,i)=><circle key={i} cx={465+i*20} cy={v[0]===4?135:155} r="5" fill="white"/>)}<text x="330" y="275">在折好的纸上打 {v[1]} 个孔</text></>;
+  }
   else if (unit === "U06")
     picture = (
       <>
@@ -217,7 +230,7 @@ export default function ThinkingVariantFigure({
         )}
       </>
     );
-  } else if (unit === "L07")
+  } else if (unit === "L07" || unit === "L07-reverse")
     picture = (
       <>
         <rect
@@ -250,19 +263,19 @@ export default function ThinkingVariantFigure({
           strokeWidth="3"
         />
         <text x="100" y="65">
-          足球{v[1]}人
+          足球{unit==='L07'?v[1]:v[0]}人
         </text>
         <text x="400" y="65">
-          音乐{v[2]}人
+          音乐{unit==='L07'?v[2]:v[1]}人
         </text>
         <text x="70" y="275">
-          共{v[0]}人；都不喜欢{v[3]}人
+          共{unit==='L07'?v[0]:'？'}人；都不喜欢{v[3]}人
         </text>
         <text x="175" y="165">
           只足球？
         </text>
         <text x="300" y="165">
-          都喜欢？
+          {unit==='L07'?'都喜欢？':`都喜欢${v[2]}人`}
         </text>
         <text x="445" y="165">
           只音乐？
@@ -340,9 +353,9 @@ export default function ThinkingVariantFigure({
                 {bags}满袋
               </text>
               {Array.from({ length: bags }, (_, i) => (
-                <g key={i} transform={`translate(${90 + i * 47} 0)`}>
-                  <rect width="40" height="48" rx="10" fill="#e4d09e" />
-                  <text x="20" y="30" textAnchor="middle" fontSize="13">
+                <g key={i} transform={`translate(${90 + i * Math.min(47,380/v[3])} 0)`}>
+                  <rect width={Math.min(40,380/v[3]*.82)} height="48" rx="10" fill="#e4d09e" />
+                  <text x={Math.min(40,380/v[3]*.82)/2} y="30" textAnchor="middle" fontSize="13">
                     {v[0]}
                   </text>
                 </g>

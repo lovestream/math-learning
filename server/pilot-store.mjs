@@ -1,3 +1,4 @@
+import {withdrawnTasks, withdrawnLessons} from "../shared/withdrawn-checks.mjs";
 import {validateThinking} from './thinking-store.mjs';
 import {randomUUID} from 'node:crypto';
 import {validateTask} from '../shared/pilot-math.mjs';
@@ -33,14 +34,16 @@ export function saveReading(p,input,lessons,now=Date.now()){
 }
 export function createSession(p,input,lessons,now=Date.now()){
   const l=findLesson(lessons,input.lessonId),st=initPilot(p);check(['warmup','core','transfer','challenge','review'].includes(input.setName),'请选择练习组。');
-  const existing=Object.values(st.sessions).find(s=>s.lessonId===l.lessonId&&s.setName===input.setName&&!s.completedAt&&!s.submittedAt&&s.contentVersion===l.contentVersion);
+  check(!input.assessment || (input.assessment==='withdrawn-v1' && input.setName==='core' && withdrawnLessons.includes(l.lessonId)),'这节课没有撤教具五题小测。');
+  const selected=input.assessment?withdrawnTasks(l):l.taskSets[input.setName];
+  const existing=Object.values(st.sessions).reverse().find(s=>s.lessonId===l.lessonId&&s.setName===input.setName&&(s.assessment??null)===(input.assessment??null)&&(input.assessment||(!s.completedAt&&!s.submittedAt))&&s.contentVersion===l.contentVersion);
   if(existing){
     // Wording edits refresh unfinished sessions without resetting answers or reward rights.
-    if(existing.editorialRevision!==l.editorialRevision){existing.tasks=structuredClone(l.taskSets[input.setName]);existing.editorialRevision=l.editorialRevision;existing.revision++;}
+    if(!existing.submittedAt&&!existing.completedAt&&existing.editorialRevision!==l.editorialRevision){existing.tasks=structuredClone(selected);existing.editorialRevision=l.editorialRevision;existing.revision++;}
     existing.selfChecks??={};return existing;
   }
   const at=new Date(now).toISOString();const review=st.review?.[l.lessonId];
-  const s={id:randomUUID(),lessonId:l.lessonId,contentVersion:l.contentVersion,setName:input.setName,editorialRevision:l.editorialRevision,taskIds:l.taskSets[input.setName].map(t=>t.id),tasks:structuredClone(l.taskSets[input.setName]),revision:0,index:0,answers:{},help:{},results:{},selfChecks:{},createdAt:at,savedAt:at,completedAt:null,reviewDue:input.setName==='review'&&review&&Date.parse(review.dueAt)<=now?review.dueAt:null};
+  const s={id:randomUUID(),lessonId:l.lessonId,contentVersion:l.contentVersion,setName:input.setName,editorialRevision:l.editorialRevision,assessment:input.assessment??null,taskIds:selected.map(t=>t.id),tasks:structuredClone(selected),revision:0,index:0,answers:{},help:{},results:{},selfChecks:{},createdAt:at,savedAt:at,completedAt:null,reviewDue:input.setName==='review'&&review&&Date.parse(review.dueAt)<=now?review.dueAt:null};
   st.sessions[s.id]=s;st.lastLessonId=l.lessonId;return s;
 }
 export function saveSession(p,input,now=Date.now()){
@@ -82,7 +85,7 @@ export function submitTask(p,input,lessons,now=Date.now()){
     const d=st.daily[day(now)]??={tasks:0,completion:0};let paid=0;
     if(verdict.status==='correct'){
       const eligibility=`${s.contentVersion}:${task.id}${s.setName==='review'?`:${s.reviewDue??'preview'}`:''}`;
-      const nominal=s.help[task.id]==='solution'?0:2+(!assisted&&s.setName==='transfer'?1:0)+(!assisted&&task.responseSpec?.type==='claim-evidence'?1:0);
+      const nominal=s.help[task.id]==='solution'?0:2+(!assisted&&task.level==='transfer'?1:0)+(!assisted&&task.responseSpec?.type==='claim-evidence'?1:0);
       const earnedBefore=s.setName==='review'?(st.entitlements[eligibility]??0):Math.max(0,...Object.entries(st.entitlements).filter(([key])=>key.endsWith(`:${task.id}`)).map(([,amount])=>amount));
       const rewardAllowed=s.setName!=='review'||Boolean(s.reviewDue);
       paid=rewardAllowed?Math.min(Math.max(0,nominal-earnedBefore),Math.max(0,30-d.tasks)):0;
@@ -127,6 +130,9 @@ export function validatePilot(st){
     for(const [widgetId,widget] of Object.entries(r.widgets)){check(key(widgetId),'实验位置不合法。');try{validateWidgetState(widget,id)}catch(error){check(false,error.message)}}
   }
   for(const [id,s] of Object.entries(st.sessions)){
+    if(s.assessment)check(s.assessment==='withdrawn-v1'&&s.setName==='core'&&JSON.stringify(s.taskIds)===JSON.stringify(withdrawnTasks({lessonId:s.lessonId,taskSets:{all:s.tasks}}).map(t=>t.id)),'撤教具小测任务清单无效。');
+    if(s.parentReviews){check(object(s.parentReviews),'解释题批阅历史无效。');for(const [taskId,history]of Object.entries(s.parentReviews)){check(s.taskIds.includes(taskId)&&Array.isArray(history)&&history.length<=100&&history.every(v=>['correct','needs-remediation'].includes(v.verdict)&&v.source==='parent-workbench'&&typeof v.comment==='string'&&v.comment.length<=1200&&Number.isFinite(Date.parse(v.at))&&object(v.evidence?.first)&&object(v.evidence?.result)),'解释题批阅证据无效。');}}
+
     check(key(id)&&s.id===id&&key(s.lessonId)&&Number.isInteger(s.revision)&&s.revision>=0&&Array.isArray(s.taskIds)&&s.taskIds.length>0&&Array.isArray(s.tasks)&&s.tasks.length===s.taskIds.length&&Number.isInteger(s.index)&&s.index>=0&&s.index<s.taskIds.length&&object(s.answers)&&object(s.help)&&object(s.results)&&(s.selfChecks===undefined||object(s.selfChecks)),'练习记录不完整。');
     for(const a of Object.values(s.answers))answerCheck(a);
     for(const [taskId,record] of Object.entries(s.selfChecks??{})){check(s.taskIds.includes(taskId)&&object(record)&&object(record.firstAnswer),'自查记录不完整。');answerCheck(record.firstAnswer);if(record.evidenceCompletedAt){check(Number.isFinite(Date.parse(record.evidenceCompletedAt)),'自查日期无效。');evidenceCheck(record.evidence,s.lessonId.startsWith('G3-U02')&&s.tasks.find(t=>t.id===taskId)?.kind!=='choice'&&s.tasks.find(t=>t.id===taskId)?.kind!=='explanation');}}
@@ -136,4 +142,27 @@ export function validatePilot(st){
   for(const e of st.events)check(key(e.id)&&typeof e.signature==='string'&&object(e.result),'保存回执格式不正确。');
   for(const d of Object.values(st.daily))check(Number.isInteger(d.tasks)&&d.tasks>=0&&d.tasks<=30&&[0,5].includes(d.completion),'星点上限记录不正确。');
   if(st.review!==undefined){check(object(st.review),'复习记录不完整。');for(const [id,r] of Object.entries(st.review))check(key(id)&&object(r)&&Number.isFinite(Date.parse(r.dueAt))&&Number.isInteger(r.stage)&&r.stage>=0&&validReviewSchedule(r),'复习日期记录不完整。');}
+}
+
+// Human review of explanations in the existing formal bank, including withdrawn
+// checks. This endpoint awards no points and never replaces the immutable first answer.
+export const parentFormalTasks = p => Object.values(p.studio?.sessions??{}).flatMap(s=>s.tasks.filter(t=>t.kind==='explanation'&&(s.results[t.id]?.status==='pendingReview'||s.parentReviews?.[t.id])).map(t=>({sessionId:s.id,revision:s.revision,lessonId:s.lessonId,assessment:s.assessment,task:t,result:s.results[t.id],selfCheck:s.selfChecks[t.id],help:s.help[t.id]??null,history:s.parentReviews?.[t.id]??[]})));
+export function reviewFormalTask(p,input,now=Date.now()) {
+ const st=initPilot(p);
+ return receipt(st,input.eventId,{action:'parent-formal-review',...input},()=>{
+  const s=sessionOf(p,input.sessionId);revision(s,input.revision);
+  const t=s.tasks.find(t=>t.id===input.taskId),r=s.results[input.taskId];
+  check(t?.kind==='explanation'&&r&&['pendingReview','correct','incorrect'].includes(r.status),'请核对已提交的解释题。');
+  check(['correct','needs-remediation'].includes(input.verdict)&&typeof input.comment==='string'&&input.comment.trim().length>=2&&input.comment.length<=1200,'请写下批阅依据。');
+  s.parentReviews??={};const history=s.parentReviews[t.id]??=[];check(history.length<100,'请导出过多的批阅历史。');
+  history.push({verdict:input.verdict,comment:input.comment.trim(),at:new Date(now).toISOString(),source:'parent-workbench',evidence:structuredClone({first:s.selfChecks[t.id],result:r,help:s.help[t.id]??null})});
+  r.status=input.verdict==='correct'?'correct':'incorrect';r.message=`家长核对：${input.comment.trim()}`;r.paid=0;
+  if(input.verdict!=='correct')s.hadIncorrect=true;
+  if(s.tasks.every(t=>s.results[t.id]?.status==='correct')) {
+   s.completedAt??=new Date(now).toISOString();
+   st.review[s.lessonId]??={stage:0,dueAt:new Date(now+DAY).toISOString()};
+  } else {if(s.completedAt){s.completionHistory??=[];s.completionHistory.push(s.completedAt);}s.completedAt=null;}
+  s.revision++;s.savedAt=new Date(now).toISOString();
+  return {status:r.status,paid:0,revision:s.revision};
+ });
 }

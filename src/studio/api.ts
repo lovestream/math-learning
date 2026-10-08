@@ -11,7 +11,7 @@ async function request<T>(url:string, body?:Record<string,unknown>):Promise<T>{
 export const studioApi={
   data:()=>request<StudioData>('/api/studio'),
   reading:(lessonId:string,revision:number,blockId:string,widgets:Record<string,WidgetState>)=>request<Envelope<{revision:number}>>('/api/studio/reading',{lessonId,revision,blockId,widgets}),
-  session:(lessonId:string,setName:SetName)=>request<Envelope<PilotSession>>('/api/studio/sessions',{lessonId,setName}),
+  session:(lessonId:string,setName:SetName,assessment?:string)=>request<Envelope<PilotSession>>('/api/studio/sessions',{lessonId,setName,...(assessment?{assessment}:{})}),
   draft:(sessionId:string,revision:number,index:number,answers:Record<string,Record<string,string>>)=>request<Envelope<PilotSession>>('/api/studio/draft',{sessionId,revision,index,answers}),
   help:(sessionId:string,revision:number,taskId:string,kind:'hint'|'solution'|'article',eventId:string)=>request<Envelope<{text:string;revision:number}>>('/api/studio/help',{sessionId,revision,taskId,kind,eventId}),
   selfCheck:(sessionId:string,revision:number,taskId:string,answer:Record<string,string>,modelStateVersion:string,eventId:string)=>request<Envelope<{status:'selfCheck'|'invalidInput';message:string;revision:number}>>('/api/studio/self-check',{sessionId,revision,taskId,answer,modelStateVersion,eventId}),

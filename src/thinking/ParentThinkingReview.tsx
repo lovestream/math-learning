@@ -1,9 +1,11 @@
+import ParentFormalReview from "./ParentFormalReview";
 import { useEffect, useState } from "react";
 import type { ParentThinkingCard, Progress } from "../types";
 import { api } from "../api";
 import "./thinking.css";
 const verdicts = [
-  ["independent-mastered", "独立掌握"],
+  ["independent-mastered", "无提示作答 · 家长确认"],
+  ["model-supported", "操作支持下理解"],
   ["corrected-with-help", "辅助订正"],
   ["needs-remediation", "需要回补"],
   ["deferred", "暂缓判断"],
@@ -33,7 +35,7 @@ export default function ParentThinkingReview({
     [reviewer, setReviewer] = useState("家长"),
     [errors, setErrors] = useState<string[]>([]),
     [error, setError] = useState(""),
-    [busy, setBusy] = useState(false);
+    [busy, setBusy] = useState(false),[recoveryInput,setRecoveryInput]=useState(""),[recoveryCode,setRecoveryCode]=useState("");
   const load = async () => {
     const out = await api.parentThinking();
     setCards(out.cards);
@@ -109,6 +111,7 @@ export default function ParentThinkingReview({
           </p>
         </div>
       </header>
+      {access?.unlocked?<details className="parent-recovery"><summary>保存家长恢复码（忘记密码时用）</summary><p>恢复只更换家长密码，不删除学习进度。旧凭据会单独安全备份；学习导出文件不包含密码和恢复码。</p><button disabled={busy} onClick={async()=>{try{const out=await api.parentRecoveryCode();setRecoveryCode(out.recoveryCode)}catch(e){setError(e instanceof Error?e.message:'生成失败')}}}>生成新的恢复码（旧码失效）</button>{recoveryCode&&<><p>请由家长单独保存，此页关闭后不再显示。</p><output>{recoveryCode}</output></>}</details>:access?.configured&&<details className="parent-recovery"><summary>忘记家长密码？</summary><p>使用家长之前单独保存的恢复码。成功后需要生成新的恢复码。</p><label>恢复码<input autoComplete="off" value={recoveryInput} onChange={e=>setRecoveryInput(e.target.value)}/></label><label>新密码<input type="password" inputMode="numeric" autoComplete="new-password" value={pin} onChange={e=>setPin(e.target.value)}/></label><label>再次输入新密码<input type="password" value={confirm} onChange={e=>setConfirm(e.target.value)}/></label><button disabled={busy||pin!==confirm||!recoveryInput||!/^\d{6,12}$/.test(pin)} onClick={async()=>{setBusy(true);try{setAccess(await api.recoverParent(recoveryInput,pin));setPin('');setConfirm('');setRecoveryInput('');setRecoveryCode('');await load()}catch(e){setError(e instanceof Error?e.message:'恢复失败')}finally{setBusy(false)}}}>核对恢复码并更换密码</button><p>旧版未保存恢复码时：由家长在本机终端运行 <code>node scripts/recover-parent-access.mjs --confirm-parent-reset</code>。程序只备份并重置家长凭据，随后回到本页重新设置。学习数据库不会被删除。</p></details>}
       {!access ? (
         <p>正在读取本机家长工作台…</p>
       ) : !access.unlocked ? (
@@ -155,13 +158,14 @@ export default function ParentThinkingReview({
         <>
           <button
             onClick={async () => {
-              setAccess(await api.lockParent());
+              setAccess(await api.lockParent());setRecoveryCode('');
               setCards([]);
               setSelected("");
             }}
           >
             锁定家长工作台
           </button>
+          <p>批阅反馈和审核人会向孩子显示；请使用“家长”等称呼。参考解答与完整核对依据只在解锁后提供。</p>
           <p>
             离开家长中心会锁定；解锁最多有效30分钟。同一台电脑的线下提示仍需家长如实核对。
           </p>
@@ -176,7 +180,7 @@ export default function ParentThinkingReview({
                     setComment("");
                     setErrors([]);
                     setVerdict(
-                      c.record.help.length
+                      c.record.scaffold?.usedAnswerValidation||c.record.tool ? "model-supported" : c.record.help.length
                         ? "corrected-with-help"
                         : "needs-remediation",
                     );
@@ -206,11 +210,11 @@ export default function ParentThinkingReview({
                 <dl>
                   <dt>第一次想法（不可覆盖）</dt>
                   <dd>{record.firstAnswer ?? "尚未保存首答"}</dd>
-                  <dt>首答前辅助</dt>
+                  <dt>首答前文字提示 / 讲解</dt>
                   <dd>
                     {record.firstAssisted
-                      ? "有系统辅助记录"
-                      : "系统未记录；请同时核对线下帮助"}
+                      ? "已查看文字提示或讲解"
+                      : "未查看文字提示或讲解；教具验证另列，线下帮助仍需核对"}
                   </dd>
                   <dt>自查发现</dt>
                   <dd>{record.reflection ?? "尚未自查"}</dd>
@@ -239,7 +243,8 @@ export default function ParentThinkingReview({
                     {h.text}
                   </p>
                 ))}
-                {!record.help.length && <p>无系统辅助记录。</p>}
+                {!record.help.length && <p>未查看分层提示。使用教具与线下帮助仍需另行核对。</p>}
+                <p className="thinking-evidence">{record.scaffold?.usedAnswerValidation||record.tool?`借助模型验证 ${record.scaffold?.validationAttempts ?? record.toolHistory?.length ?? 0} 次${record.scaffold?'':'（旧记录仅为历史下限）'}；此轮不能记为撤去自动反馈后的独立迁移。`:'没有教具自动验证记录。条件图仍属于视觉支架；线下帮助由家长核对。'}</p>
                 <details>
                   <summary>家长核对依据与适用范围</summary>
                   <p>{card.applicability}</p>
@@ -261,7 +266,7 @@ export default function ParentThinkingReview({
                             value={value}
                             disabled={
                               value === "independent-mastered" &&
-                              record.help.length > 0
+                              (record.help.length > 0 || !!record.scaffold?.usedAnswerValidation || !!record.tool)
                             }
                           >
                             {label}
@@ -327,12 +332,16 @@ export default function ParentThinkingReview({
                     {verdicts.find((v) => v[0] === r.verdict)?.[1]}
                     <br />
                     {r.comment}
+                    {r.evidence && <><br />批阅时的证据快照：{r.evidence.mode === "challenge" ? "撤去自动反馈作答" : "探索后作答"}；模型验证 {r.evidence.scaffold.validationAttempts} 次。事后阅读资料不会改写此记录。</>}
                   </p>
                 ))}
+                {!!record.postReviewStudy?.length && <details><summary>批阅后复盘资料（不改变历史评价）</summary>{record.postReviewStudy.map((h, i) => <p key={i}>{new Date(h.at).toLocaleString("zh-CN")} · {h.kind}<br />{h.text}</p>)}</details>}
                 {record.attempts?.map((a, i) => (
                   <details key={a.attemptId}>
                     <summary>历史第{i + 1}次作答与批阅</summary>
+                    {a.variant && <p>{a.variant.question}</p>}
                     <p>首答：{a.firstAnswer}</p>
+                    <p>模型验证：{a.scaffold?.validationAttempts ?? a.toolHistory?.length ?? 0} 次{a.scaffold ? "" : "（旧记录为历史下限）"}。</p>
                     <p>最终：{a.finalAnswer}</p>
                     <p>
                       辅助：
@@ -353,6 +362,7 @@ export default function ParentThinkingReview({
         </>
       )}
       {error && <p role="alert">{error}</p>}
+    {access?.unlocked&&<ParentFormalReview onProgress={onProgress}/>}
     </section>
   );
 }

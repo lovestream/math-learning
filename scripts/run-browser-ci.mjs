@@ -1,3 +1,5 @@
+import {execFileSync} from "node:child_process";
+import {createHash} from "node:crypto";
 // Reuse the same checked-in browser callbacks locally and in CI. No real learner data.
 import fs from "node:fs";
 import os from "node:os";
@@ -24,6 +26,9 @@ const all = [
   "verify-save-stress-browser",
   "verify-thinking-tools-browser",
   "verify-performance-browser",
+  "verify-evidence-browser",
+  "verify-accessibility-browser",
+  "verify-variants-browser",
 ];
 const only = process.argv.find((v) => v.startsWith("--only=")),
   names = only
@@ -36,12 +41,17 @@ const only = process.argv.find((v) => v.startsWith("--only=")),
           "verify-core-browser",
           "verify-save-stress-browser",
           "verify-thinking-tools-browser",
+          "verify-evidence-browser",
+          "verify-accessibility-browser",
+          "verify-variants-browser",
         ];
 if (names.some((n) => !all.includes(n)))
   throw Error("Unknown browser callback");
 const out = "output/playwright/v2-audit";
 fs.mkdirSync(out, { recursive: true });
 const summary = [];
+const sourceEvidence={sha:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),dirty:Boolean(execFileSync('git',['status','--porcelain'],{encoding:'utf8'}).trim()),diffHash:createHash('sha256').update(execFileSync('git',['diff','HEAD'])).digest('hex'),startedAt:new Date().toISOString()};
+fs.writeFileSync(`${out}/source-evidence.json`,JSON.stringify(sourceEvidence,null,2));
 let browser;
 const timeout = setTimeout(() => {
   console.error("Browser audit exceeded 12 minutes");
@@ -105,6 +115,34 @@ try {
       });
       store.close();
     }
+    if(name === "verify-evidence-browser") {
+      const store=createStore(dir,[]),start=Date.now()-60*86400000;
+      store.mutate(p=>{
+        const complete=(id,at)=>{
+          const send=(action,extra={})=>applyThinking(p,{taskId:id,revision:p.studio.thinking?.[id]?.revision??0,eventId:crypto.randomUUID(),action,...extra},at);
+          send('first',{answer:'自动化夹具：独立推理，不代表Kevin学习。'});send('check',{checks:[true,true,true],reflection:'仅测试：核对每个条件。'});send('final',{answer:'自动化夹具最终解释。'});
+        };
+        for(const [id,rounds,verdict] of [['G3-U02-TH1',4,'independent-mastered'],['G3-U03-TH1',4,'needs-remediation'],['G3-U06-TH1',12,'needs-remediation']]) {
+          let at=start;complete(id,at);
+          const grade=()=>applyThinkingReview(p,{taskId:id,revision:p.studio.thinking[id].revision,eventId:crypto.randomUUID(),verdict,comment:'自动化夹具：不代表Kevin掌握。',reviewer:'测试夹具',causes:[]},at);
+          grade();
+          for(let i=0;i<rounds;i++){at=Date.parse(p.studio.thinking[id].review.dueAt);applyThinking(p,{taskId:id,revision:p.studio.thinking[id].revision,eventId:crypto.randomUUID(),action:'review-start'},at);complete(id,at);grade();}
+        }
+      });store.close();
+    }
+    if(name === "verify-variants-browser") {
+      const store=createStore(dir,[]),start=Date.now()-60*86400000;
+      const {thinkingCards}=await import('../content/pilot/thinking-source.mjs');
+      store.mutate(p=>{for(const [n,card] of thinkingCards.filter(t=>t.publicationStatus==='guided-study').entries()){
+        const id=card.id,target=n%2===0?9:12;let at=start;
+        const send=(action,extra={})=>applyThinking(p,{taskId:id,revision:p.studio.thinking?.[id]?.revision??0,eventId:crypto.randomUUID(),action,...extra},at);
+        for(let i=0;i<target;i++){
+          send('first',{answer:'自动化夹具的真实首答字段，不代表Kevin。'});send('check',{checks:[true,true,true],reflection:'自动化夹具：核对条件。'});send('final',{answer:'自动化夹具最终解释。'});
+          applyThinkingReview(p,{taskId:id,revision:p.studio.thinking[id].revision,eventId:crypto.randomUUID(),verdict:'needs-remediation',comment:'仅自动化测试夹具。',reviewer:'测试夹具',causes:[]},at);
+          at=Date.parse(p.studio.thinking[id].review.dueAt);send('review-start');
+        }
+      }});store.close();
+    }
     const log = fs.createWriteStream(`${out}/${name}-server.log`),
       child = spawn(
         process.execPath,
@@ -143,10 +181,10 @@ try {
       const callback = new Function(`return (${source})`)();
       const result = await callback(page);
       if (!result?.passed) throw Error("Callback did not report success");
-      summary.push({ name, ...result });
+      summary.push({ name, ...result, source:sourceEvidence });
       fs.writeFileSync(
         `${out}/${name}.json`,
-        JSON.stringify(result, null, 2) + "\n",
+        JSON.stringify({...result,source:sourceEvidence}, null, 2) + "\n",
       );
       console.log(`${name}: passed`);
     } catch (e) {

@@ -127,7 +127,7 @@ export default function CoreWorkbench({
   };
   const controls = (
     <label className="core-case-selector">
-      选择练习情境
+      选择操作情境
       <select
         value={s.choice}
         onChange={(e) =>
@@ -136,7 +136,7 @@ export default function CoreWorkbench({
       >
         {model.cases!.map((_, i) => (
           <option key={i} value={i}>
-            {i === 5 ? "换情境迁移" : `同类练习 ${i + 1}`}
+            {i === 5 ? "换情境操作" : `同类操作 ${i + 1}`}
           </option>
         ))}
       </select>

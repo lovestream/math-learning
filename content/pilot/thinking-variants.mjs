@@ -1,3 +1,5 @@
+import {deeperThinkingVariant} from "./thinking-deeper-variants.mjs";
+import {thinkingHints} from "./thinking-hints.mjs";
 // Four independently authored isomorphic contexts per released card. Conditions,
 // parent reference and arithmetic checks share one parameter object, never prose parsing.
 const rows = [
@@ -146,6 +148,16 @@ const rows = [
     4,
   ],
 ];
+// Extension parameters are bounded and checked by the same reference oracle.
+// The original four rows above are preserved for saved attempts.
+for (let k=1;k<=8;k++) {
+ const div=3+k%3, given=div*(7+k), total=given+div*(12+k);
+ rows.push([4+k,total,given,div,10+k,18+2*k,70+10*k,300+30*k,60+k,2+k%7,
+  24+2*k,36+3*k,7+k,10+k,4+k,6+k,56+7*k,9+k,k,7+k,
+  44+4*k,12+k,4,16+k,19+k,5,6,29+k%3,k%7,[10+k,30-k,15+k,25-k],
+  40+k,24+k,20+k,7]);
+}
+export const THINKING_VARIANT_LIMIT=12;
 const weekdays = [
   "星期一",
   "星期二",
@@ -156,7 +168,7 @@ const weekdays = [
   "星期日",
 ];
 function buildThinkingVariant(id, index) {
-  if (!Number.isInteger(index) || index < 1 || index > 4)
+  if (!Number.isInteger(index) || index < 1 || index > THINKING_VARIANT_LIMIT)
     throw Error("没有这组复习情境");
   const [
     n,
@@ -201,13 +213,7 @@ function buildThinkingVariant(id, index) {
     answer,
     reason,
     conditions,
-    hints: [
-      {
-        level: 1,
-        text: "先把所有条件表示在图、表或算式里，说明每个数代表什么。",
-      },
-      { level: 2, text: "回到原条件逐条验证，检查整体、范围和是否重复计数。" },
-    ],
+    hints: thinkingHints(id),
     solutionSteps: [reason],
   });
   switch (id) {
@@ -252,6 +258,15 @@ function buildThinkingVariant(id, index) {
         "十位大1代表每组多10，个位大1代表每组多1；重复组数没有变化。",
       );
     case "G3-UP02-TH1":
+      if(index>4) {
+        const rack=index-4, book=24+index%5, second=rack*10+2, digit=index;
+        // rack=1..8, book=25..32. A valid split must use the actual tens/ones.
+        const tens=Math.floor(book/10), ones=book%10;
+        const other=rack*10+tens;
+        return simple(`架号和本号均为1到99。${rack}架${book}本直接连写为${rack}${book}；另一种合法分法是什么？分别用分隔符和固定两位字段改写。`,
+          `${other}架${ones}本；${rack}-${book}和${other}-${ones}；${String(rack).padStart(2,'0')}${book}和${other}${String(ones).padStart(2,'0')}。`,
+          [`连写编码${rack}${book}；架号、本号1到99；字段可不足两位`], '把连写串的分界移动一位，验证两边都在1到99；固定两位必须补0。');
+      }
       return simple(
         `把架号和本号直接连写：第${n}架第${n + 10}本，与第${n * 10 + 1}架第${n}本，都会得到${n}${n + 10}。请用分隔符、固定两位字段两种规则，分别改写并说明范围。`,
         `${n}-${n + 10}与${n * 10 + 1}-${n}；${String(n).padStart(2, "0")}${n + 10}与${n * 10 + 1}${String(n).padStart(2, "0")}。`,
@@ -259,6 +274,13 @@ function buildThinkingVariant(id, index) {
         "分隔符标出边界；每个字段两位时不足补0，超过99必须改规则。",
       );
     case "G3-U05-TH1":
+      if(index>4) {
+        const straight=index%2===0;
+        return simple(`图中的整个角${straight?'由一条直线组成':'是一个直角'}。内部的射线把它分成两个非零角；左角是直角的1/${index-2}，右角比左角大。右边一定是钝角吗？用直角纸片解释，并检查把两个角换个大小后是否仍成立。`,
+          straight?'一定是；若两边都不超过直角且合成一条直线，就只能都等于直角，与右边更大矛盾。':'不可能是；它只是直角的一部分，所以小于直角。',
+          [`整体${straight?'是直线形成的角':'是直角'}；右角比左角大；射线位于内部`],
+          straight?'直线形成的角由两个直角组成；较大的部分超过直角。交换大小后，右角反而小于直角。':'整体只有一个直角，两部分都比整体小；交换大小后仍是两个锐角。');
+      }
       return simple(
         `${["窗框", "桌面", "方形卡纸", "积木底面"][index - 1]}的一个直角内画一条射线，得到两个非零角。右边角比左边大。右边一定是钝角吗？用直角纸片作参照说明。`,
         "不是；两个角都小于直角，都是锐角。",
@@ -288,6 +310,12 @@ function buildThinkingVariant(id, index) {
       );
     }
     case "G3-L01-TH1":
+      if(index>4) {
+        const folds=1+(index-5)%4, holes=index<9?1:2;
+        return simple(`方形纸依次沿${folds===1?'竖直中线':folds===2?'竖直、水平中线':folds===3?'竖直、水平中线，再把小方形沿对角线':'竖直、水平中线、小方形对角线，再把小三角形沿对称轴'}对折${folds}次。在叠好的纸上打${holes}个小圆孔，每孔穿透所有层，远离折痕和纸边；不同孔及它们展开后的位置也不重合。展开共有几个孔？解释每次展开怎样改变数量。`,
+          `${2**folds*holes}个孔。`, [`${folds}次对折；打${holes}个孔；穿透全部层；展开后孔位互不重合`],
+          `一开始${holes}个孔，每次展开增加一份对应孔；依次乘2，共${2**folds*holes}个。`);
+      }
       return simple(
         `方形纸先沿${index % 2 ? "水平" : "竖直"}中线折，再沿${index % 2 ? "竖直" : "水平"}中线折。一次穿透全部四层打一个${["小三角", "小圆", "小方", "小菱形"][index - 1]}孔，孔离折痕和边都足够远。展开有几个孔？标出对应位置并解释。`,
         "4个孔，关于两条中线成对对应。",
@@ -371,6 +399,8 @@ function buildThinkingVariant(id, index) {
   }
 }
 export function thinkingVariant(id, index) {
+  const deeper=deeperThinkingVariant(id,index);
+  if(deeper)return deeper;
   const v = buildThinkingVariant(id, index),
     [
       n,
@@ -414,11 +444,11 @@ export function thinkingVariant(id, index) {
     "G3-U03-TH1": [a, b],
     "G3-UP01-TH1": [3, weight, 2, heavy],
     "G3-U04-TH1": [num, mult],
-    "G3-UP02-TH1": [n, n + 10, n * 10 + 1, n],
-    "G3-U05-TH1": [90],
+    "G3-UP02-TH1": index>4?[index-4,24+index%5,(index-4)*10+Math.floor((24+index%5)/10),(24+index%5)%10]:[n, n + 10, n * 10 + 1, n],
+    "G3-U05-TH1": index>4?[index%2===0?180:90,90/(index-2)]:[90],
     "G3-U06-TH1": [red, blue, 2, 3],
     "G3-U07-TH1": [bread1, bread2, drink1, drink2, bread1 + drink2],
-    "G3-L01-TH1": [index],
+    "G3-L01-TH1": index>4?[1+(index-5)%4,index<9?1:2]:[index],
     "G3-L02-TH1": [bag, rem, hi - 2, hi],
     "G3-L03-TH1": [per],
     "G3-L04-TH1": [w, h],
@@ -427,7 +457,7 @@ export function thinkingVariant(id, index) {
     "G3-L06-TH1": prices,
     "G3-L07-TH1": [all, swim, draw, neither],
   };
-  return { ...v, figure: { unit: id.split("-")[1], values: known[id] } };
+  return { ...v, figure: { unit: id.split("-")[1]+(id==="G3-L01-TH1"&&index>4?"-fold":""), values: known[id] } };
 }
 export const publicVariant = (v) => ({
   id: v.id,

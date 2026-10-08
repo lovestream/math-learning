@@ -1,3 +1,4 @@
+import {navigationEvent,type NavigationEvent} from "./navigationGuard";
 import {useEffect,useRef,useState} from 'react';
 import {ArrowLeft,ChevronRight,Lightbulb,Star} from 'lucide-react';
 import type {Progress} from '../types';
@@ -50,9 +51,9 @@ export function TaskInput({task,value,onChange,disabled}:{task:Task;value:Answer
   const fields=task.fields??[{key:'value',label:task.kind==='expression'?'我的算式':'我的答案',unit:task.unit}];
   return <div className="task-fields">{fields.map(f=><label key={f.key}>{f.label}<div><input disabled={disabled} value={value[f.key]??''} onChange={e=>onChange({...value,[f.key]:e.target.value})} placeholder={task.kind==='expression'?'写出替换后的完整算式':'填数字，分数用 / 隔开'}/>{f.unit&&<span className="answer-unit">{f.unit}</span>}</div></label>)}</div>;
 }
-export default function Practice({lesson,initialSet,initialTaskId,progress,setProgress,notify,onBack}:{lesson:PilotLesson;initialSet?:SetName;initialTaskId?:string;progress:Progress;setProgress:(p:Progress)=>void;notify:(m:string)=>void;onBack:()=>void}){
+export default function Practice({lesson,initialSet,initialTaskId,assessment,progress,setProgress,notify,onBack}:{lesson:PilotLesson;initialSet?:SetName;initialTaskId?:string;assessment?:string;progress:Progress;setProgress:(p:Progress)=>void;notify:(m:string)=>void;onBack:()=>void}){
   const [session,renderSession]=useState<PilotSession|null>(null),[answers,renderAnswers]=useState<Record<string,Answer>>({});
-  const [feedback,setFeedback]=useState<(TaskResult&{completionPaid?:number})|null>(null),[busy,setBusy]=useState(false),[help,setHelp]=useState(''),[examples,setExamples]=useState(false),[finished,setFinished]=useState(false),[saveState,setSaveState]=useState('');
+  const [feedback,setFeedback]=useState<(TaskResult&{completionPaid?:number})|null>(null),[busy,setBusy]=useState(false),[help,setHelp]=useState(''),[examples,setExamples]=useState(false),[finished,setFinished]=useState(false),[saveState,setSaveState]=useState(''),[conflict,setConflict]=useState(false);
   const [selfCheckMessage,setSelfCheckMessage]=useState('');
   const sessionRef=useRef<PilotSession|null>(null),answersRef=useRef<Record<string,Answer>>({}),queue=useRef(Promise.resolve()),saved=useRef(''),pending=useRef(false);
   const progressRef=useRef(setProgress);progressRef.current=setProgress;
@@ -65,20 +66,23 @@ export default function Practice({lesson,initialSet,initialTaskId,progress,setPr
   const saveDraft=async()=>{
     const s=sessionRef.current,p=payload();if(!s||!p||!dirty())return;
     const signature=JSON.stringify(p);setSaveState('正在保存…');
-    try{const out=await studioApi.draft(s.id,s.revision,p.index,p.answers);saved.current=signature;setSession({...out.result,index:s.index});progressRef.current(out.progress);setSaveState('草稿已保存')}catch(e){setSaveState('尚未保存，请重试');throw e}
+    try{const out=await studioApi.draft(s.id,s.revision,p.index,p.answers);saved.current=signature;setSession({...out.result,index:s.index});progressRef.current(out.progress);setSaveState('草稿已保存')}catch(e){const stale=(e as Error&{status?:number}).status===409;setConflict(stale);setSaveState(stale?'尚未保存：另一页面已更新，请先导出草稿再载入最新记录':'尚未保存，请重试');throw e}
   };
   const guard=async(fn:()=>Promise<void>)=>{if(pending.current)return;pending.current=true;setBusy(true);try{await enqueue(fn)}catch(e){notify(e instanceof Error?e.message:'这次没有保存，请再试。')}finally{pending.current=false;setBusy(false)}};
   const start=(set:SetName,taskId?:string)=>guard(async()=>{
-    await saveDraft();const out=await studioApi.session(lesson.lessonId,set);const index=taskId?out.result.tasks.findIndex(t=>t.id===taskId):-1;
+    await saveDraft();const out=await studioApi.session(lesson.lessonId,set,assessment);const index=taskId?out.result.tasks.findIndex(t=>t.id===taskId):-1;
     const restored=index>=0?{...out.result,index}:out.result,current=restored.tasks[restored.index];
     progressRef.current(out.progress);setSession(restored);setAnswers(out.result.answers);saved.current=JSON.stringify({sessionId:out.result.id,index:out.result.index,answers:out.result.answers});
-    setFeedback(current?restored.results[current.id]??null:null);setSelfCheckMessage(current&&restored.selfChecks?.[current.id]&&!restored.results[current.id]?'首答已经保存。请重新读题，检查单位、第一步和整条算式；想改就改，再提交最终答案。':'');setFinished(false);setHelp('');setExamples(false);setSaveState('已恢复这组练习');
+    setFeedback(current?restored.results[current.id]??null:null);setSelfCheckMessage(current&&restored.selfChecks?.[current.id]&&!restored.results[current.id]?'首答已经保存。请重新读题，检查单位、第一步和整条算式；想改就改，再提交最终答案。':'');setFinished(Boolean(assessment&&restored.submittedAt&&restored.tasks.every(t=>['correct','pendingReview'].includes(restored.results[t.id]?.status))));setHelp('');setExamples(false);setSaveState('已恢复这组练习');
     const url=new URL(location.href);url.searchParams.set('lesson',lesson.lessonId);url.searchParams.set('set',set);url.searchParams.set('practice','1');history.replaceState(null,'',url);
   });
   const opened=useRef(false);
   useEffect(()=>{if(initialSet&&!opened.current){opened.current=true;void start(initialSet,initialTaskId)}},[]);
   useEffect(()=>{if(!dirty())return;setSaveState('等待保存…');const timer=setTimeout(()=>{void enqueue(saveDraft).catch(()=>{})},650);return()=>clearTimeout(timer)},[answers,session?.index]);
   useEffect(()=>{const warn=(e:BeforeUnloadEvent)=>{if(dirty()||pending.current){e.preventDefault();e.returnValue=''}};window.addEventListener('beforeunload',warn);return()=>{window.removeEventListener('beforeunload',warn);void enqueue(saveDraft).catch(()=>notify('刚才的草稿还没有保存，请返回练习重试。'))}},[]);
+  useEffect(()=>{const navigate=(e:Event)=>{(e as NavigationEvent).detail.waitUntil(enqueue(saveDraft))};window.addEventListener(navigationEvent,navigate);return()=>window.removeEventListener(navigationEvent,navigate)},[]);
+  const exportDraft=()=>{const current=payload();if(!current)return;const a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify({format:'kevin-practice-draft',lessonId:lesson.lessonId,baseRevision:sessionRef.current?.revision,...current},null,2)],{type:'application/json'}));a.href=url;a.download=lesson.lessonId+'-unsaved-draft.json';a.click();URL.revokeObjectURL(url)};
+  const reloadLatest=()=>guard(async()=>{const out=await studioApi.data(),latest=out.progress.studio?.sessions[sessionRef.current?.id??''] as PilotSession|undefined;if(!latest)throw Error('找不到该次练习，请保留草稿再重新打开。');setSession(latest);setAnswers(latest.answers);saved.current=JSON.stringify({sessionId:latest.id,index:latest.index,answers:latest.answers});setFeedback(latest.results[latest.tasks[latest.index].id]??null);setConflict(false);setSaveState('已载入其他页面的最新记录');progressRef.current(out.progress)});
   const beginSelfCheck=()=>guard(async()=>{
     const s=sessionRef.current,t=s?.tasks[s.index];if(!s||!t)return;
     const currentAnswers=answersRef.current;const out=await studioApi.selfCheck(s.id,s.revision,t.id,currentAnswers[t.id]??{},`${lesson.contentVersion}:${t.id}`,'self-check:'+crypto.randomUUID());
@@ -109,13 +113,13 @@ export default function Practice({lesson,initialSet,initialTaskId,progress,setPr
   });
   const next=()=>{const s=sessionRef.current;if(!s)return;const index=s.tasks.findIndex((t,i)=>i>s.index&&!['correct','pendingReview'].includes(s.results[t.id]?.status));const earlier=s.tasks.findIndex(t=>!['correct','pendingReview'].includes(s.results[t.id]?.status));if(index<0&&earlier<0){setFinished(true);setFeedback(null);setSelfCheckMessage('');return}setSession({...s,index:index>=0?index:earlier});setFeedback(null);setSelfCheckMessage('');setHelp('');setExamples(false)};
   const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-  return <div className="studio-practice child-practice"><div className="studio-breadcrumb"><button disabled={busy} onClick={()=>void guard(async()=>{await saveDraft();onBack();window.scrollTo(0,0)})}><ArrowLeft size={17}/>返回讲解</button><span>{lesson.shortTitle}</span><small role="status">{saveState}</small>{saveState.startsWith('尚未')&&<button disabled={busy} onClick={()=>void guard(saveDraft)}>重试保存</button>}<button disabled={busy} onClick={()=>void guard(async()=>{await saveDraft();notify('练习草稿已保存。')})}>保存草稿</button></div>
-    <header className="practice-heading"><div><h1>现在，自己来试试</h1><p>选一组就能开始。答错可以改，也可以看提示，慢慢想清楚。</p></div></header>
-    <div className="set-tabs">{groups.map(g=><button disabled={busy} key={g.id} className={session?.setName===g.id?'active':''} onClick={()=>void start(g.id)}>{g.name} <small>{lesson.taskSets[g.id].length}题</small></button>)}</div>
+  return <div className="studio-practice child-practice"><div className="studio-breadcrumb"><button disabled={busy} onClick={()=>void guard(async()=>{await saveDraft();onBack();window.scrollTo(0,0)})}><ArrowLeft size={17}/>返回讲解</button><span>{lesson.shortTitle}</span><small role="status">{saveState}</small>{saveState.startsWith('尚未')&&<button disabled={busy} onClick={()=>void guard(saveDraft)}>重试保存</button>}{saveState.startsWith('尚未')&&<button onClick={exportDraft}>导出本页未保存草稿</button>}{conflict&&<button disabled={busy} onClick={()=>void reloadLatest()}>载入最新记录（替换本页草稿）</button>}<button disabled={busy} onClick={()=>void guard(async()=>{await saveDraft();notify('练习草稿已保存。')})}>保存草稿</button></div>
+    <header className="practice-heading"><div><h1>{assessment?"收起教具，独立试五题":"现在，自己来试试"}</h1><p>{assessment?"先自己答，再自查。教具已收起；使用提示会留下记录。":"选一组就能开始。答错可以改，也可以看提示，慢慢想清楚。"}</p></div></header>
+    {!assessment&&<div className="set-tabs">{groups.map(g=><button disabled={busy} key={g.id} className={session?.setName===g.id?'active':''} onClick={()=>void start(g.id)}>{g.name} <small>{lesson.taskSets[g.id].length}题</small></button>)}</div>}
     {!session?<div className="practice-empty"><Lightbulb/><h2>先从哪一组开始？</h2><p>建议先试两题，熟悉后也可以直接选更难的。</p><button className="studio-primary" disabled={busy} onClick={()=>void start('warmup')}>先试两题 <ChevronRight size={16}/></button></div>:finished?<section className="practice-finished"><Star/><h2>{group?.name}，这一组做完了！</h2><p>你答对了{session.tasks.filter(t=>session.results[t.id]?.status==='correct').length}题。另有{session.tasks.filter(t=>session.results[t.id]?.status==='pendingReview').length}题解释待家长核对。可以选下一组，也可以休息一下。</p>{session.setName==='core'&&Boolean(progress.studio?.review?.[lesson.lessonId])&&<p>明天再回想这节课，复习时间已经记下。</p>}<button onClick={()=>void guard(async()=>{await saveDraft();onBack();window.scrollTo(0,0)})}>回去讲讲我的发现</button></section>:task&&<section className="task-card">
-      <header><div><span>{group?.name} · 第{session.index+1}/{session.tasks.length}题</span><p>{group?.description}</p><h2>{task.prompt}</h2></div></header>
+      <header><div><span>{assessment?'撤教具小测':group?.name} · 第{session.index+1}/{session.tasks.length}题</span><p>{group?.description}</p><h2>{task.prompt}</h2></div></header>
       {task.diagram?.type==='measurement'&&'mode' in task.diagram&&<MeasurementTaskDiagram diagram={task.diagram}/>}
-      {task.diagram?.type==='concept'&&'family' in task.diagram&&<ConceptTaskDiagram diagram={task.diagram}/>}
+      {!assessment&&task.diagram?.type==='concept'&&'family' in task.diagram&&<ConceptTaskDiagram diagram={task.diagram}/>}
       <TaskInput task={task} value={answer} disabled={busy||['correct','pendingReview'].includes(feedback?.status??'')} onChange={a=>{setAnswers({...answersRef.current,[task.id]:a});if(feedback?.status==='invalidInput')setFeedback(null)}}/>
       {help&&<div className="help-panel"><Lightbulb/><p>{help}</p></div>}
       {examples&&<aside className="practice-examples"><h3>回看这节课的例子</h3>{lesson.articleBlocks.filter(b=>b.examples).flatMap(b=>b.examples??[]).map(ex=><div key={ex.title}><h4>{ex.title}</h4>{ex.steps.map(s=><p key={s.math}><b>{s.math}</b><br/>{s.why}</p>)}</div>)}<button onClick={()=>setExamples(false)}>收起例子，继续想这道题</button></aside>}

@@ -4,6 +4,7 @@ const check = (ok, msg) => {
   int = (n, min, max) => Number.isInteger(n) && n >= min && n <= max;
 export function thinkingToolSpec(id, variant) {
   const values = variant?.figure?.values;
+  if(variant && variant.figure?.unit !== id.split("-")[1])return null; // Reverse tasks have different known/unknown fields.
   if (id === "G3-UP01-TH1")
     return {
       type: "balance",

@@ -7,6 +7,9 @@ async (page) => {
   page.on("pageerror", (e) => errors.push(e.message));
   const open = async (id) => {
     await page.goto(base + "/?view=map&thinking=" + id);
+    await page.locator(".thinking-panel").waitFor();
+    const openModel=page.getByRole("button",{name:"打开教具探索（会记录模型验证）",exact:true});
+    if(await openModel.count())await openModel.click();
     const lab = page.locator(".thinking-tool");
     await lab.waitFor();
     return lab;

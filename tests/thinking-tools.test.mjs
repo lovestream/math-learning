@@ -15,7 +15,7 @@ import {
   exportEnvelope,
 } from "../server/store.mjs";
 test("同时取走相同盒子或砝码保持平衡，单边操作倾斜；多组参数一致", () => {
-  for (let i = 0; i <= 4; i++) {
+  for (let i = 0; i <= 8; i++) {
     const spec = thinkingToolSpec(
       "G3-UP01-TH1",
       i ? thinkingVariant("G3-UP01-TH1", i) : undefined,
@@ -37,7 +37,7 @@ test("同时取走相同盒子或砝码保持平衡，单边操作倾斜；多�
   }
 });
 test("多视角最高数约束唯一确定三堆，正面单张照片不能排除后排高度", () => {
-  for (let i = 0; i <= 4; i++) {
+  for (let i = 0; i <= 8; i++) {
     const spec = thinkingToolSpec(
         "G3-U01-TH1",
         i ? thinkingVariant("G3-U01-TH1", i) : undefined,
@@ -59,7 +59,7 @@ test("多视角最高数约束唯一确定三堆，正面单张照片不能排�
   }
 });
 test("Venn四区每人只能一处、移动不复制；求出的四区验回三项已知总数", () => {
-  for (let i = 0; i <= 4; i++) {
+  for (let i = 0; i <= 8; i++) {
     const spec = thinkingToolSpec(
         "G3-L07-TH1",
         i ? thinkingVariant("G3-L07-TH1", i) : undefined,
@@ -78,7 +78,7 @@ test("Venn四区每人只能一处、移动不复制；求出的四区验回三�
     assert.throws(() => moveThinkingTool(spec, s, "place", c[0], 1));
   }
 });
-test("教具操作、撤销和刷新存档不充当辅助答案，也不产生掌握积分", () => {
+test("教具操作保留支架维度；撤销、刷新不清记录，也不产生掌握积分", () => {
   const p = freshProgress(),
     id = "G3-UP01-TH1";
   const send = (extra) =>

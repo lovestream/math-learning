@@ -1,3 +1,4 @@
+import {withdrawnLessons} from "../../shared/withdrawn-checks.mjs";
 import {navigationEvent,type NavigationEvent} from './navigationGuard';
 import {useEffect,useRef,useState} from 'react';
 import {ArrowLeft,BookOpenCheck,ChevronRight,Lightbulb} from 'lucide-react';
@@ -10,7 +11,7 @@ import {ConceptPreview} from './concept/ConceptVisual';
 import StoryPicture from './StoryPicture';
 import {introVisuals} from '../../content/pilot/intro-visuals.mjs';
 
-type Props={lesson:PilotLesson;progress:Progress;setProgress:(p:Progress)=>void;notify:(m:string)=>void;onBack:()=>void;onPractice:()=>void};
+type Props={lesson:PilotLesson;progress:Progress;setProgress:(p:Progress)=>void;notify:(m:string)=>void;onBack:()=>void;onPractice:(blind?:boolean)=>void};
 
 export function Checkpoint({block,value,onChange}:{block:ArticleBlock;value:WidgetState;onChange:(s:WidgetState)=>void}){
   if(block.responseSpec?.type==='self-explanation')return <div className="try-yourself"><p className="checkpoint-purpose">先自己回答，再和参考过程比一比。这次对照用于学习，结果不计入掌握。</p><p className="checkpoint-question">{block.prompt}</p><label className="explanation-answer">我的想法<textarea maxLength={240} value={typeof value.explanation==='string'?value.explanation:''} onChange={e=>onChange({...value,explanation:e.target.value,compared:false})}/></label><button className="studio-primary" disabled={typeof value.explanation!=='string'||value.explanation.trim().length<2} onClick={()=>onChange({...value,compared:true})}>写好了，对照参考过程</button>{value.compared&&<div className="checkpoint-feedback"><b>找找相同的关系，再看看有什么不同</b><p>{block.referenceAnswer}</p><a href={`#lesson-${block.revisit??'try'}`}>回到上面的模型核对</a></div>}</div>;
@@ -61,11 +62,11 @@ export default function LessonArticle({lesson,progress,setProgress,notify,onBack
   const childMode=!!lesson.childClassroom&&!widgets.classroom?.parentMode;
   const trackName=lesson.track==='foundation'?'课本主线':lesson.track==='enhancement'?'本章提升':'思维挑战';
   return <div className={`studio-lesson child-lesson lesson-${lesson.widget}`}>
-    <div className="studio-breadcrumb"><button onClick={()=>void leave(onBack)}><ArrowLeft size={17}/>返回学习地图</button><span>{lesson.shortTitle}</span><small role="status">{saveState}{saveState.startsWith('暂未')&&<><button onClick={()=>void save().catch(()=>{})}>重试保存</button><button onClick={downloadDraft}>导出本页未保存操作</button>{conflict&&<button onClick={()=>void reloadLatest()}>载入其他页面的最新操作（替换本页操作）</button>}</>}</small><button onClick={()=>void leave(onPractice)}>直接做练习 <ChevronRight size={16}/></button></div>
+    {withdrawnLessons.includes(lesson.lessonId)&&<aside className="withdrawn-bridge"><div><b>操作完，再离开教具试五题</b><p>把教具收起来，只看题目。先留下自己的想法，再自查；解释题交给家长核对。</p></div><button className="studio-primary" onClick={()=>void leave(()=>onPractice(true))}>收起教具，独立做五题</button></aside>}<div className="studio-breadcrumb"><button onClick={()=>void leave(onBack)}><ArrowLeft size={17}/>返回学习地图</button><span>{lesson.shortTitle}</span><small role="status">{saveState}{saveState.startsWith('暂未')&&<><button onClick={()=>void save().catch(()=>{})}>重试保存</button><button onClick={downloadDraft}>导出本页未保存操作</button>{conflict&&<button onClick={()=>void reloadLatest()}>载入其他页面的最新操作（替换本页操作）</button>}</>}</small><button onClick={()=>void leave(()=>onPractice())}>直接做练习 <ChevronRight size={16}/></button></div>
     <article className="lesson-article">
       <header className="article-hero"><p className="eyebrow">{measurement?`三年级 · 测量 · ${trackName}`:concept?`三年级 · ${trackName} · 数学模型实验室`:`${lesson.shortTitle} · 一起弄明白`}</p><h1>{lesson.title}</h1><p className="article-question">{!childMode&&lesson.question}</p></header>
       {lesson.childClassroom&&<div className="lesson-mode-toggle" role="group" aria-label="课堂阅读方式"><button aria-pressed={childMode} onClick={()=>change('classroom',{...widgets.classroom,parentMode:false})}>Kevin 短课堂</button><button aria-pressed={!childMode} onClick={()=>change('classroom',{...widgets.classroom,parentMode:true})}>家长完整教案</button></div>}
-      {childMode?<ChildClassroom lesson={lesson} widgets={widgets} change={change} onPractice={()=>void leave(onPractice)}/>:<>
+      {childMode?<ChildClassroom lesson={lesson} widgets={widgets} change={change} onPractice={()=>void leave(()=>onPractice())}/>:<>
       <section className="story-opening" id={`lesson-${first.blockId}`}><div><h2>{first.title}</h2>{first.paragraphs?.map(p=><p key={p}>{p}</p>)}{first.text&&<p>{first.text}</p>}</div>{first.diagram&&<TeachingDiagram kind={first.diagram}/>}<StoryPicture lesson={lesson}/>{concept&&!lesson.introVisual&&!introVisuals[lesson.lessonId]&&lesson.conceptScenes?.[0]&&<ConceptPreview scene={lesson.conceptScenes[0]}/>}</section>
       <nav className="lesson-jumps" aria-label="跳到本课内容"><a href="#lesson-try">{staticCard?'画图想一想':'动手试试'}</a><a href="#lesson-meaning">{measurement?'弄懂为什么':'认识数学名字'}</a><a href="#lesson-check">轮到你来试</a><a href="#lesson-retell">讲给家人听</a></nav>
       {lesson.articleBlocks.slice(1).map(block=><section id={`lesson-${block.blockId}`} key={block.blockId} className={`article-block block-${block.type}`}><div className="block-content">
@@ -76,7 +77,7 @@ export default function LessonArticle({lesson,progress,setProgress,notify,onBack
         {block.cases&&<div className="case-grid">{block.cases.map(c=><div className={`case-card ${c.valid?'valid':'invalid'}`} key={c.label}><b>{c.valid?'✓ ':'△ '}{c.label}</b><strong>{c.math}</strong><p>{c.explanation}</p></div>)}</div>}
         {block.type==='checkpoint'&&<Checkpoint block={block} value={widgets[block.blockId]??{}} onChange={s=>change(block.blockId,s)}/>}
         {block.methods?.map(m=><details className="method-detail" key={m.id}><summary><Lightbulb size={18}/>这个办法有个名字：{m.name}</summary><p>{m.action}</p><p>注意：{m.condition}</p><p>{m.counterexample}</p></details>)}
-        {block.type==='practice'&&<button className="studio-primary" onClick={()=>void leave(onPractice)}><BookOpenCheck size={18}/>去做这节课的练习 <ChevronRight size={16}/></button>}
+        {block.type==='practice'&&<button className="studio-primary" onClick={()=>void leave(()=>onPractice())}><BookOpenCheck size={18}/>去做这节课的练习 <ChevronRight size={16}/></button>}
       </div></section>)}
       <Reflection lesson={lesson} progress={progress} setProgress={setProgress} notify={notify}/></>}
     </article>
