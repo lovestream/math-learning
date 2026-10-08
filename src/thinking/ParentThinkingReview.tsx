@@ -10,6 +10,14 @@ const verdicts = [
   ["needs-remediation", "需要回补"],
   ["deferred", "暂缓判断"],
 ];
+const operationNames: Record<string, string> = {
+  "open-model": "打开教具", height: "调整积木堆高", view: "切换观察方向",
+  place: "移动人数卡", reset: "重新摆放", "remove-both-box": "两边各拿走一个盒子",
+  "remove-both-weight": "两边各拿走20克", "remove-both-weight-ten": "两边各拿走10克",
+  "remove-left-box": "只从左边拿走一个盒子",
+};
+const helpNames: Record<string, string> = {hint: "分层提示", solution: "参考解释", reference: "基础讲解"};
+const stageNames: Record<string, string> = {"before-first": "首答前", "after-first": "首答后", "after-submission": "提交后"};
 const causes = [
   ["symbol", "看错符号"],
   ["calculation", "口算错误"],
@@ -224,7 +232,7 @@ export default function ParentThinkingReview({
                 <h4>自主教具操作</h4>
                 <p>
                   {record.toolHistory
-                    ?.map((h) => `${h.stage} · ${h.command}`)
+                    ?.map((h) => `${stageNames[h.stage] ?? "操作"} · ${operationNames[h.command] ?? "调整教具"}`)
                     .join("；") || "无教具操作记录"}
                   。教具探索与调用提示分别记录，家长仍应核对解释。
                 </p>
@@ -238,7 +246,7 @@ export default function ParentThinkingReview({
                           ? "提交后"
                           : "首答后"}
                     </b>{" "}
-                    · {h.kind} · {new Date(h.at).toLocaleString("zh-CN")}
+                    · {helpNames[h.kind] ?? "学习资料"} · {new Date(h.at).toLocaleString("zh-CN")}
                     <br />
                     {h.text}
                   </p>
@@ -335,7 +343,7 @@ export default function ParentThinkingReview({
                     {r.evidence && <><br />批阅时的证据快照：{r.evidence.mode === "challenge" ? "撤去自动反馈作答" : "探索后作答"}；模型验证 {r.evidence.scaffold.validationAttempts} 次。事后阅读资料不会改写此记录。</>}
                   </p>
                 ))}
-                {!!record.postReviewStudy?.length && <details><summary>批阅后复盘资料（不改变历史评价）</summary>{record.postReviewStudy.map((h, i) => <p key={i}>{new Date(h.at).toLocaleString("zh-CN")} · {h.kind}<br />{h.text}</p>)}</details>}
+                {!!record.postReviewStudy?.length && <details><summary>批阅后复盘资料（不改变历史评价）</summary>{record.postReviewStudy.map((h, i) => <p key={i}>{new Date(h.at).toLocaleString("zh-CN")} · {helpNames[h.kind] ?? "学习资料"}<br />{h.text}</p>)}</details>}
                 {record.attempts?.map((a, i) => (
                   <details key={a.attemptId}>
                     <summary>历史第{i + 1}次作答与批阅</summary>
@@ -346,12 +354,12 @@ export default function ParentThinkingReview({
                     <p>
                       辅助：
                       {a.help
-                        .map((h) => `${h.kind}（${h.stage}）`)
+                        .map((h) => `${helpNames[h.kind]}（${stageNames[h.stage ?? "after-first"]}）`)
                         .join("；") || "无"}
                     </p>
                     {a.reviews?.map((r, j) => (
                       <p key={j}>
-                        {r.verdict} · {r.comment}
+                        {verdicts.find((v) => v[0] === r.verdict)?.[1]} · {r.comment}
                       </p>
                     ))}
                   </details>

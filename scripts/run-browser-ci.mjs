@@ -50,7 +50,8 @@ if (names.some((n) => !all.includes(n)))
 const out = "output/playwright/v2-audit";
 fs.mkdirSync(out, { recursive: true });
 const summary = [];
-const sourceEvidence={sha:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),dirty:Boolean(execFileSync('git',['status','--porcelain'],{encoding:'utf8'}).trim()),diffHash:createHash('sha256').update(execFileSync('git',['diff','HEAD'])).digest('hex'),startedAt:new Date().toISOString()};
+const checkoutSha=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
+const sourceEvidence={prHeadSha:process.env.AUDIT_PR_HEAD_SHA ?? checkoutSha,sha:checkoutSha,dirty:Boolean(execFileSync('git',['status','--porcelain'],{encoding:'utf8'}).trim()),diffHash:createHash('sha256').update(execFileSync('git',['diff','HEAD'])).digest('hex'),startedAt:new Date().toISOString()};
 fs.writeFileSync(`${out}/source-evidence.json`,JSON.stringify(sourceEvidence,null,2));
 let browser;
 const timeout = setTimeout(() => {
