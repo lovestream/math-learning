@@ -31,3 +31,4 @@
 .scene-object-present,.scene-object-removed{transition:opacity .45s,filter .45s}.scene-object-removed{opacity:.16;filter:grayscale(1)}
 .operation-stage>.operation-object-view{margin:0;min-width:0}.operation-stage{align-items:center}
 @media(prefers-reduced-motion:reduce){.scene-object-present,.scene-object-removed{transition:none}}
+.static-concept-figure{margin:16px 0;background:#f4f5eb;border-radius:16px;padding:14px}.static-concept-figure figcaption{font-size:13px;line-height:1.7;color:#5a7462}

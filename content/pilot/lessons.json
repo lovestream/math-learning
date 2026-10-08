@@ -1,7 +1,7 @@
 [
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -681,7 +681,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -709,7 +709,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -1402,7 +1402,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -1430,7 +1430,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -2099,7 +2099,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -2127,7 +2127,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -2648,7 +2648,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -2678,7 +2678,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -3124,7 +3124,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -3154,7 +3154,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -3684,7 +3684,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -3714,7 +3714,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -4150,7 +4150,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -4180,7 +4180,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -4617,7 +4617,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -4647,7 +4647,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -5165,7 +5165,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -5195,7 +5195,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -5850,7 +5850,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -5880,7 +5880,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -6545,7 +6545,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -6575,7 +6575,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -7270,7 +7270,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -7310,7 +7310,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -7985,7 +7985,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -8026,7 +8026,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -8648,7 +8648,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -8678,7 +8678,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -9400,7 +9400,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -9444,7 +9444,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -9896,7 +9896,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -9916,7 +9916,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -10411,7 +10411,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -10431,7 +10431,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -11018,7 +11018,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -11045,7 +11045,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -11638,7 +11638,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -11665,7 +11665,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -11771,7 +11771,71 @@
           "把几十、几百和零散个数分别乘",
           "画3捆十根与3组2根，再合并；对应12×3=10×3+2×3。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "product-place",
+          "title": "每增加一盒，就增加同样的计数单位",
+          "cases": [
+            [
+              12,
+              3
+            ],
+            [
+              21,
+              4
+            ],
+            [
+              112,
+              4
+            ],
+            [
+              230,
+              3
+            ],
+            [
+              102,
+              4
+            ],
+            [
+              32,
+              3
+            ]
+          ],
+          "mode": "no-carry",
+          "version": "textbook.core.v1",
+          "contexts": [
+            {
+              "story": "每盒12支笔，买3盒，一共有多少支？",
+              "unit": "支",
+              "group": "盒"
+            },
+            {
+              "story": "每盒21支笔，买4盒，一共有多少支？",
+              "unit": "支",
+              "group": "盒"
+            },
+            {
+              "story": "每盒112支笔，买4盒，一共有多少支？",
+              "unit": "支",
+              "group": "盒"
+            },
+            {
+              "story": "每盒230支笔，买3盒，一共有多少支？",
+              "unit": "支",
+              "group": "盒"
+            },
+            {
+              "story": "每盒102支笔，买4盒，一共有多少支？",
+              "unit": "支",
+              "group": "盒"
+            },
+            {
+              "story": "操场搭座位，每排32个，共3排。换成排数与每排数，还能按同一位值关系求总数吗？",
+              "unit": "个",
+              "group": "排"
+            }
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "23×3拆开算时，为什么两部分都必须乘3？",
@@ -12240,10 +12304,11 @@
         }
       ]
     },
-    "interactionStatus": "static-visual",
+    "interactionStatus": "verified",
     "activityVerification": {
-      "mathematics": "not-applicable",
-      "browser": "not-applicable",
+      "release": "2026-10-08.2",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
     "introVisual": {
@@ -12276,7 +12341,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -12860,7 +12925,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -12895,7 +12960,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -13001,7 +13066,71 @@
           "连续进位也只是反复“满十换一”",
           "位值表列百、十、个；每列的总量包括乘积与从右边来的进位。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "product-place",
+          "title": "从个位开始，连续把十个换成一个",
+          "cases": [
+            [
+              147,
+              8
+            ],
+            [
+              68,
+              7
+            ],
+            [
+              186,
+              6
+            ],
+            [
+              249,
+              4
+            ],
+            [
+              375,
+              3
+            ],
+            [
+              158,
+              6
+            ]
+          ],
+          "mode": "carry",
+          "version": "textbook.core.v1",
+          "contexts": [
+            {
+              "story": "8箱饮料，每箱147瓶，一共多少瓶？",
+              "unit": "瓶",
+              "group": "箱"
+            },
+            {
+              "story": "7箱饮料，每箱68瓶，一共多少瓶？",
+              "unit": "瓶",
+              "group": "箱"
+            },
+            {
+              "story": "6箱饮料，每箱186瓶，一共多少瓶？",
+              "unit": "瓶",
+              "group": "箱"
+            },
+            {
+              "story": "4箱饮料，每箱249瓶，一共多少瓶？",
+              "unit": "瓶",
+              "group": "箱"
+            },
+            {
+              "story": "3箱饮料，每箱375瓶，一共多少瓶？",
+              "unit": "瓶",
+              "group": "箱"
+            },
+            {
+              "story": "6条纸带各长158毫米，首尾相接，不重叠、不留缝。总长多少毫米？每次满十换一是什么意思？",
+              "unit": "毫米",
+              "group": "条"
+            }
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "连续进位与一次进位，使用的道理变了吗？",
@@ -13467,10 +13596,11 @@
         }
       ]
     },
-    "interactionStatus": "static-visual",
+    "interactionStatus": "verified",
     "activityVerification": {
-      "mathematics": "not-applicable",
-      "browser": "not-applicable",
+      "release": "2026-10-08.2",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
     "introVisual": {
@@ -13503,7 +13633,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -13609,7 +13739,71 @@
           "乘数中的0，为什么不能跳过它的位置",
           "百十个位表中填604；个位乘积仍可能向十位进位。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "product-place",
+          "title": "0保留数位，进来的十仍要接住",
+          "cases": [
+            [
+              604,
+              8
+            ],
+            [
+              305,
+              6
+            ],
+            [
+              240,
+              4
+            ],
+            [
+              508,
+              7
+            ],
+            [
+              700,
+              9
+            ],
+            [
+              406,
+              5
+            ]
+          ],
+          "mode": "zero",
+          "version": "textbook.core.v1",
+          "contexts": [
+            {
+              "story": "每区604个座位，共8区，一共有多少座位？",
+              "unit": "个",
+              "group": "区"
+            },
+            {
+              "story": "每区305个座位，共6区，一共有多少座位？",
+              "unit": "个",
+              "group": "区"
+            },
+            {
+              "story": "每区240个座位，共4区，一共有多少座位？",
+              "unit": "个",
+              "group": "区"
+            },
+            {
+              "story": "每区508个座位，共7区，一共有多少座位？",
+              "unit": "个",
+              "group": "区"
+            },
+            {
+              "story": "每区700个座位，共9区，一共有多少座位？",
+              "unit": "个",
+              "group": "区"
+            },
+            {
+              "story": "5袋米，每袋406克。总质量多少克？袋数变了，中间0的数位能不能省掉？",
+              "unit": "克",
+              "group": "袋"
+            }
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "604与64只差一个0，为什么乘积差很多？",
@@ -14074,10 +14268,11 @@
         }
       ]
     },
-    "interactionStatus": "static-visual",
+    "interactionStatus": "verified",
     "activityVerification": {
-      "mathematics": "not-applicable",
-      "browser": "not-applicable",
+      "release": "2026-10-08.2",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
     "introVisual": {
@@ -14110,7 +14305,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -14216,7 +14411,83 @@
           "先估一估，才知道答案靠不靠谱",
           "把398看作略小于400，在数线上比较两种总费用；用箭头注明估大还是估小。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "estimate-product",
+          "title": "估计能保证什么，什么时候还要精算",
+          "cases": [
+            [
+              398,
+              8,
+              3200,
+              390,
+              400
+            ],
+            [
+              203,
+              4,
+              800,
+              200,
+              210
+            ],
+            [
+              296,
+              3,
+              900,
+              290,
+              300
+            ],
+            [
+              402,
+              6,
+              2400,
+              400,
+              410
+            ],
+            [
+              487,
+              5,
+              2450,
+              480,
+              490
+            ],
+            [
+              198,
+              7,
+              1400,
+              190,
+              200
+            ]
+          ],
+          "mode": "estimate",
+          "version": "textbook.core.v1",
+          "contexts": [
+            {
+              "story": "398名同学每人票价8元，准备3200元够不够？",
+              "unit": "元"
+            },
+            {
+              "story": "203名同学每人票价4元，准备800元够不够？",
+              "unit": "元"
+            },
+            {
+              "story": "296名同学每人票价3元，准备900元够不够？",
+              "unit": "元"
+            },
+            {
+              "story": "402名同学每人票价6元，准备2400元够不够？",
+              "unit": "元"
+            },
+            {
+              "story": "487名同学每人票价5元，准备2450元够不够？",
+              "unit": "元"
+            },
+            {
+              "story": "食堂买198千克米，每千克7元，预算1400元。选择费用上界或下界，说明它能保证什么。",
+              "unit": "元"
+            }
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "“估大后仍然够”和“估小后已经不够”分别为什么可靠？",
@@ -14696,10 +14967,11 @@
         }
       ]
     },
-    "interactionStatus": "static-visual",
+    "interactionStatus": "verified",
     "activityVerification": {
-      "mathematics": "not-applicable",
-      "browser": "not-applicable",
+      "release": "2026-10-08.2",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
     "textbookUnit": {
@@ -14720,7 +14992,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -15310,7 +15582,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -15339,7 +15611,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -15948,7 +16220,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -16540,7 +16812,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -16571,7 +16843,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -17159,7 +17431,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -17187,7 +17459,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -17763,7 +18035,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -17797,7 +18069,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -18358,7 +18630,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -18392,7 +18664,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -18498,7 +18770,77 @@
           "分数加减，先确认数的是同一种小份",
           "同一纸带8格：先涂2格再涂不重叠的3格；分母仍是8。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "fraction-core",
+          "title": "同一块饼，两次拿走的份不能重叠",
+          "cases": [
+            [
+              8,
+              2,
+              3
+            ],
+            [
+              6,
+              1,
+              2
+            ],
+            [
+              10,
+              3,
+              4
+            ],
+            [
+              4,
+              1,
+              2
+            ],
+            [
+              8,
+              3,
+              5
+            ],
+            [
+              6,
+              2,
+              3
+            ]
+          ],
+          "mode": "add",
+          "version": "textbook.core.v1",
+          "contexts": [
+            {
+              "story": "同一块饼先吃2/8，后来吃3/8；一共吃多少，还剩多少？",
+              "unit": "份",
+              "kind": "strip"
+            },
+            {
+              "story": "同一块饼先吃1/6，后来吃2/6；一共吃多少，还剩多少？",
+              "unit": "份",
+              "kind": "strip"
+            },
+            {
+              "story": "同一块饼先吃3/10，后来吃4/10；一共吃多少，还剩多少？",
+              "unit": "份",
+              "kind": "strip"
+            },
+            {
+              "story": "同一块饼先吃1/4，后来吃2/4；一共吃多少，还剩多少？",
+              "unit": "份",
+              "kind": "strip"
+            },
+            {
+              "story": "同一块饼先吃3/8，后来吃5/8；一共吃多少，还剩多少？",
+              "unit": "份",
+              "kind": "strip"
+            },
+            {
+              "story": "同一根木条，先锯下全长的2/6，再锯下原来全长的3/6。总共锯去几分之几？第二次仍以原来的整根为整体。",
+              "unit": "份",
+              "kind": "strip"
+            }
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "用8格纸带解释为什么答案分母不是16。",
@@ -18947,10 +19289,11 @@
         }
       ]
     },
-    "interactionStatus": "static-visual",
+    "interactionStatus": "verified",
     "activityVerification": {
-      "mathematics": "not-applicable",
-      "browser": "not-applicable",
+      "release": "2026-10-08.2",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
     "introVisual": {
@@ -18983,7 +19326,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -19089,7 +19432,71 @@
           "一个整体，也可以是一盒东西",
           "用圈包住12颗，平均分成3个小组，每组4颗；大圈才是本题的1。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "fraction-core",
+          "title": "大圈里全部物品是一个整体",
+          "cases": [
+            [
+              12,
+              3,
+              1
+            ],
+            [
+              16,
+              4,
+              1
+            ],
+            [
+              20,
+              5,
+              1
+            ],
+            [
+              18,
+              6,
+              1
+            ],
+            [
+              24,
+              8,
+              1
+            ],
+            [
+              15,
+              3,
+              1
+            ]
+          ],
+          "mode": "unit",
+          "version": "textbook.core.v1",
+          "contexts": [
+            {
+              "story": "一盒12颗糖，拿走整盒的1/3，是多少颗？",
+              "unit": "颗"
+            },
+            {
+              "story": "一盒16颗糖，拿走整盒的1/4，是多少颗？",
+              "unit": "颗"
+            },
+            {
+              "story": "一盒20颗糖，拿走整盒的1/5，是多少颗？",
+              "unit": "颗"
+            },
+            {
+              "story": "一盒18颗糖，拿走整盒的1/6，是多少颗？",
+              "unit": "颗"
+            },
+            {
+              "story": "一盒24颗糖，拿走整盒的1/8，是多少颗？",
+              "unit": "颗"
+            },
+            {
+              "story": "15名乘客平均坐3辆车，一辆车里是全体乘客的1/3。一辆有几人？这里的整体是什么？",
+              "unit": "人"
+            }
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "1/3盒和4颗怎样可以同时描述同一份糖？",
@@ -19563,10 +19970,11 @@
         }
       ]
     },
-    "interactionStatus": "static-visual",
+    "interactionStatus": "verified",
     "activityVerification": {
-      "mathematics": "not-applicable",
-      "browser": "not-applicable",
+      "release": "2026-10-08.2",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
     "introVisual": {
@@ -19601,7 +20009,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -19707,7 +20115,71 @@
           "先求一小份，再求几小份",
           "24张摆成8个相等小组，每组3张；圈出3组。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "fraction-core",
+          "title": "先圈平均的一小组，再选几组",
+          "cases": [
+            [
+              24,
+              8,
+              3
+            ],
+            [
+              18,
+              6,
+              2
+            ],
+            [
+              20,
+              5,
+              3
+            ],
+            [
+              28,
+              7,
+              4
+            ],
+            [
+              16,
+              4,
+              3
+            ],
+            [
+              30,
+              6,
+              5
+            ]
+          ],
+          "mode": "quantity",
+          "version": "textbook.core.v1",
+          "contexts": [
+            {
+              "story": "24张贴纸的3/8要送朋友，应拿出多少张？",
+              "unit": "张"
+            },
+            {
+              "story": "18张贴纸的2/6要送朋友，应拿出多少张？",
+              "unit": "张"
+            },
+            {
+              "story": "20张贴纸的3/5要送朋友，应拿出多少张？",
+              "unit": "张"
+            },
+            {
+              "story": "28张贴纸的4/7要送朋友，应拿出多少张？",
+              "unit": "张"
+            },
+            {
+              "story": "16张贴纸的3/4要送朋友，应拿出多少张？",
+              "unit": "张"
+            },
+            {
+              "story": "30支笔平均放入6盒，带走其中5盒。带走的是全部的几分之几，共多少支？",
+              "unit": "支"
+            }
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "不背算式，说清24÷8×3每一步在找什么。",
@@ -20170,10 +20642,11 @@
         }
       ]
     },
-    "interactionStatus": "static-visual",
+    "interactionStatus": "verified",
     "activityVerification": {
-      "mathematics": "not-applicable",
-      "browser": "not-applicable",
+      "release": "2026-10-08.2",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
     "introVisual": {
@@ -20208,7 +20681,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -20784,7 +21257,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -20820,7 +21293,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -21405,7 +21878,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -21973,7 +22446,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -22003,7 +22476,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -22577,7 +23050,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -22604,7 +23077,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -23194,7 +23667,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -23221,7 +23694,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -23328,7 +23801,71 @@
           "把几十、几百平均分，先看计数单位",
           "9捆十张纸分3堆；96张先分90张再分6张。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "share-place",
+          "title": "把计数单位平均分，分错可以退回",
+          "cases": [
+            [
+              90,
+              3
+            ],
+            [
+              96,
+              3
+            ],
+            [
+              600,
+              3
+            ],
+            [
+              840,
+              4
+            ],
+            [
+              1000,
+              5
+            ],
+            [
+              168,
+              4
+            ]
+          ],
+          "mode": "share",
+          "version": "textbook.core.v1",
+          "contexts": [
+            {
+              "story": "90张纸平均分给3人，每人多少张？",
+              "unit": "张",
+              "group": "人"
+            },
+            {
+              "story": "96张纸平均分给3人，每人多少张？",
+              "unit": "张",
+              "group": "人"
+            },
+            {
+              "story": "600张纸平均分给3人，每人多少张？",
+              "unit": "张",
+              "group": "人"
+            },
+            {
+              "story": "840张纸平均分给4人，每人多少张？",
+              "unit": "张",
+              "group": "人"
+            },
+            {
+              "story": "1000张纸平均分给5人，每人多少张？",
+              "unit": "张",
+              "group": "人"
+            },
+            {
+              "story": "168厘米丝带要平均剪成4段，不计剪口损耗，每段多长？把计数单位当厘米，平均分的关系还一样吗？",
+              "unit": "厘米",
+              "group": "段"
+            }
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "为什么96÷3可以分成两次平均分后再相加？",
@@ -23790,10 +24327,11 @@
         }
       ]
     },
-    "interactionStatus": "static-visual",
+    "interactionStatus": "verified",
     "activityVerification": {
-      "mathematics": "not-applicable",
-      "browser": "not-applicable",
+      "release": "2026-10-08.2",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
     "introVisual": {
@@ -23827,7 +24365,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -24410,7 +24948,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -24446,7 +24984,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -24553,7 +25091,77 @@
           "有剩余时，怎样判断答案真的分完了",
           "把53个点分成13个四点框，框外1点；与“12袋余5颗”比较。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "pack-remainder",
+          "title": "剩下的还能装一满袋吗",
+          "cases": [
+            [
+              53,
+              4
+            ],
+            [
+              38,
+              5
+            ],
+            [
+              47,
+              6
+            ],
+            [
+              60,
+              7
+            ],
+            [
+              29,
+              3
+            ],
+            [
+              71,
+              8
+            ]
+          ],
+          "mode": "remainder",
+          "version": "textbook.core.v1",
+          "contexts": [
+            {
+              "story": "53颗糖，每袋装4颗，能装几满袋，还余几颗？",
+              "unit": "颗",
+              "group": "袋",
+              "kind": "bags"
+            },
+            {
+              "story": "38颗糖，每袋装5颗，能装几满袋，还余几颗？",
+              "unit": "颗",
+              "group": "袋",
+              "kind": "bags"
+            },
+            {
+              "story": "47颗糖，每袋装6颗，能装几满袋，还余几颗？",
+              "unit": "颗",
+              "group": "袋",
+              "kind": "bags"
+            },
+            {
+              "story": "60颗糖，每袋装7颗，能装几满袋，还余几颗？",
+              "unit": "颗",
+              "group": "袋",
+              "kind": "bags"
+            },
+            {
+              "story": "29颗糖，每袋装3颗，能装几满袋，还余几颗？",
+              "unit": "颗",
+              "group": "袋",
+              "kind": "bags"
+            },
+            {
+              "story": "71厘米胶带，每段剪8厘米，不计剪口损耗。能剪几段？余下为什么不能再算一段？",
+              "unit": "厘米",
+              "group": "段",
+              "kind": "strip"
+            }
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "为什么“总量验算对”还不足以证明商余数写得对？",
@@ -25020,10 +25628,11 @@
         }
       ]
     },
-    "interactionStatus": "static-visual",
+    "interactionStatus": "verified",
     "activityVerification": {
-      "mathematics": "not-applicable",
-      "browser": "not-applicable",
+      "release": "2026-10-08.2",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
     "introVisual": {
@@ -25058,7 +25667,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -25642,7 +26251,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -25678,7 +26287,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -25785,7 +26394,83 @@
           "连乘连除：每箱、每盒、每个怎样对应",
           "画2个大框，每框4小框，每小框6点；标清箱、盒、个。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "nested-groups",
+          "title": "箱、盒、个：让分组层级看得见",
+          "cases": [
+            [
+              2,
+              4,
+              6
+            ],
+            [
+              3,
+              2,
+              5
+            ],
+            [
+              2,
+              3,
+              8
+            ],
+            [
+              4,
+              2,
+              4
+            ],
+            [
+              3,
+              3,
+              3
+            ],
+            [
+              2,
+              5,
+              4
+            ]
+          ],
+          "mode": "nested",
+          "version": "textbook.core.v1",
+          "contexts": [
+            {
+              "story": "2箱杯子，每箱4盒，每盒6个，一共多少个？",
+              "unit": "个",
+              "outer": "箱",
+              "inner": "盒"
+            },
+            {
+              "story": "3箱杯子，每箱2盒，每盒5个，一共多少个？",
+              "unit": "个",
+              "outer": "箱",
+              "inner": "盒"
+            },
+            {
+              "story": "2箱杯子，每箱3盒，每盒8个，一共多少个？",
+              "unit": "个",
+              "outer": "箱",
+              "inner": "盒"
+            },
+            {
+              "story": "4箱杯子，每箱2盒，每盒4个，一共多少个？",
+              "unit": "个",
+              "outer": "箱",
+              "inner": "盒"
+            },
+            {
+              "story": "3箱杯子，每箱3盒，每盒3个，一共多少个？",
+              "unit": "个",
+              "outer": "箱",
+              "inner": "盒"
+            },
+            {
+              "story": "图书角有2个书架，每架5层，每层4本书。先登记各层，再把总数按架、层分回去。",
+              "unit": "本",
+              "outer": "架",
+              "inner": "层"
+            }
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "72÷3÷4中两个除数分别代表什么？",
@@ -26252,10 +26937,11 @@
         }
       ]
     },
-    "interactionStatus": "static-visual",
+    "interactionStatus": "verified",
     "activityVerification": {
-      "mathematics": "not-applicable",
-      "browser": "not-applicable",
+      "release": "2026-10-08.2",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
     "textbookUnit": {
@@ -26277,7 +26963,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -26384,7 +27070,101 @@
           "归一与归总：先找哪个量没有变",
           "表格列数量、每份、总量；把“本次不变的那一列”明确圈出。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "invariant-table",
+          "title": "数量变了，先找表里哪一项不变",
+          "cases": [
+            [
+              4,
+              24,
+              7,
+              6,
+              8
+            ],
+            [
+              3,
+              18,
+              5,
+              6,
+              9
+            ],
+            [
+              5,
+              40,
+              3,
+              8,
+              10
+            ],
+            [
+              6,
+              30,
+              9,
+              5,
+              10
+            ],
+            [
+              4,
+              28,
+              8,
+              7,
+              14
+            ],
+            [
+              3,
+              27,
+              5,
+              9,
+              3
+            ]
+          ],
+          "mode": "invariant",
+          "version": "textbook.core.v1",
+          "contexts": [
+            {
+              "story": "4本同价本子24元，买7本多少钱？",
+              "alternate": "同一批书每箱6本装4箱，改每箱8本，要几箱？",
+              "unit": "本",
+              "outer": "箱",
+              "quantity": "本"
+            },
+            {
+              "story": "3本同价本子18元，买5本多少钱？",
+              "alternate": "同一批书每箱6本装3箱，改每箱9本，要几箱？",
+              "unit": "本",
+              "outer": "箱",
+              "quantity": "本"
+            },
+            {
+              "story": "5本同价本子40元，买3本多少钱？",
+              "alternate": "同一批书每箱8本装5箱，改每箱10本，要几箱？",
+              "unit": "本",
+              "outer": "箱",
+              "quantity": "本"
+            },
+            {
+              "story": "6本同价本子30元，买9本多少钱？",
+              "alternate": "同一批书每箱5本装6箱，改每箱10本，要几箱？",
+              "unit": "本",
+              "outer": "箱",
+              "quantity": "本"
+            },
+            {
+              "story": "4本同价本子28元，买8本多少钱？",
+              "alternate": "同一批书每箱7本装4箱，改每箱14本，要几箱？",
+              "unit": "本",
+              "outer": "箱",
+              "quantity": "本"
+            },
+            {
+              "story": "3包同价饼干27元，买5包多少钱？先找不变的量。",
+              "alternate": "3桶米，每桶9千克，改每桶3千克，要几桶？与买饼干的“不变”一样吗？",
+              "unit": "包",
+              "outer": "桶",
+              "quantity": "千克"
+            }
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "拿买本子与换包装两个问题解释：你先求的是单价还是总量？",
@@ -26840,10 +27620,11 @@
         }
       ]
     },
-    "interactionStatus": "static-visual",
+    "interactionStatus": "verified",
     "activityVerification": {
-      "mathematics": "not-applicable",
-      "browser": "not-applicable",
+      "release": "2026-10-08.2",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
     "textbookUnit": {
@@ -26865,7 +27646,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -27481,7 +28262,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -28045,7 +28826,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -28078,7 +28859,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -28651,7 +29432,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -28683,7 +29464,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -29286,7 +30067,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -29855,7 +30636,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -29888,7 +30669,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -30467,7 +31248,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -30500,7 +31281,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -31087,7 +31868,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -31107,7 +31888,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -31708,7 +32489,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -31728,7 +32509,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -32303,7 +33084,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -32334,7 +33115,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -32903,7 +33684,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -32937,7 +33718,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -33531,7 +34312,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -33559,7 +34340,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -34127,7 +34908,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -34161,7 +34942,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -34748,7 +35529,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -34782,7 +35563,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -35359,7 +36140,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -35952,7 +36733,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -36540,7 +37321,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -36571,7 +37352,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -37042,7 +37823,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -37062,7 +37843,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -37499,7 +38280,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -37519,7 +38300,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -37953,7 +38734,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -37973,7 +38754,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -38440,7 +39221,7 @@
     ],
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -38448,7 +39229,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -38925,7 +39706,7 @@
     ],
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -38933,7 +39714,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -39358,7 +40139,7 @@
     ],
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -39366,7 +40147,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -39802,7 +40583,7 @@
     ],
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -39810,7 +40591,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -40317,7 +41098,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -40325,7 +41106,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -40800,7 +41581,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
@@ -40808,7 +41589,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-08.1",
+    "editorialRevision": "2026-10-08.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -41252,7 +42033,7 @@
     },
     "interactionStatus": "verified",
     "activityVerification": {
-      "release": "2026-10-08.1",
+      "release": "2026-10-08.2",
       "mathematics": "fixture-and-invariant-tests",
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"

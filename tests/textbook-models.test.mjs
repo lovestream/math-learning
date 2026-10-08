@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import {textbookModels,initialTextbookState,measureTextbook,validateTextbookState,gridCells,gridPerimeter,leapYear} from '../shared/textbook-models.mjs';
 import {validateWidgetState} from '../shared/widget-state.mjs';
 import {freshProgress,exportEnvelope,validateEnvelope} from '../server/store.mjs';
-test('24个新教具的初态合法，存档按课程与模型校验，不接收越界或跨课状态',()=>{
- assert.equal(Object.keys(textbookModels).length,24);
+test('35个教材教具的初态合法，存档按课程与模型校验，不接收越界或跨课状态',()=>{
+ assert.equal(Object.keys(textbookModels).length,35);
  for(const [id,model] of Object.entries(textbookModels)){
   const state=initialTextbookState(model);assert.doesNotThrow(()=>measureTextbook(model,state));
   const tagged={...state,stateKind:'textbook',textbookVersion:1,sceneId:id+'-MODEL1',modelStateVersion:model.version,actions:[]};

@@ -15,3 +15,15 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npm run content:check
+      - name: Install browser for locked Playwright version
+        run: npx playwright install --with-deps chromium
+      - name: Critical browser regression (isolated learner data)
+        run: npm run test:browser:ci
+      - name: Preserve browser summaries, logs, screenshots and traces
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-audit-${{ github.sha }}
+          path: output/playwright/v2-audit/
+          retention-days: 14
+          if-no-files-found: warn

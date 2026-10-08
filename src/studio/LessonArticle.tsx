@@ -1,3 +1,4 @@
+import {navigationEvent,type NavigationEvent} from './navigationGuard';
 import {useEffect,useRef,useState} from 'react';
 import {ArrowLeft,BookOpenCheck,ChevronRight,Lightbulb} from 'lucide-react';
 import type {Progress} from '../types';
@@ -35,7 +36,7 @@ function Reflection({lesson,progress,setProgress,notify}:Pick<Props,'lesson'|'pr
 export default function LessonArticle({lesson,progress,setProgress,notify,onBack,onPractice}:Props){
   const initial=progress.studio?.reading[lesson.lessonId] as ReadingRecord|undefined;
   const [widgets,setWidgets]=useState<Record<string,WidgetState>>(initial?.widgets??{});
-  const [saveState,setSaveState]=useState(''),[dirty,setDirty]=useState(false);
+  const [saveState,setSaveState]=useState(''),[dirty,setDirty]=useState(false),[conflict,setConflict]=useState(false);
   const revision=useRef(initial?.revision??0),queue=useRef(Promise.resolve()),latest=useRef({blockId:initial?.blockId??'start',widgets}),savedPayload=useRef(JSON.stringify(initial?.widgets??{}));
   const statusRef=useRef(setProgress);statusRef.current=setProgress;
   const save=()=>{
@@ -43,13 +44,16 @@ export default function LessonArticle({lesson,progress,setProgress,notify,onBack
       const current=latest.current;if(savedPayload.current===JSON.stringify(current.widgets))return;
       setSaveState('正在保存…');
       try{const out=await studioApi.reading(lesson.lessonId,revision.current,current.blockId,current.widgets);revision.current=out.result.revision;savedPayload.current=JSON.stringify(current.widgets);statusRef.current(out.progress);setSaveState('操作已保存');setDirty(savedPayload.current!==JSON.stringify(latest.current.widgets));}
-      catch(e){setSaveState('暂未保存，请点“重试保存”');throw e;}
+      catch(e){const stale=(e as Error&{status?:number}).status===409;setConflict(stale);setSaveState(stale?'暂未保存：另一页面已更新，请先保留本页草稿再载入最新操作。':'暂未保存，请点“重试保存”');throw e;}
     });return queue.current;
   };
   useEffect(()=>{if(!dirty)return;const timer=setTimeout(()=>{void save().catch(()=>{})},650);return()=>clearTimeout(timer)},[widgets,dirty]);
   useEffect(()=>()=>{void save().catch(()=>notify('刚才的操作未能保存，请回到课程重试。'))},[]);
   const change=(blockId:string,value:WidgetState)=>{const next={...latest.current.widgets,[blockId]:value};latest.current={blockId,widgets:next};setWidgets(next);setDirty(true);setSaveState('等待保存…')};
   const leave=async(action:()=>void)=>{try{await save();action();window.scrollTo(0,0)}catch(e){notify(e instanceof Error?e.message:'请先保存操作，再离开。')}};
+  const reloadLatest=async()=>{try{await queue.current.catch(()=>{});const out=await studioApi.data(),r=out.progress.studio?.reading[lesson.lessonId] as ReadingRecord|undefined;revision.current=r?.revision??0;latest.current={blockId:r?.blockId??'start',widgets:r?.widgets??{}};savedPayload.current=JSON.stringify(latest.current.widgets);setWidgets(latest.current.widgets);setDirty(false);setConflict(false);setSaveState('已载入其他页面的最新操作');setProgress(out.progress)}catch(e){notify(e instanceof Error?e.message:'载入失败')}};
+  const downloadDraft=()=>{const a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify({format:'kevin-widget-draft',lessonId:lesson.lessonId,baseRevision:revision.current,...latest.current},null,2)],{type:'application/json'}));a.href=url;a.download=lesson.lessonId+'-unsaved-draft.json';a.click();URL.revokeObjectURL(url)};
+  useEffect(()=>{const guard=(event:Event)=>(event as NavigationEvent).detail.waitUntil(save());const unload=(event:BeforeUnloadEvent)=>{if(savedPayload.current!==JSON.stringify(latest.current.widgets)){event.preventDefault();event.returnValue=''}};window.addEventListener(navigationEvent,guard);window.addEventListener('beforeunload',unload);return()=>{window.removeEventListener(navigationEvent,guard);window.removeEventListener('beforeunload',unload)}},[]);
   const first=lesson.articleBlocks[0];
   const measurement=lesson.widget==='lengthWorkbench';
   const concept=lesson.widget==='conceptLab';
@@ -57,7 +61,7 @@ export default function LessonArticle({lesson,progress,setProgress,notify,onBack
   const childMode=!!lesson.childClassroom&&!widgets.classroom?.parentMode;
   const trackName=lesson.track==='foundation'?'课本主线':lesson.track==='enhancement'?'本章提升':'思维挑战';
   return <div className={`studio-lesson child-lesson lesson-${lesson.widget}`}>
-    <div className="studio-breadcrumb"><button onClick={()=>void leave(onBack)}><ArrowLeft size={17}/>返回学习地图</button><span>{lesson.shortTitle}</span><small role="status">{saveState}{saveState.startsWith('暂未')&&<button onClick={()=>void save().catch(()=>{})}>重试保存</button>}</small><button onClick={()=>void leave(onPractice)}>直接做练习 <ChevronRight size={16}/></button></div>
+    <div className="studio-breadcrumb"><button onClick={()=>void leave(onBack)}><ArrowLeft size={17}/>返回学习地图</button><span>{lesson.shortTitle}</span><small role="status">{saveState}{saveState.startsWith('暂未')&&<><button onClick={()=>void save().catch(()=>{})}>重试保存</button><button onClick={downloadDraft}>导出本页未保存操作</button>{conflict&&<button onClick={()=>void reloadLatest()}>载入其他页面的最新操作（替换本页操作）</button>}</>}</small><button onClick={()=>void leave(onPractice)}>直接做练习 <ChevronRight size={16}/></button></div>
     <article className="lesson-article">
       <header className="article-hero"><p className="eyebrow">{measurement?`三年级 · 测量 · ${trackName}`:concept?`三年级 · ${trackName} · 数学模型实验室`:`${lesson.shortTitle} · 一起弄明白`}</p><h1>{lesson.title}</h1><p className="article-question">{!childMode&&lesson.question}</p></header>
       {lesson.childClassroom&&<div className="lesson-mode-toggle" role="group" aria-label="课堂阅读方式"><button aria-pressed={childMode} onClick={()=>change('classroom',{...widgets.classroom,parentMode:false})}>Kevin 短课堂</button><button aria-pressed={!childMode} onClick={()=>change('classroom',{...widgets.classroom,parentMode:true})}>家长完整教案</button></div>}

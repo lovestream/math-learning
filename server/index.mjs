@@ -1,5 +1,6 @@
 import {thinkingCards,publicThinkingCard} from '../content/pilot/thinking-source.mjs';
-import {applyThinking} from './thinking-store.mjs';
+import {applyThinking,applyThinkingReview,parentThinkingCards} from './thinking-store.mjs';
+import {createParentAccess,assertLocalWrite} from './parent-access.mjs';
 import http from 'node:http';
 import { applyFeed, applyInteract, applyHome, applyPetReward, petMissions, ensureFriend } from './pet-care.mjs';
 import fs from 'node:fs';
@@ -18,14 +19,16 @@ const shouldOpen = process.argv.includes('--open');
 const portArg = process.argv.find(v => v.startsWith('--port='));
 const port = portArg ? Number(portArg.slice(7)) : 4177;
 const dataArg = process.argv.find(v => v.startsWith('--data-dir='));
-const store = createStore(dataArg ? path.resolve(dataArg.slice(11)) : path.join(root, 'data'), courses);
+const dataDir=dataArg ? path.resolve(dataArg.slice(11)) : path.join(root,'data');
+const store = createStore(dataDir, courses);
+const parentAccess=createParentAccess(dataDir);
 let vite;
 if (isDev) {
   const { createServer } = await import('vite');
   vite = await createServer({root, server:{middlewareMode:true}, appType:'spa'});
 }
 
-const clientProgress=p=>{const copy=structuredClone(p);if(copy.studio?.sessions)for(const [id,s] of Object.entries(copy.studio.sessions))copy.studio.sessions[id]=publicSession(s);return copy;};
+const clientProgress=p=>{const copy=structuredClone(p);if(copy.studio?.events)copy.studio.events=copy.studio.events.filter(e=>!e.signature?.includes('parent-thinking-review')&&!e.signature?.includes('\"kind\":\"thinking\"'));if(copy.studio?.sessions)for(const [id,s] of Object.entries(copy.studio.sessions))copy.studio.sessions[id]=publicSession(s);return copy;};
 const json = (res, status, body, headers={}) => {
   res.writeHead(status, {'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store',...headers});
   const safe=body&&typeof body==='object'&&body.progress?{...body,progress:clientProgress(body.progress)}:body;
@@ -43,6 +46,11 @@ const contentTypes = {'.html':'text/html; charset=utf-8','.js':'text/javascript;
 
 async function api(req,res,url){
   try{
+    if(url.pathname==='/api/parent/access'){
+      if(req.method==='GET')return json(res,200,parentAccess.status(req));
+      if(req.method==='POST'){const b=await readJson(req);const cookie=b.action==='lock'?parentAccess.lock(req):parentAccess.unlock(req,b.pin,b.action==='setup');return json(res,200,parentAccess.status({...req,headers:{...req.headers,cookie:cookie.split(';')[0]}}),{'Set-Cookie':cookie});}
+    }
+    if(url.pathname.startsWith('/api/parent/')){parentAccess.requireParent(req);if(req.method==='GET'&&url.pathname==='/api/parent/thinking')return json(res,200,{cards:parentThinkingCards(store.get())});if(req.method==='POST'&&url.pathname==='/api/parent/thinking/review'){const body=await readJson(req);const out=store.mutate(p=>applyThinkingReview(p,body));return json(res,200,{result:out.result,progress:out.progress});}}
     if(req.method==='GET'&&url.pathname==='/api/studio')return json(res,200,{progress:clientProgress(store.get()),lessons:pilotLessons.map(publicLesson),design:pilotDesign});
     const pilotActions={
       '/api/studio/thinking':(p,b)=>applyThinking(p,b),
@@ -83,7 +91,7 @@ const server=http.createServer(async(req,res)=>{
   const host=req.headers.host??'';
   if(!/^(127\.0\.0\.1|localhost)(:\d+)?$/.test(host))return fail(res,new Error('这个本地服务只接受本机访问。'),403);
   const url=new URL(req.url??'/',`http://${host}`);
-  if(url.pathname.startsWith('/api/'))return api(req,res,url);
+  if(url.pathname.startsWith('/api/')){try{assertLocalWrite(req)}catch(e){return fail(res,e)}return api(req,res,url);}
   if(vite)return vite.middlewares(req,res);
   return serveStatic(req,res,url);
 });

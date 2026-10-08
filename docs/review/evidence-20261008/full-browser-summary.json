@@ -1,0 +1,625 @@
+{
+  "baseline": "81f493ac1f38bd1dceaa3234a0b7956fc4500243",
+  "release": "2026-10-08.2",
+  "isolatedTestData": true,
+  "nodeTests": 117,
+  "browserGroups": [
+    {
+      "name": "verify-hands-on-browser",
+      "passed": true,
+      "interactionChecks": [
+        "camera-drag",
+        "three-projections",
+        "photo-restore",
+        "hidden-cube-counterexample",
+        "continuous-fold-drag",
+        "opposite-faces",
+        "scale-drag",
+        "unit-conservation",
+        "net-mass",
+        "balance-weight-drag",
+        "balance-undo",
+        "boat-elephant-drag",
+        "waterline",
+        "stone-weighing",
+        "passenger-counterexample",
+        "state-reload",
+        "parent-mode",
+        "three-independent-tasks"
+      ],
+      "visuals": [
+        {
+          "lesson": "G3-U01-B01",
+          "screens": [
+            390,
+            768,
+            1440
+          ]
+        },
+        {
+          "lesson": "G3-U01-B02",
+          "screens": [
+            390,
+            768,
+            1440
+          ]
+        },
+        {
+          "lesson": "G3-U01-B03",
+          "screens": [
+            390,
+            768,
+            1440
+          ]
+        },
+        {
+          "lesson": "G3-UP01-B01",
+          "screens": [
+            390,
+            768,
+            1440
+          ]
+        },
+        {
+          "lesson": "G3-UP01-B02",
+          "screens": [
+            390,
+            768,
+            1440
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "verify-classroom-flow",
+      "passed": true,
+      "coreCorrect": 3,
+      "selfCorrection": true,
+      "first": {
+        "value": "c1"
+      },
+      "final": {
+        "value": "c0",
+        "check0": "done",
+        "check1": "done",
+        "check2": "done",
+        "checkFinal": "done",
+        "checkReflection": "同水线比较全部载重，包括新上的人。"
+      },
+      "review": {
+        "dueAt": "2026-10-09T04:48:04.921Z",
+        "stage": 0,
+        "scheduleVersion": 2,
+        "createdAt": "2026-10-08T04:48:04.921Z",
+        "history": [],
+        "successDates": [],
+        "firstLearnedAt": "2026-10-08T04:48:04.921Z",
+        "firstLearnedDay": "2026-10-08"
+      },
+      "coins": 11
+    },
+    {
+      "name": "verify-motion-browser",
+      "passed": true,
+      "checks": [
+        "fold-continuous-pause-rotate",
+        "direct-face-picking",
+        "flat-view-fold-recovery",
+        "reduced-motion",
+        "continuous-linked-balance",
+        "continuous-loaded-hull",
+        "direct-cut-transpose-conservation"
+      ],
+      "errors": []
+    },
+    {
+      "name": "verify-lab-inventory",
+      "passed": true,
+      "opened": 70,
+      "interactive": 64,
+      "staticCards": 6,
+      "mixedSceneTypes": [
+        "people-line",
+        "group-boxes",
+        "boxes-and-items",
+        "combine-then-share",
+        "bags-plus-loose",
+        "money-flow"
+      ],
+      "live": [
+        "G3-U01-B01",
+        "G3-U01-B02",
+        "G3-U01-B03",
+        "G3-U02-B01",
+        "G3-U02-B02",
+        "G3-U02-B03",
+        "G3-U02-B04",
+        "G3-U02-B05",
+        "G3-U02-E01",
+        "G3-U02-E03",
+        "G3-U02-E02",
+        "G3-U02-E04",
+        "G3-U02-E05",
+        "G3-U02-O01",
+        "G3-U02-O02",
+        "G3-U03-B01",
+        "G3-U03-B02",
+        "G3-UP01-B01",
+        "G3-UP01-B02",
+        "G3-U04-B01",
+        "G3-U04-B02",
+        "G3-U04-B03",
+        "G3-U04-B04",
+        "G3-U04-B05",
+        "G3-UP02-B01",
+        "G3-U05-B02",
+        "G3-U05-B03",
+        "G3-U06-B01",
+        "G3-U06-B02",
+        "G3-U06-B03",
+        "G3-U06-B04",
+        "G3-U06-B05",
+        "G3-U06-E01",
+        "G3-U07-B01",
+        "G3-L01-B01",
+        "G3-L01-B02",
+        "G3-L02-B01",
+        "G3-L02-B02",
+        "G3-L02-B03",
+        "G3-L02-B04",
+        "G3-L02-B05",
+        "G3-L02-B06",
+        "G3-L03-B02",
+        "G3-L03-E01",
+        "G3-L04-B02",
+        "G3-L04-B03",
+        "G3-L05-B01",
+        "G3-L05-B02",
+        "G3-LP01-B01",
+        "G3-LP01-B02",
+        "G3-LP01-E01",
+        "G3-L06-B01",
+        "G3-L06-B02",
+        "G3-L07-B01",
+        "G3-U03-E01",
+        "G3-U03-E02",
+        "G3-U03-O01",
+        "numbers.fractions.meaning",
+        "geometry.area.perimeter",
+        "algebra.substitution.intro",
+        "algebra.balance.intro",
+        "numbers.quantity.intro",
+        "numbers.addition.meaning",
+        "numbers.subtraction.meaning"
+      ],
+      "errors": []
+    },
+    {
+      "name": "verify-intro-visuals",
+      "passed": true,
+      "storyPictures": 59,
+      "predictionPictures": 5,
+      "widths": [
+        1440,
+        390
+      ],
+      "olderApiCompatible": true,
+      "stories": [
+        "G3-U01-B01",
+        "G3-U01-B02",
+        "G3-U01-B03",
+        "G3-U02-B01",
+        "G3-U02-B02",
+        "G3-U02-B03",
+        "G3-U02-B04",
+        "G3-U02-B05",
+        "G3-U02-E01",
+        "G3-U02-E04",
+        "G3-U02-E05",
+        "G3-U02-O02",
+        "G3-U03-B01",
+        "G3-U03-B02",
+        "G3-UP01-B01",
+        "G3-UP01-B02",
+        "G3-U04-B01",
+        "G3-U04-B02",
+        "G3-U04-B03",
+        "G3-U04-B04",
+        "G3-UP02-B01",
+        "G3-U05-B01",
+        "G3-U05-B02",
+        "G3-U05-B03",
+        "G3-U06-B01",
+        "G3-U06-B02",
+        "G3-U06-B03",
+        "G3-U06-B04",
+        "G3-U06-B05",
+        "G3-U06-E01",
+        "G3-U07-B01",
+        "G3-L01-B01",
+        "G3-L01-B02",
+        "G3-L02-B01",
+        "G3-L02-B02",
+        "G3-L02-B03",
+        "G3-L02-B04",
+        "G3-L03-B01",
+        "G3-L03-B02",
+        "G3-L03-E01",
+        "G3-L04-B01",
+        "G3-L04-B02",
+        "G3-L04-B03",
+        "G3-LP01-B01",
+        "G3-LP01-B02",
+        "G3-LP01-E01",
+        "G3-L06-B01",
+        "G3-L06-B02",
+        "G3-L07-B01",
+        "G3-U03-E01",
+        "G3-U03-E02",
+        "G3-U03-O01",
+        "numbers.fractions.meaning",
+        "geometry.area.perimeter",
+        "algebra.substitution.intro",
+        "algebra.balance.intro",
+        "numbers.quantity.intro",
+        "numbers.addition.meaning",
+        "numbers.subtraction.meaning"
+      ],
+      "predictions": [
+        "G3-U01-B01",
+        "G3-U01-B02",
+        "G3-U01-B03",
+        "G3-UP01-B01",
+        "G3-UP01-B02"
+      ],
+      "errors": []
+    },
+    {
+      "name": "verify-textbook-browser",
+      "passed": true,
+      "models": 24,
+      "checked": [
+        {
+          "lessonId": "G3-U04-B02",
+          "kind": "place-value",
+          "actions": 1
+        },
+        {
+          "lessonId": "G3-UP02-B01",
+          "kind": "coding",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-U05-B02",
+          "kind": "angle",
+          "actions": 2
+        },
+        {
+          "lessonId": "G3-U05-B03",
+          "kind": "angle",
+          "actions": 2
+        },
+        {
+          "lessonId": "G3-U06-B01",
+          "kind": "fraction",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-U06-B02",
+          "kind": "fraction",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-U06-E01",
+          "kind": "fraction",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-U07-B01",
+          "kind": "outfits",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-L01-B01",
+          "kind": "paper-fold",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-L01-B02",
+          "kind": "motion",
+          "actions": 1
+        },
+        {
+          "lessonId": "G3-L02-B02",
+          "kind": "division",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-L02-B04",
+          "kind": "division",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-L03-B02",
+          "kind": "boundary",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-L03-E01",
+          "kind": "joining",
+          "actions": 6
+        },
+        {
+          "lessonId": "G3-L04-B02",
+          "kind": "tiling",
+          "actions": 1
+        },
+        {
+          "lessonId": "G3-L04-B03",
+          "kind": "cut-area",
+          "actions": 8
+        },
+        {
+          "lessonId": "G3-L05-B01",
+          "kind": "vote",
+          "actions": 2
+        },
+        {
+          "lessonId": "G3-L05-B02",
+          "kind": "data-bins",
+          "actions": 4
+        },
+        {
+          "lessonId": "G3-LP01-B01",
+          "kind": "calendar",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-LP01-B02",
+          "kind": "clock",
+          "actions": 1
+        },
+        {
+          "lessonId": "G3-LP01-E01",
+          "kind": "calendar",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-L06-B01",
+          "kind": "decimal",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-L06-B02",
+          "kind": "decimal",
+          "actions": 3
+        },
+        {
+          "lessonId": "G3-L07-B01",
+          "kind": "sets",
+          "actions": 4
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "verify-thinking-browser",
+      "passed": true,
+      "illustratedCards": 17,
+      "classifiedCards": 60,
+      "firstAnswerPreserved": true,
+      "helpPreserved": true,
+      "parentReview": true,
+      "amendment": true,
+      "dueVariant": true,
+      "privateRubric": true,
+      "crossOriginRejected": true,
+      "reward": 0,
+      "errors": []
+    },
+    {
+      "name": "verify-division-browser",
+      "passed": true,
+      "checks": [
+        {
+          "id": "G3-L02-B02",
+          "total": 52,
+          "quotient": 13,
+          "regroup": true,
+          "wrongShareRejected": true,
+          "repair": true
+        },
+        {
+          "id": "G3-L02-B04",
+          "total": 408,
+          "quotient": 102,
+          "regroup": true,
+          "wrongShareRejected": true,
+          "repair": true
+        }
+      ],
+      "reward": 0,
+      "errors": []
+    },
+    {
+      "name": "verify-core-browser",
+      "passed": true,
+      "checked": [
+        {
+          "id": "G3-U04-B01",
+          "type": "product-place",
+          "caseCount": 6,
+          "exercisedCases": [
+            0,
+            5
+          ],
+          "refreshed": true
+        },
+        {
+          "id": "G3-U04-B03",
+          "type": "product-place",
+          "caseCount": 6,
+          "exercisedCases": [
+            0,
+            5
+          ],
+          "refreshed": true
+        },
+        {
+          "id": "G3-U04-B04",
+          "type": "product-place",
+          "caseCount": 6,
+          "exercisedCases": [
+            0,
+            5
+          ],
+          "refreshed": true
+        },
+        {
+          "id": "G3-U04-B05",
+          "type": "estimate-product",
+          "caseCount": 6,
+          "exercisedCases": [
+            0,
+            5
+          ],
+          "refreshed": true
+        },
+        {
+          "id": "G3-U06-B03",
+          "type": "fraction-core",
+          "caseCount": 6,
+          "exercisedCases": [
+            0,
+            5
+          ],
+          "refreshed": true
+        },
+        {
+          "id": "G3-U06-B04",
+          "type": "fraction-core",
+          "caseCount": 6,
+          "exercisedCases": [
+            0,
+            5
+          ],
+          "refreshed": true
+        },
+        {
+          "id": "G3-U06-B05",
+          "type": "fraction-core",
+          "caseCount": 6,
+          "exercisedCases": [
+            0,
+            5
+          ],
+          "refreshed": true
+        },
+        {
+          "id": "G3-L02-B01",
+          "type": "share-place",
+          "caseCount": 6,
+          "exercisedCases": [
+            0,
+            5
+          ],
+          "refreshed": true
+        },
+        {
+          "id": "G3-L02-B03",
+          "type": "pack-remainder",
+          "caseCount": 6,
+          "exercisedCases": [
+            0,
+            5
+          ],
+          "refreshed": true
+        },
+        {
+          "id": "G3-L02-B05",
+          "type": "nested-groups",
+          "caseCount": 6,
+          "exercisedCases": [
+            0,
+            5
+          ],
+          "refreshed": true
+        },
+        {
+          "id": "G3-L02-B06",
+          "type": "invariant-table",
+          "caseCount": 6,
+          "exercisedCases": [
+            0,
+            5
+          ],
+          "refreshed": true
+        }
+      ],
+      "reward": 0,
+      "errors": []
+    },
+    {
+      "name": "verify-save-stress-browser",
+      "passed": true,
+      "pointerMoves": 65,
+      "gestureHistory": 1,
+      "operations": 44,
+      "historyBound": 30,
+      "multiTabConflict": true,
+      "offlineRetry": true,
+      "navigationBlockedOnFailure": true,
+      "browserBackBlockedOnFailure": true,
+      "importExport": true
+    },
+    {
+      "name": "verify-thinking-tools-browser",
+      "passed": true,
+      "balance": true,
+      "oneSidedError": true,
+      "undo": true,
+      "solidViews": true,
+      "candidateRejection": true,
+      "venn": true,
+      "refresh": true,
+      "reward": 0,
+      "errors": []
+    },
+    {
+      "name": "verify-performance-browser",
+      "passed": true,
+      "method": "One local sample per view. Cold map then first classroom, separate browser cache per profile. 4x CPU is a simulation, not a real phone benchmark; no speed threshold asserted.",
+      "samples": [
+        {
+          "profile": "desktop",
+          "target": "map",
+          "uiReadyMs": 66,
+          "domContentLoadedMs": 15,
+          "transferredBytes": 2492156
+        },
+        {
+          "profile": "desktop",
+          "target": "core-classroom",
+          "uiReadyMs": 812,
+          "domContentLoadedMs": 5,
+          "transferredBytes": 2514404
+        },
+        {
+          "profile": "mobile-width-cpu4",
+          "target": "map",
+          "uiReadyMs": 202,
+          "domContentLoadedMs": 43,
+          "transferredBytes": 2492156
+        },
+        {
+          "profile": "mobile-width-cpu4",
+          "target": "core-classroom",
+          "uiReadyMs": 845,
+          "domContentLoadedMs": 15,
+          "transferredBytes": 2514404
+        }
+      ]
+    }
+  ]
+}

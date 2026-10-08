@@ -6,10 +6,10 @@ async (page) => {
  for(const lesson of data.lessons){
   await page.setViewportSize({width:1440,height:1000});await open(lesson);
   const staticCard=lesson.widget==='conceptLab'&&lesson.conceptScenes.every(s=>!s.handsOnSpec&&!s.modelSpec&&!s.textbookSpec);
-  if(staticCard){assert(await page.locator('.concept-reading-card').count()===1,'关系卡被错误呈现为操作台 '+lesson.lessonId);assert(await page.getByRole('link',{name:'画图想一想',exact:true}).count()===1,'静态内容仍冒充动手实验 '+lesson.lessonId);staticCards.push(lesson.lessonId);continue}
+  if(staticCard){assert(await page.locator('.static-concept-figure').count()===1,'静态课缺少真实关系图 '+lesson.lessonId);assert(await page.locator('.concept-reading-card').count()===1,'关系卡被错误呈现为操作台 '+lesson.lessonId);assert(await page.getByRole('link',{name:'画图想一想',exact:true}).count()===1,'静态内容仍冒充动手实验 '+lesson.lessonId);const figure=page.locator('.static-concept-figure');await figure.screenshot({path:'output/playwright/v2-audit/static-'+lesson.lessonId+'-1440.png'});await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'静态关系图手机溢出 '+lesson.lessonId);await figure.screenshot({path:'output/playwright/v2-audit/static-'+lesson.lessonId+'-390.png',style:'.sidebar{visibility:hidden}'});staticCards.push(lesson.lessonId);continue}
   const lab=page.locator('.hands-on-workbench,.operation-extension-lab,.measurement-lab,.hands-on,.textbook-workbench').first();await lab.waitFor();
   assert(await lab.locator('button:not(:disabled),input[type=range],select').count()>0,'没有可操作控件 '+lesson.lessonId);
-  assert(await lab.locator('svg,.lunchboxes,.apple-row,.sticker-row,.ribbon-strip,.snack-contents,.candy-dots,.bank-material,.textbook-dropzone,.interactive-calendar').count()>0,'没有可识别的数学对象 '+lesson.lessonId);
+  assert(await lab.locator('svg,.lunchboxes,.apple-row,.sticker-row,.ribbon-strip,.snack-contents,.candy-dots,.bank-material,.textbook-dropzone,.interactive-calendar,.core-place-columns,.core-relation-table,.core-nested-boxes,.core-fraction-whole').count()>0,'没有可识别的数学对象 '+lesson.lessonId);
   await lab.screenshot({path:'output/playwright/v2-audit/inventory-'+lesson.lessonId+'-1440.png'});
   if(lesson.widget==='mixedOperations'){
    for(const [i,scene] of lesson.mathScenes.entries()){

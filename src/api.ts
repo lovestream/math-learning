@@ -1,4 +1,4 @@
-import type { Data, Progress, PetMission,ThinkingRecord } from './types';
+import type {ParentThinkingCard, Data, Progress, PetMission,ThinkingRecord } from './types';
 
 async function request<T>(url:string, init?:RequestInit):Promise<T>{
   const response=await fetch(url,{...init,headers:{...(init?.body?{'Content-Type':'application/json'}:{}),...init?.headers}});
@@ -7,6 +7,11 @@ async function request<T>(url:string, init?:RequestInit):Promise<T>{
   return payload;
 }
 export const api={
+  parentAccess:()=>request<{configured:boolean;unlocked:boolean}>('/api/parent/access'),
+  unlockParent:(pin:string,setup:boolean)=>request<{configured:boolean;unlocked:boolean}>('/api/parent/access',{method:'POST',body:JSON.stringify({pin,action:setup?'setup':'unlock'})}),
+  lockParent:()=>request<{configured:boolean;unlocked:boolean}>('/api/parent/access',{method:'POST',body:JSON.stringify({action:'lock'}),keepalive:true}),
+  parentThinking:()=>request<{cards:ParentThinkingCard[]}>('/api/parent/thinking'),
+  thinkingReview:(body:Record<string,unknown>)=>request<{result:{record:ThinkingRecord};progress:Progress}>('/api/parent/thinking/review',{method:'POST',body:JSON.stringify(body)}),
   thinking:(body:Record<string,unknown>)=>request<{result:{record:ThinkingRecord;paid:number;status:string};progress:Progress}>('/api/studio/thinking',{method:'POST',body:JSON.stringify(body)}),
   data:()=>request<Data>('/api/data'),
   attempt:(body:Record<string,unknown>)=>request<{correct:boolean;earned:number;completed?:boolean;explanation:string;progress:Progress}>('/api/attempt',{method:'POST',body:JSON.stringify(body)}),

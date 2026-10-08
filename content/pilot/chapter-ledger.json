@@ -168,15 +168,10 @@
       "G3-U04-B05"
     ],
     "coreActivity": {
-      "lessonId": "G3-U04-B02",
+      "lessonId": "G3-U04-B01",
       "status": "verified"
     },
-    "staticLessonIds": [
-      "G3-U04-B01",
-      "G3-U04-B03",
-      "G3-U04-B04",
-      "G3-U04-B05"
-    ],
+    "staticLessonIds": [],
     "extension": {
       "recommended": "G3-U04-TH1",
       "published": [
@@ -283,11 +278,7 @@
       "lessonId": "G3-U06-B01",
       "status": "verified"
     },
-    "staticLessonIds": [
-      "G3-U06-B03",
-      "G3-U06-B04",
-      "G3-U06-B05"
-    ],
+    "staticLessonIds": [],
     "extension": {
       "recommended": "G3-U06-TH1",
       "published": [
@@ -387,15 +378,10 @@
       "G3-L02-B06"
     ],
     "coreActivity": {
-      "lessonId": "G3-L02-B02",
+      "lessonId": "G3-L02-B01",
       "status": "verified"
     },
-    "staticLessonIds": [
-      "G3-L02-B01",
-      "G3-L02-B03",
-      "G3-L02-B05",
-      "G3-L02-B06"
-    ],
+    "staticLessonIds": [],
     "extension": {
       "recommended": "G3-L02-TH1",
       "published": [

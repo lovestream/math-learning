@@ -1,6 +1,18 @@
 // This release's exact browser-tested activity inventory. New lessons stay unverified until separately reviewed.
-export const interactionRelease='2026-10-08.1';
+export const interactionRelease='2026-10-08.2';
 export const verifiedInteractionIds=new Set([
+  "G3-U04-B01",
+  "G3-U04-B03",
+  "G3-U04-B04",
+  "G3-U04-B05",
+  "G3-L02-B01",
+  "G3-L02-B03",
+  "G3-L02-B05",
+  "G3-L02-B06",
+  "G3-U06-B03",
+  "G3-U06-B04",
+  "G3-U06-B05",
+
   "G3-U01-B01",
   "G3-U01-B02",
   "G3-U01-B03",

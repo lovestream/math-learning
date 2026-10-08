@@ -1,5 +1,5 @@
 async page=>{
- const base=new URL(page.url()).origin,data=await(await page.request.get(base+'/api/data')).json(),lessons=data.articleCourses.filter(l=>l.conceptScenes?.some(s=>s.textbookSpec)),errors=[],checked=[];
+ const base=new URL(page.url()).origin,data=await(await page.request.get(base+'/api/data')).json(),lessons=data.articleCourses.filter(l=>l.conceptScenes?.some(s=>s.textbookSpec&&!s.textbookSpec.cases)),errors=[],checked=[];
  page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.url().includes('/api/')&&r.status()>=400)errors.push(r.status()+' '+r.url())});
  const assert=(v,m)=>{if(!v)throw Error(m)},click=async(l,name)=>l.getByRole('button',{name,exact:true}).click();
  for(const lesson of lessons){

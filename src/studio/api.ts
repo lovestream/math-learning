@@ -5,7 +5,7 @@ type Envelope<T>={result:T;progress:Progress};
 async function request<T>(url:string, body?:Record<string,unknown>):Promise<T>{
   const response=await fetch(url,body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:undefined);
   const payload=await response.json().catch(()=>({error:'本地服务没有返回可读内容。'}));
-  if(!response.ok)throw new Error(payload.error??'操作没有完成。');
+  if(!response.ok)throw Object.assign(new Error(payload.error??'操作没有完成。'),{code:payload.code,status:response.status});
   return payload;
 }
 export const studioApi={

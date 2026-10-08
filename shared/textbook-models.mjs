@@ -1,5 +1,7 @@
+import {coreModels,initialCoreState,validateCoreState,measureCore} from './core-models.mjs';
 // Explicit textbook activities. Manipulation is exploration, never mastery or credit.
 export const textbookModels={
+ ...coreModels,
  'G3-U04-B02':{type:'place-value',version:'textbook.v1',title:'把10个一换成1个十',total:48,bank:[0,3,18]},
  'G3-UP02-B01':{type:'coding',version:'textbook.v1',title:'给书架位置编一个地址',limits:[3,4,8]},
  'G3-U05-B02':{type:'angle',version:'textbook.v1',title:'张口、边长、整体朝向是三件事',angle:45},
@@ -29,6 +31,7 @@ const check=(ok,message)=>{if(!ok)throw Error(message)};
 const int=(n,min,max)=>Number.isInteger(n)&&n>=min&&n<=max;
 export const bankValue=bank=>bank.reduce((sum,n,i)=>sum+n*[100,10,1][i],0);
 export function initialTextbookState(model){
+ if(model.cases)return initialCoreState(model);
  switch(model.type){
   case 'place-value':case 'division':return {bank:[...model.bank],alloc:Array((model.groups??0)*3).fill(0)};
   case 'coding':return {alloc:[2,3,5],width:2,marked:[],show:true};
@@ -58,6 +61,7 @@ export function gridPerimeter(cells){const keys=new Set(cells.map(([x,y])=>`${x}
 export const leapYear=year=>year%4===0&&(year%100!==0||year%400===0);
 export function monthDays(year,month){return new Date(Date.UTC(year,month,0)).getUTCDate()}
 export function measureTextbook(model,state){
+ if(model.cases)return measureCore(model,state);
  validateTextbookState(model,state);
  switch(model.type){
   case 'place-value':case 'division':{const pending=bankValue(state.bank),shares=Array.from({length:model.groups??0},(_,i)=>bankValue(state.alloc.slice(i*3,i*3+3)));return {pending,shares,total:pending+shares.reduce((a,b)=>a+b,0),equal:pending===0&&shares.length>0&&shares.every(n=>n===shares[0]),normalized:state.bank.every((n,i)=>i===0||n<10)}}
@@ -79,6 +83,7 @@ export function measureTextbook(model,state){
  }
 }
 export function validateTextbookState(model,state){
+ if(model.cases)return validateCoreState(model,state);
  const base=initialTextbookState(model),optional=new Set(['checked','error','choice']);
  for(const k of Object.keys(state))check(k in base||optional.has(k),`本教具不使用参数${k}`);
  for(const k of Object.keys(base))check(state[k]!==undefined,`缺少参数${k}`);

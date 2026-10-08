@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-08.1",
+  "version": "2026-10-08.2",
   "generated": true,
   "authority": {
     "teachingPlan": "content/course-plan-v2/grade-3.json",
@@ -7,15 +7,15 @@
     "runtimeArtifact": "content/pilot/lessons.json",
     "history": "docs/history/rollout-20260913.json"
   },
-  "currentFocus": "三年级17单元核心操作与四层入口；24课新教具，首批17张迁移卡；其它年级冻结",
+  "currentFocus": "三年级证据隔离与家长审核闭环；35课教材模型、11课计算精修、17张迁移卡及68组复习；其它年级冻结",
   "counts": {
     "thinkingPrepared": 60,
     "thinkingPublished": 17,
     "v2HandsOnLessons": 5,
     "lessons": 70,
     "tasks": 849,
-    "registeredModelLessons": 46,
-    "staticReviewLessons": 17
+    "registeredModelLessons": 57,
+    "staticReviewLessons": 6
   },
   "batches": [
     {

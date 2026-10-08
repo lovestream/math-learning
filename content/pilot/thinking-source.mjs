@@ -1,3 +1,4 @@
+import {isApprovedThinkingCard} from './thinking-publication.mjs';
 import fs from 'node:fs';
 const source=JSON.parse(fs.readFileSync(new URL('../course-plan-v2/grade-3-thinking.json',import.meta.url),'utf8'));
 const domains={U01:'多视角与信息约束',U02:'运算结构与逆向思考',U03:'测量、重叠与端点',UP01:'等量与不变量',U04:'位值与倍数关系',UP02:'编码与有序枚举',U05:'角的结构与有序计数',U06:'整体、份数与逆推',U07:'搭配与条件筛选',L01:'对称与染色',L02:'余数、枚举与界限',L03:'边界与有序枚举',L04:'面积守恒与分类计数',L05:'数据约束与保证',LP01:'周期与日历',L06:'金额、组合与最优化',L07:'集合与数量关系'};
@@ -7,8 +8,8 @@ const bridges=new Set(['G3-U04-S01','G3-U04-S03','G3-U04-S04','G3-U04-S10','G3-U
 // First release: exactly one explicitly illustrated/worded transfer per textbook unit.
 // Remaining cards retain their original problem and provenance; they are not pretend published lessons.
 export const thinkingCards=source.tasks.map(t=>{
- const published=t.id.endsWith('-TH1');
+ const published=isApprovedThinkingCard(t.id,t);
  const bucket=t.layer==='奥数思想选学'||bridges.has(t.id)?'bridge':'direct';
  return {...t,originUnit:t.unitId,thinkingDomain:['G3-U04-S03','G3-U04-S04'].includes(t.id)?'enumeration.extremum':t.conceptId,thinkingLabel:methodLabels[t.conceptId]??domains[t.unitId.replace('G3-','')],classification:bucket==='direct'?'本章直接提升':'数学思想桥梁',releaseBucket:published?bucket:'deferred',publicationStatus:published?'guided-study':'prepared-not-published',releaseReason:published?'本章首张迁移卡已逐题整理；解释由家长核对。':'保留原题与来源，待专用题图、操作及教学核对；不计入已发布课程。',recommended:published,contentVersion:'thinking.2026-10-08.1',scoring:'adult_review'};
 });
-export const publicThinkingCard=t=>({id:t.id,title:t.title,originUnit:t.originUnit,parentLessonId:t.parentLessonId,thinkingDomain:t.thinkingDomain,thinkingLabel:t.thinkingLabel,classification:t.classification,releaseBucket:t.releaseBucket,publicationStatus:t.publicationStatus,releaseReason:t.releaseReason,recommended:t.recommended,minutes:t.minutes,bridgeFromCore:t.bridgeFromCore,question:t.publicationStatus==='guided-study'?t.question:undefined,applicability:t.publicationStatus==='guided-study'?t.applicability:undefined,thinkingEvidence:t.publicationStatus==='guided-study'?t.thinkingEvidence:undefined,contentVersion:t.contentVersion,scoring:t.scoring});
+export const publicThinkingCard=t=>({id:t.id,title:t.title,originUnit:t.originUnit,parentLessonId:t.parentLessonId,thinkingDomain:t.thinkingDomain,thinkingLabel:t.thinkingLabel,classification:t.classification,releaseBucket:t.releaseBucket,publicationStatus:t.publicationStatus,releaseReason:t.releaseReason,recommended:t.recommended,minutes:t.minutes,bridgeFromCore:t.bridgeFromCore,question:t.publicationStatus==='guided-study'?t.question:undefined,contentVersion:t.contentVersion,scoring:t.scoring});
