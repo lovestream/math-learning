@@ -1,0 +1,17 @@
+{
+  "implementationSha": "f48b3a89eded5993bc1be34184287696e9fce872",
+  "npmTest": {
+    "passed": 132,
+    "failed": 0
+  },
+  "npmBuild": "passed (TypeScript + Vite)",
+  "contentCheck": {
+    "passed": true,
+    "lessons": 70,
+    "formalTasks": 849
+  },
+  "localBrowserSuites": 15,
+  "prCiBrowserSuites": 8,
+  "ciRun": "https://github.com/lovestream/math-learning/actions/runs/37748785369",
+  "data": "isolated test fixtures, no Kevin trial data"
+}
