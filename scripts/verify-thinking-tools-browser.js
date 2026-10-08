@@ -14,10 +14,17 @@ async (page) => {
     await lab.waitFor();
     return lab;
   };
-  const click = async (lab, name) => {
-    await lab.getByRole("button", { name, exact: true }).click();
-    await page.waitForTimeout(120);
+  // Wait for the saved revision to reach the rendered page. A fixed 120ms delay
+  // can read the preceding (tilted) state on a busy CI runner after undo.
+  const savedAction = async action => {
+    const responsePromise = page.waitForResponse(r => new URL(r.url()).pathname === "/api/studio/thinking" && r.request().method() === "POST");
+    await action();
+    const response = await responsePromise;
+    assert(response.ok(), "教具保存失败：" + response.status());
+    const out = await response.json();
+    await page.locator(".thinking-evidence").filter({hasText: `已借助模型验证 ${out.result.record.scaffold.validationAttempts} 次`}).waitFor();
   };
+  const click = async (lab, name) => savedAction(() => lab.getByRole("button", { name, exact: true }).click());
   const mobileShot=async(lab,name)=>{
     await page.setViewportSize({width:390,height:844});
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),name+"手机溢出");
@@ -56,8 +63,7 @@ async (page) => {
     "天平刷新不一致",
   );
   lab = await open("G3-U01-TH1");
-  await lab.getByLabel("前左堆高").selectOption("2");
-  await page.waitForTimeout(150);
+  await savedAction(() => lab.getByLabel("前左堆高").selectOption("2"));
   await click(lab, "斜上方");
   await page.waitForTimeout(700);
   assert(
@@ -70,8 +76,7 @@ async (page) => {
   );
   await lab.screenshot({path:"output/playwright/v2-audit/thinking-views-isometric-1440.png"});
   await mobileShot(lab,"views-isometric");
-  await lab.getByLabel("后左堆高").selectOption("2");
-  await page.waitForTimeout(150);
+  await savedAction(() => lab.getByLabel("后左堆高").selectOption("2"));
   assert(
     (await lab.getByRole("status").innerText()).includes("还不满足"),
     "错误候选未排除",
@@ -95,14 +100,13 @@ async (page) => {
         .locator(".thinking-name-bank")
         .getByRole("button", { name: "人" + (person + 1), exact: true })
         .click();
-      await zones
+      await savedAction(() => zones
         .nth(zone)
         .getByRole("button", {
           name: "把人" + (person + 1) + "放这里",
           exact: true,
         })
-        .click();
-      await page.waitForTimeout(70);
+        .click());
       person++;
     }
   assert(
