@@ -5,11 +5,11 @@ async (page) => {
  const open=async lesson=>{await page.goto(base+'/?lesson='+lesson.lessonId);await page.locator('.lesson-article').waitFor();if(lesson.childClassroom)await page.getByRole('button',{name:'3 亲手实验',exact:true}).click()};
  for(const lesson of data.lessons){
   await page.setViewportSize({width:1440,height:1000});await open(lesson);
-  const staticCard=lesson.widget==='conceptLab'&&lesson.conceptScenes.every(s=>!s.handsOnSpec&&!s.modelSpec);
+  const staticCard=lesson.widget==='conceptLab'&&lesson.conceptScenes.every(s=>!s.handsOnSpec&&!s.modelSpec&&!s.textbookSpec);
   if(staticCard){assert(await page.locator('.concept-reading-card').count()===1,'关系卡被错误呈现为操作台 '+lesson.lessonId);assert(await page.getByRole('link',{name:'画图想一想',exact:true}).count()===1,'静态内容仍冒充动手实验 '+lesson.lessonId);staticCards.push(lesson.lessonId);continue}
-  const lab=page.locator('.hands-on-workbench,.operation-extension-lab,.measurement-lab,.hands-on').first();await lab.waitFor();
+  const lab=page.locator('.hands-on-workbench,.operation-extension-lab,.measurement-lab,.hands-on,.textbook-workbench').first();await lab.waitFor();
   assert(await lab.locator('button:not(:disabled),input[type=range],select').count()>0,'没有可操作控件 '+lesson.lessonId);
-  assert(await lab.locator('svg,.lunchboxes,.apple-row,.sticker-row,.ribbon-strip,.snack-contents,.candy-dots').count()>0,'没有可识别的数学对象 '+lesson.lessonId);
+  assert(await lab.locator('svg,.lunchboxes,.apple-row,.sticker-row,.ribbon-strip,.snack-contents,.candy-dots,.bank-material,.textbook-dropzone,.interactive-calendar').count()>0,'没有可识别的数学对象 '+lesson.lessonId);
   await lab.screenshot({path:'output/playwright/v2-audit/inventory-'+lesson.lessonId+'-1440.png'});
   if(lesson.widget==='mixedOperations'){
    for(const [i,scene] of lesson.mathScenes.entries()){

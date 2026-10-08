@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "interactionChecks": [
+    "camera-drag",
+    "three-projections",
+    "photo-restore",
+    "hidden-cube-counterexample",
+    "continuous-fold-drag",
+    "opposite-faces",
+    "scale-drag",
+    "unit-conservation",
+    "net-mass",
+    "balance-weight-drag",
+    "balance-undo",
+    "boat-elephant-drag",
+    "waterline",
+    "stone-weighing",
+    "passenger-counterexample",
+    "state-reload",
+    "parent-mode",
+    "three-independent-tasks"
+  ],
+  "visuals": [
+    {
+      "lesson": "G3-U01-B01",
+      "screens": [
+        390,
+        768,
+        1440
+      ]
+    },
+    {
+      "lesson": "G3-U01-B02",
+      "screens": [
+        390,
+        768,
+        1440
+      ]
+    },
+    {
+      "lesson": "G3-U01-B03",
+      "screens": [
+        390,
+        768,
+        1440
+      ]
+    },
+    {
+      "lesson": "G3-UP01-B01",
+      "screens": [
+        390,
+        768,
+        1440
+      ]
+    },
+    {
+      "lesson": "G3-UP01-B02",
+      "screens": [
+        390,
+        768,
+        1440
+      ]
+    }
+  ],
+  "errors": []
+}

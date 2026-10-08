@@ -1,3 +1,4 @@
+import {initialTextbookState,validateTextbookState} from '../shared/textbook-models.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -30,6 +31,7 @@ for(const lesson of lessons){
   for(const scene of lesson.lengthScenes??[])try{validateLengthScene(scene)}catch(error){fail(error.message)}
   for(const scene of lesson.conceptScenes??[]){
     if(!scene.sceneId||!allowedConceptFamilies.has(scene.family)||!scene.title||!scene.prompt||!scene.initialState||!scene.learnerAction||!scene.observableChange||!scene.expectedExplanation)fail(`${lesson.lessonId} 的概念实验场景不完整`);
+    if(scene.textbookSpec)try{validateTextbookState(scene.textbookSpec,initialTextbookState(scene.textbookSpec))}catch(error){fail(`${scene.sceneId}: ${error.message}`)}
     if(scene.modelSpec)try{measureOperationModel(scene.modelSpec)}catch(error){fail(`${scene.sceneId}: ${error.message}`)}
     if(!Array.isArray(scene.guidance)||scene.guidance.length<3||scene.guidance.some(step=>!step.label||!step.explanation))fail(`${scene.sceneId} 至少需要3条讲解提示（不作为操作证据）`);
   }

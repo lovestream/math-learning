@@ -1,3 +1,4 @@
+import {validateThinking} from './thinking-store.mjs';
 import {randomUUID} from 'node:crypto';
 import {validateTask} from '../shared/pilot-math.mjs';
 import {ensureFriend} from './pet-care.mjs';
@@ -119,6 +120,7 @@ export function saveNote(p,input,lessons,now=Date.now()){
 export function validatePilot(st){
   if(st===undefined)return;
   check(object(st)&&st.version===1&&object(st.reading)&&object(st.sessions)&&Array.isArray(st.notes)&&Array.isArray(st.events)&&object(st.entitlements)&&object(st.daily),'互动课程存档不完整。');
+  validateThinking(st.thinking);
   check(JSON.stringify(st).length<6*1024*1024,'互动课程存档超过大小限制。');
   for(const [id,r] of Object.entries(st.reading)){
     check(key(id)&&object(r)&&Number.isInteger(r.revision)&&r.revision>=0&&typeof r.blockId==='string'&&object(r.widgets),'阅读记录不完整。');

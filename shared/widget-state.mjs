@@ -1,10 +1,11 @@
 import {operationModels,measureOperationModel} from './operation-models.mjs';
 import {handsOnModels,scaleMass,balanceState,boatState} from './hands-on-models.mjs';
+import {textbookModels,validateTextbookState} from './textbook-models.mjs';
 
 const strings=new Set(['stateKind','action','mode','sceneId','modelStateVersion','modelType','prediction','intermediate','error','explanation','guess','massUnit']);
-const numbers=new Set(['extensionVersion','conceptVersion','labVersion','parameter','reverseStep','step','top','bottom','left','right','rows','parts','take','whole','walk','startMm','overlap','spacing','joint','target','placed','handsOnVersion','cameraAzimuth','cameraElevation','rearHeight','foldProgress','faceId','otherFaceId','weighingStone','chapterScreen']);
+const numbers=new Set(['textbookVersion','width','angle','rotation','sideLength','shirt','pants','offset','year','month','minutes','extensionVersion','conceptVersion','labVersion','parameter','reverseStep','step','top','bottom','left','right','rows','parts','take','whole','walk','startMm','overlap','spacing','joint','target','placed','handsOnVersion','cameraAzimuth','cameraElevation','rearHeight','foldProgress','faceId','otherFaceId','weighingStone','chapterScreen']);
 const booleans=new Set(['spread','show','checked','showReason','observed','transposed','compared','closed','zoom','broken','elephant','passenger','waterlineMarked','predicted','parentMode']);
-const arrays=new Set(['filled','sent','marked','opened','inspected','photos','scaleItems','weights','boatStones','weighed']);
+const arrays=new Set(['bank','alloc','cuts','filled','sent','marked','opened','inspected','photos','scaleItems','weights','boatStones','weighed']);
 const handsActions={observe:['rotate-camera','change-view','take-photo'],hidden:['rotate-camera','change-view','remove-cube','add-cube','predict-view','compare-view'],fold:['rotate-camera','change-view','select-face','fold-paper','select-other-face','predict-relation','check-faces'],weigh:['change-scale-mode','place-on-scale','remove-from-scale','change-mass-unit','place-weight','remove-weight'],boat:['board-elephant','remove-elephant','load-stone','remove-stone','mark-waterline','toggle-passenger','select-stone','weigh-stone','check-replacement']};
 const actions={
   'split-array':['move-cut','compare-prediction'],laws:['move-cut','swap-count-direction','compare-prediction'],
@@ -33,7 +34,13 @@ export function validateWidgetState(state,lessonId,lesson){
     else assert(false);
   }
   if(state.chapterScreen!==undefined)assert(Number.isInteger(state.chapterScreen)&&state.chapterScreen>=0&&state.chapterScreen<=5);
-  if(state.stateKind!==undefined)assert(['legacy','operation-extension','mixed-operations','hands-on'].includes(state.stateKind));
+  if(state.stateKind!==undefined)assert(['legacy','operation-extension','mixed-operations','hands-on','textbook'].includes(state.stateKind));
+  if(state.stateKind==='textbook'||state.textbookVersion!==undefined){
+    const model=textbookModels[lessonId];assert(model&&state.stateKind==='textbook'&&state.textbookVersion===1&&state.sceneId===`${lessonId}-MODEL1`&&state.modelStateVersion===model.version);
+    const {stateKind,textbookVersion,sceneId,modelStateVersion,actions,...mathState}=state;
+    validateTextbookState(model,mathState);
+    for(const action of actions??[]){assert(/^[a-z-]{1,50}$/.test(action.action));for(const snapshot of [action.before,action.after])if(snapshot!==null){let decoded;try{decoded=JSON.parse(snapshot)}catch{assert(false)}assert(object(decoded));validateTextbookState(model,decoded)}}
+  }
   if(state.stateKind==='hands-on'||state.handsOnVersion!==undefined){
     const model=handsOnModels[lessonId];assert(model&&state.stateKind==='hands-on'&&state.handsOnVersion===2&&state.sceneId===`${lessonId}-MODEL1`&&state.modelStateVersion===model.version);
     const bound=(key,min,max,integer=false)=>{if(state[key]!==undefined)assert(Number.isFinite(state[key])&&state[key]>=min&&state[key]<=max&&(!integer||Number.isInteger(state[key])))};

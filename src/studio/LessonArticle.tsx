@@ -53,7 +53,7 @@ export default function LessonArticle({lesson,progress,setProgress,notify,onBack
   const first=lesson.articleBlocks[0];
   const measurement=lesson.widget==='lengthWorkbench';
   const concept=lesson.widget==='conceptLab';
-  const staticCard=concept&&lesson.conceptScenes?.every(scene=>!scene.handsOnSpec&&!scene.modelSpec);
+  const staticCard=concept&&lesson.conceptScenes?.every(scene=>!scene.handsOnSpec&&!scene.modelSpec&&!scene.textbookSpec);
   const childMode=!!lesson.childClassroom&&!widgets.classroom?.parentMode;
   const trackName=lesson.track==='foundation'?'课本主线':lesson.track==='enhancement'?'本章提升':'思维挑战';
   return <div className={`studio-lesson child-lesson lesson-${lesson.widget}`}>

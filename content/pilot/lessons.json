@@ -1,7 +1,7 @@
 [
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-07.2",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -679,6 +679,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "box-camera",
       "title": "桌上这个盒子与拍照位置",
@@ -702,7 +709,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-07.2",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -1393,6 +1400,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "hidden-blocks",
       "title": "两种搭法：前排一样，后排不同",
@@ -1416,7 +1430,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-07.2",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -2083,6 +2097,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "cube-net",
       "title": "六个面摊开后的编号",
@@ -2106,7 +2127,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -2625,6 +2646,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -2650,7 +2678,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -3094,6 +3122,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -3119,7 +3154,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -3647,6 +3682,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -3672,7 +3714,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -4106,6 +4148,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -4131,7 +4180,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -4566,6 +4615,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -4591,7 +4647,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -5107,6 +5163,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -5132,7 +5195,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -5785,6 +5848,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -5810,7 +5880,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -6473,6 +6543,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -6498,7 +6575,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -7191,6 +7268,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "dot-array",
       "title": "3袋珠子，排成3行4列",
@@ -7226,7 +7310,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -7899,6 +7983,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "dot-array",
       "title": "教室的左右两区座位",
@@ -7935,7 +8026,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -8555,6 +8646,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -8580,7 +8678,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -9300,6 +9398,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "groups",
       "title": "三盒一样的彩笔",
@@ -9339,7 +9444,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -9789,6 +9894,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U03",
       "title": "毫米、分米和千米",
@@ -9804,7 +9916,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -10297,6 +10409,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U03",
       "title": "毫米、分米和千米",
@@ -10312,7 +10431,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-07.2",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -10897,6 +11016,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "cup-scale",
       "title": "秤上放的是杯子和水",
@@ -10919,7 +11045,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-07.2",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -11510,6 +11636,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "boat-replacement",
       "title": "同一只船：象上船与象下船",
@@ -11532,7 +11665,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -12107,6 +12240,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "groups",
       "title": "每盒12支笔，买3盒",
@@ -12137,7 +12276,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -12243,7 +12382,18 @@
           "竖式是把拆分过程排整齐",
           "3组16根小棒，先数18个一，捆1个十还剩8个一，再与原来3个十合并。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "place-value",
+          "version": "textbook.v1",
+          "title": "把10个一换成1个十",
+          "total": 48,
+          "bank": [
+            0,
+            3,
+            18
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "把26×3中的进位1解释给一个不会竖式的人听。",
@@ -12708,6 +12858,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "groups",
       "title": "16个一份，共有3份",
@@ -12738,7 +12895,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -13310,6 +13467,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "groups",
       "title": "8箱饮料，每箱147瓶",
@@ -13340,7 +13503,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -13911,6 +14074,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "groups",
       "title": "8个区，每区604个座位",
@@ -13941,7 +14110,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -14527,6 +14696,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U04",
       "title": "多位数乘一位数",
@@ -14545,7 +14720,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -14645,7 +14820,17 @@
           "数字有时表示身份，而不是多少",
           "用“架号-层号-本序号”，例如02-03-05；固定每段含义。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "coding",
+          "version": "textbook.v1",
+          "title": "给书架位置编一个地址",
+          "limits": [
+            3,
+            4,
+            8
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "一个好编号为什么既要有规则，又要保证不重复？",
@@ -15123,6 +15308,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "shelves",
       "title": "书架的位置可以变成地址",
@@ -15147,7 +15339,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -15725,6 +15917,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "lines",
       "title": "路线、光线与向两边延伸的线",
@@ -15750,7 +15948,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -15853,7 +16051,13 @@
           "角的大小看张口，不看边画多长",
           "两根纸条用钉固定一端；边长不变而张口可变。把两个角顶点与一边重合比较另一边。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "angle",
+          "version": "textbook.v1",
+          "title": "张口、边长、整体朝向是三件事",
+          "angle": 45
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "用活动纸条说明“边长没变，角能变化”。",
@@ -16334,6 +16538,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "angles",
       "title": "剪刀的张口",
@@ -16360,7 +16571,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -16463,7 +16674,13 @@
           "用一个直角作标准来分类",
           "把三角尺的直角顶点与待测角顶点重合，一边对齐，再看另一边。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "angle",
+          "version": "textbook.v1",
+          "title": "把直角工具和待测角对齐",
+          "angle": 65
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "怎样说明分类取决于角本身，不取决于图画方向？",
@@ -16940,6 +17157,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "angle-reference",
       "title": "把书本角贴到墙角",
@@ -16963,7 +17187,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -17069,7 +17293,13 @@
           "一份不到一个，怎样说清楚",
           "一条完整纸带标为1，折成4段相同长度并涂其中1段；同时保留未分割的同长参照纸带。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "fraction",
+          "version": "textbook.v1",
+          "title": "你来折、分、取一份",
+          "parts": 4
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "为什么1/4一定要先说清楚“哪个整体”的四分之一？",
@@ -17531,6 +17761,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "fraction-strip",
       "title": "一块饼，平均分成4份",
@@ -17560,7 +17797,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -17666,7 +17903,13 @@
           "几个同样的小份，怎样合成一个分数",
           "同长纸带均分8格，分别涂3格和5格；同一条纸带表示8/8=1。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "fraction",
+          "version": "textbook.v1",
+          "title": "分八份，自己涂三份",
+          "parts": 8
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "说清楚5/8中的5在数什么。",
@@ -18113,6 +18356,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "fraction-strip",
       "title": "贴纸分8格，涂前3格",
@@ -18142,7 +18392,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -18697,6 +18947,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "fraction-strip",
       "title": "同一块饼的两次取用",
@@ -18727,7 +18983,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -19307,6 +19563,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "fraction-collection",
       "title": "一盒12颗糖",
@@ -19339,7 +19601,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -19908,6 +20170,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "fraction-collection",
       "title": "24张贴纸是一个整体",
@@ -19940,7 +20208,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -20046,7 +20314,14 @@
           "合并格子，已经涂色的长度会变吗",
           "保留同一条纸带和同一段涂色，把6小格两两合成3大格；涂色恰好1大格。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "fraction",
+          "version": "textbook.v1",
+          "title": "移动分组线，蓝色长度不动",
+          "parts": 6,
+          "regroup": true
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "完整说一遍：哪条纸带、原来怎样分、现在怎样分、什么变了、什么没变。",
@@ -20507,6 +20782,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "fraction-strip",
       "title": "同一条纸带：只改变看格子的方式",
@@ -20538,7 +20820,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -21102,6 +21384,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U07",
       "title": "复习与关联（含搭配问题）",
@@ -21117,7 +21405,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -21154,7 +21442,7 @@
       3
     ],
     "strand": "logic",
-    "track": "olympiad",
+    "track": "foundation",
     "parentUnitId": "G3-U07",
     "coverageIds": [
       "G3-U07-B01"
@@ -21219,7 +21507,14 @@
           "每种选择都配一遍，怎样不重复不遗漏",
           "用2行3列表格，行标上衣A/B，列标裤子1/2/3，每格一种套装。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "outfits",
+          "version": "textbook.v1",
+          "title": "亲手配一套，再检查遗漏",
+          "shirts": 2,
+          "pants": 3
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "为什么表格每一格只代表一种搭配？",
@@ -21676,6 +21971,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "outfits",
       "title": "2种上衣、3种裤子",
@@ -21701,7 +22003,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -21803,7 +22105,12 @@
           "对折后能重合，才是轴对称",
           "沿候选直线折纸，检查边与角是否逐处重合；正方形与非正方形长方形对比。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "paper-fold",
+          "version": "textbook.v1",
+          "title": "折上、打孔、展开看对应位置"
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "为什么面积各一半还不能证明轴对称？",
@@ -22268,6 +22575,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "symmetry",
       "title": "沿中间折痕对折的窗花",
@@ -22290,7 +22604,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -22392,7 +22706,12 @@
           "平移和旋转，移动方式哪里不同",
           "纸箭头沿直尺滑动再用图钉绕固定点转动；观察箭头尖与尾的共同变化。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "motion",
+          "version": "textbook.v1",
+          "title": "把箭头平移，再绕尾端旋转"
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "用一支铅笔演示平移与旋转，说明固定了什么、改变了什么。",
@@ -22873,6 +23192,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "movement",
       "title": "抽屉拉开与风车转动",
@@ -22895,7 +23221,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -23464,6 +23790,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "groups",
       "title": "90张纸，准备平分给3人",
@@ -23495,7 +23827,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -23602,7 +23934,19 @@
           "除法竖式为什么从高位开始",
           "5捆十颗加2颗，先每人1捆，余1捆拆10颗，加2成12颗。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "division",
+          "version": "textbook.v1",
+          "title": "把52颗糖分给4人",
+          "total": 52,
+          "groups": 4,
+          "bank": [
+            0,
+            5,
+            2
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "用52颗糖解释商的13不是把两个无关数字拼起来。",
@@ -24064,6 +24408,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "groups",
       "title": "52颗糖，准备平分给4人",
@@ -24095,7 +24446,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -24669,6 +25020,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "groups",
       "title": "53颗糖，每4颗装一袋",
@@ -24701,7 +25058,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -24808,7 +25165,19 @@
           "商里有0，也不能漏掉位置",
           "位值表：4个百分4份各1百，0个十分4份各0十，8个一各2一。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "division",
+          "version": "textbook.v1",
+          "title": "408本书按百、十、个分给4班",
+          "total": 408,
+          "groups": 4,
+          "bank": [
+            4,
+            0,
+            8
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "102与12的区别，怎样用乘法验算立刻发现？",
@@ -25271,6 +25640,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "groups",
       "title": "408本书，准备平分给4班",
@@ -25302,7 +25678,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -25876,6 +26252,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-L02",
       "title": "除数是一位数的除法",
@@ -25895,7 +26277,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -26458,6 +26840,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-L02",
       "title": "除数是一位数的除法",
@@ -26477,7 +26865,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -27061,6 +27449,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "frame-shapes",
       "title": "做相框之前，先看形状",
@@ -27087,7 +27481,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -27190,7 +27584,14 @@
           "围一圈需要多长：周长的意义",
           "从花坛一个角出发沿四条边走一圈，依次标8、5、8、5米。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "boundary",
+          "version": "textbook.v1",
+          "title": "沿花坛的四条边走一圈",
+          "width": 8,
+          "height": 5
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "不看公式，用走一圈解释为什么长和宽的和还要乘2。",
@@ -27642,6 +28043,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "rectangle",
       "title": "花坛的里面与外边一圈",
@@ -27670,7 +28078,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -27773,7 +28181,13 @@
           "拼在一起以后，哪些边不再露在外面",
           "两个3×3正方形沿整边拼成长6宽3长方形；把两条接缝标记再从外圈中划去。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "joining",
+          "version": "textbook.v1",
+          "title": "拖方块拼合，再沿外边走",
+          "side": 3
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "用两种颜色指出接缝为什么要减两次。",
@@ -28235,6 +28649,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "joined-squares",
       "title": "两个方形相框并排拼接",
@@ -28262,7 +28683,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -28831,6 +29252,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "area-grid",
       "title": "花坛：外面围一圈，里面铺满",
@@ -28859,7 +29286,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -28963,7 +29390,14 @@
           "长乘宽为什么得到面积",
           "画6列4行格子，先数一行，再数行数；将6米、4米与格数对应。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "tiling",
+          "version": "textbook.v1",
+          "title": "一块一块铺满，再解释每行",
+          "cols": 6,
+          "rows": 4
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "长方形每行6块方砖，共4行，为什么用6×4求总块数？",
@@ -29419,6 +29853,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "area-grid",
       "title": "长6米、宽4米的地面",
@@ -29447,7 +29888,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -29551,7 +29992,16 @@
           "分割、拼补和换单位，面积怎样保持一致",
           "1分米方纸画10列10行；另画长8宽5大矩形，角上剪去长3宽2矩形。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "cut-area",
+          "version": "textbook.v1",
+          "title": "移动剪下的一块，面积与周长一起看",
+          "cols": 8,
+          "rows": 5,
+          "cutCols": 3,
+          "cutRows": 2
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "用10×10格解释100，并指出这里为什么不能只算一排。",
@@ -30015,6 +30465,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "unit-square",
       "title": "边长1分米的方纸",
@@ -30043,7 +30500,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -30145,7 +30602,18 @@
           "先问清问题，再收集能回答它的数据",
           "每人只投1票，选项互斥，唱票逐一画正字；表格行是组别、列是选项。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "vote",
+          "version": "textbook.v1",
+          "title": "每个人只投一票",
+          "people": 18,
+          "options": [
+            "公园",
+            "科技馆",
+            "图书馆"
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "为什么一次只能选一个与可以多选的票数不能直接比较？",
@@ -30617,6 +31085,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-L05",
       "title": "数据的收集与整理",
@@ -30632,7 +31107,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -30734,7 +31209,36 @@
           "按范围分组，边界上的数据放哪里",
           "阅读分钟数5、8、10、12、15、18、20、22；分0–9、10–19、20及以上三组。所有分钟数按整数分钟记录，区间两端均包含。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "data-bins",
+          "version": "textbook.v1",
+          "title": "把阅读分钟卡拖入唯一分组",
+          "data": [
+            5,
+            8,
+            10,
+            12,
+            15,
+            18,
+            20,
+            22
+          ],
+          "bins": [
+            [
+              0,
+              9
+            ],
+            [
+              10,
+              19
+            ],
+            [
+              20,
+              100
+            ]
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "给出一组有重复边界的分类，再亲自修正。",
@@ -31202,6 +31706,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-L05",
       "title": "数据的收集与整理",
@@ -31217,7 +31728,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -31320,7 +31831,12 @@
           "日历为什么不能每月都排30天",
           "对照一个平年与一个闰年的年历，逐月记录天数，二月单独突出。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "calendar",
+          "version": "textbook.v1",
+          "title": "换年份，二月天数也要核对"
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "用两个连续日期说明“经过一天”为什么会涉及两个日期。",
@@ -31785,6 +32301,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "calendar",
       "title": "两张真实的二月月历",
@@ -31811,7 +32334,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -31914,7 +32437,14 @@
           "时刻是一个点，时长是一段路",
           "画从0到24的时间线，标15:20和16:05；用分钟步进跨过16:00。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "clock",
+          "version": "textbook.v1",
+          "title": "从15:20走到16:05",
+          "start": 920,
+          "end": 965
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "为什么午夜前后不能只比较钟上数字大小？",
@@ -32371,6 +32901,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "timeline",
       "title": "一天里的上午与下午",
@@ -32400,7 +32937,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -32503,7 +33040,12 @@
           "星期循环与制作月历",
           "七个格按周一到周日排成一圈；再画真实月历，区别循环位置和日期编号。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "calendar",
+          "version": "textbook.v1",
+          "title": "日期往前走，星期每七天循环"
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "说清“第15天”与“过15天”为什么可能指不同日期。",
@@ -32987,6 +33529,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "week-calendar",
       "title": "某月1日是星期二",
@@ -33010,7 +33559,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -33113,7 +33662,17 @@
           "不足一米的部分，仍用十进制记录",
           "1米尺等分10份为分米，再每份细分10份为厘米；用同一米作整体。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "decimal",
+          "version": "textbook.v1",
+          "title": "把3放在分米位还是厘米位",
+          "digits": [
+            1,
+            3,
+            0
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "1.3与1.03都含1和3，为什么长短不同？",
@@ -33566,6 +34125,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "length-comparison",
       "title": "1米3分米的纸条",
@@ -33595,7 +34161,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -33698,7 +34264,18 @@
           "比较小数，先比较同样的计数单位",
           "将两条0到1米线都细分100厘米，标0.9米=90厘米与0.85米=85厘米。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "decimal",
+          "version": "textbook.v1",
+          "title": "在同一把米尺上比较两个位置",
+          "digits": [
+            0,
+            9,
+            0
+          ],
+          "reference": 85
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "为什么0.85位数更多，却比0.9小？",
@@ -34169,6 +34746,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "length-comparison",
       "title": "在同一把米尺上比较跳高",
@@ -34198,7 +34782,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -34753,6 +35337,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-L06",
       "title": "小数的初步认识",
@@ -34769,7 +35359,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -35341,6 +35931,12 @@
         }
       ]
     },
+    "interactionStatus": "static-visual",
+    "activityVerification": {
+      "mathematics": "not-applicable",
+      "browser": "not-applicable",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-L07",
       "title": "复习与关联（含重叠问题）",
@@ -35356,7 +35952,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -35393,7 +35989,7 @@
       3
     ],
     "strand": "logic",
-    "track": "olympiad",
+    "track": "foundation",
     "parentUnitId": "G3-L07",
     "coverageIds": [
       "G3-L07-B01"
@@ -35459,7 +36055,31 @@
           "同一个人出现两次，怎样只数一次",
           "画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个。"
         ],
-        "modelStatus": "static-review"
+        "textbookSpec": {
+          "type": "sets",
+          "version": "textbook.v1",
+          "title": "同一个名字只放一次",
+          "left": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "right": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        "modelStatus": "registered"
       }
     ],
     "retellPrompt": "用同学名单解释为什么共同参加者不能被删光。",
@@ -35918,6 +36538,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "introVisual": {
       "type": "overlapping-sets",
       "title": "两个小组里有相同的人",
@@ -35944,7 +36571,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -36413,6 +37040,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U03",
       "title": "毫米、分米和千米",
@@ -36428,7 +37062,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -36863,6 +37497,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U03",
       "title": "毫米、分米和千米",
@@ -36878,7 +37519,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -37310,6 +37951,13 @@
         }
       ]
     },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    },
     "textbookUnit": {
       "id": "G3-U03",
       "title": "毫米、分米和千米",
@@ -37325,7 +37973,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -37789,11 +38437,18 @@
         "title": "换一条彩带，轮到你记录",
         "text": "练习里可以输入3/8这样的分数。先找整条，再数它被平均分成几份、拿了几份。"
       }
-    ]
+    ],
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    }
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -38267,11 +38922,18 @@
         "title": "换一张图，自己算算看",
         "text": "接下来会给你新尺寸。每次先读清楚：要铺满里面，还是要围外圈？不确定时，可以随时回来看图。"
       }
-    ]
+    ],
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    }
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -38693,11 +39355,18 @@
         "title": "用甲和乙，把换法写出来",
         "text": "练习会给你新的相等关系。先找需要替换的是哪个字，再把它的完整替身放进去；原来外面的数和运算符号要保留。"
       }
-    ]
+    ],
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    }
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -39130,11 +39799,18 @@
         "title": "拿到新线索，找出未知数",
         "text": "你可以画袋子，也可以写方程。得到答案后，把它放回原题，算一遍总数是否符合线索。"
       }
-    ]
+    ],
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
+    }
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -39638,11 +40314,18 @@
           }
         }
       ]
+    },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
     }
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -40114,11 +40797,18 @@
           }
         }
       ]
+    },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
     }
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-02.1",
+    "editorialRevision": "2026-10-08.1",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -40559,6 +41249,13 @@
           }
         }
       ]
+    },
+    "interactionStatus": "verified",
+    "activityVerification": {
+      "release": "2026-10-08.1",
+      "mathematics": "fixture-and-invariant-tests",
+      "browser": "inventory-and-flow-20261008",
+      "teaching": "awaiting-kevin-trial"
     }
   }
 ]

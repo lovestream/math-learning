@@ -1,3 +1,5 @@
+import {thinkingCards,publicThinkingCard} from '../content/pilot/thinking-source.mjs';
+import {applyThinking} from './thinking-store.mjs';
 import http from 'node:http';
 import { applyFeed, applyInteract, applyHome, applyPetReward, petMissions, ensureFriend } from './pet-care.mjs';
 import fs from 'node:fs';
@@ -35,7 +37,7 @@ const readJson = req => new Promise((resolve,reject)=>{
   req.on('data',chunk=>{size+=chunk.length;if(size>8*1024*1024){reject(new Error('文件超过 8MB，请选择正确的学习备份。'));req.destroy();}else chunks.push(chunk);});
   req.on('end',()=>{try{resolve(JSON.parse(Buffer.concat(chunks).toString('utf8')||'{}'));}catch{reject(new Error('内容不是有效的 JSON 文件。'));}});req.on('error',reject);
 });
-const snapshot = () => ({progress:clientProgress(store.get()),courses,articleCourses:pilotLessons.map(publicLesson),serverTime:new Date().toISOString(),catalogVersion:CATALOG_VERSION});
+const snapshot = () => ({progress:clientProgress(store.get()),courses,articleCourses:pilotLessons.map(publicLesson),thinkingCards:thinkingCards.map(publicThinkingCard),serverTime:new Date().toISOString(),catalogVersion:CATALOG_VERSION});
 const importSummary = p => ({name:p.profile.name,grade:p.profile.grade,attempts:p.attempts.length+(p.studio?.events??[]).filter(e=>['correct','incorrect'].includes(e.result?.status)).length,completed:new Set([...Object.entries(p.lessons).filter(([,l])=>l.completedAt).map(([id])=>id),...Object.values(p.studio?.sessions??{}).filter(s=>s.setName==='core'&&s.completedAt).map(s=>s.lessonId)]).size,coins:p.wallet.coins,pets:p.pets.owned.length,reviews:new Set([...Object.keys(p.reviews),...Object.keys(p.studio?.review??{})]).size});
 const contentTypes = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.svg':'image/svg+xml','.mp3':'audio/mpeg','.mp4':'video/mp4','.webp':'image/webp','.jpg':'image/jpeg','.gif':'image/gif','.ico':'image/x-icon','.webmanifest':'application/manifest+json'};
 
@@ -43,6 +45,7 @@ async function api(req,res,url){
   try{
     if(req.method==='GET'&&url.pathname==='/api/studio')return json(res,200,{progress:clientProgress(store.get()),lessons:pilotLessons.map(publicLesson),design:pilotDesign});
     const pilotActions={
+      '/api/studio/thinking':(p,b)=>applyThinking(p,b),
       '/api/studio/reading':(p,b)=>saveReading(p,b,pilotLessons),
       '/api/studio/sessions':(p,b)=>createSession(p,b,pilotLessons),
       '/api/studio/draft':(p,b)=>saveSession(p,b),

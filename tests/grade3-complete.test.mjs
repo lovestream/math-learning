@@ -45,7 +45,7 @@ test('例题保留实际过程而非第N步占位；专用模型和静态审阅�
   for(const lesson of grade3CompleteLessons){
     assert.equal(lesson.editorialStatus,'review-required');
     for(const step of lesson.articleBlocks.flatMap(b=>b.examples??[]).flatMap(e=>e.steps))assert(!/^第\d+步$/.test(step.math),lesson.lessonId);
-    const scene=lesson.conceptScenes[0];assert.equal(scene.values.length,0);assert.equal(scene.modelStatus,scene.modelSpec||scene.handsOnSpec?'registered':'static-review');
+    const scene=lesson.conceptScenes[0];assert.equal(scene.values.length,0);assert.equal(scene.modelStatus,scene.modelSpec||scene.handsOnSpec||scene.textbookSpec?'registered':'static-review');
   }
   const arithmetic=grade3CompleteLessons.find(l=>l.lessonId==='G3-U02-B02');
   assert(arithmetic.articleBlocks.find(b=>b.type==='workedExample').examples[0].steps.some(s=>s.math.includes('24÷6=4')));
