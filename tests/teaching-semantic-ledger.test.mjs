@@ -51,3 +51,24 @@ test('课程或人工批注变化后，已归档机器台账和Markdown必须一
  assert.equal(json,`${JSON.stringify(ledger,null,2)}\n`);
  assert.equal(markdown,renderSemanticLedger(ledger));
 });
+
+
+test('台账拒绝脏工作树、过期指纹、失败证据和静态/操作类型错配',()=>{
+ const original=buildSemanticLedger({evidence:null}),row=original.rows.find(r=>r.experiment.classification!=='static-visual'),staticRow=original.rows.find(r=>r.experiment.classification==='static-visual');
+ const source={sha:'1'.repeat(40),prHeadSha:'1'.repeat(40),dirty:false};
+ const record={lessonId:row.lessonId,contentFingerprint:row.contentFingerprint,result:'pass',mathBehavior:'full-path-verified',actionsPerformed:['test-fixture-only'],assertions:['test-fixture-only'],screenshots:{},visualInspected:false};
+ const mapped=evidence=>buildSemanticLedger({evidence}).rows.find(r=>r.lessonId===row.lessonId).verification;
+ assert(mapped({passed:true,source,rows:[record]}).evidence);
+ assert.equal(mapped({passed:true,source:{...source,dirty:true},rows:[record]}).evidence,null);
+ assert.equal(mapped({passed:true,source,rows:[{...record,contentFingerprint:'old'}]}).evidence,null);
+ assert.equal(mapped({passed:false,source,rows:[record]}).evidence,null);
+ assert.equal(mapped({passed:true,source,rows:[{...record,actionsPerformed:[]}]}).evidence,null);
+ assert.equal(mapped({passed:true,source,rows:[{...record,mathBehavior:'static-relation-verified'}]}).evidence,null);
+ const wrongStatic=buildSemanticLedger({evidence:{passed:true,source,rows:[{...record,lessonId:staticRow.lessonId,contentFingerprint:staticRow.contentFingerprint}]}}).rows.find(r=>r.lessonId===staticRow.lessonId);assert.equal(wrongStatic.verification.evidence,null);
+ assert.equal(mapped({passed:true,source,rows:[record]}).desktopVisual,'screenshot-recorded');
+});
+
+test('新全量证据按课回填且保留初查历史，不借开发验证代填家长和孩子',()=>{
+ const ledger=buildSemanticLedger();assert.equal(ledger.verificationSummary.desktopMath,70);assert.equal(ledger.verificationSummary.fullPaths,64);assert.equal(ledger.verificationSummary.staticRelations,6);assert.equal(ledger.verificationSummary.visualInspected,70);
+ for(const row of ledger.rows){assert.equal(row.sourceReview,'chapter-desktop-reviewed');assert(row.initialSourceReview);assert.equal(row.verification.parentReviewed,'no');assert.equal(row.verification.learnerMastery,'no-data');for(const t of row.independentCheck.tasks){assert(['warmup','core','transfer','challenge','review'].includes(t.sourceSet));assert(/not-certified-unseen|not-personally-unseen/.test(t.novelty));}}
+});

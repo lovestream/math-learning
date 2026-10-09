@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "pointerMoves": 65,
+  "gestureHistory": 1,
+  "operations": 44,
+  "historyBound": 30,
+  "multiTabConflict": true,
+  "offlineRetry": true,
+  "navigationBlockedOnFailure": true,
+  "browserBackBlockedOnFailure": true,
+  "importExport": true,
+  "source": {
+    "prHeadSha": "ce219124ed86b606f3b718517e735c38f71f4a7e",
+    "sha": "ce219124ed86b606f3b718517e735c38f71f4a7e",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-09T07:19:46.051Z"
+  }
+}
