@@ -17,7 +17,7 @@ async (page) => {
    if(lesson.lessonId==='G3-U01-B01'){assert(await prediction.locator('[data-prediction-unknown] svg').count()===0,'新照片提前揭晓');assert((await prediction.locator('[data-prediction-unknown]').innerText()).includes('？'),'新照片没有待猜占位')}
    if(lesson.lessonId==='G3-U01-B03')assert(await prediction.locator('[data-net-face]').count()===6,'预测展开图不是六面');
    for(const width of widths){await page.setViewportSize({width,height:1000});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'预测图横向溢出 '+lesson.lessonId);await prediction.screenshot({path:'output/playwright/v2-audit/predict-'+lesson.lessonId+'-'+width+'.png'})}
-   await page.locator('.prediction-cards button').first().click();await page.getByRole('button',{name:'带着我的猜想去实验',exact:true}).click();await page.locator('.classroom-stage').waitFor();
+   await page.locator('.prediction-cards button').first().click();await page.getByRole('button',{name:lesson.interactionStatus==='static-visual'?'带着我的猜想去看图':'带着我的猜想去实验',exact:true}).click();await page.locator('.classroom-stage').waitFor();
    await page.getByRole('button',{name:'2 先猜一猜',exact:true}).click();assert(await page.locator('.prediction-cards button[aria-pressed=true]').count()===1,'回看时猜想丢失');
    predictions.push(lesson.lessonId);
   }

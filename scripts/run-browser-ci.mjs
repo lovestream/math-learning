@@ -184,7 +184,7 @@ try {
       const experimentSuites=new Set(["verify-hands-on-browser","verify-motion-browser","verify-lab-inventory","verify-textbook-browser","verify-division-browser","verify-core-browser","verify-save-stress-browser","verify-performance-browser","verify-accessibility-browser","verify-evidence-browser"]);
       if(experimentSuites.has(name)){
         const navigate=page.goto.bind(page);
-        page.goto=async(url,options)=>{const result=await navigate(url,options),query=new URL(url).searchParams;if(query.has('lesson')&&!query.has('practice')){await page.locator('.lesson-article').waitFor();const step=page.getByRole('button',{name:'3 亲手实验',exact:true});if(await step.count())await step.click();}return result;};
+        page.goto=async(url,options)=>{const result=await navigate(url,options),query=new URL(url).searchParams;if(query.has('lesson')&&!query.has('practice')){await page.locator('.lesson-article').waitFor();const step=page.getByRole('button',{name:/^3 (亲手实验|画图想一想)$/});if(await step.count())await step.click();}return result;};
       }
       await page.goto(base);
       const source=fs.readFileSync(`scripts/${name}.js`, "utf8").trim().replace(/;$/, "");

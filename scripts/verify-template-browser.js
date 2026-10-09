@@ -12,7 +12,8 @@ async page => {
   await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'390故事溢出 '+lesson.lessonId);
   if(shots.has(lesson.lessonId))await page.locator('.child-classroom').screenshot({path:`output/playwright/v2-audit/template-${lesson.lessonId}-390.png`});
   for(let i=1;i<steps.length;i++){
-   await page.getByRole('button',{name:`${i+1} ${steps[i]}`,exact:true}).click();
+   const title=i===2&&lesson.interactionStatus==='static-visual'?'画图想一想':steps[i];
+   await page.getByRole('button',{name:`${i+1} ${title}`,exact:true}).click();
    if(i===1){assert(await page.locator('.prediction-cards button').count()>=2,'缺少猜想 '+lesson.lessonId);await page.locator('.prediction-cards button').first().click();}
    if(i===2)assert(await page.locator('.classroom-stage .experiment-mission').innerText()===lesson.childClassroom.mission,'实验目标不同 '+lesson.lessonId);
    if(i===4)assert(await page.locator('.symbol-lines p').count()===lesson.childClassroom.symbols.length,'数学表达缺失 '+lesson.lessonId);
