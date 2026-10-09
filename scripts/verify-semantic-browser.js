@@ -54,6 +54,16 @@ async page=>{
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'语义页面390溢出 '+id);checked.push({id,chapter:l.textbookUnit.id,actualOperation:true,why:true,oldAndCurrentSeparated:true});
  }
  for(const id of ['G3-U01-B01','G3-U02-B03','G3-U04-B03','G3-U03-E02'])for(const width of [768,1440]){await page.setViewportSize({width,height:1024});await page.goto(base+'/?lesson='+id);await page.locator('.child-classroom').waitFor();for(const [n,name] of [[0,'story'],[1,'prediction'],[2,'operated']]){await stage(n);await shot(id,name,width);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'关键图溢出 '+id+' '+width);} }
- await page.setViewportSize({width:390,height:844});await page.goto(base+'/?lesson=G3-U02-B03');await page.locator('.child-classroom').waitFor();await stage(0);await page.addStyleTag({content:'.classroom-stage{font-size:200%}.classroom-stage p{font-size:2em}'});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'字体放大导致溢出');await shot('G3-U02-B03','font200',390);
- assert(!errors.length,errors.join('\n'));return {passed:true,chapters:checked,representativeCount:17,widths:[390,768,1440],coldChainStoryNotClipped:true,font200:true,realIpad:false,kevinTrial:false,errors};
+ await page.setViewportSize({width:390,height:844});await page.goto(base+'/?lesson=G3-U02-B03');await page.locator('.child-classroom').waitFor();await stage(0);
+ const fontSample=await page.evaluate(()=>{
+  // Snapshot computed sizes before changing parents; !important pixel rules
+  // otherwise silently defeat an inherited 200% test on the main story text.
+  const story=document.querySelector('.story-sentence'),original=parseFloat(getComputedStyle(story).fontSize);
+  const samples=[...document.querySelectorAll('.classroom-stage p,.classroom-stage h2')].map(node=>[node,parseFloat(getComputedStyle(node).fontSize)]);
+  for(const [node,size] of samples)node.style.setProperty('font-size',`${size*2}px`,'important');
+  return {original,enlarged:parseFloat(getComputedStyle(story).fontSize)};
+ });
+ assert(fontSample.original>0&&fontSample.enlarged===fontSample.original*2,'正文未真正放大两倍');
+ assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'字体放大导致溢出');await shot('G3-U02-B03','font200',390);
+ assert(!errors.length,errors.join('\n'));return {passed:true,chapters:checked,representativeCount:17,widths:[390,768,1440],coldChainStoryNotClipped:true,font200:true,fontSample,realIpad:false,kevinTrial:false,errors};
 }
