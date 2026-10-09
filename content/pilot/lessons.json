@@ -1,7 +1,7 @@
 [
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -713,7 +713,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -1438,7 +1438,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -2139,7 +2139,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -2712,7 +2712,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -3210,7 +3210,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -3792,7 +3792,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -4280,7 +4280,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -4769,7 +4769,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -5339,7 +5339,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -5384,7 +5384,29 @@
       "whyQuestion": "把14和6放进减号后的括号，为什么不能写14＋6？",
       "counterexamplePrompt": "先分别算60−(14−6)和60−(14＋6)，哪个仍表示退款？",
       "predictionFocus": "把付款和退款合成一次扣款，应扣多少？",
-      "retell": "把14和6放进减号后的括号，为什么不能写14＋6？"
+      "retell": "把14和6放进减号后的括号，为什么不能写14＋6？",
+      "storyVisual": {
+        "type": "money-flow",
+        "title": "同一笔钱的三次记录",
+        "caption": "箭头向外是付款，向内是退款；最后余额留空。",
+        "values": [
+          60,
+          14,
+          6
+        ],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "money-flow",
+        "title": "同一笔钱的三次记录",
+        "caption": "箭头向外是付款，向内是退款；最后余额留空。",
+        "values": [
+          60,
+          14,
+          6
+        ],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -6021,6 +6043,17 @@
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
+    "introVisual": {
+      "type": "money-flow",
+      "title": "同一笔钱的三次记录",
+      "caption": "箭头向外是付款，向内是退款；最后余额留空。",
+      "values": [
+        60,
+        14,
+        6
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -6046,7 +6079,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -6091,7 +6124,29 @@
       "whyQuestion": "分给6组后又分给每组2人，为什么等于分给6×2人？",
       "counterexamplePrompt": "48÷(6÷2)表示分给几份，和原来的12人一样吗？",
       "predictionFocus": "6组每组2人，总人数怎样求？",
-      "retell": "分给6组后又分给每组2人，为什么等于分给6×2人？"
+      "retell": "分给6组后又分给每组2人，为什么等于分给6×2人？",
+      "storyVisual": {
+        "type": "nested-share",
+        "title": "先分到组，再分给组内的人",
+        "caption": "框表示组，圆点表示人；每人分到的卡片数还不知道。",
+        "values": [
+          48,
+          6,
+          2
+        ],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "nested-share",
+        "title": "先分到组，再分给组内的人",
+        "caption": "框表示组，圆点表示人；每人分到的卡片数还不知道。",
+        "values": [
+          48,
+          6,
+          2
+        ],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -6738,6 +6793,17 @@
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
+    "introVisual": {
+      "type": "nested-share",
+      "title": "先分到组，再分给组内的人",
+      "caption": "框表示组，圆点表示人；每人分到的卡片数还不知道。",
+      "values": [
+        48,
+        6,
+        2
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -6763,7 +6829,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -7540,7 +7606,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -8300,7 +8366,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -8345,7 +8411,29 @@
       "whyQuestion": "为什么倒推44时要先除4，而不是先减7？",
       "counterexamplePrompt": "找到方框后，用正确的7＋□×4验算，结果还应是44吗？",
       "predictionFocus": "小乐把44算出来以前，最后做了什么？",
-      "retell": "为什么倒推44时要先除4，而不是先减7？"
+      "retell": "为什么倒推44时要先除4，而不是先减7？",
+      "storyVisual": {
+        "type": "reverse-routes",
+        "title": "同一个方框，两条计算路线",
+        "caption": "44是错算路线得到的结果；原式结果和方框都未揭晓。",
+        "values": [
+          7,
+          4,
+          44
+        ],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "reverse-routes",
+        "title": "同一个方框，两条计算路线",
+        "caption": "44是错算路线得到的结果；原式结果和方框都未揭晓。",
+        "values": [
+          7,
+          4,
+          44
+        ],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -8949,6 +9037,17 @@
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
+    "introVisual": {
+      "type": "reverse-routes",
+      "title": "同一个方框，两条计算路线",
+      "caption": "44是错算路线得到的结果；原式结果和方框都未揭晓。",
+      "values": [
+        7,
+        4,
+        44
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-U02",
       "title": "混合运算",
@@ -8974,7 +9073,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -9790,7 +9889,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -10284,7 +10383,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -10821,7 +10920,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -11439,7 +11538,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -12063,7 +12162,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -12785,7 +12884,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -13450,7 +13549,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -14169,7 +14268,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -14887,7 +14986,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -14932,7 +15031,33 @@
       "whyQuestion": "按400人估大后仍够，为什么398人一定也够？",
       "counterexamplePrompt": "估小后够用，就能保证实际费用也够吗？",
       "predictionFocus": "把398人按400人估，估出的费用偏大还是偏小？",
-      "retell": "按400人估大后仍够，为什么398人一定也够？"
+      "retell": "按400人估大后仍够，为什么398人一定也够？",
+      "storyVisual": {
+        "type": "estimate-bound",
+        "title": "398人与400人的票费对照",
+        "caption": "同样每人8元；多算2个人会怎样？先比较，再判断3200元够不够。",
+        "values": [
+          398,
+          8,
+          3200,
+          390,
+          400
+        ],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "estimate-bound",
+        "title": "398人与400人的票费对照",
+        "caption": "同样每人8元；多算2个人会怎样？先比较，再判断3200元够不够。",
+        "values": [
+          398,
+          8,
+          3200,
+          390,
+          400
+        ],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -15578,6 +15703,19 @@
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
+    "introVisual": {
+      "type": "estimate-bound",
+      "title": "398人与400人的票费对照",
+      "caption": "同样每人8元；多算2个人会怎样？先比较，再判断3200元够不够。",
+      "values": [
+        398,
+        8,
+        3200,
+        390,
+        400
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-U04",
       "title": "多位数乘一位数",
@@ -15596,7 +15734,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -16257,7 +16395,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -16906,7 +17044,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -17571,7 +17709,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -18223,7 +18361,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -18875,7 +19013,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -19512,7 +19650,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -20218,7 +20356,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -20949,7 +21087,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -21669,7 +21807,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -22327,7 +22465,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -22372,7 +22510,29 @@
       "whyQuestion": "为什么先算36×2，而不是先用36减20？",
       "counterexamplePrompt": "已有贴纸超过需求时，还要继续买负数张贴纸吗？",
       "predictionFocus": "做36份礼物，每份2张贴纸，先算什么？",
-      "retell": "为什么先算36×2，而不是先用36减20？"
+      "retell": "为什么先算36×2，而不是先用36减20？",
+      "storyVisual": {
+        "type": "supply-bar",
+        "title": "需要的贴纸与已有的贴纸",
+        "caption": "36份礼物，每份2张；已有20张。蓝色是已有，问号是还缺。",
+        "values": [
+          36,
+          2,
+          20
+        ],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "supply-bar",
+        "title": "需要的贴纸与已有的贴纸",
+        "caption": "36份礼物，每份2张；已有20张。蓝色是已有，问号是还缺。",
+        "values": [
+          36,
+          2,
+          20
+        ],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -22919,6 +23079,17 @@
       "browser": "not-applicable",
       "teaching": "awaiting-kevin-trial"
     },
+    "introVisual": {
+      "type": "supply-bar",
+      "title": "需要的贴纸与已有的贴纸",
+      "caption": "36份礼物，每份2张；已有20张。蓝色是已有，问号是还缺。",
+      "values": [
+        36,
+        2,
+        20
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-U07",
       "title": "复习与关联（含搭配问题）",
@@ -22934,7 +23105,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -23574,7 +23745,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -24211,7 +24382,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -24864,7 +25035,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -25581,7 +25752,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -26246,7 +26417,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -26977,7 +27148,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -27643,7 +27814,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -27688,7 +27859,29 @@
       "whyQuestion": "为什么先算每箱杯数，或先算总盒数，得到同一总量？",
       "counterexamplePrompt": "把每箱4盒当成所有箱总共4盒，漏掉了哪箱？",
       "predictionFocus": "2箱、每箱4盒，共有几盒？",
-      "retell": "为什么先算每箱杯数，或先算总盒数，得到同一总量？"
+      "retell": "为什么先算每箱杯数，或先算总盒数，得到同一总量？",
+      "storyVisual": {
+        "type": "nested-boxes",
+        "title": "箱里面有盒，盒里面有杯子",
+        "caption": "图只展示已知的层级，每盒6个；总数由你求。",
+        "values": [
+          2,
+          4,
+          6
+        ],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "nested-boxes",
+        "title": "箱里面有盒，盒里面有杯子",
+        "caption": "图只展示已知的层级，每盒6个；总数由你求。",
+        "values": [
+          2,
+          4,
+          6
+        ],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -28322,6 +28515,17 @@
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
+    "introVisual": {
+      "type": "nested-boxes",
+      "title": "箱里面有盒，盒里面有杯子",
+      "caption": "图只展示已知的层级，每盒6个；总数由你求。",
+      "values": [
+        2,
+        4,
+        6
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-L02",
       "title": "除数是一位数的除法",
@@ -28341,7 +28545,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -28386,7 +28590,33 @@
       "whyQuestion": "为什么两题第一步不同：一题求单价，另一题求总量？",
       "counterexamplePrompt": "改每箱本数时，总本数也跟着乘大，还是在装同一批书吗？",
       "predictionFocus": "4本24元，要买7本，先找什么？",
-      "retell": "为什么两题第一步不同：一题求单价，另一题求总量？"
+      "retell": "为什么两题第一步不同：一题求单价，另一题求总量？",
+      "storyVisual": {
+        "type": "invariant-bars",
+        "title": "买本子和换箱子，分别什么不变？",
+        "caption": "上图同价买卖，单价相同；下图只换装法，书的总量不变。不要混成一件事。",
+        "values": [
+          4,
+          24,
+          7,
+          6,
+          8
+        ],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "invariant-bars",
+        "title": "买本子和换箱子，分别什么不变？",
+        "caption": "上图同价买卖，单价相同；下图只换装法，书的总量不变。不要混成一件事。",
+        "values": [
+          4,
+          24,
+          7,
+          6,
+          8
+        ],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -29027,6 +29257,19 @@
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
+    "introVisual": {
+      "type": "invariant-bars",
+      "title": "买本子和换箱子，分别什么不变？",
+      "caption": "上图同价买卖，单价相同；下图只换装法，书的总量不变。不要混成一件事。",
+      "values": [
+        4,
+        24,
+        7,
+        6,
+        8
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-L02",
       "title": "除数是一位数的除法",
@@ -29046,7 +29289,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -29704,7 +29947,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -30347,7 +30590,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -30996,7 +31239,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -31645,7 +31888,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -32293,7 +32536,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -32951,7 +33194,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -33619,7 +33862,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -34322,7 +34565,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -34970,7 +35213,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -35621,7 +35864,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -36279,7 +36522,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -36929,7 +37172,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -37598,7 +37841,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -37643,7 +37886,33 @@
       "whyQuestion": "为什么小数点对齐，就是把相同货币单位对齐？",
       "counterexamplePrompt": "把3.8的8角与2.5的2元相加，还是同一种量吗？",
       "predictionFocus": "3.8元与2.5元相加，8和5代表什么？",
-      "retell": "为什么小数点对齐，就是把相同货币单位对齐？"
+      "retell": "为什么小数点对齐，就是把相同货币单位对齐？",
+      "storyVisual": {
+        "type": "money-columns",
+        "title": "元对元、角对角",
+        "caption": "3.8元是3元8角，2.5元是2元5角。先把相同单位对齐，合计与找零留空。",
+        "values": [
+          3,
+          8,
+          2,
+          5,
+          10
+        ],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "money-columns",
+        "title": "元对元、角对角",
+        "caption": "3.8元是3元8角，2.5元是2元5角。先把相同单位对齐，合计与找零留空。",
+        "values": [
+          3,
+          8,
+          2,
+          5,
+          10
+        ],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -38181,6 +38450,19 @@
       "browser": "not-applicable",
       "teaching": "awaiting-kevin-trial"
     },
+    "introVisual": {
+      "type": "money-columns",
+      "title": "元对元、角对角",
+      "caption": "3.8元是3元8角，2.5元是2元5角。先把相同单位对齐，合计与找零留空。",
+      "values": [
+        3,
+        8,
+        2,
+        5,
+        10
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-L06",
       "title": "小数的初步认识",
@@ -38197,7 +38479,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -38242,7 +38524,35 @@
       "whyQuestion": "为什么先求总张数，再算购买包数，不能把人数直接除每包张数？",
       "counterexamplePrompt": "把活动结束时刻当成活动时长，会混淆哪两种量？",
       "predictionFocus": "24人每人2张，每包12张，能直接用24÷12求包数吗？",
-      "retell": "为什么先求总张数，再算购买包数，不能把人数直接除每包张数？"
+      "retell": "为什么先求总张数，再算购买包数，不能把人数直接除每包张数？",
+      "storyVisual": {
+        "type": "materials-plan",
+        "title": "手工材料和活动时间分开算",
+        "caption": "本题没有库存。纸的数量、包数、价钱与经过时间是不同的量。",
+        "values": [
+          24,
+          2,
+          12,
+          6,
+          910,
+          950
+        ],
+        "labels": []
+      },
+      "predictionVisual": {
+        "type": "materials-plan",
+        "title": "手工材料和活动时间分开算",
+        "caption": "本题没有库存。纸的数量、包数、价钱与经过时间是不同的量。",
+        "values": [
+          24,
+          2,
+          12,
+          6,
+          910,
+          950
+        ],
+        "labels": []
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -38797,6 +39107,20 @@
       "browser": "not-applicable",
       "teaching": "awaiting-kevin-trial"
     },
+    "introVisual": {
+      "type": "materials-plan",
+      "title": "手工材料和活动时间分开算",
+      "caption": "本题没有库存。纸的数量、包数、价钱与经过时间是不同的量。",
+      "values": [
+        24,
+        2,
+        12,
+        6,
+        910,
+        950
+      ],
+      "labels": []
+    },
     "textbookUnit": {
       "id": "G3-L07",
       "title": "复习与关联（含重叠问题）",
@@ -38812,7 +39136,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -39475,7 +39799,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -39988,7 +40312,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -40467,7 +40791,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -40943,7 +41267,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -41440,7 +41764,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -41947,7 +42271,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -42402,7 +42726,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -42868,7 +43192,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -43405,7 +43729,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -43910,7 +44234,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.2",
+    "editorialRevision": "2026-10-09.3",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,

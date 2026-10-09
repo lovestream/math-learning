@@ -51,9 +51,9 @@ async page=>{
   if(id==='G3-U06-B03')assert((await page.locator('.blank-expression').innerText()).includes('1/6＋2/6'),'换分组后仍给2/8＋3/8');
   if(id==='G3-U03-E02')assert((await page.locator('.blank-expression').innerText()).includes('(5−1)'),'当前环数错用原来的4环');
   await shot(id,'symbols',390);await stage(5);assert(!await page.locator('.parent-task-preview').getAttribute('open'),'题目清单默认展开');assert(await page.locator('.parent-task-preview li').count()>=3,'家长无法核对题组');assert(!await page.locator('.parent-task-preview li').first().isVisible(),'儿童仍需重复阅读题组');
-  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'语义页面390溢出 '+id);checked.push({id,chapter:l.textbookUnit.id,actualOperation:true,why:true,oldAndCurrentSeparated:true});
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'语义页面390溢出 '+id);checked.push({id,chapter:l.textbookUnit.id,actualOperation:true,mathBehavior:'partial-operation-check; complete desktop goal is verified by verify-desktop-semantic-browser',why:true,oldAndCurrentSeparated:true});
  }
- for(const id of ['G3-U01-B01','G3-U02-B03','G3-U04-B03','G3-U03-E02'])for(const width of [768,1440]){await page.setViewportSize({width,height:1024});await page.goto(base+'/?lesson='+id);await page.locator('.child-classroom').waitFor();for(const [n,name] of [[0,'story'],[1,'prediction'],[2,'operated']]){await stage(n);await shot(id,name,width);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'关键图溢出 '+id+' '+width);} }
+ for(const id of ['G3-U01-B01','G3-U02-B03','G3-U04-B03','G3-U03-E02'])for(const width of [768,1440]){await page.setViewportSize({width,height:1024});await page.goto(base+'/?lesson='+id);await page.locator('.child-classroom').waitFor();for(const [n,name] of [[0,'story'],[1,'prediction'],[2,'operated']]){await stage(n);if(name==='operated')await operate(id);await shot(id,name,width);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'关键图溢出 '+id+' '+width);} }
  await page.setViewportSize({width:390,height:844});await page.goto(base+'/?lesson=G3-U02-B03');await page.locator('.child-classroom').waitFor();await stage(0);
  const fontSample=await page.evaluate(()=>{
   // Snapshot computed sizes before changing parents; !important pixel rules

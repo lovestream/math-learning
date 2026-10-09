@@ -1,9 +1,21 @@
 // Authored KNOWN conditions, never numbers extracted from prose or answer diagrams.
+import {operationModels} from '../../shared/operation-models.mjs';
+import {coreModels} from '../../shared/core-models.mjs';
 import {textbookModels} from '../../shared/textbook-models.mjs';
 import {introVisualTypes} from '../../shared/intro-visuals.mjs';
 // The same object/face IDs are used by the later hands-on experiments.
 const picture=(type,title,caption,values=[],labels=[])=>({type,title,caption,values,labels});
 export const introVisuals={
+ 'G3-U02-E03':picture('money-flow','同一笔钱的三次记录','箭头向外是付款，向内是退款；最后余额留空。',[operationModels['G3-U02-E03'].start,operationModels['G3-U02-E03'].pay,operationModels['G3-U02-E03'].refund]),
+ 'G3-U02-E02':picture('nested-share','先分到组，再分给组内的人','框表示组，圆点表示人；每人分到的卡片数还不知道。',[operationModels['G3-U02-E02'].total,operationModels['G3-U02-E02'].groups,operationModels['G3-U02-E02'].perGroup]),
+ 'G3-U02-O01':picture('reverse-routes','同一个方框，两条计算路线','44是错算路线得到的结果；原式结果和方框都未揭晓。',[operationModels['G3-U02-O01'].addend,operationModels['G3-U02-O01'].multiplier,operationModels['G3-U02-O01'].target]),
+ 'G3-U04-B05':picture('estimate-bound','398人与400人的票费对照','同样每人8元；多算2个人会怎样？先比较，再判断3200元够不够。',coreModels['G3-U04-B05'].cases[0]),
+ 'G3-U07-R01':picture('supply-bar','需要的贴纸与已有的贴纸','36份礼物，每份2张；已有20张。蓝色是已有，问号是还缺。',[36,2,20]),
+ 'G3-L02-B05':picture('nested-boxes','箱里面有盒，盒里面有杯子','图只展示已知的层级，每盒6个；总数由你求。',coreModels['G3-L02-B05'].cases[0]),
+ 'G3-L02-B06':picture('invariant-bars','买本子和换箱子，分别什么不变？','上图同价买卖，单价相同；下图只换装法，书的总量不变。不要混成一件事。',coreModels['G3-L02-B06'].cases[0]),
+ 'G3-L06-B03':picture('money-columns','元对元、角对角','3.8元是3元8角，2.5元是2元5角。先把相同单位对齐，合计与找零留空。',[3,8,2,5,10]),
+ 'G3-L07-R01':picture('materials-plan','手工材料和活动时间分开算','本题没有库存。纸的数量、包数、价钱与经过时间是不同的量。',[24,2,12,6,910,950]),
+
  'G3-L05-B01':picture('vote-board','每个人一票，选一个目的地','18个人都按同一单选规则投票。各地票数暂时未知。',[textbookModels['G3-L05-B01'].people],textbookModels['G3-L05-B01'].options),
  'G3-L05-B02':picture('data-cards','把阅读时长卡各放进一个组','先看8条原始记录；10分钟该去哪组，要由你判断。',textbookModels['G3-L05-B02'].data,['0—9分钟','10—19分钟','20分钟及以上']),
  'G3-U01-B01':picture('box-camera','桌上这个盒子与拍照位置','盒子不动。先认清三个标记，再看相机站在哪里。'),
@@ -54,7 +66,7 @@ export const predictionVisuals=Object.fromEntries(['G3-U01-B01','G3-U01-B02','G3
 predictionVisuals['G3-UP01-B01'].caption='左边是原来的读数。右边仍是同一个米袋，只把显示单位换成千克；先猜质量是否改变。';
 // These introductions ask about arithmetic or reasoning from fully stated data.
 // Every other entrance must have authored objects, a canonical scene or a diagram.
-export const textOnlyIntroLessonIds=new Set(['G3-U02-E03','G3-U02-E02','G3-U02-O01','G3-U04-B05','G3-U07-R01','G3-L02-B05','G3-L02-B06','G3-L06-B03','G3-L07-R01']);
+export const textOnlyIntroLessonIds=new Set();
 export function validateIntroVisualCoverage(lessons){
  for(const lesson of lessons){
   if(!lesson.introVisual&&!lesson.mathScenes?.length&&!lesson.lengthScenes?.length&&!lesson.articleBlocks[0]?.diagram&&!textOnlyIntroLessonIds.has(lesson.lessonId))throw Error(`${lesson.lessonId} 的真实问题缺少对应图形或明确的文字题审核`);
@@ -68,3 +80,17 @@ export function validateIntroVisualCoverage(lessons){
   if(lesson.childClassroom){const c=lesson.childClassroom;if(!c.story||!c.predictQuestion||c.predictionOptions.length<2||c.predictionOptions.length>3||!c.mission||!c.discovery.length||!c.symbols.length||!c.retell)throw Error(`${lesson.lessonId} 六步短课堂缺少教案`);}
  }
 }
+
+// The nine diagrams and their stories share explicit authored condition data.
+const value=id=>introVisuals[id].values;
+export const conditionStories={
+ 'G3-U02-E03':(()=>{const [start,pay,refund]=value('G3-U02-E03');return `有${start}元，先付${pay}元又退${refund}元。想在账本中只写一次扣款，应该扣多少？`;})(),
+ 'G3-U02-E02':(()=>{const [total,groups,people]=value('G3-U02-E02');return `${total}张卡先平分给${groups}组，每组再平分给${people}人。每人分到几张？`;})(),
+ 'G3-U02-O01':(()=>{const [a,b,c]=value('G3-U02-O01');return `原式是${a}+□×${b}，小乐先算加法再乘法，错误结果得到${c}。方框里是什么？`;})(),
+ 'G3-U04-B05':(()=>{const [people,price,budget]=value('G3-U04-B05');return `${people}名同学每人票价${price}元，准备${budget}元够不够？`;})(),
+ 'G3-U07-R01':(()=>{const [count,each,owned]=value('G3-U07-R01');return `班级要做${count}份小礼物，每份贴${each}张贴纸，已有${owned}张，还需买多少？`;})(),
+ 'G3-L02-B05':(()=>{const [boxes,inner,each]=value('G3-L02-B05');return `${boxes}箱杯子，每箱${inner}盒，每盒${each}个，全部有几个？反过来${boxes*inner*each}个分装怎样求每盒？`;})(),
+ 'G3-L02-B06':(()=>{const [books,price,newBooks,each,newEach]=value('G3-L02-B06');return `${books}本同价本子${price}元，买${newBooks}本要多少钱？另一问题：同一批书每箱${each}本装${books}箱，改每箱${newEach}本需几箱？`;})(),
+ 'G3-L06-B03':(()=>{const [a,b,c,d,paid]=value('G3-L06-B03');return `一盒彩笔${a}.${b}元、一本本子${c}.${d}元，合计多少钱？付${paid}元找回多少？`;})(),
+ 'G3-L07-R01':(()=>{const [people,each,pack,price,start,end]=value('G3-L07-R01'),time=n=>`${Math.floor(n/60)}:${String(n%60).padStart(2,'0')}`;return `${people}人做手工，每人${each}张纸，每包${pack}张、${price}元，需要买齐材料（这一题不另给库存）。活动从${time(start)}到${time(end)}。分别需要几包、多少钱、多少分钟？`;})(),
+};

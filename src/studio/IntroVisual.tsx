@@ -43,6 +43,23 @@ function Groups({values:v,labels}:{values:number[];labels:string[]}){
   {division&&groups>0?<g>{Array.from({length:groups},(_,i)=><g key={i}><rect x={75+i*490/groups} y="260" width={460/groups} height="38" rx="5" fill="#e5efeb" stroke={green} strokeDasharray="5 4"/>{text(75+i*490/groups+230/groups,285,`第${i+1}份：？`,15)}</g>)}</g>:text(320,285,groups===0?`每袋${extra}个，袋数？`:'合起来一共有多少？',18)}
  </Canvas>;
 }
+// Authored condition diagrams: known quantities only, no computed answer in markup.
+function RelationPicture({spec}:{spec:VisualSpec}){
+ const v=spec.values??[],box=(label:string,detail:string)=><div className="condition-node"><b>{label}</b><span>{detail}</span></div>;
+ const row=(children:ReactNode)=><div className="condition-flow">{children}</div>,arrow=<span className="condition-arrow" aria-hidden="true">→</span>;
+ const blocks=(n:number,label:string)=><div className="condition-units">{Array.from({length:n},(_,i)=><span key={i}>{label}{i+1}</span>)}</div>;
+ let content:ReactNode;
+ if(spec.type==='money-flow')content=row(<>{box('原有',`${v[0]}元`)}{arrow}{box('付款 · 钱离开',`−${v[1]}元`)}{arrow}{box('退款 · 钱回来',`＋${v[2]}元`)}{arrow}{box('现在','？元')}</>);
+ if(spec.type==='nested-share')content=<>{row(<>{box('全部卡片',`${v[0]}张`)}{arrow}{box('第一层',`平均分给${v[1]}组`)}{arrow}{box('第二层',`每组${v[2]}人平分`)}</>)}<div className="condition-groups">{Array.from({length:v[1]},(_,i)=><div key={i}><b>第{i+1}组</b>{blocks(v[2],'人')}<span>每人？张</span></div>)}</div></>;
+ if(spec.type==='reverse-routes')content=<>{row(<>{box('原式先算','□')}{arrow}{box('乘法',`×${v[1]}`)}{arrow}{box('再加',`＋${v[0]}`)}{arrow}{box('原式结果','？')}</>)}{row(<>{box('错算先做','□')}{arrow}{box('先加',`＋${v[0]}`)}{arrow}{box('再乘',`×${v[1]}`)}{arrow}{box('已知错算结果',`${v[2]}`)}</>)}</>;
+ if(spec.type==='estimate-bound')content=<>{row(<>{box('真实人数',`${v[0]}人`)}{arrow}{box('同一票价',`每人${v[1]}元`)}{arrow}{box('实际票费','？元')}</>)}{row(<>{box('多估的人数',`${v[4]}人`)}{arrow}{box('同一票价',`每人${v[1]}元`)}{arrow}{box('估计票费','？元')}</>)}<p>准备的钱：{v[2]}元。两行只改变人数。</p></>;
+ if(spec.type==='supply-bar')content=<><p>{v[0]}份 × 每份{v[1]}张 → 共需？张贴纸</p><div className="condition-bar"><span style={{flex:v[2]}}>已有{v[2]}张</span><span style={{flex:v[0]*v[1]-v[2]}}>还缺？张</span></div><small>整条表示需要的总数；已有与还缺正好合成整条。</small></>;
+ if(spec.type==='nested-boxes')content=<div className="condition-groups">{Array.from({length:v[0]},(_,i)=><div key={i}><b>第{i+1}箱</b>{Array.from({length:v[1]},(_,j)=><div className="condition-inner" key={j}>第{j+1}盒：{v[2]}个杯子</div>)}</div>)}</div>;
+ if(spec.type==='invariant-bars')content=<><b>问题一：每本价钱一样</b>{row(<>{box('已知购买',`${v[0]}本 · ${v[1]}元`)}{arrow}{box('每本单价','？元（不变）')}{arrow}{box('改买',`${v[2]}本 · ？元`)}</>)}<b>问题二：同一批书重新装箱</b>{row(<>{box('原装法',`${v[0]}箱 · 每箱${v[3]}本`)}{arrow}{box('总量不变','同一批书')}{arrow}{box('新装法',`每箱${v[4]}本 · ？箱`)}</>)}</>;
+ if(spec.type==='money-columns')content=<><table className="condition-money"><thead><tr><th>物品</th><th>元</th><th>角</th></tr></thead><tbody><tr><th>彩笔</th><td>{v[0]}</td><td>{v[1]}</td></tr><tr><th>本子</th><td>{v[2]}</td><td>{v[3]}</td></tr><tr><th>合计</th><td>？</td><td>？</td></tr></tbody></table><p>付出{v[4]}元 → 找回？元。10角可以换成1元。</p></>;
+ if(spec.type==='materials-plan')content=<>{row(<>{box('参与者',`${v[0]}人`)}{arrow}{box('纸张需求',`每人${v[1]}张`)}{arrow}{box('包装',`每包${v[2]}张`)}{arrow}{box('价格',`每包${v[3]}元`)}</>)}<div className="condition-timeline"><b>{Math.floor(v[4]/60)}:{String(v[4]%60).padStart(2,'0')}</b><span>──── 经过？分钟 ────</span><b>{Math.floor(v[5]/60)}:{String(v[5]%60).padStart(2,'0')}</b></div></>;
+ return content?<div className="condition-picture" role="img" aria-label={spec.title}>{content}</div>:null;
+}
 function OtherPicture({spec}:{spec:VisualSpec}){
  const v=spec.values??[],labels=spec.labels??[],type=spec.type;
  if(type==='fraction-strip'||type==='fraction-collection')return <Fraction values={v} collection={type==='fraction-collection'}/>;
@@ -75,7 +92,7 @@ function OtherPicture({spec}:{spec:VisualSpec}){
 export default function IntroVisual({spec,prediction=false}:{spec:VisualSpec;prediction?:boolean}){
  const titleId=useId();
  return <figure className={`intro-visual intro-${spec.type}`} data-intro-visual={spec.type} data-intro-stage={prediction?'prediction':'story'} aria-labelledby={titleId}><header><span>{prediction?'带着图猜一猜':'题目里的画面'}</span><h3 id={titleId}>{spec.title}</h3></header>
-  {spec.type==='box-camera'?<BoxCamera prediction={prediction}/>:spec.type==='hidden-blocks'?<HiddenBlocks prediction={prediction}/>:spec.type==='cube-net'?<Net/>:spec.type==='cup-scale'?<Canvas label={prediction?'同一个米袋，原来显示1000克，换单位后的读数未知':'杯和水一起放在秤上，显示380克；空杯还没有称'}>{prediction?<><Rice x={185} y={115}/><Scale x={185} y={168} reading={`${scaleObjects[2].mass} g`}/><Rice x={455} y={115}/><Scale x={455} y={168} reading="？ kg"/>{text(320,78,'同一个米袋',16)}{text(320,258,'只换显示单位，没有添米或拿走米',17)}</>:<><Cup x={190} y={126} water/><Scale x={190} y={179} reading={`${containerObjects[2].mass} g`}/><Cup x={467} y={140}/>{text(467,219,'空杯：？克')}{text(190,277,'读数包含杯和水',17)}</>}</Canvas>:spec.type==='boat-replacement'?<Canvas label="同一条水面，模型象上船时船沉得低，下船后船浮高，原红色水线随船身上移"><Boat x={163} elephant/><Boat x={478} elephant={false}/>{prediction&&text(320,36,'准备放石块：放多少、放到哪里？',18)}</Canvas>:<OtherPicture spec={spec}/>}
+  {spec.type==='box-camera'?<BoxCamera prediction={prediction}/>:spec.type==='hidden-blocks'?<HiddenBlocks prediction={prediction}/>:spec.type==='cube-net'?<Net/>:spec.type==='cup-scale'?<Canvas label={prediction?'同一个米袋，原来显示1000克，换单位后的读数未知':'杯和水一起放在秤上，显示380克；空杯还没有称'}>{prediction?<><Rice x={185} y={115}/><Scale x={185} y={168} reading={`${scaleObjects[2].mass} g`}/><Rice x={455} y={115}/><Scale x={455} y={168} reading="？ kg"/>{text(320,78,'同一个米袋',16)}{text(320,258,'只换显示单位，没有添米或拿走米',17)}</>:<><Cup x={190} y={126} water/><Scale x={190} y={179} reading={`${containerObjects[2].mass} g`}/><Cup x={467} y={140}/>{text(467,219,'空杯：？克')}{text(190,277,'读数包含杯和水',17)}</>}</Canvas>:spec.type==='boat-replacement'?<Canvas label="同一条水面，模型象上船时船沉得低，下船后船浮高，原红色水线随船身上移"><Boat x={163} elephant/><Boat x={478} elephant={false}/>{prediction&&text(320,36,'准备放石块：放多少、放到哪里？',18)}</Canvas>:['money-flow','nested-share','reverse-routes','estimate-bound','supply-bar','nested-boxes','invariant-bars','money-columns','materials-plan'].includes(spec.type)?<RelationPicture spec={spec}/>:<OtherPicture spec={spec}/>}
   <figcaption>{spec.caption}</figcaption>
  </figure>;
 }

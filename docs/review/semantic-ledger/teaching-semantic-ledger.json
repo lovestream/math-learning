@@ -52,7 +52,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "盒子与相机",
         "unit": "方向",
@@ -177,6 +177,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "user-reported-trial-of-template",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -199,7 +208,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "两排积木",
         "unit": "块",
@@ -322,6 +331,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -344,7 +362,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "六面纸盒",
         "unit": "面／棱",
@@ -466,6 +484,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -488,7 +515,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "公交乘客",
         "unit": "人",
@@ -668,6 +695,15 @@
         "discovery-generic"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -690,7 +726,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "散笔与盒装笔",
         "unit": "支／盒",
@@ -870,6 +906,15 @@
         "discovery-generic"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -892,7 +937,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "红蓝珠和盒子",
         "unit": "颗／盒",
@@ -1072,6 +1117,15 @@
         "discovery-generic"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -1094,7 +1148,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "书架库存",
         "unit": "本",
@@ -1274,6 +1328,15 @@
         "discovery-generic"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -1296,7 +1359,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "盒装彩笔和送出部分",
         "unit": "支／盒",
@@ -1476,6 +1539,15 @@
         "discovery-generic"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -1498,7 +1570,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "余额与退款",
         "unit": "元",
@@ -1678,6 +1750,15 @@
         "discovery-generic"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -1700,7 +1781,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "余额与净支出",
         "unit": "元",
@@ -1708,12 +1789,22 @@
         "unknown": "一次扣款金额和等值表达",
         "changes": "括号及里面的符号"
       },
-      "contentFingerprint": "3acfb60eaca6fd0e4c9b60546672e8442d32cdeced58fc1b9806cd8219da3d08",
+      "contentFingerprint": "5692629d5ed01f0f40f8d8d1fc07efb888abf78cb008b6dd93a81db2f7507b3a",
       "story": {
         "text": "有60元，先付14元又退6元。想在账本中只写一次扣款，应该扣多少？",
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "renderer": "src/studio/IntroVisual.tsx",
+          "spec": {
+            "type": "money-flow",
+            "title": "同一笔钱的三次记录",
+            "caption": "箭头向外是付款，向内是退款；最后余额留空。",
+            "values": [
+              60,
+              14,
+              6
+            ],
+            "labels": []
+          }
         }
       },
       "prediction": {
@@ -1724,8 +1815,15 @@
           "只扣6元"
         ],
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "type": "money-flow",
+          "title": "同一笔钱的三次记录",
+          "caption": "箭头向外是付款，向内是退款；最后余额留空。",
+          "values": [
+            60,
+            14,
+            6
+          ],
+          "labels": []
         }
       },
       "experiment": {
@@ -1803,6 +1901,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -1825,7 +1932,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "分组发卡",
         "unit": "张／组／人",
@@ -1833,12 +1940,22 @@
         "unknown": "每人张数",
         "changes": "层级分配与总人数"
       },
-      "contentFingerprint": "2ebb82c966a8b812a3f64901bd09f56b00e453ff100764a042682fd348fbf674",
+      "contentFingerprint": "6a9e62124e9765635418763df014cc738cf28b47ee88fdce6cf43166efa1a364",
       "story": {
         "text": "48张卡先平分给6组，每组再平分给2人。每人分到几张？",
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "renderer": "src/studio/IntroVisual.tsx",
+          "spec": {
+            "type": "nested-share",
+            "title": "先分到组，再分给组内的人",
+            "caption": "框表示组，圆点表示人；每人分到的卡片数还不知道。",
+            "values": [
+              48,
+              6,
+              2
+            ],
+            "labels": []
+          }
         }
       },
       "prediction": {
@@ -1849,8 +1966,15 @@
           "6×2人"
         ],
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "type": "nested-share",
+          "title": "先分到组，再分给组内的人",
+          "caption": "框表示组，圆点表示人；每人分到的卡片数还不知道。",
+          "values": [
+            48,
+            6,
+            2
+          ],
+          "labels": []
         }
       },
       "experiment": {
@@ -1928,6 +2052,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -1950,7 +2083,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "点阵和三堆珠",
         "unit": "颗",
@@ -2074,6 +2207,15 @@
         "condition-gap"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -2096,7 +2238,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "左右两区座位",
         "unit": "个／排",
@@ -2216,6 +2358,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -2238,7 +2389,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "错算流程",
         "unit": "无量纲数",
@@ -2246,12 +2397,22 @@
         "unknown": "方框及正确运算关系",
         "changes": "实际错误步骤的逆操作"
       },
-      "contentFingerprint": "aaee1f776c7df573ac2eeb514b3890f8087e5d387229a68dec57cecc3888d3cc",
+      "contentFingerprint": "7cfe5676caea9d65b107100558ed8c3e0e48edc0959a27f98dc42116b751b1af",
       "story": {
         "text": "原式是7+□×4，小乐先算加法再乘法，错误结果得到44。方框里是什么？",
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "renderer": "src/studio/IntroVisual.tsx",
+          "spec": {
+            "type": "reverse-routes",
+            "title": "同一个方框，两条计算路线",
+            "caption": "44是错算路线得到的结果；原式结果和方框都未揭晓。",
+            "values": [
+              7,
+              4,
+              44
+            ],
+            "labels": []
+          }
         }
       },
       "prediction": {
@@ -2262,8 +2423,15 @@
           "把加法结果乘4"
         ],
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "type": "reverse-routes",
+          "title": "同一个方框，两条计算路线",
+          "caption": "44是错算路线得到的结果；原式结果和方框都未揭晓。",
+          "values": [
+            7,
+            4,
+            44
+          ],
+          "labels": []
         }
       },
       "experiment": {
@@ -2341,6 +2509,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -2363,7 +2540,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "整盒彩笔卡",
         "unit": "支／盒",
@@ -2489,6 +2666,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -2511,7 +2697,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "断尺和物体",
         "unit": "毫米／厘米",
@@ -2628,6 +2814,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -2650,7 +2845,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "学校到公园路线",
         "unit": "米／千米",
@@ -2768,6 +2963,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -2790,7 +2994,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "杯水、秤和米袋",
         "unit": "克／千克／吨",
@@ -2913,6 +3117,15 @@
         "object-switch"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -2935,7 +3148,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "同船的象与石块",
         "unit": "质量／水线",
@@ -3062,6 +3275,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -3084,7 +3306,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "盒装笔的位值",
         "unit": "支／盒",
@@ -3276,6 +3498,15 @@
         "unannounced-transfer"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -3298,7 +3529,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "三袋小棒",
         "unit": "根／十／一",
@@ -3427,6 +3658,15 @@
         "unannounced-transfer"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -3449,7 +3689,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "八箱饮料位值",
         "unit": "瓶／箱／十／百",
@@ -3639,6 +3879,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -3661,7 +3910,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "分区座位位值",
         "unit": "个／区",
@@ -3851,6 +4100,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -3873,7 +4131,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "票价预算",
         "unit": "元／人",
@@ -3881,12 +4139,24 @@
         "unknown": "预算是否足够",
         "changes": "估大或估小的边界"
       },
-      "contentFingerprint": "abd4ae8207b6acfe3cc6874b51e43a493f06000226ae5c39ae72ca2d6eb766f8",
+      "contentFingerprint": "e923e7942acff98db8dd2f41988d75f78783dcafc1ae2ef4c4f5dc35de71424d",
       "story": {
         "text": "398名同学每人票价8元，准备3200元够不够？",
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "renderer": "src/studio/IntroVisual.tsx",
+          "spec": {
+            "type": "estimate-bound",
+            "title": "398人与400人的票费对照",
+            "caption": "同样每人8元；多算2个人会怎样？先比较，再判断3200元够不够。",
+            "values": [
+              398,
+              8,
+              3200,
+              390,
+              400
+            ],
+            "labels": []
+          }
         }
       },
       "prediction": {
@@ -3897,8 +4167,17 @@
           "和准确费用一样"
         ],
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "type": "estimate-bound",
+          "title": "398人与400人的票费对照",
+          "caption": "同样每人8元；多算2个人会怎样？先比较，再判断3200元够不够。",
+          "values": [
+            398,
+            8,
+            3200,
+            390,
+            400
+          ],
+          "labels": []
         }
       },
       "experiment": {
@@ -4056,6 +4335,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -4078,7 +4366,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "图书位置编码",
         "unit": "架／层／格",
@@ -4200,6 +4488,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -4222,7 +4519,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "线段射线直线",
         "unit": "端点／厘米",
@@ -4337,6 +4634,15 @@
         "static-input"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "static-relation",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -4359,7 +4665,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "活动角与刀片",
         "unit": "张口／边长",
@@ -4477,6 +4783,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -4499,7 +4814,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "直角工具与墙角",
         "unit": "角的类别",
@@ -4611,6 +4926,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -4633,7 +4957,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "饼与等分纸带",
         "unit": "整体／份",
@@ -4751,6 +5075,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -4773,7 +5106,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "涂色贴纸",
         "unit": "份",
@@ -4893,6 +5226,15 @@
         "unannounced-transfer"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -4915,7 +5257,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "同一块饼的取用",
         "unit": "八分之一份",
@@ -5109,6 +5451,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -5131,7 +5482,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "一整盒糖",
         "unit": "颗／三分之一盒",
@@ -5323,6 +5674,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -5345,7 +5705,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "整批贴纸",
         "unit": "张／八分之一份",
@@ -5537,6 +5897,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -5559,7 +5928,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "同一条涂色纸带",
         "unit": "长度／小份／大份",
@@ -5682,6 +6051,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -5704,7 +6082,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "礼物贴纸计划",
         "unit": "份／张",
@@ -5712,12 +6090,22 @@
         "unknown": "需要补买张数",
         "changes": "静态计划表／纸笔"
       },
-      "contentFingerprint": "c496f1604338976612b0471b39e7e90bd3d1fbe707cff0d95536b6bd887185d0",
+      "contentFingerprint": "f2a416de342804105b6e1ee47913b89efd0c089dafe8e8adeadcbba146515b48",
       "story": {
         "text": "班级要做36份小礼物，每份贴2张贴纸，已有20张，还需买多少？",
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "renderer": "src/studio/IntroVisual.tsx",
+          "spec": {
+            "type": "supply-bar",
+            "title": "需要的贴纸与已有的贴纸",
+            "caption": "36份礼物，每份2张；已有20张。蓝色是已有，问号是还缺。",
+            "values": [
+              36,
+              2,
+              20
+            ],
+            "labels": []
+          }
         }
       },
       "prediction": {
@@ -5728,8 +6116,15 @@
           "36减20"
         ],
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "type": "supply-bar",
+          "title": "需要的贴纸与已有的贴纸",
+          "caption": "36份礼物，每份2张；已有20张。蓝色是已有，问号是还缺。",
+          "values": [
+            36,
+            2,
+            20
+          ],
+          "labels": []
         }
       },
       "experiment": {
@@ -5806,6 +6201,15 @@
         "static-input"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "static-relation",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -5828,7 +6232,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "衣服搭配",
         "unit": "种／套",
@@ -5947,6 +6351,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -5969,7 +6382,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "窗花与折纸",
         "unit": "对应点／折痕",
@@ -6082,6 +6495,15 @@
         "object-switch"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -6104,7 +6526,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "抽屉风车与纸箭头",
         "unit": "位置／方向",
@@ -6217,6 +6639,15 @@
         "object-switch"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -6239,7 +6670,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "纸张十捆",
         "unit": "张／人／十",
@@ -6431,6 +6862,15 @@
         "unannounced-transfer"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -6453,7 +6893,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "糖的位值分配",
         "unit": "颗／人／十",
@@ -6581,6 +7021,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -6603,7 +7052,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "糖与满袋",
         "unit": "颗／袋",
@@ -6801,6 +7250,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -6823,7 +7281,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "按位分书",
         "unit": "本／班／百十个",
@@ -6951,6 +7409,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -6973,7 +7440,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "杯子的两层包装",
         "unit": "箱／盒／个",
@@ -6981,12 +7448,22 @@
         "unknown": "总量及逆向每盒量",
         "changes": "层级分组、操作情境"
       },
-      "contentFingerprint": "c8315ab74782e1b0f10e04cfe70cb435c0b706bfb8463b65fd5416ac4cf0715b",
+      "contentFingerprint": "39361a14ec941630ee154691753a00e62b71d694d5b45676f1d521311522cfd7",
       "story": {
         "text": "2箱杯子，每箱4盒，每盒6个，全部有几个？反过来48个分装怎样求每盒？",
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "renderer": "src/studio/IntroVisual.tsx",
+          "spec": {
+            "type": "nested-boxes",
+            "title": "箱里面有盒，盒里面有杯子",
+            "caption": "图只展示已知的层级，每盒6个；总数由你求。",
+            "values": [
+              2,
+              4,
+              6
+            ],
+            "labels": []
+          }
         }
       },
       "prediction": {
@@ -6997,8 +7474,15 @@
           "2×4盒"
         ],
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "type": "nested-boxes",
+          "title": "箱里面有盒，盒里面有杯子",
+          "caption": "图只展示已知的层级，每盒6个；总数由你求。",
+          "values": [
+            2,
+            4,
+            6
+          ],
+          "labels": []
         }
       },
       "experiment": {
@@ -7158,6 +7642,15 @@
         "unannounced-transfer"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -7180,7 +7673,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "买本子与换分装",
         "unit": "元／本；本／箱",
@@ -7188,12 +7681,24 @@
         "unknown": "购买总价或重新分装箱数",
         "changes": "先求单价或总量"
       },
-      "contentFingerprint": "f89d33445517e5b95132302cc23564281c4df5e930160253c1f6ce325ef7bc35",
+      "contentFingerprint": "3fd75a12f3698401ab141a84c9ea9f01e8721b2a8a412bff3000cdad2c11d00b",
       "story": {
         "text": "4本同价本子24元，买7本要多少钱？另一问题：同一批书每箱6本装4箱，改每箱8本需几箱？",
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "renderer": "src/studio/IntroVisual.tsx",
+          "spec": {
+            "type": "invariant-bars",
+            "title": "买本子和换箱子，分别什么不变？",
+            "caption": "上图同价买卖，单价相同；下图只换装法，书的总量不变。不要混成一件事。",
+            "values": [
+              4,
+              24,
+              7,
+              6,
+              8
+            ],
+            "labels": []
+          }
         }
       },
       "prediction": {
@@ -7204,8 +7709,17 @@
           "7本比4本多多少本就够了"
         ],
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "type": "invariant-bars",
+          "title": "买本子和换箱子，分别什么不变？",
+          "caption": "上图同价买卖，单价相同；下图只换装法，书的总量不变。不要混成一件事。",
+          "values": [
+            4,
+            24,
+            7,
+            6,
+            8
+          ],
+          "labels": []
         }
       },
       "experiment": {
@@ -7381,6 +7895,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -7403,7 +7926,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "相框几何图形",
         "unit": "边／角",
@@ -7520,6 +8043,15 @@
         "static-input"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "static-relation",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -7542,7 +8074,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "无入口花坛边界",
         "unit": "米",
@@ -7665,6 +8197,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -7687,7 +8228,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "拼接正方形板",
         "unit": "厘米",
@@ -7809,6 +8350,15 @@
         "object-ambiguity"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -7831,7 +8381,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "围栏与铺砖",
         "unit": "长度／面积",
@@ -7952,6 +8502,15 @@
         "static-input"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "static-relation",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -7974,7 +8533,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "长方形地面与方砖",
         "unit": "米／平方米／块",
@@ -8097,6 +8656,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -8119,7 +8687,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "单位方纸与剪角卡",
         "unit": "分米／厘米／平方单位",
@@ -8246,6 +8814,15 @@
         "model-topic-mismatch"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -8268,7 +8845,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "目的地投票",
         "unit": "人／票",
@@ -8397,6 +8974,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -8419,7 +9005,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "阅读时长卡",
         "unit": "分钟／条记录",
@@ -8580,6 +9166,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -8602,7 +9197,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "月份日历",
         "unit": "年／月／日",
@@ -8721,6 +9316,15 @@
         "unannounced-transfer"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -8743,7 +9347,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "24时时刻和时间线",
         "unit": "小时／分钟",
@@ -8870,6 +9474,15 @@
         "unannounced-transfer"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -8892,7 +9505,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "星期与日期",
         "unit": "天／周",
@@ -9003,6 +9616,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -9025,7 +9647,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "米尺与小数位",
         "unit": "米／分米／厘米",
@@ -9153,6 +9775,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -9175,7 +9806,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "跳高长度比较",
         "unit": "米／厘米",
@@ -9304,6 +9935,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -9326,7 +9966,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "彩笔本子付款",
         "unit": "元／角",
@@ -9334,12 +9974,24 @@
         "unknown": "合计与找零",
         "changes": "静态元角对齐／纸笔"
       },
-      "contentFingerprint": "b2625307325a1ec222329cf79ec7eaa7377fbb3c77cc419ae22995772cd1f32c",
+      "contentFingerprint": "56aa7ced2780d2af814cfd34032881fa3535b14f385a1979eb351af290387645",
       "story": {
         "text": "一盒彩笔3.8元、一本本子2.5元，合计多少钱？付10元找回多少？",
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "renderer": "src/studio/IntroVisual.tsx",
+          "spec": {
+            "type": "money-columns",
+            "title": "元对元、角对角",
+            "caption": "3.8元是3元8角，2.5元是2元5角。先把相同单位对齐，合计与找零留空。",
+            "values": [
+              3,
+              8,
+              2,
+              5,
+              10
+            ],
+            "labels": []
+          }
         }
       },
       "prediction": {
@@ -9350,8 +10002,17 @@
           "都代表角，满10角进1元"
         ],
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "type": "money-columns",
+          "title": "元对元、角对角",
+          "caption": "3.8元是3元8角，2.5元是2元5角。先把相同单位对齐，合计与找零留空。",
+          "values": [
+            3,
+            8,
+            2,
+            5,
+            10
+          ],
+          "labels": []
         }
       },
       "experiment": {
@@ -9428,6 +10089,15 @@
         "static-input"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "static-relation",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -9450,7 +10120,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "活动采购计划",
         "unit": "人／张／包／元／分钟",
@@ -9458,12 +10128,25 @@
         "unknown": "总需求、补购、费用、时长",
         "changes": "静态计划表／纸笔"
       },
-      "contentFingerprint": "c820b1f5914a96fe3fbd20f63cf2855e5298b5622dda659f1c787c2abc3b848d",
+      "contentFingerprint": "1ab8a0f74f3121a820532f47f4998f6fd30a1142d5f2185dafda7e41ca4ce8e3",
       "story": {
         "text": "24人做手工，每人2张纸，每包12张、6元，需要买齐材料（这一题不另给库存）。活动从15:10到15:50。分别需要几包、多少钱、多少分钟？",
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "renderer": "src/studio/IntroVisual.tsx",
+          "spec": {
+            "type": "materials-plan",
+            "title": "手工材料和活动时间分开算",
+            "caption": "本题没有库存。纸的数量、包数、价钱与经过时间是不同的量。",
+            "values": [
+              24,
+              2,
+              12,
+              6,
+              910,
+              950
+            ],
+            "labels": []
+          }
         }
       },
       "prediction": {
@@ -9474,8 +10157,18 @@
           "可以，不用看每人几张"
         ],
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "type": "materials-plan",
+          "title": "手工材料和活动时间分开算",
+          "caption": "本题没有库存。纸的数量、包数、价钱与经过时间是不同的量。",
+          "values": [
+            24,
+            2,
+            12,
+            6,
+            910,
+            950
+          ],
+          "labels": []
         }
       },
       "experiment": {
@@ -9552,6 +10245,15 @@
         "condition-gap"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "static-relation",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -9574,7 +10276,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "读书与绘画名单",
         "unit": "人",
@@ -9712,6 +10414,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -9734,7 +10445,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "搭接木板",
         "unit": "厘米／毫米",
@@ -9858,6 +10569,15 @@
         "condition-gap"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -9880,7 +10600,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "拉直理想链环",
         "unit": "厘米／毫米",
@@ -10000,6 +10720,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -10022,7 +10751,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "直绳与闭环",
         "unit": "米／点／段",
@@ -10142,6 +10871,15 @@
         "condition-gap"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -10164,7 +10902,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "一米彩带",
         "unit": "米／份",
@@ -10276,6 +11014,15 @@
         "object-ambiguity"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -10298,7 +11045,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "正方形地垫",
         "unit": "块／边长单位",
@@ -10410,6 +11157,15 @@
         "condition-gap"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -10432,7 +11188,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "点心盒与同量糖袋",
         "unit": "盒／袋／颗",
@@ -10542,6 +11298,15 @@
       "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "source-checked",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -10564,7 +11329,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "糖袋与等量两盘",
         "unit": "颗",
@@ -10676,6 +11441,15 @@
         "object-switch"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -10698,7 +11472,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "饭盒与苹果",
         "unit": "个",
@@ -10815,6 +11589,15 @@
         "unannounced-transfer"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -10837,7 +11620,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "两人的苹果",
         "unit": "个",
@@ -10954,6 +11737,15 @@
         "object-switch"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",
@@ -10976,7 +11768,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.2",
+      "editorialRevision": "2026-10-09.3",
       "quantities": {
         "object": "原有送出剩余贴纸",
         "unit": "张",
@@ -11093,6 +11885,15 @@
         "unannounced-transfer"
       ],
       "classroomTrial": "not-verified",
+      "verification": {
+        "implementation": "manipulable-six-step",
+        "contentReviewed": "issue-fixed",
+        "desktopVisual": "not-run",
+        "mathBehavior": "not-run",
+        "parentReviewed": "no",
+        "learnerMastery": "no-data",
+        "evidence": null
+      },
       "acceptance": {
         "sourceInspection": "recorded",
         "mathematicalInvariants": "listed-not-individually-retested",

@@ -1,3 +1,4 @@
+import {existsSync,readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
@@ -14,6 +15,8 @@ const stages=['真实问题','先猜一猜','亲手实验／静态课画图想�
 export function buildSemanticLedger(){
  const ids=new Set(lessons.map(l=>l.lessonId));
  if(ids.size!==70||Object.keys(semanticNotes).length!==70||Object.keys(semanticNotes).some(id=>!ids.has(id)))throw Error('教学语义台账必须精确对应70个入口');
+ const evidencePath=relative('docs/review/semantic-ledger/desktop-verification.json');
+ const evidence=existsSync(evidencePath)?JSON.parse(readFileSync(evidencePath,'utf8')):null;
  const rows=lessons.map(lesson=>{
   const id=lesson.lessonId,c=lesson.childClassroom,note=semanticNotes[id];
   const block=lesson.articleBlocks.find(b=>b.widget);
@@ -22,11 +25,13 @@ export function buildSemanticLedger(){
   const tasks=withdrawnLessons.includes(id)?withdrawnTasks(lesson):lesson.taskSets.core;
   const picture=c.storyVisual??lesson.introVisual;
   const contextFigure=picture?{renderer:'src/studio/IntroVisual.tsx',spec:picture}:lesson.articleBlocks[0]?.diagram?{renderer:'src/studio/TeachingDiagrams.tsx',diagram:lesson.articleBlocks[0].diagram}:lesson.mathScenes?.[0]?{renderer:'src/studio/MathSceneVisual.tsx',sceneId:lesson.mathScenes[0].sceneId}:lesson.lengthScenes?.[0]?{renderer:'src/studio/measurement/TaskDiagram.tsx',sceneId:lesson.lengthScenes[0].sceneId}:{renderer:null,reason:'当前入口按文字推理题开放，是否足够直观仍需逐章教学核对'};
+  const fingerprint=sha({classroom:c,model,taskSets:lesson.taskSets});
+  const verified=evidence?.rows?.find(r=>r.lessonId===id&&r.contentFingerprint===fingerprint&&r.result==='pass');
   return {
    lessonId:id,title:lesson.title,unitId:lesson.textbookUnit?.id??'foundation-bridge',unitTitle:lesson.textbookUnit?.title??'基础与跨单元桥梁',track:lesson.track,
    sourceAnchor:lesson.sourceAnchors,contentVersion:lesson.contentVersion,editorialRevision:lesson.editorialRevision,
    quantities:semanticContexts[id],
-   contentFingerprint:sha({classroom:c,model,taskSets:lesson.taskSets}),
+   contentFingerprint:fingerprint,
    story:{text:c.story,figure:contextFigure},
    prediction:{question:c.predictQuestion,options:c.predictionOptions,figure:c.predictionVisual??contextFigure},
    experiment:{widget:block.widget,blockId:block.blockId,classification:lesson.interactionStatus,mission:c.mission,model,sourceInitialDescription:scene?.initialState??null,sourceLearnerAction:scene?.learnerAction??null,sourceObservableChange:scene?.observableChange??null,note:'运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分'},
@@ -34,7 +39,8 @@ export function buildSemanticLedger(){
    independentCheck:{scope:'巩固及撤教具练习，可能含已见原故事；不宣称整组为未见迁移',source:withdrawnLessons.includes(id)?'withdrawn-v1-existing-task-ids':'core-existing-task-ids',tasks:tasks.map(t=>({id:t.id,kind:t.kind,prompt:t.prompt})),allTaskCounts:Object.fromEntries(Object.entries(lesson.taskSets).map(([set,ts])=>[set,ts.length])),selfCheckItems:3},
    review:{intervalDays:[1,3,7,21],technicalStatus:'existing-scheduler-not-rerun-in-this-document-phase',teachingStatus:'requires-new-context-and-unassisted-trial'},
    ...note,
-   acceptance:{sourceInspection:'recorded',mathematicalInvariants:'listed-not-individually-retested',browserSemanticEvidence:'pending-chapter-run',parentTeachingApproval:'not-verified',kevinMastery:'not-assessed'},
+   verification:{implementation:lesson.interactionStatus==='static-visual'?'static-relation':'manipulable-six-step',contentReviewed:note.sourceFinding==='initial-source-issue'?'issue-fixed':'source-checked',desktopVisual:verified?.visualInspected?'inspected-pass':verified?'screenshot-recorded':'not-run',mathBehavior:verified?.mathBehavior??'not-run',parentReviewed:'no',learnerMastery:'no-data',evidence:verified?{sha:evidence.source.sha,prHeadSha:evidence.source.prHeadSha,assertions:verified.assertions,actionsPerformed:verified.actionsPerformed,screenshots:verified.screenshots}:null},
+   acceptance:{sourceInspection:'recorded',mathematicalInvariants:verified?verified.mathBehavior:'listed-not-individually-retested',browserSemanticEvidence:verified?'desktop-run-with-sha':'pending-chapter-run',parentTeachingApproval:'not-verified',kevinMastery:'not-assessed'},
   };
  });
  return {
@@ -49,7 +55,7 @@ export function buildSemanticLedger(){
 }
 const cell=s=>String(s??'').replaceAll('|','／').replaceAll('\n',' ');
 export function renderSemanticLedger(ledger){
- let out=`# 三年级70课教学语义台账（2026-10-09）\n\n基线：\`${ledger.baselineSha}\`。先整理台账，再逐章精修；本文件仅记录源核对和后续验收条件。\n\n**已读取指定复审文档**：\`${auditDocument}\`。对应远端文档修订f463dc8；源代码基线仍为79a0f90。\n\n70入口＝17教材单元63课＋7基础／桥梁课；849道正式题与11课的66组操作情境分开统计。保留六步课堂和三项自查；台账阶段先提交，随后课堂文案／图形在展示修订2026-10-09.2精修。正式题、判分、考核版本、Kevin学习数据、四至六年级和43张暂缓卡均不变。\n\n检查的是问题→对象→动作→发现→数学语言→独立新题之间的联系。\n\n- 初次核对发现${ledger.summary.sourceRefinementNeeded}课存在文字、条件、对象过渡或模型主题衔接项；保留原发现与修正说明，现标为“已精修、待逐章验证”。\n- ${ledger.summary.chapterVerificationNeeded}课尚无本次源核对确认的衔接缺陷，标为“待逐章验证”；这不代表教学验收通过。\n- 全70课浏览器语义验收、家长核对与孩子迁移均待逐章记录；旧技术报告不能充当本轮语义检查证据。\n\n机器台账：[teaching-semantic-ledger.json](semantic-ledger/teaching-semantic-ledger.json)。人工逐课批注：[notes.mjs](semantic-ledger/notes.mjs)。生成／查新：\`node scripts/build-semantic-ledger.mjs\` ／ \`node scripts/build-semantic-ledger.mjs --check\`。生成器仅导入课程源，不读取或写入学习数据库。\n\n## 按章总览\n\n|章节|课数|需精修|状态|\n|---|---:|---:|---|\n`;
+ let out=`# 三年级70课教学语义台账（2026-10-09）\n\n基线：\`${ledger.baselineSha}\`。先整理台账，再逐章精修；本文件仅记录源核对和后续验收条件。\n\n**已读取指定复审文档**：\`${auditDocument}\`。对应远端文档修订f463dc8；源代码基线仍为79a0f90。\n\n70入口＝17教材单元63课＋7基础／桥梁课；849道正式题与11课的66组操作情境分开统计。保留六步课堂和三项自查；台账阶段先提交，随后课堂文案／图形在展示修订2026-10-09.2精修。正式题、判分、考核版本、Kevin学习数据、四至六年级和43张暂缓卡均不变。\n\n检查的是问题→对象→动作→发现→数学语言→独立新题之间的联系。\n\n- 初次核对发现${ledger.summary.sourceRefinementNeeded}课存在文字、条件、对象过渡或模型主题衔接项；保留原发现与修正说明，现标为“已精修、待逐章验证”。\n- ${ledger.summary.chapterVerificationNeeded}课尚无本次源核对确认的衔接缺陷，标为“待逐章验证”；这不代表教学验收通过。\n- 电脑端结果按课程内容指纹从desktop-verification.json映射；源内容改变会自动失效。家长核对与孩子迁移独立记录，均不代填通过。\n\n机器台账：[teaching-semantic-ledger.json](semantic-ledger/teaching-semantic-ledger.json)。人工逐课批注：[notes.mjs](semantic-ledger/notes.mjs)。生成／查新：\`node scripts/build-semantic-ledger.mjs\` ／ \`node scripts/build-semantic-ledger.mjs --check\`。生成器仅导入课程源，不读取或写入学习数据库。\n\n## 按章总览\n\n|章节|课数|需精修|状态|\n|---|---:|---:|---|\n`;
  const groups=Map.groupBy(ledger.rows,r=>r.unitId);
  for(const [id,rows] of groups)out+=`|${id} ${cell(rows[0].unitTitle)}|${rows.length}|${rows.filter(r=>r.sourceFinding==='initial-source-issue').length}|台账完成；待逐章精修与验证|\n`;
  out+='\n## 逐课检查清单\n\n';
@@ -57,7 +63,7 @@ export function renderSemanticLedger(ledger){
   out+=`### ${id} ${rows[0].unitTitle}\n\n`;
   for(const r of rows){
    out+=`#### ${r.lessonId} ${r.title}\n\n**源核对**：${r.sourceReview==='refined-awaiting-chapter-verification'?'已精修、待逐章验证':'待逐章验证'}；${r.classroomTrial==='user-reported-trial-of-template'?'用户报告已试过模板，不等于每项教学目标获证。':'尚无本轮真实试课证据。'}\n\n|环节|当前内容／语义证据|\n|---|---|\n`;
-   const values=[['教材／分支',`${r.unitTitle}；${r.track}；考核版本${r.contentVersion}`],['真实问题',r.story.text],['对象／单位／已知／未知',`${r.quantities.object}；${r.quantities.unit}；已知：${r.quantities.known}；待求：${r.quantities.unknown}`],['可改变状态',r.quantities.changes],['条件图',r.story.figure.renderer??r.story.figure.reason],['先猜一猜',r.prediction.question],['猜想选项',r.prediction.options.join('；')],['操作任务',r.experiment.mission],['真实模型／静态图',`${r.experiment.classification}；${r.experiment.widget}；${r.experiment.model.type??r.experiment.model.mode??r.experiment.model.sceneId??'参见机器台账'}`],['发现依据',r.discovery.statements.join('；')],['自己复述',r.discovery.retell],['数学语言',r.mathematicalLanguage.statements.join('；')],['独立检查',`${r.independentCheck.tasks.length}题；${r.independentCheck.source}；${r.independentCheck.tasks.map(t=>t.id).join('、')}`],['数学不变量',r.invariant],['初次核对项（保留历史）',r.nextInspection],['本轮修正',r.resolution??'已补具体因果追问与反例，模型保留；待逐章核验'],['验收状态','模型不变量待逐章重测；浏览器语义截图待补；家长教学核对未完成；不判断Kevin掌握']];
+   const values=[['教材／分支',`${r.unitTitle}；${r.track}；考核版本${r.contentVersion}`],['真实问题',r.story.text],['对象／单位／已知／未知',`${r.quantities.object}；${r.quantities.unit}；已知：${r.quantities.known}；待求：${r.quantities.unknown}`],['可改变状态',r.quantities.changes],['条件图',r.story.figure.renderer??r.story.figure.reason],['先猜一猜',r.prediction.question],['猜想选项',r.prediction.options.join('；')],['操作任务',r.experiment.mission],['真实模型／静态图',`${r.experiment.classification}；${r.experiment.widget}；${r.experiment.model.type??r.experiment.model.mode??r.experiment.model.sceneId??'参见机器台账'}`],['发现依据',r.discovery.statements.join('；')],['自己复述',r.discovery.retell],['数学语言',r.mathematicalLanguage.statements.join('；')],['独立检查',`${r.independentCheck.tasks.length}题；${r.independentCheck.source}；${r.independentCheck.tasks.map(t=>t.id).join('、')}`],['数学不变量',r.invariant],['初次核对项（保留历史）',r.nextInspection],['本轮修正',r.resolution??'已补具体因果追问与反例，模型保留；待逐章核验'],['验收状态',`电脑图示：${r.verification.desktopVisual}；数学行为：${r.verification.mathBehavior}；证据SHA：${r.verification.evidence?.sha??'尚无'}；家长未确认；不判断Kevin掌握`]];
    for(const [name,value] of values)out+=`|${name}|${cell(value)}|\n`;
    out+='\n独立练习题干（既有题ID，无额外任务或积分）：\n\n';
    r.independentCheck.tasks.forEach(t=>out+=`- \`${t.id}\`（${t.kind}）：${t.prompt}\n`);

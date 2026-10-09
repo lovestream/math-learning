@@ -35,7 +35,9 @@ test('源核对状态不能假称新的浏览器验收、教学审批或Kevin掌
  assert.equal(ledger.safeguards.classroomStages.length,6);
  assert.equal(ledger.safeguards.selfCheckItems,3);
  for(const row of ledger.rows){
-  assert.equal(row.acceptance.browserSemanticEvidence,'pending-chapter-run');
+  assert.equal(row.acceptance.browserSemanticEvidence,row.verification.evidence?'desktop-run-with-sha':'pending-chapter-run');
+  if(row.verification.evidence)assert.match(row.verification.evidence.sha,/^[a-f0-9]{40}$/);
+  assert.equal(row.verification.learnerMastery,'no-data');
   assert.equal(row.acceptance.parentTeachingApproval,'not-verified');
   assert.equal(row.acceptance.kevinMastery,'not-assessed');
   assert.equal(row.sourceFinding==='initial-source-issue',row.issues.length>0);
