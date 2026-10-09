@@ -731,6 +731,11 @@
       "sha256": "5512c5dbdcc305b51c2a71d69858e2d938806dda5e57640037cfedb3724dd7f6"
     },
     {
+      "path": "current-code-ci.json",
+      "bytes": 2652,
+      "sha256": "e81badf221edab9d3070f71d87ec8924df55de866f8943df97a3589425310bc2"
+    },
+    {
       "path": "diff-review.json",
       "bytes": 620,
       "sha256": "562ed0afcb9cf5318d96f394b78dbe190c448ac0f839c572b52cdb6d102e4368"
@@ -1553,5 +1558,17 @@
   ],
   "noRealLearnerData": true,
   "parentTeachingApproval": false,
-  "kevinMasteryClaim": false
+  "kevinMasteryClaim": false,
+  "ci": {
+    "fullCode": {
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "url": "https://github.com/lovestream/math-learning/actions/runs/37872436009",
+      "conclusion": "success"
+    },
+    "currentScript": {
+      "sha": "98e88b0fac628a08a843f23f4d3edbed263d74e7",
+      "url": "https://github.com/lovestream/math-learning/actions/runs/37873750252",
+      "conclusion": "success"
+    }
+  }
 }
