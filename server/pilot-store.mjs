@@ -21,9 +21,10 @@ function revision(s,r){check(Number.isInteger(r)&&s.revision===r,'另一个页�
 function answerCheck(a){check(object(a)&&Object.keys(a).length<=12&&Object.entries(a).every(([k,v])=>key(k)&&typeof v==='string'&&v.length<=200),'答案格式不正确。');}
 function evidenceCheck(e,operationMode){
   check(object(e)&&Array.isArray(e.checks)&&e.checks.length===3&&new Set(e.checks).size===3&&e.checks.every(v=>typeof v==='string'&&v.length>0&&v.length<=240),'请逐项完成三项自查。');
-  check(typeof e.reflection==='string'&&e.reflection.trim().length>=2&&e.reflection.length<=240,'请写下重新检查后最关键的一步。');
+  check(e.format===undefined||e.format==='checklist-v1','自查格式暂不支持。');
+  check(typeof e.reflection==='string'&&e.reflection.length<=240&&(e.format==='checklist-v1'||e.reflection.trim().length>=2),'自查说明格式不正确。');
   check(e.finalConfirmed===true,'请确认你已经重新检查了最终答案。');
-  if(operationMode){check(typeof e.firstOperation==='string'&&e.firstOperation.trim().length>0&&e.firstOperation.length<=120,'请写出先算哪一部分。');check(typeof e.intermediate==='string'&&e.intermediate.trim().length>0&&e.intermediate.length<=120,'请写出第一步的中间结果。');}
+  if(operationMode&&e.format!=='checklist-v1'){check(typeof e.firstOperation==='string'&&e.firstOperation.trim().length>0&&e.firstOperation.length<=120,'请写出先算哪一部分。');check(typeof e.intermediate==='string'&&e.intermediate.trim().length>0&&e.intermediate.length<=120,'请写出第一步的中间结果。');}
 }
 function credit(p,id,amount,label,now){if(amount<=0||p.wallet.ledger.some(e=>e.id===id))return; p.wallet.coins+=amount;p.wallet.earned+=amount;p.wallet.ledger.push({id,amount,label,at:new Date(now).toISOString()});}
 export function saveReading(p,input,lessons,now=Date.now()){
@@ -73,7 +74,7 @@ export function selfCheckTask(p,input,now=Date.now()){
     s.selfChecks??={};
     if(!s.selfChecks[task.id])s.selfChecks[task.id]={firstAnswer:structuredClone(input.answer),checkedAt:new Date(now).toISOString(),helpLevel:s.help[task.id]??null,modelStateVersion:String(input.modelStateVersion??s.contentVersion),selfCorrection:null};
     s.answers[task.id]=input.answer;s.revision++;s.savedAt=new Date(now).toISOString();
-    return {status:'selfCheck',message:'先别看对错。请逐项完成下面的自查动作，并写下你重新核对的关键一步。',revision:s.revision};
+    return {status:'selfCheck',message:'首答已保存。检查下面三件事；想改答案可以直接改，再提交最终答案。',revision:s.revision};
   });
 }
 export function submitTask(p,input,lessons,now=Date.now()){

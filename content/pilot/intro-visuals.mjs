@@ -61,6 +61,7 @@ export function validateIntroVisualCoverage(lessons){
    if(spec.type==='fraction-strip'&&(!Number.isInteger(v[0])||v[0]<1||v[1]<0||v[1]+(v[2]??0)>v[0]||(v[3]&&v[0]%v[3]!==0)))throw Error(`${lesson.lessonId} 纸带分组不符合整体`);
    if(spec.type==='overlapping-sets'&&(v[2]>v[0]||v[2]>v[1]||v.some(n=>n<0)))throw Error(`${lesson.lessonId} 共有部分超过小组人数`);
   }
-  if(lesson.childClassroom&&(!lesson.childClassroom.storyVisual||!lesson.childClassroom.predictionVisual))throw Error(`${lesson.lessonId} 短课堂前两屏缺图`);
+  if(lesson.childClassroom&&lesson.introVisual&&(!lesson.childClassroom.storyVisual||!lesson.childClassroom.predictionVisual))throw Error(`${lesson.lessonId} 短课堂前两屏缺图`);
+  if(lesson.childClassroom){const c=lesson.childClassroom;if(!c.story||!c.predictQuestion||c.predictionOptions.length<2||c.predictionOptions.length>3||!c.mission||!c.discovery.length||!c.symbols.length||!c.retell)throw Error(`${lesson.lessonId} 六步短课堂缺少教案`);}
  }
 }

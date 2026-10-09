@@ -8,8 +8,8 @@ test('每个已开放课程入口经图形或明确文字题审核，短课堂�
  validateIntroVisualCoverage(lessons);assert.equal(lessons.length,70);
  assert.equal(lessons.filter(l=>l.introVisual).length,41);
  for(const l of lessons.filter(l=>l.childClassroom)){
-  assert.equal(l.introVisual.type,l.childClassroom.storyVisual.type);
-  assert.equal(l.introVisual.type,l.childClassroom.predictionVisual.type);
+  if(l.introVisual){assert.equal(l.introVisual.type,l.childClassroom.storyVisual.type);assert.equal(l.introVisual.type,l.childClassroom.predictionVisual.type);}
+  else assert(l.mathScenes?.length||l.lengthScenes?.length||l.articleBlocks[0]?.diagram||textOnlyIntroLessonIds.has(l.lessonId),l.lessonId);
  }
  assert.equal(textOnlyIntroLessonIds.size,11);
 });

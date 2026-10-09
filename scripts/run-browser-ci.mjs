@@ -29,6 +29,7 @@ const all = [
   "verify-evidence-browser",
   "verify-accessibility-browser",
   "verify-variants-browser",
+  "verify-template-browser",
 ];
 const only = process.argv.find((v) => v.startsWith("--only=")),
   names = only
@@ -44,6 +45,7 @@ const only = process.argv.find((v) => v.startsWith("--only=")),
           "verify-evidence-browser",
           "verify-accessibility-browser",
           "verify-variants-browser",
+          "verify-template-browser",
         ];
 if (names.some((n) => !all.includes(n)))
   throw Error("Unknown browser callback");
@@ -177,6 +179,13 @@ try {
         snapshots: true,
         sources: true,
       });
+      // Legacy suites explicitly exercise the experiment. Default lesson screens
+      // are separately covered for all 70 entries by verify-template-browser.
+      const experimentSuites=new Set(["verify-hands-on-browser","verify-motion-browser","verify-lab-inventory","verify-textbook-browser","verify-division-browser","verify-core-browser","verify-save-stress-browser","verify-performance-browser","verify-accessibility-browser","verify-evidence-browser"]);
+      if(experimentSuites.has(name)){
+        const navigate=page.goto.bind(page);
+        page.goto=async(url,options)=>{const result=await navigate(url,options),query=new URL(url).searchParams;if(query.has('lesson')&&!query.has('practice')){await page.locator('.lesson-article').waitFor();const step=page.getByRole('button',{name:'3 亲手实验',exact:true});if(await step.count())await step.click();}return result;};
+      }
       await page.goto(base);
       const source=fs.readFileSync(`scripts/${name}.js`, "utf8").trim().replace(/;$/, "");
       const callback = new Function(`return (${source})`)();
