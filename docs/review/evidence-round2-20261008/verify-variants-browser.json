@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "A12": {
+    "knownFigures": [
+      {
+        "id": "G3-U01-TH1",
+        "variant": "G3-U01-TH1-R9",
+        "diagram": "U01"
+      },
+      {
+        "id": "G3-U02-TH1",
+        "variant": "G3-U02-TH1-R12",
+        "diagram": "U02-reverse"
+      },
+      {
+        "id": "G3-U03-TH1",
+        "variant": "G3-U03-TH1-R9",
+        "diagram": "U03-reverse"
+      },
+      {
+        "id": "G3-UP01-TH1",
+        "variant": "G3-UP01-TH1-R12",
+        "diagram": "UP01-reverse"
+      },
+      {
+        "id": "G3-U04-TH1",
+        "variant": "G3-U04-TH1-R9",
+        "diagram": "U04-reverse"
+      },
+      {
+        "id": "G3-UP02-TH1",
+        "variant": "G3-UP02-TH1-R12",
+        "diagram": "UP02-reverse"
+      },
+      {
+        "id": "G3-U05-TH1",
+        "variant": "G3-U05-TH1-R9",
+        "diagram": "U05"
+      },
+      {
+        "id": "G3-U06-TH1",
+        "variant": "G3-U06-TH1-R12",
+        "diagram": "U06-unknown"
+      },
+      {
+        "id": "G3-U07-TH1",
+        "variant": "G3-U07-TH1-R9",
+        "diagram": "U07-reverse"
+      },
+      {
+        "id": "G3-L01-TH1",
+        "variant": "G3-L01-TH1-R12",
+        "diagram": "L01-reverse"
+      },
+      {
+        "id": "G3-L02-TH1",
+        "variant": "G3-L02-TH1-R9",
+        "diagram": "L02-reverse"
+      },
+      {
+        "id": "G3-L03-TH1",
+        "variant": "G3-L03-TH1-R12",
+        "diagram": "L03-reverse"
+      },
+      {
+        "id": "G3-L04-TH1",
+        "variant": "G3-L04-TH1-R9",
+        "diagram": "L04-reverse"
+      },
+      {
+        "id": "G3-L05-TH1",
+        "variant": "G3-L05-TH1-R12",
+        "diagram": "L05-reverse"
+      },
+      {
+        "id": "G3-LP01-TH1",
+        "variant": "G3-LP01-TH1-R9",
+        "diagram": "LP01-reverse"
+      },
+      {
+        "id": "G3-L06-TH1",
+        "variant": "G3-L06-TH1-R12",
+        "diagram": "L06-reverse"
+      },
+      {
+        "id": "G3-L07-TH1",
+        "variant": "G3-L07-TH1-R9",
+        "diagram": "L07-reverse"
+      }
+    ],
+    "all204MathematicalParameters": "Node oracle tests",
+    "rewardFromExperiment": 0
+  },
+  "errors": [],
+  "source": {
+    "prHeadSha": "f48b3a89eded5993bc1be34184287696e9fce872",
+    "sha": "f48b3a89eded5993bc1be34184287696e9fce872",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-08T08:17:12.769Z"
+  }
+}

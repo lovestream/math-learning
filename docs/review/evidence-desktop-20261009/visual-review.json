@@ -1,0 +1,1775 @@
+{
+  "oldSource": "2c03539d62f996fed0973495cfb78accc542462c",
+  "source": {
+    "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+    "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-09T07:43:07.692Z"
+  },
+  "rows": [
+    {
+      "lessonId": "G3-U01-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U01-B01-story-1440.png",
+          "hash": "05471d532e77e2ea4781fc5946774d51e83d8f0b900b844a18ec21411cfbfb53",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U01-B01-operated-1440.png",
+          "hash": "d7f549ab5e50a1ac1ee91bcdf0f529056d348e751ec69ca6c73cc72e93360fc3",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U01-B02-story-1440.png",
+          "hash": "33edffc72f70dec4e0e978241accc1083ebad89079f5b28f06a0cf7ecb1b9197",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U01-B02-operated-1440.png",
+          "hash": "de2516175ebc5d225c61593cf5823a96126c6e0c5ae367a825974b2330ccb920",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U01-B03-story-1440.png",
+          "hash": "7586d487302d4d56850ac27c210d40e0480dfe08c0532a1b7f3cbdcae94a3feb",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U01-B03-operated-1440.png",
+          "hash": "13dbc61f591170819e630b4fc25c0ad24b63733e8a91aa40428374e2f16e4c4b",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-B01-story-1440.png",
+          "hash": "a35fe47995380b8b754e94937be9c8ab0cdf3ec3cf82e41cf579d0e32a5c4f74",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-B01-operated-1440.png",
+          "hash": "165802a59bab895835472db9e9738ed51af36781611d1aca2787dd2fc97276b3",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-B02-story-1440.png",
+          "hash": "e23963d36e8a4b9c1084ec7f715084bf3b8867a6389a67aa77faac9a6cb915f8",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-B02-operated-1440.png",
+          "hash": "4ed5797a14b46c85bc420f6effc5d58f22ca97f62a26dee5f22c316c0ba8a34e",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-B03-story-1440.png",
+          "hash": "4249adba0283238b08edf71fab6f72adbe9e7e46afd91bb074b356a46151411e",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-B03-operated-1440.png",
+          "hash": "e0c12769f9613e831add8075157bb90cbfb0da4dce289252180945fa65074760",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-B04-story-1440.png",
+          "hash": "4feeda6f29f3ceab54b2787f3e6ebe45f72f483184f79f218dd21fae142ee5bd",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-B04-operated-1440.png",
+          "hash": "456cb584093b10d57e316900d0679e178411d4c4248e58e6c46e0687466754b0",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-B05-story-1440.png",
+          "hash": "679c81c477ffa234a4dbe5ea88397e184512655df2560ea6541302c24cab3b3f",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-B05-operated-1440.png",
+          "hash": "24dcd1b3901e2cb5a7fed4ac75973d8a39c4ae040f74e00de1533c6126026787",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-E01-story-1440.png",
+          "hash": "0a481d372038795ae98037057e4235f9fda0a3c2868650d180875eadb1048c38",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-E01-operated-1440.png",
+          "hash": "2be1736ec694dda97edf7d7cade4a3dfb42fd3724a2566980dde5b70d281ce4d",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-E03-story-1440.png",
+          "hash": "0fa7c0388fcc30212897a42191d592abdc1dd2d6c653b3c94f82c92d674da6aa",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-E03-operated-1440.png",
+          "hash": "24b7d4d4fc58070a99be6fd067dc2a72162c7f3d32a47e7c24d833376b9e0217",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-E02-story-1440.png",
+          "hash": "f23231e8017b90e6e287bbd1fd97540b514bcd97660ab3f95fd64ca67e0310d5",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-E02-operated-1440.png",
+          "hash": "ad99e1242e80095311083cf0ddec40909f993f095c899baa958ecb58bc5b7ab9",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-E04-story-1440.png",
+          "hash": "737e2935d59c52ecd0d6bbd7a0ec31f2e7b17e81d01c17e55101186dec643ca0",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-E04-operated-1440.png",
+          "hash": "bb8523491cea536b339bdc4f76a70cccec70fd8e0a1ea6d872b074324df7b6ea",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-E05-story-1440.png",
+          "hash": "f33a7aa34de44d899f4aa595d62552e13a1ef2b0db52add83c0f3e65494acf3e",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-E05-operated-1440.png",
+          "hash": "ba18f462fee26cc0880a3c479bb1ffc4da7332d74e61527502ef9a07933fc050",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-O01-story-1440.png",
+          "hash": "c3add2f5af7a720bd0e6533d0e60b090224b5068ab68e13f341413912c0410c4",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-O01-operated-1440.png",
+          "hash": "b704aab4d8906a1f30363871af556ef53c5c26076238e8bf22b4b4aafe278252",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-O02-story-1440.png",
+          "hash": "c180eb66df7e22ac6a4809e75ad2a14df46fbf71a3d5830e74d8ea70d86e2c17",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U02-O02-operated-1440.png",
+          "hash": "3b6237dbae3b22cab0d2b03dbded8110e0513b0fc87c3d054b156a9e70944532",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U03-B01-story-1440.png",
+          "hash": "736636e156fe89835bfa4174f132aa95c264185fffa11fc5b5232b695af0d02f",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U03-B01-operated-1440.png",
+          "hash": "c38941778f0f3cb9035a9df583cfaf19ad93ffb4e8afc4e58fc29d88eb151a1b",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U03-B02-story-1440.png",
+          "hash": "69a77b1fd383f58829093e748591039cb324cdc6495a7acd140f5f3995c7c4dc",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U03-B02-operated-1440.png",
+          "hash": "c93bc344f52f2522f4aac8f00a928ac373b5757c7ad6c273c01ba88bda2534a2",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-UP01-B01-story-1440.png",
+          "hash": "5e0b38179b11197ef829bb2e8ed5c332e881c101d9e718080813b9e2d24bc64a",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-UP01-B01-operated-1440.png",
+          "hash": "56728797647944ca26aba4f1be9694947c54d2314d4075511694e4ba57d80557",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-UP01-B02-story-1440.png",
+          "hash": "b388f601e87c3e291d1a610f622cbee13be958d90b08f321b9c536f62ded6395",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-UP01-B02-operated-1440.png",
+          "hash": "2cc4b7d718687227f035d5a32f11610cdc401e99ab87d104198222216956cd8c",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U04-B01-story-1440.png",
+          "hash": "3c7eace127d9d7df4185faefcccb0916d49d1a81ee3f771fade82d361678305a",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U04-B01-operated-1440.png",
+          "hash": "b93cf876c8a3cacdc0e2b8f183cbcd03b32d9a1af09d531145cebe50431b31a1",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U04-B02-story-1440.png",
+          "hash": "3419d79d380046c0b37b10c345427a9ead0e34018ad431078682a3d607484836",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U04-B02-operated-1440.png",
+          "hash": "9780c06fd4ca4b1df35888475f05207f4e5f4ac1578074004f8708a55ce46c84",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U04-B03-story-1440.png",
+          "hash": "099ba2a313e39fbaa15ec42a61917b5b8c8a378bef89a4d3797ceafd539de20d",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U04-B03-operated-1440.png",
+          "hash": "4809ec9b5226acec181333aa3a94cb64fd21aba9087340556069df71109bde66",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U04-B04-story-1440.png",
+          "hash": "50a0f4ac4dcde59ad032c4fc8558b3ef7a689c992e77868d840b4cbe0309b775",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U04-B04-operated-1440.png",
+          "hash": "0e468a4d09bb622b8ae3ffc9e0355f95099b56113005025c32f78d24c308df73",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U04-B05-story-1440.png",
+          "hash": "c58b0962ca54397a597871482035d4469d99212e35d68ca38a45f5bbc5fda6a0",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U04-B05-operated-1440.png",
+          "hash": "c5b8801778d97eb1c5f9c7d6e0c8379ac2f0d2a94ddd0d3005908574874d3cc5",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-UP02-B01-story-1440.png",
+          "hash": "fea8448915819afe41f132d9aa396e95339cb3e2b4522dc02f68bdcd7d8a0256",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-UP02-B01-operated-1440.png",
+          "hash": "a73a2996a559fea55a244a90f09352a2e74803d40338b104cabe1b1cefdd3d10",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U05-B01-story-1440.png",
+          "hash": "ebc579fd24765f6653ab69b6d8b9b0fced0122effab724028ff43621891fa9c2",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U05-B01-static-relation-1440.png",
+          "hash": "e213450ddd05e0b89db317529308d3c979d47df913e51554f5345064e402df2d",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U05-B02-story-1440.png",
+          "hash": "06bf224d81afb2042c9a4dc5e08e7bb5ef82e159f05f02fd1113b0a100bedb96",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U05-B02-operated-1440.png",
+          "hash": "5c1b1a88b12fc5fb695beec86ed9ea92b88b1b509d0e91511417e4ee609ac652",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U05-B03-story-1440.png",
+          "hash": "821fb66993bf2f93e0b9526c44bd9892ccb3393354cbeed06dd3f941587cf052",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U05-B03-operated-1440.png",
+          "hash": "5e8ad5514efe66a077d25f981b9e917ab34822d2077bc525378b90048b424a68",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U06-B01-story-1440.png",
+          "hash": "d74a06a81e453c178d64fdecc8aad4cebc98b40d5ef684cd9822fe492da342de",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U06-B01-operated-1440.png",
+          "hash": "0bd90e593762f762c69ea063f15f6360ad148e4daa7cee79219d5ef9b27629ce",
+          "identicalReviewedImage": false,
+          "reviewMethod": "fresh-agent-image-inspection"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U06-B02-story-1440.png",
+          "hash": "259c00bc4fba56407c9908b3747b199c48d21f8437cface07ff71406bb67b32d",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U06-B02-operated-1440.png",
+          "hash": "2682deeacf8590db20212b3ef090bcf8d8f002f794f779bd69c0e981cbda0175",
+          "identicalReviewedImage": false,
+          "reviewMethod": "fresh-agent-image-inspection"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U06-B03-story-1440.png",
+          "hash": "8654390ec949008b175d814fb5f2fa6d28cf1a291e9b8d0751d4f0ff9fb9154f",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U06-B03-operated-1440.png",
+          "hash": "904b358d7d7e12bdd1d22ecd0fb4d0b0a632137dd88580f8bb2ae4e14a810e19",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U06-B04-story-1440.png",
+          "hash": "338d4835e581293d8a8243dffb13dc51d989b050188dc1f37740087bd964ddb4",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U06-B04-operated-1440.png",
+          "hash": "7650216b0310e60d525559844c6eae064d0afa2a89b1d3f47c77f589a3b54858",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U06-B05-story-1440.png",
+          "hash": "7f65e5db02a6b47b6e79a4a5d720b067efd253ce02b350ae99b0d4ef3f601930",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U06-B05-operated-1440.png",
+          "hash": "b5f6a60a1c03f94521271fbb591e97756eab76354f190b519e4e9563abab2867",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U06-E01-story-1440.png",
+          "hash": "50a2775259e5ddcab225b0ea0733d2a4e7a70cb8565714a96a30935be2960fc4",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U06-E01-operated-1440.png",
+          "hash": "defe8e1fdd4f5a51c763e538d4f7c783385cd0b7f56d5a73ee3f9df9cd38addc",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U07-R01-story-1440.png",
+          "hash": "9024a2507de8c367c58f0d4e3409939b0f98b6bbef6003fcee18e4cb10d61558",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U07-R01-static-relation-1440.png",
+          "hash": "0de131ba39539527f3642d2a76c0574389758c0b9c10901b8cdca33f3c541be8",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U07-B01-story-1440.png",
+          "hash": "780c8cfa255715d3e6753a0b0dfb1baaa8f461878d199b5e52e2534ab8cead34",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U07-B01-operated-1440.png",
+          "hash": "d93266642e66281bd4d07d2b82c48e99fe1afc966e3de73ff2c8f87be09337c8",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L01-B01-story-1440.png",
+          "hash": "6660b2e6caab4e9628db1a715c5c84a45f5e3f0c632a94aee890026b9b2e00b8",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L01-B01-operated-1440.png",
+          "hash": "c2aff7882a442e8628a5fa9bc23241a4634b25bd0825e277952df6c96f54a369",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L01-B02-story-1440.png",
+          "hash": "931cdcaa01d8cc4835b339f2c5f4a5d954c17d7c0dd68cca10d929931bef9055",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L01-B02-operated-1440.png",
+          "hash": "9ff37bc055bde7bba59810e41b2c7d232b629cb748e9f744d729ee5d4f64f808",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L02-B01-story-1440.png",
+          "hash": "20bee99dd9f442f8dd5ba9067a8bb040f040f473f0aa9f3db0e15db325f4d443",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L02-B01-operated-1440.png",
+          "hash": "a0862081bae94d6b7429a818824e1444dba46313e264e40178dd0988c3c4700a",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L02-B02-story-1440.png",
+          "hash": "6e4f31cb810ecb40f3078ea227b7466b8b6a8accbca524f7d4b6c3a659dba583",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L02-B02-operated-1440.png",
+          "hash": "fbf208cb2745811023b8176c6ba2a627437177d71d70fbbd3accbe3a8f083794",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L02-B03-story-1440.png",
+          "hash": "bb322881a0c0473b037356fb653abdc49714ce68bdb16bde8ed762153e4c0a77",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L02-B03-operated-1440.png",
+          "hash": "58d328f67f3588b0fb100d03e3538fc28d8dc6811ed73a9d7fffe12da8757fd2",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L02-B04-story-1440.png",
+          "hash": "669833dedca5a64dfa19febd314252cb6a5a5ba27337b41a10e76f8c6b60168a",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L02-B04-operated-1440.png",
+          "hash": "1c557ebd9c212315351c240a702da0bef0d8dc4647ebca4a2ed556539127d483",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L02-B05-story-1440.png",
+          "hash": "46c2cfd7cc9e6dc1e0ea35e0a32ee78747ecf251d1c0d193a3a13622aca168f4",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L02-B05-operated-1440.png",
+          "hash": "9b59f4f295756e7cd430a49e9cc742d43fcf4b89c2579141e9aa69e41668d35d",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L02-B06-story-1440.png",
+          "hash": "466b0c997ca26ef950152fbbabd53dc2af6353e96dfab9e8364eb59414761ef0",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L02-B06-operated-1440.png",
+          "hash": "11da1527b9aa36710c5e342cfd5f39946dbcafc660336408d97b91a5b812ed34",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L03-B01-story-1440.png",
+          "hash": "e425f598f0a1b433e97f95e51e1126679ae2a42caa8ecddf4c20383f5a394c3b",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L03-B01-static-relation-1440.png",
+          "hash": "9476886af4df231da4f9d2c705132debabb254985185a4dab3ff24cf2d81feb4",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L03-B02-story-1440.png",
+          "hash": "d2eb509470b25694d4d9a9d54281357e73c1616ab256e10bd1334bb2e161c5ba",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L03-B02-operated-1440.png",
+          "hash": "edda3f683820e9851e1d3da988c4bc00d46de0d2ae7c583c094934152afc39d6",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L03-E01-story-1440.png",
+          "hash": "5eabc083fcd6b8af54240415b585f8f6841ca6cc3ded16a29b603e0f40b2cef4",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L03-E01-operated-1440.png",
+          "hash": "60964fc4305d20ceaf74a2f69cd1ce7f908fc74fbda895d29f6729196c48feac",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L04-B01-story-1440.png",
+          "hash": "0290ecdf57de993ff751f0e49a1d14154f9e706b77c8ba355777e6879d43b897",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L04-B01-static-relation-1440.png",
+          "hash": "25718396a6347b21770d4583063d5cf7d7682ab296567fdb130ea3374a5d3bde",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L04-B02-story-1440.png",
+          "hash": "1c9d339e1004f406eb3738f848d146a9952d4ddcd42a2e037b2a480fcd2cee7e",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L04-B02-operated-1440.png",
+          "hash": "438ca4c0a71d0af25ab0f84f2c399cd0dbf6c676a5e081d73d711a17e4058b16",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L04-B03-story-1440.png",
+          "hash": "1bbd7df02a43a3e3236c681098d7038593caddc2acf2aa111d0afbb30ab0f112",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L04-B03-operated-1440.png",
+          "hash": "3d3e22ce91f0a168cad2c5bb059655d7ddd71d68d93d1df8d336da45afabd17f",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L05-B01-story-1440.png",
+          "hash": "08a8d56524fecee16966ae9ee7f480d959b9bce892f5d7427aded55338ca64ed",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L05-B01-operated-1440.png",
+          "hash": "d0794a4254e503032b70ffb95e18676d5bf68f3378175352ec83dab8d4aea7d0",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L05-B02-story-1440.png",
+          "hash": "28c0b1b158b5c816f0f0898ce265df29e40d17599c03a14b68298ce9c99bbd40",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L05-B02-operated-1440.png",
+          "hash": "e9e13982b46f82a9c44d360ac2e75bdd1fcafc9fc772f363cf99aa20257446c9",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-LP01-B01-story-1440.png",
+          "hash": "5bf4cae45e66f688ee425c0535989fba249e0e2f91c90a95dc8a52c16fa1cc95",
+          "identicalReviewedImage": false,
+          "reviewMethod": "fresh-agent-image-inspection"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-LP01-B01-operated-1440.png",
+          "hash": "b69836f353ebef4fb3ccd96b34d5016f3c1224634ab6093735b5ae90e3cd80e3",
+          "identicalReviewedImage": false,
+          "reviewMethod": "fresh-agent-image-inspection"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-LP01-B02-story-1440.png",
+          "hash": "f455b33953541ba72000b1304eb3b9fefbb4305cd4342f5bff28d811110a4221",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-LP01-B02-operated-1440.png",
+          "hash": "4a81f7ccb2c3a89ef145cb79c8d8ffe3740e2e99f995271abccdcec0a3f9354a",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-LP01-E01-story-1440.png",
+          "hash": "2f7f92d5e4eb5a14990a1d80aa074c3de7d21cbcca6d266182940a62582cf2bc",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-LP01-E01-operated-1440.png",
+          "hash": "c4cd504c1aeda6faccf17f2619f3b06ca553e3eb4fe126e043bb7f772cd02347",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L06-B01-story-1440.png",
+          "hash": "61c8ca6e339632f257b60a074bfac2b687cc1ca1064818f3a9139e1e612411b0",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L06-B01-operated-1440.png",
+          "hash": "6683be2cfec1a94f02255e6ec797e1c2affd174f4b72290868425572993b537f",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L06-B02-story-1440.png",
+          "hash": "2571494fe0085a69df404442c00023c8dfdc1b2fec5d362382615421f073e6a9",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L06-B02-operated-1440.png",
+          "hash": "a93ec241f42e5f0cac35929c9dc9b8ca0bf2ce1779e7edef5fc783555a2edb00",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L06-B03-story-1440.png",
+          "hash": "ef0d22ebc749299761d2489c8ab3c920fe01eb44982e7cb0ec3dd37300716749",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L06-B03-static-relation-1440.png",
+          "hash": "6c114f8267ce48bda5a0554e581e60eb249d275bb17f2dab469e3da78ac8b366",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L07-R01-story-1440.png",
+          "hash": "7ee74bcd6d69ad0990b716e0fab142e2646260d80c10afe97319be3e6e0294bc",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L07-R01-static-relation-1440.png",
+          "hash": "1e1b3b71a4cfae761c165fdc20ebbad1a9114f3f2eb622304d4a2adee4a74cb7",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-L07-B01-story-1440.png",
+          "hash": "7788b5b72a65667b86b8cfca26303ed8eba295688d4def8ed3664751cfcf848f",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-L07-B01-operated-1440.png",
+          "hash": "2ff2b1042f296a465cdf139f4b0dc9dee608476a577a8cdbbc38a170399e6763",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U03-E01-story-1440.png",
+          "hash": "128d5f27844fe3a57c8eda258e61a8a0948fffc1de19707ffcd23ae26f92eca4",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U03-E01-operated-1440.png",
+          "hash": "7f66f81cd3b63b3b336d7dd51b9c706663812d2edcf07ec07ee3e3b1850c61b0",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U03-E02-story-1440.png",
+          "hash": "40fbb45d4fd5942afc30ae456368b15ec4d6ac582fa9f73d58adbfa23f09c230",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U03-E02-operated-1440.png",
+          "hash": "191358d7bbba3452d333edb0e3abff485af0a4f47fb7d55fe75e8c9ba097f86a",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-G3-U03-O01-story-1440.png",
+          "hash": "38d7f1bd9350b890c4389896349748f910b2126eb0795cbe7c4b194c95a2e355",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-G3-U03-O01-operated-1440.png",
+          "hash": "993dbc19e3a5d64c5d854a5dc844e8ea53c667ab8716bcf19cad2bf31fc5e977",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-numbers.fractions.meaning-story-1440.png",
+          "hash": "3d93331a97c606fbd209cb147c6f46a6f4c2f97c827a760934f35945061386cb",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-numbers.fractions.meaning-operated-1440.png",
+          "hash": "6702b78a878bbeed9074fa029677ec5b840fcf0ee9c43b47b44fd1a9bb6a9a8b",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-geometry.area.perimeter-story-1440.png",
+          "hash": "ef456ad977b07762caf92a770c5c66ee228dd88ebdef75ce5187048aba9eb2d5",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-geometry.area.perimeter-operated-1440.png",
+          "hash": "0390e5f1816a951d22842d76230aa2b556f602760335540a23f0092eff7d4a3b",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-algebra.substitution.intro-story-1440.png",
+          "hash": "cc214cca7267431cc62a7de789e38468e6490ae582a25f28da70d7bf16f0c8b6",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-algebra.substitution.intro-operated-1440.png",
+          "hash": "05cbf9b9cbad9169e2bfe25db4e818ba32e136400d6a0d5730ee772bd55870b8",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-algebra.balance.intro-story-1440.png",
+          "hash": "3fbaf11dafb5205043a92970c8fe8ec0a43747b87aea9c537f352987d658b135",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-algebra.balance.intro-operated-1440.png",
+          "hash": "48fc812a550ead518cf6e163ef4f5e439860100cf0b88746882493cbe0948d4f",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-numbers.quantity.intro-story-1440.png",
+          "hash": "532ad4f5b5d467802fc588a820172244d965f80e8c66838ed33f6f4a61c843fb",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-numbers.quantity.intro-operated-1440.png",
+          "hash": "67c6d3d8852dfa6f364c6b7989e1c0fef131c7603b734008c424c3ee615e4bd5",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-numbers.addition.meaning-story-1440.png",
+          "hash": "47cbfe66d5ff98a0b8b603fdc14823d8a82373272cac560144050250aed73268",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-numbers.addition.meaning-operated-1440.png",
+          "hash": "b5e2c65df33df775f9988f23cfc12f9fc598308ebd4c48da63a541abd936eba0",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "files": [
+        {
+          "kind": "story",
+          "path": "output/playwright/v2-audit/desktop-numbers.subtraction.meaning-story-1440.png",
+          "hash": "7f276b51cb0196771a7b365a012e198ea635c4d5618168979f5a47a187669818",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        },
+        {
+          "kind": "operated",
+          "path": "output/playwright/v2-audit/desktop-numbers.subtraction.meaning-operated-1440.png",
+          "hash": "596ea78988596994583c4277c92d0c77fe1cbc70e71f6714f7a614aa1f4fa489",
+          "identicalReviewedImage": true,
+          "reviewMethod": "exact-original-PNG-sha256-reuse-of-agent-inspected-image"
+        }
+      ],
+      "result": "pass",
+      "reviewer": "Codex visual/source review, not parent or teacher approval",
+      "inspectedStates": [
+        "story",
+        "operated-or-static-relation"
+      ]
+    }
+  ],
+  "scope": "70 primary story and mathematical-result pairs; other states automatically tested, not 630 manual approvals",
+  "reviewDate": "2026-10-09",
+  "freshPrimaryImages": 4,
+  "reusedExactPrimaryImages": 136,
+  "additionalFocusImages": [
+    "desktop-G3-LP01-B02-keyboard-focus-1440.png",
+    "desktop-G3-L03-E01-keyboard-focus-1440.png"
+  ],
+  "additionalNativeZoomImages": [
+    "native-zoom-G3-U02-E03-125-0.png",
+    "native-zoom-G3-U06-B03-150-2.png",
+    "native-zoom-G3-LP01-B02-200-2.png"
+  ]
+}

@@ -1,0 +1,11 @@
+export type TextbookModel={type:'product-place'|'estimate-product'|'share-place'|'pack-remainder'|'nested-groups'|'invariant-table'|'fraction-core'|'place-value'|'coding'|'angle'|'fraction'|'outfits'|'paper-fold'|'motion'|'division'|'boundary'|'joining'|'tiling'|'cut-area'|'vote'|'data-bins'|'calendar'|'clock'|'decimal'|'sets';version:string;title:string;cases?:number[][];contexts?:{story:string;alternate?:string;unit:string;group?:string;outer?:string;inner?:string;quantity?:string;kind?:string}[];mode?:string;total?:number;bank?:number[];limits?:number[];angle?:number;parts?:number;regroup?:boolean;shirts?:number;pants?:number;groups?:number;width?:number;height?:number;side?:number;cols?:number;rows?:number;cutCols?:number;cutRows?:number;people?:number;options?:string[];data?:number[];bins?:number[][];start?:number;end?:number;digits?:number[];reference?:number;left?:number[];right?:number[]};
+export type TextbookState={placed?:number;take?:number;bank?:number[];alloc?:number[];marked?:number[];filled?:number[];cuts?:number[];width?:number;show?:boolean;angle?:number;rotation?:number;sideLength?:number;parts?:number;shirt?:number;pants?:number;left?:number;top?:number;mode?:string;offset?:number;choice?:number;checked?:boolean;error?:string;year?:number;month?:number;minutes?:number};
+export const textbookModels:Record<string,TextbookModel>;
+export function initialTextbookState(model:TextbookModel):TextbookState;
+export function validateTextbookState(model:TextbookModel,state:TextbookState):TextbookState;
+export function measureTextbook(model:TextbookModel,state:TextbookState):Record<string,any>;
+export function bankValue(bank:number[]):number;
+export function gridCells(model:TextbookModel,state:TextbookState):number[][];
+export function gridPerimeter(cells:number[][]):number;
+export function leapYear(year:number):boolean;
+export function monthDays(year:number,month:number):number;

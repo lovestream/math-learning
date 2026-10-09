@@ -1,0 +1,398 @@
+[
+  {
+    "name": "legacy",
+    "envelope": {
+      "format": "kevin-math-lab",
+      "version": 1,
+      "exportedAt": "2026-10-08T07:48:02.625Z",
+      "catalogVersion": "2026.09.primary.v4",
+      "progress": {
+        "schemaVersion": 1,
+        "profile": {
+          "name": "Kevin",
+          "grade": 3,
+          "selectedGrade": 3,
+          "textbook": "人教版"
+        },
+        "settings": {
+          "sound": true,
+          "dailyMinutes": 30,
+          "reviewDays": [
+            1,
+            3,
+            7,
+            21
+          ]
+        },
+        "attempts": [],
+        "lessons": {},
+        "reviews": {},
+        "wallet": {
+          "coins": 0,
+          "earned": 0,
+          "spent": 0,
+          "ledger": []
+        },
+        "pets": {
+          "owned": [
+            "bubble",
+            "dongdong"
+          ],
+          "active": "dongdong",
+          "xp": 0,
+          "feedCount": 0,
+          "accessory": null,
+          "care": {
+            "version": 1,
+            "friends": {
+              "bubble": {
+                "growth": 0,
+                "bond": 0,
+                "meals": 0,
+                "joinedAt": "2026-10-08T07:48:02.624Z",
+                "gifts": []
+              },
+              "dongdong": {
+                "growth": 0,
+                "bond": 0,
+                "meals": 0,
+                "joinedAt": "2026-10-08T07:48:02.624Z",
+                "gifts": []
+              }
+            },
+            "scene": "meadow",
+            "decorations": [],
+            "daily": {
+              "day": "2026-10-08",
+              "touches": 0,
+              "plays": 0
+            },
+            "claims": [],
+            "receipts": [],
+            "memories": [
+              {
+                "pet": "dongdong",
+                "kind": "welcome",
+                "text": "咚咚羊来做你的数学伙伴啦！见面礼：冰淇淋 ×2、星莓 ×2。",
+                "at": "2026-10-08T07:48:02.624Z",
+                "lessonId": null
+              }
+            ]
+          }
+        },
+        "inventory": {
+          "icecream": 2,
+          "berry": 2
+        },
+        "studio": {
+          "version": 1,
+          "reading": {},
+          "sessions": {},
+          "notes": [],
+          "events": [
+            {
+              "id": "fixture-legacy",
+              "signature": "{\"kind\":\"thinking\",\"taskId\":\"G3-U02-TH1\",\"revision\":0,\"eventId\":\"fixture-legacy\",\"action\":\"hint\",\"level\":1}",
+              "result": {
+                "paid": 0,
+                "status": "saved",
+                "revision": 1
+              }
+            }
+          ],
+          "entitlements": {},
+          "daily": {},
+          "review": {},
+          "thinking": {
+            "G3-U02-TH1": {
+              "taskId": "G3-U02-TH1",
+              "contentVersion": "thinking.2026-10-08.1",
+              "revision": 1,
+              "phase": "first",
+              "firstAnswer": null,
+              "help": [
+                {
+                  "kind": "hint",
+                  "level": 1,
+                  "text": "故事里，平均分的是原来的卡片，还是送走后剩下的卡片？先圈出要作为一个整体的数量。",
+                  "at": "2026-10-01T08:00:00.000Z",
+                  "stage": "before-first"
+                }
+              ],
+              "attemptId": "fixture-legacy",
+              "variantIndex": 0,
+              "savedAt": "2026-10-01T08:00:00.000Z"
+            }
+          }
+        }
+      },
+      "checksum": "15028242e8bd36746577182cca6c9ddf28d44b7147531692272a47cb0b7873f4"
+    }
+  },
+  {
+    "name": "current",
+    "envelope": {
+      "format": "kevin-math-lab",
+      "version": 1,
+      "exportedAt": "2026-10-08T07:48:02.625Z",
+      "catalogVersion": "2026.09.primary.v4",
+      "progress": {
+        "schemaVersion": 1,
+        "profile": {
+          "name": "Kevin",
+          "grade": 3,
+          "selectedGrade": 3,
+          "textbook": "人教版"
+        },
+        "settings": {
+          "sound": true,
+          "dailyMinutes": 30,
+          "reviewDays": [
+            1,
+            3,
+            7,
+            21
+          ]
+        },
+        "attempts": [],
+        "lessons": {},
+        "reviews": {},
+        "wallet": {
+          "coins": 0,
+          "earned": 0,
+          "spent": 0,
+          "ledger": []
+        },
+        "pets": {
+          "owned": [
+            "bubble",
+            "dongdong"
+          ],
+          "active": "dongdong",
+          "xp": 0,
+          "feedCount": 0,
+          "accessory": null,
+          "care": {
+            "version": 1,
+            "friends": {
+              "bubble": {
+                "growth": 0,
+                "bond": 0,
+                "meals": 0,
+                "joinedAt": "2026-10-08T07:48:02.624Z",
+                "gifts": []
+              },
+              "dongdong": {
+                "growth": 0,
+                "bond": 0,
+                "meals": 0,
+                "joinedAt": "2026-10-08T07:48:02.624Z",
+                "gifts": []
+              }
+            },
+            "scene": "meadow",
+            "decorations": [],
+            "daily": {
+              "day": "2026-10-08",
+              "touches": 0,
+              "plays": 0
+            },
+            "claims": [],
+            "receipts": [],
+            "memories": [
+              {
+                "pet": "dongdong",
+                "kind": "welcome",
+                "text": "咚咚羊来做你的数学伙伴啦！见面礼：冰淇淋 ×2、星莓 ×2。",
+                "at": "2026-10-08T07:48:02.624Z",
+                "lessonId": null
+              }
+            ]
+          }
+        },
+        "inventory": {
+          "icecream": 2,
+          "berry": 2
+        },
+        "studio": {
+          "version": 1,
+          "reading": {},
+          "sessions": {},
+          "notes": [],
+          "events": [
+            {
+              "id": "fixture-legacy",
+              "signature": "{\"kind\":\"thinking\",\"taskId\":\"G3-U02-TH1\",\"revision\":0,\"eventId\":\"fixture-legacy\",\"action\":\"hint\",\"level\":1}",
+              "result": {
+                "paid": 0,
+                "status": "saved",
+                "revision": 1
+              }
+            }
+          ],
+          "entitlements": {},
+          "daily": {},
+          "review": {},
+          "thinking": {
+            "G3-U02-TH1": {
+              "taskId": "G3-U02-TH1",
+              "contentVersion": "thinking.2026-10-08.1",
+              "revision": 1,
+              "phase": "first",
+              "firstAnswer": null,
+              "help": [
+                {
+                  "kind": "hint",
+                  "level": 1,
+                  "text": "故事里，平均分的是原来的卡片，还是送走后剩下的卡片？先圈出要作为一个整体的数量。",
+                  "at": "2026-10-01T08:00:00.000Z",
+                  "stage": "before-first"
+                }
+              ],
+              "attemptId": "fixture-legacy",
+              "variantIndex": 0,
+              "recordSchemaVersion": 2,
+              "mode": "explore",
+              "seenVariantIds": [],
+              "savedAt": "2026-10-01T08:00:00.000Z"
+            }
+          }
+        }
+      },
+      "checksum": "3aa58cd3e061c709238f6344bf619510abbb73db6985d69b7d4006b30903a199"
+    }
+  },
+  {
+    "name": "future-rejected",
+    "envelope": {
+      "format": "kevin-math-lab",
+      "version": 1,
+      "exportedAt": "2026-10-08T07:48:02.625Z",
+      "catalogVersion": "2026.09.primary.v4",
+      "progress": {
+        "schemaVersion": 1,
+        "profile": {
+          "name": "Kevin",
+          "grade": 3,
+          "selectedGrade": 3,
+          "textbook": "人教版"
+        },
+        "settings": {
+          "sound": true,
+          "dailyMinutes": 30,
+          "reviewDays": [
+            1,
+            3,
+            7,
+            21
+          ]
+        },
+        "attempts": [],
+        "lessons": {},
+        "reviews": {},
+        "wallet": {
+          "coins": 0,
+          "earned": 0,
+          "spent": 0,
+          "ledger": []
+        },
+        "pets": {
+          "owned": [
+            "bubble",
+            "dongdong"
+          ],
+          "active": "dongdong",
+          "xp": 0,
+          "feedCount": 0,
+          "accessory": null,
+          "care": {
+            "version": 1,
+            "friends": {
+              "bubble": {
+                "growth": 0,
+                "bond": 0,
+                "meals": 0,
+                "joinedAt": "2026-10-08T07:48:02.624Z",
+                "gifts": []
+              },
+              "dongdong": {
+                "growth": 0,
+                "bond": 0,
+                "meals": 0,
+                "joinedAt": "2026-10-08T07:48:02.624Z",
+                "gifts": []
+              }
+            },
+            "scene": "meadow",
+            "decorations": [],
+            "daily": {
+              "day": "2026-10-08",
+              "touches": 0,
+              "plays": 0
+            },
+            "claims": [],
+            "receipts": [],
+            "memories": [
+              {
+                "pet": "dongdong",
+                "kind": "welcome",
+                "text": "咚咚羊来做你的数学伙伴啦！见面礼：冰淇淋 ×2、星莓 ×2。",
+                "at": "2026-10-08T07:48:02.624Z",
+                "lessonId": null
+              }
+            ]
+          }
+        },
+        "inventory": {
+          "icecream": 2,
+          "berry": 2
+        },
+        "studio": {
+          "version": 1,
+          "reading": {},
+          "sessions": {},
+          "notes": [],
+          "events": [
+            {
+              "id": "fixture-legacy",
+              "signature": "{\"kind\":\"thinking\",\"taskId\":\"G3-U02-TH1\",\"revision\":0,\"eventId\":\"fixture-legacy\",\"action\":\"hint\",\"level\":1}",
+              "result": {
+                "paid": 0,
+                "status": "saved",
+                "revision": 1
+              }
+            }
+          ],
+          "entitlements": {},
+          "daily": {},
+          "review": {},
+          "thinking": {
+            "G3-U02-TH1": {
+              "taskId": "G3-U02-TH1",
+              "contentVersion": "thinking.2026-10-08.1",
+              "revision": 1,
+              "phase": "first",
+              "firstAnswer": null,
+              "help": [
+                {
+                  "kind": "hint",
+                  "level": 1,
+                  "text": "故事里，平均分的是原来的卡片，还是送走后剩下的卡片？先圈出要作为一个整体的数量。",
+                  "at": "2026-10-01T08:00:00.000Z",
+                  "stage": "before-first"
+                }
+              ],
+              "attemptId": "fixture-legacy",
+              "variantIndex": 0,
+              "recordSchemaVersion": 99,
+              "mode": "explore",
+              "seenVariantIds": [],
+              "savedAt": "2026-10-01T08:00:00.000Z"
+            }
+          }
+        }
+      },
+      "checksum": "c295bab1bbe551664711de9c7791d88d8363021e917cbff6351ddeb79ab9ef6e"
+    }
+  }
+]

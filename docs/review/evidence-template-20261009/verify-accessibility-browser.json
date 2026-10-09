@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "A09": {
+    "offlineDraftPreserved": true,
+    "retry": true
+  },
+  "A10": {
+    "profiles": [
+      {
+        "width": 390,
+        "experiment": true,
+        "withdrawn": true
+      },
+      {
+        "width": 768,
+        "experiment": true,
+        "withdrawn": true
+      },
+      {
+        "width": 1440,
+        "experiment": true,
+        "withdrawn": true
+      }
+    ],
+    "font200": true,
+    "keyboard": true,
+    "reducedMotion": true,
+    "ipadTouch": "emulated",
+    "physicalIpad": "not-tested"
+  },
+  "errors": [],
+  "source": {
+    "prHeadSha": "a53bb7ef88f09c50b57d987b80d1b5b6a6c09461",
+    "sha": "a53bb7ef88f09c50b57d987b80d1b5b6a6c09461",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-09T00:21:56.471Z"
+  }
+}

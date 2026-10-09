@@ -1,0 +1,1183 @@
+[
+  {
+    "name": "verify-hands-on-browser",
+    "passed": true,
+    "interactionChecks": [
+      "camera-drag",
+      "three-projections",
+      "photo-restore",
+      "hidden-cube-counterexample",
+      "continuous-fold-drag",
+      "opposite-faces",
+      "scale-drag",
+      "unit-conservation",
+      "net-mass",
+      "balance-weight-drag",
+      "balance-undo",
+      "boat-elephant-drag",
+      "waterline",
+      "stone-weighing",
+      "passenger-counterexample",
+      "state-reload",
+      "parent-mode",
+      "three-independent-tasks"
+    ],
+    "visuals": [
+      {
+        "lesson": "G3-U01-B01",
+        "screens": [
+          390,
+          768,
+          1440
+        ]
+      },
+      {
+        "lesson": "G3-U01-B02",
+        "screens": [
+          390,
+          768,
+          1440
+        ]
+      },
+      {
+        "lesson": "G3-U01-B03",
+        "screens": [
+          390,
+          768,
+          1440
+        ]
+      },
+      {
+        "lesson": "G3-UP01-B01",
+        "screens": [
+          390,
+          768,
+          1440
+        ]
+      },
+      {
+        "lesson": "G3-UP01-B02",
+        "screens": [
+          390,
+          768,
+          1440
+        ]
+      }
+    ],
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-classroom-flow",
+    "passed": true,
+    "coreCorrect": 3,
+    "selfCorrection": true,
+    "first": {
+      "value": "c1"
+    },
+    "final": {
+      "value": "c0",
+      "check0": "done",
+      "check1": "done",
+      "check2": "done"
+    },
+    "review": {
+      "dueAt": "2026-10-10T02:00:19.391Z",
+      "stage": 0,
+      "scheduleVersion": 2,
+      "createdAt": "2026-10-09T02:00:19.391Z",
+      "history": [],
+      "successDates": [],
+      "firstLearnedAt": "2026-10-09T02:00:19.391Z",
+      "firstLearnedDay": "2026-10-09"
+    },
+    "coins": 11,
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-motion-browser",
+    "passed": true,
+    "checks": [
+      "fold-continuous-pause-rotate",
+      "direct-face-picking",
+      "flat-view-fold-recovery",
+      "reduced-motion",
+      "continuous-linked-balance",
+      "continuous-loaded-hull",
+      "direct-cut-transpose-conservation"
+    ],
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-lab-inventory",
+    "passed": true,
+    "opened": 70,
+    "interactive": 64,
+    "staticCards": 6,
+    "mixedSceneTypes": [
+      "people-line",
+      "group-boxes",
+      "boxes-and-items",
+      "combine-then-share",
+      "bags-plus-loose",
+      "money-flow"
+    ],
+    "live": [
+      "G3-U01-B01",
+      "G3-U01-B02",
+      "G3-U01-B03",
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-B04",
+      "G3-U02-B05",
+      "G3-U02-E01",
+      "G3-U02-E03",
+      "G3-U02-E02",
+      "G3-U02-E04",
+      "G3-U02-E05",
+      "G3-U02-O01",
+      "G3-U02-O02",
+      "G3-U03-B01",
+      "G3-U03-B02",
+      "G3-UP01-B01",
+      "G3-UP01-B02",
+      "G3-U04-B01",
+      "G3-U04-B02",
+      "G3-U04-B03",
+      "G3-U04-B04",
+      "G3-U04-B05",
+      "G3-UP02-B01",
+      "G3-U05-B02",
+      "G3-U05-B03",
+      "G3-U06-B01",
+      "G3-U06-B02",
+      "G3-U06-B03",
+      "G3-U06-B04",
+      "G3-U06-B05",
+      "G3-U06-E01",
+      "G3-U07-B01",
+      "G3-L01-B01",
+      "G3-L01-B02",
+      "G3-L02-B01",
+      "G3-L02-B02",
+      "G3-L02-B03",
+      "G3-L02-B04",
+      "G3-L02-B05",
+      "G3-L02-B06",
+      "G3-L03-B02",
+      "G3-L03-E01",
+      "G3-L04-B02",
+      "G3-L04-B03",
+      "G3-L05-B01",
+      "G3-L05-B02",
+      "G3-LP01-B01",
+      "G3-LP01-B02",
+      "G3-LP01-E01",
+      "G3-L06-B01",
+      "G3-L06-B02",
+      "G3-L07-B01",
+      "G3-U03-E01",
+      "G3-U03-E02",
+      "G3-U03-O01",
+      "numbers.fractions.meaning",
+      "geometry.area.perimeter",
+      "algebra.substitution.intro",
+      "algebra.balance.intro",
+      "numbers.quantity.intro",
+      "numbers.addition.meaning",
+      "numbers.subtraction.meaning"
+    ],
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-intro-visuals",
+    "passed": true,
+    "storyPictures": 61,
+    "predictionPictures": 61,
+    "widths": [
+      1440,
+      390
+    ],
+    "olderApiCompatible": true,
+    "stories": [
+      "G3-U01-B01",
+      "G3-U01-B02",
+      "G3-U01-B03",
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-B04",
+      "G3-U02-B05",
+      "G3-U02-E01",
+      "G3-U02-E04",
+      "G3-U02-E05",
+      "G3-U02-O02",
+      "G3-U03-B01",
+      "G3-U03-B02",
+      "G3-UP01-B01",
+      "G3-UP01-B02",
+      "G3-U04-B01",
+      "G3-U04-B02",
+      "G3-U04-B03",
+      "G3-U04-B04",
+      "G3-UP02-B01",
+      "G3-U05-B01",
+      "G3-U05-B02",
+      "G3-U05-B03",
+      "G3-U06-B01",
+      "G3-U06-B02",
+      "G3-U06-B03",
+      "G3-U06-B04",
+      "G3-U06-B05",
+      "G3-U06-E01",
+      "G3-U07-B01",
+      "G3-L01-B01",
+      "G3-L01-B02",
+      "G3-L02-B01",
+      "G3-L02-B02",
+      "G3-L02-B03",
+      "G3-L02-B04",
+      "G3-L03-B01",
+      "G3-L03-B02",
+      "G3-L03-E01",
+      "G3-L04-B01",
+      "G3-L04-B02",
+      "G3-L04-B03",
+      "G3-L05-B01",
+      "G3-L05-B02",
+      "G3-LP01-B01",
+      "G3-LP01-B02",
+      "G3-LP01-E01",
+      "G3-L06-B01",
+      "G3-L06-B02",
+      "G3-L07-B01",
+      "G3-U03-E01",
+      "G3-U03-E02",
+      "G3-U03-O01",
+      "numbers.fractions.meaning",
+      "geometry.area.perimeter",
+      "algebra.substitution.intro",
+      "algebra.balance.intro",
+      "numbers.quantity.intro",
+      "numbers.addition.meaning",
+      "numbers.subtraction.meaning"
+    ],
+    "predictions": [
+      "G3-U01-B01",
+      "G3-U01-B02",
+      "G3-U01-B03",
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-B04",
+      "G3-U02-B05",
+      "G3-U02-E01",
+      "G3-U02-E04",
+      "G3-U02-E05",
+      "G3-U02-O02",
+      "G3-U03-B01",
+      "G3-U03-B02",
+      "G3-UP01-B01",
+      "G3-UP01-B02",
+      "G3-U04-B01",
+      "G3-U04-B02",
+      "G3-U04-B03",
+      "G3-U04-B04",
+      "G3-UP02-B01",
+      "G3-U05-B01",
+      "G3-U05-B02",
+      "G3-U05-B03",
+      "G3-U06-B01",
+      "G3-U06-B02",
+      "G3-U06-B03",
+      "G3-U06-B04",
+      "G3-U06-B05",
+      "G3-U06-E01",
+      "G3-U07-B01",
+      "G3-L01-B01",
+      "G3-L01-B02",
+      "G3-L02-B01",
+      "G3-L02-B02",
+      "G3-L02-B03",
+      "G3-L02-B04",
+      "G3-L03-B01",
+      "G3-L03-B02",
+      "G3-L03-E01",
+      "G3-L04-B01",
+      "G3-L04-B02",
+      "G3-L04-B03",
+      "G3-L05-B01",
+      "G3-L05-B02",
+      "G3-LP01-B01",
+      "G3-LP01-B02",
+      "G3-LP01-E01",
+      "G3-L06-B01",
+      "G3-L06-B02",
+      "G3-L07-B01",
+      "G3-U03-E01",
+      "G3-U03-E02",
+      "G3-U03-O01",
+      "numbers.fractions.meaning",
+      "geometry.area.perimeter",
+      "algebra.substitution.intro",
+      "algebra.balance.intro",
+      "numbers.quantity.intro",
+      "numbers.addition.meaning",
+      "numbers.subtraction.meaning"
+    ],
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-textbook-browser",
+    "passed": true,
+    "models": 24,
+    "checked": [
+      {
+        "lessonId": "G3-U04-B02",
+        "kind": "place-value",
+        "actions": 1
+      },
+      {
+        "lessonId": "G3-UP02-B01",
+        "kind": "coding",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-U05-B02",
+        "kind": "angle",
+        "actions": 2
+      },
+      {
+        "lessonId": "G3-U05-B03",
+        "kind": "angle",
+        "actions": 2
+      },
+      {
+        "lessonId": "G3-U06-B01",
+        "kind": "fraction",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-U06-B02",
+        "kind": "fraction",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-U06-E01",
+        "kind": "fraction",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-U07-B01",
+        "kind": "outfits",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-L01-B01",
+        "kind": "paper-fold",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-L01-B02",
+        "kind": "motion",
+        "actions": 1
+      },
+      {
+        "lessonId": "G3-L02-B02",
+        "kind": "division",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-L02-B04",
+        "kind": "division",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-L03-B02",
+        "kind": "boundary",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-L03-E01",
+        "kind": "joining",
+        "actions": 6
+      },
+      {
+        "lessonId": "G3-L04-B02",
+        "kind": "tiling",
+        "actions": 1
+      },
+      {
+        "lessonId": "G3-L04-B03",
+        "kind": "cut-area",
+        "actions": 8
+      },
+      {
+        "lessonId": "G3-L05-B01",
+        "kind": "vote",
+        "actions": 2
+      },
+      {
+        "lessonId": "G3-L05-B02",
+        "kind": "data-bins",
+        "actions": 4
+      },
+      {
+        "lessonId": "G3-LP01-B01",
+        "kind": "calendar",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-LP01-B02",
+        "kind": "clock",
+        "actions": 1
+      },
+      {
+        "lessonId": "G3-LP01-E01",
+        "kind": "calendar",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-L06-B01",
+        "kind": "decimal",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-L06-B02",
+        "kind": "decimal",
+        "actions": 3
+      },
+      {
+        "lessonId": "G3-L07-B01",
+        "kind": "sets",
+        "actions": 4
+      }
+    ],
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-thinking-browser",
+    "passed": true,
+    "illustratedCards": 17,
+    "classifiedCards": 60,
+    "firstAnswerPreserved": true,
+    "helpPreserved": true,
+    "parentReview": true,
+    "amendment": true,
+    "dueVariant": true,
+    "privateRubric": true,
+    "crossOriginRejected": true,
+    "reward": 0,
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-division-browser",
+    "passed": true,
+    "checks": [
+      {
+        "id": "G3-L02-B02",
+        "total": 52,
+        "quotient": 13,
+        "regroup": true,
+        "wrongShareRejected": true,
+        "repair": true
+      },
+      {
+        "id": "G3-L02-B04",
+        "total": 408,
+        "quotient": 102,
+        "regroup": true,
+        "wrongShareRejected": true,
+        "repair": true
+      }
+    ],
+    "reward": 0,
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-core-browser",
+    "passed": true,
+    "checked": [
+      {
+        "id": "G3-U04-B01",
+        "type": "product-place",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-U04-B03",
+        "type": "product-place",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-U04-B04",
+        "type": "product-place",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-U04-B05",
+        "type": "estimate-product",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-U06-B03",
+        "type": "fraction-core",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-U06-B04",
+        "type": "fraction-core",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-U06-B05",
+        "type": "fraction-core",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-L02-B01",
+        "type": "share-place",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-L02-B03",
+        "type": "pack-remainder",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-L02-B05",
+        "type": "nested-groups",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-L02-B06",
+        "type": "invariant-table",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      }
+    ],
+    "reward": 0,
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-save-stress-browser",
+    "passed": true,
+    "pointerMoves": 65,
+    "gestureHistory": 1,
+    "operations": 44,
+    "historyBound": 30,
+    "multiTabConflict": true,
+    "offlineRetry": true,
+    "navigationBlockedOnFailure": true,
+    "browserBackBlockedOnFailure": true,
+    "importExport": true,
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-thinking-tools-browser",
+    "passed": true,
+    "balance": true,
+    "oneSidedError": true,
+    "undo": true,
+    "solidViews": true,
+    "candidateRejection": true,
+    "venn": true,
+    "refresh": true,
+    "reward": 0,
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-performance-browser",
+    "passed": true,
+    "method": "One local sample per view. Cold map then first classroom, separate browser cache per profile. 4x CPU is a simulation, not a real phone benchmark; no speed threshold asserted.",
+    "samples": [
+      {
+        "profile": "desktop",
+        "target": "map",
+        "uiReadyMs": 65,
+        "domContentLoadedMs": 15,
+        "transferredBytes": 2572641
+      },
+      {
+        "profile": "desktop",
+        "target": "classroom-entry",
+        "uiReadyMs": 803,
+        "domContentLoadedMs": 4,
+        "transferredBytes": 2583743
+      },
+      {
+        "profile": "desktop",
+        "target": "core-experiment-after-story",
+        "uiReadyMs": 825
+      },
+      {
+        "profile": "mobile-width-cpu4",
+        "target": "map",
+        "uiReadyMs": 201,
+        "domContentLoadedMs": 43,
+        "transferredBytes": 2572799
+      },
+      {
+        "profile": "mobile-width-cpu4",
+        "target": "classroom-entry",
+        "uiReadyMs": 850,
+        "domContentLoadedMs": 14,
+        "transferredBytes": 2604317
+      },
+      {
+        "profile": "mobile-width-cpu4",
+        "target": "core-experiment-after-story",
+        "uiReadyMs": 35
+      }
+    ],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-evidence-browser",
+    "passed": true,
+    "A03": true,
+    "A04": true,
+    "A05": true,
+    "A06": true,
+    "A07": [
+      "G3-U04-B01",
+      "G3-U04-B03",
+      "G3-U04-B04",
+      "G3-U04-B05",
+      "G3-L02-B01",
+      "G3-L02-B03",
+      "G3-L02-B05",
+      "G3-L02-B06",
+      "G3-U06-B03",
+      "G3-U06-B04",
+      "G3-U06-B05"
+    ],
+    "A08": {
+      "staleReview409": true,
+      "firstPreserved": true,
+      "formalReview": true
+    },
+    "A11": {
+      "recoveryUi": true,
+      "learningPreserved": true,
+      "oneUse": true
+    },
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-accessibility-browser",
+    "passed": true,
+    "A09": {
+      "offlineDraftPreserved": true,
+      "retry": true
+    },
+    "A10": {
+      "profiles": [
+        {
+          "width": 390,
+          "experiment": true,
+          "withdrawn": true
+        },
+        {
+          "width": 768,
+          "experiment": true,
+          "withdrawn": true
+        },
+        {
+          "width": 1440,
+          "experiment": true,
+          "withdrawn": true
+        }
+      ],
+      "font200": true,
+      "keyboard": true,
+      "reducedMotion": true,
+      "ipadTouch": "emulated",
+      "physicalIpad": "not-tested"
+    },
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-variants-browser",
+    "passed": true,
+    "A12": {
+      "knownFigures": [
+        {
+          "id": "G3-U01-TH1",
+          "variant": "G3-U01-TH1-R9",
+          "diagram": "U01"
+        },
+        {
+          "id": "G3-U02-TH1",
+          "variant": "G3-U02-TH1-R12",
+          "diagram": "U02-reverse"
+        },
+        {
+          "id": "G3-U03-TH1",
+          "variant": "G3-U03-TH1-R9",
+          "diagram": "U03-reverse"
+        },
+        {
+          "id": "G3-UP01-TH1",
+          "variant": "G3-UP01-TH1-R12",
+          "diagram": "UP01-reverse"
+        },
+        {
+          "id": "G3-U04-TH1",
+          "variant": "G3-U04-TH1-R9",
+          "diagram": "U04-reverse"
+        },
+        {
+          "id": "G3-UP02-TH1",
+          "variant": "G3-UP02-TH1-R12",
+          "diagram": "UP02-reverse"
+        },
+        {
+          "id": "G3-U05-TH1",
+          "variant": "G3-U05-TH1-R9",
+          "diagram": "U05"
+        },
+        {
+          "id": "G3-U06-TH1",
+          "variant": "G3-U06-TH1-R12",
+          "diagram": "U06-unknown"
+        },
+        {
+          "id": "G3-U07-TH1",
+          "variant": "G3-U07-TH1-R9",
+          "diagram": "U07-reverse"
+        },
+        {
+          "id": "G3-L01-TH1",
+          "variant": "G3-L01-TH1-R12",
+          "diagram": "L01-reverse"
+        },
+        {
+          "id": "G3-L02-TH1",
+          "variant": "G3-L02-TH1-R9",
+          "diagram": "L02-reverse"
+        },
+        {
+          "id": "G3-L03-TH1",
+          "variant": "G3-L03-TH1-R12",
+          "diagram": "L03-reverse"
+        },
+        {
+          "id": "G3-L04-TH1",
+          "variant": "G3-L04-TH1-R9",
+          "diagram": "L04-reverse"
+        },
+        {
+          "id": "G3-L05-TH1",
+          "variant": "G3-L05-TH1-R12",
+          "diagram": "L05-reverse"
+        },
+        {
+          "id": "G3-LP01-TH1",
+          "variant": "G3-LP01-TH1-R9",
+          "diagram": "LP01-reverse"
+        },
+        {
+          "id": "G3-L06-TH1",
+          "variant": "G3-L06-TH1-R12",
+          "diagram": "L06-reverse"
+        },
+        {
+          "id": "G3-L07-TH1",
+          "variant": "G3-L07-TH1-R9",
+          "diagram": "L07-reverse"
+        }
+      ],
+      "all204MathematicalParameters": "Node oracle tests",
+      "rewardFromExperiment": 0
+    },
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-template-browser",
+    "passed": true,
+    "lessons": [
+      "G3-U01-B01",
+      "G3-U01-B02",
+      "G3-U01-B03",
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-B04",
+      "G3-U02-B05",
+      "G3-U02-E01",
+      "G3-U02-E03",
+      "G3-U02-E02",
+      "G3-U02-E04",
+      "G3-U02-E05",
+      "G3-U02-O01",
+      "G3-U02-O02",
+      "G3-U03-B01",
+      "G3-U03-B02",
+      "G3-UP01-B01",
+      "G3-UP01-B02",
+      "G3-U04-B01",
+      "G3-U04-B02",
+      "G3-U04-B03",
+      "G3-U04-B04",
+      "G3-U04-B05",
+      "G3-UP02-B01",
+      "G3-U05-B01",
+      "G3-U05-B02",
+      "G3-U05-B03",
+      "G3-U06-B01",
+      "G3-U06-B02",
+      "G3-U06-B03",
+      "G3-U06-B04",
+      "G3-U06-B05",
+      "G3-U06-E01",
+      "G3-U07-R01",
+      "G3-U07-B01",
+      "G3-L01-B01",
+      "G3-L01-B02",
+      "G3-L02-B01",
+      "G3-L02-B02",
+      "G3-L02-B03",
+      "G3-L02-B04",
+      "G3-L02-B05",
+      "G3-L02-B06",
+      "G3-L03-B01",
+      "G3-L03-B02",
+      "G3-L03-E01",
+      "G3-L04-B01",
+      "G3-L04-B02",
+      "G3-L04-B03",
+      "G3-L05-B01",
+      "G3-L05-B02",
+      "G3-LP01-B01",
+      "G3-LP01-B02",
+      "G3-LP01-E01",
+      "G3-L06-B01",
+      "G3-L06-B02",
+      "G3-L06-B03",
+      "G3-L07-R01",
+      "G3-L07-B01",
+      "G3-U03-E01",
+      "G3-U03-E02",
+      "G3-U03-O01",
+      "numbers.fractions.meaning",
+      "geometry.area.perimeter",
+      "algebra.substitution.intro",
+      "algebra.balance.intro",
+      "numbers.quantity.intro",
+      "numbers.addition.meaning",
+      "numbers.subtraction.meaning"
+    ],
+    "defaultShortClassroom": true,
+    "sixSteps": true,
+    "threeChecksOnly": true,
+    "noRequiredReflection": true,
+    "legacyParentPlan": true,
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  },
+  {
+    "name": "verify-semantic-browser",
+    "passed": true,
+    "chapters": [
+      {
+        "id": "G3-U01-B01",
+        "chapter": "G3-U01",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-U02-B03",
+        "chapter": "G3-U02",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-U03-E02",
+        "chapter": "G3-U03",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-UP01-B02",
+        "chapter": "G3-UP01",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-U04-B03",
+        "chapter": "G3-U04",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-UP02-B01",
+        "chapter": "G3-UP02",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-U05-B02",
+        "chapter": "G3-U05",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-U06-B03",
+        "chapter": "G3-U06",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-U07-B01",
+        "chapter": "G3-U07",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-L01-B01",
+        "chapter": "G3-L01",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-L02-B03",
+        "chapter": "G3-L02",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-L03-E01",
+        "chapter": "G3-L03",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-L04-B03",
+        "chapter": "G3-L04",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-L05-B02",
+        "chapter": "G3-L05",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-LP01-B02",
+        "chapter": "G3-LP01",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-L06-B01",
+        "chapter": "G3-L06",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      },
+      {
+        "id": "G3-L07-B01",
+        "chapter": "G3-L07",
+        "actualOperation": true,
+        "why": true,
+        "oldAndCurrentSeparated": true
+      }
+    ],
+    "representativeCount": 17,
+    "widths": [
+      390,
+      768,
+      1440
+    ],
+    "coldChainStoryNotClipped": true,
+    "font200": true,
+    "realIpad": false,
+    "kevinTrial": false,
+    "errors": [],
+    "source": {
+      "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-09T01:59:58.343Z"
+    }
+  }
+]

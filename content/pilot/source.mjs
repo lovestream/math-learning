@@ -1,10 +1,14 @@
+import {classroomFor} from './classrooms.mjs';
+import {interactionRelease,verifiedInteractionIds} from './interaction-release.mjs';
+import {introVisuals,predictionVisuals,conditionStories} from './intro-visuals.mjs';
 // Authored pilot lessons for the user's v0.3 blueprint. These are previews, not full published coverage.
 import {teaching} from './teaching.mjs';
 import {foundations} from './foundations.mjs';
 import {taskObjective} from './objective-tasks.mjs';
 import {mixedOperationLessons} from './mixed-operations.mjs';
 import {lengthMeasurementLessons} from './length-measurement.mjs';
-import {grade3CompleteLessons} from './grade3-complete.mjs';
+import {grade3CompleteLessons,grade3UnitMetadata} from './grade3-complete.mjs';
+import {applyFormalTaskErrata,assessmentRevisions} from './formal-task-errata.mjs';
 const number=(id,prompt,expected,unit,solution,hint)=>({id,kind:'number',prompt,expected,unit,solution,hint});
 const choice=(id,prompt,options,expected,solution,hint)=>({id,kind:'choice',prompt,options:options.map((text,i)=>({id:String(i+1),text})),expected:String(expected),solution,hint,reasonEvidence:true});
 const expression=(id,prompt,expected,solution,hint)=>({id,kind:'expression',prompt,expected,solution,hint});
@@ -57,4 +61,16 @@ const existingById=new Map(existingLessons.map(item=>[item.lessonId,item]));
 const planIds=new Set(grade3CompleteLessons.map(item=>item.lessonId));
 const compiledGrade3=grade3CompleteLessons.map(item=>existingById.get(item.lessonId)??lesson(item));
 const extraLessons=existingLessons.filter(item=>!planIds.has(item.lessonId));
-export const lessons=[...compiledGrade3,...extraLessons];
+export const lessons=[...compiledGrade3,...extraLessons].map(item=>{
+  const unit=grade3UnitMetadata.find(u=>u.id===item.parentUnitId);
+  const interactive=item.widget!=='conceptLab'||item.conceptScenes?.some(s=>s.modelSpec||s.handsOnSpec||s.textbookSpec);
+  const verified=interactive&&verifiedInteractionIds.has(item.lessonId);
+  const classroom={...classroomFor(item),...(conditionStories[item.lessonId]?{story:conditionStories[item.lessonId]}:{})};
+  const conceptScenes=item.conceptScenes?.map(scene=>scene.textbookSpec?.cases?{...scene,initialState:scene.textbookSpec.contexts[0].story,learnerAction:classroom.mission,observableChange:classroom.observedEvidence,question:classroom.whyQuestion,expectedExplanation:classroom.discovery.join(' ')}:{...scene,...(item.lessonId==='G3-L07-R01'?{initialState:'24人每人2张纸，每包12张6元；本题不另给库存，分别求总需求、购买费用和时长。'}:{})});
+  return {...item,retellPrompt:classroom.whyQuestion,conceptScenes,articleBlocks:item.articleBlocks.map((block,i)=>i===0?{...block,...(block.paragraphs?{paragraphs:[classroom.story,...block.paragraphs.slice(1)]}:{text:classroom.story})}:block),interactionStatus:verified?'verified':interactive?'direct-manipulation':'static-visual',activityVerification:{release:verified?interactionRelease:undefined,mathematics:interactive?'fixture-and-invariant-tests':'not-applicable',browser:verified?'inventory-and-flow-20261008':interactive?'awaiting-current-release-check':'not-applicable',teaching:'awaiting-kevin-trial'},introVisual:introVisuals[item.lessonId],childClassroom:{...classroom,storyVisual:introVisuals[item.lessonId],predictionVisual:predictionVisuals[item.lessonId]??introVisuals[item.lessonId]},masteryRuleId:'pilot.evidence.v2',mathScenes:item.mathScenes?.map(scene=>({...scene,contentVersion:'2026-10-02.1'})),textbookUnit:unit,sourceAnchors:unit?[{id:unit.sourceId,purpose:`教材单元：${unit.title}，印刷页${unit.printedPages}`,status:'local-textbook-reference'}]:item.sourceAnchors,
+    contentVersion:assessmentRevisions.has(item.lessonId)?'2026-10-09.4':item.childClassroom?'2026-10-07.2':'2026-10-02.1',
+    editorialRevision:'2026-10-09.4',
+    taskSets:Object.fromEntries(Object.entries(item.taskSets).map(([set,tasks])=>[
+      set,tasks.map(t=>applyFormalTaskErrata({...t,responseSpec:t.responseSpec??{type:t.kind},reasonEvidence:undefined}))
+    ]))};
+});

@@ -1,0 +1,185 @@
+[
+  {
+    "name": "verify-thinking-browser",
+    "passed": true,
+    "illustratedCards": 17,
+    "classifiedCards": 60,
+    "firstAnswerPreserved": true,
+    "helpPreserved": true,
+    "parentReview": true,
+    "amendment": true,
+    "dueVariant": true,
+    "privateRubric": true,
+    "crossOriginRejected": true,
+    "reward": 0,
+    "errors": []
+  },
+  {
+    "name": "verify-division-browser",
+    "passed": true,
+    "checks": [
+      {
+        "id": "G3-L02-B02",
+        "total": 52,
+        "quotient": 13,
+        "regroup": true,
+        "wrongShareRejected": true,
+        "repair": true
+      },
+      {
+        "id": "G3-L02-B04",
+        "total": 408,
+        "quotient": 102,
+        "regroup": true,
+        "wrongShareRejected": true,
+        "repair": true
+      }
+    ],
+    "reward": 0,
+    "errors": []
+  },
+  {
+    "name": "verify-core-browser",
+    "passed": true,
+    "checked": [
+      {
+        "id": "G3-U04-B01",
+        "type": "product-place",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-U04-B03",
+        "type": "product-place",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-U04-B04",
+        "type": "product-place",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-U04-B05",
+        "type": "estimate-product",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-U06-B03",
+        "type": "fraction-core",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-U06-B04",
+        "type": "fraction-core",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-U06-B05",
+        "type": "fraction-core",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-L02-B01",
+        "type": "share-place",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-L02-B03",
+        "type": "pack-remainder",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-L02-B05",
+        "type": "nested-groups",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      },
+      {
+        "id": "G3-L02-B06",
+        "type": "invariant-table",
+        "caseCount": 6,
+        "exercisedCases": [
+          0,
+          5
+        ],
+        "refreshed": true
+      }
+    ],
+    "reward": 0,
+    "errors": []
+  },
+  {
+    "name": "verify-save-stress-browser",
+    "passed": true,
+    "pointerMoves": 65,
+    "gestureHistory": 1,
+    "operations": 44,
+    "historyBound": 30,
+    "multiTabConflict": true,
+    "offlineRetry": true,
+    "navigationBlockedOnFailure": true,
+    "browserBackBlockedOnFailure": true,
+    "importExport": true
+  },
+  {
+    "name": "verify-thinking-tools-browser",
+    "passed": true,
+    "balance": true,
+    "oneSidedError": true,
+    "undo": true,
+    "solidViews": true,
+    "candidateRejection": true,
+    "venn": true,
+    "refresh": true,
+    "reward": 0,
+    "errors": []
+  }
+]

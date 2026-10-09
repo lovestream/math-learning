@@ -1,7 +1,8 @@
 {
   "version": "g3-thinking-20260924.2",
   "scope": "grade3-only",
-  "status": "authored_not_published",
+  "status": "partially_published",
+  "runtimeRelease": {"authority": "content/pilot/thinking-source.mjs", "publicArtifact": "content/pilot/thinking.json", "publishedCards": 17, "preparedCards": 60, "teachingApproval": "awaiting-adult-review-and-kevin-trial"},
   "sourceBoundary": "已通读用户提供的《Kevin_数学20天专项练习_指定页码版》26页，核对20天60道思维题。原有34题保留；新增20张按日题型关联的改写/变式卡、6张长度连接卡，共60张。PDF页码按该文件自身序号，不冒用其中引用的另一份“原PDF页码”。链环原图不在此文件，新增图为明确条件的原创教学模型。",
   "use": "17个教材单元均有提升/奥数入口；按基础理解与方法联系选题，不强求每章同样题数。每天最多1张，复杂题可跨日；60张是备选库，不是60节必修课。",
   "tasks": [

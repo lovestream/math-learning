@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "id": "G3-L02-B02",
+      "total": 52,
+      "quotient": 13,
+      "regroup": true,
+      "wrongShareRejected": true,
+      "repair": true
+    },
+    {
+      "id": "G3-L02-B04",
+      "total": 408,
+      "quotient": 102,
+      "regroup": true,
+      "wrongShareRejected": true,
+      "repair": true
+    }
+  ],
+  "reward": 0,
+  "errors": []
+}
