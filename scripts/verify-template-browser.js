@@ -44,10 +44,11 @@ async page => {
   const before=await(await page.request.get(base+'/api/studio')).json();const s=Object.values(before.progress.studio.sessions).find(s=>s.lessonId===id&&!s.completedAt);assert(!s.results[s.tasks[0].id],'首答或勾选提前判分');
   for(const box of await checkboxes.all())await box.check();
   if(id==='G3-U02-B03')await answer.fill(final);
+  await page.locator('.studio-practice').screenshot({path:`output/playwright/v2-audit/template-self-check-${id}.png`});
   await page.getByRole('button',{name:'提交最终答案',exact:true}).click();await page.locator('.task-feedback').waitFor();
   const out=await(await page.request.get(base+'/api/studio')).json();const latest=out.progress.studio.sessions[s.id];assert(latest.selfChecks[s.tasks[0].id].evidence.format==='checklist-v1','自查格式未存档');assert(latest.selfChecks[s.tasks[0].id].evidence.reflection==='','生成了虚假的填写说明');
   if(id==='G3-U02-B03'){assert(latest.results[s.tasks[0].id].status==='correct','三项勾选后仍不能提交');assert(latest.results[s.tasks[0].id].selfCorrection,'订正记录丢失');}
-  await page.locator('.studio-practice').screenshot({path:`output/playwright/v2-audit/template-self-check-${id}.png`});
+  await page.locator('.studio-practice').screenshot({path:`output/playwright/v2-audit/template-final-answer-${id}.png`});
  }
  assert(checked.length===70,'课程未覆盖全');assert(!errors.length,JSON.stringify(errors));return {passed:true,lessons:checked,defaultShortClassroom:true,sixSteps:true,threeChecksOnly:true,noRequiredReflection:true,legacyParentPlan:true,errors};
 }
