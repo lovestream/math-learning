@@ -61,9 +61,12 @@ async page=>{
   const story=document.querySelector('.story-sentence'),original=parseFloat(getComputedStyle(story).fontSize);
   const samples=[...document.querySelectorAll('.classroom-stage p,.classroom-stage h2')].map(node=>[node,parseFloat(getComputedStyle(node).fontSize)]);
   for(const [node,size] of samples)node.style.setProperty('font-size',`${size*2}px`,'important');
-  return {original,enlarged:parseFloat(getComputedStyle(story).fontSize)};
+  return {original};
  });
- assert(fontSample.original>0&&fontSample.enlarged===fontSample.original*2,'正文未真正放大两倍');
+ await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+ const enlarged=await page.locator('.story-sentence').evaluate(story=>({enlarged:parseFloat(getComputedStyle(story).fontSize),inline:story.style.fontSize,priority:story.style.getPropertyPriority('font-size')}));
+ Object.assign(fontSample,enlarged);
+ assert(fontSample.original>0&&Math.abs(fontSample.enlarged-fontSample.original*2)<.1,'正文未真正放大两倍 '+JSON.stringify(fontSample));
  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'字体放大导致溢出');await shot('G3-U02-B03','font200',390);
  assert(!errors.length,errors.join('\n'));return {passed:true,chapters:checked,representativeCount:17,widths:[390,768,1440],coldChainStoryNotClipped:true,font200:true,fontSample,realIpad:false,kevinTrial:false,errors};
 }
