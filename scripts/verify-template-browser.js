@@ -16,7 +16,7 @@ async page => {
    await page.getByRole('button',{name:`${i+1} ${title}`,exact:true}).click();
    if(i===1){assert(await page.locator('.prediction-cards button').count()>=2,'缺少猜想 '+lesson.lessonId);await page.locator('.prediction-cards button').first().click();}
    if(i===2)assert(await page.locator('.classroom-stage .experiment-mission').innerText()===lesson.childClassroom.mission,'实验目标不同 '+lesson.lessonId);
-   if(i===4)assert(await page.locator('.symbol-lines p').count()===lesson.childClassroom.symbols.length,'数学表达缺失 '+lesson.lessonId);
+   if(i===4){assert(await page.locator('.symbol-lines p').count()===lesson.childClassroom.symbols.length,'数学表达缺失 '+lesson.lessonId);assert((await page.locator('.classroom-symbols>p').innerText()).includes('第一步的故事'),'原故事表达与可切换的实验条件未区分 '+lesson.lessonId);}
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'390步骤溢出 '+lesson.lessonId+' '+i);
   }
   const expected=lesson.lessonId.match(/^(G3-U04-B0[1345]|G3-L02-B0[1356]|G3-U06-B0[345])$/)?5:lesson.taskSets.core.length;
