@@ -10,6 +10,13 @@ export default function MathSceneVisual({scene,step}:{scene:MathScene;step:numbe
  if(scene.model.type==='money-flow')return <MoneyVisual start={q('start')} pay={q('pay')} refund={q('refund')} phase={Math.min(step,2)} netMode/>;
  const defs=<defs><linearGradient id={id+'box'} x2="0" y2="1"><stop stopColor="#fff4dd"/><stop offset="1" stopColor="#d9bd8e"/></linearGradient>{[['blue','#9dccdc','#467b95'],['red','#f6a58b','#be5f48']].map(([name,light,dark])=><radialGradient key={name} id={id+name} cx=".3" cy=".25"><stop stopColor={light}/><stop offset="1" stopColor={dark}/></radialGradient>)}</defs>;
  const type=scene.model.type;
+ if(type==='combine-then-share'&&step===0){
+  const red=q('red'),blue=q('blue'),per=q('perBox');
+  return <svg className="operation-object-view bead-condition-view" viewBox="0 0 360 345" role="img" aria-label={`${red}颗红珠、${blue}颗蓝珠，还未分装；每盒装${per}颗，盒数未知`}>
+   {defs}{[[red,18,'red','红珠'],[blue,186,'blue','蓝珠']].map(([count,x,color,name])=><g key={String(name)}><rect x={Number(x)} y="14" width="156" height="219" rx="15" fill="#fffaf0" stroke={color==='red'?'#df6c4f':'#527eab'} strokeWidth="2"/><text x={Number(x)+78} y="48" textAnchor="middle" fontSize="23">{count}颗{name}</text>{Array.from({length:Number(count)},(_,i)=><g key={i} transform={`translate(${Number(x)+29+i%4*32} ${85+Math.floor(i/4)*47})`}><circle r="13" fill={`url(#${id+color})`}/><circle cx="-4" cy="-4" r="3" fill="#fff" fillOpacity=".7"/></g>)}</g>)}
+   <path d="M95 244v17h170v-17M180 261v17" fill="none" stroke="#469684" strokeWidth="3"/><rect x="48" y="285" width="264" height="43" rx="10" fill="#e8f1e7"/><text x="180" y="313" textAnchor="middle" fontSize="19">每盒{per}颗，需要几盒？</text>
+  </svg>;
+ }
  if(type==='people-line'){
   const quantities=scene.story.quantities,start=quantities[0].value,remove=quantities[1].value,add=quantities[2].value,people=quantities[0].unit==='人';
   return <svg className="operation-object-view" viewBox="0 0 600 285" role="img" aria-label={`${start}${quantities[0].unit}，${step>0?`已拿走${remove}`:'还没拿走'}，${step>1?`新加入${add}`:'还没加入'}`}>

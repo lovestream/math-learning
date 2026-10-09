@@ -38,7 +38,7 @@ test('源核对状态不能假称新的浏览器验收、教学审批或Kevin掌
   assert.equal(row.acceptance.browserSemanticEvidence,'pending-chapter-run');
   assert.equal(row.acceptance.parentTeachingApproval,'not-verified');
   assert.equal(row.acceptance.kevinMastery,'not-assessed');
-  assert.equal(row.sourceReview==='needs-refinement',row.issues.length>0);
+  assert.equal(row.sourceFinding==='initial-source-issue',row.issues.length>0);
  }
 });
 

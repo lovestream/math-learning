@@ -20,6 +20,8 @@ async page => {
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'390步骤溢出 '+lesson.lessonId+' '+i);
   }
   const expected=lesson.lessonId.match(/^(G3-U04-B0[1345]|G3-L02-B0[1356]|G3-U06-B0[345])$/)?5:lesson.taskSets.core.length;
+  assert(!await page.locator('.parent-task-preview').getAttribute('open'),'儿童题组预览默认展开 '+lesson.lessonId);
+  assert(!await page.locator('.classroom-verify li').first().isVisible(),'儿童需重复读题 '+lesson.lessonId);
   assert(await page.locator('.classroom-verify li').count()===expected,'练习清单不对应实际题组 '+lesson.lessonId);
   if(expected===5&&lesson.lessonId.match(/^(G3-U04-B0[1345]|G3-L02-B0[1356]|G3-U06-B0[345])$/)){
    await page.getByRole('button',{name:'开始这组独立练习',exact:true}).click();await page.locator('.task-card').waitFor();

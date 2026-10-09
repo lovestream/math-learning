@@ -1,0 +1,1 @@
+export function currentClassroomExperiment(lesson:import('../src/studio/types').PilotLesson,state?:import('../src/studio/types').WidgetState):{conditions:string[];template:string;relation:string}|null;

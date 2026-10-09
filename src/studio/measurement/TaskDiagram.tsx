@@ -9,7 +9,7 @@ export default function TaskDiagram({diagram,intro=false}:{diagram:MeasurementTa
       {model.starts.map((start,i)=><Ring key={i} x={x0+start*scale} y={45+(i%2?16:0)} width={length*scale} height={i%2?60:88} thickness={t*scale} index={i}/>)}
       {model.joints.map((j,i)=><g key={i} className="task-joint"><rect x={x0+j.start*scale} y="38" width={(j.end-j.start)*scale} height="111"/><text x={x0+(j.start+model.overlapMm/2)*scale} y="172" textAnchor="middle">接头{i+1}</text></g>)}
       <Dimension x1={x0} x2={x0+model.totalMm*scale} y={207} label="求最左外缘到最右外缘的长度"/>
-    </svg><figcaption>{diagram.caption??`每个环外长${length}毫米，金属条厚${t}毫米；每处接头重叠两个端部。`}</figcaption></figure>;
+    </svg>{intro&&<div className="chain-condition-detail"><svg viewBox="0 0 360 142" role="img" aria-label={`一个接头放大示意：两个金属端部沿拉直方向各占${t}毫米；总长尚未知`}><text x="180" y="25" textAnchor="middle" fontSize="19">看清一个接头的两个端部</text><rect x="48" y="50" width="132" height="35" rx="7" fill="#e9b44d"/><rect x="180" y="50" width="132" height="35" rx="7" fill="#527eab"/><path d="M114 90v12h66v-12m0 0v12h66v-12" fill="none" stroke="#294b53" strokeWidth="2"/><text x="147" y="125" textAnchor="middle" fontSize="19">{t}毫米</text><text x="213" y="125" textAnchor="middle" fontSize="19">{t}毫米</text></svg><p>放大图用两种颜色区分端部，不按整环比例画。每个新接头都会让这两段厚度少伸出去。</p></div>}<figcaption>{diagram.caption??`每个环外长${length}毫米，金属条厚${t}毫米；每处接头重叠两个端部。`}</figcaption></figure>;
   }
   if(diagram.mode==='boards'){
     const lengths=diagram.pieceLengthsMm??[300,250],overlaps=diagram.overlapsMm??[80],model=boardMeasure(lengths,overlaps),scale=510/model.totalMm,x0=48;

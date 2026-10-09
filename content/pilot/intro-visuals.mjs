@@ -1,8 +1,11 @@
 // Authored KNOWN conditions, never numbers extracted from prose or answer diagrams.
+import {textbookModels} from '../../shared/textbook-models.mjs';
 import {introVisualTypes} from '../../shared/intro-visuals.mjs';
 // The same object/face IDs are used by the later hands-on experiments.
 const picture=(type,title,caption,values=[],labels=[])=>({type,title,caption,values,labels});
 export const introVisuals={
+ 'G3-L05-B01':picture('vote-board','每个人一票，选一个目的地','18个人都按同一单选规则投票。各地票数暂时未知。',[textbookModels['G3-L05-B01'].people],textbookModels['G3-L05-B01'].options),
+ 'G3-L05-B02':picture('data-cards','把阅读时长卡各放进一个组','先看8条原始记录；10分钟该去哪组，要由你判断。',textbookModels['G3-L05-B02'].data,['0—9分钟','10—19分钟','20分钟及以上']),
  'G3-U01-B01':picture('box-camera','桌上这个盒子与拍照位置','盒子不动。先认清三个标记，再看相机站在哪里。'),
  'G3-U01-B02':picture('hidden-blocks','两种搭法：前排一样，后排不同','这是从斜上方看的搭法示意，不是机器人拍到的正面照片。'),
  'G3-U01-B03':picture('cube-net','六个面摊开后的编号','虚线是折痕。2号、3号、4号在同一行；折好后的关系留给你猜。'),
@@ -51,7 +54,7 @@ export const predictionVisuals=Object.fromEntries(['G3-U01-B01','G3-U01-B02','G3
 predictionVisuals['G3-UP01-B01'].caption='左边是原来的读数。右边仍是同一个米袋，只把显示单位换成千克；先猜质量是否改变。';
 // These introductions ask about arithmetic or reasoning from fully stated data.
 // Every other entrance must have authored objects, a canonical scene or a diagram.
-export const textOnlyIntroLessonIds=new Set(['G3-U02-E03','G3-U02-E02','G3-U02-O01','G3-U04-B05','G3-U07-R01','G3-L02-B05','G3-L02-B06','G3-L05-B01','G3-L05-B02','G3-L06-B03','G3-L07-R01']);
+export const textOnlyIntroLessonIds=new Set(['G3-U02-E03','G3-U02-E02','G3-U02-O01','G3-U04-B05','G3-U07-R01','G3-L02-B05','G3-L02-B06','G3-L06-B03','G3-L07-R01']);
 export function validateIntroVisualCoverage(lessons){
  for(const lesson of lessons){
   if(!lesson.introVisual&&!lesson.mathScenes?.length&&!lesson.lengthScenes?.length&&!lesson.articleBlocks[0]?.diagram&&!textOnlyIntroLessonIds.has(lesson.lessonId))throw Error(`${lesson.lessonId} 的真实问题缺少对应图形或明确的文字题审核`);

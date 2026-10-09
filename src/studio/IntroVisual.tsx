@@ -32,6 +32,10 @@ function Fraction({values:v,collection=false}:{values:number[];collection?:boole
 function Calendar({years}:{years:number[]}){return <div className="intro-calendar-pair">{years.map(year=>{const start=new Date(Date.UTC(year,1,1)).getUTCDay(),offset=(start+6)%7,days=new Date(Date.UTC(year,2,0)).getUTCDate();return <div className="intro-calendar" key={year} role="img" aria-label={`${year}年2月月历，有${days}天`}><b>{year}年2月</b><div>{['一','二','三','四','五','六','日'].map(day=><strong key={day}>{day}</strong>)}{Array.from({length:offset},(_,i)=><span key={'empty'+i}/>)}{Array.from({length:days},(_,i)=><span key={i} className={i>=27?'calendar-last-day':''}>{i+1}</span>)}</div></div>})}</div>}
 function Groups({values:v,labels}:{values:number[];labels:string[]}){
  const [groups,per,extra=0]=v,division=labels[0]?.includes('纸')||labels[0]?.includes('糖')||labels[0]?.includes('书'),n=division?1:groups;
+ if(!division&&n>4)return <Canvas height={450} viewBox="0 0 360 450" label={`${groups}组，每组${per}${labels[0]??''}，框是组，不是单个物品，总数未知`}>
+  {Array.from({length:n},(_,i)=>{const x=18+i%2*168,y=14+Math.floor(i/2)*91;return <g key={i}><rect x={x} y={y} width="156" height="78" rx="12" fill="#fff4df" stroke={gold} strokeWidth="2"/>{text(x+78,y+27,`第${i+1}组`,15)}{text(x+78,y+57,`${per}${labels[0]??''}`,22)}</g>})}
+  {text(180,411,'一框是一组，不是一个物品',17)}{text(180,439,'合起来一共有多少？',20)}
+ </Canvas>;
  return <Canvas height={320} label={division?`${per}${labels[0]}尚未分配`: `${groups}组，每组${per}${labels[0]??''}${extra?`与${extra}${labels[1]}`:''}`}>
   {Array.from({length:n},(_,i)=>{const x=n>4?78+i%4*143:75+i*490/n,y=n>4?30+Math.floor(i/4)*100:50,w=n>4?128:460/n;return <g key={i}><rect x={x} y={y} width={division?490:w} height="81" rx="9" fill="#fff4df" stroke={gold} strokeWidth="2"/>{text(x+(division?245:w/2),y+33,`${per}${labels[0]??''}`,16)}{extra>0&&text(x+w/2,y+60,`＋${extra}${labels[1]??''}`,16)}</g>})}
   {division&&per<100&&<g>{Array.from({length:Math.floor(per/10)},(_,i)=><g key={i}><rect x={88+i*49} y="150" width="31" height="39" rx="4" fill={green}/>{text(103+i*49,176,'10',14,'#fff')}</g>)}{Array.from({length:per%10},(_,i)=><circle key={i} cx={110+i*26} cy="214" r="8" fill={blue}/>)}{text(320,241,'一捆表示10个，散点表示1个',15)}</g>}
@@ -44,6 +48,13 @@ function OtherPicture({spec}:{spec:VisualSpec}){
  if(type==='fraction-strip'||type==='fraction-collection')return <Fraction values={v} collection={type==='fraction-collection'}/>;
  if(type==='calendar')return <Calendar years={v}/>;
  if(type==='groups')return <Groups values={v} labels={labels}/>;
+ if(type==='data-cards')return <Canvas height={330} viewBox="0 0 360 330" label={`8条原始阅读分钟记录：${v.join('、')}；分组尚未完成`}>
+  {v.map((minutes,i)=><g key={i}><rect x={17+i%4*84} y={20+Math.floor(i/4)*83} width="74" height="68" rx="10" fill="#fff9e9" stroke={blue} strokeWidth="2"/>{text(54+i%4*84,52+Math.floor(i/4)*83,String(minutes),25)}{text(54+i%4*84,76+Math.floor(i/4)*83,'分钟',14)}</g>)}
+  {labels.map((label,i)=><g key={label}><rect x={12+i*116} y="224" width="108" height="82" rx="10" fill="#e6efe7" stroke={green} strokeDasharray="5 4"/>{text(66+i*116,250,label,13)}{text(66+i*116,284,'？条',21)}</g>)}{text(180,201,'每张卡只放进一个组',18)}
+ </Canvas>;
+ if(type==='vote-board')return <Canvas height={320} viewBox="0 0 360 320" label={`${v[0]}人每人选一个目的地：${labels.join('、')}，票数未知`}>
+  {text(180,40,`${v[0]}个人，每人选一个`,23)}{labels.map((label,i)=><g key={label}><rect x={25+i*109} y="80" width="96" height="133" rx="12" fill="#e9f1e7" stroke={green} strokeWidth="2"/>{text(73+i*109,116,label,18)}{text(73+i*109,174,'？票',25)}</g>)}{text(180,264,'规则相同，票数才能比较',18)}
+ </Canvas>;
  let content:ReactNode=null;
  if(type==='lines')content=<>{[[58,'线段：两个端点'],[140,'射线：一个端点'],[220,'直线：向两边延伸']].map(([y,label],i)=><g key={i}><path d={`M210 ${y}H550`} stroke={blue} strokeWidth="5"/>{i<2?<circle cx="210" cy={y} r="6" fill={ink}/>:<path d={`M226 ${Number(y)-9}L210 ${y}L226 ${Number(y)+9}`} fill="none" stroke={blue} strokeWidth="3"/>}{i===0?<circle cx="550" cy={y} r="6" fill={ink}/>:<path d={`M534 ${Number(y)-9}L550 ${y}L534 ${Number(y)+9}`} fill="none" stroke={blue} strokeWidth="3"/>}{text(106,Number(y)+7,label,15)}{i===0&&text(380,Number(y)+28,`${v[0]}厘米`,15)}</g>)}</>;
  if(type==='angles'||type==='angle-reference')content=<>{(type==='angles'?v:[90,78]).map((angle,i)=>{const x=165+i*300,y=208,r=125,t=angle*Math.PI/180;return <g key={i}><path d={`M${x+r} ${y}H${x}L${x+r*Math.cos(t)} ${y-r*Math.sin(t)}`} fill="none" stroke={i?green:blue} strokeWidth="9" strokeLinecap="round"/><path d={`M${x+37} ${y}A37 37 0 0 0 ${x+37*Math.cos(t)} ${y-37*Math.sin(t)}`} fill="none" stroke={gold} strokeWidth="4"/><circle cx={x} cy={y} r="7" fill={ink}/>{type==='angle-reference'&&i===0&&<path d={`M${x+22} ${y}V${y-22}H${x}`} fill="none" stroke={ink} strokeWidth="2"/>}{text(x+32,257,type==='angles'?(i?'张口二':'张口一'):(i?'待比较的墙角':'书本的角'),17)}</g>})}</>;

@@ -6,12 +6,12 @@ import {faces,foldedFaces,hiddenCubes,boxFaces,containerObjects,scaleObjects} fr
 import {rhombusPoints} from '../shared/intro-visuals.mjs';
 test('每个已开放课程入口经图形或明确文字题审核，短课堂故事和预测都有图',()=>{
  validateIntroVisualCoverage(lessons);assert.equal(lessons.length,70);
- assert.equal(lessons.filter(l=>l.introVisual).length,41);
+ assert.equal(lessons.filter(l=>l.introVisual).length,43);
  for(const l of lessons.filter(l=>l.childClassroom)){
   if(l.introVisual){assert.equal(l.introVisual.type,l.childClassroom.storyVisual.type);assert.equal(l.introVisual.type,l.childClassroom.predictionVisual.type);}
   else assert(l.mathScenes?.length||l.lengthScenes?.length||l.articleBlocks[0]?.diagram||textOnlyIntroLessonIds.has(l.lessonId),l.lessonId);
  }
- assert.equal(textOnlyIntroLessonIds.size,11);
+ assert.equal(textOnlyIntroLessonIds.size,9);
 });
 test('删除必要图形、新图形课程未声明或分数整体错误时构建必须拒绝',()=>{
  const first=lessons.find(l=>l.lessonId==='G3-U06-B02');

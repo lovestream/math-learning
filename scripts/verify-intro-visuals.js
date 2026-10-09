@@ -22,7 +22,7 @@ async (page) => {
    predictions.push(lesson.lessonId);
   }
  }
- assert(stories.length===59,'故事图覆盖数发生变化，需要逐项审核 '+stories.length);assert(predictions.length===59,'59节有图课堂的预测未全部核查');
+ assert(stories.length===61,'故事图覆盖数发生变化，需要逐项审核 '+stories.length);assert(predictions.length===61,'61节有图课堂的预测未全部核查');
  // Updating the frontend must also work with a server started before these fields existed.
  await page.route('**/api/studio',async route=>{const response=await route.fetch(),old=await response.json();for(const lesson of old.lessons){delete lesson.introVisual;if(lesson.childClassroom){delete lesson.childClassroom.storyVisual;delete lesson.childClassroom.predictionVisual}}await route.fulfill({response,json:old})});
  try{await page.goto(base+'/?lesson=G3-U01-B01');await page.getByRole('button',{name:'Kevin 短课堂',exact:true}).click();await page.getByRole('button',{name:'1 真实问题',exact:true}).click();await page.locator('.classroom-story [data-intro-visual]' ).waitFor();await page.getByRole('button',{name:'2 先猜一猜',exact:true}).click();await page.locator('.classroom-predict [data-intro-visual]').first().waitFor()}finally{await page.unroute('**/api/studio')}

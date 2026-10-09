@@ -52,7 +52,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "盒子与相机",
         "unit": "方向",
@@ -60,7 +60,7 @@
         "unknown": "不同站位的照片",
         "changes": "相机位置"
       },
-      "contentFingerprint": "314a2a3443bf8109b39b67781b2b6a87a2c6502fbffa45ff6d009a6ff641a8c8",
+      "contentFingerprint": "a43994e6fd2ff22a883d7e2bb49cc5921a318cb12407276d523bb7bf99fa259a",
       "story": {
         "text": "Kevin给朋友寄一个玩具盒。盒子前面是红圆点，右面是蓝菱形，上面是黄星星。朋友只收到一张照片，能知道你站在哪边拍的吗？",
         "figure": {
@@ -121,7 +121,7 @@
           "正前方、右侧、上方拍到不同的面；斜着看时，可以同时看见多个面。",
           "同一件物体可以有不同照片。照片中的一个面，不能替代整个物体。"
         ],
-        "retell": "指着你的三张照片讲：盒子哪里没动？为什么看到的标记变了？"
+        "retell": "盒子没有转，为什么换个站位看到的图案变了？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -173,6 +173,8 @@
       "invariant": "观察方向变，物体及面标记不变",
       "nextInspection": "保留已试课模板；抽查正、右、上三张照片和正式题的标记各自以本题为准。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "user-reported-trial-of-template",
       "acceptance": {
@@ -197,7 +199,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "两排积木",
         "unit": "块",
@@ -205,7 +207,7 @@
         "unknown": "单张照片能否确定总块数",
         "changes": "后排高度和视角"
       },
-      "contentFingerprint": "c0ab76f28be937be2e4000f931530848a01496f17b027e74067e3285b6d60a2b",
+      "contentFingerprint": "c1cc119d384778a90ed199b4a9efad4e3e153b0c31ff12314f25c6bc7f89cf2a",
       "story": {
         "text": "前排竖着叠了2块积木，后排也可以放积木。机器人只从正前方拍照，后排完全被挡住了。它说“一共只有2块”，这个结论可靠吗？",
         "figure": {
@@ -264,7 +266,7 @@
           "后排有1块和2块时，正面都是2格，上面也都是2格；右侧能看到不同的后排高度。",
           "同一张正面照片可以对应不同的积木总数。需要补充新方向的证据。"
         ],
-        "retell": "正面都是2格时，为什么不能直接说总共2块？哪张新照片能帮助你？"
+        "retell": "正面一样，为什么总块数却可能不同？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -316,6 +318,8 @@
       "invariant": "遮挡可使同一正视图对应不同总数",
       "nextInspection": "核对后排1/2块的正面不变、侧面变化；解释题必须承认单张照片信息不足。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -340,7 +344,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "六面纸盒",
         "unit": "面／棱",
@@ -348,7 +352,7 @@
         "unknown": "2与4折后相邻还是相对",
         "changes": "折叠进度和视角"
       },
-      "contentFingerprint": "a50dfdd003313007c5d71d2062e718ba95f47887e42f089240ca9bee52642174",
+      "contentFingerprint": "c2188325bc5c2d41a4db856020aa5e98d76ac1fab56e203d2d63b496d4cf3d03",
       "story": {
         "text": "Kevin给正方体礼盒的六个面贴图案。纸盒摊开以后，几个面看上去离得很远；折回去后，它们会碰到同一条棱吗？拖动折叠滑条，跟着编号找答案。",
         "figure": {
@@ -406,7 +410,7 @@
           "1与5、2与4、3与6是三对相对面。除同一个面和相对面以外，两面都相邻。",
           "展开时离得远的面，折回后也可能相邻，例如2号与6号。"
         ],
-        "retell": "选择两面，先猜相邻还是相对，再折回并转动视角，讲出你的证据。"
+        "retell": "展开图左右挨着3号的两面，为什么折后不挨着？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -458,6 +462,8 @@
       "invariant": "折叠保持六个面身份及相对面关系",
       "nextInspection": "核对编号、折痕、相对面对照表；不让猜想图提前给出待猜的相对关系。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -482,7 +488,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "公交乘客",
         "unit": "人",
@@ -490,7 +496,7 @@
         "unknown": "现在人数",
         "changes": "选择运算步骤"
       },
-      "contentFingerprint": "1158df13a161155bcca087beb8e8048a10e312a8803e6bb0d14cdb53793dc580",
+      "contentFingerprint": "0be5305b47a240a4314a09a112f501f416f62f9f55f1cdde3ddbd5b3460e7db7",
       "story": {
         "text": "车上原来有28人，到站下去9人，又上来6人。现在车上有多少人？",
         "figure": {
@@ -593,9 +599,9 @@
       },
       "discovery": {
         "statements": [
-          "请把每个数连回它的单位和角色。能相加减的量必须表示同一种东西；乘除常常先完成“每份—份数—总数”的转换。"
+          "下车后是19人，上车后是25人。28−9＋6从左往右，记录前一步的结果接着变化。相反的加减操作不能随意改次序；纯算式同级运算按从左往右的约定计算。"
         ],
-        "retell": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？"
+        "retell": "28−9得到的人数，为什么要作为下一步加6的起点？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -655,7 +661,9 @@
       },
       "invariant": "同级运算依次作用于上一步的数量",
       "nextInspection": "六课共享发现不能解释本课的19人和25人；区分故事先后与算式从左往右约定。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "discovery-generic"
       ],
@@ -682,7 +690,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "散笔与盒装笔",
         "unit": "支／盒",
@@ -690,7 +698,7 @@
         "unknown": "总支数",
         "changes": "合并或先展开每盒"
       },
-      "contentFingerprint": "df013dfcc79cfb9c520085940a5263cf7b2b9635fcbaed269a0fb83afb4d6ec7",
+      "contentFingerprint": "310f8819122907b0841fe855340b75ac007c31b6fd23148ff80bf14e5c65a713",
       "story": {
         "text": "文具店有4支散铅笔，又搬来3盒，每盒6支。一共有多少支铅笔？",
         "figure": {
@@ -793,9 +801,9 @@
       },
       "discovery": {
         "statements": [
-          "请把每个数连回它的单位和角色。能相加减的量必须表示同一种东西；乘除常常先完成“每份—份数—总数”的转换。"
+          "3×6先把3盒换成18支。18支与4支是同一种数量，才能相加成22支。"
         ],
-        "retell": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？"
+        "retell": "为什么4支散笔不能直接和3盒相加？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -855,7 +863,9 @@
       },
       "invariant": "同种数量才能直接相加；每盒支数乘盒数得到支数",
       "nextInspection": "发现应明确3盒先化为18支，再与4支合并；不要要求孩子额外选择单位。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "discovery-generic"
       ],
@@ -882,7 +892,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "红蓝珠和盒子",
         "unit": "颗／盒",
@@ -890,7 +900,7 @@
         "unknown": "需要盒数",
         "changes": "先合并或先分装"
       },
-      "contentFingerprint": "607150cbebccc8efa7c4a8522ef2c685469a955501bef50f997079a5c4c3870f",
+      "contentFingerprint": "25b185131d3fe172a3cae56be41935b86862372a1761e9bb626fc693725d3ca9",
       "story": {
         "text": "12颗红珠和8颗蓝珠混在一起，每4颗装一盒。需要多少盒？",
         "figure": {
@@ -993,9 +1003,9 @@
       },
       "discovery": {
         "statements": [
-          "请把每个数连回它的单位和角色。能相加减的量必须表示同一种东西；乘除常常先完成“每份—份数—总数”的转换。"
+          "括号里的12＋8先求全部20颗，再按每盒4颗装盒。在这组数中两种颜色也各能装满盒；不是所有数量都能这样分开装，合起来分才符合原问题。"
         ],
-        "retell": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？"
+        "retell": "只给12颗红珠装盒，为什么还没有回答总盒数？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -1055,7 +1065,9 @@
       },
       "invariant": "括号保护必须先合并的整体",
       "nextInspection": "发现应对比(12+8)÷4与12+8÷4；说明20是珠子总数，5是盒数。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "discovery-generic"
       ],
@@ -1082,7 +1094,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "书架库存",
         "unit": "本",
@@ -1090,7 +1102,7 @@
         "unknown": "现在本数",
         "changes": "借还的顺序表达"
       },
-      "contentFingerprint": "d6c92addef308229f42ea9c947c4f5be0a8e63d653b7611a25a67f8c842f5ca0",
+      "contentFingerprint": "afc2b81602e94b0093762b01a5c1aebcd8b0061f85d3659aaf76486c78c365e1",
       "story": {
         "text": "书架原有36本书，借走8本，又还回3本。现在有多少本？",
         "figure": {
@@ -1193,9 +1205,9 @@
       },
       "discovery": {
         "statements": [
-          "请把每个数连回它的单位和角色。能相加减的量必须表示同一种东西；乘除常常先完成“每份—份数—总数”的转换。"
+          "36−8先记录借出后的28本，再加回3本。36−8＋3把两次连续变化写在同一条算式里。"
         ],
-        "retell": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？"
+        "retell": "综合算式里的28为什么不用再写成一个新条件？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -1255,7 +1267,9 @@
       },
       "invariant": "每次变化都作用于当前剩余量",
       "nextInspection": "发现应解释36→28→31；与B01明确是综合算式表达的迁移，而非重复课程。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "discovery-generic"
       ],
@@ -1282,7 +1296,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "盒装彩笔和送出部分",
         "unit": "支／盒",
@@ -1290,7 +1304,7 @@
         "unknown": "剩余支数",
         "changes": "先求总量或先减"
       },
-      "contentFingerprint": "8c68a4ae743a79f7b74239a7255a0a24d95189643571ba4dd5d7ce4cc6f8e0d6",
+      "contentFingerprint": "f2887b6a36d7b3664d522ec018a52c8c2ec68bf32b8f7581f57b6c72ee6da0b3",
       "story": {
         "text": "4盒彩笔，每盒6支，送给同学9支。还剩多少支？",
         "figure": {
@@ -1393,9 +1407,9 @@
       },
       "discovery": {
         "statements": [
-          "请把每个数连回它的单位和角色。能相加减的量必须表示同一种东西；乘除常常先完成“每份—份数—总数”的转换。"
+          "4×6得到送出以前的总量24支；24−9才得到剩下15支。中间量把盒数与剩余支数连起来。"
         ],
-        "retell": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？"
+        "retell": "题目没有直接给24支，你为什么需要先求它？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -1455,7 +1469,9 @@
       },
       "invariant": "先求总量，才能减去同种送出量",
       "nextInspection": "发现应把4×6所得24支与剩下15支连起来；区分此课的两步建模目标。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "discovery-generic"
       ],
@@ -1482,7 +1498,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "余额与退款",
         "unit": "元",
@@ -1490,7 +1506,7 @@
         "unknown": "余额及等值去括号式",
         "changes": "净支出与逐步记账"
       },
-      "contentFingerprint": "c04933697fcf04cae0e1e2defa360058824a2e5f98bb1f44091a8776bca6eeac",
+      "contentFingerprint": "a4aec007648bd5cb163312a84cc85cbecdb7f71b1122c7be9d4f677559e96597",
       "story": {
         "text": "Kevin有20元，买文具花8元，后来店员退回3元。最后还剩多少元？",
         "figure": {
@@ -1593,9 +1609,9 @@
       },
       "discovery": {
         "statements": [
-          "请把每个数连回它的单位和角色。能相加减的量必须表示同一种东西；乘除常常先完成“每份—份数—总数”的转换。"
+          "退回3元让实际支出从8元降为5元，余额增加。20−(8−3)＝20−8＋3，两种记录说的是同一余额。"
         ],
-        "retell": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？"
+        "retell": "减号后的括号去掉，为什么退回的3元要变成加？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -1655,7 +1671,9 @@
       },
       "invariant": "退款降低净支出，余额相应增加",
       "nextInspection": "发现需解释减号后去括号为什么改变符号，不能沿用基础课通用段落。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "discovery-generic"
       ],
@@ -1682,7 +1700,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "余额与净支出",
         "unit": "元",
@@ -1690,7 +1708,7 @@
         "unknown": "一次扣款金额和等值表达",
         "changes": "括号及里面的符号"
       },
-      "contentFingerprint": "b6fae9167490a1963fb53dec099e3177c4d61b7adbaccad3da0b9d68ef53a39e",
+      "contentFingerprint": "3acfb60eaca6fd0e4c9b60546672e8442d32cdeced58fc1b9806cd8219da3d08",
       "story": {
         "text": "有60元，先付14元又退6元。想在账本中只写一次扣款，应该扣多少？",
         "figure": {
@@ -1730,7 +1748,7 @@
         "statements": [
           "14元支出和6元退回合成净支出8元。写成60−(14−6)，仍表示相同的余额；写成60−(14+6)则把退款当成第二笔支出。"
         ],
-        "retell": "60−14+6里，为什么14和6放进减号后的括号时要写14−6？"
+        "retell": "把14和6放进减号后的括号，为什么不能写14＋6？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -1781,6 +1799,8 @@
       "invariant": "同一余额可用逐次变化或一次净变化表示",
       "nextInspection": "用支付14、退回6解释括号内14−6；抽查模型变化后的反例和数学表达适用范围。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -1805,7 +1825,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "分组发卡",
         "unit": "张／组／人",
@@ -1813,7 +1833,7 @@
         "unknown": "每人张数",
         "changes": "层级分配与总人数"
       },
-      "contentFingerprint": "80ec41b2bf5750eae0dcc17c5b6bafd7e44cb19c8580bcbc4fe5352239ac66ac",
+      "contentFingerprint": "2ebb82c966a8b812a3f64901bd09f56b00e453ff100764a042682fd348fbf674",
       "story": {
         "text": "48张卡先平分给6组，每组再平分给2人。每人分到几张？",
         "figure": {
@@ -1853,7 +1873,7 @@
         "statements": [
           "每人属于全部6×2个人之一，所以连除可合成除以人数的乘积；这不是随意挪动括号。"
         ],
-        "retell": "画出“6组每组2人”和“6÷2组”有什么不同。"
+        "retell": "分给6组后又分给每组2人，为什么等于分给6×2人？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -1904,6 +1924,8 @@
       "invariant": "层级平均分的总份数是各层份数的乘积",
       "nextInspection": "先讲48张/6组/每组2人，再解释除以积；把除以商的另一结构明确标成提升比较。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -1928,7 +1950,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "点阵和三堆珠",
         "unit": "颗",
@@ -1936,9 +1958,9 @@
         "unknown": "换位置／分组后总数是否变",
         "changes": "点阵朝向与先合哪两堆"
       },
-      "contentFingerprint": "50b023868818ec06b1da9349969a35b0ff690c4fb569453d28cdf2c69a96e12a",
+      "contentFingerprint": "854d98e61442834560823b80d68472bdfda6dfc89368cf3222ccbe6073d4ebc5",
       "story": {
-        "text": "有3袋红珠、每袋4颗。按袋数，或排成4列每列3颗，会不会数出不同总数？另有三堆珠子，先合哪两堆方便？",
+        "text": "有3袋红珠，每袋4颗。排成3行4列，或换看成4列3行，总数会变吗？另有8颗、2颗、7颗三堆珠子，先合哪两堆方便？",
         "figure": {
           "renderer": "src/studio/IntroVisual.tsx",
           "spec": {
@@ -1995,7 +2017,7 @@
         "statements": [
           "重新摆放没有增减或重复物品；换位置是交换，先合哪两组是结合。加法的总数和乘法的点阵总数因此保持，不是所有运算都能交换或结合。"
         ],
-        "retell": "用8、2、7三堆珠子说明交换与结合的不同，再举一个不能这样改的减法例子。"
+        "retell": "换位置与换分组分别改变了什么，为什么总数不变？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -2045,7 +2067,9 @@
       },
       "invariant": "换位置与换分组不增减物品",
       "nextInspection": "开头第二故事没有给三堆具体数，复述却直接用8、2、7；补清相应条件和两种操作的差别。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "condition-gap"
       ],
@@ -2072,7 +2096,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "左右两区座位",
         "unit": "个／排",
@@ -2080,7 +2104,7 @@
         "unknown": "两种数法为何等量",
         "changes": "点阵拆成左右两区"
       },
-      "contentFingerprint": "bfdc24d4c9fdb29d69c88943084a39426e1d3357b0e4ad8955b4d2158899a318",
+      "contentFingerprint": "6e561b5953e8aafa5635a51cbde28092088d570affb5eee593b3a9f704bd00e2",
       "story": {
         "text": "教室有7排座位，每排左边5个、右边3个。先数每排还是分别数左右区，都应该得到同样座位数。",
         "figure": {
@@ -2137,7 +2161,7 @@
         "statements": [
           "左右两区互不重叠又恰好覆盖全部座位；每排的两部分都出现7次，因此要分别乘7再合起来。这给出可推广的数量理由，单算几个例子相等不够。"
         ],
-        "retell": "对着7排、每排5+3个座位说清两种算法；关掉点阵后解释4×(6+2)。"
+        "retell": "为什么右边的3个也要乘7，而不是只加一次3？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -2188,6 +2212,8 @@
       "invariant": "两部分互不重叠、覆盖全体，并各重复相同次数",
       "nextInspection": "核对7排左右5/3座位的点阵和分配律；漏乘右区的反馈应指明漏掉多少座位。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -2212,7 +2238,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "错算流程",
         "unit": "无量纲数",
@@ -2220,7 +2246,7 @@
         "unknown": "方框及正确运算关系",
         "changes": "实际错误步骤的逆操作"
       },
-      "contentFingerprint": "591d39d3ed4c8a38bf98aa24dc99224e349e0c2cfc24a9b6f5a4d3e2d51c0903",
+      "contentFingerprint": "aaee1f776c7df573ac2eeb514b3890f8087e5d387229a68dec57cecc3888d3cc",
       "story": {
         "text": "原式是7+□×4，小乐先算加法再乘法，错误结果得到44。方框里是什么？",
         "figure": {
@@ -2260,7 +2286,7 @@
         "statements": [
           "错误结果仍包含信息；把每个实际做过的动作倒着撤销，就能还原。"
         ],
-        "retell": "7+□×4被小乐按先加后乘算成44。说清他实际怎样算、你怎样逆推、正确原式怎样验算。"
+        "retell": "为什么倒推44时要先除4，而不是先减7？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -2311,6 +2337,8 @@
       "invariant": "逆推撤销实际执行的运算，顺序相反",
       "nextInspection": "分别写错算步骤、还原方框、代回正确原式；避免把错误结果44当正确原式结果。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -2335,7 +2363,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "整盒彩笔卡",
         "unit": "支／盒",
@@ -2343,7 +2371,7 @@
         "unknown": "临时名字的替换范围",
         "changes": "遮住整盒或只遮部分"
       },
-      "contentFingerprint": "ba43da141573cb654436c6f7b9e343a898b2f50a4674c91976d6a9aa97f01765",
+      "contentFingerprint": "035bf9c4a1b3f65b79a6432e9a542b3b57b814b28c6c7c6194062a48349db0a9",
       "story": {
         "text": "一盒彩笔有12支红笔和8支蓝笔。买3个同样的盒子，式子里的“每盒支数”能先用一张卡代替吗？",
         "figure": {
@@ -2406,7 +2434,7 @@
         "statements": [
           "方框只是给整个12+8临时起名字，仍代表20支。只要含义不变，在相同位置替换就保留数量关系；换名字不等于换数值。"
         ],
-        "retell": "把“每盒12红8蓝，共3盒”用整体卡讲一次；拿走卡后写回带括号的式子。"
+        "retell": "为什么换个名字后，盒子外面的乘3还要保留？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -2457,6 +2485,8 @@
       "invariant": "临时名字替换整个相等数量，保留外层运算",
       "nextInspection": "核对整盒卡与12+8的范围；替换名字不能让三盒中的任何一部分只算一次。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -2481,7 +2511,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "断尺和物体",
         "unit": "毫米／厘米",
@@ -2489,7 +2519,7 @@
         "unknown": "两端距离",
         "changes": "测量起止位置"
       },
-      "contentFingerprint": "b9223213c14f2ae74001d056a70811af3c7de510f55066f6bb327c0fa937e9ce",
+      "contentFingerprint": "94accc374bf42b66cf12df4a263fd7577c1435ef40c93ee04da77d3c3d1ff003",
       "story": {
         "text": "尺子的零刻度坏了，物体从2厘米放到7厘米3毫米，它到底长多少？",
         "figure": {
@@ -2533,7 +2563,7 @@
         "statements": [
           "长度不是终点读数，而是终点与起点之间的距离：73−20＝53毫米。"
         ],
-        "retell": "用自己的话讲：换成毫米后物体有没有变长？零刻度坏了为什么仍能测量？"
+        "retell": "左端不在0，为什么用右端减左端还能求长度？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -2594,6 +2624,8 @@
       "invariant": "测量长度是两端读数之差，与起点是否为0无关",
       "nextInspection": "核对73−20=53毫米与尺图实际位置；解释换单位没有改变物体。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -2618,7 +2650,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "学校到公园路线",
         "unit": "米／千米",
@@ -2626,7 +2658,7 @@
         "unknown": "估计路线和单位关系",
         "changes": "选取分段参照"
       },
-      "contentFingerprint": "fb99508444e376765b55b3529ab36b2a402b6d5568b2d73f121a455053ec7e16",
+      "contentFingerprint": "6ee41f981b6f0d1ae0a00f7077fc26e8cf96f54da1236ea81f33ab6698a59d28",
       "story": {
         "text": "没有一把一千米长的尺，人们怎样知道学校到公园有多远？",
         "figure": {
@@ -2671,7 +2703,7 @@
         "statements": [
           "估计不是随便猜。100米作一份，10份是1000米；200米作一份，5份仍是1000米。"
         ],
-        "retell": "讲一讲：估计和乱猜有什么区别？1千米大约能用哪些熟悉路线来感受？"
+        "retell": "参照段变长了，为什么段数变少却不改变总路程？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -2732,6 +2764,8 @@
       "invariant": "长度由同单位小段组成；估计需已知参照",
       "nextInspection": "检查100/200米参照可见且题意说明路线长度未知与示意分段的区别。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -2756,7 +2790,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "杯水、秤和米袋",
         "unit": "克／千克／吨",
@@ -2764,9 +2798,9 @@
         "unknown": "净水质量和单位不变性",
         "changes": "物品、单位、砝码"
       },
-      "contentFingerprint": "176a98a348c66add4f7ba5e680cfb5cae4f8e78f8234cb78813cecfe7086c351",
+      "contentFingerprint": "868e8092bf89edeb956275ebc2be5eebb0aadb43413dad88a0b18ef9a2a12767",
       "story": {
-        "text": "厨房里有一杯水。秤上的读数包含了杯子，要知道水本身有多重，还要称什么？先分开称空杯和水，再把它们合起来。",
+        "text": "厨房里有一杯水，秤上的读数包含杯子。怎样求水本身有多重？先试一试换单位：同一个米袋用克或千克显示，会真的变轻吗？再分别称空杯和杯水。",
         "figure": {
           "renderer": "src/studio/IntroVisual.tsx",
           "spec": {
@@ -2820,7 +2854,7 @@
           "天平较重的盘下沉。两盘一样重，横梁水平。",
           "读数前确认归零、单位和量程；本实验电子秤量程是5千克。"
         ],
-        "retell": "为什么不能直接把“杯和水”的读数当作水的质量？指着两次称量讲一遍。"
+        "retell": "总质量里为什么还要扣掉空杯，才能得到水的质量？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -2872,7 +2906,9 @@
       },
       "invariant": "换单位不改质量；容器和内容物的质量相加",
       "nextInspection": "开头问杯水，猜想换成未介绍的米袋；需用清楚过渡连起三个实验，而非一次背四条规则。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "object-switch"
       ],
@@ -2899,7 +2935,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "同船的象与石块",
         "unit": "质量／水线",
@@ -2907,7 +2943,7 @@
         "unknown": "象质量与替换条件",
         "changes": "标水线、石块、额外乘员"
       },
-      "contentFingerprint": "31fb7adf7bee505fafbb8f1d6c4bde4d4ed8f0e54845a4ca96086ccc3a823169",
+      "contentFingerprint": "b6cb1b57c6bd1ed4bc29e6a85a66cb4ab3843e76288c3b779fce3fa5f4a6fb80",
       "story": {
         "text": "模型象放不进小秤，但小石块能。Kevin先让模型象上船，记下水面碰到船身的位置。把象请下船后，需要怎样放石块，才能用石块替它称重？",
         "figure": {
@@ -2970,7 +3006,7 @@
           "船自重没有改变。两次相等的总质量中，都有同一只船。",
           "如果换石块时又上一名乘员，同水线只说明“石块＋乘员”与模型象一样重，不能只用石块质量作答案。"
         ],
-        "retell": "指着水线说：为什么同水线能替代？为什么称完后要把所有石块的读数加起来？"
+        "retell": "为什么同一只船恢复同一水线，才能把象换成石块？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -3022,6 +3058,8 @@
       "invariant": "同船同水同水线才可用石块替换载重",
       "nextInspection": "保留水线和乘员反例；核对分批读数的求和与船自重抵消。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -3046,7 +3084,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "盒装笔的位值",
         "unit": "支／盒",
@@ -3054,7 +3092,7 @@
         "unknown": "总支数与拆分理由",
         "changes": "各数位材料及组数"
       },
-      "contentFingerprint": "c48a4090857aa875d07266a796fa0cf29ce84c5b9c0db49f165cbecb629a2998",
+      "contentFingerprint": "1a879679594039b6c455f387e9f2ab5eccb222c8c65035cd831eef1d16f942c7",
       "story": {
         "text": "每盒12支笔，买3盒，怎样不用一支支数就知道总数？",
         "figure": {
@@ -3162,16 +3200,16 @@
             }
           ]
         },
-        "sourceInitialDescription": "3组12根小棒，每组1捆十和2根；先保留分组框。",
-        "sourceLearnerAction": "分别聚集三捆十与三组2，再合回总数；给两个部分标×3。",
-        "sourceObservableChange": "10×3+2×3=36，所有小棒恰计一次。",
+        "sourceInitialDescription": "每盒12支笔，买3盒，一共有多少支？",
+        "sourceLearnerAction": "分别合并十和一，再把两部分合起来。",
+        "sourceObservableChange": "先收集3组的十，再收集3组的一。",
         "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
       },
       "discovery": {
         "statements": [
           "每盒的1个十与2个一可以分别收集，结果仍是同一批笔。"
         ],
-        "retell": "23×3拆开算时，为什么两部分都必须乘3？"
+        "retell": "12拆成10和2后，为什么两部分都要取3份？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -3231,7 +3269,9 @@
       },
       "invariant": "同一个乘数作用于每个数位部分",
       "nextInspection": "开头和首组模型是12×3，复述直接改为23×3；先解释当前操作，再明确无模型迁移。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "unannounced-transfer"
       ],
@@ -3258,7 +3298,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "三袋小棒",
         "unit": "根／十／一",
@@ -3266,7 +3306,7 @@
         "unknown": "总根数与一次进位",
         "changes": "10个一换1十"
       },
-      "contentFingerprint": "a5c13140429d6ce3e4e6d3d140cd5017941e55cc0185e32f569c1f79e40286e7",
+      "contentFingerprint": "94bf611bd185f5f3fef1eb234d852e6dbbae52111f055d44e8f123be0c51da4a",
       "story": {
         "text": "Kevin有3袋小棒，每袋16根。合起来有多少根？把它们放进数位表时，个位超过9个，怎么办？",
         "figure": {
@@ -3330,7 +3370,7 @@
         "statements": [
           "满十换一十，把计数单位整理回十进制表示，竖式记录这种交换。"
         ],
-        "retell": "把26×3中的进位1解释给一个不会竖式的人听。"
+        "retell": "把10个一捆成1个十，为什么小棒总根数没变？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -3380,7 +3420,9 @@
       },
       "invariant": "10个一换1个十，总量不变",
       "nextInspection": "实验16×3、复述26×3；应先说清18个一换成1十8一，再命名新题迁移。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "unannounced-transfer"
       ],
@@ -3407,7 +3449,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "八箱饮料位值",
         "unit": "瓶／箱／十／百",
@@ -3415,7 +3457,7 @@
         "unknown": "总量与连续进位",
         "changes": "各位材料拆换、操作情境"
       },
-      "contentFingerprint": "7bb4ecb737ff3028ded7b0bbd238e18a88458a834d9b76fbd14549313943db34",
+      "contentFingerprint": "2ebe4f90005661edc13f0087c36c2374b33a853f4d9acdb28b13f2ff46c23a1b",
       "story": {
         "text": "仓库里有8箱饮料，每箱147瓶。一共有多少瓶？数小棒时，满10个一可以换成1个十；如果十位也满10，接着怎么办？",
         "figure": {
@@ -3523,16 +3565,16 @@
             }
           ]
         },
-        "sourceInitialDescription": "147×8，百十个位表：个位56待整理，十位乘积32，百位8。",
-        "sourceLearnerAction": "依次交换50个一为5十，再37十换3百7十，最后合并百位。",
-        "sourceObservableChange": "个位6、十位7、百位11，最终1176；每个进位有来源箭头。",
+        "sourceInitialDescription": "8箱饮料，每箱147瓶，一共多少瓶？",
+        "sourceLearnerAction": "用8箱各147瓶，说明每次满十换一的来源。",
+        "sourceObservableChange": "跟踪个位换出的十，再看十位换出的百。",
         "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
       },
       "discovery": {
         "statements": [
           "相同的十进制交换可以连续发生；一次进位不能替代所有数位的进位。"
         ],
-        "retell": "连续进位与一次进位，使用的道理变了吗？"
+        "retell": "10个十换1个百，为什么饮料总量没有变？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -3593,6 +3635,8 @@
       "invariant": "每个数位都按满十换一，含来自低位的进位",
       "nextInspection": "核对147×8的个位、十位、百位连续兑换与1176；让孩子能指认进位来源。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -3617,7 +3661,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "分区座位位值",
         "unit": "个／区",
@@ -3625,7 +3669,7 @@
         "unknown": "总数及0所在数位",
         "changes": "位值卡和操作情境"
       },
-      "contentFingerprint": "c7898ed394d0d3c9000be84dc1f2a6fef8b09e0980185ad57ca8b27dac915844",
+      "contentFingerprint": "dfec0c461d3e16010e8528fd66e387bc16d88ac49b07f782f96978fa713d19ef",
       "story": {
         "text": "604个座位组成一个区，8个区共有多少？十位0意味着整个数只剩64吗？",
         "figure": {
@@ -3733,16 +3777,16 @@
             }
           ]
         },
-        "sourceInitialDescription": "205×4位值表，空十位以0占位，个位20需换2十。",
-        "sourceLearnerAction": "在十位合并0×4与进来的2，再完成百位。",
-        "sourceObservableChange": "积820，十位为2而非0；205与25的表格并排不同。",
+        "sourceInitialDescription": "每区604个座位，共8区，一共有多少座位？",
+        "sourceLearnerAction": "保留没有十的位置，核对8个区的座位。",
+        "sourceObservableChange": "把604的百、十、个位与64分别摆出来。",
         "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
       },
       "discovery": {
         "statements": [
           "0占住缺少的计数单位；省略它的位置会把600变成60。"
         ],
-        "retell": "604与64只差一个0，为什么乘积差很多？"
+        "retell": "604中的0为什么不能删；乘的时候进来的十还能放哪里？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -3803,6 +3847,8 @@
       "invariant": "0保留缺少的数位；600与60不能混同",
       "nextInspection": "核对604×8的进位后十位并非仍为0；区别因数中的0与积中的0。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -3827,7 +3873,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "票价预算",
         "unit": "元／人",
@@ -3835,7 +3881,7 @@
         "unknown": "预算是否足够",
         "changes": "估大或估小的边界"
       },
-      "contentFingerprint": "c9c4502c1e32df188cd848abd71ce9dc6dbe25f4fdb52f004d807ff5cece7065",
+      "contentFingerprint": "abd4ae8207b6acfe3cc6874b51e43a493f06000226ae5c39ae72ca2d6eb766f8",
       "story": {
         "text": "398名同学每人票价8元，准备3200元够不够？",
         "figure": {
@@ -3936,16 +3982,16 @@
             }
           ]
         },
-        "sourceInitialDescription": "398张8元票、预算3200；对照上界400张。",
-        "sourceLearnerAction": "先判断400张费用，再撤掉2张并填写多估费用。",
-        "sourceObservableChange": "上界3200，实际少16，剩16；接近估计不表示精算正确。",
+        "sourceInitialDescription": "398名同学每人票价8元，准备3200元够不够？",
+        "sourceLearnerAction": "先用合适的上界判断3200元够不够。",
+        "sourceObservableChange": "把实际人数夹在估小和估大两种成本之间。",
         "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
       },
       "discovery": {
         "statements": [
           "有时只需判断足够与否，合适的上界就能回答，不必先精确计算。"
         ],
-        "retell": "“估大后仍然够”和“估小后已经不够”分别为什么可靠？"
+        "retell": "按400人估大后仍够，为什么398人一定也够？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -4006,6 +4052,8 @@
       "invariant": "上界成本仍不超过预算，可证明实际成本足够",
       "nextInspection": "核对估大/估小的不同证据强度；不要把近似值当精确成本。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -4030,7 +4078,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "图书位置编码",
         "unit": "架／层／格",
@@ -4038,7 +4086,7 @@
         "unknown": "不重号且可定位的地址",
         "changes": "编号字段"
       },
-      "contentFingerprint": "99b1689fa0dc2749fccbc8fa3451fd6e2f8627efc7d2358d4b03fe8097a146ef",
+      "contentFingerprint": "e617735dd4f7a328c9005748519c6a923d26a592fec49aa4b63abbdacb73ed93",
       "story": {
         "text": "给图书馆每个书架的书贴号码，怎样避免两本书同号？",
         "figure": {
@@ -4097,7 +4145,7 @@
         "statements": [
           "编码把位置和顺序组织起来，目的在于查找与区分，不是做四则运算。"
         ],
-        "retell": "一个好编号为什么既要有规则，又要保证不重复？"
+        "retell": "编号为什么能帮助找位置，却不能直接用来求图书本数？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -4148,6 +4196,8 @@
       "invariant": "位置编码唯一且字段含义固定，不等于数量",
       "nextInspection": "核对架/层/格地址与所指位置，换编号不改变图书本数。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -4172,7 +4222,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "线段射线直线",
         "unit": "端点／厘米",
@@ -4180,7 +4230,7 @@
         "unknown": "哪种线能量总长度",
         "changes": "静态指认端点和延伸"
       },
-      "contentFingerprint": "2890f3232d8dfba678244c14eacfa67718868165c6f458c96e9101bcbdb1ba42",
+      "contentFingerprint": "0e30c181c44f30f15a0b88eb8f770a870b63930f99d8ff4b6d7b33e375d69a77",
       "story": {
         "text": "画一段5厘米的路线，与画一束继续照下去的光，符号应相同吗？",
         "figure": {
@@ -4230,7 +4280,7 @@
         "statements": [
           "端点决定是否有限；几何用理想化的线表示物体或方向，纸上画不完的延伸用约定表达。"
         ],
-        "retell": "为什么线段能量长度，射线却不能报一个总长度？"
+        "retell": "射线在纸上只有一小段，为什么不能量它的总长度？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -4280,7 +4330,9 @@
       },
       "invariant": "线段有限；射线和直线的箭头表示无限延伸",
       "nextInspection": "保留准确静态对照；检查纸面画线长度不会被当总长度；取消静态核对的必填说明负担需对照复审要求。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "static-input"
       ],
@@ -4307,7 +4359,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "活动角与刀片",
         "unit": "张口／边长",
@@ -4315,7 +4367,7 @@
         "unknown": "边长改变是否改变角",
         "changes": "边长和张口"
       },
-      "contentFingerprint": "4bc548f361fce19a1e6cd26fc6d790aed3d3320f0adcf45d73ca4073a1a8171f",
+      "contentFingerprint": "0a3147c5e396f1aa1fbfb531139616d0ee3ac32996ebe7f66a8672f2681b423d",
       "story": {
         "text": "剪刀张开一点和张开很多，哪次转得更多？",
         "figure": {
@@ -4370,7 +4422,7 @@
         "statements": [
           "角记录两条射线的方向差，边的绘制长度只是为了看清方向。"
         ],
-        "retell": "用活动纸条说明“边长没变，角能变化”。"
+        "retell": "为什么边画长了，角却没有变大？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -4421,6 +4473,8 @@
       "invariant": "角由两边方向差决定，与画边长短无关",
       "nextInspection": "检查猜想所说延长刀片确有对应操作；张口与边长要能独立变化。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -4445,7 +4499,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "直角工具与墙角",
         "unit": "角的类别",
@@ -4453,7 +4507,7 @@
         "unknown": "相等、小于、大于直角",
         "changes": "对齐与旋转待测角"
       },
-      "contentFingerprint": "6ccdf222e74d8f186d961472a2c7173d8e6270adc0b460f844915e7c781867af",
+      "contentFingerprint": "ea3c8161b13e03f13d18a8a2d458f8adee00b9cd11a23dc1d88272ccfec84454",
       "story": {
         "text": "没有量角器，怎样判断墙角是否像书本角那样方正？",
         "figure": {
@@ -4502,7 +4556,7 @@
         "statements": [
           "共同的直角标准使“大一些、小一些”变成可复核的分类。"
         ],
-        "retell": "怎样说明分类取决于角本身，不取决于图画方向？"
+        "retell": "为什么要先对齐，才能用同一个直角标准比较？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -4553,6 +4607,8 @@
       "invariant": "同一顶点和一条边对齐后才能比较直角大小",
       "nextInspection": "核对直角工具可对齐，不以图画方向分类；钝角限定小于平角。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -4577,7 +4633,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "饼与等分纸带",
         "unit": "整体／份",
@@ -4585,7 +4641,7 @@
         "unknown": "每人份额的表示",
         "changes": "是否等分和取几份"
       },
-      "contentFingerprint": "d87b3c61beb3e6fb01c3aef63e1ac1388978c0a03cb2c3a1c07d24a41b25b662",
+      "contentFingerprint": "cad5211fb6cb4d7c2d946064a1241d7cfb8b8f6ca6f1112bf78f078e0c47e8a1",
       "story": {
         "text": "一块饼平均给4人，每人不到一块，用什么数记录每人所得？",
         "figure": {
@@ -4640,7 +4696,7 @@
         "statements": [
           "整数个数不够表达分割后的份额；分数记录对同一整体怎样等分、取几份。"
         ],
-        "retell": "为什么1/4一定要先说清楚“哪个整体”的四分之一？"
+        "retell": "同样分成4份，为什么不等分就不能各说成1/4？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -4691,6 +4747,8 @@
       "invariant": "先确定整体，再等分，1份是该整体的1/4",
       "nextInspection": "核对饼与替代纸带的关系显式可见，反例是真不等分而非视觉近似。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -4715,7 +4773,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "涂色贴纸",
         "unit": "份",
@@ -4723,7 +4781,7 @@
         "unknown": "涂色占整体几分之几",
         "changes": "选择涂色份数"
       },
-      "contentFingerprint": "62746d42c9ff877a566eb0075064cc4123a92ebfdd57d763ed669f553844296f",
+      "contentFingerprint": "6341c90e10380fd8dfb9e237302b21a556f436b7decec68cb95d6c1651817616",
       "story": {
         "text": "一张长条贴纸平均分8格，涂3格；怎样一句话记录涂色多少？",
         "figure": {
@@ -4778,7 +4836,7 @@
         "statements": [
           "分数也在数：数的是1/8这样的单位，而不是整数个物品。"
         ],
-        "retell": "说清楚5/8中的5在数什么。"
+        "retell": "3/8中的3在数什么，8为什么不是涂色格数？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -4828,7 +4886,9 @@
       },
       "invariant": "分母定份的大小，分子数相同小份的个数",
       "nextInspection": "首故事涂3格，复述直接问5/8；先说当前3/8，再说明新涂色的迁移。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "unannounced-transfer"
       ],
@@ -4855,7 +4915,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "同一块饼的取用",
         "unit": "八分之一份",
@@ -4863,7 +4923,7 @@
         "unknown": "共取和剩下的分数",
         "changes": "取用、撤回、操作情境"
       },
-      "contentFingerprint": "0340d64204fc77c810e29423bfc4377864ecd64019a986c6f8bcd09ff3f49a8a",
+      "contentFingerprint": "f8dc790ca29890ef8a4acb8f4f6b04405d5fa8fa60c1a06e0e4be0180744a1b0",
       "story": {
         "text": "一块饼上午吃2/8，下午吃3/8，一共吃多少，还剩多少？",
         "figure": {
@@ -4975,16 +5035,16 @@
             }
           ]
         },
-        "sourceInitialDescription": "一条8格纸带，前2格已涂，随后3格待涂。",
-        "sourceLearnerAction": "涂后3格并数合计，切换是否增加分格线的错误动作。",
-        "sourceObservableChange": "5格涂色占5/8；小份大小仍1/8，没有产生16等份。",
+        "sourceInitialDescription": "同一块饼先吃2/8，后来吃3/8；一共吃多少，还剩多少？",
+        "sourceLearnerAction": "在同一块饼上合并两次取出的八分之一。",
+        "sourceObservableChange": "先取的2份与再取的3份都来自同一块饼的8等份。",
         "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
       },
       "discovery": {
         "statements": [
           "把相同的小份合并时，份的大小不变，只改变份数；这与2支加3支的道理相通。"
         ],
-        "retell": "用8格纸带解释为什么答案分母不是16。"
+        "retell": "合并两次取用，为什么只加份数、不把分母加成16？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -5045,6 +5105,8 @@
       "invariant": "同一整体同样小份合并或拿走，份大小不变",
       "nextInspection": "核对两次取用没有重复取同一份；2/8+3/8不是5/16；全部算式需跟随当前情境。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -5069,7 +5131,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "一整盒糖",
         "unit": "颗／三分之一盒",
@@ -5077,7 +5139,7 @@
         "unknown": "1/3盒的实际颗数",
         "changes": "均分、撤回、操作情境"
       },
-      "contentFingerprint": "d14dc518460e25664f6f76df872f3e07cc02888a2660c93aabee05fcc6874d6b",
+      "contentFingerprint": "84b533d3d7e38050c3c6b98a78bb1f2d623f6c359752a9bcf89e6c22944bc7f7",
       "story": {
         "text": "一盒有12颗糖，拿走这盒糖的1/3，到底是几颗？",
         "figure": {
@@ -5187,16 +5249,16 @@
             }
           ]
         },
-        "sourceInitialDescription": "大圈包12颗糖，3个等份小框为空。",
-        "sourceLearnerAction": "逐轮每框分同样颗数，给一框标整体的1/3。",
-        "sourceObservableChange": "每框4颗，1/3是一组而不是1颗。",
+        "sourceInitialDescription": "一盒12颗糖，拿走整盒的1/3，是多少颗？",
+        "sourceLearnerAction": "整盒看成一个整体，找到一组有多少颗。",
+        "sourceObservableChange": "12颗共同组成一盒，平均分3组，看一组有几颗。",
         "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
       },
       "discovery": {
         "statements": [
           "整体由什么构成要先约定；同一个分数可表示一块饼的一部分，也可表示一盒糖的一组。"
         ],
-        "retell": "1/3盒和4颗怎样可以同时描述同一份糖？"
+        "retell": "为什么一组既能叫1/3盒，又能叫4颗？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -5257,6 +5319,8 @@
       "invariant": "多件物品可共同构成一个整体，1/3未必是1颗",
       "nextInspection": "核对12颗实际均分3组与每组4颗；不能以分子1误判只有1颗。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -5281,7 +5345,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "整批贴纸",
         "unit": "张／八分之一份",
@@ -5289,7 +5353,7 @@
         "unknown": "3/8的实际张数",
         "changes": "均分并取组、操作情境"
       },
-      "contentFingerprint": "9cd8a96a213735d6beeda950385fe910f804fd5fecadc8c66c8b9e12d619f96b",
+      "contentFingerprint": "860c46071ae50b5634980d6b1a7c9021af56be7e4ae8c80acfa4d5f2af0ef300",
       "story": {
         "text": "24张贴纸的3/8要送给朋友，应拿出多少张？",
         "figure": {
@@ -5399,16 +5463,16 @@
             }
           ]
         },
-        "sourceInitialDescription": "24张卡整体框内有8个相等小组，每组数隐藏。",
-        "sourceLearnerAction": "先分完8组，再只选3组，用两行记录每份数和所取总数。",
-        "sourceObservableChange": "每份3张，3组9张；24÷8×3的两个除乘量义不同。",
+        "sourceInitialDescription": "24张贴纸的3/8要送朋友，应拿出多少张？",
+        "sourceLearnerAction": "先求一小份，再取三份。",
+        "sourceObservableChange": "先指出8组中的1组，再取3组。",
         "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
       },
       "discovery": {
         "statements": [
           "先找到共同的1/8单位，再数3个这样的单位，联系除法与乘法。"
         ],
-        "retell": "不背算式，说清24÷8×3每一步在找什么。"
+        "retell": "24÷8和再乘3，分别在求哪种数量？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -5469,6 +5533,8 @@
       "invariant": "先求1/8的实际量，再取3份",
       "nextInspection": "核对24÷8×3的两步角色和实物数量；不能跳成机械乘分子除分母口令。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -5493,7 +5559,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "同一条涂色纸带",
         "unit": "长度／小份／大份",
@@ -5501,7 +5567,7 @@
         "unknown": "分组前后实际长度是否变",
         "changes": "分组线"
       },
-      "contentFingerprint": "e4cebec175f4718e6c4473548b0f1e42484ac4821919e7f7d14b01baf0eaeb3d",
+      "contentFingerprint": "acd7c3c8cc5fc6e2a7e4f91ed993125a7b8a19acfd1b4b41901d8c0218bc3b04",
       "story": {
         "text": "同一条纸带从左到右平均分成6小格，前2小格涂蓝色。现在不剪纸带，也不改变蓝色部分，只把每相邻2小格看作1大格。改变分组前后，蓝色部分的实际长度一样吗？",
         "figure": {
@@ -5561,7 +5627,7 @@
         "statements": [
           "分组方式改变了计数单位，实际纸带和涂色边界并未移动；份数名称可以不同而数量相同。"
         ],
-        "retell": "完整说一遍：哪条纸带、原来怎样分、现在怎样分、什么变了、什么没变。"
+        "retell": "份数名字从2/6变成1/3，为什么蓝色长度没变？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -5612,6 +5678,8 @@
       "invariant": "同一整体和涂色长度不变，改变的是分组计数单位",
       "nextInspection": "保留明确的未剪纸带叙述；检查2/6与1/3对齐同一端点，不比较不同整体。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -5636,7 +5704,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "礼物贴纸计划",
         "unit": "份／张",
@@ -5644,7 +5712,7 @@
         "unknown": "需要补买张数",
         "changes": "静态计划表／纸笔"
       },
-      "contentFingerprint": "2670e2083d3ff8e67e92a693863c20e3d9a357ddb2a269c045869783da05eef9",
+      "contentFingerprint": "c496f1604338976612b0471b39e7e90bd3d1fbe707cff0d95536b6bd887185d0",
       "story": {
         "text": "班级要做36份小礼物，每份贴2张贴纸，已有20张，还需买多少？",
         "figure": {
@@ -5681,7 +5749,7 @@
         "statements": [
           "同一计划会遇到总量、份数、缺少多少等结构；复习的目的在于辨认何时用什么。"
         ],
-        "retell": "举出两个看起来不同但都用“每份×份数−已有”的问题。"
+        "retell": "为什么先算36×2，而不是先用36减20？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -5731,7 +5799,9 @@
       },
       "invariant": "先求总需求，再扣已有量，剩余不得负算",
       "nextInspection": "保留静态计划表；需要逐项目标与纸笔练习，不以静态为缺陷；检查核对必填负担。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "static-input"
       ],
@@ -5758,7 +5828,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "衣服搭配",
         "unit": "种／套",
@@ -5766,7 +5836,7 @@
         "unknown": "不重不漏的套数",
         "changes": "固定上衣和配裤子"
       },
-      "contentFingerprint": "d1416050856296e3da0906cfaaff57335c63354fe8d54a715d22918d29ef33c0",
+      "contentFingerprint": "c64b9df9992926fdd88f0959c4ebb78f827a47232b7ed5684d52daf4df1a4801",
       "story": {
         "text": "有2种上衣、3种裤子，每次各穿1件，可以组成几套？",
         "figure": {
@@ -5822,7 +5892,7 @@
         "statements": [
           "逐个固定第一种选择，再把第二步走完，就能解释为什么用乘法。"
         ],
-        "retell": "为什么表格每一格只代表一种搭配？"
+        "retell": "按这个顺序为什么每套只记一次，还不会漏？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -5873,6 +5943,8 @@
       "invariant": "固定第一种选择，再穷举第二种，组合不重不漏",
       "nextInspection": "核对2×3的六套与只任选一件的5种不同；不把所有组合问题都套乘法。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -5897,7 +5969,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "窗花与折纸",
         "unit": "对应点／折痕",
@@ -5905,9 +5977,9 @@
         "unknown": "对折能否重合",
         "changes": "折痕与折叠"
       },
-      "contentFingerprint": "67731e8102ee6055a8ceb0299385c54450d631ec926edda8c97c207c56125d39",
+      "contentFingerprint": "e3323fa609ce04891dc0adc8e90fd775aa619307b0472807016ce0baae168823",
       "story": {
-        "text": "剪一张左右两边相同的窗花，怎样少画一半又保证形状一致？",
+        "text": "Kevin想剪左右相同的窗花。先用正方形、长方形纸试一试：沿选定的线对折，两边能完全重合吗？弄清后再用同样的方法检验窗花。",
         "figure": {
           "renderer": "src/studio/IntroVisual.tsx",
           "spec": {
@@ -5953,7 +6025,7 @@
         "statements": [
           "对折使对应两边重合，提供可操作的判定；看起来均衡不等于数学对称。"
         ],
-        "retell": "为什么面积各一半还不能证明轴对称？"
+        "retell": "为什么两边面积一样，还不能证明轴对称？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -6003,7 +6075,9 @@
       },
       "invariant": "对称轴两侧的对应点对折后重合",
       "nextInspection": "开头窗花，实验几何图形；说明用图形练习折叠检验，再回到窗花，不能只看面积相等。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "object-switch"
       ],
@@ -6030,7 +6104,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "抽屉风车与纸箭头",
         "unit": "位置／方向",
@@ -6038,9 +6112,9 @@
         "unknown": "运动方式差别",
         "changes": "平移和绕点旋转"
       },
-      "contentFingerprint": "ae7524e837dd9d5068e47f682f788ae769ad94baaef130eb0ad8c1b78abe365e",
+      "contentFingerprint": "6b9ab07b2fb2576803f3678c0852e31526a8be44cea3b2462cd1284c3626d7e1",
       "story": {
-        "text": "抽屉拉开和风车转动都在动，它们按同一种方式动吗？",
+        "text": "抽屉拉开与风车转动，都是位置变化。用纸箭头代替它们：先保持朝向向右滑，再绕尾端转动，这两种动作有什么不同？",
         "figure": {
           "renderer": "src/studio/IntroVisual.tsx",
           "spec": {
@@ -6086,7 +6160,7 @@
         "statements": [
           "记录运动方式能预测每个部分去哪里；平移保持朝向，旋转围绕中心改变朝向。"
         ],
-        "retell": "用一支铅笔演示平移与旋转，说明固定了什么、改变了什么。"
+        "retell": "为什么都是换了位置，平移和旋转仍是不同动作？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -6136,7 +6210,9 @@
       },
       "invariant": "平移各点同向同距；旋转围绕固定中心",
       "nextInspection": "从抽屉/风车切到纸箭头时明确替代关系；核对组合动作不可只按终点分类。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "object-switch"
       ],
@@ -6163,7 +6239,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "纸张十捆",
         "unit": "张／人／十",
@@ -6171,7 +6247,7 @@
         "unknown": "每人张数及位值",
         "changes": "分捆与散张、操作情境"
       },
-      "contentFingerprint": "b23b075eeb3ac1475721e251a588a46f7d136fedfaf6a30cf7d89981896399d8",
+      "contentFingerprint": "2f535ee5e6481183cfd8274feb4ced5c6d555312ec1d4d1413f3b79a229255a1",
       "story": {
         "text": "把90张纸平分3人，怎样把9个十平均分，而不一张张发？",
         "figure": {
@@ -6279,16 +6355,16 @@
             }
           ]
         },
-        "sourceInitialDescription": "9捆十张与6散张，3人框；每人分得数初始0。",
-        "sourceLearnerAction": "先分9捆，再分6张；将每人30与2合并。",
-        "sourceObservableChange": "96÷3=30+2=32，分的是相同总量给相同3份。",
+        "sourceInitialDescription": "90张纸平均分给3人，每人多少张？",
+        "sourceLearnerAction": "分十捆再换成张数，检查每人一样多。",
+        "sourceObservableChange": "把9个十分给3人，保留每一捆的十张标签。",
         "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
       },
       "discovery": {
         "statements": [
           "除法可以分计数单位；90÷3分的是9个十，所得3个十。"
         ],
-        "retell": "为什么96÷3可以分成两次平均分后再相加？"
+        "retell": "分得3个十，为什么不能把答案写成3张？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -6348,7 +6424,9 @@
       },
       "invariant": "平均分计数单位后再转回实际张数",
       "nextInspection": "开头90张、首组90张，场景旧说明96张，复述直接96÷3；解释首组再明确第二组迁移。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "unannounced-transfer"
       ],
@@ -6375,7 +6453,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "糖的位值分配",
         "unit": "颗／人／十",
@@ -6383,7 +6461,7 @@
         "unknown": "每人分得的数量",
         "changes": "分配、剩十拆一、撤回"
       },
-      "contentFingerprint": "237f07a809a83eb4b5599fd6a75628c60d3de576140f794668d5b684495e5e2e",
+      "contentFingerprint": "ea18a6f7f28d410e176136db76a995a154220140a15eee6bc0a8afb1b47a1a5e",
       "story": {
         "text": "52颗糖平均分4人，5捆十颗分完后剩的一捆怎么办？",
         "figure": {
@@ -6448,7 +6526,7 @@
         "statements": [
           "剩下的高位单位仍属于总数，拆成低位后继续分能保证公平和完整。"
         ],
-        "retell": "用52颗糖解释商的13不是把两个无关数字拼起来。"
+        "retell": "剩下的十为什么不能丢掉，必须换成一继续分？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -6499,6 +6577,8 @@
       "invariant": "剩下的十拆成一，与原有的一合并，糖总数守恒",
       "nextInspection": "核对52分4人的13是一十3一；允许分错退回，不凭操作结束判独立掌握。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -6523,7 +6603,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "糖与满袋",
         "unit": "颗／袋",
@@ -6531,7 +6611,7 @@
         "unknown": "标准商和余数",
         "changes": "装袋、撤回、操作情境"
       },
-      "contentFingerprint": "72b21f42333a1dd238ceb97a461774339be45f16613d6a75dfd48a81ecf00502",
+      "contentFingerprint": "252113ad9c07f4f635e89c2772472bd8d2669378c8112b0ba55884a6d3169cf0",
       "story": {
         "text": "53颗糖每4颗装一袋，装了13袋后还剩多少？",
         "figure": {
@@ -6647,16 +6727,16 @@
             }
           ]
         },
-        "sourceInitialDescription": "53点每4点一袋，候选12袋余5与13袋余1。",
-        "sourceLearnerAction": "继续从余5圈出4点，再用乘加验回总数。",
-        "sourceObservableChange": "正确13袋余1；验算与余数小于4两项都满足。",
+        "sourceInitialDescription": "53颗糖，每袋装4颗，能装几满袋，还余几颗？",
+        "sourceLearnerAction": "装到剩下的糖不够一袋，再核对总数。",
+        "sourceObservableChange": "试试剩下5颗还能不能装一满袋，再乘加核对总数。",
         "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
       },
       "discovery": {
         "statements": [
           "余数表示无法再凑出一份的部分；若还够一份，分配就没完成。"
         ],
-        "retell": "为什么“总量验算对”还不足以证明商余数写得对？"
+        "retell": "12袋余5也能加回53，为什么还不是装完的结果？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -6717,6 +6797,8 @@
       "invariant": "余数小于每份量且乘加能验回总量",
       "nextInspection": "开头已给13袋，独立目标不能成为抄袋数；探索仍可比较12袋余5与13袋余1。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -6741,7 +6823,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "按位分书",
         "unit": "本／班／百十个",
@@ -6749,7 +6831,7 @@
         "unknown": "每班本数和商中0",
         "changes": "按位分配、拆换、撤回"
       },
-      "contentFingerprint": "71895456db211a5b10c3856f0dc5a51a24dd2a8a0f7ef2e99d1d31e1719fb291",
+      "contentFingerprint": "193d140231b39e2f5569f56e11155a1036597dabd70a9fea2e7e21944f720e3a",
       "story": {
         "text": "408本书平分4班，十位没有书可分，答案为何不能写12？",
         "figure": {
@@ -6814,7 +6896,7 @@
         "statements": [
           "商的位值位置对应每人所得的百、十、个；没有十也必须记录。"
         ],
-        "retell": "102与12的区别，怎样用乘法验算立刻发现？"
+        "retell": "没有十可分，为什么仍要把商的十位0写出来？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -6865,6 +6947,8 @@
       "invariant": "商的0占住每人所得的空数位",
       "nextInspection": "核对408÷4=102与420÷4=105不同过程；不得把0÷非零数推广成除以0。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -6889,7 +6973,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "杯子的两层包装",
         "unit": "箱／盒／个",
@@ -6897,7 +6981,7 @@
         "unknown": "总量及逆向每盒量",
         "changes": "层级分组、操作情境"
       },
-      "contentFingerprint": "05938ab3aa471671b32f282ec5e16a91130ecbeb65be3cc66694180d5b5fcc4c",
+      "contentFingerprint": "c8315ab74782e1b0f10e04cfe70cb435c0b706bfb8463b65fd5416ac4cf0715b",
       "story": {
         "text": "2箱杯子，每箱4盒，每盒6个，全部有几个？反过来48个分装怎样求每盒？",
         "figure": {
@@ -6998,16 +7082,16 @@
             }
           ]
         },
-        "sourceInitialDescription": "72支、3箱每箱4盒的空层级图。",
-        "sourceLearnerAction": "在盒层数12个等份，然后逐箱逐盒分；两方法对照。",
-        "sourceObservableChange": "每盒6支，72÷3÷4与72÷(3×4)同量。",
+        "sourceInitialDescription": "2箱杯子，每箱4盒，每盒6个，一共多少个？",
+        "sourceLearnerAction": "先选一层分组，再把杯子的总量连起来。",
+        "sourceObservableChange": "按箱数盒、按盒数杯，再把同一总量按层级分回。",
         "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
       },
       "discovery": {
         "statements": [
           "层层分组的总份数是乘积；同一结构可按不同层级计数。"
         ],
-        "retell": "72÷3÷4中两个除数分别代表什么？"
+        "retell": "为什么先算每箱杯数，或先算总盒数，得到同一总量？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -7067,7 +7151,9 @@
       },
       "invariant": "箱、盒、个三个层级关系可正向合并、逆向均分",
       "nextInspection": "当前模型首组2箱4盒6个与开头相符，但场景旧说明/复述用72÷3÷4；分清当前证据与新题。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "unannounced-transfer"
       ],
@@ -7094,7 +7180,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "买本子与换分装",
         "unit": "元／本；本／箱",
@@ -7102,7 +7188,7 @@
         "unknown": "购买总价或重新分装箱数",
         "changes": "先求单价或总量"
       },
-      "contentFingerprint": "40cda6779f2625f180bb14377da966399921d0f312cecb65895f6b4184541131",
+      "contentFingerprint": "f89d33445517e5b95132302cc23564281c4df5e930160253c1f6ce325ef7bc35",
       "story": {
         "text": "4本同价本子24元，买7本要多少钱？另一问题：同一批书每箱6本装4箱，改每箱8本需几箱？",
         "figure": {
@@ -7221,16 +7307,16 @@
             }
           ]
         },
-        "sourceInitialDescription": "左表4本24元且同价，右表总24颗原每袋4颗，两个不变量明确。",
-        "sourceLearnerAction": "左圈单价列推7本费用；右圈总量列改每袋8颗求袋数。",
-        "sourceObservableChange": "左单价6得42元；右总24得3袋，不变量不同。",
+        "sourceInitialDescription": "4本同价本子24元，买7本多少钱？",
+        "sourceLearnerAction": "先求不变的单价；换分装方式时检查总量不变。",
+        "sourceObservableChange": "买本子先看每本价格，换装箱先看全部本数。",
         "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
       },
       "discovery": {
         "statements": [
           "第一题保持每份量，第二题保持总量；中间量决定运算顺序。"
         ],
-        "retell": "拿买本子与换包装两个问题解释：你先求的是单价还是总量？"
+        "retell": "为什么两题第一步不同：一题求单价，另一题求总量？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -7291,6 +7377,8 @@
       "invariant": "同价买卖单价不变；重新分装总量不变",
       "nextInspection": "核对两个情境的不同不变量；旧场景材料和新参数故事须对应，不让孩子混用每份量。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -7315,7 +7403,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "相框几何图形",
         "unit": "边／角",
@@ -7323,7 +7411,7 @@
         "unknown": "分类依据",
         "changes": "静态指认边角／纸笔"
       },
-      "contentFingerprint": "38b842fd7fecdad7e3e4f335d01a56ed7763fcd14d76c4b304feb7fb41d630be",
+      "contentFingerprint": "9b0f9ae9a92dc179ac167f78958e09998d335f787be12024b6b80ddf4ed4c45d",
       "story": {
         "text": "做相框前，要确定四条边和四个角满足什么条件。",
         "figure": {
@@ -7375,7 +7463,7 @@
         "statements": [
           "图形名称归纳共同结构；分类依据要能检验，而不只看摆放方向。"
         ],
-        "retell": "说出一个满足长方形定义却不是正方形的例子。"
+        "retell": "正方形转斜了，为什么名称仍由边和角决定？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -7425,7 +7513,9 @@
       },
       "invariant": "以边角性质分类，旋转摆放不改变类别",
       "nextInspection": "保留准确静态三图，强调正方形满足长方形性质；检查纸笔口述与必填说明负担。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "static-input"
       ],
@@ -7452,7 +7542,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "无入口花坛边界",
         "unit": "米",
@@ -7460,7 +7550,7 @@
         "unknown": "一圈围栏长度",
         "changes": "沿四边走一次"
       },
-      "contentFingerprint": "b8b0e5e484579f3bfc81d272c99614eed57e274b2f2545a40a7c06aed261a231",
+      "contentFingerprint": "a5e1a104888ad948a12b9f5c911039ab2c027aeb67204a71d5bcb40ee38f7cac",
       "story": {
         "text": "给长8米宽5米的花坛装一圈围栏，要买多少米？",
         "figure": {
@@ -7520,7 +7610,7 @@
         "statements": [
           "围栏沿边界延伸，求的是线的总长度；不能用内部铺多少块地砖代替。"
         ],
-        "retell": "不看公式，用走一圈解释为什么长和宽的和还要乘2。"
+        "retell": "长加宽只走了两边，为什么一圈还要再有一份长加宽？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -7571,6 +7661,8 @@
       "invariant": "周长走外边界一次，不重不漏",
       "nextInspection": "核对8/5米与26米结果，长度单位一致；无入口才可直接四边相加。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -7595,7 +7687,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "拼接正方形板",
         "unit": "厘米",
@@ -7603,9 +7695,9 @@
         "unknown": "拼好后的外周长",
         "changes": "方板位置及接缝"
       },
-      "contentFingerprint": "eb943cd0047508f9b60dc30c75a5a20521cf395636964cf2e240b909c1e810e5",
+      "contentFingerprint": "8c323e79df69f0d6d83c1c452f2c45ab85a9aaa1d6d6cee35ca5991c22ec8169",
       "story": {
-        "text": "两个边长3厘米的方形相框并排拼成一块板，外面绕一圈需要24厘米吗？",
+        "text": "两块边长3厘米的实心正方形板，沿一条完整边紧紧拼在一起。外面绕一圈，还是两块原来的周长合计24厘米吗？",
         "figure": {
           "renderer": "src/studio/IntroVisual.tsx",
           "spec": {
@@ -7660,7 +7752,7 @@
         "statements": [
           "拼接前共有两条相同的接缝边；拼接后它们都在内部，不属于外边界。"
         ],
-        "retell": "用两种颜色指出接缝为什么要减两次。"
+        "retell": "为什么算外周长时，同一接缝长度要从两块原周长中各去一次？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -7710,7 +7802,9 @@
       },
       "invariant": "拼接后两条接缝边均进内部，外周长减少两倍接缝",
       "nextInspection": "故事称相框又说板，需明确实体方板；核对不同拼合位置的接缝和外边界。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "object-ambiguity"
       ],
@@ -7737,7 +7831,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "围栏与铺砖",
         "unit": "长度／面积",
@@ -7745,7 +7839,7 @@
         "unknown": "两种量分别量哪里",
         "changes": "静态外圈与内部指认"
       },
-      "contentFingerprint": "af45d31ec50cc1084bd2add54eed30132cb26621e2a831f93223b7b1f0a4fee4",
+      "contentFingerprint": "56cecdd9f872adb1cfbab3b12f59e06eeda58e228b34f7f61eeeab8bd3b606aa",
       "story": {
         "text": "同一个花坛既要围栏又要铺地砖，为什么要算两个不同的数？",
         "figure": {
@@ -7801,7 +7895,7 @@
         "statements": [
           "围栏量边界长度，地砖覆盖内部；使用同样大小的方块才能公平比较覆盖量。"
         ],
-        "retell": "用花坛解释买围栏与买地砖分别需要知道什么。"
+        "retell": "为什么同一幅花坛图，买围栏与买地砖要量不同地方？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -7851,7 +7945,9 @@
       },
       "invariant": "周长是边界长度，面积是内部覆盖量",
       "nextInspection": "保留静态图；开头问围栏地砖，猜想/两图/检查必须明确所求量；检查必填说明负担。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "static-input"
       ],
@@ -7878,7 +7974,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "长方形地面与方砖",
         "unit": "米／平方米／块",
@@ -7886,7 +7982,7 @@
         "unknown": "总块数与面积",
         "changes": "铺砖位置"
       },
-      "contentFingerprint": "db5b62f598325b6bff32e857bdce02ea07522e9a8f96c3901789458c3977ebee",
+      "contentFingerprint": "76df3a9186b10d11469cd3b8acf6fc1af69b5e33a026bbd91ceca1b8777f4536",
       "story": {
         "text": "长6米宽4米的地面铺1平方米方砖，需要几块？",
         "figure": {
@@ -7946,7 +8042,7 @@
         "statements": [
           "每行6块、共4行，乘法缩短的是重复计数；长宽必须使用相同长度单位。"
         ],
-        "retell": "长方形每行6块方砖，共4行，为什么用6×4求总块数？"
+        "retell": "为什么6×4既能求总块数，又能得到覆盖面积的数值？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -7997,6 +8093,8 @@
       "invariant": "面积格子按每行数乘行数，单位是平方单位",
       "nextInspection": "核对24块各1平方米与24平方米不同称法；无空隙无重叠才能用铺满计数。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -8021,7 +8119,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "单位方纸与剪角卡",
         "unit": "分米／厘米／平方单位",
@@ -8029,7 +8127,7 @@
         "unknown": "面积单位换算与剪拼量",
         "changes": "当前教具剪角重组"
       },
-      "contentFingerprint": "b871b26ea204a05a13b24c4fa92456b140693720d6783ec0a77e5a84ed4c90f3",
+      "contentFingerprint": "6798ada519a2335f6b4947995a2a5bad6836f204c24aea724a3410244f3e0d90",
       "story": {
         "text": "边长1分米的方纸，为什么能铺100个平方厘米，而不是10个？",
         "figure": {
@@ -8091,7 +8189,7 @@
         "statements": [
           "两条方向都细分为10格，所以总单位数是10×10；图形分割后总面积也要按覆盖部分相加减。"
         ],
-        "retell": "用10×10格解释100，并指出这里为什么不能只算一排。"
+        "retell": "为什么1分米等于10厘米，1平方分米却包含100个平方厘米？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -8141,7 +8239,9 @@
       },
       "invariant": "面积单位两个方向同时细分；剪拼不改变总面积",
       "nextInspection": "开头及符号是10×10单位换算，实际教具8×5剪3×2；核心操作未直接验证开头结论。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "model-topic-mismatch"
       ],
@@ -8168,7 +8268,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "目的地投票",
         "unit": "人／票",
@@ -8176,12 +8276,24 @@
         "unknown": "哪个地点最多及调查规则",
         "changes": "投票和撤票"
       },
-      "contentFingerprint": "a0832aa7a1996675aee346054d6523496969f35350052e7fc95a71812a1152a7",
+      "contentFingerprint": "0c984234247cae96f32b687082233762b8f5a94db39d54d81c7d71ca6c366547",
       "story": {
         "text": "班级要选一次集体活动地点，怎样知道大家最想去哪儿？",
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "renderer": "src/studio/IntroVisual.tsx",
+          "spec": {
+            "type": "vote-board",
+            "title": "每个人一票，选一个目的地",
+            "caption": "18个人都按同一单选规则投票。各地票数暂时未知。",
+            "values": [
+              18
+            ],
+            "labels": [
+              "公园",
+              "科技馆",
+              "图书馆"
+            ]
+          }
         }
       },
       "prediction": {
@@ -8192,8 +8304,17 @@
           "不需要说明规则"
         ],
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "type": "vote-board",
+          "title": "每个人一票，选一个目的地",
+          "caption": "18个人都按同一单选规则投票。各地票数暂时未知。",
+          "values": [
+            18
+          ],
+          "labels": [
+            "公园",
+            "科技馆",
+            "图书馆"
+          ]
         }
       },
       "experiment": {
@@ -8221,7 +8342,7 @@
         "statements": [
           "数据是针对问题收集的记录；规则含糊会让统计结果无法解释。"
         ],
-        "retell": "为什么一次只能选一个与可以多选的票数不能直接比较？"
+        "retell": "为什么要先约定单选规则，才能解释哪地最受欢迎？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -8272,6 +8393,8 @@
       "invariant": "每条记录按统一调查规则计数，结论限于样本",
       "nextInspection": "核对18人单选守恒和撤票；故事需说明选择规则，而非让学生猜未声明的制度。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -8296,7 +8419,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "阅读时长卡",
         "unit": "分钟／条记录",
@@ -8304,12 +8427,31 @@
         "unknown": "唯一分组及各组个数",
         "changes": "分类、移回"
       },
-      "contentFingerprint": "96393a558f07c7ac2a4651fb002e6f4b7fa625436b7f3b762c93fb1f10cc027d",
+      "contentFingerprint": "20cbb602be2b4482f0383c4732aa17715b52cb7803ab203423e3c0c91884bb12",
       "story": {
         "text": "整理8次阅读时长，直接看一串数不容易比较，怎样分组更清楚？",
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "renderer": "src/studio/IntroVisual.tsx",
+          "spec": {
+            "type": "data-cards",
+            "title": "把阅读时长卡各放进一个组",
+            "caption": "先看8条原始记录；10分钟该去哪组，要由你判断。",
+            "values": [
+              5,
+              8,
+              10,
+              12,
+              15,
+              18,
+              20,
+              22
+            ],
+            "labels": [
+              "0—9分钟",
+              "10—19分钟",
+              "20分钟及以上"
+            ]
+          }
         }
       },
       "prediction": {
@@ -8320,8 +8462,24 @@
           "10—19分钟组"
         ],
         "figure": {
-          "renderer": null,
-          "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
+          "type": "data-cards",
+          "title": "把阅读时长卡各放进一个组",
+          "caption": "先看8条原始记录；10分钟该去哪组，要由你判断。",
+          "values": [
+            5,
+            8,
+            10,
+            12,
+            15,
+            18,
+            20,
+            22
+          ],
+          "labels": [
+            "0—9分钟",
+            "10—19分钟",
+            "20分钟及以上"
+          ]
         }
       },
       "experiment": {
@@ -8367,7 +8525,7 @@
         "statements": [
           "分类减少零散信息，但每条记录应恰好落入一组；结论不能超出数据范围。"
         ],
-        "retell": "给出一组有重复边界的分类，再亲自修正。"
+        "retell": "为什么每条记录必须只进一个组，分类才不重不漏？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -8418,6 +8576,8 @@
       "invariant": "分类互斥且覆盖所有给定记录",
       "nextInspection": "核对整数分钟边界10/20的唯一分组；实际上界100与文字“20及以上”的范围需限定。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -8442,7 +8602,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "月份日历",
         "unit": "年／月／日",
@@ -8450,7 +8610,7 @@
         "unknown": "不同月份有几天",
         "changes": "选择年份和月份"
       },
-      "contentFingerprint": "b6646988956d8f82564e4b13406131cef93dc7840d7cb945dd0465ef57b98bfb",
+      "contentFingerprint": "d07fa48238bce761e5701c0d2f5d0c92961a09c514073795297d7f4b58005882",
       "story": {
         "text": "要做生日月历，为什么不能复制一张30天的表用12次？",
         "figure": {
@@ -8504,7 +8664,7 @@
         "statements": [
           "月份长度并不相同，日历把日期组织为共同规则；学习使用规则，不编造未经证实的历史起源。"
         ],
-        "retell": "用两个连续日期说明“经过一天”为什么会涉及两个日期。"
+        "retell": "为什么不能把一张30天月历复制给每个月？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -8554,7 +8714,9 @@
       },
       "invariant": "年月共同决定月历天数，跨月日期连续",
       "nextInspection": "开头制作生日月历，复述转跨日；先明确大小月/平闰年主要发现，再标日期连续为拓展。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "unannounced-transfer"
       ],
@@ -8581,7 +8743,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "24时时刻和时间线",
         "unit": "小时／分钟",
@@ -8589,9 +8751,9 @@
         "unknown": "时刻表达及经过时长",
         "changes": "沿时间线移动"
       },
-      "contentFingerprint": "2e3e0a3a95ae1486069e1245271247ac67fb8de6c09dd621b38d264153539d70",
+      "contentFingerprint": "bfd94ef5fed51dc94339335200d3c23715d1db0f4ab3bf6a8b0c5051add9e732",
       "story": {
-        "text": "下午开始的活动写“3点”，别人会不会误以为凌晨？",
+        "text": "活动写“下午3点”，用24时计时怎样避免误会？再看另一次活动：15:20开始、16:05结束。沿同一天的时间线，它经过多久？",
         "figure": {
           "renderer": "src/studio/IntroVisual.tsx",
           "spec": {
@@ -8651,7 +8813,7 @@
         "statements": [
           "同一天的时针绕两圈，用0至24小时刻度能消除歧义；时刻与经过多久是不同量。"
         ],
-        "retell": "为什么午夜前后不能只比较钟上数字大小？"
+        "retell": "时钟上从20分到5分，为什么不是只做5−20求时长？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -8701,7 +8863,9 @@
       },
       "invariant": "时刻是位置，时长是间隔；小时按60分钟进位",
       "nextInspection": "开头/猜想03:00与15:00，实验15:20→16:05，复述突然午夜；需补清对象和顺序联系。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "unannounced-transfer"
       ],
@@ -8728,7 +8892,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "星期与日期",
         "unit": "天／周",
@@ -8736,7 +8900,7 @@
         "unknown": "星期几及相隔天数",
         "changes": "日期移动"
       },
-      "contentFingerprint": "3ccbdc97da17e09bc8ae688838cddf6e4ed5530a4dcf399c447c1db9e41a99a8",
+      "contentFingerprint": "120123efe41734137ccb86b531803eb026bf99c9255d3cc5105c03709edad51a",
       "story": {
         "text": "已知某月1日是星期二，怎样不查整张日历就知道15日是星期几？",
         "figure": {
@@ -8784,7 +8948,7 @@
         "statements": [
           "每过7天回到同一星期位置；余下几天决定最终变化。"
         ],
-        "retell": "说清“第15天”与“过15天”为什么可能指不同日期。"
+        "retell": "为什么15日与1日相隔14天，而不是15天？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -8835,6 +8999,8 @@
       "invariant": "星期按7天循环，日期相差需减起始日期",
       "nextInspection": "核对1日周二的条件始终固定；15日相隔14天，不把序号直接当经过天数。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -8859,7 +9025,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "米尺与小数位",
         "unit": "米／分米／厘米",
@@ -8867,7 +9033,7 @@
         "unknown": "用米的小数表达",
         "changes": "3所在的小数位"
       },
-      "contentFingerprint": "30e9ceb56257735afd4ed51dc71d480006abfa1da103c96e3415b36a8c78fb1d",
+      "contentFingerprint": "fd1156031b15c5e1a1bc8bf4eda92c4c5296214596bd30f6a3a9faf1e26ad710",
       "story": {
         "text": "纸条长1米3分米，只用“米”怎样写，既简短又清楚？",
         "figure": {
@@ -8932,7 +9098,7 @@
         "statements": [
           "十进制可以继续向小于1的单位延伸，小数点把整数部分与不足1的部分分开。"
         ],
-        "retell": "1.3与1.03都含1和3，为什么长短不同？"
+        "retell": "两个数都有1和3，为什么1.3米比1.03米长？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -8983,6 +9149,8 @@
       "invariant": "小数数位继续记录米以下的十进单位",
       "nextInspection": "核对1.3/1.03的分米与厘米，尺图单位与所在位一致。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -9007,7 +9175,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "跳高长度比较",
         "unit": "米／厘米",
@@ -9015,7 +9183,7 @@
         "unknown": "谁高及比较理由",
         "changes": "同一尺标记／小数位"
       },
-      "contentFingerprint": "964a68a946f60deb1a08a48b91c69dd8273e517f89fb7464660636e38ef05c1f",
+      "contentFingerprint": "f055b97f4c995c09f85ba598097b9e5e374ec3958d8c80383b341de848af90f4",
       "story": {
         "text": "两人跳高分别0.9米与0.85米，谁跳得更高？",
         "figure": {
@@ -9081,7 +9249,7 @@
         "statements": [
           "书写位数更多不一定代表数量更大；需把不同写法放回相同单位。"
         ],
-        "retell": "为什么0.85位数更多，却比0.9小？"
+        "retell": "0.85写的数字更多，为什么仍比0.9小？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -9132,6 +9300,8 @@
       "invariant": "相同单位同起点比较实际量，位数多不必更大",
       "nextInspection": "核对0.9米与0.85米对照同一厘米尺度；不泄露独立练习的待比结论。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -9156,7 +9326,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "彩笔本子付款",
         "unit": "元／角",
@@ -9164,7 +9334,7 @@
         "unknown": "合计与找零",
         "changes": "静态元角对齐／纸笔"
       },
-      "contentFingerprint": "75b1fa43e5da3909c519104341201428462a578ba01007f54a4226b898db5658",
+      "contentFingerprint": "b2625307325a1ec222329cf79ec7eaa7377fbb3c77cc419ae22995772cd1f32c",
       "story": {
         "text": "一盒彩笔3.8元、一本本子2.5元，合计多少钱？付10元找回多少？",
         "figure": {
@@ -9201,7 +9371,7 @@
         "statements": [
           "元要和元相加，角要和角相加；小数点对齐是单位对齐的简写。"
         ],
-        "retell": "小数加减和整数加减，共用什么道理？"
+        "retell": "为什么小数点对齐，就是把相同货币单位对齐？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -9251,7 +9421,9 @@
       },
       "invariant": "元角按同一单位对齐，10角换1元",
       "nextInspection": "保留静态元角对照；需逐步呈现进角到元与找零；检查核对说明不成为新必填步骤。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "static-input"
       ],
@@ -9278,17 +9450,17 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "活动采购计划",
         "unit": "人／张／包／元／分钟",
-        "known": "24人每人2张；每包12张6元；15:10到15:50；静态卡另有库存1包",
+        "known": "24人每人2张；每包12张6元；15:10到15:50；不另给库存（初次静态卡的1包库存已移除）",
         "unknown": "总需求、补购、费用、时长",
         "changes": "静态计划表／纸笔"
       },
-      "contentFingerprint": "914f16f7ef58b2c7fdc00dd3473e430a1579fad1496817c8aec3484541cd7af2",
+      "contentFingerprint": "c820b1f5914a96fe3fbd20f63cf2855e5298b5622dda659f1c787c2abc3b848d",
       "story": {
-        "text": "24人做手工，每人2张纸，纸每包12张6元；活动15:10至15:50。怎样做简明计划？",
+        "text": "24人做手工，每人2张纸，每包12张、6元，需要买齐材料（这一题不另给库存）。活动从15:10到15:50。分别需要几包、多少钱、多少分钟？",
         "figure": {
           "renderer": null,
           "reason": "当前入口按文字推理题开放，是否足够直观仍需逐章教学核对"
@@ -9314,7 +9486,7 @@
         "model": {
           "type": "conceptLab"
         },
-        "sourceInitialDescription": "24人每人2张纸，每包12张6元，库存1包；计划表分需求/补购/费用。",
+        "sourceInitialDescription": "24人每人2张纸，每包12张6元；本题不另给库存，分别求总需求、购买费用和时长。",
         "sourceLearnerAction": "自行填中间量并选择所需数据，不提供运算名称。",
         "sourceObservableChange": "需48张4包，补3包18元；每行量义清楚。",
         "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
@@ -9323,7 +9495,7 @@
         "statements": [
           "一个真实计划包含多个不同结构，先定义要回答的问题，才能选择合适运算。"
         ],
-        "retell": "这个计划中，哪一步用了归一或分组，哪一步用了时间间隔？"
+        "retell": "为什么先求总张数，再算购买包数，不能把人数直接除每包张数？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -9373,7 +9545,9 @@
       },
       "invariant": "纸张需求、购买量、费用、时长是不同目标",
       "nextInspection": "开头和符号没有库存，静态场景却有库存1包；先统一条件，不能混用4包总需求与3包补购。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "condition-gap"
       ],
@@ -9400,7 +9574,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "读书与绘画名单",
         "unit": "人",
@@ -9408,7 +9582,7 @@
         "unknown": "不同人的总数",
         "changes": "姓名卡分区"
       },
-      "contentFingerprint": "1e2d091d5ed237b1d613b6a7d9a22194a789efbc57a0897cd42be8d3bf04942b",
+      "contentFingerprint": "b5dad135cceec6ecc60eb081d6d3cd0e71531b9296f8802b4eaa982c7c36207d",
       "story": {
         "text": "读书组8人、绘画组7人，其中3人两个组都参加。总共有多少不同的人？",
         "figure": {
@@ -9483,7 +9657,7 @@
         "statements": [
           "两份名单相加时，重叠的人被数两遍；总人数只应该计每人一次。"
         ],
-        "retell": "用同学名单解释为什么共同参加者不能被删光。"
+        "retell": "为什么加两组人数后只减共同人数一次，不能两次都删掉？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -9534,6 +9708,8 @@
       "invariant": "共同成员被相加两遍，去一次重复仍保留此人",
       "nextInspection": "核对姓名ID唯一与8+7−3=12；各区域人数与两组总人数不能混同。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -9558,7 +9734,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "搭接木板",
         "unit": "厘米／毫米",
@@ -9566,9 +9742,9 @@
         "unknown": "端到端总长",
         "changes": "搭接位置"
       },
-      "contentFingerprint": "2dff40440dac7fab72e60a43caa4c12503016bbeee87d7de13e01e29a541a52a",
+      "contentFingerprint": "b38a479e6886a16236339145fd888ad8fda24663cf95665b7a60c138667b1158",
       "story": {
-        "text": "30厘米和25厘米两块木板搭在一起，为什么端到端不是55厘米？",
+        "text": "甲木板30厘米、乙木板25厘米，开始重叠8厘米。两块搭接后，从最左端到最右端长多少？再拖动乙板，搭接变多或变少，总长怎样变化？",
         "figure": {
           "renderer": "src/studio/measurement/TaskDiagram.tsx",
           "sceneId": "G3-U03-E01-board"
@@ -9615,7 +9791,7 @@
         "statements": [
           "先把材料相加，再把重复计算的搭接段减一次；搭得越多，伸出去的总长越短。"
         ],
-        "retell": "指着图讲：55厘米表示什么？47厘米表示什么？为什么8厘米只减一次？"
+        "retell": "材料30＋25没变，为什么搭得越多端到端越短？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -9675,7 +9851,9 @@
       },
       "invariant": "总材料长度不变；端到端长度减一份重叠",
       "nextInspection": "开头未给搭接8厘米，复述却直接问47与8；给清当前图中测量条件，变量操作后不能固定引用。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "condition-gap"
       ],
@@ -9702,7 +9880,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "拉直理想链环",
         "unit": "厘米／毫米",
@@ -9710,7 +9888,7 @@
         "unknown": "总长及接头数量",
         "changes": "环数2至5和接头放大"
       },
-      "contentFingerprint": "233f1bda4f9a3f99d22df05f7ce28564b4db30eb8e56039b2593a0742ace0db2",
+      "contentFingerprint": "9ff02da9d70e4a60d7b4608b704548e4ad6d3e94df43c7f7282aa0f25b032c4a",
       "story": {
         "text": "每个链环外长4厘米、厚5毫米，4个扣起来拉直后，为什么不是16厘米？",
         "figure": {
@@ -9757,7 +9935,7 @@
         "statements": [
           "第一个环保留40毫米；以后每添一个环，只增加40−5−5＝30毫米。4个环总长130毫米。"
         ],
-        "retell": "讲清三个数：40毫米是什么，10毫米是什么，为什么4个环只有3处接头。"
+        "retell": "每添一个环，为什么只多一个接头；它为什么少伸出两段厚度？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -9818,6 +9996,8 @@
       "invariant": "拉直理想链的每相邻接头损失两个端部厚度",
       "nextInspection": "明确理想模型沿拉伸方向的两段5毫米；4环3接头，不能把任意真实环形均套同一公式。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -9842,7 +10022,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "直绳与闭环",
         "unit": "米／点／段",
@@ -9850,9 +10030,9 @@
         "unknown": "不同标记数",
         "changes": "直／闭环与间隔"
       },
-      "contentFingerprint": "150e492676f5ae03d04d73a7998f359bd44e2cda4cfdeb571b4392943727a9e5",
+      "contentFingerprint": "694c23db42f311724ebed861979774d3db51ce2167ccc1c507d098901a4cb72e",
       "story": {
-        "text": "24米绳每4米做一个标记，拉直与接成环，标记数为什么相差1？",
+        "text": "24米绳每4米一段。拉直时从起点开始标记，两端都做标记；接成环时，首尾是同一个标记。两种形状各有多少个不同标记？",
         "figure": {
           "renderer": "src/studio/measurement/TaskDiagram.tsx",
           "sceneId": "G3-U03-O01-interval"
@@ -9895,7 +10075,7 @@
         "statements": [
           "24÷4＝6得到的是间隔数。直线有7个端点；圆环末点回到起点，只有6个不同标记。"
         ],
-        "retell": "不用背口诀，画出2段直线和2段闭环，讲清楚点数为什么不同。"
+        "retell": "6段拉直有7点，接成环后为什么最后一点不能再算一个新点？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -9955,7 +10135,9 @@
       },
       "invariant": "线段末端是新点，闭环末端回到原点",
       "nextInspection": "开头需说明两端也做标记；核对直线7点、闭环6点，不套所有边界条件。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "condition-gap"
       ],
@@ -9982,7 +10164,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "一米彩带",
         "unit": "米／份",
@@ -9990,9 +10172,9 @@
         "unknown": "份额与改分组后长度",
         "changes": "分组和取份"
       },
-      "contentFingerprint": "6ace45c7bd952b6d1d7358a78c6ef2344a5f198bc71f3c3b0b13484a5923b882",
+      "contentFingerprint": "594d8a31e27a794f735dd5e69cff1e07db3d17b269a881952fc4f4b36883477b",
       "story": {
-        "text": "桌上有一条1米长的彩带。Kevin 把它分成6段，每段一样长，再拿其中2段给朋友做书签。",
+        "text": "一条1米彩带平均分成6小份，其中2小份送给朋友。把原长对齐，再把每2小份看作1大份，送出的部分还是同一段。它的份额可以怎样换一种说法？",
         "figure": {
           "renderer": "src/studio/TeachingDiagrams.tsx",
           "diagram": "ribbon"
@@ -10027,7 +10209,7 @@
         "statements": [
           "先确定同一个整体，再平均分。合并小份改变份数名称，不改变已经取出的长度。"
         ],
-        "retell": "请用彩带说明2/6是什么意思：哪一个数告诉我们分了几份？哪一个数告诉我们拿了几份？为什么必须每份一样长？"
+        "retell": "格子名字变了，为什么送给朋友的彩带长度没变？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -10087,7 +10269,9 @@
       },
       "invariant": "整体长度和取出的部分不变，只改变等分计数单位",
       "nextInspection": "故事已剪成6段，但猜想强调同一条彩带合并分组；明确用原长对齐重组，而非材料变长。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "object-ambiguity"
       ],
@@ -10114,7 +10298,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "正方形地垫",
         "unit": "块／边长单位",
@@ -10122,9 +10306,9 @@
         "unknown": "内部块数与绕绳长度",
         "changes": "地垫与外边界"
       },
-      "contentFingerprint": "ae2482f53f45986ecdc1da898e26cdc151813d1af816257dd9e21a8630051ddc",
+      "contentFingerprint": "943e44a6c297cf490d38fc0baf8711c7e36b0aff64ea8ea114be955ac208bf78",
       "story": {
-        "text": "老师想在教室空地上铺一片正方形地垫，大家可以坐在上面看书。地垫摆成3排，每排4块，紧紧挨着，没有空隙，也不重叠。",
+        "text": "地垫摆成3排、每排4块，没有空隙和重叠。用边长1厘米的方纸做缩小模型：数里面的方块，再沿最外一圈量长度。为什么铺地垫与绕绳子量的是两种不同的量？",
         "figure": {
           "renderer": "src/studio/TeachingDiagrams.tsx",
           "diagram": "readingCorner"
@@ -10159,7 +10343,7 @@
         "statements": [
           "面积数里面的单位方格，周长量外边界。拼接后的内部接缝不属于外边界。"
         ],
-        "retell": "请指着图说一说：买地垫时数哪里？准备绳子时量哪里？为什么中间的接缝不算进绳子的长度？"
+        "retell": "为什么地垫接缝不算要绕的绳子，地垫本身却要全部数？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -10219,7 +10403,9 @@
       },
       "invariant": "单位地垫数与外圈绳长是不同量",
       "nextInspection": "开头未声明绳子和每垫边长，猜想与4+3+4+3直接使用；须补清任务与长度单位。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "condition-gap"
       ],
@@ -10246,7 +10432,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "点心盒与同量糖袋",
         "unit": "盒／袋／颗",
@@ -10254,7 +10440,7 @@
         "unknown": "整盒替换的关系",
         "changes": "整袋与散糖的替换"
       },
-      "contentFingerprint": "e23de83183f60585c2386476c0edaa18c9bbbb21ff33d489dbfd40ea4f20b2a1",
+      "contentFingerprint": "963a23b4ba1d65400f5ad3d8dbf0bf3b6cfab7142b998c994d0ce5832ab9159b",
       "story": {
         "text": "Kevin 做了3个一模一样的点心盒。每个盒子里，都放了1袋糖和另外2颗散糖。三袋糖里的颗数也都相同。",
         "figure": {
@@ -10291,7 +10477,7 @@
         "statements": [
           "每盒都是完整的“乙＋2”。三盒既有三袋糖，也有三份2颗散糖。"
         ],
-        "retell": "每盒都有一袋糖和2颗散糖，三盒为什么不能只记“3袋糖＋2颗”？请指着每个盒子说明。"
+        "retell": "为什么三盒不仅有三袋糖，还要有三份2颗散糖？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -10352,6 +10538,8 @@
       "invariant": "每盒完整重复袋加2颗，替换保留整个范围",
       "nextInspection": "明确乙代表每袋颗数而非袋子本身；三盒散糖也是三份2颗。",
       "sourceReview": "requires-chapter-verification",
+      "sourceFinding": "no-confirmed-source-issue",
+      "resolution": null,
       "issues": [],
       "classroomTrial": "not-verified",
       "acceptance": {
@@ -10376,7 +10564,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "糖袋与等量两盘",
         "unit": "颗",
@@ -10384,9 +10572,9 @@
         "unknown": "袋中颗数与等量变换",
         "changes": "两盘同步拿走"
       },
-      "contentFingerprint": "8a8f07da8e2636c2bf8e84de6188ab92f3cca5606fa723fa33b2c68cc6ac4730",
+      "contentFingerprint": "133bfb540510044a88e0226e93f49ade125d5a11a63ed05ecbda054aa4ee473c",
       "story": {
-        "text": "Kevin 面前有一袋糖，袋外还放着3颗。老师说：“把袋里和袋外的糖合起来，一共有10颗。”",
+        "text": "一袋糖加袋外3颗，合起来与10颗散糖一样多。把袋和3颗放左盘、10颗放右盘：两盘同时拿走3颗，怎样找到袋里的颗数？",
         "figure": {
           "renderer": "src/studio/TeachingDiagrams.tsx",
           "diagram": "candyEquality"
@@ -10421,7 +10609,7 @@
         "statements": [
           "等量两边拿走同样多，剩下的仍相等；只动一边会破坏等量关系。"
         ],
-        "retell": "为什么从左边拿走3颗时，右边也要拿走3颗？如果只拿左边，两边还会一样多吗？"
+        "retell": "为什么一边拿走3颗，另一边也必须拿走3颗？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -10481,7 +10669,9 @@
       },
       "invariant": "等量两侧同减仍相等",
       "nextInspection": "开头只有一袋加3共10，猜想直接左右；先把这两个同样多的集合映射到天平两盘。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "object-switch"
       ],
@@ -10508,7 +10698,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "饭盒与苹果",
         "unit": "个",
@@ -10516,7 +10706,7 @@
         "unknown": "所需苹果总数",
         "changes": "对应与摆放位置"
       },
-      "contentFingerprint": "67ddaef1fb965af5d6ab378c21183aac944d22e627a668edec4cd6f8c67311be",
+      "contentFingerprint": "f70238043045f70fd60d8b05b9064fc21cdd81669457bc240ba0c32f20ea797d",
       "story": {
         "text": "桌上有7个饭盒。每个饭盒都要放1个苹果。Kevin 要去厨房拿苹果，可是把整张桌子搬过去很不方便。",
         "figure": {
@@ -10553,7 +10743,7 @@
         "statements": [
           "一个物体只数一次，最后数到的数记录总量；只挪动位置不会改变总量。"
         ],
-        "retell": "图里的苹果摆开了，为什么还是7个？再举一个例子，说说“3个”“第3个”和“3号”分别告诉我们什么。"
+        "retell": "苹果排得更长，为什么数量仍然是7个？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -10618,7 +10808,9 @@
       },
       "invariant": "一一对应和末数记录总数，挪位置不改变数量",
       "nextInspection": "首故事饭盒→苹果模型需对应；序数/编号复述超出刚才的实验，需明确选学扩展。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "unannounced-transfer"
       ],
@@ -10645,7 +10837,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "两人的苹果",
         "unit": "个",
@@ -10653,9 +10845,9 @@
         "unknown": "合计及挪动是否改变总数",
         "changes": "内部挪动或从外添入"
       },
-      "contentFingerprint": "628ce843ba9c2271bce9bba8dd1f75c88fbf7180c8efcb1c82dbed2995512c2c",
+      "contentFingerprint": "7037a81a067f0f16846a9d70ff938639ebba1ff209d7d1169b0e96fdceb0f97f",
       "story": {
-        "text": "Kevin 带来3个苹果，朋友带来2个，准备一起分享。两人各自知道带了多少，现在想知道合起来共有多少。",
+        "text": "Kevin的篮子有3个苹果，朋友的篮子有2个，合起来有多少？从右篮挪1个到左篮，与从厨房新拿1个放进左篮，总数的变化一样吗？",
         "figure": {
           "renderer": "src/studio/TeachingDiagrams.tsx",
           "diagram": "appleAddition"
@@ -10690,7 +10882,7 @@
         "statements": [
           "加法记录两个部分合起来的总量。篮子之间挪动不添苹果，从外面新添才增加总数。"
         ],
-        "retell": "“从右篮挪1个到左篮”和“从厨房再拿1个放进左篮”，总数为什么不一样？请指着两篮苹果说明。"
+        "retell": "同样往左篮放1个，为什么挪过来和新拿来对总数的影响不同？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -10755,7 +10947,9 @@
       },
       "invariant": "合并计总数，内部挪动守恒，外部增加才变总数",
       "nextInspection": "猜想突然两篮，开头只有两人带苹果；用可见容器说明对应，不引入模糊动作。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "object-switch"
       ],
@@ -10782,7 +10976,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.1",
+      "editorialRevision": "2026-10-09.2",
       "quantities": {
         "object": "原有送出剩余贴纸",
         "unit": "张",
@@ -10790,7 +10984,7 @@
         "unknown": "剩余张数与两部分关系",
         "changes": "送出与拿回"
       },
-      "contentFingerprint": "3605352d6e4dc13681cb0fec7d87cd5f5204d9136854fad1b39da9c6cb793225",
+      "contentFingerprint": "62cc6479d3536425accfb8d8d66897f81ea8984e1e4f30cb1f43f53a529fca0b",
       "story": {
         "text": "Kevin 有9张贴纸，送给朋友5张。原来这9张，分成了“送出的5张”和“自己剩下的贴纸”。",
         "figure": {
@@ -10827,7 +11021,7 @@
         "statements": [
           "原来的数量等于送出的数量加剩下的数量；减法找到已知整体中的另一部分。"
         ],
-        "retell": "9−5可以表示两种不同的贴纸故事，请各讲一个。Kevin 和朋友各增加1张，为什么相差的张数没有变？"
+        "retell": "为什么送出的5加剩下的数量，应该回到原来的9？"
       },
       "mathematicalLanguage": {
         "statements": [
@@ -10892,7 +11086,9 @@
       },
       "invariant": "整体等于已知部分加另一部分；比较差有不同语义",
       "nextInspection": "复述转两种故事及同加不变差，首实验只送走贴纸；先解释当前操作，扩展明确另起情境。",
-      "sourceReview": "needs-refinement",
+      "sourceReview": "refined-awaiting-chapter-verification",
+      "sourceFinding": "initial-source-issue",
+      "resolution": "2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。",
       "issues": [
         "unannounced-transfer"
       ],

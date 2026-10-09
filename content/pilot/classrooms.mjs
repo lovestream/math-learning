@@ -1,3 +1,4 @@
+import {classroomReasoning,storyClarifications} from './classroom-reasoning.mjs';
 // Each entry is tied to the lesson's existing story/model, not its worked-example answers.
 const entries = [
 ['G3-U02-B01','先有人下车，再有人上车，第一步怎样算？',['先减下车的人','先加上车的人','把三个数都相加'],'用车上人数解释为什么按发生顺序计算。',['28−9＋6','先下车：28−9；再上车：19＋6']],
@@ -72,7 +73,7 @@ export const classroomEntries=Object.fromEntries(entries.map(([id,predictQuestio
  return [id,{predictQuestion,predictionOptions:[...predictionOptions.slice(shift),...predictionOptions.slice(0,shift)],mission,symbols}];
 }));
 export function classroomFor(lesson){
- if(lesson.childClassroom)return lesson.childClassroom;
+ if(lesson.childClassroom)return {...lesson.childClassroom,...classroomReasoning[lesson.lessonId],predictionFocus:lesson.childClassroom.predictQuestion,retell:classroomReasoning[lesson.lessonId].whyQuestion,story:storyClarifications[lesson.lessonId]??lesson.childClassroom.story};
  const authored=classroomEntries[lesson.lessonId];
  if(!authored)throw Error(`缺少短课堂教案：${lesson.lessonId}`);
  const story=lesson.articleBlocks[0].paragraphs?.[0]??lesson.articleBlocks[0].text;
@@ -87,5 +88,7 @@ export function classroomFor(lesson){
  };
  const discovery=foundationDiscoveries[lesson.lessonId]??lesson.conceptScenes?.[0]?.expectedExplanation??lesson.lengthScenes?.[0]?.explanation??lesson.articleBlocks.find(b=>b.blockId==='why')?.paragraphs?.[0];
  if(!story||!discovery||!lesson.articleBlocks.some(b=>b.widget))throw Error(`短课堂缺少故事、算理或教具：${lesson.lessonId}`);
- return {...authored,story,discovery:[discovery],retell:lesson.retellPrompt??authored.mission};
+ const reasoning=classroomReasoning[lesson.lessonId];
+ if(!reasoning)throw Error(`缺少本课因果追问：${lesson.lessonId}`);
+ return {...authored,story:storyClarifications[lesson.lessonId]??story,discovery:[discovery],...reasoning,predictionFocus:authored.predictQuestion,retell:reasoning.whyQuestion};
 }

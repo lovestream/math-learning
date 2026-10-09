@@ -30,6 +30,7 @@ const all = [
   "verify-accessibility-browser",
   "verify-variants-browser",
   "verify-template-browser",
+  "verify-semantic-browser",
 ];
 const only = process.argv.find((v) => v.startsWith("--only=")),
   names = only
@@ -46,6 +47,7 @@ const only = process.argv.find((v) => v.startsWith("--only=")),
           "verify-accessibility-browser",
           "verify-variants-browser",
           "verify-template-browser",
+  "verify-semantic-browser",
         ];
 if (names.some((n) => !all.includes(n)))
   throw Error("Unknown browser callback");
@@ -57,10 +59,10 @@ const sourceEvidence={prHeadSha:process.env.AUDIT_PR_HEAD_SHA ?? checkoutSha,sha
 fs.writeFileSync(`${out}/source-evidence.json`,JSON.stringify(sourceEvidence,null,2));
 let browser;
 const timeout = setTimeout(() => {
-  console.error("Browser audit exceeded 12 minutes");
+  console.error("Browser audit exceeded 18 minutes");
   process.exitCode = 1;
   void browser?.close();
-}, 12 * 60000);
+}, 18 * 60000);
 try {
   browser = await chromium.launch({
     headless: true,

@@ -207,7 +207,7 @@ export default function StaticConceptFigure({ id }: { id: string }) {
         : [
             ["活动人数", "24人，每人2张纸"],
             ["包装", "每包12张，6元"],
-            ["库存", "已有1包"],
+            ["库存", "本题不另给库存，求总需求"],
             ["活动时间", "15:10—15:50"],
           ];
     picture = rows.map(([label, value], i) => (

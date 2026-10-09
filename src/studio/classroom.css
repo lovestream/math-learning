@@ -3,3 +3,12 @@
 
 .lesson-article:has(.child-classroom) .article-hero{padding-bottom:10px}.lesson-article:has(.child-classroom) .article-question:empty{display:none}
 @media(max-width:780px){body:has(.child-classroom) .sidebar{position:static;inset:auto;height:auto;padding:7px 5px;overflow:hidden}body:has(.child-classroom) .sidebar nav{grid-template-columns:repeat(7,minmax(0,1fr))}body:has(.child-classroom) .sidebar nav button{min-height:52px;min-width:0;font-size:9px}body:has(.child-classroom) .app-shell{padding-bottom:0}}
+
+.child-classroom .bead-condition-view{max-height:470px;max-width:440px;margin:16px auto}.child-classroom .bead-condition-view text{font-size:21px}
+.child-classroom [data-intro-visual=groups] .intro-canvas{max-height:none}
+.current-experiment{padding:18px 20px;background:#e9f1f5;border:1px solid #bbceda;border-radius:12px;margin:22px 0}.current-experiment h3{margin-top:0}.current-experiment p{overflow-wrap:anywhere;line-height:1.8}.blank-expression{font:600 20px/1.8 Consolas,"PingFang SC",monospace;color:#284e70}.current-experiment-prompt,.prediction-comparison{line-height:1.85}.parent-task-preview li small{display:block;color:#637c72;font-size:12px}.verification-goal{font-size:20px;font-weight:650}.classroom-unit-context{max-width:650px;margin:0 auto 28px}.classroom-unit-context>p{line-height:1.8}.child-classroom button:focus-visible,.child-classroom summary:focus-visible{outline:3px solid #527eab;outline-offset:3px}
+@media(max-width:600px){.current-experiment{padding:14px}.blank-expression{font-size:17px}.child-classroom .bead-condition-view{max-height:none}}
+
+.chain-condition-detail{max-width:420px;margin:18px auto}.chain-condition-detail svg{width:100%;height:auto;display:block}.chain-condition-detail p{font-size:15px;line-height:1.7}
+
+.child-classroom .intro-source-visual,.child-classroom .measurement-question{margin:18px 0}.child-classroom [data-intro-visual=data-cards] .intro-canvas,.child-classroom [data-intro-visual=vote-board] .intro-canvas{max-height:none}

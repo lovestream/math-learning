@@ -43,21 +43,21 @@ export function buildSemanticLedger(){
   scope:{entrances:70,textbookLessons:63,foundationBridgeLessons:7,textbookUnits:17,formalTasks:849,staticLessons:6,publishedThinkingCards:17,deferredThinkingCards:43},
   safeguards:{classroomStages:stages,selfCheckItems:3,noAddedRequiredSteps:true,noRealLearnerDataReadsOrWrites:true,grades4To6Frozen:true,noMainMerge:true},
   reviewBoundary:'70课源内容和操作规格的逐课台账，非849题逐题人工审查，非新浏览器验收，非Kevin掌握证明。已读取指定复审文档，台账依照A01列项；数学、视觉和试学状态分开记录。',
-  summary:{sourceRefinementNeeded:rows.filter(r=>r.sourceReview==='needs-refinement').length,chapterVerificationNeeded:rows.filter(r=>r.sourceReview!=='needs-refinement').length},
+  summary:{sourceRefinementNeeded:rows.filter(r=>r.sourceFinding==='initial-source-issue').length,chapterVerificationNeeded:rows.filter(r=>r.sourceFinding!=='initial-source-issue').length},
   rows,
  };
 }
 const cell=s=>String(s??'').replaceAll('|','／').replaceAll('\n',' ');
 export function renderSemanticLedger(ledger){
- let out=`# 三年级70课教学语义台账（2026-10-09）\n\n基线：\`${ledger.baselineSha}\`。先整理台账，再逐章精修；本文件仅记录源核对和后续验收条件。\n\n**已读取指定复审文档**：\`${auditDocument}\`。对应远端文档修订f463dc8；源代码基线仍为79a0f90。\n\n70入口＝17教材单元63课＋7基础／桥梁课；849道正式题与11课的66组操作情境分开统计。保留六步课堂和三项自查；本阶段不改课堂、题库、判分、版本、Kevin学习数据、四至六年级或43张暂缓卡。\n\n检查的是问题→对象→动作→发现→数学语言→独立新题之间的联系。\n\n- ${ledger.summary.sourceRefinementNeeded}课存在明确的文字、条件、对象过渡或模型主题核对项，已标为“需精修”。\n- ${ledger.summary.chapterVerificationNeeded}课尚无本次源核对确认的衔接缺陷，标为“待逐章验证”；这不代表教学验收通过。\n- 全70课浏览器语义验收、家长核对与孩子迁移均待逐章记录；旧技术报告不能充当本轮语义检查证据。\n\n机器台账：[teaching-semantic-ledger.json](semantic-ledger/teaching-semantic-ledger.json)。人工逐课批注：[notes.mjs](semantic-ledger/notes.mjs)。生成／查新：\`node scripts/build-semantic-ledger.mjs\` ／ \`node scripts/build-semantic-ledger.mjs --check\`。生成器仅导入课程源，不读取或写入学习数据库。\n\n## 按章总览\n\n|章节|课数|需精修|状态|\n|---|---:|---:|---|\n`;
+ let out=`# 三年级70课教学语义台账（2026-10-09）\n\n基线：\`${ledger.baselineSha}\`。先整理台账，再逐章精修；本文件仅记录源核对和后续验收条件。\n\n**已读取指定复审文档**：\`${auditDocument}\`。对应远端文档修订f463dc8；源代码基线仍为79a0f90。\n\n70入口＝17教材单元63课＋7基础／桥梁课；849道正式题与11课的66组操作情境分开统计。保留六步课堂和三项自查；台账阶段先提交，随后课堂文案／图形在展示修订2026-10-09.2精修。正式题、判分、考核版本、Kevin学习数据、四至六年级和43张暂缓卡均不变。\n\n检查的是问题→对象→动作→发现→数学语言→独立新题之间的联系。\n\n- 初次核对发现${ledger.summary.sourceRefinementNeeded}课存在文字、条件、对象过渡或模型主题衔接项；保留原发现与修正说明，现标为“已精修、待逐章验证”。\n- ${ledger.summary.chapterVerificationNeeded}课尚无本次源核对确认的衔接缺陷，标为“待逐章验证”；这不代表教学验收通过。\n- 全70课浏览器语义验收、家长核对与孩子迁移均待逐章记录；旧技术报告不能充当本轮语义检查证据。\n\n机器台账：[teaching-semantic-ledger.json](semantic-ledger/teaching-semantic-ledger.json)。人工逐课批注：[notes.mjs](semantic-ledger/notes.mjs)。生成／查新：\`node scripts/build-semantic-ledger.mjs\` ／ \`node scripts/build-semantic-ledger.mjs --check\`。生成器仅导入课程源，不读取或写入学习数据库。\n\n## 按章总览\n\n|章节|课数|需精修|状态|\n|---|---:|---:|---|\n`;
  const groups=Map.groupBy(ledger.rows,r=>r.unitId);
- for(const [id,rows] of groups)out+=`|${id} ${cell(rows[0].unitTitle)}|${rows.length}|${rows.filter(r=>r.sourceReview==='needs-refinement').length}|台账完成；待逐章精修与验证|\n`;
+ for(const [id,rows] of groups)out+=`|${id} ${cell(rows[0].unitTitle)}|${rows.length}|${rows.filter(r=>r.sourceFinding==='initial-source-issue').length}|台账完成；待逐章精修与验证|\n`;
  out+='\n## 逐课检查清单\n\n';
  for(const [id,rows] of groups){
   out+=`### ${id} ${rows[0].unitTitle}\n\n`;
   for(const r of rows){
-   out+=`#### ${r.lessonId} ${r.title}\n\n**源核对**：${r.sourceReview==='needs-refinement'?'需精修':'待逐章验证'}；${r.classroomTrial==='user-reported-trial-of-template'?'用户报告已试过模板，不等于每项教学目标获证。':'尚无本轮真实试课证据。'}\n\n|环节|当前内容／语义证据|\n|---|---|\n`;
-   const values=[['教材／分支',`${r.unitTitle}；${r.track}；考核版本${r.contentVersion}`],['真实问题',r.story.text],['对象／单位／已知／未知',`${r.quantities.object}；${r.quantities.unit}；已知：${r.quantities.known}；待求：${r.quantities.unknown}`],['可改变状态',r.quantities.changes],['条件图',r.story.figure.renderer??r.story.figure.reason],['先猜一猜',r.prediction.question],['猜想选项',r.prediction.options.join('；')],['操作任务',r.experiment.mission],['真实模型／静态图',`${r.experiment.classification}；${r.experiment.widget}；${r.experiment.model.type??r.experiment.model.mode??r.experiment.model.sceneId??'参见机器台账'}`],['发现依据',r.discovery.statements.join('；')],['自己复述',r.discovery.retell],['数学语言',r.mathematicalLanguage.statements.join('；')],['独立检查',`${r.independentCheck.tasks.length}题；${r.independentCheck.source}；${r.independentCheck.tasks.map(t=>t.id).join('、')}`],['数学不变量',r.invariant],['下一轮具体核对',r.nextInspection],['验收状态','模型不变量待逐章重测；浏览器语义截图待补；家长教学核对未完成；不判断Kevin掌握']];
+   out+=`#### ${r.lessonId} ${r.title}\n\n**源核对**：${r.sourceReview==='refined-awaiting-chapter-verification'?'已精修、待逐章验证':'待逐章验证'}；${r.classroomTrial==='user-reported-trial-of-template'?'用户报告已试过模板，不等于每项教学目标获证。':'尚无本轮真实试课证据。'}\n\n|环节|当前内容／语义证据|\n|---|---|\n`;
+   const values=[['教材／分支',`${r.unitTitle}；${r.track}；考核版本${r.contentVersion}`],['真实问题',r.story.text],['对象／单位／已知／未知',`${r.quantities.object}；${r.quantities.unit}；已知：${r.quantities.known}；待求：${r.quantities.unknown}`],['可改变状态',r.quantities.changes],['条件图',r.story.figure.renderer??r.story.figure.reason],['先猜一猜',r.prediction.question],['猜想选项',r.prediction.options.join('；')],['操作任务',r.experiment.mission],['真实模型／静态图',`${r.experiment.classification}；${r.experiment.widget}；${r.experiment.model.type??r.experiment.model.mode??r.experiment.model.sceneId??'参见机器台账'}`],['发现依据',r.discovery.statements.join('；')],['自己复述',r.discovery.retell],['数学语言',r.mathematicalLanguage.statements.join('；')],['独立检查',`${r.independentCheck.tasks.length}题；${r.independentCheck.source}；${r.independentCheck.tasks.map(t=>t.id).join('、')}`],['数学不变量',r.invariant],['初次核对项（保留历史）',r.nextInspection],['本轮修正',r.resolution??'已补具体因果追问与反例，模型保留；待逐章核验'],['验收状态','模型不变量待逐章重测；浏览器语义截图待补；家长教学核对未完成；不判断Kevin掌握']];
    for(const [name,value] of values)out+=`|${name}|${cell(value)}|\n`;
    out+='\n独立练习题干（既有题ID，无额外任务或积分）：\n\n';
    r.independentCheck.tasks.forEach(t=>out+=`- \`${t.id}\`（${t.kind}）：${t.prompt}\n`);
@@ -76,6 +76,6 @@ async function main(){
    if(await readFile(relative(name),'utf8')!==text)throw Error(`${name}已过期，请根据章节修改复核批注并重新生成`);
   }else{await mkdir(new URL('./',relative(name)),{recursive:true});await writeFile(relative(name),text);}
  }
- console.log(`70课语义台账${process.argv.includes('--check')?'查新通过':'已生成'}：${ledger.summary.sourceRefinementNeeded}课需精修，${ledger.summary.chapterVerificationNeeded}课待逐章验证；按复审A01列项。`);
+ console.log(`70课语义台账${process.argv.includes('--check')?'查新通过':'已生成'}：${ledger.summary.sourceRefinementNeeded}课有初次核对项，${ledger.summary.chapterVerificationNeeded}课待逐章验证；按复审A01列项。`);
 }
 if(process.argv[1]===fileURLToPath(import.meta.url))await main();

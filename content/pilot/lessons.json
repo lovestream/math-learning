@@ -1,7 +1,7 @@
 [
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -46,7 +46,11 @@
       ],
       "mission": "拍三张不同方向的照片，指出观察者在哪里。",
       "modelText": "盒子固定在桌上，前面贴红圆点、右面贴蓝菱形、上面贴黄星星。移动观察者，不转动物体；用正面、右面、上面照片比较。",
-      "retell": "指着你的三张照片讲：盒子哪里没动？为什么看到的标记变了？",
+      "retell": "盒子没有转，为什么换个站位看到的图案变了？",
+      "observedEvidence": "比较正前方和右侧的照片，留意相机位置和盒子标记。",
+      "whyQuestion": "盒子没有转，为什么换个站位看到的图案变了？",
+      "counterexamplePrompt": "把相机移回正前方：照片是否也跟着恢复？",
+      "predictionFocus": "盒子放着不动，相机从正前方移到右侧，照片会怎样？",
       "storyVisual": {
         "type": "box-camera",
         "title": "桌上这个盒子与拍照位置",
@@ -159,7 +163,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "指着你的三张照片讲：盒子哪里没动？为什么看到的标记变了？",
+    "retellPrompt": "盒子没有转，为什么换个站位看到的图案变了？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -709,7 +713,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -754,7 +758,11 @@
       ],
       "mission": "保留同样的正面照片，搭出两种不同的积木总数。",
       "modelText": "前排固定竖叠2块。后排可放0、1、2块；分别观察正面、右面、上面。重点比较后排1块与2块：前面与上面的投影都相同，侧面不同。",
-      "retell": "正面都是2格时，为什么不能直接说总共2块？哪张新照片能帮助你？",
+      "retell": "正面一样，为什么总块数却可能不同？",
+      "observedEvidence": "固定前排，比较后排1块和2块的正面、侧面照片。",
+      "whyQuestion": "正面一样，为什么总块数却可能不同？",
+      "counterexamplePrompt": "只看正面说总共2块，后排放1块就能反驳吗？",
+      "predictionFocus": "后排从1块变成2块，哪张照片一定能看出变化？",
       "storyVisual": {
         "type": "hidden-blocks",
         "title": "两种搭法：前排一样，后排不同",
@@ -865,7 +873,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "正面都是2格时，为什么不能直接说总共2块？哪张新照片能帮助你？",
+    "retellPrompt": "正面一样，为什么总块数却可能不同？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -1430,7 +1438,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -1475,7 +1483,11 @@
       ],
       "mission": "从完全展开折到一半，再折成盒子；跟踪同一个编号。",
       "modelText": "选正方体作为纸盒样本。3号前面固定；1上、2左、4右、5下围着3号，6号连在5号外边。折叠角从0°到90°连续改变，六个面的颜色、编号与边长不变。",
-      "retell": "选择两面，先猜相邻还是相对，再折回并转动视角，讲出你的证据。",
+      "retell": "展开图左右挨着3号的两面，为什么折后不挨着？",
+      "observedEvidence": "跟踪2号、4号从展开到折好的位置。",
+      "whyQuestion": "展开图左右挨着3号的两面，为什么折后不挨着？",
+      "counterexamplePrompt": "转动折好的盒子，能找到2号与4号共有的棱吗？",
+      "predictionFocus": "展开图中，2号在3号左边、4号在3号右边。折好后，2号和4号是什么关系？",
       "storyVisual": {
         "type": "cube-net",
         "title": "六个面摊开后的编号",
@@ -1589,7 +1601,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "选择两面，先猜相邻还是相对，再折回并转动视角，讲出你的证据。",
+    "retellPrompt": "展开图左右挨着3号的两面，为什么折后不挨着？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -2127,7 +2139,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -2338,7 +2350,7 @@
         "contentVersion": "2026-10-02.1"
       }
     ],
-    "retellPrompt": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？",
+    "retellPrompt": "28−9得到的人数，为什么要作为下一步加6的起点？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -2667,9 +2679,13 @@
       ],
       "story": "车上原来有28人，到站下去9人，又上来6人。现在车上有多少人？",
       "discovery": [
-        "请把每个数连回它的单位和角色。能相加减的量必须表示同一种东西；乘除常常先完成“每份—份数—总数”的转换。"
+        "下车后是19人，上车后是25人。28−9＋6从左往右，记录前一步的结果接着变化。相反的加减操作不能随意改次序；纯算式同级运算按从左往右的约定计算。"
       ],
-      "retell": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？"
+      "observedEvidence": "看看下车后的人数，再看上车后的人数。",
+      "whyQuestion": "28−9得到的人数，为什么要作为下一步加6的起点？",
+      "counterexamplePrompt": "把9和6都减掉，就相当于让哪一批人也下车了？",
+      "predictionFocus": "先有人下车，再有人上车，第一步怎样算？",
+      "retell": "28−9得到的人数，为什么要作为下一步加6的起点？"
     },
     "textbookUnit": {
       "id": "G3-U02",
@@ -2696,7 +2712,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -2836,7 +2852,7 @@
         "contentVersion": "2026-10-02.1"
       }
     ],
-    "retellPrompt": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？",
+    "retellPrompt": "为什么4支散笔不能直接和3盒相加？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -3161,9 +3177,13 @@
       ],
       "story": "文具店有4支散铅笔，又搬来3盒，每盒6支。一共有多少支铅笔？",
       "discovery": [
-        "请把每个数连回它的单位和角色。能相加减的量必须表示同一种东西；乘除常常先完成“每份—份数—总数”的转换。"
+        "3×6先把3盒换成18支。18支与4支是同一种数量，才能相加成22支。"
       ],
-      "retell": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？"
+      "observedEvidence": "打开3盒，看盒中的笔与4支散笔分别有多少。",
+      "whyQuestion": "为什么4支散笔不能直接和3盒相加？",
+      "counterexamplePrompt": "把4＋3先算成7，这个7还能说清是支还是盒吗？",
+      "predictionFocus": "4支散笔可以直接和3盒相加吗？",
+      "retell": "为什么4支散笔不能直接和3盒相加？"
     },
     "textbookUnit": {
       "id": "G3-U02",
@@ -3190,7 +3210,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -3401,7 +3421,7 @@
         "contentVersion": "2026-10-02.1"
       }
     ],
-    "retellPrompt": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？",
+    "retellPrompt": "只给12颗红珠装盒，为什么还没有回答总盒数？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -3739,9 +3759,13 @@
       ],
       "story": "12颗红珠和8颗蓝珠混在一起，每4颗装一盒。需要多少盒？",
       "discovery": [
-        "请把每个数连回它的单位和角色。能相加减的量必须表示同一种东西；乘除常常先完成“每份—份数—总数”的转换。"
+        "括号里的12＋8先求全部20颗，再按每盒4颗装盒。在这组数中两种颜色也各能装满盒；不是所有数量都能这样分开装，合起来分才符合原问题。"
       ],
-      "retell": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？"
+      "observedEvidence": "先看红蓝珠合在一起，再看每盒装4颗的分组。",
+      "whyQuestion": "只给12颗红珠装盒，为什么还没有回答总盒数？",
+      "counterexamplePrompt": "如果改成红珠13颗、蓝珠7颗，能先各装满盒再直接相加吗？",
+      "predictionFocus": "装盒以前，先要知道什么？",
+      "retell": "只给12颗红珠装盒，为什么还没有回答总盒数？"
     },
     "textbookUnit": {
       "id": "G3-U02",
@@ -3768,7 +3792,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -3908,7 +3932,7 @@
         "contentVersion": "2026-10-02.1"
       }
     ],
-    "retellPrompt": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？",
+    "retellPrompt": "综合算式里的28为什么不用再写成一个新条件？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -4223,9 +4247,13 @@
       ],
       "story": "书架原有36本书，借走8本，又还回3本。现在有多少本？",
       "discovery": [
-        "请把每个数连回它的单位和角色。能相加减的量必须表示同一种东西；乘除常常先完成“每份—份数—总数”的转换。"
+        "36−8先记录借出后的28本，再加回3本。36−8＋3把两次连续变化写在同一条算式里。"
       ],
-      "retell": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？"
+      "observedEvidence": "指着借出后的28本和还回后的31本。",
+      "whyQuestion": "综合算式里的28为什么不用再写成一个新条件？",
+      "counterexamplePrompt": "写成36−(8＋3)，就把还书当成了什么？",
+      "predictionFocus": "借走8本又还回3本，要怎样记录？",
+      "retell": "综合算式里的28为什么不用再写成一个新条件？"
     },
     "textbookUnit": {
       "id": "G3-U02",
@@ -4252,7 +4280,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -4392,7 +4420,7 @@
         "contentVersion": "2026-10-02.1"
       }
     ],
-    "retellPrompt": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？",
+    "retellPrompt": "题目没有直接给24支，你为什么需要先求它？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -4708,9 +4736,13 @@
       ],
       "story": "4盒彩笔，每盒6支，送给同学9支。还剩多少支？",
       "discovery": [
-        "请把每个数连回它的单位和角色。能相加减的量必须表示同一种东西；乘除常常先完成“每份—份数—总数”的转换。"
+        "4×6得到送出以前的总量24支；24−9才得到剩下15支。中间量把盒数与剩余支数连起来。"
       ],
-      "retell": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？"
+      "observedEvidence": "先看4盒中的全部24支，再指出送出的9支。",
+      "whyQuestion": "题目没有直接给24支，你为什么需要先求它？",
+      "counterexamplePrompt": "直接算4−9，减掉的还是同一种东西吗？",
+      "predictionFocus": "送走9支之前，先要知道什么？",
+      "retell": "题目没有直接给24支，你为什么需要先求它？"
     },
     "textbookUnit": {
       "id": "G3-U02",
@@ -4737,7 +4769,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -4948,7 +4980,7 @@
         "contentVersion": "2026-10-02.1"
       }
     ],
-    "retellPrompt": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？",
+    "retellPrompt": "减号后的括号去掉，为什么退回的3元要变成加？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -5274,9 +5306,13 @@
       ],
       "story": "Kevin有20元，买文具花8元，后来店员退回3元。最后还剩多少元？",
       "discovery": [
-        "请把每个数连回它的单位和角色。能相加减的量必须表示同一种东西；乘除常常先完成“每份—份数—总数”的转换。"
+        "退回3元让实际支出从8元降为5元，余额增加。20−(8−3)＝20−8＋3，两种记录说的是同一余额。"
       ],
-      "retell": "不用背口令，请用自己的话讲：这道题第一步为什么先算它？算出的中间数表示什么？"
+      "observedEvidence": "比较先付8元再退3元，与一次扣净支出5元。",
+      "whyQuestion": "减号后的括号去掉，为什么退回的3元要变成加？",
+      "counterexamplePrompt": "把20−(8−3)写成20−8−3，等于把退款当成了什么？",
+      "predictionFocus": "退回3元后，实际花的钱怎样变化？",
+      "retell": "减号后的括号去掉，为什么退回的3元要变成加？"
     },
     "textbookUnit": {
       "id": "G3-U02",
@@ -5303,7 +5339,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -5344,7 +5380,11 @@
       "discovery": [
         "14元支出和6元退回合成净支出8元。写成60−(14−6)，仍表示相同的余额；写成60−(14+6)则把退款当成第二笔支出。"
       ],
-      "retell": "60−14+6里，为什么14和6放进减号后的括号时要写14−6？"
+      "observedEvidence": "对照两笔变化和14−6这一个净支出包。",
+      "whyQuestion": "把14和6放进减号后的括号，为什么不能写14＋6？",
+      "counterexamplePrompt": "先分别算60−(14−6)和60−(14＋6)，哪个仍表示退款？",
+      "predictionFocus": "把付款和退款合成一次扣款，应扣多少？",
+      "retell": "把14和6放进减号后的括号，为什么不能写14＋6？"
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -5451,7 +5491,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "60−14+6里，为什么14和6放进减号后的括号时要写14−6？",
+    "retellPrompt": "把14和6放进减号后的括号，为什么不能写14＋6？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -6006,7 +6046,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -6047,7 +6087,11 @@
       "discovery": [
         "每人属于全部6×2个人之一，所以连除可合成除以人数的乘积；这不是随意挪动括号。"
       ],
-      "retell": "画出“6组每组2人”和“6÷2组”有什么不同。"
+      "observedEvidence": "指出6个组中每组的2个人，再数所有人。",
+      "whyQuestion": "分给6组后又分给每组2人，为什么等于分给6×2人？",
+      "counterexamplePrompt": "48÷(6÷2)表示分给几份，和原来的12人一样吗？",
+      "predictionFocus": "6组每组2人，总人数怎样求？",
+      "retell": "分给6组后又分给每组2人，为什么等于分给6×2人？"
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -6146,7 +6190,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "画出“6组每组2人”和“6÷2组”有什么不同。",
+    "retellPrompt": "分给6组后又分给每组2人，为什么等于分给6×2人？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -6719,7 +6763,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -6756,11 +6800,15 @@
         "3×4＝4×3",
         "(8＋2)＋7＝8＋(2＋7)"
       ],
-      "story": "有3袋红珠、每袋4颗。按袋数，或排成4列每列3颗，会不会数出不同总数？另有三堆珠子，先合哪两堆方便？",
+      "story": "有3袋红珠，每袋4颗。排成3行4列，或换看成4列3行，总数会变吗？另有8颗、2颗、7颗三堆珠子，先合哪两堆方便？",
       "discovery": [
         "重新摆放没有增减或重复物品；换位置是交换，先合哪两组是结合。加法的总数和乘法的点阵总数因此保持，不是所有运算都能交换或结合。"
       ],
-      "retell": "用8、2、7三堆珠子说明交换与结合的不同，再举一个不能这样改的减法例子。",
+      "observedEvidence": "同一批点换行列；再比较8、2、7三堆先合哪两堆。",
+      "whyQuestion": "换位置与换分组分别改变了什么，为什么总数不变？",
+      "counterexamplePrompt": "8−2与2−8也能随意换位置吗？先用实物解释能否表示同一件事。",
+      "predictionFocus": "把3行4颗改看成4列3颗，总数会变吗？",
+      "retell": "换位置与换分组分别改变了什么，为什么总数不变？",
       "storyVisual": {
         "type": "dot-array",
         "title": "3袋珠子，排成3行4列",
@@ -6891,14 +6939,14 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "用8、2、7三堆珠子说明交换与结合的不同，再举一个不能这样改的减法例子。",
+    "retellPrompt": "换位置与换分组分别改变了什么，为什么总数不变？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "把问题放进一个真实故事",
         "paragraphs": [
-          "有3袋红珠、每袋4颗。按袋数，或排成4列每列3颗，会不会数出不同总数？另有三堆珠子，先合哪两堆方便？",
+          "有3袋红珠，每袋4颗。排成3行4列，或换看成4列3行，总数会变吗？另有8颗、2颗、7颗三堆珠子，先合哪两堆方便？",
           "重新摆放没有增减或重复物品；换位置是交换，先合哪两组是结合。加法的总数和乘法的点阵总数因此保持，不是所有运算都能交换或结合。"
         ]
       },
@@ -7492,7 +7540,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -7533,7 +7581,11 @@
       "discovery": [
         "左右两区互不重叠又恰好覆盖全部座位；每排的两部分都出现7次，因此要分别乘7再合起来。这给出可推广的数量理由，单算几个例子相等不够。"
       ],
-      "retell": "对着7排、每排5+3个座位说清两种算法；关掉点阵后解释4×(6+2)。",
+      "observedEvidence": "分别指出左右两区每一排，再合回完整点阵。",
+      "whyQuestion": "为什么右边的3个也要乘7，而不是只加一次3？",
+      "counterexamplePrompt": "用手遮住前6排右区，看看7×5＋3漏掉了哪部分。",
+      "predictionFocus": "分别数左右座位时，哪边要乘7？",
+      "retell": "为什么右边的3个也要乘7，而不是只加一次3？",
       "storyVisual": {
         "type": "dot-array",
         "title": "教室的左右两区座位",
@@ -7666,7 +7718,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "对着7排、每排5+3个座位说清两种算法；关掉点阵后解释4×(6+2)。",
+    "retellPrompt": "为什么右边的3个也要乘7，而不是只加一次3？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -8248,7 +8300,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -8289,7 +8341,11 @@
       "discovery": [
         "错误结果仍包含信息；把每个实际做过的动作倒着撤销，就能还原。"
       ],
-      "retell": "7+□×4被小乐按先加后乘算成44。说清他实际怎样算、你怎样逆推、正确原式怎样验算。"
+      "observedEvidence": "还原先加7再乘4的错算路径，然后倒着撤销。",
+      "whyQuestion": "为什么倒推44时要先除4，而不是先减7？",
+      "counterexamplePrompt": "找到方框后，用正确的7＋□×4验算，结果还应是44吗？",
+      "predictionFocus": "小乐把44算出来以前，最后做了什么？",
+      "retell": "为什么倒推44时要先除4，而不是先减7？"
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -8388,7 +8444,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "7+□×4被小乐按先加后乘算成44。说清他实际怎样算、你怎样逆推、正确原式怎样验算。",
+    "retellPrompt": "为什么倒推44时要先除4，而不是先减7？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -8918,7 +8974,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -8959,7 +9015,11 @@
       "discovery": [
         "方框只是给整个12+8临时起名字，仍代表20支。只要含义不变，在相同位置替换就保留数量关系；换名字不等于换数值。"
       ],
-      "retell": "把“每盒12红8蓝，共3盒”用整体卡讲一次；拿走卡后写回带括号的式子。",
+      "observedEvidence": "把一盒彩笔整体遮住，再把整体卡放回每个盒子。",
+      "whyQuestion": "为什么换个名字后，盒子外面的乘3还要保留？",
+      "counterexamplePrompt": "只替换蓝笔8支，却把卡说成整盒20支，遮住的范围相同吗？",
+      "predictionFocus": "用一张卡表示每盒彩笔总数，买3盒怎么写？",
+      "retell": "为什么换个名字后，盒子外面的乘3还要保留？",
       "storyVisual": {
         "type": "groups",
         "title": "三盒一样的彩笔",
@@ -9094,7 +9154,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "把“每盒12红8蓝，共3盒”用整体卡讲一次；拿走卡后写回带括号的式子。",
+    "retellPrompt": "为什么换个名字后，盒子外面的乘3还要保留？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -9730,7 +9790,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -9818,7 +9878,7 @@
         "explanation": "长度不是终点读数，而是终点与起点之间的距离：73−20＝53毫米。"
       }
     ],
-    "retellPrompt": "用自己的话讲：换成毫米后物体有没有变长？零刻度坏了为什么仍能测量？",
+    "retellPrompt": "左端不在0，为什么用右端减左端还能求长度？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -10203,7 +10263,11 @@
       "discovery": [
         "长度不是终点读数，而是终点与起点之间的距离：73−20＝53毫米。"
       ],
-      "retell": "用自己的话讲：换成毫米后物体有没有变长？零刻度坏了为什么仍能测量？"
+      "observedEvidence": "指出尺子的左端读数与右端读数。",
+      "whyQuestion": "左端不在0，为什么用右端减左端还能求长度？",
+      "counterexamplePrompt": "把整件物体向右挪1厘米，两端都加1，长度也加1吗？",
+      "predictionFocus": "从2厘米量起，能把右端读数当长度吗？",
+      "retell": "左端不在0，为什么用右端减左端还能求长度？"
     },
     "textbookUnit": {
       "id": "G3-U03",
@@ -10220,7 +10284,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -10309,7 +10373,7 @@
         "explanation": "估计不是随便猜。100米作一份，10份是1000米；200米作一份，5份仍是1000米。"
       }
     ],
-    "retellPrompt": "讲一讲：估计和乱猜有什么区别？1千米大约能用哪些熟悉路线来感受？",
+    "retellPrompt": "参照段变长了，为什么段数变少却不改变总路程？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -10736,7 +10800,11 @@
       "discovery": [
         "估计不是随便猜。100米作一份，10份是1000米；200米作一份，5份仍是1000米。"
       ],
-      "retell": "讲一讲：估计和乱猜有什么区别？1千米大约能用哪些熟悉路线来感受？"
+      "observedEvidence": "对照100米一段与200米一段的同一条路线。",
+      "whyQuestion": "参照段变长了，为什么段数变少却不改变总路程？",
+      "counterexamplePrompt": "只看地图画得长就说路更远，没有比例或参照靠谱吗？",
+      "predictionFocus": "估计一段路长1千米，怎样才有依据？",
+      "retell": "参照段变长了，为什么段数变少却不改变总路程？"
     },
     "textbookUnit": {
       "id": "G3-U03",
@@ -10753,7 +10821,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -10779,7 +10847,7 @@
       "publication": "not-published"
     },
     "childClassroom": {
-      "story": "厨房里有一杯水。秤上的读数包含了杯子，要知道水本身有多重，还要称什么？先分开称空杯和水，再把它们合起来。",
+      "story": "厨房里有一杯水，秤上的读数包含杯子。怎样求水本身有多重？先试一试换单位：同一个米袋用克或千克显示，会真的变轻吗？再分别称空杯和杯水。",
       "predictQuestion": "同一个米袋从“克”切换成“千克”，实际质量会变吗？",
       "predictionOptions": [
         "不会，只有数字和单位一起变",
@@ -10799,7 +10867,11 @@
       ],
       "mission": "完成换单位、杯与水、天平三个小实验，允许先试错。",
       "modelText": "电子秤可以放回形针、苹果、米袋和书。杯水实验使用空杯120克与水260克；合在一起380克。天平左盘400克，右盘可放100、200、500克砝码，允许少放或多放。",
-      "retell": "为什么不能直接把“杯和水”的读数当作水的质量？指着两次称量讲一遍。",
+      "retell": "总质量里为什么还要扣掉空杯，才能得到水的质量？",
+      "observedEvidence": "换单位时物品不换；再比较空杯和杯水的两次读数。",
+      "whyQuestion": "总质量里为什么还要扣掉空杯，才能得到水的质量？",
+      "counterexamplePrompt": "换成千克后读数更小，米袋就真的变轻了吗？",
+      "predictionFocus": "同一个米袋从“克”切换成“千克”，实际质量会变吗？",
       "storyVisual": {
         "type": "cup-scale",
         "title": "秤上放的是杯子和水",
@@ -10910,14 +10982,14 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "为什么不能直接把“杯和水”的读数当作水的质量？指着两次称量讲一遍。",
+    "retellPrompt": "总质量里为什么还要扣掉空杯，才能得到水的质量？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "把问题放进一个真实故事",
         "paragraphs": [
-          "厨房里有一杯水。秤上的读数包含了杯子，要知道水本身有多重，还要称什么？先分开称空杯和水，再把它们合起来。",
+          "厨房里有一杯水，秤上的读数包含杯子。怎样求水本身有多重？先试一试换单位：同一个米袋用克或千克显示，会真的变轻吗？再分别称空杯和杯水。",
           "测量工具有量程和精度；克、千克、吨分别适合不同尺度。"
         ]
       },
@@ -11367,7 +11439,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-07.2",
     "status": "draft",
     "previewEnabled": true,
@@ -11413,7 +11485,11 @@
       ],
       "mission": "自己标水线、换石块、逐块称重，核对是否满足替换条件。",
       "modelText": "在同一只理想模型船与静水环境中，先只装模型象并标水线。象下船后放小石块，直到红色水线标记回到水面。逐块称船上的石头，再求和。额外乘员用于展示替换条件被破坏的反例。",
-      "retell": "指着水线说：为什么同水线能替代？为什么称完后要把所有石块的读数加起来？",
+      "retell": "为什么同一只船恢复同一水线，才能把象换成石块？",
+      "observedEvidence": "比较原水线与替换后的水线，并核对船上还有什么。",
+      "whyQuestion": "为什么同一只船恢复同一水线，才能把象换成石块？",
+      "counterexamplePrompt": "石块之外又站上一个人，同水线还能说明石块单独等于象吗？",
+      "predictionFocus": "取下模型象后，小船浮高了。怎样才能用石块替代模型象？",
       "storyVisual": {
         "type": "boat-replacement",
         "title": "同一只船：象上船与象下船",
@@ -11530,7 +11606,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "指着水线说：为什么同水线能替代？为什么称完后要把所有石块的读数加起来？",
+    "retellPrompt": "为什么同一只船恢复同一水线，才能把象换成石块？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -11987,7 +12063,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -12028,7 +12104,11 @@
       "discovery": [
         "每盒的1个十与2个一可以分别收集，结果仍是同一批笔。"
       ],
-      "retell": "23×3拆开算时，为什么两部分都必须乘3？",
+      "observedEvidence": "先收集3组的十，再收集3组的一。",
+      "whyQuestion": "12拆成10和2后，为什么两部分都要取3份？",
+      "counterexamplePrompt": "只算10×3＋2，哪两组的2支笔被漏掉了？",
+      "predictionFocus": "3盒各12支，可以怎样拆着数？",
+      "retell": "12拆成10和2后，为什么两部分都要取3份？",
       "storyVisual": {
         "type": "groups",
         "title": "每盒12支笔，买3盒",
@@ -12110,10 +12190,10 @@
         "variant": "G3-U04-B01",
         "title": "把几十、几百和零散个数分别乘",
         "prompt": "用位值拆分解释整十整百和两位数口算乘法。",
-        "initialState": "3组12根小棒，每组1捆十和2根；先保留分组框。",
-        "learnerAction": "分别聚集三捆十与三组2，再合回总数；给两个部分标×3。",
-        "observableChange": "10×3+2×3=36，所有小棒恰计一次。",
-        "question": "23×3拆开算时，为什么两部分都必须乘3？",
+        "initialState": "每盒12支笔，买3盒，一共有多少支？",
+        "learnerAction": "分别合并十和一，再把两部分合起来。",
+        "observableChange": "先收集3组的十，再收集3组的一。",
+        "question": "12拆成10和2后，为什么两部分都要取3份？",
         "expectedExplanation": "每盒的1个十与2个一可以分别收集，结果仍是同一批笔。",
         "wrongActionFeedback": "只乘十位时高亮未计的6根，提示个位部分也重复3次。",
         "guidance": [
@@ -12202,7 +12282,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "23×3拆开算时，为什么两部分都必须乘3？",
+    "retellPrompt": "12拆成10和2后，为什么两部分都要取3份？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -12705,7 +12785,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -12746,7 +12826,11 @@
       "discovery": [
         "满十换一十，把计数单位整理回十进制表示，竖式记录这种交换。"
       ],
-      "retell": "把26×3中的进位1解释给一个不会竖式的人听。",
+      "observedEvidence": "看看18个一换成1个十和8个一，再与原有3十合并。",
+      "whyQuestion": "把10个一捆成1个十，为什么小棒总根数没变？",
+      "counterexamplePrompt": "把进位的1留在个位，就把1个十错当成了什么？",
+      "predictionFocus": "16根小棒取3份，个位满十怎么办？",
+      "retell": "把10个一捆成1个十，为什么小棒总根数没变？",
       "storyVisual": {
         "type": "groups",
         "title": "16个一份，共有3份",
@@ -12867,7 +12951,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "把26×3中的进位1解释给一个不会竖式的人听。",
+    "retellPrompt": "把10个一捆成1个十，为什么小棒总根数没变？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -13366,7 +13450,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -13407,7 +13491,11 @@
       "discovery": [
         "相同的十进制交换可以连续发生；一次进位不能替代所有数位的进位。"
       ],
-      "retell": "连续进位与一次进位，使用的道理变了吗？",
+      "observedEvidence": "跟踪个位换出的十，再看十位换出的百。",
+      "whyQuestion": "10个十换1个百，为什么饮料总量没有变？",
+      "counterexamplePrompt": "只完成个位进位就停下，十位还有超过9个十吗？",
+      "predictionFocus": "个位换出的十放到十位，十位又满十怎么办？",
+      "retell": "10个十换1个百，为什么饮料总量没有变？",
       "storyVisual": {
         "type": "groups",
         "title": "8箱饮料，每箱147瓶",
@@ -13489,10 +13577,10 @@
         "variant": "G3-U04-B03",
         "title": "连续进位也只是反复“满十换一”",
         "prompt": "正确计算两三位数乘一位数的连续进位并核查。",
-        "initialState": "147×8，百十个位表：个位56待整理，十位乘积32，百位8。",
-        "learnerAction": "依次交换50个一为5十，再37十换3百7十，最后合并百位。",
-        "observableChange": "个位6、十位7、百位11，最终1176；每个进位有来源箭头。",
-        "question": "连续进位与一次进位，使用的道理变了吗？",
+        "initialState": "8箱饮料，每箱147瓶，一共多少瓶？",
+        "learnerAction": "用8箱各147瓶，说明每次满十换一的来源。",
+        "observableChange": "跟踪个位换出的十，再看十位换出的百。",
+        "question": "10个十换1个百，为什么饮料总量没有变？",
         "expectedExplanation": "相同的十进制交换可以连续发生；一次进位不能替代所有数位的进位。",
         "wrongActionFeedback": "漏进位时只回放上一列交换，问这5个十/3个百去哪了。",
         "guidance": [
@@ -13581,7 +13669,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "连续进位与一次进位，使用的道理变了吗？",
+    "retellPrompt": "10个十换1个百，为什么饮料总量没有变？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -14081,7 +14169,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -14122,7 +14210,11 @@
       "discovery": [
         "0占住缺少的计数单位；省略它的位置会把600变成60。"
       ],
-      "retell": "604与64只差一个0，为什么乘积差很多？",
+      "observedEvidence": "把604的百、十、个位与64分别摆出来。",
+      "whyQuestion": "604中的0为什么不能删；乘的时候进来的十还能放哪里？",
+      "counterexamplePrompt": "604的十位是0，能据此断定604×8的十位也一定是0吗？",
+      "predictionFocus": "604的十位是0，可以把它写成64吗？",
+      "retell": "604中的0为什么不能删；乘的时候进来的十还能放哪里？",
       "storyVisual": {
         "type": "groups",
         "title": "8个区，每区604个座位",
@@ -14204,10 +14296,10 @@
         "variant": "G3-U04-B04",
         "title": "乘数中的0",
         "prompt": "理解0乘任何数得0，区分中间0和末尾0。",
-        "initialState": "205×4位值表，空十位以0占位，个位20需换2十。",
-        "learnerAction": "在十位合并0×4与进来的2，再完成百位。",
-        "observableChange": "积820，十位为2而非0；205与25的表格并排不同。",
-        "question": "604与64只差一个0，为什么乘积差很多？",
+        "initialState": "每区604个座位，共8区，一共有多少座位？",
+        "learnerAction": "保留没有十的位置，核对8个区的座位。",
+        "observableChange": "把604的百、十、个位与64分别摆出来。",
+        "question": "604中的0为什么不能删；乘的时候进来的十还能放哪里？",
         "expectedExplanation": "0占住缺少的计数单位；省略它的位置会把600变成60。",
         "wrongActionFeedback": "删0把2百挤成2十时冻结列宽，展示数位意义已改变。",
         "guidance": [
@@ -14296,7 +14388,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "604与64只差一个0，为什么乘积差很多？",
+    "retellPrompt": "604中的0为什么不能删；乘的时候进来的十还能放哪里？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -14795,7 +14887,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -14836,7 +14928,11 @@
       "discovery": [
         "有时只需判断足够与否，合适的上界就能回答，不必先精确计算。"
       ],
-      "retell": "“估大后仍然够”和“估小后已经不够”分别为什么可靠？"
+      "observedEvidence": "把实际人数夹在估小和估大两种成本之间。",
+      "whyQuestion": "按400人估大后仍够，为什么398人一定也够？",
+      "counterexamplePrompt": "估小后够用，就能保证实际费用也够吗？",
+      "predictionFocus": "把398人按400人估，估出的费用偏大还是偏小？",
+      "retell": "按400人估大后仍够，为什么398人一定也够？"
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -14894,10 +14990,10 @@
         "variant": "G3-U04-B05",
         "title": "先估一估",
         "prompt": "能按问题选用上界或下界估计，并处理多步费用。",
-        "initialState": "398张8元票、预算3200；对照上界400张。",
-        "learnerAction": "先判断400张费用，再撤掉2张并填写多估费用。",
-        "observableChange": "上界3200，实际少16，剩16；接近估计不表示精算正确。",
-        "question": "“估大后仍然够”和“估小后已经不够”分别为什么可靠？",
+        "initialState": "398名同学每人票价8元，准备3200元够不够？",
+        "learnerAction": "先用合适的上界判断3200元够不够。",
+        "observableChange": "把实际人数夹在估小和估大两种成本之间。",
+        "question": "按400人估大后仍够，为什么398人一定也够？",
         "expectedExplanation": "有时只需判断足够与否，合适的上界就能回答，不必先精确计算。",
         "wrongActionFeedback": "估大超预算不能直接说不够，展示可能落在预算上下的实际值，要求进一步算。",
         "guidance": [
@@ -14998,7 +15094,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "“估大后仍然够”和“估小后已经不够”分别为什么可靠？",
+    "retellPrompt": "按400人估大后仍够，为什么398人一定也够？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -15500,7 +15596,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -15541,7 +15637,11 @@
       "discovery": [
         "编码把位置和顺序组织起来，目的在于查找与区分，不是做四则运算。"
       ],
-      "retell": "一个好编号为什么既要有规则，又要保证不重复？",
+      "observedEvidence": "改变架、层、格字段，看地址指向哪里。",
+      "whyQuestion": "编号为什么能帮助找位置，却不能直接用来求图书本数？",
+      "counterexamplePrompt": "两格用同一编号，还能只凭编号找到唯一位置吗？",
+      "predictionFocus": "书的编号相邻，能把编号相加求书数吗？",
+      "retell": "编号为什么能帮助找位置，却不能直接用来求图书本数？",
       "storyVisual": {
         "type": "shelves",
         "title": "书架的位置可以变成地址",
@@ -15651,7 +15751,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "一个好编号为什么既要有规则，又要保证不重复？",
+    "retellPrompt": "编号为什么能帮助找位置，却不能直接用来求图书本数？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -16157,7 +16257,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -16198,7 +16298,11 @@
       "discovery": [
         "端点决定是否有限；几何用理想化的线表示物体或方向，纸上画不完的延伸用约定表达。"
       ],
-      "retell": "为什么线段能量长度，射线却不能报一个总长度？",
+      "observedEvidence": "分别指认端点和箭头，画出的长短只是纸面示意。",
+      "whyQuestion": "射线在纸上只有一小段，为什么不能量它的总长度？",
+      "counterexamplePrompt": "把线段画长，但保留两个端点，它就变成直线了吗？",
+      "predictionFocus": "线段、射线、直线，端点数量一样吗？",
+      "retell": "射线在纸上只有一小段，为什么不能量它的总长度？",
       "storyVisual": {
         "type": "lines",
         "title": "路线、光线与向两边延伸的线",
@@ -16299,7 +16403,7 @@
         "modelStatus": "static-review"
       }
     ],
-    "retellPrompt": "为什么线段能量长度，射线却不能报一个总长度？",
+    "retellPrompt": "射线在纸上只有一小段，为什么不能量它的总长度？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -16802,7 +16906,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -16843,7 +16947,11 @@
       "discovery": [
         "角记录两条射线的方向差，边的绘制长度只是为了看清方向。"
       ],
-      "retell": "用活动纸条说明“边长没变，角能变化”。",
+      "observedEvidence": "只延长一边，再只改变张口，分开比较。",
+      "whyQuestion": "为什么边画长了，角却没有变大？",
+      "counterexamplePrompt": "张口不动，拿更长的纸条替换一边，比较结果改变了吗？",
+      "predictionFocus": "把剪刀刀片画长，张口不变，角会变大吗？",
+      "retell": "为什么边画长了，角却没有变大？",
       "storyVisual": {
         "type": "angles",
         "title": "剪刀的张口",
@@ -16952,7 +17060,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "用活动纸条说明“边长没变，角能变化”。",
+    "retellPrompt": "为什么边画长了，角却没有变大？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -17463,7 +17571,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -17504,7 +17612,11 @@
       "discovery": [
         "共同的直角标准使“大一些、小一些”变成可复核的分类。"
       ],
-      "retell": "怎样说明分类取决于角本身，不取决于图画方向？",
+      "observedEvidence": "让书本角与待测角顶点、一条边对齐。",
+      "whyQuestion": "为什么要先对齐，才能用同一个直角标准比较？",
+      "counterexamplePrompt": "把图转个方向，原来的直角就变成锐角了吗？",
+      "predictionFocus": "怎样用书本角判断另一个角？",
+      "retell": "为什么要先对齐，才能用同一个直角标准比较？",
       "storyVisual": {
         "type": "angle-reference",
         "title": "把书本角贴到墙角",
@@ -17607,7 +17719,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "怎样说明分类取决于角本身，不取决于图画方向？",
+    "retellPrompt": "为什么要先对齐，才能用同一个直角标准比较？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -18111,7 +18223,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -18152,7 +18264,11 @@
       "discovery": [
         "整数个数不够表达分割后的份额；分数记录对同一整体怎样等分、取几份。"
       ],
-      "retell": "为什么1/4一定要先说清楚“哪个整体”的四分之一？",
+      "observedEvidence": "看整体是谁，再看四份的大小是否相同。",
+      "whyQuestion": "同样分成4份，为什么不等分就不能各说成1/4？",
+      "counterexamplePrompt": "把一份切得特别大，仍给四人各一份，这样每人相同吗？",
+      "predictionFocus": "饼分4份，份大小不同，能各记成1/4吗？",
+      "retell": "同样分成4份，为什么不等分就不能各说成1/4？",
       "storyVisual": {
         "type": "fraction-strip",
         "title": "一块饼，平均分成4份",
@@ -18264,7 +18380,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "为什么1/4一定要先说清楚“哪个整体”的四分之一？",
+    "retellPrompt": "同样分成4份，为什么不等分就不能各说成1/4？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -18759,7 +18875,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -18800,7 +18916,11 @@
       "discovery": [
         "分数也在数：数的是1/8这样的单位，而不是整数个物品。"
       ],
-      "retell": "说清楚5/8中的5在数什么。",
+      "observedEvidence": "指着平均8格中的蓝色3格，再数同样的小份。",
+      "whyQuestion": "3/8中的3在数什么，8为什么不是涂色格数？",
+      "counterexamplePrompt": "涂到5格后，变的是小份大小还是小份个数？",
+      "predictionFocus": "8等份中涂3份，下面的8记录什么？",
+      "retell": "3/8中的3在数什么，8为什么不是涂色格数？",
       "storyVisual": {
         "type": "fraction-strip",
         "title": "贴纸分8格，涂前3格",
@@ -18912,7 +19032,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "说清楚5/8中的5在数什么。",
+    "retellPrompt": "3/8中的3在数什么，8为什么不是涂色格数？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -19392,7 +19512,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -19433,7 +19553,11 @@
       "discovery": [
         "把相同的小份合并时，份的大小不变，只改变份数；这与2支加3支的道理相通。"
       ],
-      "retell": "用8格纸带解释为什么答案分母不是16。",
+      "observedEvidence": "先取的2份与再取的3份都来自同一块饼的8等份。",
+      "whyQuestion": "合并两次取用，为什么只加份数、不把分母加成16？",
+      "counterexamplePrompt": "把2份又取一次当新取的3份，会把同一块饼的哪部分重复计数？",
+      "predictionFocus": "上午2份下午3份合起来，每小份会变大吗？",
+      "retell": "合并两次取用，为什么只加份数、不把分母加成16？",
       "storyVisual": {
         "type": "fraction-strip",
         "title": "同一块饼的两次取用",
@@ -19513,10 +19637,10 @@
         "variant": "G3-U06-B03",
         "title": "分数加减",
         "prompt": "解释同分母分数加减和1减几分之几。",
-        "initialState": "一条8格纸带，前2格已涂，随后3格待涂。",
-        "learnerAction": "涂后3格并数合计，切换是否增加分格线的错误动作。",
-        "observableChange": "5格涂色占5/8；小份大小仍1/8，没有产生16等份。",
-        "question": "用8格纸带解释为什么答案分母不是16。",
+        "initialState": "同一块饼先吃2/8，后来吃3/8；一共吃多少，还剩多少？",
+        "learnerAction": "在同一块饼上合并两次取出的八分之一。",
+        "observableChange": "先取的2份与再取的3份都来自同一块饼的8等份。",
+        "question": "合并两次取用，为什么只加份数、不把分母加成16？",
         "expectedExplanation": "把相同的小份合并时，份的大小不变，只改变份数；这与2支加3支的道理相通。",
         "wrongActionFeedback": "选5/16时要求指出16等份在哪里，撤回无依据改分母。",
         "guidance": [
@@ -19611,7 +19735,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "用8格纸带解释为什么答案分母不是16。",
+    "retellPrompt": "合并两次取用，为什么只加份数、不把分母加成16？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -20094,7 +20218,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -20135,7 +20259,11 @@
       "discovery": [
         "整体由什么构成要先约定；同一个分数可表示一块饼的一部分，也可表示一盒糖的一组。"
       ],
-      "retell": "1/3盒和4颗怎样可以同时描述同一份糖？",
+      "observedEvidence": "12颗共同组成一盒，平均分3组，看一组有几颗。",
+      "whyQuestion": "为什么一组既能叫1/3盒，又能叫4颗？",
+      "counterexamplePrompt": "换成18颗一盒，同样1/3盒的颗数还能是4吗？",
+      "predictionFocus": "拿一盒12颗糖的1/3，是只拿1颗吗？",
+      "retell": "为什么一组既能叫1/3盒，又能叫4颗？",
       "storyVisual": {
         "type": "fraction-collection",
         "title": "一盒12颗糖",
@@ -20219,10 +20347,10 @@
         "variant": "G3-U06-B04",
         "title": "一个整体",
         "prompt": "区分一个物体和一组物品作为整体，找到一组物品的单位分数。",
-        "initialState": "大圈包12颗糖，3个等份小框为空。",
-        "learnerAction": "逐轮每框分同样颗数，给一框标整体的1/3。",
-        "observableChange": "每框4颗，1/3是一组而不是1颗。",
-        "question": "1/3盒和4颗怎样可以同时描述同一份糖？",
+        "initialState": "一盒12颗糖，拿走整盒的1/3，是多少颗？",
+        "learnerAction": "整盒看成一个整体，找到一组有多少颗。",
+        "observableChange": "12颗共同组成一盒，平均分3组，看一组有几颗。",
+        "question": "为什么一组既能叫1/3盒，又能叫4颗？",
         "expectedExplanation": "整体由什么构成要先约定；同一个分数可表示一块饼的一部分，也可表示一盒糖的一组。",
         "wrongActionFeedback": "把2、4、6颗都称1/3时对比不等组，提示只有4颗符合本整体的1/3。",
         "guidance": [
@@ -20311,7 +20439,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "1/3盒和4颗怎样可以同时描述同一份糖？",
+    "retellPrompt": "为什么一组既能叫1/3盒，又能叫4颗？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -20821,7 +20949,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -20862,7 +20990,11 @@
       "discovery": [
         "先找到共同的1/8单位，再数3个这样的单位，联系除法与乘法。"
       ],
-      "retell": "不背算式，说清24÷8×3每一步在找什么。",
+      "observedEvidence": "先指出8组中的1组，再取3组。",
+      "whyQuestion": "24÷8和再乘3，分别在求哪种数量？",
+      "counterexamplePrompt": "不平均分成8组，取3组就一定是3/8吗？",
+      "predictionFocus": "取24张的3/8，第一步先找什么？",
+      "retell": "24÷8和再乘3，分别在求哪种数量？",
       "storyVisual": {
         "type": "fraction-collection",
         "title": "24张贴纸是一个整体",
@@ -20946,10 +21078,10 @@
         "variant": "G3-U06-B05",
         "title": "先求一小份",
         "prompt": "用“总量÷等分份数×取的份数”求一组物品的几分之几。",
-        "initialState": "24张卡整体框内有8个相等小组，每组数隐藏。",
-        "learnerAction": "先分完8组，再只选3组，用两行记录每份数和所取总数。",
-        "observableChange": "每份3张，3组9张；24÷8×3的两个除乘量义不同。",
-        "question": "不背算式，说清24÷8×3每一步在找什么。",
+        "initialState": "24张贴纸的3/8要送朋友，应拿出多少张？",
+        "learnerAction": "先求一小份，再取三份。",
+        "observableChange": "先指出8组中的1组，再取3组。",
+        "question": "24÷8和再乘3，分别在求哪种数量？",
         "expectedExplanation": "先找到共同的1/8单位，再数3个这样的单位，联系除法与乘法。",
         "wrongActionFeedback": "得到3就停时高亮目标“取3份”，提示还缺合计三份的一步。",
         "guidance": [
@@ -21038,7 +21170,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "不背算式，说清24÷8×3每一步在找什么。",
+    "retellPrompt": "24÷8和再乘3，分别在求哪种数量？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -21537,7 +21669,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -21578,7 +21710,11 @@
       "discovery": [
         "分组方式改变了计数单位，实际纸带和涂色边界并未移动；份数名称可以不同而数量相同。"
       ],
-      "retell": "完整说一遍：哪条纸带、原来怎样分、现在怎样分、什么变了、什么没变。",
+      "observedEvidence": "比较细格和大格图的同一蓝色起点、终点。",
+      "whyQuestion": "份数名字从2/6变成1/3，为什么蓝色长度没变？",
+      "counterexamplePrompt": "用两条不同长的纸带比较1/3和2/6，还能只凭分数保证实际长度相同吗？",
+      "predictionFocus": "两小格合成一大格，原来的蓝色部分变长了吗？",
+      "retell": "份数名字从2/6变成1/3，为什么蓝色长度没变？",
       "storyVisual": {
         "type": "fraction-strip",
         "title": "同一条纸带：只改变看格子的方式",
@@ -21695,7 +21831,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "完整说一遍：哪条纸带、原来怎样分、现在怎样分、什么变了、什么没变。",
+    "retellPrompt": "份数名字从2/6变成1/3，为什么蓝色长度没变？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -22191,7 +22327,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -22232,7 +22368,11 @@
       "discovery": [
         "同一计划会遇到总量、份数、缺少多少等结构；复习的目的在于辨认何时用什么。"
       ],
-      "retell": "举出两个看起来不同但都用“每份×份数−已有”的问题。"
+      "observedEvidence": "在计划表中分开写总需求、已有量和还缺的量。",
+      "whyQuestion": "为什么先算36×2，而不是先用36减20？",
+      "counterexamplePrompt": "已有贴纸超过需求时，还要继续买负数张贴纸吗？",
+      "predictionFocus": "做36份礼物，每份2张贴纸，先算什么？",
+      "retell": "为什么先算36×2，而不是先用36减20？"
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -22314,7 +22454,7 @@
         "modelStatus": "static-review"
       }
     ],
-    "retellPrompt": "举出两个看起来不同但都用“每份×份数−已有”的问题。",
+    "retellPrompt": "为什么先算36×2，而不是先用36减20？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -22794,7 +22934,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -22835,7 +22975,11 @@
       "discovery": [
         "逐个固定第一种选择，再把第二步走完，就能解释为什么用乘法。"
       ],
-      "retell": "为什么表格每一格只代表一种搭配？",
+      "observedEvidence": "固定一件上衣，配完三种裤子，再换另一件上衣。",
+      "whyQuestion": "按这个顺序为什么每套只记一次，还不会漏？",
+      "counterexamplePrompt": "只挑一件衣服，与上衣裤子各挑一件，为什么不是同一种问题？",
+      "predictionFocus": "固定一件上衣，需要配几种裤子？",
+      "retell": "按这个顺序为什么每套只记一次，还不会漏？",
       "storyVisual": {
         "type": "outfits",
         "title": "2种上衣、3种裤子",
@@ -22944,7 +23088,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "为什么表格每一格只代表一种搭配？",
+    "retellPrompt": "按这个顺序为什么每套只记一次，还不会漏？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -23430,7 +23574,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -23467,11 +23611,15 @@
         "沿对称轴对折",
         "对应点、对应边重合"
       ],
-      "story": "剪一张左右两边相同的窗花，怎样少画一半又保证形状一致？",
+      "story": "Kevin想剪左右相同的窗花。先用正方形、长方形纸试一试：沿选定的线对折，两边能完全重合吗？弄清后再用同样的方法检验窗花。",
       "discovery": [
         "对折使对应两边重合，提供可操作的判定；看起来均衡不等于数学对称。"
       ],
-      "retell": "为什么面积各一半还不能证明轴对称？",
+      "observedEvidence": "对照折痕两侧对应的点和边，观察对折后是否重合。",
+      "whyQuestion": "为什么两边面积一样，还不能证明轴对称？",
+      "counterexamplePrompt": "把长方形沿对角线折，面积平分了，所有边都重合了吗？",
+      "predictionFocus": "左右看着差不多，就一定对称吗？",
+      "retell": "为什么两边面积一样，还不能证明轴对称？",
       "storyVisual": {
         "type": "symmetry",
         "title": "沿中间折痕对折的窗花",
@@ -23572,14 +23720,14 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "为什么面积各一半还不能证明轴对称？",
+    "retellPrompt": "为什么两边面积一样，还不能证明轴对称？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "把问题放进一个真实故事",
         "paragraphs": [
-          "剪一张左右两边相同的窗花，怎样少画一半又保证形状一致？",
+          "Kevin想剪左右相同的窗花。先用正方形、长方形纸试一试：沿选定的线对折，两边能完全重合吗？弄清后再用同样的方法检验窗花。",
           "对折使对应两边重合，提供可操作的判定；看起来均衡不等于数学对称。"
         ]
       },
@@ -24063,7 +24211,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -24100,11 +24248,15 @@
         "平移：各点同方向、同距离",
         "旋转：围绕同一个中心转"
       ],
-      "story": "抽屉拉开和风车转动都在动，它们按同一种方式动吗？",
+      "story": "抽屉拉开与风车转动，都是位置变化。用纸箭头代替它们：先保持朝向向右滑，再绕尾端转动，这两种动作有什么不同？",
       "discovery": [
         "记录运动方式能预测每个部分去哪里；平移保持朝向，旋转围绕中心改变朝向。"
       ],
-      "retell": "用一支铅笔演示平移与旋转，说明固定了什么、改变了什么。",
+      "observedEvidence": "跟踪箭头尖和尾；比较一起滑动与绕尾端转动。",
+      "whyQuestion": "为什么都是换了位置，平移和旋转仍是不同动作？",
+      "counterexamplePrompt": "只看最终中心位置，能知道物体有没有转过吗？",
+      "predictionFocus": "抽屉拉开和风车转动，方向都不变吗？",
+      "retell": "为什么都是换了位置，平移和旋转仍是不同动作？",
       "storyVisual": {
         "type": "movement",
         "title": "抽屉拉开与风车转动",
@@ -24205,14 +24357,14 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "用一支铅笔演示平移与旋转，说明固定了什么、改变了什么。",
+    "retellPrompt": "为什么都是换了位置，平移和旋转仍是不同动作？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "把问题放进一个真实故事",
         "paragraphs": [
-          "抽屉拉开和风车转动都在动，它们按同一种方式动吗？",
+          "抽屉拉开与风车转动，都是位置变化。用纸箭头代替它们：先保持朝向向右滑，再绕尾端转动，这两种动作有什么不同？",
           "记录运动方式能预测每个部分去哪里；平移保持朝向，旋转围绕中心改变朝向。"
         ]
       },
@@ -24712,7 +24864,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -24753,7 +24905,11 @@
       "discovery": [
         "除法可以分计数单位；90÷3分的是9个十，所得3个十。"
       ],
-      "retell": "为什么96÷3可以分成两次平均分后再相加？",
+      "observedEvidence": "把9个十分给3人，保留每一捆的十张标签。",
+      "whyQuestion": "分得3个十，为什么不能把答案写成3张？",
+      "counterexamplePrompt": "进入96张情境：另有6张，也要分给同样3人吗？",
+      "predictionFocus": "90张纸平均分3人，可以先分9个十吗？",
+      "retell": "分得3个十，为什么不能把答案写成3张？",
       "storyVisual": {
         "type": "groups",
         "title": "90张纸，准备平分给3人",
@@ -24836,10 +24992,10 @@
         "variant": "G3-L02-B01",
         "title": "把几十、几百平均分",
         "prompt": "用位值理解口算除法，选合适近似数估商。",
-        "initialState": "9捆十张与6散张，3人框；每人分得数初始0。",
-        "learnerAction": "先分9捆，再分6张；将每人30与2合并。",
-        "observableChange": "96÷3=30+2=32，分的是相同总量给相同3份。",
-        "question": "为什么96÷3可以分成两次平均分后再相加？",
+        "initialState": "90张纸平均分给3人，每人多少张？",
+        "learnerAction": "分十捆再换成张数，检查每人一样多。",
+        "observableChange": "把9个十分给3人，保留每一捆的十张标签。",
+        "question": "分得3个十，为什么不能把答案写成3张？",
         "expectedExplanation": "除法可以分计数单位；90÷3分的是9个十，所得3个十。",
         "wrongActionFeedback": "把9÷3=3直接当3张时保留捆的十标签，追问3的单位。",
         "guidance": [
@@ -24928,7 +25084,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "为什么96÷3可以分成两次平均分后再相加？",
+    "retellPrompt": "分得3个十，为什么不能把答案写成3张？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -25425,7 +25581,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -25466,7 +25622,11 @@
       "discovery": [
         "剩下的高位单位仍属于总数，拆成低位后继续分能保证公平和完整。"
       ],
-      "retell": "用52颗糖解释商的13不是把两个无关数字拼起来。",
+      "observedEvidence": "把剩下的一捆拆成10颗，再和2颗一起分。",
+      "whyQuestion": "剩下的十为什么不能丢掉，必须换成一继续分？",
+      "counterexamplePrompt": "只发掉4捆就结束，52颗中还有多少没有分？",
+      "predictionFocus": "5捆十颗分4人，剩1捆怎么办？",
+      "retell": "剩下的十为什么不能丢掉，必须换成一继续分？",
       "storyVisual": {
         "type": "groups",
         "title": "52颗糖，准备平分给4人",
@@ -25589,7 +25749,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "用52颗糖解释商的13不是把两个无关数字拼起来。",
+    "retellPrompt": "剩下的十为什么不能丢掉，必须换成一继续分？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -26086,7 +26246,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -26127,7 +26287,11 @@
       "discovery": [
         "余数表示无法再凑出一份的部分；若还够一份，分配就没完成。"
       ],
-      "retell": "为什么“总量验算对”还不足以证明商余数写得对？",
+      "observedEvidence": "试试剩下5颗还能不能装一满袋，再乘加核对总数。",
+      "whyQuestion": "12袋余5也能加回53，为什么还不是装完的结果？",
+      "counterexamplePrompt": "余数恰好4颗时，仍可以说不能再装一袋吗？",
+      "predictionFocus": "53颗每4颗一袋，剩5颗算装完吗？",
+      "retell": "12袋余5也能加回53，为什么还不是装完的结果？",
       "storyVisual": {
         "type": "groups",
         "title": "53颗糖，每4颗装一袋",
@@ -26212,10 +26376,10 @@
         "variant": "G3-L02-B03",
         "title": "有剩余时",
         "prompt": "理解余数小于除数及被除数=商×除数+余数。",
-        "initialState": "53点每4点一袋，候选12袋余5与13袋余1。",
-        "learnerAction": "继续从余5圈出4点，再用乘加验回总数。",
-        "observableChange": "正确13袋余1；验算与余数小于4两项都满足。",
-        "question": "为什么“总量验算对”还不足以证明商余数写得对？",
+        "initialState": "53颗糖，每袋装4颗，能装几满袋，还余几颗？",
+        "learnerAction": "装到剩下的糖不够一袋，再核对总数。",
+        "observableChange": "试试剩下5颗还能不能装一满袋，再乘加核对总数。",
+        "question": "12袋余5也能加回53，为什么还不是装完的结果？",
         "expectedExplanation": "余数表示无法再凑出一份的部分；若还够一份，分配就没完成。",
         "wrongActionFeedback": "仅见12×4+5=53就判对时让孩子试余5还能不能再装一袋。",
         "guidance": [
@@ -26310,7 +26474,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "为什么“总量验算对”还不足以证明商余数写得对？",
+    "retellPrompt": "12袋余5也能加回53，为什么还不是装完的结果？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -26813,7 +26977,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -26854,7 +27018,11 @@
       "discovery": [
         "商的位值位置对应每人所得的百、十、个；没有十也必须记录。"
       ],
-      "retell": "102与12的区别，怎样用乘法验算立刻发现？",
+      "observedEvidence": "依次看每班的百、十、个位，十位留在原来的位置。",
+      "whyQuestion": "没有十可分，为什么仍要把商的十位0写出来？",
+      "counterexamplePrompt": "用12×4验回总数，能回到408本吗？",
+      "predictionFocus": "408本分4班，十位没有书，可以漏写商的十位吗？",
+      "retell": "没有十可分，为什么仍要把商的十位0写出来？",
       "storyVisual": {
         "type": "groups",
         "title": "408本书，准备平分给4班",
@@ -26977,7 +27145,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "102与12的区别，怎样用乘法验算立刻发现？",
+    "retellPrompt": "没有十可分，为什么仍要把商的十位0写出来？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -27475,7 +27643,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -27516,7 +27684,11 @@
       "discovery": [
         "层层分组的总份数是乘积；同一结构可按不同层级计数。"
       ],
-      "retell": "72÷3÷4中两个除数分别代表什么？"
+      "observedEvidence": "按箱数盒、按盒数杯，再把同一总量按层级分回。",
+      "whyQuestion": "为什么先算每箱杯数，或先算总盒数，得到同一总量？",
+      "counterexamplePrompt": "把每箱4盒当成所有箱总共4盒，漏掉了哪箱？",
+      "predictionFocus": "2箱、每箱4盒，共有几盒？",
+      "retell": "为什么先算每箱杯数，或先算总盒数，得到同一总量？"
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -27575,10 +27747,10 @@
         "variant": "G3-L02-B05",
         "title": "连乘连除：每箱、每盒、每个怎样对应",
         "prompt": "在多层等量组情境中构造连乘连除，并解释合并分组。",
-        "initialState": "72支、3箱每箱4盒的空层级图。",
-        "learnerAction": "在盒层数12个等份，然后逐箱逐盒分；两方法对照。",
-        "observableChange": "每盒6支，72÷3÷4与72÷(3×4)同量。",
-        "question": "72÷3÷4中两个除数分别代表什么？",
+        "initialState": "2箱杯子，每箱4盒，每盒6个，一共多少个？",
+        "learnerAction": "先选一层分组，再把杯子的总量连起来。",
+        "observableChange": "按箱数盒、按盒数杯，再把同一总量按层级分回。",
+        "question": "为什么先算每箱杯数，或先算总盒数，得到同一总量？",
         "expectedExplanation": "层层分组的总份数是乘积；同一结构可按不同层级计数。",
         "wrongActionFeedback": "把4理解成乘回盒数时标明当前量是每箱支数，目标是每盒支数。",
         "guidance": [
@@ -27679,7 +27851,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "72÷3÷4中两个除数分别代表什么？",
+    "retellPrompt": "为什么先算每箱杯数，或先算总盒数，得到同一总量？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -28169,7 +28341,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -28210,7 +28382,11 @@
       "discovery": [
         "第一题保持每份量，第二题保持总量；中间量决定运算顺序。"
       ],
-      "retell": "拿买本子与换包装两个问题解释：你先求的是单价还是总量？"
+      "observedEvidence": "买本子先看每本价格，换装箱先看全部本数。",
+      "whyQuestion": "为什么两题第一步不同：一题求单价，另一题求总量？",
+      "counterexamplePrompt": "改每箱本数时，总本数也跟着乘大，还是在装同一批书吗？",
+      "predictionFocus": "4本24元，要买7本，先找什么？",
+      "retell": "为什么两题第一步不同：一题求单价，另一题求总量？"
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -28269,10 +28445,10 @@
         "variant": "G3-L02-B06",
         "title": "归一与归总：先找哪个量没有变",
         "prompt": "区分单价不变和总量不变，选择先求每份还是总量。",
-        "initialState": "左表4本24元且同价，右表总24颗原每袋4颗，两个不变量明确。",
-        "learnerAction": "左圈单价列推7本费用；右圈总量列改每袋8颗求袋数。",
-        "observableChange": "左单价6得42元；右总24得3袋，不变量不同。",
-        "question": "拿买本子与换包装两个问题解释：你先求的是单价还是总量？",
+        "initialState": "4本同价本子24元，买7本多少钱？",
+        "learnerAction": "先求不变的单价；换分装方式时检查总量不变。",
+        "observableChange": "买本子先看每本价格，换装箱先看全部本数。",
+        "question": "为什么两题第一步不同：一题求单价，另一题求总量？",
         "expectedExplanation": "第一题保持每份量，第二题保持总量；中间量决定运算顺序。",
         "wrongActionFeedback": "两题都先除任意数时要求指出保持哪一列，若折扣条件变则暂停直接比例推算。",
         "guidance": [
@@ -28391,7 +28567,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "拿买本子与换包装两个问题解释：你先求的是单价还是总量？",
+    "retellPrompt": "为什么两题第一步不同：一题求单价，另一题求总量？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -28870,7 +29046,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -28911,7 +29087,11 @@
       "discovery": [
         "图形名称归纳共同结构；分类依据要能检验，而不只看摆放方向。"
       ],
-      "retell": "说出一个满足长方形定义却不是正方形的例子。",
+      "observedEvidence": "用边长和直角标记核对图形，不靠摆放方向。",
+      "whyQuestion": "正方形转斜了，为什么名称仍由边和角决定？",
+      "counterexamplePrompt": "只有四边一样长，就一定有四个直角吗？",
+      "predictionFocus": "把正方形斜着放，它还是正方形吗？",
+      "retell": "正方形转斜了，为什么名称仍由边和角决定？",
       "storyVisual": {
         "type": "frame-shapes",
         "title": "做相框之前，先看形状",
@@ -29014,7 +29194,7 @@
         "modelStatus": "static-review"
       }
     ],
-    "retellPrompt": "说出一个满足长方形定义却不是正方形的例子。",
+    "retellPrompt": "正方形转斜了，为什么名称仍由边和角决定？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -29524,7 +29704,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -29565,7 +29745,11 @@
       "discovery": [
         "围栏沿边界延伸，求的是线的总长度；不能用内部铺多少块地砖代替。"
       ],
-      "retell": "不看公式，用走一圈解释为什么长和宽的和还要乘2。",
+      "observedEvidence": "沿花坛外面四条边走一次，标记已经走过的边。",
+      "whyQuestion": "长加宽只走了两边，为什么一圈还要再有一份长加宽？",
+      "counterexamplePrompt": "铺满里面的小砖，数出的量可以直接当围栏米数吗？",
+      "predictionFocus": "买花坛围栏，要量里面还是外面一圈？",
+      "retell": "长加宽只走了两边，为什么一圈还要再有一份长加宽？",
       "storyVisual": {
         "type": "rectangle",
         "title": "花坛的里面与外边一圈",
@@ -29679,7 +29863,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "不看公式，用走一圈解释为什么长和宽的和还要乘2。",
+    "retellPrompt": "长加宽只走了两边，为什么一圈还要再有一份长加宽？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -30163,7 +30347,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -30200,11 +30384,15 @@
         "两个周长的和−2×接缝长",
         "4×3×2−2×3＝18（厘米）"
       ],
-      "story": "两个边长3厘米的方形相框并排拼成一块板，外面绕一圈需要24厘米吗？",
+      "story": "两块边长3厘米的实心正方形板，沿一条完整边紧紧拼在一起。外面绕一圈，还是两块原来的周长合计24厘米吗？",
       "discovery": [
         "拼接前共有两条相同的接缝边；拼接后它们都在内部，不属于外边界。"
       ],
-      "retell": "用两种颜色指出接缝为什么要减两次。",
+      "observedEvidence": "找出两块板上成为内部的两条接缝边。",
+      "whyQuestion": "为什么算外周长时，同一接缝长度要从两块原周长中各去一次？",
+      "counterexamplePrompt": "只减一条接缝，还有哪一块板的内部边被算进外圈？",
+      "predictionFocus": "两块方板拼在一起，共同的边还在外圈吗？",
+      "retell": "为什么算外周长时，同一接缝长度要从两块原周长中各去一次？",
       "storyVisual": {
         "type": "joined-squares",
         "title": "两个方形相框并排拼接",
@@ -30315,14 +30503,14 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "用两种颜色指出接缝为什么要减两次。",
+    "retellPrompt": "为什么算外周长时，同一接缝长度要从两块原周长中各去一次？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "把问题放进一个真实故事",
         "paragraphs": [
-          "两个边长3厘米的方形相框并排拼成一块板，外面绕一圈需要24厘米吗？",
+          "两块边长3厘米的实心正方形板，沿一条完整边紧紧拼在一起。外面绕一圈，还是两块原来的周长合计24厘米吗？",
           "拼接前共有两条相同的接缝边；拼接后它们都在内部，不属于外边界。"
         ]
       },
@@ -30808,7 +30996,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -30849,7 +31037,11 @@
       "discovery": [
         "围栏量边界长度，地砖覆盖内部；使用同样大小的方块才能公平比较覆盖量。"
       ],
-      "retell": "用花坛解释买围栏与买地砖分别需要知道什么。",
+      "observedEvidence": "用手沿红色外圈走，再指出绿色内部方格。",
+      "whyQuestion": "为什么同一幅花坛图，买围栏与买地砖要量不同地方？",
+      "counterexamplePrompt": "里面面积同样大的两个花坛，外圈长度一定一样吗？",
+      "predictionFocus": "铺地砖和装围栏，算的是同一种量吗？",
+      "retell": "为什么同一幅花坛图，买围栏与买地砖要量不同地方？",
       "storyVisual": {
         "type": "area-grid",
         "title": "花坛：外面围一圈，里面铺满",
@@ -30957,7 +31149,7 @@
         "modelStatus": "static-review"
       }
     ],
-    "retellPrompt": "用花坛解释买围栏与买地砖分别需要知道什么。",
+    "retellPrompt": "为什么同一幅花坛图，买围栏与买地砖要量不同地方？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -31453,7 +31645,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -31494,7 +31686,11 @@
       "discovery": [
         "每行6块、共4行，乘法缩短的是重复计数；长宽必须使用相同长度单位。"
       ],
-      "retell": "长方形每行6块方砖，共4行，为什么用6×4求总块数？",
+      "observedEvidence": "一行6块，共4行；每块覆盖1平方米。",
+      "whyQuestion": "为什么6×4既能求总块数，又能得到覆盖面积的数值？",
+      "counterexamplePrompt": "若每块不是1平方米，24块还能直接说成24平方米吗？",
+      "predictionFocus": "每行6块、4行，一共要数几份6？",
+      "retell": "为什么6×4既能求总块数，又能得到覆盖面积的数值？",
       "storyVisual": {
         "type": "area-grid",
         "title": "长6米、宽4米的地面",
@@ -31609,7 +31805,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "长方形每行6块方砖，共4行，为什么用6×4求总块数？",
+    "retellPrompt": "为什么6×4既能求总块数，又能得到覆盖面积的数值？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -32097,7 +32293,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -32138,7 +32334,11 @@
       "discovery": [
         "两条方向都细分为10格，所以总单位数是10×10；图形分割后总面积也要按覆盖部分相加减。"
       ],
-      "retell": "用10×10格解释100，并指出这里为什么不能只算一排。",
+      "observedEvidence": "先在1分米方纸的两个方向各数10厘米，再比较剪角前后覆盖量。",
+      "whyQuestion": "为什么1分米等于10厘米，1平方分米却包含100个平方厘米？",
+      "counterexamplePrompt": "只数第一排10格，其他9排的面积去哪了？",
+      "predictionFocus": "1分米方纸分成厘米小格，只有10格吗？",
+      "retell": "为什么1分米等于10厘米，1平方分米却包含100个平方厘米？",
       "storyVisual": {
         "type": "unit-square",
         "title": "边长1分米的方纸",
@@ -32255,7 +32455,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "用10×10格解释100，并指出这里为什么不能只算一排。",
+    "retellPrompt": "为什么1分米等于10厘米，1平方分米却包含100个平方厘米？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -32751,7 +32951,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -32792,7 +32992,37 @@
       "discovery": [
         "数据是针对问题收集的记录；规则含糊会让统计结果无法解释。"
       ],
-      "retell": "为什么一次只能选一个与可以多选的票数不能直接比较？"
+      "observedEvidence": "每个姓名只投一票，核对投过的人和总票数。",
+      "whyQuestion": "为什么要先约定单选规则，才能解释哪地最受欢迎？",
+      "counterexamplePrompt": "让一个人投三票，却仍说票数就是人数，哪里不对应了？",
+      "predictionFocus": "调查大家最想去哪里，每人能随意多选吗？",
+      "retell": "为什么要先约定单选规则，才能解释哪地最受欢迎？",
+      "storyVisual": {
+        "type": "vote-board",
+        "title": "每个人一票，选一个目的地",
+        "caption": "18个人都按同一单选规则投票。各地票数暂时未知。",
+        "values": [
+          18
+        ],
+        "labels": [
+          "公园",
+          "科技馆",
+          "图书馆"
+        ]
+      },
+      "predictionVisual": {
+        "type": "vote-board",
+        "title": "每个人一票，选一个目的地",
+        "caption": "18个人都按同一单选规则投票。各地票数暂时未知。",
+        "values": [
+          18
+        ],
+        "labels": [
+          "公园",
+          "科技馆",
+          "图书馆"
+        ]
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -32885,7 +33115,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "为什么一次只能选一个与可以多选的票数不能直接比较？",
+    "retellPrompt": "为什么要先约定单选规则，才能解释哪地最受欢迎？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -33361,6 +33591,19 @@
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
+    "introVisual": {
+      "type": "vote-board",
+      "title": "每个人一票，选一个目的地",
+      "caption": "18个人都按同一单选规则投票。各地票数暂时未知。",
+      "values": [
+        18
+      ],
+      "labels": [
+        "公园",
+        "科技馆",
+        "图书馆"
+      ]
+    },
     "textbookUnit": {
       "id": "G3-L05",
       "title": "数据的收集与整理",
@@ -33376,7 +33619,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -33417,7 +33660,51 @@
       "discovery": [
         "分类减少零散信息，但每条记录应恰好落入一组；结论不能超出数据范围。"
       ],
-      "retell": "给出一组有重复边界的分类，再亲自修正。"
+      "observedEvidence": "把8条分钟记录各放一组，重点检查10和20的边界。",
+      "whyQuestion": "为什么每条记录必须只进一个组，分类才不重不漏？",
+      "counterexamplePrompt": "让10同时进0—10和10—19，两组相加还能等于8条吗？",
+      "predictionFocus": "10分钟放在0—9分钟组，还是10—19分钟组？",
+      "retell": "为什么每条记录必须只进一个组，分类才不重不漏？",
+      "storyVisual": {
+        "type": "data-cards",
+        "title": "把阅读时长卡各放进一个组",
+        "caption": "先看8条原始记录；10分钟该去哪组，要由你判断。",
+        "values": [
+          5,
+          8,
+          10,
+          12,
+          15,
+          18,
+          20,
+          22
+        ],
+        "labels": [
+          "0—9分钟",
+          "10—19分钟",
+          "20分钟及以上"
+        ]
+      },
+      "predictionVisual": {
+        "type": "data-cards",
+        "title": "把阅读时长卡各放进一个组",
+        "caption": "先看8条原始记录；10分钟该去哪组，要由你判断。",
+        "values": [
+          5,
+          8,
+          10,
+          12,
+          15,
+          18,
+          20,
+          22
+        ],
+        "labels": [
+          "0—9分钟",
+          "10—19分钟",
+          "20分钟及以上"
+        ]
+      }
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -33528,7 +33815,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "给出一组有重复边界的分类，再亲自修正。",
+    "retellPrompt": "为什么每条记录必须只进一个组，分类才不重不漏？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -34000,6 +34287,26 @@
       "browser": "inventory-and-flow-20261008",
       "teaching": "awaiting-kevin-trial"
     },
+    "introVisual": {
+      "type": "data-cards",
+      "title": "把阅读时长卡各放进一个组",
+      "caption": "先看8条原始记录；10分钟该去哪组，要由你判断。",
+      "values": [
+        5,
+        8,
+        10,
+        12,
+        15,
+        18,
+        20,
+        22
+      ],
+      "labels": [
+        "0—9分钟",
+        "10—19分钟",
+        "20分钟及以上"
+      ]
+    },
     "textbookUnit": {
       "id": "G3-L05",
       "title": "数据的收集与整理",
@@ -34015,7 +34322,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -34056,7 +34363,11 @@
       "discovery": [
         "月份长度并不相同，日历把日期组织为共同规则；学习使用规则，不编造未经证实的历史起源。"
       ],
-      "retell": "用两个连续日期说明“经过一天”为什么会涉及两个日期。",
+      "observedEvidence": "切换月份和年份，比较月底的最后一个日期。",
+      "whyQuestion": "为什么不能把一张30天月历复制给每个月？",
+      "counterexamplePrompt": "2023年二月28日的下一天，与2024年同一天的下一天一样吗？",
+      "predictionFocus": "每个月都填30天，会出错吗？",
+      "retell": "为什么不能把一张30天月历复制给每个月？",
       "storyVisual": {
         "type": "calendar",
         "title": "两张真实的二月月历",
@@ -34164,7 +34475,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "用两个连续日期说明“经过一天”为什么会涉及两个日期。",
+    "retellPrompt": "为什么不能把一张30天月历复制给每个月？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -34659,7 +34970,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -34696,11 +35007,15 @@
         "下午3点＝15:00",
         "1小时＝60分钟；时长量两时刻之间的间隔"
       ],
-      "story": "下午开始的活动写“3点”，别人会不会误以为凌晨？",
+      "story": "活动写“下午3点”，用24时计时怎样避免误会？再看另一次活动：15:20开始、16:05结束。沿同一天的时间线，它经过多久？",
       "discovery": [
         "同一天的时针绕两圈，用0至24小时刻度能消除歧义；时刻与经过多久是不同量。"
       ],
-      "retell": "为什么午夜前后不能只比较钟上数字大小？",
+      "observedEvidence": "先认下午3点的位置，再从15:20走到16:05。",
+      "whyQuestion": "时钟上从20分到5分，为什么不是只做5−20求时长？",
+      "counterexamplePrompt": "先走到16:00再走5分钟，能用两段间隔检查吗？",
+      "predictionFocus": "下午3点写成03:00，别人会误会吗？",
+      "retell": "时钟上从20分到5分，为什么不是只做5−20求时长？",
       "storyVisual": {
         "type": "timeline",
         "title": "一天里的上午与下午",
@@ -34816,14 +35131,14 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "为什么午夜前后不能只比较钟上数字大小？",
+    "retellPrompt": "时钟上从20分到5分，为什么不是只做5−20求时长？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "把问题放进一个真实故事",
         "paragraphs": [
-          "下午开始的活动写“3点”，别人会不会误以为凌晨？",
+          "活动写“下午3点”，用24时计时怎样避免误会？再看另一次活动：15:20开始、16:05结束。沿同一天的时间线，它经过多久？",
           "同一天的时针绕两圈，用0至24小时刻度能消除歧义；时刻与经过多久是不同量。"
         ]
       },
@@ -35306,7 +35621,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -35347,7 +35662,11 @@
       "discovery": [
         "每过7天回到同一星期位置；余下几天决定最终变化。"
       ],
-      "retell": "说清“第15天”与“过15天”为什么可能指不同日期。",
+      "observedEvidence": "从1日出发，走7天回同一星期，再走到15日。",
+      "whyQuestion": "为什么15日与1日相隔14天，而不是15天？",
+      "counterexamplePrompt": "把“第15日”当“从1日再过15天”，终点会差几天？",
+      "predictionFocus": "1日是周二，15日和1日相隔几天？",
+      "retell": "为什么15日与1日相隔14天，而不是15天？",
       "storyVisual": {
         "type": "week-calendar",
         "title": "某月1日是星期二",
@@ -35449,7 +35768,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "说清“第15天”与“过15天”为什么可能指不同日期。",
+    "retellPrompt": "为什么15日与1日相隔14天，而不是15天？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -35960,7 +36279,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -36001,7 +36320,11 @@
       "discovery": [
         "十进制可以继续向小于1的单位延伸，小数点把整数部分与不足1的部分分开。"
       ],
-      "retell": "1.3与1.03都含1和3，为什么长短不同？",
+      "observedEvidence": "对照1米后面的3分米与3厘米，认清3所在的单位。",
+      "whyQuestion": "两个数都有1和3，为什么1.3米比1.03米长？",
+      "counterexamplePrompt": "把十分位的3挪到百分位，实际量还相等吗？",
+      "predictionFocus": "1米3分米写成1.03米，对吗？",
+      "retell": "两个数都有1和3，为什么1.3米比1.03米长？",
       "storyVisual": {
         "type": "length-comparison",
         "title": "1米3分米的纸条",
@@ -36120,7 +36443,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "1.3与1.03都含1和3，为什么长短不同？",
+    "retellPrompt": "两个数都有1和3，为什么1.3米比1.03米长？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -36606,7 +36929,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -36647,7 +36970,11 @@
       "discovery": [
         "书写位数更多不一定代表数量更大；需把不同写法放回相同单位。"
       ],
-      "retell": "为什么0.85位数更多，却比0.9小？",
+      "observedEvidence": "把两种米的小数写法放到同一厘米尺度上。",
+      "whyQuestion": "0.85写的数字更多，为什么仍比0.9小？",
+      "counterexamplePrompt": "只比较85与9，是否把百分之一米和十分之一米混在一起了？",
+      "predictionFocus": "0.85数字更多，就一定比0.9大吗？",
+      "retell": "0.85写的数字更多，为什么仍比0.9小？",
       "storyVisual": {
         "type": "length-comparison",
         "title": "在同一把米尺上比较跳高",
@@ -36767,7 +37094,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "为什么0.85位数更多，却比0.9小？",
+    "retellPrompt": "0.85写的数字更多，为什么仍比0.9小？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -37271,7 +37598,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -37312,7 +37639,11 @@
       "discovery": [
         "元要和元相加，角要和角相加；小数点对齐是单位对齐的简写。"
       ],
-      "retell": "小数加减和整数加减，共用什么道理？"
+      "observedEvidence": "把元对元、角对角，10角换1元后再找零。",
+      "whyQuestion": "为什么小数点对齐，就是把相同货币单位对齐？",
+      "counterexamplePrompt": "把3.8的8角与2.5的2元相加，还是同一种量吗？",
+      "predictionFocus": "3.8元与2.5元相加，8和5代表什么？",
+      "retell": "为什么小数点对齐，就是把相同货币单位对齐？"
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -37395,7 +37726,7 @@
         "modelStatus": "static-review"
       }
     ],
-    "retellPrompt": "小数加减和整数加减，共用什么道理？",
+    "retellPrompt": "为什么小数点对齐，就是把相同货币单位对齐？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -37866,7 +38197,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -37903,11 +38234,15 @@
         "24×2÷12＝4（包）",
         "4×6＝24（元）；15:10到15:50是40分钟"
       ],
-      "story": "24人做手工，每人2张纸，纸每包12张6元；活动15:10至15:50。怎样做简明计划？",
+      "story": "24人做手工，每人2张纸，每包12张、6元，需要买齐材料（这一题不另给库存）。活动从15:10到15:50。分别需要几包、多少钱、多少分钟？",
       "discovery": [
         "一个真实计划包含多个不同结构，先定义要回答的问题，才能选择合适运算。"
       ],
-      "retell": "这个计划中，哪一步用了归一或分组，哪一步用了时间间隔？"
+      "observedEvidence": "在计划表分开写需求、已有材料、补购和活动起止时间。",
+      "whyQuestion": "为什么先求总张数，再算购买包数，不能把人数直接除每包张数？",
+      "counterexamplePrompt": "把活动结束时刻当成活动时长，会混淆哪两种量？",
+      "predictionFocus": "24人每人2张，每包12张，能直接用24÷12求包数吗？",
+      "retell": "为什么先求总张数，再算购买包数，不能把人数直接除每包张数？"
     },
     "contentSource": "grade3-complete",
     "editorialStatus": "review-required",
@@ -37962,7 +38297,7 @@
         "variant": "G3-L07-R01",
         "title": "给一次班级活动做完整计划",
         "prompt": "综合处理预算、平均分、周长面积与时间，解释各量意义。",
-        "initialState": "24人每人2张纸，每包12张6元，库存1包；计划表分需求/补购/费用。",
+        "initialState": "24人每人2张纸，每包12张6元；本题不另给库存，分别求总需求、购买费用和时长。",
         "learnerAction": "自行填中间量并选择所需数据，不提供运算名称。",
         "observableChange": "需48张4包，补3包18元；每行量义清楚。",
         "question": "这个计划中，哪一步用了归一或分组，哪一步用了时间间隔？",
@@ -37990,14 +38325,14 @@
         "modelStatus": "static-review"
       }
     ],
-    "retellPrompt": "这个计划中，哪一步用了归一或分组，哪一步用了时间间隔？",
+    "retellPrompt": "为什么先求总张数，再算购买包数，不能把人数直接除每包张数？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "把问题放进一个真实故事",
         "paragraphs": [
-          "24人做手工，每人2张纸，纸每包12张6元；活动15:10至15:50。怎样做简明计划？",
+          "24人做手工，每人2张纸，每包12张、6元，需要买齐材料（这一题不另给库存）。活动从15:10到15:50。分别需要几包、多少钱、多少分钟？",
           "一个真实计划包含多个不同结构，先定义要回答的问题，才能选择合适运算。"
         ]
       },
@@ -38477,7 +38812,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -38518,7 +38853,11 @@
       "discovery": [
         "两份名单相加时，重叠的人被数两遍；总人数只应该计每人一次。"
       ],
-      "retell": "用同学名单解释为什么共同参加者不能被删光。",
+      "observedEvidence": "跟踪共同3人的姓名卡，看看他们在两份名单各出现一次。",
+      "whyQuestion": "为什么加两组人数后只减共同人数一次，不能两次都删掉？",
+      "counterexamplePrompt": "如果减去两份共同人数，这3个人还被保留在总人数里吗？",
+      "predictionFocus": "两个组都参加的人，相加时被数了几次？",
+      "retell": "为什么加两组人数后只减共同人数一次，不能两次都删掉？",
       "storyVisual": {
         "type": "overlapping-sets",
         "title": "两个小组里有相同的人",
@@ -38647,7 +38986,7 @@
         "modelStatus": "registered"
       }
     ],
-    "retellPrompt": "用同学名单解释为什么共同参加者不能被删光。",
+    "retellPrompt": "为什么加两组人数后只减共同人数一次，不能两次都删掉？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -39136,7 +39475,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -39229,14 +39568,14 @@
         "explanation": "先把材料相加，再把重复计算的搭接段减一次；搭得越多，伸出去的总长越短。"
       }
     ],
-    "retellPrompt": "指着图讲：55厘米表示什么？47厘米表示什么？为什么8厘米只减一次？",
+    "retellPrompt": "材料30＋25没变，为什么搭得越多端到端越短？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "先看清楚：题目到底量的是哪一段",
         "paragraphs": [
-          "30厘米和25厘米两块木板搭在一起，为什么端到端不是55厘米？",
+          "甲木板30厘米、乙木板25厘米，开始重叠8厘米。两块搭接后，从最左端到最右端长多少？再拖动乙板，搭接变多或变少，总长怎样变化？",
           "先用手指指出最左端、最右端；遇到拼接，还要指出接头。没有指出对象以前，先不列算式。"
         ]
       },
@@ -39624,11 +39963,15 @@
         "总长＝两块板长的和−搭接长度",
         "材料没有变长，搭得越多，端到端越短"
       ],
-      "story": "30厘米和25厘米两块木板搭在一起，为什么端到端不是55厘米？",
+      "story": "甲木板30厘米、乙木板25厘米，开始重叠8厘米。两块搭接后，从最左端到最右端长多少？再拖动乙板，搭接变多或变少，总长怎样变化？",
       "discovery": [
         "先把材料相加，再把重复计算的搭接段减一次；搭得越多，伸出去的总长越短。"
       ],
-      "retell": "指着图讲：55厘米表示什么？47厘米表示什么？为什么8厘米只减一次？"
+      "observedEvidence": "指着重叠段，再找拼好后最左与最右的端点。",
+      "whyQuestion": "材料30＋25没变，为什么搭得越多端到端越短？",
+      "counterexamplePrompt": "把重叠8厘米减两次，会把已保留的一段也删掉吗？",
+      "predictionFocus": "搭接部分在30＋25里面被算了几次？",
+      "retell": "材料30＋25没变，为什么搭得越多端到端越短？"
     },
     "textbookUnit": {
       "id": "G3-U03",
@@ -39645,7 +39988,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -39736,7 +40079,7 @@
         "explanation": "第一个环保留40毫米；以后每添一个环，只增加40−5−5＝30毫米。4个环总长130毫米。"
       }
     ],
-    "retellPrompt": "讲清三个数：40毫米是什么，10毫米是什么，为什么4个环只有3处接头。",
+    "retellPrompt": "每添一个环，为什么只多一个接头；它为什么少伸出两段厚度？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -40103,7 +40446,11 @@
       "discovery": [
         "第一个环保留40毫米；以后每添一个环，只增加40−5−5＝30毫米。4个环总长130毫米。"
       ],
-      "retell": "讲清三个数：40毫米是什么，10毫米是什么，为什么4个环只有3处接头。"
+      "observedEvidence": "从第一个环开始，逐个添环，放大相邻环的接头。",
+      "whyQuestion": "每添一个环，为什么只多一个接头；它为什么少伸出两段厚度？",
+      "counterexamplePrompt": "4个环按顺序相扣，最后一个还需要接回第一个吗？",
+      "predictionFocus": "4个环扣起来，有4处接头吗？",
+      "retell": "每添一个环，为什么只多一个接头；它为什么少伸出两段厚度？"
     },
     "textbookUnit": {
       "id": "G3-U03",
@@ -40120,7 +40467,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -40209,14 +40556,14 @@
         "explanation": "24÷4＝6得到的是间隔数。直线有7个端点；圆环末点回到起点，只有6个不同标记。"
       }
     ],
-    "retellPrompt": "不用背口诀，画出2段直线和2段闭环，讲清楚点数为什么不同。",
+    "retellPrompt": "6段拉直有7点，接成环后为什么最后一点不能再算一个新点？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "先看清楚：题目到底量的是哪一段",
         "paragraphs": [
-          "24米绳每4米做一个标记，拉直与接成环，标记数为什么相差1？",
+          "24米绳每4米一段。拉直时从起点开始标记，两端都做标记；接成环时，首尾是同一个标记。两种形状各有多少个不同标记？",
           "先用手指指出最左端、最右端；遇到拼接，还要指出接头。没有指出对象以前，先不列算式。"
         ]
       },
@@ -40571,11 +40918,15 @@
         "24÷4＝6（段）",
         "直线：6＋1个点；闭环：6个不同点"
       ],
-      "story": "24米绳每4米做一个标记，拉直与接成环，标记数为什么相差1？",
+      "story": "24米绳每4米一段。拉直时从起点开始标记，两端都做标记；接成环时，首尾是同一个标记。两种形状各有多少个不同标记？",
       "discovery": [
         "24÷4＝6得到的是间隔数。直线有7个端点；圆环末点回到起点，只有6个不同标记。"
       ],
-      "retell": "不用背口诀，画出2段直线和2段闭环，讲清楚点数为什么不同。"
+      "observedEvidence": "按间隔走一遍，比较最后一点是不是起点。",
+      "whyQuestion": "6段拉直有7点，接成环后为什么最后一点不能再算一个新点？",
+      "counterexamplePrompt": "如果直绳两端不做标记，还能直接说一定有7个标记吗？",
+      "predictionFocus": "6段直线间隔和6段闭环，标记数一样吗？",
+      "retell": "6段拉直有7点，接成环后为什么最后一点不能再算一个新点？"
     },
     "textbookUnit": {
       "id": "G3-U03",
@@ -40592,7 +40943,7 @@
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -40948,14 +41299,14 @@
         }
       ]
     },
-    "retellPrompt": "请用彩带说明2/6是什么意思：哪一个数告诉我们分了几份？哪一个数告诉我们拿了几份？为什么必须每份一样长？",
+    "retellPrompt": "格子名字变了，为什么送给朋友的彩带长度没变？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "Kevin 和朋友一起做书签",
         "paragraphs": [
-          "桌上有一条1米长的彩带。Kevin 把它分成6段，每段一样长，再拿其中2段给朋友做书签。",
+          "一条1米彩带平均分成6小份，其中2小份送给朋友。把原长对齐，再把每2小份看作1大份，送出的部分还是同一段。它的份额可以怎样换一种说法？",
           "朋友问：“你拿了整条彩带的多少？”说“1条”太多，说“0条”又没有算上已经拿走的部分。我们需要一种数，能说清“不到一整条”。"
         ],
         "diagram": "ribbon"
@@ -41076,16 +41427,20 @@
         "同一条彩带：2/6＝1/3",
         "分母记等分总份数，分子记取走份数"
       ],
-      "story": "桌上有一条1米长的彩带。Kevin 把它分成6段，每段一样长，再拿其中2段给朋友做书签。",
+      "story": "一条1米彩带平均分成6小份，其中2小份送给朋友。把原长对齐，再把每2小份看作1大份，送出的部分还是同一段。它的份额可以怎样换一种说法？",
       "discovery": [
         "先确定同一个整体，再平均分。合并小份改变份数名称，不改变已经取出的长度。"
       ],
-      "retell": "请用彩带说明2/6是什么意思：哪一个数告诉我们分了几份？哪一个数告诉我们拿了几份？为什么必须每份一样长？"
+      "observedEvidence": "对齐原来整条彩带，比较2小份合成1大份的同一段。",
+      "whyQuestion": "格子名字变了，为什么送给朋友的彩带长度没变？",
+      "counterexamplePrompt": "换一条不同长的彩带，1/3就一定与原来的2/6一样长吗？",
+      "predictionFocus": "同一条彩带的2小份合成1大份，拿走的长度变了吗？",
+      "retell": "格子名字变了，为什么送给朋友的彩带长度没变？"
     }
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -41439,14 +41794,14 @@
         }
       ]
     },
-    "retellPrompt": "请指着图说一说：买地垫时数哪里？准备绳子时量哪里？为什么中间的接缝不算进绳子的长度？",
+    "retellPrompt": "为什么地垫接缝不算要绕的绳子，地垫本身却要全部数？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "Kevin，帮教室布置一个阅读角吧",
         "paragraphs": [
-          "老师想在教室空地上铺一片正方形地垫，大家可以坐在上面看书。地垫摆成3排，每排4块，紧紧挨着，没有空隙，也不重叠。",
+          "地垫摆成3排、每排4块，没有空隙和重叠。用边长1厘米的方纸做缩小模型：数里面的方块，再沿最外一圈量长度。为什么铺地垫与绕绳子量的是两种不同的量？",
           "铺好以后，还要用一根绳子贴着地垫的最外面围一圈，标出阅读角的范围。绳子只走外圈，不穿过地垫中间的接缝。",
           "现在要准备两样东西：地垫要买几块？绳子要多长？先看下面这张从上往下看的图。"
         ],
@@ -41579,16 +41934,20 @@
         "3×4记录方格数",
         "4＋3＋4＋3记录外边界长度"
       ],
-      "story": "老师想在教室空地上铺一片正方形地垫，大家可以坐在上面看书。地垫摆成3排，每排4块，紧紧挨着，没有空隙，也不重叠。",
+      "story": "地垫摆成3排、每排4块，没有空隙和重叠。用边长1厘米的方纸做缩小模型：数里面的方块，再沿最外一圈量长度。为什么铺地垫与绕绳子量的是两种不同的量？",
       "discovery": [
         "面积数里面的单位方格，周长量外边界。拼接后的内部接缝不属于外边界。"
       ],
-      "retell": "请指着图说一说：买地垫时数哪里？准备绳子时量哪里？为什么中间的接缝不算进绳子的长度？"
+      "observedEvidence": "数里面12块地垫，再沿最外一圈走，不沿内部接缝走。",
+      "whyQuestion": "为什么地垫接缝不算要绕的绳子，地垫本身却要全部数？",
+      "counterexamplePrompt": "把每条接缝也算进外圈，绳子会跑到地垫里面吗？",
+      "predictionFocus": "中间两块地垫的接缝，要绕绳子吗？",
+      "retell": "为什么地垫接缝不算要绕的绳子，地垫本身却要全部数？"
     }
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -41892,7 +42251,7 @@
         }
       ]
     },
-    "retellPrompt": "每盒都有一袋糖和2颗散糖，三盒为什么不能只记“3袋糖＋2颗”？请指着每个盒子说明。",
+    "retellPrompt": "为什么三盒不仅有三袋糖，还要有三份2颗散糖？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -42034,12 +42393,16 @@
       "discovery": [
         "每盒都是完整的“乙＋2”。三盒既有三袋糖，也有三份2颗散糖。"
       ],
-      "retell": "每盒都有一袋糖和2颗散糖，三盒为什么不能只记“3袋糖＋2颗”？请指着每个盒子说明。"
+      "observedEvidence": "把每盒的一袋糖加2颗整体替换，并保留三盒框。",
+      "whyQuestion": "为什么三盒不仅有三袋糖，还要有三份2颗散糖？",
+      "counterexamplePrompt": "写3袋＋2颗，只记了哪一盒外面的散糖？",
+      "predictionFocus": "3盒各有一袋糖和2颗散糖，总数能写3袋＋2颗吗？",
+      "retell": "为什么三盒不仅有三袋糖，还要有三份2颗散糖？"
     }
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -42350,14 +42713,14 @@
         }
       ]
     },
-    "retellPrompt": "为什么从左边拿走3颗时，右边也要拿走3颗？如果只拿左边，两边还会一样多吗？",
+    "retellPrompt": "为什么一边拿走3颗，另一边也必须拿走3颗？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "老师给了一个线索",
         "paragraphs": [
-          "Kevin 面前有一袋糖，袋外还放着3颗。老师说：“把袋里和袋外的糖合起来，一共有10颗。”",
+          "一袋糖加袋外3颗，合起来与10颗散糖一样多。把袋和3颗放左盘、10颗放右盘：两盘同时拿走3颗，怎样找到袋里的颗数？",
           "袋子不打开，怎么知道袋里有多少颗？我们在右边摆10颗糖，表示已知的总数。左边和右边的糖原来同样多。下面只比较颗数，不称袋子的重量。"
         ],
         "diagram": "candyEquality"
@@ -42492,16 +42855,20 @@
         "x＋3＝10",
         "两边减3：x＝7"
       ],
-      "story": "Kevin 面前有一袋糖，袋外还放着3颗。老师说：“把袋里和袋外的糖合起来，一共有10颗。”",
+      "story": "一袋糖加袋外3颗，合起来与10颗散糖一样多。把袋和3颗放左盘、10颗放右盘：两盘同时拿走3颗，怎样找到袋里的颗数？",
       "discovery": [
         "等量两边拿走同样多，剩下的仍相等；只动一边会破坏等量关系。"
       ],
-      "retell": "为什么从左边拿走3颗时，右边也要拿走3颗？如果只拿左边，两边还会一样多吗？"
+      "observedEvidence": "两盘同时拿走3颗，观察仍然一样多的剩余部分。",
+      "whyQuestion": "为什么一边拿走3颗，另一边也必须拿走3颗？",
+      "counterexamplePrompt": "只从左盘拿走，两边还一样多吗？",
+      "predictionFocus": "左边拿走3颗，右边需要怎样做？",
+      "retell": "为什么一边拿走3颗，另一边也必须拿走3颗？"
     }
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -42578,7 +42945,7 @@
         "scope": "生活中的数"
       }
     ],
-    "retellPrompt": "图里的苹果摆开了，为什么还是7个？再举一个例子，说说“3个”“第3个”和“3号”分别告诉我们什么。",
+    "retellPrompt": "苹果排得更长，为什么数量仍然是7个？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -43029,12 +43396,16 @@
       "discovery": [
         "一个物体只数一次，最后数到的数记录总量；只挪动位置不会改变总量。"
       ],
-      "retell": "图里的苹果摆开了，为什么还是7个？再举一个例子，说说“3个”“第3个”和“3号”分别告诉我们什么。"
+      "observedEvidence": "每个饭盒对应一个苹果，再把苹果摆开看看。",
+      "whyQuestion": "苹果排得更长，为什么数量仍然是7个？",
+      "counterexamplePrompt": "同一个苹果数两次，会让记录的数与实际总数有什么差别？",
+      "predictionFocus": "把7个苹果摆得更开，就有更多苹果吗？",
+      "retell": "苹果排得更长，为什么数量仍然是7个？"
     }
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -43117,14 +43488,14 @@
         "scope": "只在两组之间移动"
       }
     ],
-    "retellPrompt": "“从右篮挪1个到左篮”和“从厨房再拿1个放进左篮”，总数为什么不一样？请指着两篮苹果说明。",
+    "retellPrompt": "同样往左篮放1个，为什么挪过来和新拿来对总数的影响不同？",
     "articleBlocks": [
       {
         "blockId": "start",
         "type": "leadQuestion",
         "title": "把大家带来的苹果放在一起",
         "paragraphs": [
-          "Kevin 带来3个苹果，朋友带来2个，准备一起分享。两人各自知道带了多少，现在想知道合起来共有多少。",
+          "Kevin的篮子有3个苹果，朋友的篮子有2个，合起来有多少？从右篮挪1个到左篮，与从厨房新拿1个放进左篮，总数的变化一样吗？",
           "可以把所有苹果重新数一遍，也可以记住“两部分合在一起”这件事：3＋2＝5。加法帮助我们从各部分的数量，得到合起来的总数。"
         ],
         "diagram": "appleAddition"
@@ -43526,16 +43897,20 @@
         "3＋2＝5",
         "挪动不改总数；新添才增加总数"
       ],
-      "story": "Kevin 带来3个苹果，朋友带来2个，准备一起分享。两人各自知道带了多少，现在想知道合起来共有多少。",
+      "story": "Kevin的篮子有3个苹果，朋友的篮子有2个，合起来有多少？从右篮挪1个到左篮，与从厨房新拿1个放进左篮，总数的变化一样吗？",
       "discovery": [
         "加法记录两个部分合起来的总量。篮子之间挪动不添苹果，从外面新添才增加总数。"
       ],
-      "retell": "“从右篮挪1个到左篮”和“从厨房再拿1个放进左篮”，总数为什么不一样？请指着两篮苹果说明。"
+      "observedEvidence": "合并两篮苹果，分别比较篮间挪动与从外面新添。",
+      "whyQuestion": "同样往左篮放1个，为什么挪过来和新拿来对总数的影响不同？",
+      "counterexamplePrompt": "只看左篮变多，就能断定两篮总数也变多吗？",
+      "predictionFocus": "从一篮挪1个到另一篮，总数增加了吗？",
+      "retell": "同样往左篮放1个，为什么挪过来和新拿来对总数的影响不同？"
     }
   },
   {
     "schemaVersion": 3,
-    "editorialRevision": "2026-10-09.1",
+    "editorialRevision": "2026-10-09.2",
     "contentVersion": "2026-10-02.1",
     "status": "draft",
     "previewEnabled": true,
@@ -43618,7 +43993,7 @@
         "scope": "数值和两条等长单位图"
       }
     ],
-    "retellPrompt": "9−5可以表示两种不同的贴纸故事，请各讲一个。Kevin 和朋友各增加1张，为什么相差的张数没有变？",
+    "retellPrompt": "为什么送出的5加剩下的数量，应该回到原来的9？",
     "articleBlocks": [
       {
         "blockId": "start",
@@ -44000,7 +44375,11 @@
       "discovery": [
         "原来的数量等于送出的数量加剩下的数量；减法找到已知整体中的另一部分。"
       ],
-      "retell": "9−5可以表示两种不同的贴纸故事，请各讲一个。Kevin 和朋友各增加1张，为什么相差的张数没有变？"
+      "observedEvidence": "把9张分成送出的5张和留下的部分，再合回检查。",
+      "whyQuestion": "为什么送出的5加剩下的数量，应该回到原来的9？",
+      "counterexamplePrompt": "把送出的5张既算在原来一堆，又算在剩下的一堆，会重复哪部分？",
+      "predictionFocus": "9张贴纸送出5张，9被分成哪两部分？",
+      "retell": "为什么送出的5加剩下的数量，应该回到原来的9？"
     }
   }
 ]

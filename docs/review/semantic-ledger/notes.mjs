@@ -76,7 +76,9 @@ const rows = [
 ];
 export const semanticNotes = Object.fromEntries(rows.map(([id,invariant,nextInspection,issue])=>[id,{
  invariant,nextInspection,
- sourceReview:issue?'needs-refinement':'requires-chapter-verification',
+ sourceReview:issue?'refined-awaiting-chapter-verification':'requires-chapter-verification',
+ sourceFinding:issue?'initial-source-issue':'no-confirmed-source-issue',
+ resolution:issue?'2026-10-09.2：因果追问、条件过渡、静态减负或单位图补足；须逐章检查新截图与操作。':null,
  issues:issue?[issue]:[],
  classroomTrial:id==='G3-U01-B01'?'user-reported-trial-of-template':'not-verified',
 }]));
