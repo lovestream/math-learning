@@ -72,3 +72,18 @@ test('新全量证据按课回填且保留初查历史，不借开发验证代�
  const ledger=buildSemanticLedger();assert.equal(ledger.verificationSummary.desktopMath,70);assert.equal(ledger.verificationSummary.fullPaths,64);assert.equal(ledger.verificationSummary.staticRelations,6);assert.equal(ledger.verificationSummary.visualInspected,70);
  for(const row of ledger.rows){assert.equal(row.sourceReview,'chapter-desktop-reviewed');assert(row.initialSourceReview);assert.equal(row.verification.parentReviewed,'no');assert.equal(row.verification.learnerMastery,'no-data');for(const t of row.independentCheck.tasks){assert(['warmup','core','transfer','challenge','review'].includes(t.sourceSet));assert(/not-certified-unseen|not-personally-unseen/.test(t.novelty));}}
 });
+
+
+test('题库专项修订只复用未改课堂的原SHA证据，题目审校或课堂变化均失效',async()=>{
+ const evidence=JSON.parse(await readFile(new URL('../docs/review/semantic-ledger/desktop-verification.json',import.meta.url),'utf8'));
+ const accepted=buildSemanticLedger({evidence}).rows.find(r=>r.verification.evidence?.taskOnlyAmendment);
+ assert(accepted);const lesson=lessons.find(l=>l.lessonId===accepted.lessonId);
+ const find=source=>buildSemanticLedger({evidence:source}).rows.find(r=>r.lessonId===lesson.lessonId).verification.evidence;
+ assert.equal(find(evidence).sha,evidence.source.sha);
+ assert.equal(find({...evidence,source:{...evidence.source,sha:'f'.repeat(40)}}),null);
+ const originalStory=lesson.childClassroom.story;
+ try{lesson.childClassroom.story+=' changed classroom';assert.equal(find(evidence),null);}finally{lesson.childClassroom.story=originalStory;}
+ const task=Object.values(lesson.taskSets).flat()[0],originalHint=task.hint;
+ try{task.hint+=' unreviewed hint';assert.equal(find(evidence),null);}finally{task.hint=originalHint;}
+ assert(find(evidence));
+});

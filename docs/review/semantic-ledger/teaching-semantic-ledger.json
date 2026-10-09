@@ -63,7 +63,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "盒子与相机",
         "unit": "方向",
@@ -71,7 +71,7 @@
         "unknown": "不同站位的照片",
         "changes": "相机位置"
       },
-      "contentFingerprint": "a43994e6fd2ff22a883d7e2bb49cc5921a318cb12407276d523bb7bf99fa259a",
+      "contentFingerprint": "c88f10e69142679168508f11d405c32b640beae1cdc10a4589239f55380e8010",
       "story": {
         "text": "Kevin给朋友寄一个玩具盒。盒子前面是红圆点，右面是蓝菱形，上面是黄星星。朋友只收到一张照片，能知道你站在哪边拍的吗？",
         "figure": {
@@ -224,6 +224,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "a43994e6fd2ff22a883d7e2bb49cc5921a318cb12407276d523bb7bf99fa259a",
+            "currentContentFingerprint": "c88f10e69142679168508f11d405c32b640beae1cdc10a4589239f55380e8010",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-07.2",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -249,7 +257,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "两排积木",
         "unit": "块",
@@ -257,7 +265,7 @@
         "unknown": "单张照片能否确定总块数",
         "changes": "后排高度和视角"
       },
-      "contentFingerprint": "c1cc119d384778a90ed199b4a9efad4e3e153b0c31ff12314f25c6bc7f89cf2a",
+      "contentFingerprint": "5a2c0c36dd74b0498645286ec48db592ceda3d05c811edd3c22f8f2bd9b56736",
       "story": {
         "text": "前排竖着叠了2块积木，后排也可以放积木。机器人只从正前方拍照，后排完全被挡住了。它说“一共只有2块”，这个结论可靠吗？",
         "figure": {
@@ -407,6 +415,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "c1cc119d384778a90ed199b4a9efad4e3e153b0c31ff12314f25c6bc7f89cf2a",
+            "currentContentFingerprint": "5a2c0c36dd74b0498645286ec48db592ceda3d05c811edd3c22f8f2bd9b56736",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-07.2",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -432,7 +448,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "六面纸盒",
         "unit": "面／棱",
@@ -440,7 +456,7 @@
         "unknown": "2与4折后相邻还是相对",
         "changes": "折叠进度和视角"
       },
-      "contentFingerprint": "c2188325bc5c2d41a4db856020aa5e98d76ac1fab56e203d2d63b496d4cf3d03",
+      "contentFingerprint": "64e4f25930e5f3dcd9402548394e43f3bd30c8af0b8c1281b1a7516f41b73491",
       "story": {
         "text": "Kevin给正方体礼盒的六个面贴图案。纸盒摊开以后，几个面看上去离得很远；折回去后，它们会碰到同一条棱吗？拖动折叠滑条，跟着编号找答案。",
         "figure": {
@@ -590,6 +606,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B03-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B03-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B03-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "c2188325bc5c2d41a4db856020aa5e98d76ac1fab56e203d2d63b496d4cf3d03",
+            "currentContentFingerprint": "64e4f25930e5f3dcd9402548394e43f3bd30c8af0b8c1281b1a7516f41b73491",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-07.2",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -615,7 +639,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "公交乘客",
         "unit": "人",
@@ -840,7 +864,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B01-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -865,7 +890,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "散笔与盒装笔",
         "unit": "支／盒",
@@ -873,7 +898,7 @@
         "unknown": "总支数",
         "changes": "合并或先展开每盒"
       },
-      "contentFingerprint": "310f8819122907b0841fe855340b75ac007c31b6fd23148ff80bf14e5c65a713",
+      "contentFingerprint": "11c0bcf7beb064b4de9597c6e00bb5ce0cfdced05ed749dfbd5c006cac868980",
       "story": {
         "text": "文具店有4支散铅笔，又搬来3盒，每盒6支。一共有多少支铅笔？",
         "figure": {
@@ -1084,6 +1109,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "310f8819122907b0841fe855340b75ac007c31b6fd23148ff80bf14e5c65a713",
+            "currentContentFingerprint": "11c0bcf7beb064b4de9597c6e00bb5ce0cfdced05ed749dfbd5c006cac868980",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -1109,7 +1142,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "红蓝珠和盒子",
         "unit": "颗／盒",
@@ -1117,7 +1150,7 @@
         "unknown": "需要盒数",
         "changes": "先合并或先分装"
       },
-      "contentFingerprint": "25b185131d3fe172a3cae56be41935b86862372a1761e9bb626fc693725d3ca9",
+      "contentFingerprint": "eabeed836dcc5fcf56630430fd097e2160d3424ac29cc4e7d91aff4f6c665419",
       "story": {
         "text": "12颗红珠和8颗蓝珠混在一起，每4颗装一盒。需要多少盒？",
         "figure": {
@@ -1334,6 +1367,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B03-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B03-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B03-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "25b185131d3fe172a3cae56be41935b86862372a1761e9bb626fc693725d3ca9",
+            "currentContentFingerprint": "eabeed836dcc5fcf56630430fd097e2160d3424ac29cc4e7d91aff4f6c665419",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -1358,8 +1399,8 @@
           "status": "local-textbook-reference"
         }
       ],
-      "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "contentVersion": "2026-10-09.4",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "书架库存",
         "unit": "本",
@@ -1367,7 +1408,7 @@
         "unknown": "现在本数",
         "changes": "借还的顺序表达"
       },
-      "contentFingerprint": "afc2b81602e94b0093762b01a5c1aebcd8b0061f85d3659aaf76486c78c365e1",
+      "contentFingerprint": "48474dc225600c168018af477b82aeab68b9dd3dd87f4989aa816a9597ae4601",
       "story": {
         "text": "书架原有36本书，借走8本，又还回3本。现在有多少本？",
         "figure": {
@@ -1495,7 +1536,7 @@
           {
             "id": "G3-U02-B04.c2",
             "kind": "expression",
-            "prompt": "原有50元，买书用18元，又收到6元。写出求现在有多少钱的综合算式。",
+            "prompt": "原有50元，买书用18元，又收到6元。写出求现在有多少钱的综合算式。 请保留题目原来的数字，写出完整改写式；如果计算结果，把结果写在等号后。",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
@@ -1578,6 +1619,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B04-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B04-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B04-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "afc2b81602e94b0093762b01a5c1aebcd8b0061f85d3659aaf76486c78c365e1",
+            "currentContentFingerprint": "48474dc225600c168018af477b82aeab68b9dd3dd87f4989aa816a9597ae4601",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-09.4",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -1603,7 +1652,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "盒装彩笔和送出部分",
         "unit": "支／盒",
@@ -1822,7 +1871,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B05-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B05-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B05-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -1846,8 +1896,8 @@
           "status": "local-textbook-reference"
         }
       ],
-      "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "contentVersion": "2026-10-09.4",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "余额与退款",
         "unit": "元",
@@ -1855,7 +1905,7 @@
         "unknown": "余额及等值去括号式",
         "changes": "净支出与逐步记账"
       },
-      "contentFingerprint": "a4aec007648bd5cb163312a84cc85cbecdb7f71b1122c7be9d4f677559e96597",
+      "contentFingerprint": "004bf908e51ce584203804a142f757e1a15e7afb7198fdb6574c0c3327591e35",
       "story": {
         "text": "Kevin有20元，买文具花8元，后来店员退回3元。最后还剩多少元？",
         "figure": {
@@ -1983,7 +2033,7 @@
           {
             "id": "G3-U02-E01.c2",
             "kind": "expression",
-            "prompt": "把20－(8－3)改写成没有括号但值相同的算式。",
+            "prompt": "把20－(8－3)改写成没有括号但值相同的算式。 请保留题目原来的数字，写出完整改写式；如果计算结果，把结果写在等号后。",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
@@ -1997,7 +2047,7 @@
           {
             "id": "G3-U02-E01.c4",
             "kind": "expression",
-            "prompt": "把70－(28－8)改写成没有括号的等值算式。",
+            "prompt": "把70－(28－8)改写成没有括号的等值算式。 请保留题目原来的数字，写出完整改写式；如果计算结果，把结果写在等号后。",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
@@ -2072,6 +2122,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "a4aec007648bd5cb163312a84cc85cbecdb7f71b1122c7be9d4f677559e96597",
+            "currentContentFingerprint": "004bf908e51ce584203804a142f757e1a15e7afb7198fdb6574c0c3327591e35",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-09.4",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -2097,7 +2155,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "余额与净支出",
         "unit": "元",
@@ -2105,7 +2163,7 @@
         "unknown": "一次扣款金额和等值表达",
         "changes": "括号及里面的符号"
       },
-      "contentFingerprint": "abc8c0b70254cfafe155fb9e133cf06de92c1d870e2b0622839c44deb8d77628",
+      "contentFingerprint": "d5c2cc6d028736e8bff1c28399104c1ba75a4db29162a8c7cd33ebdb82012200",
       "story": {
         "text": "有60元，先付14元又退6元。想在账本中只写一次扣款，应该扣多少？",
         "figure": {
@@ -2252,6 +2310,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E03-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E03-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E03-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "abc8c0b70254cfafe155fb9e133cf06de92c1d870e2b0622839c44deb8d77628",
+            "currentContentFingerprint": "d5c2cc6d028736e8bff1c28399104c1ba75a4db29162a8c7cd33ebdb82012200",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -2277,7 +2343,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "分组发卡",
         "unit": "张／组／人",
@@ -2285,7 +2351,7 @@
         "unknown": "每人张数",
         "changes": "层级分配与总人数"
       },
-      "contentFingerprint": "6a9e62124e9765635418763df014cc738cf28b47ee88fdce6cf43166efa1a364",
+      "contentFingerprint": "294978f81e31f5494034181733cbd47a485a64785bc911e2cb5dbbedc16ceeb7",
       "story": {
         "text": "48张卡先平分给6组，每组再平分给2人。每人分到几张？",
         "figure": {
@@ -2372,7 +2438,7 @@
           {
             "id": "G3-U02-E02-P07",
             "kind": "expression",
-            "prompt": "计算96÷6÷4，并写成只含一次除法的算式。",
+            "prompt": "计算96÷6÷4，并写成只含一次除法的算式。 请保留题目原来的数字，写出完整改写式；如果计算结果，把结果写在等号后。",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           }
@@ -2432,6 +2498,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "6a9e62124e9765635418763df014cc738cf28b47ee88fdce6cf43166efa1a364",
+            "currentContentFingerprint": "294978f81e31f5494034181733cbd47a485a64785bc911e2cb5dbbedc16ceeb7",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -2457,7 +2531,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "点阵和三堆珠",
         "unit": "颗",
@@ -2465,7 +2539,7 @@
         "unknown": "换位置／分组后总数是否变",
         "changes": "点阵朝向与先合哪两堆"
       },
-      "contentFingerprint": "854d98e61442834560823b80d68472bdfda6dfc89368cf3222ccbe6073d4ebc5",
+      "contentFingerprint": "7d09bdbcac56305f21ead9ffe0c0595fa009f94022754f2fdf003c81a3deeaef",
       "story": {
         "text": "有3袋红珠，每袋4颗。排成3行4列，或换看成4列3行，总数会变吗？另有8颗、2颗、7颗三堆珠子，先合哪两堆方便？",
         "figure": {
@@ -2614,6 +2688,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E04-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E04-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E04-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "854d98e61442834560823b80d68472bdfda6dfc89368cf3222ccbe6073d4ebc5",
+            "currentContentFingerprint": "7d09bdbcac56305f21ead9ffe0c0595fa009f94022754f2fdf003c81a3deeaef",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -2639,7 +2721,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "左右两区座位",
         "unit": "个／排",
@@ -2647,7 +2729,7 @@
         "unknown": "两种数法为何等量",
         "changes": "点阵拆成左右两区"
       },
-      "contentFingerprint": "6e561b5953e8aafa5635a51cbde28092088d570affb5eee593b3a9f704bd00e2",
+      "contentFingerprint": "e470cd10540e09ebf5b36c5cb59f962803caeda4f771d3ba0472d20f20e6ebc9",
       "story": {
         "text": "教室有7排座位，每排左边5个、右边3个。先数每排还是分别数左右区，都应该得到同样座位数。",
         "figure": {
@@ -2727,7 +2809,7 @@
           {
             "id": "G3-U02-E05-P04",
             "kind": "expression",
-            "prompt": "4×8+4×2合成一个乘法和一个括号。",
+            "prompt": "4×8+4×2合成一个乘法和一个括号。 请保留题目原来的数字，写出完整改写式；如果计算结果，把结果写在等号后。",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
@@ -2791,6 +2873,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E05-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E05-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E05-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "6e561b5953e8aafa5635a51cbde28092088d570affb5eee593b3a9f704bd00e2",
+            "currentContentFingerprint": "e470cd10540e09ebf5b36c5cb59f962803caeda4f771d3ba0472d20f20e6ebc9",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -2816,7 +2906,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "错算流程",
         "unit": "无量纲数",
@@ -2824,7 +2914,7 @@
         "unknown": "方框及正确运算关系",
         "changes": "实际错误步骤的逆操作"
       },
-      "contentFingerprint": "7cfe5676caea9d65b107100558ed8c3e0e48edc0959a27f98dc42116b751b1af",
+      "contentFingerprint": "95a97901d3f6f69556fc86d0e549015468d7ff0d6eb6e2f0fa238b660ccf447b",
       "story": {
         "text": "原式是7+□×4，小乐先算加法再乘法，错误结果得到44。方框里是什么？",
         "figure": {
@@ -2970,6 +3060,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "7cfe5676caea9d65b107100558ed8c3e0e48edc0959a27f98dc42116b751b1af",
+            "currentContentFingerprint": "95a97901d3f6f69556fc86d0e549015468d7ff0d6eb6e2f0fa238b660ccf447b",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -2995,7 +3093,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "整盒彩笔卡",
         "unit": "支／盒",
@@ -3003,7 +3101,7 @@
         "unknown": "临时名字的替换范围",
         "changes": "遮住整盒或只遮部分"
       },
-      "contentFingerprint": "035bf9c4a1b3f65b79a6432e9a542b3b57b814b28c6c7c6194062a48349db0a9",
+      "contentFingerprint": "cde97de9be034989ea6f6a77e83c48b1e5586facca89e694d0a3e9347c65a858",
       "story": {
         "text": "一盒彩笔有12支红笔和8支蓝笔。买3个同样的盒子，式子里的“每盒支数”能先用一张卡代替吗？",
         "figure": {
@@ -3156,6 +3254,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "035bf9c4a1b3f65b79a6432e9a542b3b57b814b28c6c7c6194062a48349db0a9",
+            "currentContentFingerprint": "cde97de9be034989ea6f6a77e83c48b1e5586facca89e694d0a3e9347c65a858",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -3181,7 +3287,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "断尺和物体",
         "unit": "毫米／厘米",
@@ -3335,7 +3441,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B01-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -3360,7 +3467,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "学校到公园路线",
         "unit": "米／千米",
@@ -3520,7 +3627,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B02-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -3545,7 +3653,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "杯水、秤和米袋",
         "unit": "克／千克／吨",
@@ -3553,7 +3661,7 @@
         "unknown": "净水质量和单位不变性",
         "changes": "物品、单位、砝码"
       },
-      "contentFingerprint": "868e8092bf89edeb956275ebc2be5eebb0aadb43413dad88a0b18ef9a2a12767",
+      "contentFingerprint": "487695c9300405c8bb3fb9d04e775f25e3aeab6d1997a3bdd0209a588805a1ee",
       "story": {
         "text": "厨房里有一杯水，秤上的读数包含杯子。怎样求水本身有多重？先试一试换单位：同一个米袋用克或千克显示，会真的变轻吗？再分别称空杯和杯水。",
         "figure": {
@@ -3709,6 +3817,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "868e8092bf89edeb956275ebc2be5eebb0aadb43413dad88a0b18ef9a2a12767",
+            "currentContentFingerprint": "487695c9300405c8bb3fb9d04e775f25e3aeab6d1997a3bdd0209a588805a1ee",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-07.2",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -3734,7 +3850,7 @@
         }
       ],
       "contentVersion": "2026-10-07.2",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "同船的象与石块",
         "unit": "质量／水线",
@@ -3742,7 +3858,7 @@
         "unknown": "象质量与替换条件",
         "changes": "标水线、石块、额外乘员"
       },
-      "contentFingerprint": "b6cb1b57c6bd1ed4bc29e6a85a66cb4ab3843e76288c3b779fce3fa5f4a6fb80",
+      "contentFingerprint": "a7d0b21577ebf7d5a6d5b1854e210381cd3a269ae291dddc8bd7d406ea26c6f9",
       "story": {
         "text": "模型象放不进小秤，但小石块能。Kevin先让模型象上船，记下水面碰到船身的位置。把象请下船后，需要怎样放石块，才能用石块替它称重？",
         "figure": {
@@ -3905,6 +4021,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "b6cb1b57c6bd1ed4bc29e6a85a66cb4ab3843e76288c3b779fce3fa5f4a6fb80",
+            "currentContentFingerprint": "a7d0b21577ebf7d5a6d5b1854e210381cd3a269ae291dddc8bd7d406ea26c6f9",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-07.2",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -3930,7 +4054,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "盒装笔的位值",
         "unit": "支／盒",
@@ -3938,7 +4062,7 @@
         "unknown": "总支数与拆分理由",
         "changes": "各数位材料及组数"
       },
-      "contentFingerprint": "1a879679594039b6c455f387e9f2ab5eccb222c8c65035cd831eef1d16f942c7",
+      "contentFingerprint": "b1951bc4344c98dbaa4ee42166aeef1b70411a613e624fe9ce3b718494f77991",
       "story": {
         "text": "每盒12支笔，买3盒，怎样不用一支支数就知道总数？",
         "figure": {
@@ -4162,6 +4286,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "1a879679594039b6c455f387e9f2ab5eccb222c8c65035cd831eef1d16f942c7",
+            "currentContentFingerprint": "b1951bc4344c98dbaa4ee42166aeef1b70411a613e624fe9ce3b718494f77991",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -4187,7 +4319,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "三袋小棒",
         "unit": "根／十／一",
@@ -4195,7 +4327,7 @@
         "unknown": "总根数与一次进位",
         "changes": "10个一换1十"
       },
-      "contentFingerprint": "94bf611bd185f5f3fef1eb234d852e6dbbae52111f055d44e8f123be0c51da4a",
+      "contentFingerprint": "f037ef0aafd1ccc06efdccd09b41b7b463fd03d22558b250d9a29a7683a797cf",
       "story": {
         "text": "Kevin有3袋小棒，每袋16根。合起来有多少根？把它们放进数位表时，个位超过9个，怎么办？",
         "figure": {
@@ -4351,6 +4483,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "94bf611bd185f5f3fef1eb234d852e6dbbae52111f055d44e8f123be0c51da4a",
+            "currentContentFingerprint": "f037ef0aafd1ccc06efdccd09b41b7b463fd03d22558b250d9a29a7683a797cf",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -4376,7 +4516,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "八箱饮料位值",
         "unit": "瓶／箱／十／百",
@@ -4384,7 +4524,7 @@
         "unknown": "总量与连续进位",
         "changes": "各位材料拆换、操作情境"
       },
-      "contentFingerprint": "2ebe4f90005661edc13f0087c36c2374b33a853f4d9acdb28b13f2ff46c23a1b",
+      "contentFingerprint": "2d78ea838e461c69c1fe5825bc3cb2b94eee9e3e133aeb594b8ebe627e817e58",
       "story": {
         "text": "仓库里有8箱饮料，每箱147瓶。一共有多少瓶？数小棒时，满10个一可以换成1个十；如果十位也满10，接着怎么办？",
         "figure": {
@@ -4620,6 +4760,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B03-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B03-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B03-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "2ebe4f90005661edc13f0087c36c2374b33a853f4d9acdb28b13f2ff46c23a1b",
+            "currentContentFingerprint": "2d78ea838e461c69c1fe5825bc3cb2b94eee9e3e133aeb594b8ebe627e817e58",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -4645,7 +4793,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "分区座位位值",
         "unit": "个／区",
@@ -4653,7 +4801,7 @@
         "unknown": "总数及0所在数位",
         "changes": "位值卡和操作情境"
       },
-      "contentFingerprint": "dfec0c461d3e16010e8528fd66e387bc16d88ac49b07f782f96978fa713d19ef",
+      "contentFingerprint": "c8719f9d176060ff6d12ff5ea2130c4933289f5d93c067106cfafd45fc953045",
       "story": {
         "text": "604个座位组成一个区，8个区共有多少？十位0意味着整个数只剩64吗？",
         "figure": {
@@ -4887,6 +5035,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B04-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B04-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B04-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "dfec0c461d3e16010e8528fd66e387bc16d88ac49b07f782f96978fa713d19ef",
+            "currentContentFingerprint": "c8719f9d176060ff6d12ff5ea2130c4933289f5d93c067106cfafd45fc953045",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -4912,7 +5068,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "票价预算",
         "unit": "元／人",
@@ -4920,7 +5076,7 @@
         "unknown": "预算是否足够",
         "changes": "估大或估小的边界"
       },
-      "contentFingerprint": "e923e7942acff98db8dd2f41988d75f78783dcafc1ae2ef4c4f5dc35de71424d",
+      "contentFingerprint": "20de031bae595c7d2c0fc3b92829f7ea01dd91e8547c6e3c8b053678f10ed9c8",
       "story": {
         "text": "398名同学每人票价8元，准备3200元够不够？",
         "figure": {
@@ -5155,6 +5311,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B05-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B05-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B05-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "e923e7942acff98db8dd2f41988d75f78783dcafc1ae2ef4c4f5dc35de71424d",
+            "currentContentFingerprint": "20de031bae595c7d2c0fc3b92829f7ea01dd91e8547c6e3c8b053678f10ed9c8",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -5179,8 +5343,8 @@
           "status": "local-textbook-reference"
         }
       ],
-      "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "contentVersion": "2026-10-09.4",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "图书位置编码",
         "unit": "架／层／格",
@@ -5188,7 +5352,7 @@
         "unknown": "不重号且可定位的地址",
         "changes": "编号字段"
       },
-      "contentFingerprint": "e617735dd4f7a328c9005748519c6a923d26a592fec49aa4b63abbdacb73ed93",
+      "contentFingerprint": "931ed33bb77257b03c7b0288109df37493e568fdcada063e279acac032cb6616",
       "story": {
         "text": "给图书馆每个书架的书贴号码，怎样避免两本书同号？",
         "figure": {
@@ -5276,7 +5440,7 @@
           },
           {
             "id": "G3-UP02-B01-P07",
-            "kind": "number",
+            "kind": "explanation",
             "prompt": "给三年级2班的第7号同学设计“年级1位、班级1位、序号2位”的编号，应该写什么？",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
@@ -5336,6 +5500,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP02-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP02-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP02-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "e617735dd4f7a328c9005748519c6a923d26a592fec49aa4b63abbdacb73ed93",
+            "currentContentFingerprint": "931ed33bb77257b03c7b0288109df37493e568fdcada063e279acac032cb6616",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-09.4",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -5361,7 +5533,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "线段射线直线",
         "unit": "端点／厘米",
@@ -5369,7 +5541,7 @@
         "unknown": "哪种线能量总长度",
         "changes": "静态指认端点和延伸"
       },
-      "contentFingerprint": "0e30c181c44f30f15a0b88eb8f770a870b63930f99d8ff4b6d7b33e375d69a77",
+      "contentFingerprint": "9f50faf4896fe1961e7a7fcbb6a8f0ed2ecfc886e7fc2911a1f62f1dc735a845",
       "story": {
         "text": "画一段5厘米的路线，与画一束继续照下去的光，符号应相同吗？",
         "figure": {
@@ -5508,6 +5680,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "0e30c181c44f30f15a0b88eb8f770a870b63930f99d8ff4b6d7b33e375d69a77",
+            "currentContentFingerprint": "9f50faf4896fe1961e7a7fcbb6a8f0ed2ecfc886e7fc2911a1f62f1dc735a845",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -5533,7 +5713,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "活动角与刀片",
         "unit": "张口／边长",
@@ -5541,7 +5721,7 @@
         "unknown": "边长改变是否改变角",
         "changes": "边长和张口"
       },
-      "contentFingerprint": "0a3147c5e396f1aa1fbfb531139616d0ee3ac32996ebe7f66a8672f2681b423d",
+      "contentFingerprint": "25fb5db50d520bc735fa5fbb289b729db168ca954656b4b5ccbd825352d89514",
       "story": {
         "text": "剪刀张开一点和张开很多，哪次转得更多？",
         "figure": {
@@ -5686,6 +5866,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "0a3147c5e396f1aa1fbfb531139616d0ee3ac32996ebe7f66a8672f2681b423d",
+            "currentContentFingerprint": "25fb5db50d520bc735fa5fbb289b729db168ca954656b4b5ccbd825352d89514",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -5711,7 +5899,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "直角工具与墙角",
         "unit": "角的类别",
@@ -5719,7 +5907,7 @@
         "unknown": "相等、小于、大于直角",
         "changes": "对齐与旋转待测角"
       },
-      "contentFingerprint": "ea3c8161b13e03f13d18a8a2d458f8adee00b9cd11a23dc1d88272ccfec84454",
+      "contentFingerprint": "4417b689cf50060b85b351775b892d3285d0ab39629df174268064942d869769",
       "story": {
         "text": "没有量角器，怎样判断墙角是否像书本角那样方正？",
         "figure": {
@@ -5858,6 +6046,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B03-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B03-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B03-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "ea3c8161b13e03f13d18a8a2d458f8adee00b9cd11a23dc1d88272ccfec84454",
+            "currentContentFingerprint": "4417b689cf50060b85b351775b892d3285d0ab39629df174268064942d869769",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -5883,7 +6079,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "饼与等分纸带",
         "unit": "整体／份",
@@ -5891,7 +6087,7 @@
         "unknown": "每人份额的表示",
         "changes": "是否等分和取几份"
       },
-      "contentFingerprint": "cad5211fb6cb4d7c2d946064a1241d7cfb8b8f6ca6f1112bf78f078e0c47e8a1",
+      "contentFingerprint": "5bc546f361c73e0a77a78a7b8232050e86df96177ed07878648a3129e1230d88",
       "story": {
         "text": "一块饼平均给4人，每人不到一块，用什么数记录每人所得？",
         "figure": {
@@ -6036,6 +6232,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "cad5211fb6cb4d7c2d946064a1241d7cfb8b8f6ca6f1112bf78f078e0c47e8a1",
+            "currentContentFingerprint": "5bc546f361c73e0a77a78a7b8232050e86df96177ed07878648a3129e1230d88",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -6061,7 +6265,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "涂色贴纸",
         "unit": "份",
@@ -6069,7 +6273,7 @@
         "unknown": "涂色占整体几分之几",
         "changes": "选择涂色份数"
       },
-      "contentFingerprint": "6341c90e10380fd8dfb9e237302b21a556f436b7decec68cb95d6c1651817616",
+      "contentFingerprint": "161c9e5f09e9aa30cd2db3a22c8019f82a0ab154516b28672e01ebe58d595b10",
       "story": {
         "text": "一张长条贴纸平均分8格，涂3格；怎样一句话记录涂色多少？",
         "figure": {
@@ -6218,6 +6422,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "6341c90e10380fd8dfb9e237302b21a556f436b7decec68cb95d6c1651817616",
+            "currentContentFingerprint": "161c9e5f09e9aa30cd2db3a22c8019f82a0ab154516b28672e01ebe58d595b10",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -6243,7 +6455,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "同一块饼的取用",
         "unit": "八分之一份",
@@ -6251,7 +6463,7 @@
         "unknown": "共取和剩下的分数",
         "changes": "取用、撤回、操作情境"
       },
-      "contentFingerprint": "f8dc790ca29890ef8a4acb8f4f6b04405d5fa8fa60c1a06e0e4be0180744a1b0",
+      "contentFingerprint": "12b33f347707da5b5c5f8e4461e4e285b9fc5cd5a71e61f6e7e5cc3cc421814b",
       "story": {
         "text": "一块饼上午吃2/8，下午吃3/8，一共吃多少，还剩多少？",
         "figure": {
@@ -6482,6 +6694,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B03-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B03-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B03-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "f8dc790ca29890ef8a4acb8f4f6b04405d5fa8fa60c1a06e0e4be0180744a1b0",
+            "currentContentFingerprint": "12b33f347707da5b5c5f8e4461e4e285b9fc5cd5a71e61f6e7e5cc3cc421814b",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -6507,7 +6727,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "一整盒糖",
         "unit": "颗／三分之一盒",
@@ -6515,7 +6735,7 @@
         "unknown": "1/3盒的实际颗数",
         "changes": "均分、撤回、操作情境"
       },
-      "contentFingerprint": "84b533d3d7e38050c3c6b98a78bb1f2d623f6c359752a9bcf89e6c22944bc7f7",
+      "contentFingerprint": "becf530ec8622079aa84eb7946cfe41198c2d686b5a21a04d9107a1eddc06913",
       "story": {
         "text": "一盒有12颗糖，拿走这盒糖的1/3，到底是几颗？",
         "figure": {
@@ -6738,6 +6958,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B04-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B04-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B04-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "84b533d3d7e38050c3c6b98a78bb1f2d623f6c359752a9bcf89e6c22944bc7f7",
+            "currentContentFingerprint": "becf530ec8622079aa84eb7946cfe41198c2d686b5a21a04d9107a1eddc06913",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -6763,7 +6991,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "整批贴纸",
         "unit": "张／八分之一份",
@@ -6771,7 +6999,7 @@
         "unknown": "3/8的实际张数",
         "changes": "均分并取组、操作情境"
       },
-      "contentFingerprint": "860c46071ae50b5634980d6b1a7c9021af56be7e4ae8c80acfa4d5f2af0ef300",
+      "contentFingerprint": "104e8296d4a106043d59a06b388d3089551964999e08785c56f9fcfc7339dc84",
       "story": {
         "text": "24张贴纸的3/8要送给朋友，应拿出多少张？",
         "figure": {
@@ -6996,6 +7224,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B05-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B05-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B05-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "860c46071ae50b5634980d6b1a7c9021af56be7e4ae8c80acfa4d5f2af0ef300",
+            "currentContentFingerprint": "104e8296d4a106043d59a06b388d3089551964999e08785c56f9fcfc7339dc84",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -7021,7 +7257,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "同一条涂色纸带",
         "unit": "长度／小份／大份",
@@ -7029,7 +7265,7 @@
         "unknown": "分组前后实际长度是否变",
         "changes": "分组线"
       },
-      "contentFingerprint": "acd7c3c8cc5fc6e2a7e4f91ed993125a7b8a19acfd1b4b41901d8c0218bc3b04",
+      "contentFingerprint": "988bbe11ee38e6241b92b999509745ff9d634871039870de1c88385af9a000bc",
       "story": {
         "text": "同一条纸带从左到右平均分成6小格，前2小格涂蓝色。现在不剪纸带，也不改变蓝色部分，只把每相邻2小格看作1大格。改变分组前后，蓝色部分的实际长度一样吗？",
         "figure": {
@@ -7179,6 +7415,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-E01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-E01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-E01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "acd7c3c8cc5fc6e2a7e4f91ed993125a7b8a19acfd1b4b41901d8c0218bc3b04",
+            "currentContentFingerprint": "988bbe11ee38e6241b92b999509745ff9d634871039870de1c88385af9a000bc",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -7204,7 +7448,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "礼物贴纸计划",
         "unit": "份／张",
@@ -7212,7 +7456,7 @@
         "unknown": "需要补买张数",
         "changes": "静态计划表／纸笔"
       },
-      "contentFingerprint": "f2a416de342804105b6e1ee47913b89efd0c089dafe8e8adeadcbba146515b48",
+      "contentFingerprint": "142b738f90492aac8649bfebc879238cdf13095b36e12eb830479e082b8599fb",
       "story": {
         "text": "班级要做36份小礼物，每份贴2张贴纸，已有20张，还需买多少？",
         "figure": {
@@ -7356,6 +7600,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-R01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-R01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-R01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "f2a416de342804105b6e1ee47913b89efd0c089dafe8e8adeadcbba146515b48",
+            "currentContentFingerprint": "142b738f90492aac8649bfebc879238cdf13095b36e12eb830479e082b8599fb",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -7381,7 +7633,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "衣服搭配",
         "unit": "种／套",
@@ -7389,7 +7641,7 @@
         "unknown": "不重不漏的套数",
         "changes": "固定上衣和配裤子"
       },
-      "contentFingerprint": "c64b9df9992926fdd88f0959c4ebb78f827a47232b7ed5684d52daf4df1a4801",
+      "contentFingerprint": "c9dbbf181dc8297e1616b6a3e98320665ad9cd2d52aa1b820ebc2d5667646f1f",
       "story": {
         "text": "有2种上衣、3种裤子，每次各穿1件，可以组成几套？",
         "figure": {
@@ -7552,6 +7804,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "c64b9df9992926fdd88f0959c4ebb78f827a47232b7ed5684d52daf4df1a4801",
+            "currentContentFingerprint": "c9dbbf181dc8297e1616b6a3e98320665ad9cd2d52aa1b820ebc2d5667646f1f",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -7577,7 +7837,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "窗花与折纸",
         "unit": "对应点／折痕",
@@ -7585,7 +7845,7 @@
         "unknown": "对折能否重合",
         "changes": "折痕与折叠"
       },
-      "contentFingerprint": "e3323fa609ce04891dc0adc8e90fd775aa619307b0472807016ce0baae168823",
+      "contentFingerprint": "84883abbe09afe81e666c8e2f75eed442a1220fb8e4f5cd718844fac05b7acf7",
       "story": {
         "text": "Kevin想剪左右相同的窗花。先用正方形、长方形纸试一试：沿选定的线对折，两边能完全重合吗？弄清后再用同样的方法检验窗花。",
         "figure": {
@@ -7726,6 +7986,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "e3323fa609ce04891dc0adc8e90fd775aa619307b0472807016ce0baae168823",
+            "currentContentFingerprint": "84883abbe09afe81e666c8e2f75eed442a1220fb8e4f5cd718844fac05b7acf7",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -7751,7 +8019,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "抽屉风车与纸箭头",
         "unit": "位置／方向",
@@ -7759,7 +8027,7 @@
         "unknown": "运动方式差别",
         "changes": "平移和绕点旋转"
       },
-      "contentFingerprint": "6b9ab07b2fb2576803f3678c0852e31526a8be44cea3b2462cd1284c3626d7e1",
+      "contentFingerprint": "94356816f9be06d0160b58e6eac675e31cee57a03a5fee4ec3afb06366c93a6f",
       "story": {
         "text": "抽屉拉开与风车转动，都是位置变化。用纸箭头代替它们：先保持朝向向右滑，再绕尾端转动，这两种动作有什么不同？",
         "figure": {
@@ -7898,6 +8166,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "6b9ab07b2fb2576803f3678c0852e31526a8be44cea3b2462cd1284c3626d7e1",
+            "currentContentFingerprint": "94356816f9be06d0160b58e6eac675e31cee57a03a5fee4ec3afb06366c93a6f",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -7923,7 +8199,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "纸张十捆",
         "unit": "张／人／十",
@@ -7931,7 +8207,7 @@
         "unknown": "每人张数及位值",
         "changes": "分捆与散张、操作情境"
       },
-      "contentFingerprint": "2f535ee5e6481183cfd8274feb4ced5c6d555312ec1d4d1413f3b79a229255a1",
+      "contentFingerprint": "14f943b494ebf581f83c3b93397b7841bd46ed32424e241bf632246f4f31dfeb",
       "story": {
         "text": "把90张纸平分3人，怎样把9个十平均分，而不一张张发？",
         "figure": {
@@ -8152,6 +8428,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "2f535ee5e6481183cfd8274feb4ced5c6d555312ec1d4d1413f3b79a229255a1",
+            "currentContentFingerprint": "14f943b494ebf581f83c3b93397b7841bd46ed32424e241bf632246f4f31dfeb",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -8177,7 +8461,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "糖的位值分配",
         "unit": "颗／人／十",
@@ -8185,7 +8469,7 @@
         "unknown": "每人分得的数量",
         "changes": "分配、剩十拆一、撤回"
       },
-      "contentFingerprint": "ea18a6f7f28d410e176136db76a995a154220140a15eee6bc0a8afb1b47a1a5e",
+      "contentFingerprint": "a24d7c5546a8567f166e45ea17055f53efcce5c4e2ba3b86dc4a79e0f713a246",
       "story": {
         "text": "52颗糖平均分4人，5捆十颗分完后剩的一捆怎么办？",
         "figure": {
@@ -8340,6 +8624,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "ea18a6f7f28d410e176136db76a995a154220140a15eee6bc0a8afb1b47a1a5e",
+            "currentContentFingerprint": "a24d7c5546a8567f166e45ea17055f53efcce5c4e2ba3b86dc4a79e0f713a246",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -8365,7 +8657,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "糖与满袋",
         "unit": "颗／袋",
@@ -8373,7 +8665,7 @@
         "unknown": "标准商和余数",
         "changes": "装袋、撤回、操作情境"
       },
-      "contentFingerprint": "252113ad9c07f4f635e89c2772472bd8d2669378c8112b0ba55884a6d3169cf0",
+      "contentFingerprint": "58874fe2e0253b73aa486ed2721cf1c0c0531e2db003eeca148001b33a25beb2",
       "story": {
         "text": "53颗糖每4颗装一袋，装了13袋后还剩多少？",
         "figure": {
@@ -8619,6 +8911,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B03-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B03-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B03-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "252113ad9c07f4f635e89c2772472bd8d2669378c8112b0ba55884a6d3169cf0",
+            "currentContentFingerprint": "58874fe2e0253b73aa486ed2721cf1c0c0531e2db003eeca148001b33a25beb2",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -8644,7 +8944,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "按位分书",
         "unit": "本／班／百十个",
@@ -8652,7 +8952,7 @@
         "unknown": "每班本数和商中0",
         "changes": "按位分配、拆换、撤回"
       },
-      "contentFingerprint": "193d140231b39e2f5569f56e11155a1036597dabd70a9fea2e7e21944f720e3a",
+      "contentFingerprint": "3e317efc0ea251ac3610ffd16b2ba9fbc081c7b4a0da5e6a05db08e0f9dc6ed5",
       "story": {
         "text": "408本书平分4班，十位没有书可分，答案为何不能写12？",
         "figure": {
@@ -8806,6 +9106,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B04-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B04-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B04-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "193d140231b39e2f5569f56e11155a1036597dabd70a9fea2e7e21944f720e3a",
+            "currentContentFingerprint": "3e317efc0ea251ac3610ffd16b2ba9fbc081c7b4a0da5e6a05db08e0f9dc6ed5",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -8831,7 +9139,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "杯子的两层包装",
         "unit": "箱／盒／个",
@@ -8839,7 +9147,7 @@
         "unknown": "总量及逆向每盒量",
         "changes": "层级分组、操作情境"
       },
-      "contentFingerprint": "39361a14ec941630ee154691753a00e62b71d694d5b45676f1d521311522cfd7",
+      "contentFingerprint": "92e85958f128dbd6f18909071d1d1a8be827e549711ccf8d1f2b4dd3e24879c9",
       "story": {
         "text": "2箱杯子，每箱4盒，每盒6个，全部有几个？反过来48个分装怎样求每盒？",
         "figure": {
@@ -9079,6 +9387,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B05-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B05-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B05-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "39361a14ec941630ee154691753a00e62b71d694d5b45676f1d521311522cfd7",
+            "currentContentFingerprint": "92e85958f128dbd6f18909071d1d1a8be827e549711ccf8d1f2b4dd3e24879c9",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -9104,7 +9420,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "买本子与换分装",
         "unit": "元／本；本／箱",
@@ -9112,7 +9428,7 @@
         "unknown": "购买总价或重新分装箱数",
         "changes": "先求单价或总量"
       },
-      "contentFingerprint": "3fd75a12f3698401ab141a84c9ea9f01e8721b2a8a412bff3000cdad2c11d00b",
+      "contentFingerprint": "5286d6ff209b76bc15e9596a5d6aa448adae57c1730935b300ae62d4c56e47aa",
       "story": {
         "text": "4本同价本子24元，买7本要多少钱？另一问题：同一批书每箱6本装4箱，改每箱8本需几箱？",
         "figure": {
@@ -9366,6 +9682,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B06-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B06-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B06-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "3fd75a12f3698401ab141a84c9ea9f01e8721b2a8a412bff3000cdad2c11d00b",
+            "currentContentFingerprint": "5286d6ff209b76bc15e9596a5d6aa448adae57c1730935b300ae62d4c56e47aa",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -9391,7 +9715,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "相框几何图形",
         "unit": "边／角",
@@ -9399,7 +9723,7 @@
         "unknown": "分类依据",
         "changes": "静态指认边角／纸笔"
       },
-      "contentFingerprint": "9b0f9ae9a92dc179ac167f78958e09998d335f787be12024b6b80ddf4ed4c45d",
+      "contentFingerprint": "ad41969ab234e137d2ae410b83d38261ce7c43ff4f31b2abb96315ff609494ef",
       "story": {
         "text": "做相框前，要确定四条边和四个角满足什么条件。",
         "figure": {
@@ -9541,6 +9865,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "9b0f9ae9a92dc179ac167f78958e09998d335f787be12024b6b80ddf4ed4c45d",
+            "currentContentFingerprint": "ad41969ab234e137d2ae410b83d38261ce7c43ff4f31b2abb96315ff609494ef",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -9566,7 +9898,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "无入口花坛边界",
         "unit": "米",
@@ -9574,7 +9906,7 @@
         "unknown": "一圈围栏长度",
         "changes": "沿四边走一次"
       },
-      "contentFingerprint": "a5e1a104888ad948a12b9f5c911039ab2c027aeb67204a71d5bcb40ee38f7cac",
+      "contentFingerprint": "08a234332d89bacf074c90019d06ff9cd0b3dcaf6814a55965efbde927925af3",
       "story": {
         "text": "给长8米宽5米的花坛装一圈围栏，要买多少米？",
         "figure": {
@@ -9722,6 +10054,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "a5e1a104888ad948a12b9f5c911039ab2c027aeb67204a71d5bcb40ee38f7cac",
+            "currentContentFingerprint": "08a234332d89bacf074c90019d06ff9cd0b3dcaf6814a55965efbde927925af3",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -9747,7 +10087,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "拼接正方形板",
         "unit": "厘米",
@@ -9755,7 +10095,7 @@
         "unknown": "拼好后的外周长",
         "changes": "方板位置及接缝"
       },
-      "contentFingerprint": "8c323e79df69f0d6d83c1c452f2c45ab85a9aaa1d6d6cee35ca5991c22ec8169",
+      "contentFingerprint": "eff8b950a818383c4da80dbfd51f78fa514fd01e9c0ed5e2a2cd301c6c73f93e",
       "story": {
         "text": "两块边长3厘米的实心正方形板，沿一条完整边紧紧拼在一起。外面绕一圈，还是两块原来的周长合计24厘米吗？",
         "figure": {
@@ -9903,6 +10243,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-E01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-E01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-E01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "8c323e79df69f0d6d83c1c452f2c45ab85a9aaa1d6d6cee35ca5991c22ec8169",
+            "currentContentFingerprint": "eff8b950a818383c4da80dbfd51f78fa514fd01e9c0ed5e2a2cd301c6c73f93e",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -9928,7 +10276,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "围栏与铺砖",
         "unit": "长度／面积",
@@ -9936,7 +10284,7 @@
         "unknown": "两种量分别量哪里",
         "changes": "静态外圈与内部指认"
       },
-      "contentFingerprint": "56cecdd9f872adb1cfbab3b12f59e06eeda58e228b34f7f61eeeab8bd3b606aa",
+      "contentFingerprint": "f27b23bd651a92ff536777a73806d8f21de7b6c7008a296485c269c3bdbade1d",
       "story": {
         "text": "同一个花坛既要围栏又要铺地砖，为什么要算两个不同的数？",
         "figure": {
@@ -10081,6 +10429,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "56cecdd9f872adb1cfbab3b12f59e06eeda58e228b34f7f61eeeab8bd3b606aa",
+            "currentContentFingerprint": "f27b23bd651a92ff536777a73806d8f21de7b6c7008a296485c269c3bdbade1d",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -10106,7 +10462,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "长方形地面与方砖",
         "unit": "米／平方米／块",
@@ -10114,7 +10470,7 @@
         "unknown": "总块数与面积",
         "changes": "铺砖位置"
       },
-      "contentFingerprint": "76df3a9186b10d11469cd3b8acf6fc1af69b5e33a026bbd91ceca1b8777f4536",
+      "contentFingerprint": "a5c5f454ea45d55fc66ddd5ccf98b0b61c1a4efcb920aed5c657c1cd9b451399",
       "story": {
         "text": "长6米宽4米的地面铺1平方米方砖，需要几块？",
         "figure": {
@@ -10286,6 +10642,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "76df3a9186b10d11469cd3b8acf6fc1af69b5e33a026bbd91ceca1b8777f4536",
+            "currentContentFingerprint": "a5c5f454ea45d55fc66ddd5ccf98b0b61c1a4efcb920aed5c657c1cd9b451399",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -10311,7 +10675,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "单位方纸与剪角卡",
         "unit": "分米／厘米／平方单位",
@@ -10319,7 +10683,7 @@
         "unknown": "面积单位换算与剪拼量",
         "changes": "当前教具剪角重组"
       },
-      "contentFingerprint": "6798ada519a2335f6b4947995a2a5bad6836f204c24aea724a3410244f3e0d90",
+      "contentFingerprint": "103a7a29a881d60da14409f9ded4a2957d149695d27366e8919c0a841c85387c",
       "story": {
         "text": "边长1分米的方纸，为什么能铺100个平方厘米，而不是10个？",
         "figure": {
@@ -10472,6 +10836,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B03-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B03-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B03-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "6798ada519a2335f6b4947995a2a5bad6836f204c24aea724a3410244f3e0d90",
+            "currentContentFingerprint": "103a7a29a881d60da14409f9ded4a2957d149695d27366e8919c0a841c85387c",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -10497,7 +10869,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "目的地投票",
         "unit": "人／票",
@@ -10505,7 +10877,7 @@
         "unknown": "哪个地点最多及调查规则",
         "changes": "投票和撤票"
       },
-      "contentFingerprint": "0c984234247cae96f32b687082233762b8f5a94db39d54d81c7d71ca6c366547",
+      "contentFingerprint": "2356470876560b272f7c661d4bdadee84de84e69d7c88113ed9def658dcd772e",
       "story": {
         "text": "班级要选一次集体活动地点，怎样知道大家最想去哪儿？",
         "figure": {
@@ -10697,6 +11069,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "0c984234247cae96f32b687082233762b8f5a94db39d54d81c7d71ca6c366547",
+            "currentContentFingerprint": "2356470876560b272f7c661d4bdadee84de84e69d7c88113ed9def658dcd772e",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -10722,7 +11102,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "阅读时长卡",
         "unit": "分钟／条记录",
@@ -10730,7 +11110,7 @@
         "unknown": "唯一分组及各组个数",
         "changes": "分类、移回"
       },
-      "contentFingerprint": "20cbb602be2b4482f0383c4732aa17715b52cb7803ab203423e3c0c91884bb12",
+      "contentFingerprint": "5e1fa4cd5eef51ea47c2204cd2ecda6e5ba98bf0178a5b2a63de06fcf80ae56b",
       "story": {
         "text": "整理8次阅读时长，直接看一串数不容易比较，怎样分组更清楚？",
         "figure": {
@@ -10936,6 +11316,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "20cbb602be2b4482f0383c4732aa17715b52cb7803ab203423e3c0c91884bb12",
+            "currentContentFingerprint": "5e1fa4cd5eef51ea47c2204cd2ecda6e5ba98bf0178a5b2a63de06fcf80ae56b",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -10961,7 +11349,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "月份日历",
         "unit": "年／月／日",
@@ -10969,7 +11357,7 @@
         "unknown": "不同月份有几天",
         "changes": "选择年份和月份"
       },
-      "contentFingerprint": "d07fa48238bce761e5701c0d2f5d0c92961a09c514073795297d7f4b58005882",
+      "contentFingerprint": "d3c59d3dae36f6eee859357a73e62e831b844edfac345bf9104a96ee6e8946bf",
       "story": {
         "text": "要做生日月历，为什么不能复制一张30天的表用12次？",
         "figure": {
@@ -11117,6 +11505,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "d07fa48238bce761e5701c0d2f5d0c92961a09c514073795297d7f4b58005882",
+            "currentContentFingerprint": "d3c59d3dae36f6eee859357a73e62e831b844edfac345bf9104a96ee6e8946bf",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -11142,7 +11538,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "24时时刻和时间线",
         "unit": "小时／分钟",
@@ -11150,7 +11546,7 @@
         "unknown": "时刻表达及经过时长",
         "changes": "沿时间线移动"
       },
-      "contentFingerprint": "bfd94ef5fed51dc94339335200d3c23715d1db0f4ab3bf6a8b0c5051add9e732",
+      "contentFingerprint": "7345b3c0510b0874381919d27ff680478ecf2aa6190945e02a8ebc0bf2862b37",
       "story": {
         "text": "活动写“下午3点”，用24时计时怎样避免误会？再看另一次活动：15:20开始、16:05结束。沿同一天的时间线，它经过多久？",
         "figure": {
@@ -11305,6 +11701,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "bfd94ef5fed51dc94339335200d3c23715d1db0f4ab3bf6a8b0c5051add9e732",
+            "currentContentFingerprint": "7345b3c0510b0874381919d27ff680478ecf2aa6190945e02a8ebc0bf2862b37",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -11330,7 +11734,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "星期与日期",
         "unit": "天／周",
@@ -11338,7 +11742,7 @@
         "unknown": "星期几及相隔天数",
         "changes": "日期移动"
       },
-      "contentFingerprint": "120123efe41734137ccb86b531803eb026bf99c9255d3cc5105c03709edad51a",
+      "contentFingerprint": "80c5d4ba35de88835b533ec1e1e39c609e28a7873ecc30b7daff13b0f3c6a9b4",
       "story": {
         "text": "已知某月1日是星期二，怎样不查整张日历就知道15日是星期几？",
         "figure": {
@@ -11478,6 +11882,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-E01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-E01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-E01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "120123efe41734137ccb86b531803eb026bf99c9255d3cc5105c03709edad51a",
+            "currentContentFingerprint": "80c5d4ba35de88835b533ec1e1e39c609e28a7873ecc30b7daff13b0f3c6a9b4",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -11503,7 +11915,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "米尺与小数位",
         "unit": "米／分米／厘米",
@@ -11511,7 +11923,7 @@
         "unknown": "用米的小数表达",
         "changes": "3所在的小数位"
       },
-      "contentFingerprint": "fd1156031b15c5e1a1bc8bf4eda92c4c5296214596bd30f6a3a9faf1e26ad710",
+      "contentFingerprint": "fccf5f340640734687f5fcfe4dd7e3d6092c9ce8354eb8c9383f6fa17b13f688",
       "story": {
         "text": "纸条长1米3分米，只用“米”怎样写，既简短又清楚？",
         "figure": {
@@ -11666,6 +12078,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "fd1156031b15c5e1a1bc8bf4eda92c4c5296214596bd30f6a3a9faf1e26ad710",
+            "currentContentFingerprint": "fccf5f340640734687f5fcfe4dd7e3d6092c9ce8354eb8c9383f6fa17b13f688",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -11691,7 +12111,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "跳高长度比较",
         "unit": "米／厘米",
@@ -11699,7 +12119,7 @@
         "unknown": "谁高及比较理由",
         "changes": "同一尺标记／小数位"
       },
-      "contentFingerprint": "f055b97f4c995c09f85ba598097b9e5e374ec3958d8c80383b341de848af90f4",
+      "contentFingerprint": "69b507a6eeab751de9637837930348ccb8052bc467286046e21724f19d3646fa",
       "story": {
         "text": "两人跳高分别0.9米与0.85米，谁跳得更高？",
         "figure": {
@@ -11855,6 +12275,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B02-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "f055b97f4c995c09f85ba598097b9e5e374ec3958d8c80383b341de848af90f4",
+            "currentContentFingerprint": "69b507a6eeab751de9637837930348ccb8052bc467286046e21724f19d3646fa",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -11880,7 +12308,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "彩笔本子付款",
         "unit": "元／角",
@@ -11888,7 +12316,7 @@
         "unknown": "合计与找零",
         "changes": "静态元角对齐／纸笔"
       },
-      "contentFingerprint": "56aa7ced2780d2af814cfd34032881fa3535b14f385a1979eb351af290387645",
+      "contentFingerprint": "1e4db2aa1f0ed6ecaeb38e5121ff386a93ae1d67facfa9e0dc59a227c4a3ceed",
       "story": {
         "text": "一盒彩笔3.8元、一本本子2.5元，合计多少钱？付10元找回多少？",
         "figure": {
@@ -12035,6 +12463,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B03-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B03-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B03-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "56aa7ced2780d2af814cfd34032881fa3535b14f385a1979eb351af290387645",
+            "currentContentFingerprint": "1e4db2aa1f0ed6ecaeb38e5121ff386a93ae1d67facfa9e0dc59a227c4a3ceed",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -12060,7 +12496,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "活动采购计划",
         "unit": "人／张／包／元／分钟",
@@ -12068,7 +12504,7 @@
         "unknown": "总需求、补购、费用、时长",
         "changes": "静态计划表／纸笔"
       },
-      "contentFingerprint": "1ab8a0f74f3121a820532f47f4998f6fd30a1142d5f2185dafda7e41ca4ce8e3",
+      "contentFingerprint": "21da58c308b04423a30138b3b158357b3d707a075a62091ac70800623159fbc3",
       "story": {
         "text": "24人做手工，每人2张纸，每包12张、6元，需要买齐材料（这一题不另给库存）。活动从15:10到15:50。分别需要几包、多少钱、多少分钟？",
         "figure": {
@@ -12218,6 +12654,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-R01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-R01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-R01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "1ab8a0f74f3121a820532f47f4998f6fd30a1142d5f2185dafda7e41ca4ce8e3",
+            "currentContentFingerprint": "21da58c308b04423a30138b3b158357b3d707a075a62091ac70800623159fbc3",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -12243,7 +12687,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "读书与绘画名单",
         "unit": "人",
@@ -12251,7 +12695,7 @@
         "unknown": "不同人的总数",
         "changes": "姓名卡分区"
       },
-      "contentFingerprint": "b5dad135cceec6ecc60eb081d6d3cd0e71531b9296f8802b4eaa982c7c36207d",
+      "contentFingerprint": "bfb9d1df50c6769219cdccc34ac87b61ee21e92b42b4b7f2e0febe15de8cb3f8",
       "story": {
         "text": "读书组8人、绘画组7人，其中3人两个组都参加。总共有多少不同的人？",
         "figure": {
@@ -12442,6 +12886,14 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-B01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-B01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-B01-verify-1440.jpg"
+          },
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "b5dad135cceec6ecc60eb081d6d3cd0e71531b9296f8802b4eaa982c7c36207d",
+            "currentContentFingerprint": "bfb9d1df50c6769219cdccc34ac87b61ee21e92b42b4b7f2e0febe15de8cb3f8",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
           }
         }
       },
@@ -12467,7 +12919,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "搭接木板",
         "unit": "厘米／毫米",
@@ -12627,7 +13079,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E01-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -12652,7 +13105,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "拉直理想链环",
         "unit": "厘米／毫米",
@@ -12819,7 +13272,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E02-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E02-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -12844,7 +13298,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "直绳与闭环",
         "unit": "米／点／段",
@@ -13004,7 +13458,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-O01-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-O01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-O01-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -13029,7 +13484,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "一米彩带",
         "unit": "米／份",
@@ -13178,7 +13633,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.fractions.meaning-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.fractions.meaning-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.fractions.meaning-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -13203,7 +13659,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "正方形地垫",
         "unit": "块／边长单位",
@@ -13393,7 +13849,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-geometry.area.perimeter-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-geometry.area.perimeter-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-geometry.area.perimeter-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -13418,7 +13875,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "点心盒与同量糖袋",
         "unit": "盒／袋／颗",
@@ -13566,7 +14023,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.substitution.intro-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.substitution.intro-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.substitution.intro-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -13591,7 +14049,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "糖袋与等量两盘",
         "unit": "颗",
@@ -13741,7 +14199,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.balance.intro-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.balance.intro-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.balance.intro-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -13766,7 +14225,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "饭盒与苹果",
         "unit": "个",
@@ -13921,7 +14380,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.quantity.intro-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.quantity.intro-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.quantity.intro-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -13946,7 +14406,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "两人的苹果",
         "unit": "个",
@@ -14103,7 +14563,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.addition.meaning-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.addition.meaning-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.addition.meaning-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -14128,7 +14589,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.3",
+      "editorialRevision": "2026-10-09.4",
       "quantities": {
         "object": "原有送出剩余贴纸",
         "unit": "张",
@@ -14291,7 +14752,8 @@
             "why": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.subtraction.meaning-why-1440.jpg",
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.subtraction.meaning-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.subtraction.meaning-verify-1440.jpg"
-          }
+          },
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {

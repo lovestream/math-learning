@@ -44,5 +44,10 @@ export function auditTask(t){
    const converted=t.unit==='厘米'?mm/10:t.unit==='米'?mm/1000:mm;if(!auditSame(target,converted))errors.push('独立题图长度oracle不符');else proofs.push({type:'diagram-length-oracle',value:converted});
   }
  }
- return {errors,flags,proofs,numericProofVerified:target!==undefined&&proofs.some(p=>auditSame(p.value,target)),formalChecked:true};
+ const promptTypes=new Set(['prompt-arithmetic-oracle','unit-conversion-oracle','seat-ceiling-oracle','diagram-length-oracle']);
+ const independentlyDerivedFromPromptOrDiagram=target!==undefined&&proofs.some(p=>promptTypes.has(p.type)&&auditSame(p.value,target));
+ const solutionInternallyConsistent=proofs.some(p=>p.type.startsWith('solution-'))&&!errors.some(e=>e.startsWith('答案说明'));
+ // Compatibility fields are deliberately narrow: answer-key arithmetic is no
+ // longer promoted to independent question verification.
+ return {errors,flags,proofs,schemaChecked:true,solutionInternallyConsistent,independentlyDerivedFromPromptOrDiagram,numericProofVerified:independentlyDerivedFromPromptOrDiagram,formalChecked:true};
 }

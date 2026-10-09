@@ -22,7 +22,7 @@ const diagnosticTail={
 };
 
 function task(practice,lesson,fam,setName){
-  const rawMatch=String(practice.answer).match(simpleNumber),match=rawMatch&&numericUnits.has(rawMatch[2]||'')?rawMatch:null,base={id:practice.id,level:setName,objectiveId:lesson.objectives[0].id,prompt:practice.question,solution:`${practice.answer}${practice.reason?`。${practice.reason}`:''}`.replace(/。。/g,'。'),hint:practice.hints?.[0]?.text??`先回到“${inline(lesson.model)}”，把题目里的对象逐一对应。`,diagnostic:`${lesson.misconception?.correction??lesson.why} ${diagnosticTail[fam]??diagnosticTail.planning}`,diagram:{type:'concept',family:fam,variant:`${lesson.id}:task-static`,values:[],labels:[practice.question,lesson.title],caption:'这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。'}};
+  const rawMatch=String(practice.answer).match(simpleNumber),match=rawMatch&&numericUnits.has(rawMatch[2]||'')?rawMatch:null,base={id:practice.id,level:setName,objectiveId:lesson.objectives[0].id,prompt:practice.question,solution:`${practice.answer}${practice.reason?`。${practice.reason}`:''}`.replace(/。。/g,'。'),hint:practice.hints?.[0]?.text??`课堂例子是“${inline(lesson.model)}”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。`,diagnostic:`${lesson.misconception?.correction??lesson.why} ${diagnosticTail[fam]??diagnosticTail.planning}`,diagram:{type:'concept',family:fam,variant:`${lesson.id}:task-static`,values:[],labels:[practice.question,lesson.title],caption:'这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。'}};
   if(handsOnModels[lesson.id])base.diagram=undefined;
   if(handsOnResponses[practice.id])return {...base,...handsOnResponses[practice.id],selfCheckItems:handsOnSelfChecks[practice.id]};
   if(operationResponses[practice.id])return {...base,...operationResponses[practice.id]};

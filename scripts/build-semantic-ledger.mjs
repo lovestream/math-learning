@@ -6,6 +6,7 @@ import {lessons} from '../content/pilot/source.mjs';
 import {withdrawnLessons,withdrawnTasks} from '../shared/withdrawn-checks.mjs';
 import {semanticContexts} from '../docs/review/semantic-ledger/contexts.mjs';
 import {auditDocument,baselineSha,semanticNotes} from '../docs/review/semantic-ledger/notes.mjs';
+import {semanticReviewMatches} from './audit-formal-tasks.mjs';
 
 const root=new URL('../',import.meta.url);
 const sha=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -17,6 +18,8 @@ export function buildSemanticLedger(options={}){
  if(ids.size!==70||Object.keys(semanticNotes).length!==70||Object.keys(semanticNotes).some(id=>!ids.has(id)))throw Error('教学语义台账必须精确对应70个入口');
  const evidencePath=relative('docs/review/semantic-ledger/desktop-verification.json');
  const evidence=Object.hasOwn(options,'evidence')?options.evidence:existsSync(evidencePath)?JSON.parse(readFileSync(evidencePath,'utf8')):null;
+ const closedBaseline=JSON.parse(readFileSync(relative('docs/review/final-task-review/classroom-baseline.json'),'utf8'));
+ const taskReview=JSON.parse(readFileSync(relative('docs/review/849题最终审校清单_20261009.json'),'utf8'));
  const rows=lessons.map(lesson=>{
   const id=lesson.lessonId,c=lesson.childClassroom,note=semanticNotes[id];
   const block=lesson.articleBlocks.find(b=>b.widget);
@@ -26,7 +29,10 @@ export function buildSemanticLedger(options={}){
   const picture=c.storyVisual??lesson.introVisual;
   const contextFigure=picture?{renderer:'src/studio/IntroVisual.tsx',spec:picture}:lesson.articleBlocks[0]?.diagram?{renderer:'src/studio/TeachingDiagrams.tsx',diagram:lesson.articleBlocks[0].diagram}:lesson.mathScenes?.[0]?{renderer:'src/studio/MathSceneVisual.tsx',sceneId:lesson.mathScenes[0].sceneId}:lesson.lengthScenes?.[0]?{renderer:'src/studio/measurement/TaskDiagram.tsx',sceneId:lesson.lengthScenes[0].sceneId}:{renderer:null,reason:'当前入口按文字推理题开放，是否足够直观仍需逐章教学核对'};
   const fingerprint=sha({classroom:c,model,taskSets:lesson.taskSets});
-  const verified=evidence?.passed===true&&evidence?.source?.dirty===false&&/^[a-f0-9]{40}$/.test(evidence.source.sha)?evidence.rows?.find(r=>r.lessonId===id&&r.contentFingerprint===fingerprint&&r.result==='pass'&&(lesson.interactionStatus==='static-visual'?r.mathBehavior==='static-relation-verified':r.mathBehavior==='full-path-verified'&&r.actionsPerformed?.length>0)):null;
+  const original=closedBaseline.rows.find(r=>r.lessonId===id);
+  const taskOnlyCompatible=evidence?.source?.sha===closedBaseline.desktopEvidenceSource.sha&&original?.classroomFingerprint===sha(c)&&original?.modelFingerprint===sha(model)&&Object.values(lesson.taskSets).flat().every(t=>semanticReviewMatches(taskReview.rows.find(r=>r.taskId===t.id),t,lesson.contentVersion));
+  const verified=evidence?.passed===true&&evidence?.source?.dirty===false&&/^[a-f0-9]{40}$/.test(evidence.source.sha)?evidence.rows?.find(r=>r.lessonId===id&&(r.contentFingerprint===fingerprint||(taskOnlyCompatible&&r.contentFingerprint===original.contentFingerprint))&&r.result==='pass'&&(lesson.interactionStatus==='static-visual'?r.mathBehavior==='static-relation-verified':r.mathBehavior==='full-path-verified'&&r.actionsPerformed?.length>0)):null;
+  const taskOnlyAmendment=verified&&verified.contentFingerprint!==fingerprint?{scope:'classroom-and-model-unchanged; formal-task-review-separate',verifiedClassroomSourceFingerprint:verified.contentFingerprint,currentContentFingerprint:fingerprint,semanticRegister:'docs/review/849题最终审校清单_20261009.json',assessmentVersion:lesson.contentVersion,mathBehaviorSha:evidence.source.sha}:null;
   return {
    lessonId:id,title:lesson.title,unitId:lesson.textbookUnit?.id??'foundation-bridge',unitTitle:lesson.textbookUnit?.title??'基础与跨单元桥梁',track:lesson.track,
    sourceAnchor:lesson.sourceAnchors,contentVersion:lesson.contentVersion,editorialRevision:lesson.editorialRevision,
@@ -39,7 +45,7 @@ export function buildSemanticLedger(options={}){
    independentCheck:{scope:'巩固及撤教具练习，可能含已见原故事；不宣称整组为未见迁移',source:withdrawnLessons.includes(id)?'withdrawn-v1-existing-task-ids':'core-existing-task-ids',tasks:tasks.map(t=>({id:t.id,kind:t.kind,prompt:t.prompt,sourceSet:Object.entries(lesson.taskSets).find(([,items])=>items.some(original=>original.id===t.id))?.[0]??'unknown',novelty:Object.entries(lesson.taskSets).find(([,items])=>items.some(original=>original.id===t.id))?.[0]==='transfer'?'designed-transfer-not-certified-unseen':'consolidation-not-certified-unseen'})),allTaskCounts:Object.fromEntries(Object.entries(lesson.taskSets).map(([set,ts])=>[set,ts.length])),selfCheckItems:3},
    review:{intervalDays:[1,3,7,21],technicalStatus:'shared-scheduler-regressions-separate-from-individual-course-delay-trials',teachingStatus:'requires-new-context-and-unassisted-trial'},
    ...note,initialSourceReview:note.sourceReview,sourceReview:verified?'chapter-desktop-reviewed':note.sourceReview,
-   verification:{implementation:lesson.interactionStatus==='static-visual'?'static-relation':'manipulable-six-step',contentReviewed:note.sourceFinding==='initial-source-issue'?'issue-fixed':'source-checked',desktopVisual:verified?.visualInspected?'inspected-pass':verified?'screenshot-recorded':'not-run',mathBehavior:verified?.mathBehavior??'not-run',parentReviewed:'no',learnerMastery:'no-data',evidence:verified?{sha:evidence.source.sha,prHeadSha:evidence.source.prHeadSha,assertions:verified.assertions,actionsPerformed:verified.actionsPerformed,screenshots:verified.screenshots}:null},
+   verification:{implementation:lesson.interactionStatus==='static-visual'?'static-relation':'manipulable-six-step',contentReviewed:note.sourceFinding==='initial-source-issue'?'issue-fixed':'source-checked',desktopVisual:verified?.visualInspected?'inspected-pass':verified?'screenshot-recorded':'not-run',mathBehavior:verified?.mathBehavior??'not-run',parentReviewed:'no',learnerMastery:'no-data',evidence:verified?{sha:evidence.source.sha,prHeadSha:evidence.source.prHeadSha,assertions:verified.assertions,actionsPerformed:verified.actionsPerformed,screenshots:verified.screenshots,taskOnlyAmendment}:null},
    acceptance:{sourceInspection:'recorded',mathematicalInvariants:verified?verified.mathBehavior:'listed-not-individually-retested',browserSemanticEvidence:verified?'desktop-run-with-sha':'pending-chapter-run',parentTeachingApproval:'not-verified',kevinMastery:'not-assessed'},
   };
  });
@@ -56,7 +62,7 @@ export function buildSemanticLedger(options={}){
 }
 const cell=s=>String(s??'').replaceAll('|','／').replaceAll('\n',' ');
 export function renderSemanticLedger(ledger){
- let out=`# 三年级70课教学语义台账（2026-10-09）\n\n初查基线：\`${ledger.baselineSha}\`。保留初次源核对历史，当前电脑端结果按指纹从已归档验证记录生成。\n\n**已读取指定复审文档**：\`${ledger.requestedAudit.path}\`。历史源编排基线79a0f90，最新全量审计要求来自37219a5；每课实际验收SHA与状态如下，不能混用旧版本结论。\n\n70入口＝17教材单元63课＋7基础／桥梁课；849道正式题与11课的66组操作情境分开统计。保留六步课堂和三项自查；台账阶段先提交，随后课堂文案／图形在展示修订2026-10-09.2精修、2026-10-09.3补齐九节条件图；当前状态来自全量电脑验证。正式题、判分、考核版本、Kevin学习数据、四至六年级和43张暂缓卡均不变。\n\n检查的是问题→对象→动作→发现→数学语言→独立新题之间的联系。\n\n- 初次核对发现${ledger.summary.initialSourceIssues}课存在文字、条件、对象过渡或模型主题衔接项；保留原发现与修正说明，当前逐课验收结果在下文verification状态列中，不重复沿用初查pending。\n- ${ledger.summary.initiallyNoConfirmedIssue}课尚无本次源核对确认的衔接缺陷，当前电脑端结果由新证据映射，不能用初查pending覆盖后来的有效验证。\n- 电脑端结果按课程内容指纹从desktop-verification.json映射；源内容改变会自动失效。家长核对与孩子迁移独立记录，均不代填通过。\n\n机器台账：[teaching-semantic-ledger.json](semantic-ledger/teaching-semantic-ledger.json)。人工逐课批注：[notes.mjs](semantic-ledger/notes.mjs)。生成／查新：\`node scripts/build-semantic-ledger.mjs\` ／ \`node scripts/build-semantic-ledger.mjs --check\`。生成器仅导入课程源，不读取或写入学习数据库。\n\n## 按章总览\n\n|章节|课数|初查需精修（历史）|当前状态|\n|---|---:|---:|---|\n`;
+ let out=`# 三年级70课教学语义台账（2026-10-09）\n\n初查基线：\`${ledger.baselineSha}\`。保留初次源核对历史，当前电脑端结果按指纹从已归档验证记录生成。\n\n**已读取指定复审文档**：\`${ledger.requestedAudit.path}\`。历史源编排基线79a0f90，最新全量审计要求来自37219a5；每课实际验收SHA与状态如下，不能混用旧版本结论。\n\n70入口＝17教材单元63课＋7基础／桥梁课；849道正式题与11课的66组操作情境分开统计。保留六步课堂和三项自查；台账阶段先提交，随后课堂文案／图形在展示修订2026-10-09.2精修、2026-10-09.3补齐九节条件图；当前状态来自全量电脑验证。课堂和数学模型保留原样；2026-10-09封闭终审已另列849题逐题记录，并修正实际题库表述及三课评分版本。Kevin学习数据、四至六年级和43张暂缓卡均不变。\n\n检查的是问题→对象→动作→发现→数学语言→独立新题之间的联系。\n\n- 初次核对发现${ledger.summary.initialSourceIssues}课存在文字、条件、对象过渡或模型主题衔接项；保留原发现与修正说明，当前逐课验收结果在下文verification状态列中，不重复沿用初查pending。\n- ${ledger.summary.initiallyNoConfirmedIssue}课尚无本次源核对确认的衔接缺陷，当前电脑端结果由新证据映射，不能用初查pending覆盖后来的有效验证。\n- 电脑端结果按课程内容指纹从desktop-verification.json映射；源内容改变会自动失效。家长核对与孩子迁移独立记录，均不代填通过。\n\n机器台账：[teaching-semantic-ledger.json](semantic-ledger/teaching-semantic-ledger.json)。人工逐课批注：[notes.mjs](semantic-ledger/notes.mjs)。生成／查新：\`node scripts/build-semantic-ledger.mjs\` ／ \`node scripts/build-semantic-ledger.mjs --check\`。生成器仅导入课程源，不读取或写入学习数据库。\n\n## 按章总览\n\n|章节|课数|初查需精修（历史）|当前状态|\n|---|---:|---:|---|\n`;
  const groups=Map.groupBy(ledger.rows,r=>r.unitId);
  for(const [id,rows] of groups)out+=`|${id} ${cell(rows[0].unitTitle)}|${rows.length}|${rows.filter(r=>r.sourceFinding==='initial-source-issue').length}|${rows.filter(r=>r.verification.evidence).length}/${rows.length}课电脑端数学行为核对；${rows.filter(r=>r.verification.desktopVisual==='inspected-pass').length}课代理看图|\n`;
  out+='\n## 逐课检查清单\n\n';

@@ -20,8 +20,8 @@ test('独立审校oracle遵循运算序、不执行代码；单位、余数、�
  assert(auditTask({...base,prompt:'6厘米等于多少毫米？',expected:'6',solution:'6毫米。'}).errors.length);
  assert.deepEqual(auditTask({...base,kind:'explanation',prompt:'为什么',solution:'4.2=3个一和12个十分之一。'}).errors,[]);
 });
-test('全849题自动清点、每单元四类手工样本，未证明题保持未验证',()=>{
- const r=buildFormalTaskAudit();assert.equal(r.summary.total,849);assert.equal(r.summary.machineCheckedCount,849);assert.equal(r.summary.errors.length,0);assert(r.summary.humanCheckedCount>=96);assert(r.summary.unverifiedCount>0);
+test('849题代理语义审校与历史97样本、题干oracle、人类审批分别统计',()=>{
+ const r=buildFormalTaskAudit();assert.equal(r.summary.total,849);assert.equal(r.summary.machineCheckedCount,849);assert.equal(r.summary.errors.length,0);assert.equal(r.summary.agentSemanticReviewed,849);assert.equal(r.summary.humanCheckedCount,0);assert.equal(r.summary.unverifiedCount,0);assert.equal(r.summary.historicalAgentSamples,97);
  const samples=JSON.parse(fs.readFileSync(new URL('../docs/review/semantic-ledger/formal-task-manual-samples.json',import.meta.url))).rows;
  for(const group of Map.groupBy(samples,x=>x.unit).values())assert.deepEqual(new Set(group.map(x=>x.set)),new Set(['core','transfer','challenge','review']));
 });
