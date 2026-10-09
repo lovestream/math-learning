@@ -3,9 +3,10 @@ async (page) => {
   for(const profile of [{name:'desktop',width:1440,height:1000,cpu:1},{name:'mobile-width-cpu4',width:390,height:844,cpu:4}]){
     const context=await browser.newContext({viewport:{width:profile.width,height:profile.height}}), cold=await context.newPage(), cdp=await context.newCDPSession(cold);
     await cdp.send('Emulation.setCPUThrottlingRate',{rate:profile.cpu});
-    for(const target of [{name:'map',path:'/?view=map',selector:'.textbook-unit-map'},{name:'core-classroom',path:'/?lesson=G3-U04-B03',selector:'.core-workbench'}]){
+    for(const target of [{name:'map',path:'/?view=map',selector:'.textbook-unit-map'},{name:'classroom-entry',path:'/?lesson=G3-U04-B03',selector:'.child-classroom'}]){
       const started=Date.now();await cold.goto(base+target.path);await cold.locator(target.selector).waitFor();
       samples.push({profile:profile.name,target:target.name,uiReadyMs:Date.now()-started,...await cold.evaluate(()=>({domContentLoadedMs:Math.round(performance.getEntriesByType('navigation')[0].domContentLoadedEventEnd),transferredBytes:performance.getEntriesByType('resource').reduce((n,r)=>n+r.transferSize,0)}))});
+      if(target.name==='classroom-entry'){const experimentStart=Date.now();await cold.getByRole('button',{name:'3 亲手实验',exact:true}).click();await cold.locator('.core-workbench').waitFor();samples.push({profile:profile.name,target:'core-experiment-after-story',uiReadyMs:Date.now()-experimentStart});}
     }
     await context.close();
   }

@@ -13,6 +13,8 @@ async (page) => {
   };
   await page.goto(base + "/?view=map");
   await page.evaluate((id)=>{history.pushState(null,"","/?lesson="+id);window.dispatchEvent(new PopStateEvent("popstate"))},id);
+  await page.locator(".lesson-article").waitFor();
+  await page.getByRole("button", {name:"3 亲手实验",exact:true}).click();
   const lab = page.locator(".textbook-workbench");
   await lab.waitFor();
   await lab.getByRole("button", { name: "重新开始", exact: true }).click();
@@ -63,6 +65,8 @@ async (page) => {
   assert(JSON.stringify(await get()) === snapshot, "长操作导入刷新不一致");
   const second = await page.context().newPage();
   await second.goto(base + "/?lesson=" + id);
+  await second.locator(".lesson-article").waitFor();
+  await second.getByRole("button", {name:"3 亲手实验",exact:true}).click();
   const other = second.locator(".textbook-workbench");
   await other.waitFor();
   await lab.getByRole("button", { name: "向右平移两格", exact: true }).click();
