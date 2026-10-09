@@ -6,7 +6,7 @@ import {introVisualTypes} from '../../shared/intro-visuals.mjs';
 // The same object/face IDs are used by the later hands-on experiments.
 const picture=(type,title,caption,values=[],labels=[])=>({type,title,caption,values,labels});
 export const introVisuals={
- 'G3-U02-E03':picture('money-flow','同一笔钱的三次记录','箭头向外是付款，向内是退款；最后余额留空。',[operationModels['G3-U02-E03'].start,operationModels['G3-U02-E03'].pay,operationModels['G3-U02-E03'].refund]),
+ 'G3-U02-E03':picture('money-flow','同一笔钱的三次记录','箭头表示先后顺序；−14元是付款，＋6元是退款。最后余额留空。',[operationModels['G3-U02-E03'].start,operationModels['G3-U02-E03'].pay,operationModels['G3-U02-E03'].refund]),
  'G3-U02-E02':picture('nested-share','先分到组，再分给组内的人','框表示组，圆点表示人；每人分到的卡片数还不知道。',[operationModels['G3-U02-E02'].total,operationModels['G3-U02-E02'].groups,operationModels['G3-U02-E02'].perGroup]),
  'G3-U02-O01':picture('reverse-routes','同一个方框，两条计算路线','44是错算路线得到的结果；原式结果和方框都未揭晓。',[operationModels['G3-U02-O01'].addend,operationModels['G3-U02-O01'].multiplier,operationModels['G3-U02-O01'].target]),
  'G3-U04-B05':picture('estimate-bound','398人与400人的票费对照','同样每人8元；多算2个人会怎样？先比较，再判断3200元够不够。',coreModels['G3-U04-B05'].cases[0]),

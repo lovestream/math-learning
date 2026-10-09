@@ -1789,7 +1789,7 @@
         "unknown": "一次扣款金额和等值表达",
         "changes": "括号及里面的符号"
       },
-      "contentFingerprint": "5692629d5ed01f0f40f8d8d1fc07efb888abf78cb008b6dd93a81db2f7507b3a",
+      "contentFingerprint": "abc8c0b70254cfafe155fb9e133cf06de92c1d870e2b0622839c44deb8d77628",
       "story": {
         "text": "有60元，先付14元又退6元。想在账本中只写一次扣款，应该扣多少？",
         "figure": {
@@ -1797,7 +1797,7 @@
           "spec": {
             "type": "money-flow",
             "title": "同一笔钱的三次记录",
-            "caption": "箭头向外是付款，向内是退款；最后余额留空。",
+            "caption": "箭头表示先后顺序；−14元是付款，＋6元是退款。最后余额留空。",
             "values": [
               60,
               14,
@@ -1817,7 +1817,7 @@
         "figure": {
           "type": "money-flow",
           "title": "同一笔钱的三次记录",
-          "caption": "箭头向外是付款，向内是退款；最后余额留空。",
+          "caption": "箭头表示先后顺序；−14元是付款，＋6元是退款。最后余额留空。",
           "values": [
             60,
             14,
