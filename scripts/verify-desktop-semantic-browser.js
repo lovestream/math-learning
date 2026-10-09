@@ -10,6 +10,7 @@ async page=>{
  for(const lesson of selected){
   const id=lesson.lessonId;console.log('Desktop mathematical path '+id);
   await page.setViewportSize({width:1440,height:900});await page.goto(base+'/?lesson='+id);await page.locator('.child-classroom').waitFor();
+  if(id==='G3-LP01-B01')assert(await page.locator('.intro-month-card').evaluateAll(cards=>cards.length===2&&cards.every(card=>card.getBoundingClientRect().width>200&&[...card.querySelectorAll('span')].every(cell=>cell.scrollWidth<=cell.clientWidth))),'两张月历被压成窄列或日期重叠');
   const screenshots={story:await shot(id,'story',1440)};await stage(1);await page.locator('.prediction-cards button').last().click();screenshots.prediction=await shot(id,'prediction',1440);
   await stage(2);await page.locator('.classroom-stage svg,.classroom-stage [role=img],.classroom-stage .core-relation-table,.classroom-stage .core-nested-boxes,.classroom-stage .lunchboxes,.classroom-stage .hands-on,.classroom-stage .textbook-workbench,.classroom-stage .operation-extension-lab').first().waitFor();screenshots.initial=await shot(id,'experiment-initial',1440);
   const result=await operateDesktop(page,lesson);assert(await page.locator('.textbook-board g[role=button]:focus>text').evaluateAll(nodes=>nodes.every(n=>getComputedStyle(n).stroke==='none')),'选中区间的文字被焦点描边遮挡 '+id);screenshots.operated=await shot(id,result.mathBehavior==='static-relation-verified'?'static-relation':'operated',1440);
