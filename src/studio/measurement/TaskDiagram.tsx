@@ -1,6 +1,9 @@
 import {boardMeasure,chainMeasure,intervalMeasure} from '../../../shared/length-model.mjs';
 import type {MeasurementTaskDiagram} from '../types';
 import {cm,Dimension,Ring} from './Primitives';
+// Story pictures load before the interactive workbench: their diagram styles
+// must not depend on first opening that lazy-loaded experiment.
+import './measurement.css';
 
 export default function TaskDiagram({diagram,intro=false}:{diagram:MeasurementTaskDiagram;intro?:boolean}){
   if(diagram.mode==='chain'){

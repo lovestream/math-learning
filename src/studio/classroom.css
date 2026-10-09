@@ -12,3 +12,5 @@
 .chain-condition-detail{max-width:420px;margin:18px auto}.chain-condition-detail svg{width:100%;height:auto;display:block}.chain-condition-detail p{font-size:15px;line-height:1.7}
 
 .child-classroom .intro-source-visual,.child-classroom .measurement-question{margin:18px 0}.child-classroom [data-intro-visual=data-cards] .intro-canvas,.child-classroom [data-intro-visual=vote-board] .intro-canvas{max-height:none}
+.child-classroom [data-intro-visual] .measurement-question svg{min-width:0;width:100%;height:auto;max-height:none}
+.child-classroom [data-intro-visual] .task-joint rect{fill:#e9b44d26;stroke:#a56941;stroke-width:2;stroke-dasharray:5 4}.child-classroom [data-intro-visual] .task-joint text{fill:#294b53;font:600 16px "PingFang SC",sans-serif}

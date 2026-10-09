@@ -5,6 +5,17 @@ async page=>{
  const click=async name=>page.locator('.classroom-stage').getByRole('button',{name,exact:true}).click();
  const stage=async n=>page.locator('.classroom-route button').nth(n).click();
  const shot=async(id,state,width)=>page.locator('.child-classroom').screenshot({path:`output/playwright/v2-audit/semantic-${id}-${state}-${width}.png`});
+ // Check the cold story before opening any lazy length workbench. Page overflow
+ // alone misses a wide SVG clipped by a narrower, internally scrolling figure.
+ await page.goto(base+'/?lesson=G3-U03-E02');await page.locator('.classroom-story').waitFor();
+ for(const width of [390,768,1440]){
+  await page.setViewportSize({width,height:1024});
+  const geometry=await page.locator('.classroom-story .measurement-question').evaluate(figure=>{
+   const svgs=[...figure.querySelectorAll('svg')];return {fits:figure.scrollWidth<=figure.clientWidth+1&&svgs.every(svg=>svg.getBoundingClientRect().width<=figure.clientWidth+1),labelsFit:svgs.every(svg=>[...svg.querySelectorAll('text')].every(text=>{const a=text.getBoundingClientRect(),b=svg.getBoundingClientRect();return a.left>=b.left-1&&a.right<=b.right+1})),jointFills:[...figure.querySelectorAll('.task-joint rect')].map(rect=>getComputedStyle(rect).fill)};
+  });
+  assert(geometry.fits&&geometry.labelsFit,'链环首屏内部截图／标注裁切 '+width);
+  assert(geometry.jointFills.length===3&&geometry.jointFills.every(fill=>fill!=='rgb(0, 0, 0)'),'冷启动接头样式未加载');
+ }
  const operate=async id=>{
   const stage=page.locator('.classroom-stage');
   const reset=stage.getByRole('button',{name:'重新开始',exact:true});if(await reset.count())await reset.click();
@@ -44,5 +55,5 @@ async page=>{
  }
  for(const id of ['G3-U01-B01','G3-U02-B03','G3-U04-B03','G3-U03-E02'])for(const width of [768,1440]){await page.setViewportSize({width,height:1024});await page.goto(base+'/?lesson='+id);await page.locator('.child-classroom').waitFor();for(const [n,name] of [[0,'story'],[1,'prediction'],[2,'operated']]){await stage(n);await shot(id,name,width);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'关键图溢出 '+id+' '+width);} }
  await page.setViewportSize({width:390,height:844});await page.goto(base+'/?lesson=G3-U02-B03');await page.locator('.child-classroom').waitFor();await stage(0);await page.addStyleTag({content:'.classroom-stage{font-size:200%}.classroom-stage p{font-size:2em}'});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'字体放大导致溢出');await shot('G3-U02-B03','font200',390);
- assert(!errors.length,errors.join('\n'));return {passed:true,chapters:checked,representativeCount:17,widths:[390,768,1440],font200:true,realIpad:false,kevinTrial:false,errors};
+ assert(!errors.length,errors.join('\n'));return {passed:true,chapters:checked,representativeCount:17,widths:[390,768,1440],coldChainStoryNotClipped:true,font200:true,realIpad:false,kevinTrial:false,errors};
 }
