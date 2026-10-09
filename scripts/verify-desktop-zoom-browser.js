@@ -7,7 +7,7 @@ async page=>{
  // https://github.com/chromium/chromium/blob/main/chrome/browser/ui/zoom/chrome_zoom_level_prefs.cc
  for(const zoom of [1.25,1.5,2]){
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'kevin-native-zoom-'));fs.mkdirSync(dir+'/Default');fs.writeFileSync(dir+'/Default/Preferences',JSON.stringify({partition:{default_zoom_level:{x:Math.log(zoom)/Math.log(1.2)}}}));let context;
-  try{context=await chromium.launchPersistentContext(dir,{headless:true,viewport:null,...(process.env.PLAYWRIGHT_CHANNEL?{channel:process.env.PLAYWRIGHT_CHANNEL}:{}),args:['--window-size=1440,900','--force-device-scale-factor=1']});const p=await context.newPage();await p.emulateMedia({reducedMotion:'reduce'});
+  try{context=await chromium.launchPersistentContext(dir,{headless:true,viewport:null,channel:process.env.PLAYWRIGHT_CHANNEL||'chromium',args:['--window-size=1440,900','--force-device-scale-factor=1']});const p=await context.newPage();await p.emulateMedia({reducedMotion:'reduce'});
    for(const id of ids){await p.goto(base+'/?lesson='+id);await p.locator('.child-classroom').waitFor();
     const measured=await p.evaluate(()=>({dpr:devicePixelRatio,inner:innerWidth,outer:outerWidth,pinch:visualViewport.scale}));assert(Math.abs(measured.dpr-zoom)<.02&&Math.abs(measured.inner*zoom-1440)<3&&measured.pinch===1,'没有真正启用浏览器缩放 '+JSON.stringify(measured));
     for(let step=0;step<6;step++){await p.locator('.classroom-route button').nth(step).click();assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'浏览器缩放溢出 '+id+' '+zoom+' '+step);if(step===0||step===2)await p.locator('.classroom-stage').screenshot({path:`output/playwright/v2-audit/native-zoom-${id}-${zoom*100}-${step}.png`});}

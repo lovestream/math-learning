@@ -10,7 +10,12 @@ export function lessonEvidence(progress,lessonId,contentVersion){
   const transfers=current.filter(s=>s.setName==='transfer'&&s.completedAt&&independent(s));
   const reviews=current.filter(s=>s.setName==='review'&&s.completedAt&&s.reviewDue&&Date.parse(s.reviewDue)<=Date.parse(s.completedAt)&&independent(s)&&transfers.some(t=>Date.parse(s.completedAt)-Date.parse(t.completedAt)>=86400000&&cores.some(c=>Date.parse(c.completedAt)<=Date.parse(t.completedAt))));
   const results=sessions.flatMap(s=>Object.values(s.results??{}));
-  const explored=Boolean(state.reading?.[lessonId])||sessions.some(s=>Object.keys(s.answers??{}).length>0);
+  const reading=state.reading?.[lessonId],browsed=Boolean(reading);
+  // An initial model snapshot or classroom step is not an operation event.
+  // Legacy widgets without a journal remain visible as saved state, not invented actions.
+  const operationEvents=Object.values(reading?.widgets??{}).flatMap(w=>w.actions??[]).filter(a=>a.valid!==false&&a.before!==a.after).length;
+  const operationRecorded=operationEvents>0,hasSavedModel=Object.keys(reading?.widgets??{}).length>0;
+  const explored=browsed||sessions.some(s=>Object.keys(s.answers??{}).length>0);
   const practiced=cores.length>0,retained=reviews.length>0,mastered=practiced&&transfers.length>0&&retained;
-  return {status:mastered?'independent':practiced?'practiced':explored?'explored':'new',explored,practiced,independent:mastered,transfer:transfers.length,retained:reviews.length,selfCorrections:results.filter(r=>r.status==='correct'&&r.selfCorrection).length,pending:results.filter(r=>r.status==='pendingReview').length};
+  return {status:mastered?'independent':practiced?'practiced':explored?'explored':'new',explored,browsed,operationRecorded,operationEvents,hasSavedModel,practiced,independent:mastered,transfer:transfers.length,retained:reviews.length,selfCorrections:results.filter(r=>r.status==='correct'&&r.selfCorrection).length,pending:results.filter(r=>r.status==='pendingReview').length};
 }

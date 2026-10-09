@@ -25,3 +25,12 @@ test('全849题自动清点、每单元四类手工样本，未证明题保持�
  const samples=JSON.parse(fs.readFileSync(new URL('../docs/review/semantic-ledger/formal-task-manual-samples.json',import.meta.url))).rows;
  for(const group of Map.groupBy(samples,x=>x.unit).values())assert.deepEqual(new Set(group.map(x=>x.set)),new Set(['core','transfer','challenge','review']));
 });
+
+import{lessonEvidence}from'../shared/learning-evidence.mjs';
+test('浏览、初始状态、实际日志与独立练习分开，不补造旧操作和掌握',()=>{
+ const evidence=widgets=>lessonEvidence({studio:{reading:{L:{widgets}}}},'L','v1');
+ const empty=evidence({});assert(empty.browsed);assert(!empty.operationRecorded);assert(!empty.practiced);assert(!empty.independent);
+ const initial=evidence({model:{sceneId:'L-MODEL1',actions:[{action:'x',before:'{}',after:'{}',valid:true}]}});assert(!initial.operationRecorded);
+ const old=evidence({model:{filled:[0,1]}});assert(old.hasSavedModel);assert.equal(old.operationEvents,0);
+ const used=evidence({model:{actions:[{action:'x',before:'{}',after:'{"filled":[0]}',valid:true},{action:'y',before:'{}',after:'{"filled":[1]}',valid:false}]}});assert.equal(used.operationEvents,1);assert(used.operationRecorded);assert.equal(used.status,'explored');assert(!used.independent);
+});
