@@ -77,6 +77,30 @@ export function selfCheckTask(p,input,now=Date.now()){
     return {status:'selfCheck',message:'首答已保存。检查下面三件事；想改答案可以直接改，再提交最终答案。',revision:s.revision};
   });
 }
+const firstCoreAt=(st,id)=>Object.values(st.sessions).filter(s=>s.lessonId===id&&s.setName==='core'&&s.completedAt).map(s=>s.completedAt).sort()[0];
+// Both completion paths advance the same schedule. Parent approval awards no
+// task/core points; it confirms submitted evidence, not a new attempt.
+function completeReviewEvidence(p,s,now){
+ const st=initPilot(p);st.review??={};
+ const first=firstCoreAt(st,s.lessonId);
+ if(s.setName==='core'){
+  st.review[s.lessonId]??={dueAt:new Date(now+DAY).toISOString(),stage:0};
+  prepareReview(st.review[s.lessonId],now,first);
+ }
+ const r=st.review[s.lessonId];
+ if(s.setName==='review'&&s.reviewDue&&r?.dueAt===s.reviewDue){
+  finishReview(r,now,!s.hadIncorrect&&s.taskIds.every(id=>!s.results[id].assisted&&!s.results[id].selfCorrection),p.settings.reviewDays,first);
+ }
+}
+function remediateReviewEvidence(p,s,now){
+ const st=initPilot(p);st.review??={};const next=new Date(now+DAY).toISOString();
+ const r=st.review[s.lessonId]??={stage:0,dueAt:next},first=firstCoreAt(st,s.lessonId);
+ if(s.setName==='review'&&s.reviewDue&&r.dueAt===s.reviewDue)finishReview(r,now,false,p.settings.reviewDays,first);
+ else prepareReview(r,now,first);
+ // A rejected or amended review must not remain overdue or wait several weeks.
+ // Repeated feedback preserves an already earlier future remediation date.
+ if(Date.parse(r.dueAt)<=now||Date.parse(r.dueAt)>now+DAY)r.dueAt=next;
+}
 export function submitTask(p,input,lessons,now=Date.now()){
   const st=initPilot(p);return receipt(st,input.eventId,{action:'submit',...input},()=>{
     const s=sessionOf(p,input.sessionId);revision(s,input.revision);const task=s.tasks.find(t=>t.id===input.taskId);check(task,'题目不存在。');answerCheck(input.answer);s.selfChecks??={};check(s.selfChecks[task.id]?.evidenceCompletedAt,'请先完成并保存三项自查证据。');
@@ -105,14 +129,8 @@ export function submitTask(p,input,lessons,now=Date.now()){
       s.completedAt=at;
       if(s.setName==='core'){
         if(!d.completion){d.completion=5;completionPaid=5;credit(p,`pilot:complete:${day(now)}`,5,'完成今天的核心练习',now);ensureFriend(p,now);for(const id of p.pets.owned){const f=p.pets.care.friends[id];if(f)f.growth+=10;}p.pets.xp+=10*p.pets.owned.length;p.pets.care.memories.unshift({pet:p.pets.active,kind:'learn',text:`一起完成「${findLesson(lessons,s.lessonId).shortTitle}」的核心练习。`,at,lessonId:s.lessonId});p.pets.care.memories=p.pets.care.memories.slice(0,160);}
-        st.review??={};st.review[s.lessonId]??={dueAt:new Date(now+DAY).toISOString(),stage:0};
-        const first=Object.values(st.sessions).filter(item=>item.lessonId===s.lessonId&&item.setName==='core'&&item.completedAt).map(item=>item.completedAt).sort()[0];
-        prepareReview(st.review[s.lessonId],now,first);
       }
-      if(s.setName==='review'&&s.reviewDue&&st.review?.[s.lessonId]?.dueAt===s.reviewDue){
-        const first=Object.values(st.sessions).filter(item=>item.lessonId===s.lessonId&&item.setName==='core'&&item.completedAt).map(item=>item.completedAt).sort()[0];
-        finishReview(st.review[s.lessonId],now,!s.hadIncorrect&&s.taskIds.every(id=>!s.results[id].assisted&&!s.results[id].selfCorrection),p.settings.reviewDays,first);
-      }
+      completeReviewEvidence(p,s,now);
     }
     return {...result,revision:s.revision,completionPaid,completed:Boolean(s.completedAt),dailyCap:d.tasks>=30};
   });
@@ -160,9 +178,9 @@ export function reviewFormalTask(p,input,now=Date.now()) {
   r.status=input.verdict==='correct'?'correct':'incorrect';r.message=`家长核对：${input.comment.trim()}`;r.paid=0;
   if(input.verdict!=='correct')s.hadIncorrect=true;
   if(s.tasks.every(t=>s.results[t.id]?.status==='correct')) {
-   s.completedAt??=new Date(now).toISOString();
-   st.review[s.lessonId]??={stage:0,dueAt:new Date(now+DAY).toISOString()};
+   if(!s.completedAt){s.completedAt=new Date(now).toISOString();completeReviewEvidence(p,s,now);}
   } else {if(s.completedAt){s.completionHistory??=[];s.completionHistory.push(s.completedAt);}s.completedAt=null;}
+  if(input.verdict==='needs-remediation')remediateReviewEvidence(p,s,now);
   s.revision++;s.savedAt=new Date(now).toISOString();
   return {status:r.status,paid:0,revision:s.revision};
  });

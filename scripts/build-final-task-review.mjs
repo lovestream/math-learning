@@ -25,6 +25,7 @@ for(const l of lessons){
   }
   const proofs=relations.filter(r=>r.taskId===task.id);
   for(const proof of proofs){if(!review[i].includes(proof.equation))throw Error(`Stale relation ${task.id}`);const values=proof.parts.map(calculateAuditExpression);if(values.some(v=>!auditSame(v,values[0])))throw Error(`Wrong handwritten arithmetic ${task.id}`);}
+  // acceptableAlternative retains legacy naming: it is reviewer guidance, not a separately authored student answer.
   const before=original.task,changed=Object.keys({...before,...task}).filter(k=>JSON.stringify(before[k])!==JSON.stringify(task[k]));
   rows.push({lessonId:l.lessonId,unitId:l.textbookUnit?.id??'foundation-bridge',title:l.title,taskId:task.id,set,kind:task.kind,contentVersion:l.contentVersion,sourceFingerprint:digest(task),task,
    reviewer:{kind:'Codex-agent',method:'逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险',humanTeachingApproved:false,independentThirdParty:false},

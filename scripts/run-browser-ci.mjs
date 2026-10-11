@@ -1,5 +1,6 @@
 import {execFileSync} from "node:child_process";
 import {createHash} from "node:crypto";
+import {prepareReview} from "../server/review-schedule.mjs";
 // Reuse the same checked-in browser callbacks locally and in CI. No real learner data.
 import fs from "node:fs";
 import os from "node:os";
@@ -34,6 +35,7 @@ const all = [
   "verify-desktop-semantic-browser",
   "verify-desktop-zoom-browser",
   "verify-final-tasks-browser",
+  "verify-formal-review-browser",
 ];
 const only = process.argv.find((v) => v.startsWith("--only=")),
   names = only
@@ -54,6 +56,7 @@ const only = process.argv.find((v) => v.startsWith("--only=")),
   "verify-desktop-semantic-browser",
   "verify-desktop-zoom-browser",
   "verify-final-tasks-browser",
+  "verify-formal-review-browser",
         ];
 if (names.some((n) => !all.includes(n)))
   throw Error("Unknown browser callback");
@@ -124,6 +127,11 @@ try {
           now,
         );
       });
+      store.close();
+    }
+    if(name === "verify-formal-review-browser") {
+      const store=createStore(dir,[]),now=Date.now(),learned=now-86400000;
+      store.mutate(p=>{p.studio.review['G3-U06-E01']=prepareReview({stage:0,dueAt:new Date(now-1000).toISOString()},learned,new Date(learned).toISOString());});
       store.close();
     }
     if(name === "verify-evidence-browser") {

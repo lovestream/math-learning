@@ -18,7 +18,7 @@ test('强弱证据分开：参考解答算得对，不证明题意的答案对',
  assert(result.schemaChecked);assert(result.solutionInternallyConsistent);
  assert(!result.independentlyDerivedFromPromptOrDiagram);assert(!result.numericProofVerified);
 });
-test('849条具体理由、335种解释的替代表达和选择干扰项逐题可追溯',()=>{
+test('849条具体理由、335题开放解释审阅范围和选择干扰项逐题可追溯',()=>{
  const report=buildFormalTaskAudit();assert.equal(report.summary.agentSemanticReviewed,849);assert.equal(report.summary.humanTeachingApproved,0);
  assert.equal(register.rows.length,849);
  for(const row of register.rows){
