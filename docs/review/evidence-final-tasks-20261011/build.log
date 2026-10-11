@@ -1,0 +1,34 @@
+
+> kevin-math-lab@0.1.0 prebuild
+> npm run build:catalog
+
+
+> kevin-math-lab@0.1.0 build:catalog
+> node scripts/build-grade3-catalog.mjs && node scripts/build-upper-primary-catalog.mjs && node scripts/build-pilot.mjs
+
+Grade 3 catalog built: 54 lessons, 432 questions
+Upper primary catalogs built: 54 lessons; combined catalog: 108 lessons, 864 questions
+互动样板：70课，849道任务；全量蓝图仍为 planned。
+
+> kevin-math-lab@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 1665 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                 0.62 kB │ gzip:  0.46 kB
+dist/assets/CoreWorkbench-5XtJHjIs.css          3.64 kB │ gzip:  1.13 kB
+dist/assets/thinking-C6yMyyj6.css               6.33 kB │ gzip:  1.82 kB
+dist/assets/index-BMBNUk2G.css                 80.41 kB │ gzip: 18.06 kB
+dist/assets/teaching-vY1t4jLq.css             118.65 kB │ gzip: 26.81 kB
+dist/assets/useMotionValue-B_yKZJ0i.js          8.76 kB │ gzip:  4.09 kB
+dist/assets/ParentThinkingReview-CADX-kfb.js   14.40 kB │ gzip:  5.71 kB
+dist/assets/CourseReader-DWHOvvde.js           15.86 kB │ gzip:  6.11 kB
+dist/assets/CoreWorkbench-B3InnhbV.js          16.18 kB │ gzip:  6.21 kB
+dist/assets/QuestExperience-DQrn3qtU.js        33.06 kB │ gzip: 10.31 kB
+dist/assets/ThinkingPanel-M--od7Aq.js          33.72 kB │ gzip: 12.15 kB
+dist/assets/teaching-DHJlE71u.js              245.66 kB │ gzip: 86.94 kB
+dist/assets/index-DUIm04wY.js                 289.26 kB │ gzip: 93.68 kB
+✓ built in 746ms
