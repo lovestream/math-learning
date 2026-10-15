@@ -2,10 +2,10 @@ async page=>{
  const assert=(x,message)=>{if(!x)throw Error(message)},base=new URL(page.url()).origin,errors=[];
  page.on('pageerror',e=>errors.push(e.message));
  await page.setViewportSize({width:1440,height:1000});
- await page.goto(base+'/?view=detective');await page.getByText('先请家长审核案卷',{exact:true}).waitFor();
+ await page.goto(base+'/?view=detective');await page.getByText('等待新案卷送达',{exact:true}).waitFor();
  assert((await page.request.get(base+'/api/parent/detective/cases')).status()===403,'未解锁竟可读私有案卷');
  await page.request.post(base+'/api/parent/access',{data:{action:'setup',pin:'912345'}});
- await page.goto(base+'/?view=parent');const parent=page.locator('.det-parent');await parent.waitFor();
+ await page.goto(base+'/?view=parent');const parent=page.locator('.det-parent');await parent.waitFor();await parent.locator('.det-backup-entry>summary').click();
  await parent.getByRole('button',{name:'手工新增案卷',exact:true}).click();
  await parent.getByLabel('案卷标题',{exact:true}).fill('三袋苹果的结果疑案');
  await parent.getByLabel('原题（儿童会看到，请用小智等虚构称呼）',{exact:true}).fill('有3袋苹果，每袋4个，一共有多少个？');
@@ -60,7 +60,7 @@ async page=>{
  }
  const history=await(await page.request.get(base+'/api/detective/today')).json();assert(history.history.find(x=>x.case.id===manual.id).attempt.status==='parent-review','口述自动判完成');
  assert(history.badges===2,'待审核也发勋章');
- await page.request.post(base+'/api/parent/access',{data:{action:'unlock',pin:'912345'}});await page.goto(base+'/?view=parent');await parent.waitFor();
+ await page.request.post(base+'/api/parent/access',{data:{action:'unlock',pin:'912345'}});await page.goto(base+'/?view=parent');await parent.waitFor();await parent.locator('.det-backup-entry>summary').click();
  const article=parent.locator('.det-parent-review article').filter({hasText:'三袋苹果的结果疑案'});await parent.getByLabel('给孩子的公开反馈',{exact:true}).fill('临时测试：已听完数量关系和逆向分组解释。');
  await article.getByRole('button',{name:'解释与验证成立',exact:true}).click();await parent.getByText('批阅已保存，原始首判和历次审核仍保留。',{exact:true}).waitFor();if(await parent.locator('.det-parent-review').getAttribute('open')===null)await parent.locator('.det-parent-review>summary').click();await parent.locator('.det-parent-review').screenshot({path:'output/playwright/v2-audit/detective-parent-review.png'});
  const exportResponse=await page.request.get(base+'/api/parent/export');assert(exportResponse.ok(),'解锁后家长专用备份导出失败');const exported=await exportResponse.json();assert(exported.progress.wallet.coins===0,'侦探改了钱包');assert(exported.progress.studio.detective.badges.length===3,'家长核对没有发独立侦探徽章');assert((await page.request.post(base+'/api/parent/import',{data:exported})).ok(),'导入失败');

@@ -1,6 +1,7 @@
 name: Verify math and learning flows
 on:
   push:
+    branches-ignore: [detective-inbox]
   pull_request:
 jobs:
   verify:

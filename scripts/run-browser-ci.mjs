@@ -1,3 +1,5 @@
+import {createBundle} from './create-detective-bundle.mjs';
+import {detectiveToday} from '../server/detective-store.mjs';
 import {manageDetective} from '../server/detective-store.mjs';
 import {execFileSync} from "node:child_process";
 import {createHash} from "node:crypto";
@@ -17,6 +19,7 @@ import {
 } from "../server/thinking-store.mjs";
 // Run the short new workflow checks first for prompt CI feedback.
 const all = [
+  "verify-detective-inbox-browser",
   "verify-detective-browser",
   "verify-detective-recovery-browser",
   "verify-hands-on-browser",
@@ -47,6 +50,7 @@ const only = process.argv.find((v) => v.startsWith("--only=")),
     : process.argv.includes("--full")
       ? all
       : [
+          "verify-detective-inbox-browser",
           "verify-detective-browser",
           "verify-detective-recovery-browser",          "verify-thinking-browser",
           "verify-division-browser",
@@ -94,6 +98,12 @@ try {
     if(name==='verify-detective-recovery-browser'){
       const fixture=createStore(dir,[]);
       fixture.mutate(p=>{manageDetective(p,{action:'enable-seeds',eventId:'fixture-enable',checks:[true,true,true]});for(const c of Object.values(p.studio.detective.cases).filter(c=>c.status==='published'&&!['DET-G3-001','DET-G3-002','DET-G3-011'].includes(c.id)))manageDetective(p,{action:'withdraw',eventId:'fixture-withdraw-'+c.id,caseId:c.id,expectedRevision:c.revision});});fixture.close();
+    }
+    let mockInbox=null;
+    if(name==='verify-detective-inbox-browser'){
+      mockInbox=fs.mkdtempSync(path.join(os.tmpdir(),'kevin-mock-inbox-'));
+      const fixture=createStore(dir,[]);fixture.mutate(p=>{manageDetective(p,{action:'enable-seeds',eventId:'fixture-enable',checks:[true,true,true]});detectiveToday(p);});fixture.close();
+      const bundle=JSON.parse(fs.readFileSync('tests/fixtures/detective-inbox-v1.json','utf8'));bundle.bundleId='DT-START-CARDS';bundle.cases.forEach((c,i)=>c.id='DT-START-CARDS-'+i);fs.writeFileSync(path.join(mockInbox,bundle.bundleId+'.json'),JSON.stringify(bundle));
     }
     // A visibly named simulated old review allows testing the due-review UI without
     // changing production clocks, adding test APIs, or importing real Kevin records.
@@ -174,8 +184,8 @@ try {
     const log = fs.createWriteStream(`${out}/${name}-server.log`),
       child = spawn(
         process.execPath,
-        ["server/index.mjs", `--port=${port}`, `--data-dir=${dir}`],
-        { stdio: ["ignore", "pipe", "pipe"] },
+        [...(mockInbox?["--import","./scripts/fixtures/detective-inbox-fetch.mjs"]:[]),"server/index.mjs",...(mockInbox?[]:["--detective-sync=off"]), `--port=${port}`, `--data-dir=${dir}`],
+        { stdio: ["ignore", "pipe", "pipe"],env:{...process.env,...(mockInbox?{DETECTIVE_MOCK_INBOX_DIR:mockInbox}:{})} },
       );
     child.stdout.pipe(log);
     child.stderr.pipe(log);
@@ -214,7 +224,11 @@ try {
       await page.goto(base);
       const source=fs.readFileSync(`scripts/${name}.js`, "utf8").trim().replace(/;$/, "");
       const callback = new Function(`return (${source})`)();
-      const result = await callback(page);
+      const result = await callback(page,{deliverInbox:()=>{
+        if(!mockInbox)throw Error('Not an inbox suite');
+        const cases=[['original-error','wrong',6],['transfer-error','wrong',8],['correct-control','correct',9]].map(([role,mode,value])=>({role,template:'length-conversion-v1',parameters:{mode,value,from:'分米',to:'厘米'}}));
+        const bundle=createBundle({bundleId:'DT-RUNNING-LENGTHS',cases});fs.writeFileSync(path.join(mockInbox,bundle.bundleId+'.json'),JSON.stringify(bundle));fs.writeFileSync(path.join(mockInbox,'.clock-offset'),String(16*60000));return bundle;
+      }});
       if (!result?.passed) throw Error("Callback did not report success");
       summary.push({ name, ...result, source:sourceEvidence });
       fs.writeFileSync(
@@ -240,7 +254,7 @@ try {
       child.kill("SIGTERM");
       await exited;
       log.end();
-      fs.rmSync(dir, { recursive: true, force: true });
+      fs.rmSync(dir, { recursive: true, force: true });if(mockInbox)fs.rmSync(mockInbox,{recursive:true,force:true});
       fs.writeFileSync(
         `${out}/ci-summary.json`,
         JSON.stringify(summary, null, 2) + "\n",

@@ -4,7 +4,7 @@ const iso=now=>new Date(now).toISOString();
 const day=now=>new Date(now+8*3600000).toISOString().slice(0,10);
 const conflict=()=>insist(false,'另一页已经保存了更新。请重新载入，再继续；你的输入仍保留在本页。',409);
 const clone=x=>structuredClone(x);
-const validateStored=p=>{validateDetective(p.studio.detective);insist(Buffer.byteLength(JSON.stringify(p.studio),'utf8')<6*1024*1024,'互动课程存档接近容量上限，请先导出备份。');};
+export const validateStored=p=>{validateDetective(p.studio.detective);insist(Buffer.byteLength(JSON.stringify(p.studio),'utf8')<6*1024*1024,'互动课程存档接近容量上限，请先导出备份。');};
 export function ensureDetective(p){
   p.studio??={version:1,reading:{},sessions:{},notes:[],events:[],entitlements:{},daily:{},review:{}};
   if(p.studio.detective)return p.studio.detective;
@@ -32,10 +32,15 @@ function anonymize(content,name){
   for(const r of [copy.repair,copy.verify])if(['choice','ordering'].includes(r.kind)){r.options=r.options.map(clean);r.answer=clean(r.answer);}
   return copy;
 }
+export function publishImported(c,content,now,provenance){
+  validateCase(content,true);insist(c.versions.length<20,'此案已有20个版本，请另建新案。');
+  const hash=fingerprint(content);if(active(c)?.hash!==hash){c.versions.push({id:`${c.id}:v${c.versions.length+1}`,caseId:c.id,content:clone(content),hash,publishedAt:iso(now),approved:true,approvalSource:'deterministic-import',provenance});c.activeVersion=c.versions.at(-1).id;}
+  c.status='published';c.revision++;
+}
 function publish(c,now,name){
   validateCase(c.draft,true);insist(c.versions.length<20,'此案已有20个版本，请另建新案。');
   const content=anonymize(c.draft,name);validateCase(content,true);const hash=fingerprint(content);
-  if(active(c)?.hash!==hash){c.versions.push({id:`${c.id}:v${c.versions.length+1}`,caseId:c.id,content,hash,publishedAt:iso(now),approved:true});c.activeVersion=c.versions.at(-1).id;}
+  if(active(c)?.hash!==hash){c.versions.push({id:`${c.id}:v${c.versions.length+1}`,caseId:c.id,content,hash,publishedAt:iso(now),approved:true,approvalSource:'parent'});c.activeVersion=c.versions.at(-1).id;}
   c.status='published';c.revision++;
 }
 function checked(b){insist(Array.isArray(b.checks)&&b.checks.length===3&&b.checks.every(x=>x===true),'发布前请核对题意与答案、首错或正确依据、匿名与验证方法。');}
@@ -52,7 +57,7 @@ export function manageDetective(p,b,now=Date.now()){
     }else{
       insist(c,'案卷不存在。',404);if(c.revision!==b.expectedRevision)conflict();
       if(b.action==='save'){validateCase(b.content);c.draft=clone(b.content);c.revision++;}
-      else if(b.action==='publish'){checked(b);publish(c,now,p.profile.name);}
+      else if(b.action==='publish'){checked(b);publish(c,now,p.profile.name);delete c.pendingImport;const file=d.inbox?.files[c.importSource?.sourcePath];if(file?.status==='needs-review'&&file.caseIds.every(id=>d.cases[id].status==='published'&&!d.cases[id].pendingImport))file.status='parent-published';}
       else if(['withdraw','archive'].includes(b.action)){c.status=b.action==='withdraw'?'withdrawn':'archived';c.revision++;}
       else insist(false,'不支持这个案卷操作。');
     }
@@ -62,7 +67,7 @@ export function manageDetective(p,b,now=Date.now()){
 function ordered(items,seed){return [...items].sort((a,b)=>fingerprint(seed+a.id).localeCompare(fingerprint(seed+b.id)));}
 export function detectiveToday(p,now=Date.now()){
   const d=p.studio?.detective;
-  if(!d)return {day:day(now),cases:[],history:[],badges:0};
+  if(!d)return {day:day(now),cases:[],newCases:[],history:[],badges:0};
   const today=day(now);
   if(!d.plans[today]){
     const published=Object.values(d.cases).filter(c=>c.status==='published');
@@ -80,7 +85,8 @@ export function detectiveToday(p,now=Date.now()){
     return {case:publicCase(versionFor(d,ref),a),attempt:a?publicAttempt(a):null};
   });
   validateStored(p);
-  return {day:today,cases,badges:d.badges.length,history:Object.values(d.attempts).sort((a,b)=>b.startedAt.localeCompare(a.startedAt)).slice(0,100).map(a=>({title:versionOf(d,a).content.title,...reference(d,a)}))};
+  const newCases=Object.values(d.cases).filter(c=>c.status==='published'&&c.importSource).sort((a,b)=>b.importSource.importedAt.localeCompare(a.importSource.importedAt)).slice(0,30).map(c=>{const a=Object.values(d.attempts).find(a=>a.version===c.activeVersion);return {case:publicCase(active(c),a),attempt:a?publicAttempt(a):null};});
+  return {day:today,cases,newCases,badges:d.badges.length,history:Object.values(d.attempts).sort((a,b)=>b.startedAt.localeCompare(a.startedAt)).slice(0,100).map(a=>({title:versionOf(d,a).content.title,...reference(d,a)}))};
 }
 export function detectiveAttempt(p,b,now=Date.now()){
   const d=ensureDetective(p),signature=inputEvent(b);
@@ -88,7 +94,7 @@ export function detectiveAttempt(p,b,now=Date.now()){
   if(a&&prior(a.events,b,signature))return reference(d,a);
   if(b.action==='start'){
     insist(!a,'调查记录已经存在。',409);
-    const plan=d.plans[day(now)]??[];const ref=plan.find(x=>x.caseId===b.caseId&&x.version===b.version);
+    const plan=d.plans[day(now)]??[];const c=d.cases[b.caseId];const ref=plan.find(x=>x.caseId===b.caseId&&x.version===b.version)??(c?.importSource&&c.status==='published'&&c.activeVersion===b.version?{caseId:c.id,version:c.activeVersion}:null);
     insist(ref&&d.cases[ref.caseId].status==='published','这宗案件尚未发布或已撤回，请回到今日案卷。');
     const old=Object.values(d.attempts).find(a=>a.version===b.version);if(old)return reference(d,old);
     insist(Object.keys(d.attempts).length<1000,'调查记录达到首版1000次上限，请家长先导出备份。');

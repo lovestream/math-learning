@@ -1,3 +1,4 @@
+import {validateInboxState,validateImportProvenance} from './detective-inbox.mjs';
 import {createHash} from 'node:crypto';
 import {parseNumber as parse} from './pilot-math.mjs';
 const parseNumber=x=>{try{return parse(x);}catch{return null;}};
@@ -56,15 +57,17 @@ export function publicCase(version,attempt){
 }
 export function validateDetective(d){
   if(d===undefined)return;
-  insist(fields(d,['schemaVersion','cases','attempts','plans','badges','receipts'])&&d.schemaVersion===1,'侦探存档版本不受支持，请更新程序后导入。');
+  insist(fields(d,['schemaVersion','cases','attempts','plans','badges','receipts','inbox'])&&d.schemaVersion===1,'侦探存档版本不受支持，请更新程序后导入。');
+  validateInboxState(d.inbox);
   insist(Buffer.byteLength(JSON.stringify(d),'utf8')<=3*1024*1024,'侦探案卷超过3MB，请先导出归档，勿加入图片。');
   insist(plain(d.cases)&&Object.keys(d.cases).length<=200&&plain(d.attempts)&&Object.keys(d.attempts).length<=1000&&plain(d.plans)&&Object.keys(d.plans).length<=400);
   for(const [id,c]of Object.entries(d.cases)){
     insist(validId(id)&&c.id===id&&Number.isInteger(c.revision)&&c.revision>0&&['draft','review','published','withdrawn','archived'].includes(c.status));
-    validateCase(c.draft);insist(Array.isArray(c.versions)&&c.versions.length<=20);
-    const ids=new Set();for(const v of c.versions){validateCase(v.content,true);insist(validId(v.id)&&v.caseId===id&&!ids.has(v.id)&&v.hash===fingerprint(v.content)&&Number.isFinite(Date.parse(v.publishedAt))&&v.approved===true);ids.add(v.id);}
+    validateCase(c.draft);validateImportProvenance(c.importSource);validateImportProvenance(c.pendingImport);insist(Array.isArray(c.versions)&&c.versions.length<=20);
+    const ids=new Set();for(const v of c.versions){validateCase(v.content,true);validateImportProvenance(v.provenance,v.content);if(v.approvalSource!==undefined)insist(['parent','deterministic-import'].includes(v.approvalSource));if(v.approvalSource==='deterministic-import')insist(v.provenance?.importDisposition==='auto-published');insist(validId(v.id)&&v.caseId===id&&!ids.has(v.id)&&v.hash===fingerprint(v.content)&&Number.isFinite(Date.parse(v.publishedAt))&&v.approved===true);ids.add(v.id);}
     insist(c.activeVersion===null||ids.has(c.activeVersion));if(c.status==='published')insist(ids.has(c.activeVersion));
   }
+  if(d.inbox)for(const r of Object.values(d.inbox.files))insist(r.caseIds.every(id=>validId(id)&&d.cases[id]),'收件记录引用了不存在的案卷。');
   for(const [id,a]of Object.entries(d.attempts)){
     insist(validId(id)&&a.id===id&&d.cases[a.caseId]?.versions.some(v=>v.id===a.version)&&Number.isInteger(a.revision)&&a.revision>0);
     insist(['judge','evidence','repair','verify','closed'].includes(a.phase)&&['in-progress','closed-independent','closed-assisted','parent-review','needs-revisit'].includes(a.status));

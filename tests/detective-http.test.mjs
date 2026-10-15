@@ -5,13 +5,15 @@ import {createStore} from '../server/store.mjs';
 const root=path.resolve(import.meta.dirname,'..');
 test('真实临时HTTP：PIN、同源、公开API不泄漏、完整备份保护、存档持久化与恢复',async()=>{
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'kevin-detective-http-'));const probe=net.createServer();probe.listen(0,'127.0.0.1');await once(probe,'listening');const port=probe.address().port;await new Promise(r=>probe.close(r));const base=`http://127.0.0.1:${port}`;let server,cookie='',logs='';
- const launch=async()=>{server=spawn(process.execPath,['server/index.mjs',`--port=${port}`,`--data-dir=${dir}`],{cwd:root,stdio:['ignore','pipe','pipe']});server.stdout.on('data',s=>{logs=(logs+s).slice(-2000)});server.stderr.on('data',s=>{logs=(logs+s).slice(-2000)});for(let i=0;i<100;i++){try{const r=await fetch(base+'/api/parent/access');if(r.ok)return;}catch{}await new Promise(r=>setTimeout(r,40));}throw Error(logs);};
+ const launch=async()=>{server=spawn(process.execPath,['server/index.mjs','--detective-sync=off',`--port=${port}`,`--data-dir=${dir}`],{cwd:root,stdio:['ignore','pipe','pipe']});server.stdout.on('data',s=>{logs=(logs+s).slice(-2000)});server.stderr.on('data',s=>{logs=(logs+s).slice(-2000)});for(let i=0;i<100;i++){try{const r=await fetch(base+'/api/parent/access');if(r.ok)return;}catch{}await new Promise(r=>setTimeout(r,40));}throw Error(logs);};
  const stop=async()=>{server.kill('SIGTERM');await once(server,'exit');};
  const req=(url,body,auth=false,origin=base)=>fetch(base+url,{method:body?'POST':'GET',headers:{'Content-Type':'application/json',Origin:origin,...(auth?{Cookie:cookie}:{})},body:body?JSON.stringify(body):undefined});
  try{
  await launch();const old=await(await req('/api/export')).json();assert(!old.progress.studio.detective);
+ assert.equal((await req('/api/parent/detective/sync')).status,403);assert.equal((await req('/api/parent/detective/sync',{})).status,403);
  assert.equal((await req('/api/parent/detective/cases')).status,403);assert.equal((await req('/api/parent/detective/cases',{action:'enable-seeds',eventId:'denied',checks:[true,true,true]})).status,403);
  const setup=await req('/api/parent/access',{action:'setup',pin:'912345'});assert(setup.ok);cookie=setup.headers.get('set-cookie').split(';')[0];
+ assert.equal((await req('/api/parent/detective/sync',{autoPublish:false},true,'https://evil.example')).status,403);const paused=await(await req('/api/parent/detective/sync',{autoPublish:false},true)).json();assert.equal(paused.autoPublish,false);
  let bank=await(await req('/api/parent/detective/cases',undefined,true)).json();assert.equal(bank.cases.length,15);
  assert.equal((await req('/api/export')).status,403);assert.equal((await req('/api/import/preview',old)).status,403);assert.equal((await req('/api/import',old)).status,403);
  assert.equal((await req('/api/parent/detective/cases',{action:'enable-seeds',eventId:'evil',checks:[true,true,true]},true,'https://evil.example')).status,403);
