@@ -1,0 +1,192 @@
+{
+  "schemaVersion": "detective-inbox.v1",
+  "bundleId": "DT-20261015-UNIT-A",
+  "bundleRevision": 1,
+  "createdAt": "2026-10-15T14:00:00.000Z",
+  "producer": "chatgpt-github",
+  "sourceFingerprint": "ee8335b1586c50d0363153a1e5d13d5a357cb0527cdce89fd43104401aeb0ba1",
+  "privacy": "public-anonymized-math-only",
+  "policy": "auto-if-independently-verified",
+  "cases": [
+    {
+      "id": "DT-20261015-UNIT-A-A",
+      "role": "original-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "长度记录调查",
+        "prompt": "把7千米换算成米，并检查小智的换算。",
+        "steps": [
+          "1千米=1000米",
+          "7千米=7米"
+        ],
+        "verdict": "wrong",
+        "errorStep": 1,
+        "reasons": [
+          "单位变小，每个原单位都要换成多个新单位。",
+          "长度单位变化，数字永远不用变。",
+          "数字越小，长度就一定越短。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "正确应当是几米？",
+          "unit": "米",
+          "options": [],
+          "answer": "7000"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "7000米相当于几千米？",
+          "unit": "千米",
+          "options": [],
+          "answer": "7"
+        },
+        "hints": [
+          "先找出两个单位之间的关系。",
+          "1千米里有几个米？",
+          "每个千米都换成1000个米，再反过来检查。"
+        ],
+        "solution": "7×1000=7000，所以7千米=7000米；反查7000÷1000=7。",
+        "family": "UNIT_CONVERSION",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "原长度7千米",
+            "换成米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "length-conversion-v1",
+        "parameters": {
+          "mode": "wrong",
+          "value": 7,
+          "from": "千米",
+          "to": "米"
+        },
+        "firstWrongStep": 1
+      }
+    },
+    {
+      "id": "DT-20261015-UNIT-A-B",
+      "role": "transfer-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "长度记录调查",
+        "prompt": "把8分米换算成毫米，并检查小智的换算。",
+        "steps": [
+          "1分米=100毫米",
+          "8分米=8毫米"
+        ],
+        "verdict": "wrong",
+        "errorStep": 1,
+        "reasons": [
+          "单位变小，每个原单位都要换成多个新单位。",
+          "长度单位变化，数字永远不用变。",
+          "数字越小，长度就一定越短。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "正确应当是几毫米？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "800"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "800毫米相当于几分米？",
+          "unit": "分米",
+          "options": [],
+          "answer": "8"
+        },
+        "hints": [
+          "先找出两个单位之间的关系。",
+          "1分米里有几个毫米？",
+          "每个分米都换成100个毫米，再反过来检查。"
+        ],
+        "solution": "8×100=800，所以8分米=800毫米；反查800÷100=8。",
+        "family": "UNIT_CONVERSION",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "原长度8分米",
+            "换成毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "length-conversion-v1",
+        "parameters": {
+          "mode": "wrong",
+          "value": 8,
+          "from": "分米",
+          "to": "毫米"
+        },
+        "firstWrongStep": 1
+      }
+    },
+    {
+      "id": "DT-20261015-UNIT-A-C",
+      "role": "correct-control",
+      "simulatedSteps": true,
+      "content": {
+        "title": "长度记录调查",
+        "prompt": "把54厘米换算成毫米，并检查小智的换算。",
+        "steps": [
+          "1厘米=10毫米",
+          "54厘米=540毫米"
+        ],
+        "verdict": "correct",
+        "errorStep": null,
+        "reasons": [
+          "每个原单位换成对应的小单位，数量关系一致。",
+          "长度单位变化，数字永远不用变。",
+          "数字越小，长度就一定越短。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "正确应当是几毫米？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "540"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "540毫米相当于几厘米？",
+          "unit": "厘米",
+          "options": [],
+          "answer": "54"
+        },
+        "hints": [
+          "先找出两个单位之间的关系。",
+          "1厘米里有几个毫米？",
+          "每个厘米都换成10个毫米，再反过来检查。"
+        ],
+        "solution": "54×10=540，所以54厘米=540毫米；反查540÷10=54。",
+        "family": "UNIT_CONVERSION",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "原长度54厘米",
+            "换成毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "length-conversion-v1",
+        "parameters": {
+          "mode": "correct",
+          "value": 54,
+          "from": "厘米",
+          "to": "毫米"
+        },
+        "firstWrongStep": null
+      }
+    }
+  ]
+}
