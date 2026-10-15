@@ -1,0 +1,255 @@
+{
+  "schemaVersion": "detective-inbox.v1",
+  "bundleId": "DT-20261015-ORDER-A",
+  "bundleRevision": 1,
+  "createdAt": "2026-10-15T14:00:00.000Z",
+  "producer": "chatgpt-github",
+  "sourceFingerprint": "adb9454ab62c70935ee7839287e29974a9bc7ea8b04d14483f7ef108219af9d4",
+  "privacy": "public-anonymized-math-only",
+  "policy": "auto-if-independently-verified",
+  "cases": [
+    {
+      "id": "DT-20261015-ORDER-A-A",
+      "role": "original-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "长度排列调查",
+        "prompt": "把这些长度从长到短排列：6米、75分米、420厘米、9000毫米。",
+        "steps": [
+          "75分米 > 9000毫米 > 6米 > 420厘米"
+        ],
+        "verdict": "wrong",
+        "errorStep": 0,
+        "reasons": [
+          "统一单位后，前两个长度的位置颠倒了。",
+          "只按数字大小比较，不用看单位。",
+          "写在前面的长度一定更长。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "ordering",
+          "question": "请按真实长度从长到短排列。",
+          "unit": "",
+          "options": [
+            "6米",
+            "75分米",
+            "420厘米",
+            "9000毫米"
+          ],
+          "answer": "9000毫米|75分米|6米|420厘米"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "最长的这一段换成毫米是多少？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "9000"
+        },
+        "hints": [
+          "先看单位是否相同。",
+          "把各长度都换成毫米，再比较。",
+          "从毫米数最大的开始排列，注意检查相邻两项。"
+        ],
+        "solution": "统一成毫米：6米=6000毫米，75分米=7500毫米，420厘米=4200毫米，9000毫米=9000毫米；从长到短：9000毫米 > 75分米 > 6米 > 420厘米。",
+        "family": "UNIT_ORDERING",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "lengths",
+          "values": [
+            "6米",
+            "75分米",
+            "420厘米",
+            "9000毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "length-ordering-v1",
+        "parameters": {
+          "mode": "wrong",
+          "items": [
+            {
+              "value": 6,
+              "unit": "米"
+            },
+            {
+              "value": 75,
+              "unit": "分米"
+            },
+            {
+              "value": 420,
+              "unit": "厘米"
+            },
+            {
+              "value": 9000,
+              "unit": "毫米"
+            }
+          ]
+        },
+        "firstWrongStep": 0
+      }
+    },
+    {
+      "id": "DT-20261015-ORDER-A-B",
+      "role": "transfer-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "长度排列调查",
+        "prompt": "把这些长度从长到短排列：4米、38分米、450厘米、4900毫米。",
+        "steps": [
+          "450厘米 > 4900毫米 > 4米 > 38分米"
+        ],
+        "verdict": "wrong",
+        "errorStep": 0,
+        "reasons": [
+          "统一单位后，前两个长度的位置颠倒了。",
+          "只按数字大小比较，不用看单位。",
+          "写在前面的长度一定更长。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "ordering",
+          "question": "请按真实长度从长到短排列。",
+          "unit": "",
+          "options": [
+            "4米",
+            "38分米",
+            "450厘米",
+            "4900毫米"
+          ],
+          "answer": "4900毫米|450厘米|4米|38分米"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "最长的这一段换成毫米是多少？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "4900"
+        },
+        "hints": [
+          "先看单位是否相同。",
+          "把各长度都换成毫米，再比较。",
+          "从毫米数最大的开始排列，注意检查相邻两项。"
+        ],
+        "solution": "统一成毫米：4米=4000毫米，38分米=3800毫米，450厘米=4500毫米，4900毫米=4900毫米；从长到短：4900毫米 > 450厘米 > 4米 > 38分米。",
+        "family": "UNIT_ORDERING",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "lengths",
+          "values": [
+            "4米",
+            "38分米",
+            "450厘米",
+            "4900毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "length-ordering-v1",
+        "parameters": {
+          "mode": "wrong",
+          "items": [
+            {
+              "value": 4,
+              "unit": "米"
+            },
+            {
+              "value": 38,
+              "unit": "分米"
+            },
+            {
+              "value": 450,
+              "unit": "厘米"
+            },
+            {
+              "value": 4900,
+              "unit": "毫米"
+            }
+          ]
+        },
+        "firstWrongStep": 0
+      }
+    },
+    {
+      "id": "DT-20261015-ORDER-A-C",
+      "role": "correct-control",
+      "simulatedSteps": true,
+      "content": {
+        "title": "长度排列调查",
+        "prompt": "把这些长度从长到短排列：3米、240厘米、29分米、2800毫米。",
+        "steps": [
+          "3米 > 29分米 > 2800毫米 > 240厘米"
+        ],
+        "verdict": "correct",
+        "errorStep": null,
+        "reasons": [
+          "统一单位比较后，确实按长度从大到小排列。",
+          "只按数字大小比较，不用看单位。",
+          "写在前面的长度一定更长。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "ordering",
+          "question": "请按真实长度从长到短排列。",
+          "unit": "",
+          "options": [
+            "3米",
+            "240厘米",
+            "29分米",
+            "2800毫米"
+          ],
+          "answer": "3米|29分米|2800毫米|240厘米"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "最长的这一段换成毫米是多少？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "3000"
+        },
+        "hints": [
+          "先看单位是否相同。",
+          "把各长度都换成毫米，再比较。",
+          "从毫米数最大的开始排列，注意检查相邻两项。"
+        ],
+        "solution": "统一成毫米：3米=3000毫米，240厘米=2400毫米，29分米=2900毫米，2800毫米=2800毫米；从长到短：3米 > 29分米 > 2800毫米 > 240厘米。",
+        "family": "UNIT_ORDERING",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "lengths",
+          "values": [
+            "3米",
+            "240厘米",
+            "29分米",
+            "2800毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "length-ordering-v1",
+        "parameters": {
+          "mode": "correct",
+          "items": [
+            {
+              "value": 3,
+              "unit": "米"
+            },
+            {
+              "value": 240,
+              "unit": "厘米"
+            },
+            {
+              "value": 29,
+              "unit": "分米"
+            },
+            {
+              "value": 2800,
+              "unit": "毫米"
+            }
+          ]
+        },
+        "firstWrongStep": null
+      }
+    }
+  ]
+}
