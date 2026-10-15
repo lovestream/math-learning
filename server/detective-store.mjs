@@ -21,7 +21,7 @@ export function publicAttempt(a){
   const {id,caseId,version,revision,phase,status,startedAt,completedAt,firstVerdict,decision,hints,feedback,assisted,draft,evidence,repair,verification,reviews}=a;
   return {id,caseId,version,revision,phase,status,startedAt,completedAt,firstVerdict,decision,hintsViewed:hints.length,feedback,assisted,draft,evidence,repair,verification,publicFeedback:reviews.map(r=>({at:r.at,verdict:r.verdict,comment:r.comment}))};
 }
-export function parentDetective(p){const d=ensureDetective(p);return {cases:Object.values(d.cases),attempts:Object.values(d.attempts),badges:d.badges};}
+export function parentDetective(p){const d=ensureDetective(p);validateStored(p);return {cases:Object.values(d.cases),attempts:Object.values(d.attempts),badges:d.badges};}
 function anonymize(content,name){
   const copy=clone(content);
   const names=[name,'Kevin','凯文'].filter(x=>typeof x==='string'&&x.length>1);

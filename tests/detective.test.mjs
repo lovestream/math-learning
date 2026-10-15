@@ -75,6 +75,7 @@ test('新旧备份兼容、哈希和版本引用受校验；字段污染、超�
 });
 
 test('案卷增长至200宗仍能生成小型儿童投影；超量和3MiB字节预算明确拒绝',t=>{
+ const nearFull=freshProgress();nearFull.studio.legacyExtra='x'.repeat(6*1024*1024-1024);assert.throws(()=>parentDetective(nearFull),/容量/);
  const p=setup(),d=p.studio.detective,template=structuredClone(d.cases['DET-G3-003']);template.status='draft';template.versions=[];template.activeVersion=null;
  for(let i=15;i<200;i++){const caseId=`DET-GROW-${i}`;d.cases[caseId]={...structuredClone(template),id:caseId};}
  const started=performance.now();validateDetective(d);const bytes=Buffer.byteLength(JSON.stringify(detectiveToday(p,NOW)));assert(bytes<50000);assert.equal(Object.keys(d.cases).length,200);assert.deepEqual(validateEnvelope(exportEnvelope(p),[]),p);t.diagnostic(`200宗临时案卷；儿童初始投影${bytes}字节；本机校验与投影${Math.round(performance.now()-started)}ms，仅作环境记录。`);
