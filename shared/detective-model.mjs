@@ -5,7 +5,7 @@ const parseNumber=x=>{try{return parse(x);}catch{return null;}};
 export const fingerprint=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function insist(ok,message='侦探案卷格式不完整。',status=400){if(!ok)throw Object.assign(new Error(message),{status});}
 const plain=x=>!!x&&typeof x==='object'&&!Array.isArray(x)&&Object.getPrototypeOf(x)===Object.prototype;
-export const validId=x=>typeof x==='string'&&/^[A-Za-z0-9:_-]{1,100}$/.test(x)&&!['__proto__','prototype','constructor'].includes(x);
+export const validId=x=>typeof x==='string'&&/^[A-Za-z0-9:_-]{1,100}$/.test(x)&&!['__proto__','prototype','constructor'].includes(x)&&!Object.hasOwn(Object.prototype,x);
 const text=(x,n=2000)=>typeof x==='string'&&x.length<=n;
 const fields=(o,keys)=>plain(o)&&Object.keys(o).every(k=>keys.includes(k));
 export const responseKinds=['number','choice','ordering','oral'];

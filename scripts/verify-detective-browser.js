@@ -62,11 +62,18 @@ async page=>{
  assert(history.badges===2,'待审核也发勋章');
  await page.request.post(base+'/api/parent/access',{data:{action:'unlock',pin:'912345'}});await page.goto(base+'/?view=parent');await parent.waitFor();
  const article=parent.locator('.det-parent-review article').filter({hasText:'三袋苹果的结果疑案'});await parent.getByLabel('给孩子的公开反馈',{exact:true}).fill('临时测试：已听完数量关系和逆向分组解释。');
- await article.getByRole('button',{name:'解释与验证成立',exact:true}).click();await parent.getByText('批阅已保存，原始首判和历次审核仍保留。',{exact:true}).waitFor();await parent.locator('.det-parent-review').screenshot({path:'output/playwright/v2-audit/detective-parent-review.png'});
+ await article.getByRole('button',{name:'解释与验证成立',exact:true}).click();await parent.getByText('批阅已保存，原始首判和历次审核仍保留。',{exact:true}).waitFor();if(await parent.locator('.det-parent-review').getAttribute('open')===null)await parent.locator('.det-parent-review>summary').click();await parent.locator('.det-parent-review').screenshot({path:'output/playwright/v2-audit/detective-parent-review.png'});
  const exportResponse=await page.request.get(base+'/api/parent/export');assert(exportResponse.ok(),'解锁后家长专用备份导出失败');const exported=await exportResponse.json();assert(exported.progress.wallet.coins===0,'侦探改了钱包');assert(exported.progress.studio.detective.badges.length===3,'家长核对没有发独立侦探徽章');assert((await page.request.post(base+'/api/parent/import',{data:exported})).ok(),'导入失败');
+ // Correcting a parent review must show remediation, never a contradictory closed stamp.
+ await parent.getByLabel('给孩子的公开反馈',{exact:true}).fill('临时测试：再核对每袋4个的分组理由。');
+ const correction=page.waitForResponse(r=>r.url().endsWith('/api/parent/detective/grade'));
+ await article.getByRole('button',{name:'需要再核对',exact:true}).click();assert((await correction).ok(),'更正批阅失败');await article.getByText(/needs-revisit/).waitFor();
+ await page.getByRole('button',{name:'数学小侦探',exact:true}).click();await panel.locator('.det-case-ticket').first().waitFor();await panel.getByRole('button',{name:/三袋苹果的结果疑案/}).click();await panel.getByRole('heading',{name:'这份解释还需要再核对',exact:true}).waitFor();assert(await panel.locator('.det-closed-stamp').count()===0,'回补还显示结案章');await panel.screenshot({path:'output/playwright/v2-audit/detective-parent-remediation.png'});
+ await panel.getByRole('button',{name:'重新核对，保留原记录',exact:true}).click();await panel.getByRole('heading',{name:'第一处问题在哪里？',exact:true}).waitFor();assert((await panel.locator('.det-first').innerText()).includes('有问题'),'重新核对覆盖了首判');
+ await panel.locator('.det-work>button').click();await panel.getByLabel('逐项对照题目条件和数量关系。',{exact:true}).check();await panel.getByRole('button',{name:'保存证据',exact:false}).click();await panel.getByLabel('我已把理由说给家长听，等待家长核对。',{exact:true}).check();await panel.getByRole('button',{name:'保存结果，去验证',exact:false}).click();await panel.getByLabel('我已把理由说给家长听，等待家长核对。',{exact:true}).check();await panel.getByRole('button',{name:'保存验证，结案',exact:false}).click();await panel.getByRole('heading',{name:'解释已保存，请家长听一听',exact:true}).waitFor();await panel.getByRole('button',{name:'暂停，回案卷柜',exact:false}).click();
  // Conditions-only mobile / tablet layouts, keyboard navigation, and reduced motion.
- await page.getByRole('button',{name:'数学小侦探',exact:true}).click();await panel.locator('.det-case-ticket').first().waitFor();
+ await panel.locator('.det-case-ticket').first().waitFor();
  for(const width of [390,768,1440]){await page.setViewportSize({width,height:width===390?844:1024});await panel.screenshot({path:`output/playwright/v2-audit/detective-today-${width}.png`});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),'侦探页面横向溢出 '+width);}
  await page.emulateMedia({reducedMotion:'reduce'});await page.keyboard.press('Tab');
- assert(!errors.length,errors.join('\n'));return {passed:true,threeMixedCases:true,parentManual:true,parentPublish:true,immutableFirst:true,refreshDraft:true,oralReview:true,privateExport:true,isolatedWallet:true,widths:[390,768,1440],errors};
+ assert(!errors.length,errors.join('\n'));return {passed:true,threeMixedCases:true,parentManual:true,parentPublish:true,immutableFirst:true,refreshDraft:true,oralReview:true,parentCorrection:true,remediation:true,privateExport:true,isolatedWallet:true,widths:[390,768,1440],errors};
 }
