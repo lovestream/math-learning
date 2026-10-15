@@ -3,6 +3,7 @@ import type {ParentThinkingCard, Data, Progress, PetMission,ThinkingRecord } fro
 async function request<T>(url:string, init?:RequestInit):Promise<T>{
   const response=await fetch(url,{...init,headers:{...(init?.body?{'Content-Type':'application/json'}:{}),...init?.headers}});
   const payload=await response.json().catch(()=>({error:'本地服务没有返回可读内容。'}));
+  if(response.status===403&&payload.code==='PARENT_ACCESS_REQUIRED'&&/^\/api\/(import(?:\/preview)?|backups\/[^/]+\/restore)$/.test(url))return request<T>(url.replace('/api/','/api/parent/'),init);
   if(!response.ok)throw new Error(payload.error??'操作没有完成。');
   return payload;
 }

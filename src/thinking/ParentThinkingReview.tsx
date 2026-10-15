@@ -1,3 +1,4 @@
+import ParentDetectiveCases from '../detective/ParentDetectiveCases';
 import ParentFormalReview from "./ParentFormalReview";
 import { useEffect, useState } from "react";
 import type { ParentThinkingCard, Progress } from "../types";
@@ -370,7 +371,7 @@ export default function ParentThinkingReview({
         </>
       )}
       {error && <p role="alert">{error}</p>}
-    {access?.unlocked&&<ParentFormalReview onProgress={onProgress}/>}
+    {access?.unlocked&&<><ParentFormalReview onProgress={onProgress}/><ParentDetectiveCases/></>}
     </section>
   );
 }

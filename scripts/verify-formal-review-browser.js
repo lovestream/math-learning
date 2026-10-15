@@ -36,7 +36,7 @@ async page=>{
  await grade(review,review.tasks[0],'needs-remediation');p=(await get()).progress;r=p.studio.review['G3-U06-E01'];s=p.studio.sessions[review.id];
  assert(!s.completedAt&&s.hadIncorrect&&Date.parse(r.dueAt)>Date.now()&&Date.parse(r.dueAt)<=Date.now()+DAY,'需要回补没有设置未来一天');assert(r.history.length===1,'更正伪造第二次复习');assert(s.parentReviews[review.tasks[0].id].length===2,'更正历史丢失');assert(s.selfChecks[review.tasks[0].id].firstAnswer.value.includes('仅测试'),'首答被覆盖');
  await formal.screenshot({path:'output/playwright/v2-audit/formal-review-remediation.png'});
- const exported=await(await page.request.get(base+'/api/export')).json();assert((await page.request.post(base+'/api/import',{data:exported})).ok(),'导入恢复失败');assert(JSON.stringify((await get()).progress.studio.review['G3-U06-E01'])===JSON.stringify(r),'导入丢失复习历史');
+ const exported=await(await page.request.get(base+'/api/parent/export')).json();assert((await page.request.post(base+'/api/parent/import',{data:exported})).ok(),'导入恢复失败');assert(JSON.stringify((await get()).progress.studio.review['G3-U06-E01'])===JSON.stringify(r),'导入丢失复习历史');
  const core=await submitGroup('G3-UP02-B01','core');await page.request.post(base+'/api/parent/access',{data:{action:'unlock',pin:'912345'}});await page.goto(base+'/?view=parent');await formal.waitFor();const before=(await get()).progress.wallet.coins;
  for(const task of core.tasks)await grade(core,task);
  p=(await get()).progress;r=p.studio.review['G3-UP02-B01'];s=p.studio.sessions[core.id];assert(s.completedAt&&r.firstLearnedAt===s.completedAt&&r.firstLearnedDay&&r.scheduleVersion===2,'人工核心完成未建初学日期');assert(p.wallet.coins===before,'核心人工批阅擅自加积分');

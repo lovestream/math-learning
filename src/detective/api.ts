@@ -1,0 +1,12 @@
+export type ResponseSpec={kind:'number'|'choice'|'ordering'|'oral';question:string;unit:string;options:string[];answer?:string};
+export type CaseContent={title:string;prompt:string;steps:string[];verdict:'wrong'|'correct';errorStep:number|null;family:string;reasons:string[];reason:number;repair:ResponseSpec;verify:ResponseSpec;hints:string[];solution:string;sourceNotes:string;visual:{kind:string;values:string[]}};
+export type PublicCase={id:string;version:string;title:string;prompt:string;steps:string[];visual:CaseContent['visual'];reasons?:string[];response?:ResponseSpec;solution?:string};
+export type Attempt={id:string;caseId:string;version:string;revision:number;phase:'judge'|'evidence'|'repair'|'verify'|'closed';status:string;startedAt:string;completedAt?:string;firstVerdict:'wrong'|'correct'|null;decision:'wrong'|'correct'|null;hintsViewed:number;feedback:string;assisted:boolean;draft:string;publicFeedback:{at:string;verdict:string;comment:string}[]};
+export type Pair={case:PublicCase;attempt:Attempt|null};
+export type TodayData={day:string;cases:Pair[];history:(Pair&{title:string})[];badges:number};
+export type ParentCase={id:string;revision:number;status:string;draft:CaseContent;activeVersion:string|null;versions:{id:string;content:CaseContent;hash:string}[]};
+export type ParentData={cases:ParentCase[];attempts:(Attempt&{hints:number[];events:unknown[];evidence?:{step:number|null;stepText:string;reasonText:string};repair?:{value:string;oral:boolean};verification?:{value:string;oral:boolean};reviews:{at:string;verdict:string;comment:string}[]})[];badges:unknown[]};
+export class DetectiveError extends Error{constructor(message:string,public status:number){super(message)}}
+export async function request<T>(url:string,body?:unknown):Promise<T>{let r:Response;try{r=await fetch(url,{method:body?'POST':'GET',headers:{'Content-Type':'application/json'},body:body?JSON.stringify(body):undefined});}catch{throw new DetectiveError('没有连接到本机服务。请确认网站仍在运行，再点重试保存。',0);}const out=await r.json();if(!r.ok)throw new DetectiveError(out.error??'操作未保存，请重试。',r.status);return out;}
+export const eventId=()=>`det:${crypto.randomUUID()}`;
+export const detectiveApi={today:()=>request<TodayData>('/api/detective/today'),act:(body:unknown)=>request<Pair>('/api/detective/attempt',body),parent:()=>request<ParentData>('/api/parent/detective/cases'),manage:(body:unknown)=>request<ParentData>('/api/parent/detective/cases',body),grade:(body:unknown)=>request<ParentData>('/api/parent/detective/grade',body)};

@@ -14,4 +14,7 @@
 
 /* Seven navigation destinations must fit one row; the old six-column grid
    left the parent button floating above the answer field. */
-@media(max-width:780px){.sidebar{height:auto;min-height:72px;max-height:110px;overflow-y:auto}.sidebar nav{grid-template-columns:repeat(7,minmax(0,1fr))}.sidebar nav button{font-size:clamp(10px,.625rem,14px);min-height:52px;min-width:0}.app-shell{padding-bottom:110px}html{scroll-padding-bottom:120px}.task-card input,.task-card textarea,.task-card button{scroll-margin-bottom:120px}.child-practice .practice-heading{padding-top:1rem;padding-bottom:1rem}.child-practice .practice-heading p{font-size:1rem;line-height:1.65}}
+@media(max-width:780px){.sidebar{height:auto;min-height:72px;max-height:110px;overflow-y:auto}.sidebar nav{grid-template-columns:repeat(8,minmax(0,1fr))}.sidebar nav button{font-size:clamp(10px,.625rem,14px);min-height:52px;min-width:0}.app-shell{padding-bottom:110px}html{scroll-padding-bottom:120px}.task-card input,.task-card textarea,.task-card button{scroll-margin-bottom:120px}.child-practice .practice-heading{padding-top:1rem;padding-bottom:1rem}.child-practice .practice-heading p{font-size:1rem;line-height:1.65}}
+
+/* Independent detective entry; keep the rest of its styles lazy-loaded. */
+.det-quick-entry{margin-top:22px;display:flex;align-items:center;gap:18px;background:#eff6ff;border:1px solid #c3d6f4;border-radius:16px;padding:22px}.det-quick-entry>svg{color:#2257d6;flex:none}.det-quick-entry h3{margin:0 0 8px}.det-quick-entry p{margin:0;font-size:13px}.det-quick-entry button{margin-left:auto;flex:none}@media(max-width:760px){.det-quick-entry{flex-wrap:wrap}.det-quick-entry button{margin-left:0}}

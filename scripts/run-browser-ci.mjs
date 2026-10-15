@@ -1,3 +1,4 @@
+import {manageDetective} from '../server/detective-store.mjs';
 import {execFileSync} from "node:child_process";
 import {createHash} from "node:crypto";
 import {prepareReview} from "../server/review-schedule.mjs";
@@ -36,6 +37,8 @@ const all = [
   "verify-desktop-zoom-browser",
   "verify-final-tasks-browser",
   "verify-formal-review-browser",
+  "verify-detective-browser",
+  "verify-detective-recovery-browser",
 ];
 const only = process.argv.find((v) => v.startsWith("--only=")),
   names = only
@@ -57,6 +60,8 @@ const only = process.argv.find((v) => v.startsWith("--only=")),
   "verify-desktop-zoom-browser",
   "verify-final-tasks-browser",
   "verify-formal-review-browser",
+  "verify-detective-browser",
+  "verify-detective-recovery-browser",
         ];
 if (names.some((n) => !all.includes(n)))
   throw Error("Unknown browser callback");
@@ -86,6 +91,10 @@ try {
     await once(probe, "listening");
     const port = probe.address().port;
     await new Promise((r) => probe.close(r));
+    if(name==='verify-detective-recovery-browser'){
+      const fixture=createStore(dir,[]);
+      fixture.mutate(p=>{manageDetective(p,{action:'enable-seeds',eventId:'fixture-enable',checks:[true,true,true]});for(const c of Object.values(p.studio.detective.cases).filter(c=>c.status==='published'&&!['DET-G3-001','DET-G3-002','DET-G3-011'].includes(c.id)))manageDetective(p,{action:'withdraw',eventId:'fixture-withdraw-'+c.id,caseId:c.id,expectedRevision:c.revision});});fixture.close();
+    }
     // A visibly named simulated old review allows testing the due-review UI without
     // changing production clocks, adding test APIs, or importing real Kevin records.
     if (name === "verify-thinking-browser") {
