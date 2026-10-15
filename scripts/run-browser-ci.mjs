@@ -15,7 +15,10 @@ import {
   applyThinking,
   applyThinkingReview,
 } from "../server/thinking-store.mjs";
+// Run the short new workflow checks first for prompt CI feedback.
 const all = [
+  "verify-detective-browser",
+  "verify-detective-recovery-browser",
   "verify-hands-on-browser",
   "verify-classroom-flow",
   "verify-motion-browser",
@@ -37,8 +40,6 @@ const all = [
   "verify-desktop-zoom-browser",
   "verify-final-tasks-browser",
   "verify-formal-review-browser",
-  "verify-detective-browser",
-  "verify-detective-recovery-browser",
 ];
 const only = process.argv.find((v) => v.startsWith("--only=")),
   names = only
@@ -46,7 +47,8 @@ const only = process.argv.find((v) => v.startsWith("--only=")),
     : process.argv.includes("--full")
       ? all
       : [
-          "verify-thinking-browser",
+          "verify-detective-browser",
+          "verify-detective-recovery-browser",          "verify-thinking-browser",
           "verify-division-browser",
           "verify-core-browser",
           "verify-save-stress-browser",
@@ -60,8 +62,6 @@ const only = process.argv.find((v) => v.startsWith("--only=")),
   "verify-desktop-zoom-browser",
   "verify-final-tasks-browser",
   "verify-formal-review-browser",
-  "verify-detective-browser",
-  "verify-detective-recovery-browser",
         ];
 if (names.some((n) => !all.includes(n)))
   throw Error("Unknown browser callback");

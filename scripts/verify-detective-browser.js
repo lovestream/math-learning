@@ -11,10 +11,10 @@ async page=>{
  await parent.getByLabel('原题（儿童会看到，请用小智等虚构称呼）',{exact:true}).fill('有3袋苹果，每袋4个，一共有多少个？');
  await parent.getByLabel('模拟做法（每行一步；只知道答案，就只写答案）',{exact:true}).fill('3×4=7个。');
  await parent.getByLabel('正确结果、理由和另一种检查方法（结案后显示）',{exact:true}).fill('3袋各4个，一共12个；反过来把12个每4个分一袋，正好3袋。');
- await parent.getByRole('button',{name:'保存草稿',exact:true}).click();await parent.getByText('草稿已保存',{exact:true}).waitFor();
+ const saved=page.waitForResponse(r=>r.url().endsWith('/api/parent/detective/cases')&&r.request().method()==='POST');await parent.getByRole('button',{name:'保存草稿',exact:true}).click();assert((await saved).ok(),'手工草稿保存失败');await parent.locator('.det-editor-heading>span').filter({hasText:/^草稿已保存/}).waitFor();
  await parent.getByRole('button',{name:'预览儿童题面',exact:true}).click();await parent.locator('.det-preview').screenshot({path:'output/playwright/v2-audit/detective-parent-preview.png'});
  const checks=parent.locator('.det-publish-checks input');for(let i=0;i<3;i++)await checks.nth(i).check();
- await parent.getByRole('button',{name:'审核并发布当前案卷',exact:true}).click();await parent.getByText('草稿已保存',{exact:true}).waitFor();
+ const published=page.waitForResponse(r=>r.url().endsWith('/api/parent/detective/cases')&&r.request().method()==='POST');await parent.getByRole('button',{name:'审核并发布当前案卷',exact:true}).click();const publication=await published;assert(publication.ok(),'手工案卷发布失败');assert((await publication.json()).cases.some(c=>c.draft.title==='三袋苹果的结果疑案'&&c.status==='published'),'发布响应没有发布版本');await parent.locator('.det-editor-heading>span').filter({hasText:/发布后修改会产生新版本/}).waitFor();
  await parent.getByRole('button',{name:'返回批量审核',exact:true}).click();for(let i=0;i<3;i++)await checks.nth(i).check();
  await parent.getByRole('button',{name:'审核并启用14宗示例',exact:true}).click();
  await parent.getByText('16宗 · 15宗已发布',{exact:true}).waitFor();
@@ -48,7 +48,7 @@ async page=>{
   else if(c.repair.kind==='number')await panel.getByLabel('你的答案',{exact:true}).fill(c.repair.answer);
   else if(c.repair.kind==='choice')await panel.getByLabel(c.repair.answer,{exact:true}).check();
   if(entry.case.id==='DET-G3-003'){
-   await page.waitForTimeout(900);await page.reload();await panel.locator('.det-history').evaluate(e=>e.open=true);await panel.locator('.det-history button').filter({hasText:entry.case.title}).click();await panel.getByLabel('你的答案',{exact:true}).waitFor();assert(await panel.getByLabel('你的答案',{exact:true}).inputValue()==='30','刷新丢草稿');
+   await panel.locator('.det-toolbar').getByText('记录已保存在本机',{exact:true}).waitFor();await page.reload();await panel.locator('.det-history').evaluate(e=>e.open=true);await panel.locator('.det-history button').filter({hasText:entry.case.title}).click();await panel.getByLabel('你的答案',{exact:true}).waitFor();assert(await panel.getByLabel('你的答案',{exact:true}).inputValue()==='30','刷新丢草稿');
    await panel.screenshot({path:'output/playwright/v2-audit/detective-cards-evidence-1440.png'});
   }
   await panel.getByRole('button',{name:'保存结果，去验证',exact:false}).click();await panel.getByRole('button',{name:'保存验证，结案',exact:false}).waitFor();
