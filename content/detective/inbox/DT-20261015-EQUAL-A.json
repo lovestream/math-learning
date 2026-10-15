@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "detective-inbox.v1",
+  "bundleId": "DT-20261015-EQUAL-A",
+  "bundleRevision": 1,
+  "createdAt": "2026-10-15T14:00:00.000Z",
+  "producer": "chatgpt-github",
+  "sourceFingerprint": "75cd098d36dd8327fc4e6a925d7654280282608a19db24fa77e6743dce199696",
+  "privacy": "public-anonymized-math-only",
+  "policy": "auto-if-independently-verified",
+  "cases": [
+    {
+      "id": "DT-20261015-EQUAL-A-A",
+      "role": "original-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "分组数量调查",
+        "prompt": "有7袋积木，每袋6块。一共有多少块？",
+        "steps": [
+          "7+6=13（块）"
+        ],
+        "verdict": "wrong",
+        "errorStep": 0,
+        "reasons": [
+          "每袋相同，要把每袋的数量重复相加。",
+          "袋数和每袋块数直接相加就是总量。",
+          "积木数量不能用除法检查。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "一共有多少块积木？",
+          "unit": "块",
+          "options": [],
+          "answer": "42"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "把42块积木每袋装6块，可以装几袋？",
+          "unit": "袋",
+          "options": [],
+          "answer": "7"
+        },
+        "hints": [
+          "每一袋都放着相同数量的积木。",
+          "把每袋数量重复相加，重复几次？",
+          "用总数除以每袋的块数，看看能否回到原袋数。"
+        ],
+        "solution": "7×6=42块；反查42÷6=7袋。",
+        "family": "EQUAL_GROUPS",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "7袋",
+            "每袋6块"
+          ]
+        }
+      },
+      "verification": {
+        "template": "equal-groups-v1",
+        "parameters": {
+          "mode": "wrong",
+          "groups": 7,
+          "each": 6
+        },
+        "firstWrongStep": 0
+      }
+    },
+    {
+      "id": "DT-20261015-EQUAL-A-B",
+      "role": "transfer-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "分组数量调查",
+        "prompt": "有9袋积木，每袋4块。一共有多少块？",
+        "steps": [
+          "9+4=13（块）"
+        ],
+        "verdict": "wrong",
+        "errorStep": 0,
+        "reasons": [
+          "每袋相同，要把每袋的数量重复相加。",
+          "袋数和每袋块数直接相加就是总量。",
+          "积木数量不能用除法检查。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "一共有多少块积木？",
+          "unit": "块",
+          "options": [],
+          "answer": "36"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "把36块积木每袋装4块，可以装几袋？",
+          "unit": "袋",
+          "options": [],
+          "answer": "9"
+        },
+        "hints": [
+          "每一袋都放着相同数量的积木。",
+          "把每袋数量重复相加，重复几次？",
+          "用总数除以每袋的块数，看看能否回到原袋数。"
+        ],
+        "solution": "9×4=36块；反查36÷4=9袋。",
+        "family": "EQUAL_GROUPS",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "9袋",
+            "每袋4块"
+          ]
+        }
+      },
+      "verification": {
+        "template": "equal-groups-v1",
+        "parameters": {
+          "mode": "wrong",
+          "groups": 9,
+          "each": 4
+        },
+        "firstWrongStep": 0
+      }
+    },
+    {
+      "id": "DT-20261015-EQUAL-A-C",
+      "role": "correct-control",
+      "simulatedSteps": true,
+      "content": {
+        "title": "分组数量调查",
+        "prompt": "有8袋积木，每袋5块。一共有多少块？",
+        "steps": [
+          "8×5=40（块）"
+        ],
+        "verdict": "correct",
+        "errorStep": null,
+        "reasons": [
+          "袋数乘每袋块数，就是总块数。",
+          "袋数和每袋块数直接相加就是总量。",
+          "积木数量不能用除法检查。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "一共有多少块积木？",
+          "unit": "块",
+          "options": [],
+          "answer": "40"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "把40块积木每袋装5块，可以装几袋？",
+          "unit": "袋",
+          "options": [],
+          "answer": "8"
+        },
+        "hints": [
+          "每一袋都放着相同数量的积木。",
+          "把每袋数量重复相加，重复几次？",
+          "用总数除以每袋的块数，看看能否回到原袋数。"
+        ],
+        "solution": "8×5=40块；反查40÷5=8袋。",
+        "family": "EQUAL_GROUPS",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "8袋",
+            "每袋5块"
+          ]
+        }
+      },
+      "verification": {
+        "template": "equal-groups-v1",
+        "parameters": {
+          "mode": "correct",
+          "groups": 8,
+          "each": 5
+        },
+        "firstWrongStep": null
+      }
+    }
+  ]
+}
