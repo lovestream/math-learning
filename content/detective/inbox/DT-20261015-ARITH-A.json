@@ -1,0 +1,195 @@
+{
+  "schemaVersion": "detective-inbox.v1",
+  "bundleId": "DT-20261015-ARITH-A",
+  "bundleRevision": 1,
+  "createdAt": "2026-10-15T14:00:00.000Z",
+  "producer": "chatgpt-github",
+  "sourceFingerprint": "c14e970ccf9d3b99e8f4c52840a6b6da5b472517e67ae9fb3659c483b8921e34",
+  "privacy": "public-anonymized-math-only",
+  "policy": "auto-if-independently-verified",
+  "cases": [
+    {
+      "id": "DT-20261015-ARITH-A-A",
+      "role": "original-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "运算顺序调查",
+        "prompt": "请计算63+9×4，并检查小智的运算顺序。",
+        "steps": [
+          "先算63+9=72",
+          "原式=288"
+        ],
+        "verdict": "wrong",
+        "errorStep": 0,
+        "reasons": [
+          "没有括号时，要先算乘除，再算加减。",
+          "没有括号就必须全部从左到右。",
+          "乘除和加减的顺序可以任意交换。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "这道算式的正确结果是多少？",
+          "unit": "",
+          "options": [],
+          "answer": "99"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "从正确结果里减去63，再除以4，得到多少？",
+          "unit": "",
+          "options": [],
+          "answer": "9"
+        },
+        "hints": [
+          "先看清算式里有哪些运算符号。",
+          "没有括号时，乘除和加减谁先算？",
+          "把乘除的结果当成一个数，再处理加减。"
+        ],
+        "solution": "63+9×4=99；反向检查：99−63=36，36÷4=9。",
+        "family": "OPERATION_ORDER",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "算式：63+9×4",
+            "没有括号"
+          ]
+        }
+      },
+      "verification": {
+        "template": "arithmetic-order-v1",
+        "parameters": {
+          "mode": "wrong",
+          "a": 63,
+          "b": 9,
+          "c": 4,
+          "operator": "add-multiply"
+        },
+        "firstWrongStep": 0
+      }
+    },
+    {
+      "id": "DT-20261015-ARITH-A-B",
+      "role": "transfer-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "运算顺序调查",
+        "prompt": "请计算91−42÷7，并检查小智的运算顺序。",
+        "steps": [
+          "先算91−42=49",
+          "原式=7"
+        ],
+        "verdict": "wrong",
+        "errorStep": 0,
+        "reasons": [
+          "没有括号时，要先算乘除，再算加减。",
+          "没有括号就必须全部从左到右。",
+          "乘除和加减的顺序可以任意交换。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "这道算式的正确结果是多少？",
+          "unit": "",
+          "options": [],
+          "answer": "85"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "用91减去正确结果，再乘7，得到多少？",
+          "unit": "",
+          "options": [],
+          "answer": "42"
+        },
+        "hints": [
+          "先看清算式里有哪些运算符号。",
+          "没有括号时，乘除和加减谁先算？",
+          "把乘除的结果当成一个数，再处理加减。"
+        ],
+        "solution": "91−42÷7=85；反向检查：91−85=6，6×7=42。",
+        "family": "OPERATION_ORDER",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "算式：91−42÷7",
+            "没有括号"
+          ]
+        }
+      },
+      "verification": {
+        "template": "arithmetic-order-v1",
+        "parameters": {
+          "mode": "wrong",
+          "a": 91,
+          "b": 42,
+          "c": 7,
+          "operator": "subtract-divide"
+        },
+        "firstWrongStep": 0
+      }
+    },
+    {
+      "id": "DT-20261015-ARITH-A-C",
+      "role": "correct-control",
+      "simulatedSteps": true,
+      "content": {
+        "title": "运算顺序调查",
+        "prompt": "请计算75+8×5，并检查小智的运算顺序。",
+        "steps": [
+          "先算8×5=40",
+          "原式=115"
+        ],
+        "verdict": "correct",
+        "errorStep": null,
+        "reasons": [
+          "先算乘除，再算加减，顺序符合规则。",
+          "没有括号就必须全部从左到右。",
+          "乘除和加减的顺序可以任意交换。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "这道算式的正确结果是多少？",
+          "unit": "",
+          "options": [],
+          "answer": "115"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "从正确结果里减去75，再除以5，得到多少？",
+          "unit": "",
+          "options": [],
+          "answer": "8"
+        },
+        "hints": [
+          "先看清算式里有哪些运算符号。",
+          "没有括号时，乘除和加减谁先算？",
+          "把乘除的结果当成一个数，再处理加减。"
+        ],
+        "solution": "75+8×5=115；反向检查：115−75=40，40÷5=8。",
+        "family": "OPERATION_ORDER",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "算式：75+8×5",
+            "没有括号"
+          ]
+        }
+      },
+      "verification": {
+        "template": "arithmetic-order-v1",
+        "parameters": {
+          "mode": "correct",
+          "a": 75,
+          "b": 8,
+          "c": 5,
+          "operator": "add-multiply"
+        },
+        "firstWrongStep": null
+      }
+    }
+  ]
+}
