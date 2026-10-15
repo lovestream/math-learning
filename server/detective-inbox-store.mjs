@@ -15,22 +15,26 @@ function importBundleInto(p,b,source,now){
  const results=b.cases.map(c=>verifyImportedCaseMath(c.content,c.verification));
  const invalid=results.find(r=>r.status==='rejected');
  if(invalid){x.files[source.path]={bundleId:b.bundleId,bundleRevision:b.bundleRevision,bundleHash,sourceBlobSha:source.sha,sourceBranch:source.branch,sourcePath:source.path,importedAt:time,mathOracleVersion:ORACLE_VERSION,status:'rejected',reason:invalid.reason,caseIds:[]};validateStored(p);return {status:'rejected',caseIds:[]};}
- if(!old){
-  const duplicates=b.cases.map(c=>Object.values(d.cases).find(existing=>existing.importSource&&existing.versions.some(v=>v.hash===fingerprint(c.content))));
-  if(duplicates.every(Boolean)){
-   x.files[source.path]={bundleId:b.bundleId,bundleRevision:b.bundleRevision,bundleHash,sourceBlobSha:source.sha,sourceBranch:source.branch,sourcePath:source.path,importedAt:time,mathOracleVersion:ORACLE_VERSION,status:duplicates.every(c=>c.status==='published')?'auto-published':'needs-review',reason:'这些数学案件已经收到，复用原案，不重复建立训练或奖励。',caseIds:duplicates.map(c=>c.id)};validateStored(p);return {status:'duplicate',caseIds:x.files[source.path].caseIds};
-  }
+ const destinations=b.cases.map(c=>{
+  if(d.cases[c.id])return c.id;
+  return Object.values(d.cases).find(existing=>existing.importSource&&existing.versions.some(v=>v.id===existing.activeVersion&&v.hash===fingerprint(c.content)))?.id??c.id;
+ });
+ const reused=destinations.every((id,i)=>id!==b.cases[i].id);
+ if(reused){
+  const duplicates=destinations.map(id=>d.cases[id]);
+  x.files[source.path]={bundleId:b.bundleId,bundleRevision:b.bundleRevision,bundleHash,sourceBlobSha:source.sha,sourceBranch:source.branch,sourcePath:source.path,importedAt:time,mathOracleVersion:ORACLE_VERSION,status:duplicates.every(c=>c.status==='published')?(duplicates.some(c=>c.versions.find(v=>v.id===c.activeVersion).approvalSource==='parent')?'parent-published':'auto-published'):'needs-review',reason:'这些数学案件已经收到，复用原案，不重复建立训练或奖励。',caseIds:destinations};validateStored(p);return {status:'duplicate',caseIds:destinations};
  }
- const canPublish=x.autoPublish&&results.every(r=>r.status==='verified')&&!b.cases.some(c=>['withdrawn','archived'].includes(d.cases[c.id]?.status)),status=canPublish?'auto-published':'needs-review';
- insist(Object.keys(d.cases).length+b.cases.filter(c=>!d.cases[c.id]).length<=200,'案卷已满200宗，本包未导入，GitHub原件保留。');
+ const canPublish=x.autoPublish&&results.every(r=>r.status==='verified')&&!destinations.some(id=>['withdrawn','archived'].includes(d.cases[id]?.status)),status=canPublish?'auto-published':'needs-review';
+ insist(Object.keys(d.cases).length+destinations.filter(id=>!d.cases[id]).length<=200,'案卷已满200宗，本包未导入，GitHub原件保留。');
  for(const [i,c]of b.cases.entries()){
+  if(destinations[i]!==c.id)continue;
   const provenance={sourceBranch:source.branch,sourcePath:source.path,sourceBlobSha:source.sha,bundleId:b.bundleId,bundleRevision:b.bundleRevision,bundleHash,caseHash:fingerprint(c.content),importedAt:time,mathOracleVersion:ORACLE_VERSION,importDisposition:status,reason:canPublish?results[i].reason:!x.autoPublish?'家长暂停了自动发布。':(results.find(r=>r.status==='needs-review')?.reason??'本机已撤回或归档，保留待核对。'),simulatedSteps:true};
   let record=d.cases[c.id];if(!record){record={id:c.id,revision:1,status:'review',draft:structuredClone(c.content),versions:[],activeVersion:null};d.cases[c.id]=record;}else {insist(fingerprint(record.draft)===record.importSource.caseHash,'本机案卷已有手工修改，请家长先核对，自动导入不覆盖。',409);record.revision++;}
   record.draft=structuredClone(c.content);record.importSource=provenance;
   if(canPublish){publishImported(record,c.content,now,provenance);delete record.pendingImport;}
   else {record.pendingImport=provenance;if(!record.activeVersion)record.status='review';}
  }
- x.files[source.path]={bundleId:b.bundleId,bundleRevision:b.bundleRevision,bundleHash,sourceBlobSha:source.sha,sourceBranch:source.branch,sourcePath:source.path,importedAt:time,mathOracleVersion:ORACLE_VERSION,status,reason:canPublish?'本机独立数学核验通过。':!x.autoPublish?'自动发布已暂停；内容保留待家长核对。':'本包存在尚不能独立核验的内容，整包待家长核对。',caseIds:b.cases.map(c=>c.id)};
+ x.files[source.path]={bundleId:b.bundleId,bundleRevision:b.bundleRevision,bundleHash,sourceBlobSha:source.sha,sourceBranch:source.branch,sourcePath:source.path,importedAt:time,mathOracleVersion:ORACLE_VERSION,status,reason:canPublish?'本机独立数学核验通过。':!x.autoPublish?'自动发布已暂停；内容保留待家长核对。':'本包尚不能自动发布，整包保留供家长核对。',caseIds:destinations};
  validateStored(p);return {status,caseIds:x.files[source.path].caseIds};
 }
 export function importVerifiedBundle(p,b,source,now=Date.now()){

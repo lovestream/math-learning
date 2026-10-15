@@ -91,3 +91,9 @@ test('GitHub blob限流时仅固定原文件后备；SHA不符拒绝，不执行
  try{await sync.sync();assert.equal(rawCount,1);if(changed){assert(sync.status().lastError);assert.equal(Object.keys(sync.status().files).length,0);}else assert.equal(Object.values(sync.status().files)[0].status,'auto-published');}finally{await sync.stop();store.close();fs.rmSync(dir,{recursive:true,force:true});}
  }
 });
+test('混合新旧内容逐案去重，只复用当前同条件版本，避免复用已经改题的旧案',()=>{
+ const p=freshProgress();importCase(p);const next=copy(fixture);next.bundleId='DT-PARTIAL';next.cases.forEach((c,i)=>c.id='PARTIAL-'+i);next.cases[0].verification.parameters.targetMm=24;next.cases[0].content=deriveImportedCase(next.cases[0].verification.template,next.cases[0].verification.parameters);
+ const result=importCase(p,next);assert.equal(Object.keys(p.studio.detective.cases).length,19);assert.deepEqual(result.caseIds,['PARTIAL-0',fixture.cases[1].id,fixture.cases[2].id]);
+ const revision=copy(fixture);revision.bundleRevision=2;revision.cases[1].verification.parameters.targetMm=18;revision.cases[1].content=deriveImportedCase(revision.cases[1].verification.template,revision.cases[1].verification.parameters);importCase(p,revision);
+ const oldMath=pack('card-thickness-grouping-v1',{mode:'wrong',cardsPerGroup:4,groupThicknessMm:3,targetMm:15});const old=importCase(p,oldMath);assert.equal(old.caseIds[0],oldMath.cases[0].id);assert.equal(p.studio.detective.cases[old.caseIds[0]].draft.repair.answer,'20');
+});
