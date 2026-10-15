@@ -27,7 +27,7 @@ function importBundleInto(p,b,source,now){
   const provenance={sourceBranch:source.branch,sourcePath:source.path,sourceBlobSha:source.sha,bundleId:b.bundleId,bundleRevision:b.bundleRevision,bundleHash,caseHash:fingerprint(c.content),importedAt:time,mathOracleVersion:ORACLE_VERSION,importDisposition:status,reason:canPublish?results[i].reason:!x.autoPublish?'家长暂停了自动发布。':(results.find(r=>r.status==='needs-review')?.reason??'本机已撤回或归档，保留待核对。'),simulatedSteps:true};
   let record=d.cases[c.id];if(!record){record={id:c.id,revision:1,status:'review',draft:structuredClone(c.content),versions:[],activeVersion:null};d.cases[c.id]=record;}else {insist(fingerprint(record.draft)===record.importSource.caseHash,'本机案卷已有手工修改，请家长先核对，自动导入不覆盖。',409);record.revision++;}
   record.draft=structuredClone(c.content);record.importSource=provenance;
-  if(canPublish)publishImported(record,c.content,now,provenance);
+  if(canPublish){publishImported(record,c.content,now,provenance);delete record.pendingImport;}
   else {record.pendingImport=provenance;if(!record.activeVersion)record.status='review';}
  }
  x.files[source.path]={bundleId:b.bundleId,bundleRevision:b.bundleRevision,bundleHash,sourceBlobSha:source.sha,sourceBranch:source.branch,sourcePath:source.path,importedAt:time,mathOracleVersion:ORACLE_VERSION,status,reason:canPublish?'本机独立数学核验通过。':!x.autoPublish?'自动发布已暂停；内容保留待家长核对。':'本包存在尚不能独立核验的内容，整包待家长核对。',caseIds:b.cases.map(c=>c.id)};
