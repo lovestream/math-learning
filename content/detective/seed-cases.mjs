@@ -58,4 +58,8 @@ seeds.push(base(13,'两种长度的比较','比较9千米200米和54分米。小
  '9千米200米是9200米；54分米是5米4分米，即5.4米，所以前者更长。另查54分米=540厘米，和920000厘米相比仍短得多。',visual('lengths','9千米200米','54分米'),['先观察两个数后面的单位。','9千米已经远远超过几十分米。','统一成米是9200米和5.4米；再换厘米也应得到相同的比较。']));
 seeds.sort((a,b)=>a.id.localeCompare(b.id));
 export const seedCases=seeds;
-export const pendingCase={id:'DET-G3-PENDING-015',content:{title:'铁丝题：等待补全原题',prompt:'',steps:['仅知道原答案17分米，参考答案18分米，完整原题尚缺。'],verdict:'wrong',errorStep:0,family:'PENDING',reasons:['需要补齐题目条件再判断。','仅凭答案不同猜题意。'],reason:0,repair:{kind:'oral',question:'',unit:'',options:[],answer:''},verify:{kind:'oral',question:'',unit:'',options:[],answer:''},hints:['','',''],solution:'',visual:visual('manual'),sourceNotes:'缺少原题与原步骤，不得自行补造或发布。'}};
+export const legacyPendingCase={id:'DET-G3-PENDING-015',content:{title:'铁丝题：等待补全原题',prompt:'',steps:['仅知道原答案17分米，参考答案18分米，完整原题尚缺。'],verdict:'wrong',errorStep:0,family:'PENDING',reasons:['需要补齐题目条件再判断。','仅凭答案不同猜题意。'],reason:0,repair:{kind:'oral',question:'',unit:'',options:[],answer:''},verify:{kind:'oral',question:'',unit:'',options:[],answer:''},hints:['','',''],solution:'',visual:visual('manual'),sourceNotes:'缺少原题与原步骤，不得自行补造或发布。'}};
+
+// The reported problem is complete. Only the learner's original intermediate
+// work is unknown; never substitute a simulation for that historical evidence.
+export const pendingCase={id:legacyPendingCase.id,content:{...legacyPendingCase.content,title:'铁丝题：等待原始计算过程',prompt:'一根铁丝绕竹竿3圈后多3分米，绕4圈还差2分米，铁丝长多少分米？',steps:['已知报告的结果是17分米；原始中间计算过程尚未提供，不能据此确定首错行。'],reasons:['题意已完整；需要原始过程才能判断实际错因。','仅凭答案不同猜测原始步骤。'],sourceNotes:'题意已完整，缺孩子原始计算过程。正确铁丝长18分米；匿名模拟另立新案，不冒充原始作答。'}};

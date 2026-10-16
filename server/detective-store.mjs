@@ -1,4 +1,4 @@
-import {seedCases,pendingCase} from '../content/detective/seed-cases.mjs';
+import {seedCases,pendingCase,legacyPendingCase} from '../content/detective/seed-cases.mjs';
 import {fingerprint,insist,validId,validateCase,publicCase,matchesResponse,matchesReason,orderedReasons,validateDetective} from '../shared/detective-model.mjs';
 const iso=now=>new Date(now).toISOString();
 const day=now=>new Date(now+8*3600000).toISOString().slice(0,10);
@@ -7,7 +7,14 @@ const clone=x=>structuredClone(x);
 export const validateStored=p=>{validateDetective(p.studio.detective);insist(Buffer.byteLength(JSON.stringify(p.studio),'utf8')<6*1024*1024,'互动课程存档接近容量上限，请先导出备份。');};
 export function ensureDetective(p){
   p.studio??={version:1,reading:{},sessions:{},notes:[],events:[],entitlements:{},daily:{},review:{}};
-  if(p.studio.detective)return p.studio.detective;
+  if(p.studio.detective){
+    const c=p.studio.detective.cases[pendingCase.id];
+    // Correct only the untouched system draft. Edited/published history is never rewritten.
+    if(c?.status==='draft'&&c.revision===1&&!c.versions.length&&c.activeVersion===null&&fingerprint(c.draft)===fingerprint(legacyPendingCase.content)){
+      c.draft=clone(pendingCase.content);c.revision++;
+    }
+    return p.studio.detective;
+  }
   const cases=Object.fromEntries([...seedCases,pendingCase].map(({id,content})=>[id,{id,revision:1,status:id===pendingCase.id?'draft':'review',draft:clone(content),versions:[],activeVersion:null}]));
   return p.studio.detective={schemaVersion:1,cases,attempts:{},plans:{},badges:[],receipts:[]};
 }

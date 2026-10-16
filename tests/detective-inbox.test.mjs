@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import {createHash} from 'node:crypto';
 import {freshProgress,createStore} from '../server/store.mjs';
 import {createBundle} from '../scripts/create-detective-bundle.mjs';
-import {validateInboxBundle,parseInboxBundle,deriveImportedCase,verifyImportedCaseMath,INBOX_PATH} from '../shared/detective-inbox.mjs';
+import {validateInboxBundle,parseInboxBundle,deriveImportedCase,verifyImportedCaseMath,ORACLE_VERSION,INBOX_PATH} from '../shared/detective-inbox.mjs';
 import {fingerprint,validateDetective,orderedReasons} from '../shared/detective-model.mjs';
 import {ensureInbox,importVerifiedBundle} from '../server/detective-inbox-store.mjs';
 import {createDetectiveInboxSync} from '../server/detective-inbox-sync.mjs';
@@ -37,7 +37,7 @@ test('三案事务导入、可信审核来源、首次即练、今日2错1对与
  const p=freshProgress();manageDetective(p,{action:'enable-seeds',eventId:'enable',checks:[true,true,true]},now);const before=detectiveToday(p,now),snapshot=JSON.stringify(p.studio.detective.plans);
  importCase(p);assert.equal(JSON.stringify(p.studio.detective.plans),snapshot);const today=detectiveToday(p,now);assert.deepEqual(today.cases,before.cases);assert.equal(today.newCases.length,3);
  const c=today.newCases[0].case;assert(!('verdict'in c)&&!('solution'in c)&&!('sourceNotes'in c));const a=detectiveAttempt(p,{action:'start',caseId:c.id,version:c.version,attemptId:'inbox-now',eventId:'start-now'},now);assert.equal(a.attempt.phase,'judge');
- for(const entry of fixture.cases){const v=p.studio.detective.cases[entry.id].versions[0];assert.equal(v.approvalSource,'deterministic-import');assert.equal(v.provenance.mathOracleVersion,'detective-oracle.v1');assert.equal(v.provenance.caseHash,fingerprint(p.studio.detective.cases[entry.id].draft));}
+ for(const entry of fixture.cases){const v=p.studio.detective.cases[entry.id].versions[0];assert.equal(v.approvalSource,'deterministic-import');assert.equal(v.provenance.mathOracleVersion,ORACLE_VERSION);assert.equal(v.provenance.caseHash,fingerprint(p.studio.detective.cases[entry.id].draft));}
  const badge=copy(p.wallet);for(let i=0;i<30;i++)assert.equal(importCase(p).status,'duplicate');assert.equal(Object.keys(p.studio.detective.attempts).length,1);assert.deepEqual(p.wallet,badge);assert.equal(p.studio.detective.badges.length,0);const duplicate=copy(fixture);duplicate.bundleId='DT-SECOND-SEND';duplicate.cases.forEach((x,i)=>x.id='SECOND-'+i);assert.equal(importCase(p,duplicate).status,'duplicate');assert.equal(Object.keys(p.studio.detective.cases).length,18);validateDetective(p.studio.detective);
 });
 test('不知道的模板整包待审；假approved/机器已验证字符串无效；明确数学错包零发布',()=>{

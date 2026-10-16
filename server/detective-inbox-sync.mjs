@@ -1,6 +1,6 @@
 import {createHash} from 'node:crypto';
 import {ensureInbox,getDetectiveSyncStatus,importVerifiedBundle} from './detective-inbox-store.mjs';
-import {parseInboxBundle,INBOX_PATH,inboxFilename} from '../shared/detective-inbox.mjs';
+import {parseInboxBundle,needsOracleRecheck,INBOX_PATH,inboxFilename} from '../shared/detective-inbox.mjs';
 import {insist} from '../shared/detective-model.mjs';
 import {validateStored} from './detective-store.mjs';
 const API='https://api.github.com/repos/lovestream/math-learning';
@@ -20,7 +20,7 @@ export function createDetectiveInboxSync({store,fetcher=fetch,clock=Date.now}){
  async function run(force){
   const before=status(),now=clock();if(!force&&before.nextAttemptAt&&Date.parse(before.nextAttemptAt)>now)return status();
   try{
-   const r=await request(`${API}/contents/${INBOX_PATH.slice(0,-1)}?ref=${BRANCH}`,!force&&before.etag?{'If-None-Match':before.etag}:{});
+   const r=await request(`${API}/contents/${INBOX_PATH.slice(0,-1)}?ref=${BRANCH}`,!force&&before.etag&&!Object.values(before.files).some(needsOracleRecheck)?{'If-None-Match':before.etag}:{});
    if(r.status!==304){
     const files=await boundedJson(r,512*1024);insist(Array.isArray(files)&&files.length<=400,'收件目录内容无效或超过400文件。');
     const errors=[];
@@ -28,7 +28,7 @@ export function createDetectiveInboxSync({store,fetcher=fetch,clock=Date.now}){
      try{
      if(file.name==='README.md')continue;
      insist(file.type==='file'&&inboxFilename(file.name)&&file.path===INBOX_PATH+file.name&&sha(file.sha)&&Number.isInteger(file.size)&&file.size>0&&file.size<=192*1024,'收件目录含不支持的文件、路径或过大JSON。');
-     if(status().files[file.path]?.sourceBlobSha===file.sha)continue;
+     const previous=status().files[file.path];if(previous?.sourceBlobSha===file.sha&&!needsOracleRecheck(previous))continue;
      let buffer;
      try{
       const blob=await boundedJson(await request(`${API}/git/blobs/${file.sha}`),300*1024);

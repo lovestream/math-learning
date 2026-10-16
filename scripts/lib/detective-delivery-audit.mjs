@@ -26,6 +26,15 @@ export function auditDeliveredCase(entry){
  }else if(template==='length-ordering-v1'){
   const quantities=p.items.map(x=>({...x,mm:asMm(x.value,x.unit)})).sort((a,b)=>a.mm===b.mm?0:a.mm>b.mm?-1:1);
   repair=quantities.map(x=>`${x.value}${x.unit}`).join('|');verify=String(quantities[0].mm);
+ }else if(template==='wrap-surplus-shortage-v1'){
+  // Enumerate whole-decimetre circles and test both conditions; do not reuse
+  // the generator's surplus-plus-shortage formula.
+  const matches=[];
+  for(let circle=1;circle<=200;circle++){
+   const length=p.lowTurns*circle+p.surplusDm;
+   if(p.highTurns*circle-length===p.shortageDm)matches.push({circle,length});
+  }
+  assert.equal(matches.length,1);repair=String(matches[0].length);verify=String(matches[0].circle);
  }else throw Error('此发布审校工具尚未覆盖该数学模板。');
  if(c.repair.kind==='ordering')assert.equal(c.repair.answer,repair);else numberIs(c.repair.answer,repair);
  numberIs(c.verify.answer,verify);

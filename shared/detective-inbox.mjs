@@ -1,6 +1,8 @@
 import {isDeepStrictEqual} from 'node:util';
 import {fingerprint,insist,validId,validateCase} from './detective-model.mjs';
-export const ORACLE_VERSION='detective-oracle.v1';
+export const ORACLE_VERSION='detective-oracle.v2';
+const storedOracle=v=>['detective-oracle.v1',ORACLE_VERSION].includes(v);
+export const needsOracleRecheck=r=>r?.status==='needs-review'&&r.mathOracleVersion!==ORACLE_VERSION;
 export const INBOX_PATH='content/detective/inbox/';
 export const inboxFilename=x=>typeof x==='string'&&/^DT-[A-Za-z0-9_-]{1,90}\.json$/.test(x);
 const plain=x=>x&&typeof x==='object'&&!Array.isArray(x)&&Object.getPrototypeOf(x)===Object.prototype;
@@ -12,12 +14,20 @@ const number=(question,answer,unit='')=>({kind:'number',question,unit,options:[]
 const manual=values=>({kind:'manual',values});
 const base=(title,prompt,steps,verdict,errorStep,reasons,repair,verify,hints,solution,family,visual)=>({title,prompt,steps,verdict,errorStep,reasons,reason:0,repair,verify,hints,solution,family,sourceNotes:'',visual});
 const equal=isDeepStrictEqual;
-export const INBOX_TEMPLATES=['card-thickness-grouping-v1','arithmetic-order-v1','length-conversion-v1','equal-groups-v1','length-ordering-v1'];
+export const INBOX_TEMPLATES=['card-thickness-grouping-v1','arithmetic-order-v1','length-conversion-v1','equal-groups-v1','length-ordering-v1','wrap-surplus-shortage-v1'];
 // Each supported template owns ALL semantic text, steps, answer, inverse and figure.
 // We do not try to prove arbitrary natural-language mathematics from a claimed answer.
 export function deriveImportedCase(template,p){
  if(!INBOX_TEMPLATES.includes(template))return null;
  const wrong=p?.mode==='wrong';insist(['wrong','correct'].includes(p?.mode),'模板必须指定wrong或correct。');
+ if(template==='wrap-surplus-shortage-v1'){
+  insist(exact(p,['mode','lowTurns','highTurns','surplusDm','shortageDm','scene'])&&[p.lowTurns,p.highTurns,p.surplusDm,p.shortageDm].every(positive)&&['bamboo','spool'].includes(p.scene),'绕线参数不合法。');
+  const {lowTurns:a,highTurns:b,surplusDm:s,shortageDm:t}=p;
+  insist(a>=1&&a<b&&b<=12&&s<=100&&t<=100&&(s+t)%(b-a)===0&&s!==t,'圈数须增加、每圈长度须为整数，且错误过程应产生不同结果。');
+  const circle=(s+t)/(b-a),length=a*circle+s,mistake=a*circle+t;
+  const material=p.scene==='bamboo'?'铁丝':'绳子',object=p.scene==='bamboo'?'竹竿':'线轴';
+  return base('绕线长度调查 · 匿名模拟',`一根${material}绕${object}${a}圈后多${s}分米，绕${b}圈还差${t}分米。这根${material}长多少分米？下面是虚构的匿名模拟做法，并非原始作答记录。`,[`从${a}圈增加到${b}圈，多绕${b-a}圈，需要${s}+${t}=${s+t}（分米）。`,`每圈长${s+t}÷${b-a}=${circle}（分米）。`,wrong?`${material}长${a}×${circle}+${t}=${mistake}（分米）。`:`${material}长${a}×${circle}+${s}=${length}（分米）。`],wrong?'wrong':'correct',wrong?2:null,[wrong?`绕${a}圈后还多${s}分米，应加回多出的${s}分米，不能加缺少的${t}分米。`:`按${a}圈加上多出的${s}分米求总长，两种绕法都符合条件。`,'多出的长度和还差的长度必须相减。','圈数增加了，原来这根线也会变长。'],number(`这根${material}长多少分米？`,length,'分米'),number(`换用另一条条件验证：给这根${length}分米的${material}补上缺少的${t}分米，就够绕${b}圈。每圈长多少分米？`,circle,'分米'),[`把“绕${a}圈后还多”与“绕${b}圈还差”分别画出来。`,`增加的${b-a}圈，要先用掉多出的${s}分米，还要再补${t}分米。`,`求出一圈后，用${a}圈加多出的长度求总长，再用${b}圈减缺少的长度核对。`],`一圈长(${s}+${t})÷(${b}−${a})=${circle}分米。两路核对：${a}×${circle}+${s}=${length}分米；${b}×${circle}−${t}=${length}分米。反查：${length}−${a}×${circle}=${s}分米，${b}×${circle}−${length}=${t}分米。`,'WRAP_RELATION',manual([`绕${a}圈后：还多${s}分米`,`绕${b}圈：还差${t}分米`,'同一根线，长度不变','示意条件；每圈绕得一样长']));
+ }
  if(template==='card-thickness-grouping-v1'){
   insist(exact(p,['mode','cardsPerGroup','groupThicknessMm','targetMm'])&&[p.cardsPerGroup,p.groupThicknessMm,p.targetMm].every(positive));
   const {cardsPerGroup:n,groupThicknessMm:t,targetMm:m}=p;insist(n>=2&&n<=20&&m%t===0&&m>t&&m/t*n<=100000,'卡片须整组、张数范围有限。');const groups=m/t,total=groups*n;
@@ -77,11 +87,11 @@ export function validateInboxState(x){
  const iso=v=>v===null||typeof v==='string'&&Number.isFinite(Date.parse(v));
  insist([x.lastCheckedAt,x.lastSuccessAt,x.nextAttemptAt].every(iso)&&Number.isInteger(x.failures)&&x.failures>=0&&x.failures<=10000&&(x.etag===null||typeof x.etag==='string'&&x.etag.length<=200)&&(x.lastError===null||typeof x.lastError==='string'&&x.lastError.length<=500),'同步状态不完整。');
  for(const [path,r]of Object.entries(x.files)){
-  insist(path.startsWith(INBOX_PATH)&&inboxFilename(path.slice(INBOX_PATH.length))&&r.sourcePath===path&&r.sourceBranch==='detective-inbox'&&/^[a-f0-9]{40}$/.test(r.sourceBlobSha)&&/^[a-f0-9]{64}$/.test(r.bundleHash)&&Number.isInteger(r.bundleRevision)&&r.bundleRevision>=1&&r.bundleRevision<=1000&&path===INBOX_PATH+r.bundleId+'.json'&&iso(r.importedAt)&&r.importedAt!==null&&['auto-published','parent-published','needs-review','rejected'].includes(r.status)&&typeof r.reason==='string'&&r.reason.length<=500&&r.mathOracleVersion===ORACLE_VERSION&&Array.isArray(r.caseIds)&&r.caseIds.length<=3,'收件台账损坏。');
+  insist(path.startsWith(INBOX_PATH)&&inboxFilename(path.slice(INBOX_PATH.length))&&r.sourcePath===path&&r.sourceBranch==='detective-inbox'&&/^[a-f0-9]{40}$/.test(r.sourceBlobSha)&&/^[a-f0-9]{64}$/.test(r.bundleHash)&&Number.isInteger(r.bundleRevision)&&r.bundleRevision>=1&&r.bundleRevision<=1000&&path===INBOX_PATH+r.bundleId+'.json'&&iso(r.importedAt)&&r.importedAt!==null&&['auto-published','parent-published','needs-review','rejected'].includes(r.status)&&typeof r.reason==='string'&&r.reason.length<=500&&storedOracle(r.mathOracleVersion)&&Array.isArray(r.caseIds)&&r.caseIds.length<=3,'收件台账损坏。');
  }
 }
 export function validateImportProvenance(v,content){
  if(v===undefined)return;
- insist(exact(v,['sourceBranch','sourcePath','sourceBlobSha','bundleId','bundleRevision','bundleHash','caseHash','importedAt','mathOracleVersion','importDisposition','reason','simulatedSteps'])&&v.sourceBranch==='detective-inbox'&&v.sourcePath===INBOX_PATH+v.bundleId+'.json'&&inboxFilename(v.bundleId+'.json')&&/^[a-f0-9]{40}$/.test(v.sourceBlobSha)&&hash(v.bundleHash)&&hash(v.caseHash)&&Number.isInteger(v.bundleRevision)&&v.bundleRevision>=1&&Number.isFinite(Date.parse(v.importedAt))&&v.mathOracleVersion===ORACLE_VERSION&&['auto-published','needs-review'].includes(v.importDisposition)&&typeof v.reason==='string'&&v.reason.length<=500&&v.simulatedSteps===true,'案卷导入来源损坏。');
+ insist(exact(v,['sourceBranch','sourcePath','sourceBlobSha','bundleId','bundleRevision','bundleHash','caseHash','importedAt','mathOracleVersion','importDisposition','reason','simulatedSteps'])&&v.sourceBranch==='detective-inbox'&&v.sourcePath===INBOX_PATH+v.bundleId+'.json'&&inboxFilename(v.bundleId+'.json')&&/^[a-f0-9]{40}$/.test(v.sourceBlobSha)&&hash(v.bundleHash)&&hash(v.caseHash)&&Number.isInteger(v.bundleRevision)&&v.bundleRevision>=1&&Number.isFinite(Date.parse(v.importedAt))&&storedOracle(v.mathOracleVersion)&&['auto-published','needs-review'].includes(v.importDisposition)&&typeof v.reason==='string'&&v.reason.length<=500&&v.simulatedSteps===true,'案卷导入来源损坏。');
  if(content)insist(v.caseHash===fingerprint(content),'案卷与导入内容指纹不一致。');
 }

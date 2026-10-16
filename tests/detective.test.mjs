@@ -13,7 +13,7 @@ function begin(p,caseId){const d=ensureDetective(p),c=d.cases[caseId],ref={caseI
 }
 function send(p,a,action,extra={}){return detectiveAttempt(p,{action,eventId:id(),attemptId:a.attempt.id,expectedRevision:a.attempt.revision,...extra},NOW);}
 function finish(p,r){const d=p.studio.detective,v=d.cases[r.case.id].versions.find(v=>v.id===r.case.version),c=v.content;r=send(p,r,'judge',{value:c.verdict});r=send(p,r,'evidence',{step:c.errorStep,reason:orderedReasons(v).findIndex(x=>x.index===c.reason)});r=send(p,r,'repair',{value:c.repair.kind==='oral'?'oral':c.repair.answer});return send(p,r,'verify',{value:c.verify.kind==='oral'?'oral':c.verify.answer});}
-test('14宗完整模拟案：10错4对；铁丝缺题留草稿，未审核不可发布',()=>{
+test('14宗完整模拟案：10错4对；铁丝缺原始过程留草稿，未审核不可发布',()=>{
  assert(!validId('toString'));assert(!validId('__proto__'));assert(!validId('constructor'));assert.equal(seedCases.length,14);assert.equal(seedCases.filter(s=>s.content.verdict==='correct').length,4);for(const s of seedCases)validateCase(s.content,true);validateCase(pendingCase.content);assert.throws(()=>validateCase(pendingCase.content,true));
  const p=freshProgress();assert.equal(detectiveToday(p,NOW).cases.length,0);assert.equal(p.studio.detective,undefined);parentDetective(p);assert.equal(detectiveToday(p,NOW).cases.length,0);
  assert.throws(()=>manageDetective(p,{action:'enable-seeds',eventId:id(),checks:[true,false,true]},NOW));

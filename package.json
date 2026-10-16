@@ -17,6 +17,7 @@
     "test:flows": "node --test tests/pilot-store.test.mjs",
     "test:browser": "python3 scripts/run-browser-audit.py",
     "test:browser:ci": "node scripts/run-browser-ci.mjs",
+    "test:detective:upgrade": "node scripts/verify-detective-upgrade.mjs",
     "test:browser:full": "node scripts/run-browser-ci.mjs --full"
   },
   "engines": {

@@ -19,7 +19,7 @@
 
 ## 生成可自动发布的包
 
-事实校验与运行时准入是两回事。网站不尝试用正则证明任意中文题意；第一版只对下列五类审定模板自动发布，逐字段比对独立推导的完整题面、步骤、首错、依据、提示、正解、逆查、单位及图。数学模板没有覆盖到的题可存为待家长核对，不能偷偷自动发布。
+事实校验与运行时准入是两回事。网站不尝试用正则证明任意中文题意；当前只对下列六类审定模板自动发布，逐字段比对独立推导的完整题面、步骤、首错、依据、提示、正解、逆查、单位及图。数学模板没有覆盖到的题可存为待家长核对，不能偷偷自动发布。
 
 读取 `shared/detective-inbox.mjs` 的 `deriveImportedCase(template, parameters)` 获取精确文本。不要自行润色模板字段；需要不同数学故事时先走待核对。Node生成工具可从匿名参数构造完整CaseContent：
 
@@ -52,6 +52,7 @@ ChatGPT没有代码运行工具时，可以根据同一渲染器/样例逐字段
 |length-conversion-v1|value、from、to|正整数≤100000；从较大单位换小单位，结果≤100000000。毫米/厘米/分米/米/千米。首错为换单位不换数。|
 |equal-groups-v1|groups、each|均2～100000，总数≤1000000且加法与乘法结果不同。用总数÷每组数逆查组数。|
 |length-ordering-v1|items: [{value,unit},…]|3～5个不同长度，正整数和上述单位；统一毫米降序；错误案交换前两项，逆查最长项的毫米数。|
+|wrap-surplus-shortage-v1|lowTurns, highTurns, surplusDm, shortageDm, scene|圈数1≤lowTurns<highTurns≤12；多出/缺少1～100分米且不相等；(surplusDm+shortageDm)须整除圈数差。scene为bamboo（铁丝绕竹竿）或spool（绳子绕线轴）。每圈等长，单位固定分米。错误案第3行误加缺少量；逆查用另一绕法求一圈，再核两条原条件。|
 
 `schemaVersion` 固定 `detective-inbox.v1`；`producer` 固定 `chatgpt-github`；`privacy` 固定 `public-anonymized-math-only`；`policy` 固定 `auto-if-independently-verified`；每案 `simulatedSteps:true`。`verification`仅接受template、parameters和可选firstWrongStep。完整JSON Schema在 `docs/design/数学小侦探_ChatGPT投递契约_v1.json`；运行时JS检查更严格，并有数学参数边界检查。
 
@@ -84,3 +85,10 @@ node scripts/verify-detective-live-inbox.mjs
 `node scripts/verify-detective-deliveries.mjs --prefix=DT-批次编号` 可在自动创建的临时学习库中，对新包做真实GitHub接收、逐blob对照、独立复算和全部案件的四步浏览器验收；1～3案包均支持。该工具不写真实学习库，也不要求每道新题修改应用代码。须先`git fetch origin`，保证审阅的不可变数据提交与本机同步blob一致。
 
 独立复算不调用题目生成器获取数值答案：运算使用精确表达式解析；长度用单位量级；等组和厚度用重复分组/重复累加。浏览器再用这份独立结果作答，覆盖排序拖动、错误修复、刷新恢复、今日计划不变、徽章上限及备份恢复。输出在`output/playwright/detective-deliveries/`。网络不可达时明确失败，不伪称已导入。
+
+
+## 2026-10-16 绕线模板与版本边界
+
+审定三案见 `content/detective/reviewed/DT-20261016-WIRE-A.json`：原关系模拟18分米、换情境16分米、正确对照26分米。原始过程未知，不能称模拟步骤为孩子实际错法。未知模板的旧程序会保留待核对；升级后重复同步可重新数学核验，不能自动重写已被家长编辑的草稿。运行中的程序不会因GitHub加入模板源码而自行升级。
+
+新到列表与今日列表按案号＋版本去重；完整收件台账不减少。今日旧版本与新活动版本同时存在时，两者均有入口，原首答仍关联旧版本。

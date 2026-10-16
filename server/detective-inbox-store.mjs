@@ -1,17 +1,19 @@
 import {ensureDetective,publishImported,validateStored} from './detective-store.mjs';
 import {fingerprint,insist} from '../shared/detective-model.mjs';
-import {validateInboxBundle,canonicalize,verifyImportedCaseMath,ORACLE_VERSION,INBOX_PATH,inboxFilename} from '../shared/detective-inbox.mjs';
+import {validateInboxBundle,canonicalize,verifyImportedCaseMath,ORACLE_VERSION,needsOracleRecheck,INBOX_PATH,inboxFilename} from '../shared/detective-inbox.mjs';
 export function ensureInbox(p){const d=ensureDetective(p);return d.inbox??= {schemaVersion:1,autoPublish:true,files:{},etag:null,lastCheckedAt:null,lastSuccessAt:null,lastError:null,failures:0,nextAttemptAt:null};}
 export function getDetectiveSyncStatus(p){const x=p.studio?.detective?.inbox;return x?structuredClone(x):{schemaVersion:1,autoPublish:true,files:{},lastCheckedAt:null,lastSuccessAt:null,lastError:null,nextAttemptAt:null};}
 function importBundleInto(p,b,source,now){
  validateInboxBundle(b);b=canonicalize(b);const d=ensureDetective(p),x=ensureInbox(p),time=new Date(now).toISOString();
  insist(source.branch==='detective-inbox'&&source.path===INBOX_PATH+b.bundleId+'.json'&&/^[a-f0-9]{40}$/.test(source.sha),'来源分支、文件名或blob标识不合法。');
  const old=x.files[source.path],bundleHash=fingerprint(b);
- if(old?.bundleHash===bundleHash){old.sourceBlobSha=source.sha;return {status:'duplicate',caseIds:old.caseIds};}
- if(old)insist(old.bundleId===b.bundleId&&b.bundleRevision===old.bundleRevision+1,'相同包发生冲突：内容修改须递增bundleRevision，不能覆盖旧版。',409);
- else insist(b.bundleRevision===1,'首次接收须从bundleRevision 1开始。');
+ const rechecking=old?.bundleHash===bundleHash&&needsOracleRecheck(old);
+ if(old?.bundleHash===bundleHash&&!rechecking){old.sourceBlobSha=source.sha;return {status:'duplicate',caseIds:old.caseIds};}
+ if(old&&!rechecking)insist(old.bundleId===b.bundleId&&b.bundleRevision===old.bundleRevision+1,'相同包发生冲突：内容修改须递增bundleRevision，不能覆盖旧版。',409);
+ else if(!old)insist(b.bundleRevision===1,'首次接收须从bundleRevision 1开始。');
  insist(Object.keys(x.files).length<400||old,'收件记录已达400包上限，请先导出备份。');
  for(const c of b.cases){const existing=d.cases[c.id];insist(!existing||existing.importSource?.bundleId===b.bundleId&&existing.importSource?.sourcePath===source.path,'案卷ID与已有来源冲突，不覆盖历史。',409);}
+ if(rechecking)for(const id of old.caseIds){const c=d.cases[id];insist(c&&c.status==='review'&&!c.activeVersion&&!c.versions.length&&fingerprint(c.draft)===c.importSource?.caseHash,'旧待审案已有本机编辑或审核，保留原记录，请家长核对。',409);}
  const results=b.cases.map(c=>verifyImportedCaseMath(c.content,c.verification));
  const invalid=results.find(r=>r.status==='rejected');
  if(invalid){x.files[source.path]={bundleId:b.bundleId,bundleRevision:b.bundleRevision,bundleHash,sourceBlobSha:source.sha,sourceBranch:source.branch,sourcePath:source.path,importedAt:time,mathOracleVersion:ORACLE_VERSION,status:'rejected',reason:invalid.reason,caseIds:[]};validateStored(p);return {status:'rejected',caseIds:[]};}
