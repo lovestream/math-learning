@@ -8,7 +8,7 @@ export default function LengthWorkbench({value,onChange,scenes=[]}:{value:Widget
   const state=value.labVersion===2?value:{};
   const scene=scenes.find(s=>s.sceneId===state.sceneId)??scenes[0];
   if(!scene)return <p>没有找到本课的测量场景，请返回地图重新打开。</p>;
-  const update=(patch:WidgetState)=>onChange({...state,...patch,sceneId:scene.sceneId,labVersion:2});
+  const update=(patch:WidgetState)=>onChange({...state,...patch,sceneId:scene.sceneId,labVersion:2,stateKind:'legacy'});
   const props={scene,value:state,update};
   return <div className={`measurement-lab mode-${scene.mode}`}>
     <header className="measurement-lab-heading"><div><p>测量实验室</p><h3>{scene.title}</h3></div><span>动手发现 · 自由尝试</span></header>

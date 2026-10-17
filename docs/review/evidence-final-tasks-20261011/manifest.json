@@ -1,0 +1,152 @@
+{
+  "sourceSha": "028e5ad2cd2ae2d6abf1a47abdbe6c875e071ebc",
+  "scope": "closed Grade 3 formal-task audit and formal parent-review schedule fix",
+  "realLearnerDataAccessed": false,
+  "nodeTests": 165,
+  "localBrowserSuites": [
+    "verify-formal-review-browser",
+    "verify-final-tasks-browser",
+    "verify-save-stress-browser",
+    "verify-evidence-browser"
+  ],
+  "historicalClassroomProofSha": "bc95563cca1c4eb5146066d47a399a2fa89dc080",
+  "files": [
+    {
+      "name": "browser-fixed-sha.log",
+      "sha256": "51386fabebd6fa4d23ba46dc670322e6b747d83ee22a219ecd84e4f6d2e25bfd",
+      "bytes": 139
+    },
+    {
+      "name": "build.log",
+      "sha256": "cf1b2067af003b6e3cef68d06a7b60e1050dcf2c172d858d8a443e27e5b93f51",
+      "bytes": 1622
+    },
+    {
+      "name": "ci-pr-run.json",
+      "sha256": "a12a0e1e0493a875469b563652e9e411586474984fdfb707c9e2a290e78d73af",
+      "bytes": 2629
+    },
+    {
+      "name": "ci-push-run.json",
+      "sha256": "5e766df0cc670f9abb42272b0eac7289dcb2ab8a5688352d8d684f0ccafd084d",
+      "bytes": 2629
+    },
+    {
+      "name": "ci-steps.log",
+      "sha256": "b46a419ddfa01da563abdf82b2dba8d2d98872b1ff79b80ffc17f54d4f731734",
+      "bytes": 109931
+    },
+    {
+      "name": "ci-summary.json",
+      "sha256": "80ca28ed641db0b14f537dc7cc03d700a7650f170836b5841d00099da2d0a668",
+      "bytes": 2861
+    },
+    {
+      "name": "content-check.log",
+      "sha256": "5512c5dbdcc305b51c2a71d69858e2d938806dda5e57640037cfedb3724dd7f6",
+      "bytes": 162
+    },
+    {
+      "name": "final-task-code-parent-review.png",
+      "sha256": "5729c6097133fe913ebdc17848bcd9dd76f7554d615c539244842d3d72335834",
+      "bytes": 234622
+    },
+    {
+      "name": "final-task-expression-result-only.png",
+      "sha256": "219aa30fb001613007f7c86fb7b220bab7adce7bed3ab3f8cbfd9275f142d830",
+      "bytes": 163940
+    },
+    {
+      "name": "final-task-mass-volume-error.png",
+      "sha256": "87db3a546ecc7ecf4ca5432c82d24a7ab2c1a6cea9a0f7c36113edee0ebaf154",
+      "bytes": 261882
+    },
+    {
+      "name": "formal-core-review-anchor.png",
+      "sha256": "4ded598c06156243336002594ef5f92a52c2d5a24134ef0b422cfd9478c5f659",
+      "bytes": 102105
+    },
+    {
+      "name": "formal-parent-review.png",
+      "sha256": "5a720868f6d1a0b40abfa3e4d096874190ba8b31409855d5eba870ee54dd8123",
+      "bytes": 96544
+    },
+    {
+      "name": "formal-review-before-fix.log",
+      "sha256": "3aebc95bfc0ec9286ff8cdd0f0b40b336d111341bf8e8cf1f4b8f81fdffa49a6",
+      "bytes": 5137
+    },
+    {
+      "name": "formal-review-remediation.png",
+      "sha256": "c28ca3a5b23c7242fd4f08ca44dbe19111ce8b2f43eafefcc2290bdf760d007c",
+      "bytes": 102117
+    },
+    {
+      "name": "formal-review-schedule-approved.png",
+      "sha256": "f427619acf6f3b0626757fb04e6ba23a7fd6b3e2e31c2fce159303152d36b8de",
+      "bytes": 101948
+    },
+    {
+      "name": "formal-review-targeted.log",
+      "sha256": "34241db385cb8e843012e0b1df62e67a9368de29a028b1ec65d03f8d20f4cd11",
+      "bytes": 777
+    },
+    {
+      "name": "node-165.log",
+      "sha256": "5ecd87691088a76de94e4662a93258e205fe14ab0ae15b7ffd0fb6a48f268dd3",
+      "bytes": 16614
+    },
+    {
+      "name": "save-stress-1440.png",
+      "sha256": "6337f6c99c8316422ebda972798ee8b51f4d1f0a8f7ee6f57a832ea24e5cbf2d",
+      "bytes": 70016
+    },
+    {
+      "name": "source-evidence.json",
+      "sha256": "736e2036dfa1f57e7a1f89a1cd924a263038c11cca53474a27ad66227f466bc0",
+      "bytes": 257
+    },
+    {
+      "name": "template-baseline-bc95563.json",
+      "sha256": "a2b906ed77fccebb0bf1d31d4cae7bb83e724c8a1d6dd526d4a98287bf30df67",
+      "bytes": 1843
+    },
+    {
+      "name": "verify-evidence-browser.json",
+      "sha256": "c104fcc27edd7336d5d92ad6f5946292f79d0524258d5a128d520806aae3f31b",
+      "bytes": 780
+    },
+    {
+      "name": "verify-final-tasks-browser-trace.zip",
+      "sha256": "69a9e401d321b32d41a00d82658176aa265800d4832cf0bc45a03c3d7a3ca153",
+      "bytes": 6248940
+    },
+    {
+      "name": "verify-final-tasks-browser.json",
+      "sha256": "8a8bf8989277f0fa6b9aed967325bf52f950a1f89f71be840db7a46e677e1074",
+      "bytes": 606
+    },
+    {
+      "name": "verify-formal-review-browser-trace.zip",
+      "sha256": "30aae12310a687e665d557a9b0e0bcd869fe6c2c6e068da83117efe8abf6bfe8",
+      "bytes": 5023838
+    },
+    {
+      "name": "verify-formal-review-browser.json",
+      "sha256": "d8be6a099faf70200148dcdf71ed6a3081dc00f2d3a7552e6594350aa3e62b6e",
+      "bytes": 563
+    },
+    {
+      "name": "verify-save-stress-browser.json",
+      "sha256": "3c56a35ba48dbe125c798a102875ca0b43670cea4bd4a7e9a66f6a01a850d370",
+      "bytes": 544
+    }
+  ],
+  "ciRun": {
+    "id": 38152260186,
+    "url": "https://github.com/lovestream/math-learning/actions/runs/38152260186",
+    "conclusion": "success",
+    "headSha": "028e5ad2cd2ae2d6abf1a47abdbe6c875e071ebc",
+    "browserSuites": 14
+  }
+}

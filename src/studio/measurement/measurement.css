@@ -1,6 +1,8 @@
 /* Ruler yellow, drafting ink, blue metal, amber wood. Tools carry the visual identity. */
 .measurement-lab{--lab-ink:#173f4b;--lab-muted:#527477;--lab-paper:#f8faf4;--lab-yellow:#f2c956;--lab-blue:#327c8a;--lab-line:#c6d7d3;--lab-coral:#bd503e;--lab-wood:#c99148;margin:18px 0 0;border:1px solid #a8c0bd;border-radius:18px;background:#e8f0ed;box-shadow:0 12px 32px #163f4712;color:var(--lab-ink);overflow:hidden;font-family:"Avenir Next","PingFang SC","Microsoft YaHei",sans-serif}
 .measurement-lab *, .measurement-question *{box-sizing:border-box}
+.measurement-question .task-joint rect{fill:#e9b44d26;stroke:#a56941;stroke-width:2;stroke-dasharray:5 4}
+.measurement-question .task-joint text{fill:#294b53;font:600 16px "PingFang SC",sans-serif}
 .measurement-lab-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 26px 16px;background:var(--lab-ink);color:#f5f8ed}
 .measurement-lab-heading p{margin:0 0 6px;color:#a9d2ce;font-size:12px;letter-spacing:.18em;font-weight:800}
 .measurement-lab-heading h3{font:800 clamp(21px,2.25vw,28px)/1.4 "PingFang SC",sans-serif;margin:0;color:#fff8db}

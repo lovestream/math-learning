@@ -1,0 +1,25 @@
+import type {PublicCase} from './api';
+import {wrapFigure} from '../../shared/detective-presentation.mjs';
+export default function DetectiveFigure({visual}:{visual:PublicCase['visual']}){
+ const {kind,values:v}=visual;
+ const wrap=wrapFigure(visual);
+ return <figure className={`det-figure det-figure-${kind}`}>
+ {wrap?<svg viewBox="0 0 520 256" role="img" aria-label={`同一根线摊直比较：绕${wrap.lowTurns}圈后多${wrap.surplus}分米，绕${wrap.highTurns}圈还差${wrap.shortage}分米；每个蓝格表示一圈`}>
+ <text x="40" y="26" fontSize="16" fill="#18344a">同一根线摊直比较 · 每个蓝格表示一圈</text>
+ <path d={`M${40+wrap.wireWidth} 43v181`} stroke="#57816e" strokeDasharray="4 5"/><text x={40+wrap.wireWidth} y="245" textAnchor="end" fontSize="13" fill="#386451">两次都在这里用完原来的线</text>
+ {[{turns:wrap.lowTurns,y:90,label:`绕${wrap.lowTurns}圈后，多${wrap.surplus}分米`},{turns:wrap.highTurns,y:183,label:`绕${wrap.highTurns}圈，还差${wrap.shortage}分米`}].map((row,index)=><g key={index}>
+ <text x="40" y={row.y-18} fontSize="16" fill="#18344a">{row.label}</text>
+ {Array.from({length:row.turns},(_,i)=><rect key={i} x={40+i*wrap.turnWidth} y={row.y} width={wrap.turnWidth} height="26" fill="#c5d9ff" stroke="#2257d6"/>)}
+ {index===0?<rect x={40+row.turns*wrap.turnWidth} y={row.y} width={wrap.wireWidth-row.turns*wrap.turnWidth} height="26" fill="#c6e7d7" stroke="#48896c"/>:<rect x={40+wrap.wireWidth} y={row.y} width={wrap.fullWidth-wrap.wireWidth} height="26" fill="#fff7e2" stroke="#ab7620" strokeDasharray="5 3"/>}
+ </g>)}
+ </svg>:kind==='banana'?<svg viewBox="0 0 520 205" role="img" aria-label="香蕉轮廓与10厘米参照尺；示意图不按屏幕实际尺寸绘制"><path d="M95 35 Q145 143 430 67 Q334 190 172 140 Q105 110 95 35" fill="#ffca57" stroke="#9b7616" strokeWidth="4"/><path d="M103 42 Q176 174 409 82" fill="none" stroke="#e4a82c" strokeWidth="6"/><rect x="100" y="160" width="260" height="32" rx="4" fill="#dce9ff" stroke="#2257d6"/>{Array.from({length:11},(_,i)=><g key={i}><path d={`M${100+i*26} 160v${i%5?10:16}`} stroke="#2257d6"/><text x={100+i*26} y="186" textAnchor="middle" fontSize="10">{i}</text></g>)}<text x="375" y="184" fontSize="13">cm</text></svg>:
+ kind==='cards'?<svg viewBox="0 0 520 190" role="img" aria-label="三张卡叠成一组，总厚2毫米；目标厚度2厘米">{[0,1,2].map(i=><path key={i} d={`M80 ${60+i*17}l118 -27 95 30 -118 27z`} fill={['#b6d1ff','#82adf5','#527fdb'][i]} stroke="#2257d6" strokeWidth="2"/>)}<path d="M305 56h14v54h-14" fill="none" stroke="#18344a" strokeWidth="2"/><text x="335" y="86" fontSize="18">一组：3张</text><text x="335" y="115" fontSize="18">总厚：2毫米</text><text x="260" y="165" textAnchor="middle" fontSize="18">目标：叠到2厘米厚</text></svg>:
+ kind==='road'?<svg viewBox="0 0 520 170" role="img" aria-label="一千米步道分成10段，每段100米"><path d="M35 85H485" stroke="#bcd0ee" strokeWidth="32"/>{Array.from({length:11},(_,i)=><g key={i}><path d={`M${35+i*45} 61v48`} stroke="#2257d6" strokeWidth="2"/><circle cx={35+i*45} cy="85" r="4" fill="#2257d6"/></g>)}<text x="260" y="35" textAnchor="middle" fontSize="21">整条步道：1千米</text><path d="M35 120v8h45v-8" stroke="#18344a" fill="none"/><text x="58" y="151" textAnchor="middle" fontSize="13">100米</text></svg>:
+ kind==='array'?<svg viewBox="0 0 520 180" role="img" aria-label={`${v[0]}组，每组${v[1]}颗糖`}>{Array.from({length:Number(v[0])},(_,row)=><g key={row}><rect x={100+row*115} y="36" width="90" height="106" rx="16" fill="#e3f4ea" stroke="#62a489"/>{Array.from({length:Number(v[1])},(_,j)=><circle key={j} cx={145+row*115} cy={58+j*30} r="10" fill="#2257d6"/>)}<text x={145+row*115} y="167" textAnchor="middle" fontSize="14">一盘</text></g>)}</svg>:
+ kind==='hundreds'?<div className="det-baseblocks">{v.map((n,i)=><div key={i}><b>{i===1&&Number(n)<0?'拿走':'材料'}：{Math.abs(Number(n))}个百</b><div>{Array.from({length:Math.abs(Number(n))},(_,j)=><i key={j} className={Number(n)<0?'remove':''}>百</i>)}</div></div>)}</div>:
+ kind==='lengths'?<div className="det-lengths">{v.map((s,i)=><span key={s}><b>{String.fromCharCode(65+i)}</b>{s}</span>)}<small>示意卡只列条件，长条不表示实际比例。</small></div>:
+ kind==='expression'?<div className="det-expression"><span>先看清楚每个符号</span><div><b>{v[0]}</b><i>→</i><b>{v[1]}</b></div></div>:
+ <div className="det-manual-figure">{v.length?<div className="det-condition-cards">{v.map((text,i)=><span key={i}><i>条件{i+1}</i>{text}</span>)}</div>:<><span>📋</span><p>把题目条件和下面的做法一项一项对照。</p></>}</div>}
+ <figcaption>{wrap?'绿段是多出的线，黄虚线段是还需要补的线；不是两根线。':kind==='banana'?'示意图仅帮助比较量感，不代表某根香蕉的精确长度。':kind==='cards'?'每张卡厚度相同；图中厚度为示意。':kind==='manual'?'可以在纸上画图，或拿身边的实物核对。':'条件图 · 用它帮助读题，不把图上大小当成答案。'}</figcaption>
+ </figure>;
+}

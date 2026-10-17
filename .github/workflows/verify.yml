@@ -1,0 +1,39 @@
+name: Verify math and learning flows
+on:
+  push:
+    branches-ignore: [detective-inbox]
+  pull_request:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: npm run content:check
+      - name: Install browser for locked Playwright version
+        run: npx playwright install --with-deps chromium
+      - name: Critical browser regression (isolated learner data)
+        run: npm run test:browser:ci
+        env:
+          AUDIT_PR_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Rehearse upgrade, backup restore and rollback (synthetic data only)
+        run: |
+          git fetch --no-tags --depth=1 origin 1d9c68197449e45dd273978f30fa3844bc4f562e
+          git fetch --no-tags --depth=1 origin c6e6eaedca53c0976af3ab6e187e2980e4e94430
+          npm run test:detective:upgrade
+        env:
+          AUDIT_PR_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Preserve browser summaries, logs, screenshots and traces
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-audit-${{ github.event.pull_request.head.sha || github.sha }}
+          path: output/playwright/v2-audit/
+          retention-days: 14
+          if-no-files-found: warn
