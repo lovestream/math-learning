@@ -11,6 +11,7 @@ async page=>{
  const next=async()=>{await page.getByRole('button',{name:'继续下一题',exact:true}).click();};
  await open('G3-U03-E01','warmup');await complete('50');await next();
  assert((await page.locator('.task-card').innerText()).includes('最左端到最右端'),'未明确所求对象');await page.locator('.measurement-question svg').waitFor();
+ const overlay=await page.locator('.measurement-question .task-joint rect').first().evaluate(rect=>getComputedStyle(rect).fill);const alpha=Number(overlay.match(/rgba\([^,]+,[^,]+,[^,]+,\s*([\d.]+)\)/)?.[1]??1);assert(alpha<0.4,'重叠区不透明，挡住材料和数字');
  for(const width of [1440,390]){await page.setViewportSize({width,height:width===390?844:1000});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),'纸条题溢出');await page.locator('.task-card').screenshot({path:`output/playwright/v2-audit/clarity-paper-question-${width}.png`});}
  await page.setViewportSize({width:1440,height:1000});await complete('36');assert((await page.locator('.task-feedback.correct').innerText()).includes('36'),'36未正确通过');
  await page.locator('.task-card').screenshot({path:'output/playwright/v2-audit/clarity-paper-36-correct.png'});
