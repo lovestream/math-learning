@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-10-09",
+  "updatedAt": "2026-10-17",
   "baselineSha": "79a0f908927708e1e52fd2a0ea553761d0796ddf",
   "requestedAudit": {
     "path": "docs/review/PR1_三年级70课完成度与电脑端全量审计_20261009.md",
@@ -7448,7 +7449,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.4",
+      "editorialRevision": "2026-10-17.1",
       "quantities": {
         "object": "礼物贴纸计划",
         "unit": "份／张",
@@ -7456,7 +7457,7 @@
         "unknown": "需要补买张数",
         "changes": "静态计划表／纸笔"
       },
-      "contentFingerprint": "142b738f90492aac8649bfebc879238cdf13095b36e12eb830479e082b8599fb",
+      "contentFingerprint": "7301ca9a34ea3f948e0eeb2993da8cd0127f5f96cbbed13bc2df96f0e8611bed",
       "story": {
         "text": "班级要做36份小礼物，每份贴2张贴纸，已有20张，还需买多少？",
         "figure": {
@@ -7533,7 +7534,7 @@
           {
             "id": "G3-U07-R01-P04",
             "kind": "number",
-            "prompt": "两根绳各40厘米，重叠10厘米连接后多长？",
+            "prompt": "两根绳子各长40厘米，沿同一直线搭接，中间重叠10厘米。拼好后，从最左端到最右端的距离是多少厘米？",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
@@ -7604,7 +7605,7 @@
           "taskOnlyAmendment": {
             "scope": "classroom-and-model-unchanged; formal-task-review-separate",
             "verifiedClassroomSourceFingerprint": "f2a416de342804105b6e1ee47913b89efd0c089dafe8e8adeadcbba146515b48",
-            "currentContentFingerprint": "142b738f90492aac8649bfebc879238cdf13095b36e12eb830479e082b8599fb",
+            "currentContentFingerprint": "7301ca9a34ea3f948e0eeb2993da8cd0127f5f96cbbed13bc2df96f0e8611bed",
             "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
             "assessmentVersion": "2026-10-02.1",
             "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
@@ -9420,7 +9421,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.4",
+      "editorialRevision": "2026-10-17.1",
       "quantities": {
         "object": "买本子与换分装",
         "unit": "元／本；本／箱",
@@ -9428,7 +9429,7 @@
         "unknown": "购买总价或重新分装箱数",
         "changes": "先求单价或总量"
       },
-      "contentFingerprint": "5286d6ff209b76bc15e9596a5d6aa448adae57c1730935b300ae62d4c56e47aa",
+      "contentFingerprint": "fa52651c273efdbb2db74172d3e2d38795f195e94a756a94c0602d14e2a7df57",
       "story": {
         "text": "4本同价本子24元，买7本要多少钱？另一问题：同一批书每箱6本装4箱，改每箱8本需几箱？",
         "figure": {
@@ -9686,7 +9687,7 @@
           "taskOnlyAmendment": {
             "scope": "classroom-and-model-unchanged; formal-task-review-separate",
             "verifiedClassroomSourceFingerprint": "3fd75a12f3698401ab141a84c9ea9f01e8721b2a8a412bff3000cdad2c11d00b",
-            "currentContentFingerprint": "5286d6ff209b76bc15e9596a5d6aa448adae57c1730935b300ae62d4c56e47aa",
+            "currentContentFingerprint": "fa52651c273efdbb2db74172d3e2d38795f195e94a756a94c0602d14e2a7df57",
             "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
             "assessmentVersion": "2026-10-02.1",
             "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
@@ -9898,7 +9899,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.4",
+      "editorialRevision": "2026-10-17.1",
       "quantities": {
         "object": "无入口花坛边界",
         "unit": "米",
@@ -9906,7 +9907,7 @@
         "unknown": "一圈围栏长度",
         "changes": "沿四边走一次"
       },
-      "contentFingerprint": "08a234332d89bacf074c90019d06ff9cd0b3dcaf6814a55965efbde927925af3",
+      "contentFingerprint": "e6d4ed91bffbbc9c0eb8d733008007ece969abcd0220f181ade116691a84d876",
       "story": {
         "text": "给长8米宽5米的花坛装一圈围栏，要买多少米？",
         "figure": {
@@ -10058,7 +10059,7 @@
           "taskOnlyAmendment": {
             "scope": "classroom-and-model-unchanged; formal-task-review-separate",
             "verifiedClassroomSourceFingerprint": "a5e1a104888ad948a12b9f5c911039ab2c027aeb67204a71d5bcb40ee38f7cac",
-            "currentContentFingerprint": "08a234332d89bacf074c90019d06ff9cd0b3dcaf6814a55965efbde927925af3",
+            "currentContentFingerprint": "e6d4ed91bffbbc9c0eb8d733008007ece969abcd0220f181ade116691a84d876",
             "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
             "assessmentVersion": "2026-10-02.1",
             "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
@@ -10087,7 +10088,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.4",
+      "editorialRevision": "2026-10-17.1",
       "quantities": {
         "object": "拼接正方形板",
         "unit": "厘米",
@@ -10095,7 +10096,7 @@
         "unknown": "拼好后的外周长",
         "changes": "方板位置及接缝"
       },
-      "contentFingerprint": "eff8b950a818383c4da80dbfd51f78fa514fd01e9c0ed5e2a2cd301c6c73f93e",
+      "contentFingerprint": "c60d55e6ebce7ee40856275a255a7e28ec194942b7f0793648ac05b187263320",
       "story": {
         "text": "两块边长3厘米的实心正方形板，沿一条完整边紧紧拼在一起。外面绕一圈，还是两块原来的周长合计24厘米吗？",
         "figure": {
@@ -10247,7 +10248,7 @@
           "taskOnlyAmendment": {
             "scope": "classroom-and-model-unchanged; formal-task-review-separate",
             "verifiedClassroomSourceFingerprint": "8c323e79df69f0d6d83c1c452f2c45ab85a9aaa1d6d6cee35ca5991c22ec8169",
-            "currentContentFingerprint": "eff8b950a818383c4da80dbfd51f78fa514fd01e9c0ed5e2a2cd301c6c73f93e",
+            "currentContentFingerprint": "c60d55e6ebce7ee40856275a255a7e28ec194942b7f0793648ac05b187263320",
             "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
             "assessmentVersion": "2026-10-02.1",
             "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
@@ -12308,7 +12309,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.4",
+      "editorialRevision": "2026-10-17.1",
       "quantities": {
         "object": "彩笔本子付款",
         "unit": "元／角",
@@ -12316,7 +12317,7 @@
         "unknown": "合计与找零",
         "changes": "静态元角对齐／纸笔"
       },
-      "contentFingerprint": "1e4db2aa1f0ed6ecaeb38e5121ff386a93ae1d67facfa9e0dc59a227c4a3ceed",
+      "contentFingerprint": "eaa61b57f4c39a400feb6641564729787c29e1e315632e28981dc51a378a7e0e",
       "story": {
         "text": "一盒彩笔3.8元、一本本子2.5元，合计多少钱？付10元找回多少？",
         "figure": {
@@ -12467,7 +12468,7 @@
           "taskOnlyAmendment": {
             "scope": "classroom-and-model-unchanged; formal-task-review-separate",
             "verifiedClassroomSourceFingerprint": "56aa7ced2780d2af814cfd34032881fa3535b14f385a1979eb351af290387645",
-            "currentContentFingerprint": "1e4db2aa1f0ed6ecaeb38e5121ff386a93ae1d67facfa9e0dc59a227c4a3ceed",
+            "currentContentFingerprint": "eaa61b57f4c39a400feb6641564729787c29e1e315632e28981dc51a378a7e0e",
             "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
             "assessmentVersion": "2026-10-02.1",
             "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
@@ -12496,7 +12497,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.4",
+      "editorialRevision": "2026-10-17.1",
       "quantities": {
         "object": "活动采购计划",
         "unit": "人／张／包／元／分钟",
@@ -12504,7 +12505,7 @@
         "unknown": "总需求、补购、费用、时长",
         "changes": "静态计划表／纸笔"
       },
-      "contentFingerprint": "21da58c308b04423a30138b3b158357b3d707a075a62091ac70800623159fbc3",
+      "contentFingerprint": "fc8fd9b9c517be731eb400ff6f20bab817d269b52e4cf13ed4cad03194dbc151",
       "story": {
         "text": "24人做手工，每人2张纸，每包12张、6元，需要买齐材料（这一题不另给库存）。活动从15:10到15:50。分别需要几包、多少钱、多少分钟？",
         "figure": {
@@ -12658,7 +12659,7 @@
           "taskOnlyAmendment": {
             "scope": "classroom-and-model-unchanged; formal-task-review-separate",
             "verifiedClassroomSourceFingerprint": "1ab8a0f74f3121a820532f47f4998f6fd30a1142d5f2185dafda7e41ca4ce8e3",
-            "currentContentFingerprint": "21da58c308b04423a30138b3b158357b3d707a075a62091ac70800623159fbc3",
+            "currentContentFingerprint": "fc8fd9b9c517be731eb400ff6f20bab817d269b52e4cf13ed4cad03194dbc151",
             "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
             "assessmentVersion": "2026-10-02.1",
             "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
@@ -12687,7 +12688,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.4",
+      "editorialRevision": "2026-10-17.1",
       "quantities": {
         "object": "读书与绘画名单",
         "unit": "人",
@@ -12695,7 +12696,7 @@
         "unknown": "不同人的总数",
         "changes": "姓名卡分区"
       },
-      "contentFingerprint": "bfb9d1df50c6769219cdccc34ac87b61ee21e92b42b4b7f2e0febe15de8cb3f8",
+      "contentFingerprint": "257787e89ad35385b704a2a44bc3bebab3ea27f9368f5cc3e553da77b3b61d2b",
       "story": {
         "text": "读书组8人、绘画组7人，其中3人两个组都参加。总共有多少不同的人？",
         "figure": {
@@ -12793,7 +12794,7 @@
           {
             "id": "G3-L07-B01-P04",
             "kind": "number",
-            "prompt": "全班20人，至少参加一种12人，两种都不参加几人？",
+            "prompt": "全班20人，其中12人参加了画画或唱歌中的至少一项。画画、唱歌两项都没有参加的有多少人？",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
@@ -12890,7 +12891,7 @@
           "taskOnlyAmendment": {
             "scope": "classroom-and-model-unchanged; formal-task-review-separate",
             "verifiedClassroomSourceFingerprint": "b5dad135cceec6ecc60eb081d6d3cd0e71531b9296f8802b4eaa982c7c36207d",
-            "currentContentFingerprint": "bfb9d1df50c6769219cdccc34ac87b61ee21e92b42b4b7f2e0febe15de8cb3f8",
+            "currentContentFingerprint": "257787e89ad35385b704a2a44bc3bebab3ea27f9368f5cc3e553da77b3b61d2b",
             "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
             "assessmentVersion": "2026-10-02.1",
             "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
@@ -12918,8 +12919,8 @@
           "status": "local-textbook-reference"
         }
       ],
-      "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.4",
+      "contentVersion": "2026-10-17.1",
+      "editorialRevision": "2026-10-17.1",
       "quantities": {
         "object": "搭接木板",
         "unit": "厘米／毫米",
@@ -12927,7 +12928,7 @@
         "unknown": "端到端总长",
         "changes": "搭接位置"
       },
-      "contentFingerprint": "b38a479e6886a16236339145fd888ad8fda24663cf95665b7a60c138667b1158",
+      "contentFingerprint": "0920d1f26fbdfb009f229c20385157e32ce8274107a253dc68517a8c20a2f7c6",
       "story": {
         "text": "甲木板30厘米、乙木板25厘米，开始重叠8厘米。两块搭接后，从最左端到最右端长多少？再拖动乙板，搭接变多或变少，总长怎样变化？",
         "figure": {
@@ -12999,28 +13000,28 @@
           {
             "id": "G3-U03-E01.c2",
             "kind": "number",
-            "prompt": "两条各18厘米的纸带重叠6厘米，拼好后长多少厘米？",
+            "prompt": "两条纸带各长18厘米，沿同一直线重叠6厘米。拼好后，从最左端到最右端的距离是多少厘米？",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
           {
             "id": "G3-U03-E01.c3",
             "kind": "number",
-            "prompt": "4块各20厘米木板依次搭接，三处分别重叠3、5、2厘米。总长多少厘米？",
+            "prompt": "4块木板各长20厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。三处分别重叠3、5、2厘米。拼好后，从最左端到最右端的距离是多少厘米？",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
           {
             "id": "G3-U03-E01.c4",
             "kind": "number",
-            "prompt": "3块各30厘米木板依次搭接，两处都重叠6厘米。总长多少厘米？",
+            "prompt": "3块木板各长30厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。两处都重叠6厘米。拼好后，从最左端到最右端的距离是多少厘米？",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
           {
             "id": "G3-U03-E01.c5",
             "kind": "choice",
-            "prompt": "两条各20厘米纸带，只说“搭接起来”，能确定总长吗？",
+            "prompt": "两条纸带各长20厘米，沿同一直线搭接，但没有告诉重叠多少厘米。能确定拼好后最左端到最右端的距离吗？",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           }
@@ -13080,7 +13081,14 @@
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E01-verify-1440.jpg"
           },
-          "taskOnlyAmendment": null
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "b38a479e6886a16236339145fd888ad8fda24663cf95665b7a60c138667b1158",
+            "currentContentFingerprint": "0920d1f26fbdfb009f229c20385157e32ce8274107a253dc68517a8c20a2f7c6",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-17.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+          }
         }
       },
       "acceptance": {
@@ -13105,7 +13113,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.4",
+      "editorialRevision": "2026-10-17.1",
       "quantities": {
         "object": "拉直理想链环",
         "unit": "厘米／毫米",
@@ -13113,7 +13121,7 @@
         "unknown": "总长及接头数量",
         "changes": "环数2至5和接头放大"
       },
-      "contentFingerprint": "9ff02da9d70e4a60d7b4608b704548e4ad6d3e94df43c7f7282aa0f25b032c4a",
+      "contentFingerprint": "e93314fa882324c7142314bfda2432636f940df412ab029064d7cbe37a9d0dfa",
       "story": {
         "text": "每个链环外长4厘米、厚5毫米，4个扣起来拉直后，为什么不是16厘米？",
         "figure": {
@@ -13176,35 +13184,35 @@
           {
             "id": "G3-U03-E02.c1",
             "kind": "number",
-            "prompt": "两个相同链环扣接。每环外长40毫米，每处接头重叠两个5毫米端部。总长多少毫米？",
+            "prompt": "2个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，每处接头沿拉直方向重叠两个5毫米端部。从最左外缘到最右外缘的距离是多少毫米？",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
           {
             "id": "G3-U03-E02.c2",
             "kind": "number",
-            "prompt": "4个这样的链环有几处接头？",
+            "prompt": "4个链环依次扣成一条不闭合的链，只有相邻两环扣在一起。一共有几处接头？",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
           {
             "id": "G3-U03-E02.c3",
             "kind": "number",
-            "prompt": "4个这样的链环拉直后总长多少毫米？",
+            "prompt": "4个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。从最左外缘到最右外缘的距离是多少毫米？",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
           {
             "id": "G3-U03-E02.c4",
             "kind": "number",
-            "prompt": "答案130毫米等于多少厘米？",
+            "prompt": "一条链拉直后，从最左外缘到最右外缘长130毫米。这相当于多少厘米？",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           },
           {
             "id": "G3-U03-E02.c5",
             "kind": "number",
-            "prompt": "5个这样的链环总长多少毫米？",
+            "prompt": "5个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。从最左外缘到最右外缘的距离是多少毫米？",
             "sourceSet": "core",
             "novelty": "consolidation-not-certified-unseen"
           }
@@ -13273,7 +13281,14 @@
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E02-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E02-verify-1440.jpg"
           },
-          "taskOnlyAmendment": null
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "9ff02da9d70e4a60d7b4608b704548e4ad6d3e94df43c7f7282aa0f25b032c4a",
+            "currentContentFingerprint": "e93314fa882324c7142314bfda2432636f940df412ab029064d7cbe37a9d0dfa",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+          }
         }
       },
       "acceptance": {
@@ -13298,7 +13313,7 @@
         }
       ],
       "contentVersion": "2026-10-02.1",
-      "editorialRevision": "2026-10-09.4",
+      "editorialRevision": "2026-10-17.1",
       "quantities": {
         "object": "直绳与闭环",
         "unit": "米／点／段",
@@ -13306,7 +13321,7 @@
         "unknown": "不同标记数",
         "changes": "直／闭环与间隔"
       },
-      "contentFingerprint": "694c23db42f311724ebed861979774d3db51ce2167ccc1c507d098901a4cb72e",
+      "contentFingerprint": "c1d812acb89e49c946531214c5d5cd091ec8989d2be1488dbb46f26d37e6dec2",
       "story": {
         "text": "24米绳每4米一段。拉直时从起点开始标记，两端都做标记；接成环时，首尾是同一个标记。两种形状各有多少个不同标记？",
         "figure": {
@@ -13459,7 +13474,14 @@
             "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-O01-symbols-1440.jpg",
             "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-O01-verify-1440.jpg"
           },
-          "taskOnlyAmendment": null
+          "taskOnlyAmendment": {
+            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+            "verifiedClassroomSourceFingerprint": "694c23db42f311724ebed861979774d3db51ce2167ccc1c507d098901a4cb72e",
+            "currentContentFingerprint": "c1d812acb89e49c946531214c5d5cd091ec8989d2be1488dbb46f26d37e6dec2",
+            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+            "assessmentVersion": "2026-10-02.1",
+            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+          }
         }
       },
       "acceptance": {

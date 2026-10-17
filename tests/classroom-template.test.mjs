@@ -3,14 +3,16 @@ import assert from 'node:assert/strict';
 import {lessons} from '../content/pilot/source.mjs';
 import {classroomEntries} from '../content/pilot/classrooms.mjs';
 import {assessmentRevisions} from '../content/pilot/formal-task-errata.mjs';
+import {correctedAssessments,clarityVersion} from '../content/pilot/clarity-errata.mjs';
 import {createSession,selfCheckTask,submitTask,validatePilot} from '../server/pilot-store.mjs';
 import {freshProgress,exportEnvelope,validateEnvelope} from '../server/store.mjs';
 const checklist={format:'checklist-v1',checks:['我读清了题目问什么','我检查了计算或理由','我核对了最后的答案'],reflection:'',finalConfirmed:true};
-test('70个入口保留六步教案，仅三课经终审批准升级评分版本',()=>{
+test('70个入口保留六步教案，原三课终审与纸带题修正各自维护评估版本',()=>{
  assert.equal(lessons.length,70);assert.equal(Object.keys(classroomEntries).length,65);
  const original=new Set(['G3-U01-B01','G3-U01-B02','G3-U01-B03','G3-UP01-B01','G3-UP01-B02']);
  assert.deepEqual([...assessmentRevisions].sort(),['G3-U02-B04','G3-U02-E01','G3-UP02-B01']);
- for(const l of lessons){const c=l.childClassroom;assert(c.story&&c.mission&&c.retell&&c.predictQuestion,l.lessonId);assert(c.predictionOptions.length>=2&&c.predictionOptions.length<=3);assert(c.discovery.length&&c.symbols.length);assert(l.articleBlocks.some(b=>b.widget));assert.equal(l.contentVersion,assessmentRevisions.has(l.lessonId)?'2026-10-09.4':original.has(l.lessonId)?'2026-10-07.2':'2026-10-02.1',l.lessonId);}
+ assert.deepEqual([...correctedAssessments.keys()],['G3-U03-E01.w2']);
+ for(const l of lessons){const c=l.childClassroom;assert(c.story&&c.mission&&c.retell&&c.predictQuestion,l.lessonId);assert(c.predictionOptions.length>=2&&c.predictionOptions.length<=3);assert(c.discovery.length&&c.symbols.length);assert(l.articleBlocks.some(b=>b.widget));assert.equal(l.contentVersion,l.lessonId==='G3-U03-E01'?clarityVersion:assessmentRevisions.has(l.lessonId)?'2026-10-09.4':original.has(l.lessonId)?'2026-10-07.2':'2026-10-02.1',l.lessonId);}
 });
 test('三项勾选可提交混合运算且无需说明或中间步骤；首答、订正和旧存档均保留',()=>{
  const p=freshProgress(),l=lessons.find(l=>l.lessonId==='G3-U02-B03'),s=createSession(p,{lessonId:l.lessonId,setName:'core'},lessons),t=s.tasks[0],at=Date.now();

@@ -15,11 +15,11 @@ export default function TaskDiagram({diagram,intro=false}:{diagram:MeasurementTa
     </svg>{intro&&<div className="chain-condition-detail"><svg viewBox="0 0 360 142" role="img" aria-label={`一个接头放大示意：两个金属端部沿拉直方向各占${t}毫米；总长尚未知`}><text x="180" y="25" textAnchor="middle" fontSize="19">看清一个接头的两个端部</text><rect x="48" y="50" width="132" height="35" rx="7" fill="#e9b44d"/><rect x="180" y="50" width="132" height="35" rx="7" fill="#527eab"/><path d="M114 90v12h66v-12m0 0v12h66v-12" fill="none" stroke="#294b53" strokeWidth="2"/><text x="147" y="125" textAnchor="middle" fontSize="19">{t}毫米</text><text x="213" y="125" textAnchor="middle" fontSize="19">{t}毫米</text></svg><p>放大图用两种颜色区分端部，不按整环比例画。每个新接头都会让这两段厚度少伸出去。</p></div>}<figcaption>{diagram.caption??`每个环外长${length}毫米，金属条厚${t}毫米；每处接头重叠两个端部。`}</figcaption></figure>;
   }
   if(diagram.mode==='boards'){
-    const lengths=diagram.pieceLengthsMm??[300,250],overlaps=diagram.overlapsMm??[80],model=boardMeasure(lengths,overlaps),scale=510/model.totalMm,x0=48;
-    return <figure className="measurement-question"><svg viewBox="0 0 620 230" role="img" aria-label={`${lengths.length}块木板依次搭接`}>
+    const lengths=diagram.pieceLengthsMm??[300,250],overlaps=diagram.overlapsMm??[80],model=boardMeasure(lengths,overlaps),scale=510/model.totalMm,x0=48,jointY=Math.max(185,125+(lengths.length-1)*35),dimensionY=jointY+33;
+    return <figure className="measurement-question"><svg viewBox={`0 0 620 ${dimensionY+14}`} role="img" aria-label={`${lengths.length}段材料沿同一直线依次搭接`}>
       {lengths.map((length,i)=><g key={i}><rect x={x0+model.starts[i]*scale} y={48+i*35} width={length*scale} height="55" rx="5" className={`lab-wood ${i%2?'wood-dark':'wood-light'}`}/><text className="board-name" x={x0+model.starts[i]*scale+12} y={81+i*35}>{['甲','乙','丙','丁'][i]??`第${i+1}块`} · {cm(length)}</text></g>)}
-      {model.joints.map((j,i)=><g className="task-joint" key={i}><rect x={x0+j.start*scale} y={42} width={(j.end-j.start)*scale} height={55+(lengths.length-1)*35}/><text x={x0+(j.start+j.end)/2*scale} y="185" textAnchor="middle">重叠{cm(j.end-j.start)}</text></g>)}
-      <Dimension x1={x0} x2={x0+model.totalMm*scale} y={218} label="求拼好后的端到端长度"/>
+      {model.joints.map((j,i)=><g className="task-joint" key={i}><rect x={x0+j.start*scale} y={42} width={(j.end-j.start)*scale} height={55+(lengths.length-1)*35}/><text x={x0+(j.start+j.end)/2*scale} y={jointY} textAnchor="middle">重叠{cm(j.end-j.start)}</text></g>)}
+      <Dimension x1={x0} x2={x0+model.totalMm*scale} y={dimensionY} label="求拼好后的端到端长度"/>
     </svg><figcaption>{diagram.caption??'彩色区域是重复覆盖的同一段位置。'}</figcaption></figure>;
   }
   if(diagram.mode==='ruler'){

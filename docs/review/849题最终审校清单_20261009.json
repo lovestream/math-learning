@@ -1,6 +1,8 @@
 {
   "schemaVersion": 3,
   "date": "2026-10-09",
+  "lastReviewedAt": "2026-10-17",
+  "followUpReview": "docs/review/题意歧义审校台账_20261017.json",
   "baselineSha": "499fb72500408a5686af2c798d4798a287fc069e",
   "scope": "封闭849题，Codex语义初审与同代理另提示反驳复核；不是教师人工逐题签署",
   "summary": {
@@ -8,7 +10,7 @@
     "agentSemanticReviewed": 849,
     "humanTeachingApproved": 0,
     "unresolved": 0,
-    "changedTasks": 588,
+    "changedTasks": 608,
     "kind": {
       "choice": 93,
       "explanation": 335,
@@ -57639,12 +57641,12 @@
       "set": "core",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "f3922441eb380d05b5f1e5cab4cb798d431810376d771d83af917e0e7af1d4c0",
+      "sourceFingerprint": "a133f2be47a53bb5ae1645680a5d92199a529e45fb5cbcac6303fcec28bd2249",
       "task": {
         "id": "G3-U07-R01-P04",
         "level": "core",
         "objectiveId": "G3-U07-R01-OBJ1",
-        "prompt": "两根绳各40厘米，重叠10厘米连接后多长？",
+        "prompt": "两根绳子各长40厘米，沿同一直线搭接，中间重叠10厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "solution": "70厘米。重叠长度只计一次。",
         "hint": "课堂例子是“用“每份—份数—总数”表和一条整体纸带组织已知、未知”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
         "diagnostic": "用混合任务检查是否能独立识别结构和解释原因。 先写每个数量的意思，再说明为什么选择这个步骤。",
@@ -57654,7 +57656,7 @@
           "variant": "G3-U07-R01:task-static",
           "values": [],
           "labels": [
-            "两根绳各40厘米，重叠10厘米连接后多长？",
+            "两根绳子各长40厘米，沿同一直线搭接，中间重叠10厘米。拼好后，从最左端到最右端的距离是多少厘米？",
             "把计算、分数与测量连成一个方案"
           ],
           "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
@@ -57695,8 +57697,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "40+40-10=70厘米，材料80而覆盖70。",
-        "promptMeaning": "两根绳各40厘米，重叠10厘米连接后多长？",
+        "reason": "40+40-10=70厘米，材料80而覆盖70。量沿直线搭接后最外两端的距离，不是两根原绳长度之和。",
+        "promptMeaning": "两根绳子各长40厘米，沿同一直线搭接，中间重叠10厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -57743,15 +57745,41 @@
       },
       "revision": {
         "fields": [
-          "hint"
+          "prompt",
+          "hint",
+          "diagram"
         ],
         "beforeFingerprint": "1ba9f4a0bc5cd7d439846eb68988df31d73e0f0ed12f171b0050efc687850105",
-        "afterFingerprint": "f3922441eb380d05b5f1e5cab4cb798d431810376d771d83af917e0e7af1d4c0",
+        "afterFingerprint": "a133f2be47a53bb5ae1645680a5d92199a529e45fb5cbcac6303fcec28bd2249",
         "before": {
-          "hint": "先回到“用“每份—份数—总数”表和一条整体纸带组织已知、未知”，把题目里的对象逐一对应。"
+          "prompt": "两根绳各40厘米，重叠10厘米连接后多长？",
+          "hint": "先回到“用“每份—份数—总数”表和一条整体纸带组织已知、未知”，把题目里的对象逐一对应。",
+          "diagram": {
+            "type": "concept",
+            "family": "planning",
+            "variant": "G3-U07-R01:task-static",
+            "values": [],
+            "labels": [
+              "两根绳各40厘米，重叠10厘米连接后多长？",
+              "把计算、分数与测量连成一个方案"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "after": {
-          "hint": "课堂例子是“用“每份—份数—总数”表和一条整体纸带组织已知、未知”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。"
+          "prompt": "两根绳子各长40厘米，沿同一直线搭接，中间重叠10厘米。拼好后，从最左端到最右端的距离是多少厘米？",
+          "hint": "课堂例子是“用“每份—份数—总数”表和一条整体纸带组织已知、未知”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+          "diagram": {
+            "type": "concept",
+            "family": "planning",
+            "variant": "G3-U07-R01:task-static",
+            "values": [],
+            "labels": [
+              "两根绳子各长40厘米，沿同一直线搭接，中间重叠10厘米。拼好后，从最左端到最右端的距离是多少厘米？",
+              "把计算、分数与测量连成一个方案"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "policy": "editorial-compatible-same-question-and-grading"
       },
@@ -71779,13 +71807,13 @@
       "set": "core",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "9ce0818b20f7d8bb469dcbfaaf0c71fc728470643a266c81ca7416c3c232593d",
+      "sourceFingerprint": "80960213b7539de10c599be57cfbf300229372475d8baec0be11f5d50866358a",
       "task": {
         "id": "G3-L02-B06-P04",
         "level": "core",
         "objectiveId": "G3-L02-B06-OBJ1",
-        "prompt": "每小时走4千米走3小时，同路程2小时走完，每小时多少？",
-        "solution": "6千米。总路程12千米不变。",
+        "prompt": "小乐每小时走4千米，走3小时到达公园。沿同一路线返回，用2小时走完全程。返回时平均每小时走多少千米？",
+        "solution": "去程路程是4×3＝12千米。返回路程也为12千米，12÷2＝6，所以返回时平均每小时走6千米。",
         "hint": "课堂例子是“表格列数量、每份、总量；把“本次不变的那一列”明确圈出”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
         "diagnostic": "归一先固定每份量，归总先固定总量；条件不满足就不能直接迁移。 说清平均分或包含关系，并用乘法和余数条件验算。",
         "diagram": {
@@ -71794,7 +71822,7 @@
           "variant": "G3-L02-B06:task-static",
           "values": [],
           "labels": [
-            "每小时走4千米走3小时，同路程2小时走完，每小时多少？",
+            "小乐每小时走4千米，走3小时到达公园。沿同一路线返回，用2小时走完全程。返回时平均每小时走多少千米？",
             "归一与归总：先找哪个量没有变"
           ],
           "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
@@ -71815,9 +71843,25 @@
       "evidence": {
         "errors": [],
         "flags": [],
-        "proofs": [],
+        "proofs": [
+          {
+            "type": "solution-equation",
+            "equation": "4×3＝12",
+            "value": 12
+          },
+          {
+            "type": "solution-equation",
+            "equation": "12÷2＝6",
+            "value": 6
+          },
+          {
+            "type": "solution-arithmetic-value",
+            "expression": "12÷2",
+            "value": 6
+          }
+        ],
         "schemaChecked": true,
-        "solutionInternallyConsistent": false,
+        "solutionInternallyConsistent": true,
         "independentlyDerivedFromPromptOrDiagram": false,
         "numericProofVerified": false,
         "formalChecked": true,
@@ -71843,8 +71887,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "4*3=12千米，12/2=6千米每小时，路程保持。",
-        "promptMeaning": "每小时走4千米走3小时，同路程2小时走完，每小时多少？",
+        "reason": "4*3=12千米，12/2=6千米每小时，路程保持。完整说明同路往返，求返回时平均每小时走的千米数，不是总路程。",
+        "promptMeaning": "小乐每小时走4千米，走3小时到达公园。沿同一路线返回，用2小时走完全程。返回时平均每小时走多少千米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -71891,15 +71935,44 @@
       },
       "revision": {
         "fields": [
-          "hint"
+          "prompt",
+          "solution",
+          "hint",
+          "diagram"
         ],
         "beforeFingerprint": "7ff05296cc24052573346cf75f76bba009770211cc12989c6a09a98ef5c715b3",
-        "afterFingerprint": "9ce0818b20f7d8bb469dcbfaaf0c71fc728470643a266c81ca7416c3c232593d",
+        "afterFingerprint": "80960213b7539de10c599be57cfbf300229372475d8baec0be11f5d50866358a",
         "before": {
-          "hint": "先回到“表格列数量、每份、总量；把“本次不变的那一列”明确圈出”，把题目里的对象逐一对应。"
+          "prompt": "每小时走4千米走3小时，同路程2小时走完，每小时多少？",
+          "solution": "6千米。总路程12千米不变。",
+          "hint": "先回到“表格列数量、每份、总量；把“本次不变的那一列”明确圈出”，把题目里的对象逐一对应。",
+          "diagram": {
+            "type": "concept",
+            "family": "division",
+            "variant": "G3-L02-B06:task-static",
+            "values": [],
+            "labels": [
+              "每小时走4千米走3小时，同路程2小时走完，每小时多少？",
+              "归一与归总：先找哪个量没有变"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "after": {
-          "hint": "课堂例子是“表格列数量、每份、总量；把“本次不变的那一列”明确圈出”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。"
+          "prompt": "小乐每小时走4千米，走3小时到达公园。沿同一路线返回，用2小时走完全程。返回时平均每小时走多少千米？",
+          "solution": "去程路程是4×3＝12千米。返回路程也为12千米，12÷2＝6，所以返回时平均每小时走6千米。",
+          "hint": "课堂例子是“表格列数量、每份、总量；把“本次不变的那一列”明确圈出”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+          "diagram": {
+            "type": "concept",
+            "family": "division",
+            "variant": "G3-L02-B06:task-static",
+            "values": [],
+            "labels": [
+              "小乐每小时走4千米，走3小时到达公园。沿同一路线返回，用2小时走完全程。返回时平均每小时走多少千米？",
+              "归一与归总：先找哪个量没有变"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "policy": "editorial-compatible-same-question-and-grading"
       },
@@ -75097,12 +75170,12 @@
       "set": "transfer",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "b1d53e2931a87c2aedc07fa7ef311c7f67dbf772de664fd76d8e6477deb8ac91",
+      "sourceFingerprint": "a243e115e5505d1886159587ed2125a6789cfdb18b422c5c2acc038d13add8ec",
       "task": {
         "id": "G3-L03-B02-P05",
         "level": "transfer",
         "objectiveId": "G3-L03-B02-OBJ1",
-        "prompt": "一根20厘米铁丝弯成正方形，每边几厘米？",
+        "prompt": "一根铁丝长20厘米，把整根铁丝弯成一个正方形，首尾相接，没有重叠，也没有剪去铁丝。正方形每条边长多少厘米？",
         "solution": "5厘米。20÷4。",
         "hint": "课堂例子是“从花坛一个角出发沿四条边走一圈，依次标8、5、8、5米”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
         "diagnostic": "周长是线段相加；数清实际需要围住的边。 先用手指描外边一圈，再判断题目问周长还是面积。",
@@ -75112,7 +75185,7 @@
           "variant": "G3-L03-B02:task-static",
           "values": [],
           "labels": [
-            "一根20厘米铁丝弯成正方形，每边几厘米？",
+            "一根铁丝长20厘米，把整根铁丝弯成一个正方形，首尾相接，没有重叠，也没有剪去铁丝。正方形每条边长多少厘米？",
             "围一圈需要多长：周长的意义"
           ],
           "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
@@ -75159,8 +75232,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "20/4=5厘米，铁丝全长等四边和。",
-        "promptMeaning": "一根20厘米铁丝弯成正方形，每边几厘米？",
+        "reason": "20/4=5厘米，铁丝全长等四边和。整根铁丝首尾相接且无重叠无损耗，20厘米恰为正方形周长。",
+        "promptMeaning": "一根铁丝长20厘米，把整根铁丝弯成一个正方形，首尾相接，没有重叠，也没有剪去铁丝。正方形每条边长多少厘米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -75219,15 +75292,41 @@
       },
       "revision": {
         "fields": [
-          "hint"
+          "prompt",
+          "hint",
+          "diagram"
         ],
         "beforeFingerprint": "f6cade294bda234a24a9256172117fed9dad955490459c1803c69c0a37099ea3",
-        "afterFingerprint": "b1d53e2931a87c2aedc07fa7ef311c7f67dbf772de664fd76d8e6477deb8ac91",
+        "afterFingerprint": "a243e115e5505d1886159587ed2125a6789cfdb18b422c5c2acc038d13add8ec",
         "before": {
-          "hint": "先回到“从花坛一个角出发沿四条边走一圈，依次标8、5、8、5米”，把题目里的对象逐一对应。"
+          "prompt": "一根20厘米铁丝弯成正方形，每边几厘米？",
+          "hint": "先回到“从花坛一个角出发沿四条边走一圈，依次标8、5、8、5米”，把题目里的对象逐一对应。",
+          "diagram": {
+            "type": "concept",
+            "family": "boundary",
+            "variant": "G3-L03-B02:task-static",
+            "values": [],
+            "labels": [
+              "一根20厘米铁丝弯成正方形，每边几厘米？",
+              "围一圈需要多长：周长的意义"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "after": {
-          "hint": "课堂例子是“从花坛一个角出发沿四条边走一圈，依次标8、5、8、5米”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。"
+          "prompt": "一根铁丝长20厘米，把整根铁丝弯成一个正方形，首尾相接，没有重叠，也没有剪去铁丝。正方形每条边长多少厘米？",
+          "hint": "课堂例子是“从花坛一个角出发沿四条边走一圈，依次标8、5、8、5米”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+          "diagram": {
+            "type": "concept",
+            "family": "boundary",
+            "variant": "G3-L03-B02:task-static",
+            "values": [],
+            "labels": [
+              "一根铁丝长20厘米，把整根铁丝弯成一个正方形，首尾相接，没有重叠，也没有剪去铁丝。正方形每条边长多少厘米？",
+              "围一圈需要多长：周长的意义"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "policy": "editorial-compatible-same-question-and-grading"
       },
@@ -77417,12 +77516,12 @@
       "set": "review",
       "kind": "explanation",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "c91a81fb7ddad99e6a4069d90078bce052289a0dd2e559bf91c4e4ec257b6438",
+      "sourceFingerprint": "48e703323643d88e5d921c2fcb3ef11190ed4426f696011e10c1b5b71fc97fa8",
       "task": {
         "id": "G3-L03-E01-P12",
         "level": "review",
         "objectiveId": "G3-L03-E01-OBJ1",
-        "prompt": "为什么拼接时每段共同边要减两次？",
+        "prompt": "两块图形沿一整条边贴合，没有重叠。求拼成图形的外周长时，为什么要从两块图形原周长的和中，减去共同边长度的两倍？",
         "solution": "拼之前它分别属于两块图形的周长，已算两次；拼后两次都不露在外面。减少量取决于被重复计入的接缝。",
         "hint": "课堂例子是“两个3×3正方形沿整边拼成长6宽3长方形；把两条接缝标记再从外圈中划去”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
         "diagnostic": "一周边界与内部占地是两种量；要分别追踪。 先用手指描外边一圈，再判断题目问周长还是面积。",
@@ -77432,7 +77531,7 @@
           "variant": "G3-L03-E01:task-static",
           "values": [],
           "labels": [
-            "为什么拼接时每段共同边要减两次？",
+            "两块图形沿一整条边贴合，没有重叠。求拼成图形的外周长时，为什么要从两块图形原周长的和中，减去共同边长度的两倍？",
             "拼在一起以后，哪些边不再露在外面"
           ],
           "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
@@ -77468,10 +77567,10 @@
         "authoredRelationEqualities": []
       },
       "semanticReview": {
-        "reason": "每共同边两图分别计一次，拼后两次均失去外露，扣两倍是消除原双计。",
-        "promptMeaning": "为什么拼接时每段共同边要减两次？",
+        "reason": "每共同边两图分别计一次，拼后两次均失去外露，扣两倍是消除原双计。仅讨论不重叠贴边拼接后的外周长，不能移用于纸条搭接长度。",
+        "promptMeaning": "两块图形沿一整条边贴合，没有重叠。求拼成图形的外周长时，为什么要从两块图形原周长的和中，减去共同边长度的两倍？",
         "answerScope": "参考解答是示例；结论、关系与理由满足题意即可，不按关键词判分",
-        "acceptableAlternative": "每共同边两图分别计一次，拼后两次均失去外露，扣两倍是消除原双计。",
+        "acceptableAlternative": "每共同边两图分别计一次，拼后两次均失去外露，扣两倍是消除原双计。仅讨论不重叠贴边拼接后的外周长，不能移用于纸条搭接长度。",
         "choiceChecks": [],
         "evidenceChoiceChecks": [],
         "units": [
@@ -77516,15 +77615,41 @@
       },
       "revision": {
         "fields": [
-          "hint"
+          "prompt",
+          "hint",
+          "diagram"
         ],
         "beforeFingerprint": "f974936572d4ceefc5566521f958441e16215809a6971ba24c94e9d165463201",
-        "afterFingerprint": "c91a81fb7ddad99e6a4069d90078bce052289a0dd2e559bf91c4e4ec257b6438",
+        "afterFingerprint": "48e703323643d88e5d921c2fcb3ef11190ed4426f696011e10c1b5b71fc97fa8",
         "before": {
-          "hint": "先回到“两个3×3正方形沿整边拼成长6宽3长方形；把两条接缝标记再从外圈中划去”，把题目里的对象逐一对应。"
+          "prompt": "为什么拼接时每段共同边要减两次？",
+          "hint": "先回到“两个3×3正方形沿整边拼成长6宽3长方形；把两条接缝标记再从外圈中划去”，把题目里的对象逐一对应。",
+          "diagram": {
+            "type": "concept",
+            "family": "boundary",
+            "variant": "G3-L03-E01:task-static",
+            "values": [],
+            "labels": [
+              "为什么拼接时每段共同边要减两次？",
+              "拼在一起以后，哪些边不再露在外面"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "after": {
-          "hint": "课堂例子是“两个3×3正方形沿整边拼成长6宽3长方形；把两条接缝标记再从外圈中划去”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。"
+          "prompt": "两块图形沿一整条边贴合，没有重叠。求拼成图形的外周长时，为什么要从两块图形原周长的和中，减去共同边长度的两倍？",
+          "hint": "课堂例子是“两个3×3正方形沿整边拼成长6宽3长方形；把两条接缝标记再从外圈中划去”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+          "diagram": {
+            "type": "concept",
+            "family": "boundary",
+            "variant": "G3-L03-E01:task-static",
+            "values": [],
+            "labels": [
+              "两块图形沿一整条边贴合，没有重叠。求拼成图形的外周长时，为什么要从两块图形原周长的和中，减去共同边长度的两倍？",
+              "拼在一起以后，哪些边不再露在外面"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "policy": "editorial-compatible-same-question-and-grading"
       },
@@ -93315,12 +93440,12 @@
       "set": "transfer",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "0fb1242f7b0b721051505523acefd95c86bc4fd7ac97620b6ee3db7a1b409a84",
+      "sourceFingerprint": "3a70cc1d1c609fcc7a7285da5a70ce1ac9da61c7dd6b344629221ed54c45896c",
       "task": {
         "id": "G3-L06-B03-P05",
         "level": "transfer",
         "objectiveId": "G3-L06-B03-OBJ1",
-        "prompt": "两根绳长2.4米与1.8米，重叠0.5米连接，连接后多长？",
+        "prompt": "两根绳子分别长2.4米和1.8米，沿同一直线搭接，中间重叠0.5米。拼好后，从最左端到最右端的距离是多少米？",
         "solution": "3.7米。2.4+1.8−0.5。",
         "hint": "课堂例子是“用元角钱币先算38角+25角，再转换为6元3角；竖式与钱币一一对应”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
         "diagnostic": "先对齐相同计数单位；小数点对齐帮助做到这一点。 对齐相同单位或相同数位，再解释小数点两边各位。",
@@ -93330,7 +93455,7 @@
           "variant": "G3-L06-B03:task-static",
           "values": [],
           "labels": [
-            "两根绳长2.4米与1.8米，重叠0.5米连接，连接后多长？",
+            "两根绳子分别长2.4米和1.8米，沿同一直线搭接，中间重叠0.5米。拼好后，从最左端到最右端的距离是多少米？",
             "小数加减也要把相同单位对齐"
           ],
           "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
@@ -93377,8 +93502,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "2.4+1.8-0.5=3.7米，只扣一次重叠。",
-        "promptMeaning": "两根绳长2.4米与1.8米，重叠0.5米连接，连接后多长？",
+        "reason": "2.4+1.8-0.5=3.7米，只扣一次重叠。量沿直线搭接后两端距离，重叠0.5米只扣多算的一次。",
+        "promptMeaning": "两根绳子分别长2.4米和1.8米，沿同一直线搭接，中间重叠0.5米。拼好后，从最左端到最右端的距离是多少米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -93437,15 +93562,41 @@
       },
       "revision": {
         "fields": [
-          "hint"
+          "prompt",
+          "hint",
+          "diagram"
         ],
         "beforeFingerprint": "c71057c45547390d183b5a1dd94d9a086297f18a02e56b3865b98d6cda5d2b00",
-        "afterFingerprint": "0fb1242f7b0b721051505523acefd95c86bc4fd7ac97620b6ee3db7a1b409a84",
+        "afterFingerprint": "3a70cc1d1c609fcc7a7285da5a70ce1ac9da61c7dd6b344629221ed54c45896c",
         "before": {
-          "hint": "先回到“用元角钱币先算38角+25角，再转换为6元3角；竖式与钱币一一对应”，把题目里的对象逐一对应。"
+          "prompt": "两根绳长2.4米与1.8米，重叠0.5米连接，连接后多长？",
+          "hint": "先回到“用元角钱币先算38角+25角，再转换为6元3角；竖式与钱币一一对应”，把题目里的对象逐一对应。",
+          "diagram": {
+            "type": "concept",
+            "family": "decimals",
+            "variant": "G3-L06-B03:task-static",
+            "values": [],
+            "labels": [
+              "两根绳长2.4米与1.8米，重叠0.5米连接，连接后多长？",
+              "小数加减也要把相同单位对齐"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "after": {
-          "hint": "课堂例子是“用元角钱币先算38角+25角，再转换为6元3角；竖式与钱币一一对应”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。"
+          "prompt": "两根绳子分别长2.4米和1.8米，沿同一直线搭接，中间重叠0.5米。拼好后，从最左端到最右端的距离是多少米？",
+          "hint": "课堂例子是“用元角钱币先算38角+25角，再转换为6元3角；竖式与钱币一一对应”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+          "diagram": {
+            "type": "concept",
+            "family": "decimals",
+            "variant": "G3-L06-B03:task-static",
+            "values": [],
+            "labels": [
+              "两根绳子分别长2.4米和1.8米，沿同一直线搭接，中间重叠0.5米。拼好后，从最左端到最右端的距离是多少米？",
+              "小数加减也要把相同单位对齐"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "policy": "editorial-compatible-same-question-and-grading"
       },
@@ -95227,12 +95378,12 @@
       "set": "challenge",
       "kind": "explanation",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "5b517d538e182342f9c23fa44e267bc6fb628d98b314b8009ded6e0e7ad73dd2",
+      "sourceFingerprint": "4fb3d7bd1141c1fe06841c97f0a23d2ece0d6ec7c3d10ef061b34c81b61ff2c7",
       "task": {
         "id": "G3-L07-R01-P06",
         "level": "challenge",
         "objectiveId": "G3-L07-R01-OBJ1",
-        "prompt": "20人做手工，每人需3张纸。甲店每包10张4元；乙店每包8张3元，两店都只卖整包。只在一家买，选哪家花钱少？还剩多少张？请同时考虑包数取整、价格和余纸。",
+        "prompt": "20人做手工，每人需3张纸。甲店每包10张4元，乙店每包8张3元，两店都只卖整包。只在一家买够所需的纸：两家各要买几包、花多少钱、剩几张？比较后，是否有一家花钱更少？",
         "solution": "两家都是24元；甲买6包正好60张不剩，乙买8包64张剩4张。只按费用无法区分更省。需要60张；甲60÷10=6包，6×4=24。乙7包只有56张，必须8包，8×3=24，剩4。每包便宜不代表这次总花费一定少。",
         "hint": "各店至少买几包才够60张，能不能买半包？",
         "diagnostic": "用跨单元任务诊断，再按具体缺口选择回补。 先分别说清材料、包装、费用和时间，再检查是否满足活动需要。",
@@ -95242,7 +95393,7 @@
           "variant": "G3-L07-R01:task-static",
           "values": [],
           "labels": [
-            "20人做手工，每人需3张纸。甲店每包10张4元；乙店每包8张3元，两店都只卖整包。只在一家买，选哪家花钱少？还剩多少张？请同时考虑包数取整、价格和余纸。",
+            "20人做手工，每人需3张纸。甲店每包10张4元，乙店每包8张3元，两店都只卖整包。只在一家买够所需的纸：两家各要买几包、花多少钱、剩几张？比较后，是否有一家花钱更少？",
             "给一次班级活动做完整计划"
           ],
           "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
@@ -95294,10 +95445,10 @@
         "authoredRelationEqualities": []
       },
       "semanticReview": {
-        "reason": "60需甲6包24元余0；乙8包24元余4，两家费用相同，乙单包便宜不等总省钱。",
-        "promptMeaning": "20人做手工，每人需3张纸。甲店每包10张4元；乙店每包8张3元，两店都只卖整包。只在一家买，选哪家花钱少？还剩多少张？请同时考虑包数取整、价格和余纸。",
+        "reason": "60需甲6包24元余0；乙8包24元余4，两家费用相同，乙单包便宜不等总省钱。明确分别求包数、花费、余纸并比较是否更便宜；允许且应判断两家同价。",
+        "promptMeaning": "20人做手工，每人需3张纸。甲店每包10张4元，乙店每包8张3元，两店都只卖整包。只在一家买够所需的纸：两家各要买几包、花多少钱、剩几张？比较后，是否有一家花钱更少？",
         "answerScope": "参考解答是示例；结论、关系与理由满足题意即可，不按关键词判分",
-        "acceptableAlternative": "60需甲6包24元余0；乙8包24元余4，两家费用相同，乙单包便宜不等总省钱。",
+        "acceptableAlternative": "60需甲6包24元余0；乙8包24元余4，两家费用相同，乙单包便宜不等总省钱。明确分别求包数、花费、余纸并比较是否更便宜；允许且应判断两家同价。",
         "choiceChecks": [],
         "evidenceChoiceChecks": [],
         "units": [
@@ -95384,15 +95535,41 @@
       },
       "revision": {
         "fields": [
-          "diagnostic"
+          "prompt",
+          "diagnostic",
+          "diagram"
         ],
         "beforeFingerprint": "bb273141db86bc218954ea4eb558a133ab6d8743877dc4f31baf6d88df52a713",
-        "afterFingerprint": "5b517d538e182342f9c23fa44e267bc6fb628d98b314b8009ded6e0e7ad73dd2",
+        "afterFingerprint": "4fb3d7bd1141c1fe06841c97f0a23d2ece0d6ec7c3d10ef061b34c81b61ff2c7",
         "before": {
-          "diagnostic": "用跨单元任务诊断，再按具体缺口选择回补。 分别标出只属于左边、两边共有、只属于右边的部分。"
+          "prompt": "20人做手工，每人需3张纸。甲店每包10张4元；乙店每包8张3元，两店都只卖整包。只在一家买，选哪家花钱少？还剩多少张？请同时考虑包数取整、价格和余纸。",
+          "diagnostic": "用跨单元任务诊断，再按具体缺口选择回补。 分别标出只属于左边、两边共有、只属于右边的部分。",
+          "diagram": {
+            "type": "concept",
+            "family": "sets",
+            "variant": "G3-L07-R01:task-static",
+            "values": [],
+            "labels": [
+              "20人做手工，每人需3张纸。甲店每包10张4元；乙店每包8张3元，两店都只卖整包。只在一家买，选哪家花钱少？还剩多少张？请同时考虑包数取整、价格和余纸。",
+              "给一次班级活动做完整计划"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "after": {
-          "diagnostic": "用跨单元任务诊断，再按具体缺口选择回补。 先分别说清材料、包装、费用和时间，再检查是否满足活动需要。"
+          "prompt": "20人做手工，每人需3张纸。甲店每包10张4元，乙店每包8张3元，两店都只卖整包。只在一家买够所需的纸：两家各要买几包、花多少钱、剩几张？比较后，是否有一家花钱更少？",
+          "diagnostic": "用跨单元任务诊断，再按具体缺口选择回补。 先分别说清材料、包装、费用和时间，再检查是否满足活动需要。",
+          "diagram": {
+            "type": "concept",
+            "family": "sets",
+            "variant": "G3-L07-R01:task-static",
+            "values": [],
+            "labels": [
+              "20人做手工，每人需3张纸。甲店每包10张4元，乙店每包8张3元，两店都只卖整包。只在一家买够所需的纸：两家各要买几包、花多少钱、剩几张？比较后，是否有一家花钱更少？",
+              "给一次班级活动做完整计划"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "policy": "editorial-compatible-same-question-and-grading"
       },
@@ -95939,12 +96116,12 @@
       "set": "warmup",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "e032d432c0cab36d0eefc43cbea0e7d3fd0d18514d95f2356c7abad28ec0eacc",
+      "sourceFingerprint": "91cdc55c0a1ca928481d2a73045437c837de6fbb63e1395faf47092b385167ba",
       "task": {
         "id": "G3-L07-B01-P01",
         "level": "warmup",
         "objectiveId": "G3-L07-B01-OBJ1",
-        "prompt": "甲组5人乙组4人，完全不重叠，共几人？",
+        "prompt": "甲组5人，乙组4人，两组没有重复成员。把两组成员合在一起，一共有多少人？",
         "solution": "9人。没有重复计数。",
         "hint": "课堂例子是“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
         "diagnostic": "用姓名卡逐一追踪，保证每个人最后恰好出现一次。 分别标出只属于左边、两边共有、只属于右边的部分。",
@@ -95954,7 +96131,7 @@
           "variant": "G3-L07-B01:task-static",
           "values": [],
           "labels": [
-            "甲组5人乙组4人，完全不重叠，共几人？",
+            "甲组5人，乙组4人，两组没有重复成员。把两组成员合在一起，一共有多少人？",
             "同一个人出现两次，怎样只数一次"
           ],
           "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
@@ -95995,8 +96172,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "5+4=9人，无交集才直接相加。",
-        "promptMeaning": "甲组5人乙组4人，完全不重叠，共几人？",
+        "reason": "5+4=9人，无交集才直接相加。两组无重复成员，问题指不同的人数。",
+        "promptMeaning": "甲组5人，乙组4人，两组没有重复成员。把两组成员合在一起，一共有多少人？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -96043,15 +96220,41 @@
       },
       "revision": {
         "fields": [
-          "hint"
+          "prompt",
+          "hint",
+          "diagram"
         ],
         "beforeFingerprint": "7c0ee09de2c430ec49bd5ae309ad392518c998431303881137402424403b9862",
-        "afterFingerprint": "e032d432c0cab36d0eefc43cbea0e7d3fd0d18514d95f2356c7abad28ec0eacc",
+        "afterFingerprint": "91cdc55c0a1ca928481d2a73045437c837de6fbb63e1395faf47092b385167ba",
         "before": {
-          "hint": "先回到“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”，把题目里的对象逐一对应。"
+          "prompt": "甲组5人乙组4人，完全不重叠，共几人？",
+          "hint": "先回到“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”，把题目里的对象逐一对应。",
+          "diagram": {
+            "type": "concept",
+            "family": "sets",
+            "variant": "G3-L07-B01:task-static",
+            "values": [],
+            "labels": [
+              "甲组5人乙组4人，完全不重叠，共几人？",
+              "同一个人出现两次，怎样只数一次"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "after": {
-          "hint": "课堂例子是“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。"
+          "prompt": "甲组5人，乙组4人，两组没有重复成员。把两组成员合在一起，一共有多少人？",
+          "hint": "课堂例子是“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+          "diagram": {
+            "type": "concept",
+            "family": "sets",
+            "variant": "G3-L07-B01:task-static",
+            "values": [],
+            "labels": [
+              "甲组5人，乙组4人，两组没有重复成员。把两组成员合在一起，一共有多少人？",
+              "同一个人出现两次，怎样只数一次"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "policy": "editorial-compatible-same-question-and-grading"
       },
@@ -96065,12 +96268,12 @@
       "set": "warmup",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "f039194ba8fac6035afd152a9f77da4a4dc8d0aec1de5a4869d29a51d49788ef",
+      "sourceFingerprint": "eb95a8514280970b4ef5819e4550c883f835fa049d675e326a88139958bce7be",
       "task": {
         "id": "G3-L07-B01-P02",
         "level": "warmup",
         "objectiveId": "G3-L07-B01-OBJ1",
-        "prompt": "两组各6人，共同2人，共几人？",
+        "prompt": "甲、乙两组各有6人，其中2人同时属于两组。把两组成员合在一起，每人只数一次，一共有多少人？",
         "solution": "10人。6+6−2。",
         "hint": "课堂例子是“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
         "diagnostic": "用姓名卡逐一追踪，保证每个人最后恰好出现一次。 分别标出只属于左边、两边共有、只属于右边的部分。",
@@ -96080,7 +96283,7 @@
           "variant": "G3-L07-B01:task-static",
           "values": [],
           "labels": [
-            "两组各6人，共同2人，共几人？",
+            "甲、乙两组各有6人，其中2人同时属于两组。把两组成员合在一起，每人只数一次，一共有多少人？",
             "同一个人出现两次，怎样只数一次"
           ],
           "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
@@ -96127,8 +96330,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "6+6-2=10，共同2由计两次变一次。",
-        "promptMeaning": "两组各6人，共同2人，共几人？",
+        "reason": "6+6-2=10，共同2由计两次变一次。明确共同2人仍每人只数一次，问并集而非组内人数相加。",
+        "promptMeaning": "甲、乙两组各有6人，其中2人同时属于两组。把两组成员合在一起，每人只数一次，一共有多少人？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -96187,15 +96390,41 @@
       },
       "revision": {
         "fields": [
-          "hint"
+          "prompt",
+          "hint",
+          "diagram"
         ],
         "beforeFingerprint": "abdd004e37c632235116747c8876d9a50d08f46dd7382cda5f3491b7c54800aa",
-        "afterFingerprint": "f039194ba8fac6035afd152a9f77da4a4dc8d0aec1de5a4869d29a51d49788ef",
+        "afterFingerprint": "eb95a8514280970b4ef5819e4550c883f835fa049d675e326a88139958bce7be",
         "before": {
-          "hint": "先回到“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”，把题目里的对象逐一对应。"
+          "prompt": "两组各6人，共同2人，共几人？",
+          "hint": "先回到“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”，把题目里的对象逐一对应。",
+          "diagram": {
+            "type": "concept",
+            "family": "sets",
+            "variant": "G3-L07-B01:task-static",
+            "values": [],
+            "labels": [
+              "两组各6人，共同2人，共几人？",
+              "同一个人出现两次，怎样只数一次"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "after": {
-          "hint": "课堂例子是“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。"
+          "prompt": "甲、乙两组各有6人，其中2人同时属于两组。把两组成员合在一起，每人只数一次，一共有多少人？",
+          "hint": "课堂例子是“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+          "diagram": {
+            "type": "concept",
+            "family": "sets",
+            "variant": "G3-L07-B01:task-static",
+            "values": [],
+            "labels": [
+              "甲、乙两组各有6人，其中2人同时属于两组。把两组成员合在一起，每人只数一次，一共有多少人？",
+              "同一个人出现两次，怎样只数一次"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "policy": "editorial-compatible-same-question-and-grading"
       },
@@ -96330,12 +96559,12 @@
       "set": "core",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "73973ccddfca903d6110a45e36fb8e40969c4345d0fff9d37b9327c84de19656",
+      "sourceFingerprint": "ebb706cfcf87e958c148921254af9804e3a9c39087fecaecd1d1f335c52a1443",
       "task": {
         "id": "G3-L07-B01-P04",
         "level": "core",
         "objectiveId": "G3-L07-B01-OBJ1",
-        "prompt": "全班20人，至少参加一种12人，两种都不参加几人？",
+        "prompt": "全班20人，其中12人参加了画画或唱歌中的至少一项。画画、唱歌两项都没有参加的有多少人？",
         "solution": "8人。全班减并集。",
         "hint": "课堂例子是“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
         "diagnostic": "用姓名卡逐一追踪，保证每个人最后恰好出现一次。 分别标出只属于左边、两边共有、只属于右边的部分。",
@@ -96345,7 +96574,7 @@
           "variant": "G3-L07-B01:task-static",
           "values": [],
           "labels": [
-            "全班20人，至少参加一种12人，两种都不参加几人？",
+            "全班20人，其中12人参加了画画或唱歌中的至少一项。画画、唱歌两项都没有参加的有多少人？",
             "同一个人出现两次，怎样只数一次"
           ],
           "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
@@ -96386,8 +96615,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "20-12=8，两项均无为至少一项的补集。",
-        "promptMeaning": "全班20人，至少参加一种12人，两种都不参加几人？",
+        "reason": "20-12=8，两项均无为至少一项的补集。给出画画、唱歌的完整统计范围，12人为至少参加一项，求班内补集。",
+        "promptMeaning": "全班20人，其中12人参加了画画或唱歌中的至少一项。画画、唱歌两项都没有参加的有多少人？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -96434,15 +96663,41 @@
       },
       "revision": {
         "fields": [
-          "hint"
+          "prompt",
+          "hint",
+          "diagram"
         ],
         "beforeFingerprint": "0f1aa3b52315b0c6c33f0d4e76bb48a40e4280be9a4d4ccec19d1948fe264ad1",
-        "afterFingerprint": "73973ccddfca903d6110a45e36fb8e40969c4345d0fff9d37b9327c84de19656",
+        "afterFingerprint": "ebb706cfcf87e958c148921254af9804e3a9c39087fecaecd1d1f335c52a1443",
         "before": {
-          "hint": "先回到“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”，把题目里的对象逐一对应。"
+          "prompt": "全班20人，至少参加一种12人，两种都不参加几人？",
+          "hint": "先回到“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”，把题目里的对象逐一对应。",
+          "diagram": {
+            "type": "concept",
+            "family": "sets",
+            "variant": "G3-L07-B01:task-static",
+            "values": [],
+            "labels": [
+              "全班20人，至少参加一种12人，两种都不参加几人？",
+              "同一个人出现两次，怎样只数一次"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "after": {
-          "hint": "课堂例子是“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。"
+          "prompt": "全班20人，其中12人参加了画画或唱歌中的至少一项。画画、唱歌两项都没有参加的有多少人？",
+          "hint": "课堂例子是“画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+          "diagram": {
+            "type": "concept",
+            "family": "sets",
+            "variant": "G3-L07-B01:task-static",
+            "values": [],
+            "labels": [
+              "全班20人，其中12人参加了画画或唱歌中的至少一项。画画、唱歌两项都没有参加的有多少人？",
+              "同一个人出现两次，怎样只数一次"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          }
         },
         "policy": "editorial-compatible-same-question-and-grading"
       },
@@ -97508,7 +97763,7 @@
       "taskId": "G3-U03-E01.w1",
       "set": "warmup",
       "kind": "number",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-17.1",
       "sourceFingerprint": "b8107d766199c31c976865d8c36a2282abd30be5b4065adf71a96b76e0996ce0",
       "task": {
         "id": "G3-U03-E01.w1",
@@ -97627,16 +97882,29 @@
       "taskId": "G3-U03-E01.w2",
       "set": "warmup",
       "kind": "number",
-      "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "cde64f292d7843065119d11c3fcac3ada191aea2be363bf6e0d70f42245b5d2d",
+      "contentVersion": "2026-10-17.1",
+      "sourceFingerprint": "9bebd2da0bb0bb526d984d2ab1efd1b517b32bc28b30778692f5de90044852d2",
       "task": {
         "id": "G3-U03-E01.w2",
         "kind": "number",
-        "prompt": "两张纸各20厘米，重叠4厘米。材料总长是多少厘米？",
-        "expected": "40",
+        "prompt": "两条纸带各长20厘米，沿同一直线搭接，中间重叠4厘米。拼好后，从最左端到最右端的距离是多少厘米？",
+        "expected": "36",
         "unit": "厘米",
-        "solution": "材料长度仍是20＋20＝40厘米。",
-        "hint": "先区分材料总长和覆盖长度。",
+        "solution": "两条纸带的长度相加是20＋20＝40厘米，但重叠的4厘米被算了两次。拼好后的两端距离是40−4＝36厘米。",
+        "hint": "题目问拼好后最左端到最右端的距离；重叠的4厘米只保留一次。",
+        "diagnostic": "先分清“所有材料一共多长”和“拼好后最左到最右多长”。重叠区被两块材料各算一次，只减去多算的那一次。",
+        "diagram": {
+          "type": "measurement",
+          "mode": "boards",
+          "pieceLengthsMm": [
+            200,
+            200
+          ],
+          "overlapsMm": [
+            40
+          ],
+          "caption": "两条纸带各长20厘米，沿直线重叠4厘米；下方括线标出题目要量的两端距离。"
+        },
         "level": "warmup",
         "objectiveId": "overlap.direct",
         "responseSpec": {
@@ -97655,31 +97923,35 @@
         "proofs": [
           {
             "type": "solution-arithmetic-value",
-            "expression": "20＋20",
-            "value": 40
+            "expression": "40−4",
+            "value": 36
+          },
+          {
+            "type": "diagram-length-oracle",
+            "value": 36
           }
         ],
         "schemaChecked": true,
         "solutionInternallyConsistent": true,
-        "independentlyDerivedFromPromptOrDiagram": false,
-        "numericProofVerified": false,
+        "independentlyDerivedFromPromptOrDiagram": true,
+        "numericProofVerified": true,
         "formalChecked": true,
         "agentSemanticReviewed": true,
         "humanTeachingApproved": false,
         "authoredRelationEqualities": [
           {
             "taskId": "G3-U03-E01.w2",
-            "equation": "20+20=40",
+            "equation": "20+20-4=36",
             "parts": [
-              "20+20",
-              "40"
+              "20+20-4",
+              "36"
             ]
           }
         ]
       },
       "semanticReview": {
-        "reason": "两材料长度20+20=40厘米，重叠改变覆盖而非材料总和。",
-        "promptMeaning": "两张纸各20厘米，重叠4厘米。材料总长是多少厘米？",
+        "reason": "两条20厘米纸带沿同一直线重叠4厘米；明确问拼好后最左端到最右端。20+20-4=36厘米；40厘米仅为两条各自长度之和，不能作为本问答案。题图参数200、200、40毫米一致。",
+        "promptMeaning": "两条纸带各长20厘米，沿同一直线搭接，中间重叠4厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -97689,7 +97961,7 @@
             "unit": "厘米"
           }
         ],
-        "diagramScope": "题干已给条件；本题无额外参数图",
+        "diagramScope": "核对题干端点／段长／接头／单位，图中参数属于本题",
         "hints": "已核读提示与诊断；课堂示例明确标示为示例，不移用其数字、标记或结论",
         "assessment": "existing-exact-validator",
         "decision": "可进入V1.0题库，教学人工审批另列"
@@ -97736,7 +98008,46 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt",
+          "expected",
+          "solution",
+          "hint",
+          "diagnostic",
+          "diagram"
+        ],
+        "beforeFingerprint": "cde64f292d7843065119d11c3fcac3ada191aea2be363bf6e0d70f42245b5d2d",
+        "afterFingerprint": "9bebd2da0bb0bb526d984d2ab1efd1b517b32bc28b30778692f5de90044852d2",
+        "before": {
+          "prompt": "两张纸各20厘米，重叠4厘米。材料总长是多少厘米？",
+          "expected": "40",
+          "solution": "材料长度仍是20＋20＝40厘米。",
+          "hint": "先区分材料总长和覆盖长度。",
+          "diagnostic": null,
+          "diagram": null
+        },
+        "after": {
+          "prompt": "两条纸带各长20厘米，沿同一直线搭接，中间重叠4厘米。拼好后，从最左端到最右端的距离是多少厘米？",
+          "expected": "36",
+          "solution": "两条纸带的长度相加是20＋20＝40厘米，但重叠的4厘米被算了两次。拼好后的两端距离是40−4＝36厘米。",
+          "hint": "题目问拼好后最左端到最右端的距离；重叠的4厘米只保留一次。",
+          "diagnostic": "先分清“所有材料一共多长”和“拼好后最左到最右多长”。重叠区被两块材料各算一次，只减去多算的那一次。",
+          "diagram": {
+            "type": "measurement",
+            "mode": "boards",
+            "pieceLengthsMm": [
+              200,
+              200
+            ],
+            "overlapsMm": [
+              40
+            ],
+            "caption": "两条纸带各长20厘米，沿直线重叠4厘米；下方括线标出题目要量的两端距离。"
+          }
+        },
+        "policy": "new-assessment-version-preserve-old-session-and-reward-rights"
+      },
       "unresolved": false
     },
     {
@@ -97746,7 +98057,7 @@
       "taskId": "G3-U03-E01.c1",
       "set": "core",
       "kind": "number",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-17.1",
       "sourceFingerprint": "26786f0deae40712503d47fecae6f59746679177cf6c5c9b64329967a46c20aa",
       "task": {
         "id": "G3-U03-E01.c1",
@@ -97889,12 +98200,12 @@
       "taskId": "G3-U03-E01.c2",
       "set": "core",
       "kind": "number",
-      "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "2b823984bfd3f18272f4568fd8098d6e1d51e7e95e5868f21a56903a2c8d27df",
+      "contentVersion": "2026-10-17.1",
+      "sourceFingerprint": "daa8c238fa3e4ca40e8b149e3013df99bc732e9a88a6ef25e735228faef77cb0",
       "task": {
         "id": "G3-U03-E01.c2",
         "kind": "number",
-        "prompt": "两条各18厘米的纸带重叠6厘米，拼好后长多少厘米？",
+        "prompt": "两条纸带各长18厘米，沿同一直线重叠6厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "expected": "30",
         "unit": "厘米",
         "solution": "18＋18−6＝30厘米。",
@@ -97932,12 +98243,16 @@
             "type": "solution-arithmetic-value",
             "expression": "18＋18−6",
             "value": 30
+          },
+          {
+            "type": "diagram-length-oracle",
+            "value": 30
           }
         ],
         "schemaChecked": true,
         "solutionInternallyConsistent": true,
-        "independentlyDerivedFromPromptOrDiagram": false,
-        "numericProofVerified": false,
+        "independentlyDerivedFromPromptOrDiagram": true,
+        "numericProofVerified": true,
         "formalChecked": true,
         "agentSemanticReviewed": true,
         "humanTeachingApproved": false,
@@ -97953,8 +98268,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "18+18-6=30厘米，图两板同一直线。",
-        "promptMeaning": "两条各18厘米的纸带重叠6厘米，拼好后长多少厘米？",
+        "reason": "18+18-6=30厘米，图两板同一直线。两条纸带明确同一直线重叠，问最外两端距离。",
+        "promptMeaning": "两条纸带各长18厘米，沿同一直线重叠6厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -98011,7 +98326,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "2b823984bfd3f18272f4568fd8098d6e1d51e7e95e5868f21a56903a2c8d27df",
+        "afterFingerprint": "daa8c238fa3e4ca40e8b149e3013df99bc732e9a88a6ef25e735228faef77cb0",
+        "before": {
+          "prompt": "两条各18厘米的纸带重叠6厘米，拼好后长多少厘米？"
+        },
+        "after": {
+          "prompt": "两条纸带各长18厘米，沿同一直线重叠6厘米。拼好后，从最左端到最右端的距离是多少厘米？"
+        },
+        "policy": "new-assessment-version-preserve-old-session-and-reward-rights"
+      },
       "unresolved": false
     },
     {
@@ -98021,12 +98349,12 @@
       "taskId": "G3-U03-E01.c3",
       "set": "core",
       "kind": "number",
-      "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "486d257f121d7be60c27c1567fabea945f2e34dbcba4134249c98fb67bb6a687",
+      "contentVersion": "2026-10-17.1",
+      "sourceFingerprint": "fc36bc7de5e607bedfe51cd24509fcf1d7604f28edb8ffd5d8504f8570be4303",
       "task": {
         "id": "G3-U03-E01.c3",
         "kind": "number",
-        "prompt": "4块各20厘米木板依次搭接，三处分别重叠3、5、2厘米。总长多少厘米？",
+        "prompt": "4块木板各长20厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。三处分别重叠3、5、2厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "expected": "70",
         "unit": "厘米",
         "solution": "80−(3＋5＋2)＝70厘米。",
@@ -98088,8 +98416,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "4*20-3-5-2=70厘米，图三接头无三重叠。",
-        "promptMeaning": "4块各20厘米木板依次搭接，三处分别重叠3、5、2厘米。总长多少厘米？",
+        "reason": "4*20-3-5-2=70厘米，图三接头无三重叠。限定仅相邻板重叠、无三重叠，问拼后两端距离而非木料长度合计。",
+        "promptMeaning": "4块木板各长20厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。三处分别重叠3、5、2厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -98144,7 +98472,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "486d257f121d7be60c27c1567fabea945f2e34dbcba4134249c98fb67bb6a687",
+        "afterFingerprint": "fc36bc7de5e607bedfe51cd24509fcf1d7604f28edb8ffd5d8504f8570be4303",
+        "before": {
+          "prompt": "4块各20厘米木板依次搭接，三处分别重叠3、5、2厘米。总长多少厘米？"
+        },
+        "after": {
+          "prompt": "4块木板各长20厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。三处分别重叠3、5、2厘米。拼好后，从最左端到最右端的距离是多少厘米？"
+        },
+        "policy": "new-assessment-version-preserve-old-session-and-reward-rights"
+      },
       "unresolved": false
     },
     {
@@ -98154,12 +98495,12 @@
       "taskId": "G3-U03-E01.c4",
       "set": "core",
       "kind": "number",
-      "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "3e8ed0e8cc455936ef2be9848216c0094e38b6d2bd9c989e975e591de2bdbf00",
+      "contentVersion": "2026-10-17.1",
+      "sourceFingerprint": "5c1108885159f955b17d907f8b3c9555b61c627fd9ae70224aa483bcfddb3a5c",
       "task": {
         "id": "G3-U03-E01.c4",
         "kind": "number",
-        "prompt": "3块各30厘米木板依次搭接，两处都重叠6厘米。总长多少厘米？",
+        "prompt": "3块木板各长30厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。两处都重叠6厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "expected": "78",
         "unit": "厘米",
         "solution": "90−6×2＝78厘米。",
@@ -98223,8 +98564,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "3*30-2*6=78厘米，两接头。",
-        "promptMeaning": "3块各30厘米木板依次搭接，两处都重叠6厘米。总长多少厘米？",
+        "reason": "3*30-2*6=78厘米，两接头。限定直线相邻搭接、无三重叠，两个接头各扣6厘米。",
+        "promptMeaning": "3块木板各长30厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。两处都重叠6厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -98289,7 +98630,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "3e8ed0e8cc455936ef2be9848216c0094e38b6d2bd9c989e975e591de2bdbf00",
+        "afterFingerprint": "5c1108885159f955b17d907f8b3c9555b61c627fd9ae70224aa483bcfddb3a5c",
+        "before": {
+          "prompt": "3块各30厘米木板依次搭接，两处都重叠6厘米。总长多少厘米？"
+        },
+        "after": {
+          "prompt": "3块木板各长30厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。两处都重叠6厘米。拼好后，从最左端到最右端的距离是多少厘米？"
+        },
+        "policy": "new-assessment-version-preserve-old-session-and-reward-rights"
+      },
       "unresolved": false
     },
     {
@@ -98299,12 +98653,12 @@
       "taskId": "G3-U03-E01.c5",
       "set": "core",
       "kind": "choice",
-      "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "acc705d4bd971dfa9bca41a4fc63a3e3792e1cf990d578cde3cfd768f6411ee6",
+      "contentVersion": "2026-10-17.1",
+      "sourceFingerprint": "1fe5353fe8cffd06c8b213f6451c69713e316e8c0181015bed897e555a116692",
       "task": {
         "id": "G3-U03-E01.c5",
         "kind": "choice",
-        "prompt": "两条各20厘米纸带，只说“搭接起来”，能确定总长吗？",
+        "prompt": "两条纸带各长20厘米，沿同一直线搭接，但没有告诉重叠多少厘米。能确定拼好后最左端到最右端的距离吗？",
         "options": [
           {
             "id": "1",
@@ -98348,8 +98702,8 @@
         "authoredRelationEqualities": []
       },
       "semanticReview": {
-        "reason": "未给搭接量不能定覆盖，40是假设零重叠，20是假设全重叠，都不是确定结论。",
-        "promptMeaning": "两条各20厘米纸带，只说“搭接起来”，能确定总长吗？",
+        "reason": "未给搭接量不能定覆盖，40是假设零重叠，20是假设全重叠，都不是确定结论。明确问拼后的两端距离；缺重叠量才不能确定，不能混成原材料之和。",
+        "promptMeaning": "两条纸带各长20厘米，沿同一直线搭接，但没有告诉重叠多少厘米。能确定拼好后最左端到最右端的距离吗？",
         "answerScope": "结论及独立证据项分别核对；干扰项的反例和误解见本题reason",
         "acceptableAlternative": null,
         "choiceChecks": [
@@ -98357,19 +98711,19 @@
             "id": "1",
             "text": "能，一定40厘米",
             "claim": "不成立",
-            "mathematicalBasis": "未给搭接量不能定覆盖，40是假设零重叠，20是假设全重叠，都不是确定结论。"
+            "mathematicalBasis": "未给搭接量不能定覆盖，40是假设零重叠，20是假设全重叠，都不是确定结论。明确问拼后的两端距离；缺重叠量才不能确定，不能混成原材料之和。"
           },
           {
             "id": "2",
             "text": "不能，还缺重叠长度",
             "claim": "成立",
-            "mathematicalBasis": "未给搭接量不能定覆盖，40是假设零重叠，20是假设全重叠，都不是确定结论。"
+            "mathematicalBasis": "未给搭接量不能定覆盖，40是假设零重叠，20是假设全重叠，都不是确定结论。明确问拼后的两端距离；缺重叠量才不能确定，不能混成原材料之和。"
           },
           {
             "id": "3",
             "text": "能，一定20厘米",
             "claim": "不成立",
-            "mathematicalBasis": "未给搭接量不能定覆盖，40是假设零重叠，20是假设全重叠，都不是确定结论。"
+            "mathematicalBasis": "未给搭接量不能定覆盖，40是假设零重叠，20是假设全重叠，都不是确定结论。明确问拼后的两端距离；缺重叠量才不能确定，不能混成原材料之和。"
           }
         ],
         "evidenceChoiceChecks": [],
@@ -98413,7 +98767,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "acc705d4bd971dfa9bca41a4fc63a3e3792e1cf990d578cde3cfd768f6411ee6",
+        "afterFingerprint": "1fe5353fe8cffd06c8b213f6451c69713e316e8c0181015bed897e555a116692",
+        "before": {
+          "prompt": "两条各20厘米纸带，只说“搭接起来”，能确定总长吗？"
+        },
+        "after": {
+          "prompt": "两条纸带各长20厘米，沿同一直线搭接，但没有告诉重叠多少厘米。能确定拼好后最左端到最右端的距离吗？"
+        },
+        "policy": "new-assessment-version-preserve-old-session-and-reward-rights"
+      },
       "unresolved": false
     },
     {
@@ -98423,7 +98790,7 @@
       "taskId": "G3-U03-E01.t1",
       "set": "transfer",
       "kind": "number",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-17.1",
       "sourceFingerprint": "aa241c7d2c0fc8b1d8a03ae3d31c80579bc66ea18e066fef45e9db9491434aa5",
       "task": {
         "id": "G3-U03-E01.t1",
@@ -98555,16 +98922,35 @@
       "taskId": "G3-U03-E01.t2",
       "set": "transfer",
       "kind": "number",
-      "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "fd734d11cd5bfa792b346fcb6c3354e7ad7f90e36a06858aa742071288f3ce97",
+      "contentVersion": "2026-10-17.1",
+      "sourceFingerprint": "dc9b6e9f78b39097379cda19d461c86232fbfe99a36dafe97e131e0ff2011d1b",
       "task": {
         "id": "G3-U03-E01.t2",
         "kind": "number",
-        "prompt": "5根各15厘米卡条依次搭接，每处重叠2厘米，总长多少厘米？",
+        "prompt": "5根卡条各长15厘米，沿同一直线依次搭接，只有相邻两条重叠，没有三条叠在一起。每处重叠2厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "expected": "67",
         "unit": "厘米",
         "solution": "75−2×4＝67厘米。",
         "hint": "5根有4个接头。",
+        "diagnostic": "先分清“所有材料一共多长”和“拼好后最左到最右多长”。重叠区被两块材料各算一次，只减去多算的那一次。",
+        "diagram": {
+          "type": "measurement",
+          "mode": "boards",
+          "pieceLengthsMm": [
+            150,
+            150,
+            150,
+            150,
+            150
+          ],
+          "overlapsMm": [
+            20,
+            20,
+            20,
+            20
+          ],
+          "caption": "五条卡条沿同一直线搭接；只在相邻两条之间重叠。"
+        },
         "level": "transfer",
         "objectiveId": "overlap.direct",
         "responseSpec": {
@@ -98585,12 +98971,16 @@
             "type": "solution-arithmetic-value",
             "expression": "75−2×4",
             "value": 67
+          },
+          {
+            "type": "diagram-length-oracle",
+            "value": 67
           }
         ],
         "schemaChecked": true,
         "solutionInternallyConsistent": true,
-        "independentlyDerivedFromPromptOrDiagram": false,
-        "numericProofVerified": false,
+        "independentlyDerivedFromPromptOrDiagram": true,
+        "numericProofVerified": true,
         "formalChecked": true,
         "agentSemanticReviewed": true,
         "humanTeachingApproved": false,
@@ -98606,8 +98996,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "5*15-4*2=67厘米，五条只有四接头。",
-        "promptMeaning": "5根各15厘米卡条依次搭接，每处重叠2厘米，总长多少厘米？",
+        "reason": "5*15-4*2=67厘米，五条只有四接头。限定直线相邻搭接且无三重叠；五条只有四接头，题图亦为五条四个2厘米重叠。",
+        "promptMeaning": "5根卡条各长15厘米，沿同一直线依次搭接，只有相邻两条重叠，没有三条叠在一起。每处重叠2厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -98617,7 +99007,7 @@
             "unit": "厘米"
           }
         ],
-        "diagramScope": "题干已给条件；本题无额外参数图",
+        "diagramScope": "核对题干端点／段长／接头／单位，图中参数属于本题",
         "hints": "已核读提示与诊断；课堂示例明确标示为示例，不移用其数字、标记或结论",
         "assessment": "existing-exact-validator",
         "decision": "可进入V1.0题库，教学人工审批另列"
@@ -98664,7 +99054,43 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt",
+          "diagnostic",
+          "diagram"
+        ],
+        "beforeFingerprint": "fd734d11cd5bfa792b346fcb6c3354e7ad7f90e36a06858aa742071288f3ce97",
+        "afterFingerprint": "dc9b6e9f78b39097379cda19d461c86232fbfe99a36dafe97e131e0ff2011d1b",
+        "before": {
+          "prompt": "5根各15厘米卡条依次搭接，每处重叠2厘米，总长多少厘米？",
+          "diagnostic": null,
+          "diagram": null
+        },
+        "after": {
+          "prompt": "5根卡条各长15厘米，沿同一直线依次搭接，只有相邻两条重叠，没有三条叠在一起。每处重叠2厘米。拼好后，从最左端到最右端的距离是多少厘米？",
+          "diagnostic": "先分清“所有材料一共多长”和“拼好后最左到最右多长”。重叠区被两块材料各算一次，只减去多算的那一次。",
+          "diagram": {
+            "type": "measurement",
+            "mode": "boards",
+            "pieceLengthsMm": [
+              150,
+              150,
+              150,
+              150,
+              150
+            ],
+            "overlapsMm": [
+              20,
+              20,
+              20,
+              20
+            ],
+            "caption": "五条卡条沿同一直线搭接；只在相邻两条之间重叠。"
+          }
+        },
+        "policy": "new-assessment-version-preserve-old-session-and-reward-rights"
+      },
       "unresolved": false
     },
     {
@@ -98674,12 +99100,12 @@
       "taskId": "G3-U03-E01.h1",
       "set": "challenge",
       "kind": "number",
-      "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "eb6360dcce4d67e0ef090db8174ac06b7dddccccd984c959bceb23da7a544782",
+      "contentVersion": "2026-10-17.1",
+      "sourceFingerprint": "78a80d03a87ef814578cffc7603b937345253cdc128955b323d054126e2f80f2",
       "task": {
         "id": "G3-U03-E01.h1",
         "kind": "number",
-        "prompt": "3块各30厘米木板依次搭接，两处接头相同，拼好长78厘米。每处重叠多少厘米？",
+        "prompt": "3块木板各长30厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。拼好后的两端距离是78厘米，两处重叠的长度相同。每处重叠多少厘米？",
         "expected": "6",
         "unit": "厘米",
         "solution": "总共少90−78＝12厘米，两处相同，12÷2＝6厘米。",
@@ -98725,8 +99151,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "(3*30-78)/2=6厘米每处，接头同长度使解唯一。",
-        "promptMeaning": "3块各30厘米木板依次搭接，两处接头相同，拼好长78厘米。每处重叠多少厘米？",
+        "reason": "(3*30-78)/2=6厘米每处，接头同长度使解唯一。78厘米明确是拼后两端距离，30厘米是每块原长度；无三重叠且两处相同，逆求才唯一。",
+        "promptMeaning": "3块木板各长30厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。拼好后的两端距离是78厘米，两处重叠的长度相同。每处重叠多少厘米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -98783,7 +99209,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "eb6360dcce4d67e0ef090db8174ac06b7dddccccd984c959bceb23da7a544782",
+        "afterFingerprint": "78a80d03a87ef814578cffc7603b937345253cdc128955b323d054126e2f80f2",
+        "before": {
+          "prompt": "3块各30厘米木板依次搭接，两处接头相同，拼好长78厘米。每处重叠多少厘米？"
+        },
+        "after": {
+          "prompt": "3块木板各长30厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。拼好后的两端距离是78厘米，两处重叠的长度相同。每处重叠多少厘米？"
+        },
+        "policy": "new-assessment-version-preserve-old-session-and-reward-rights"
+      },
       "unresolved": false
     },
     {
@@ -98793,12 +99232,12 @@
       "taskId": "G3-U03-E01.r1",
       "set": "review",
       "kind": "number",
-      "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "ed68bf8d9db0a5ed5040be1ce85ca003501dd48fc4b71d22002fd849f308b465",
+      "contentVersion": "2026-10-17.1",
+      "sourceFingerprint": "e3629af7b2fb07dcb9ae6695b621c2fe20c345eb6054dfe9ddc7f47a850cd211",
       "task": {
         "id": "G3-U03-E01.r1",
         "kind": "number",
-        "prompt": "两条25厘米纸带重叠9厘米，覆盖总长多少厘米？",
+        "prompt": "两条纸带各长25厘米，沿同一直线重叠9厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "expected": "41",
         "unit": "厘米",
         "solution": "50−9＝41厘米。",
@@ -98860,8 +99299,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "2*25-9=41厘米，一处重叠。",
-        "promptMeaning": "两条25厘米纸带重叠9厘米，覆盖总长多少厘米？",
+        "reason": "2*25-9=41厘米，一处重叠。25厘米为每条原长度，41厘米为拼后两端距离，区分所求量。",
+        "promptMeaning": "两条纸带各长25厘米，沿同一直线重叠9厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -98926,7 +99365,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "ed68bf8d9db0a5ed5040be1ce85ca003501dd48fc4b71d22002fd849f308b465",
+        "afterFingerprint": "e3629af7b2fb07dcb9ae6695b621c2fe20c345eb6054dfe9ddc7f47a850cd211",
+        "before": {
+          "prompt": "两条25厘米纸带重叠9厘米，覆盖总长多少厘米？"
+        },
+        "after": {
+          "prompt": "两条纸带各长25厘米，沿同一直线重叠9厘米。拼好后，从最左端到最右端的距离是多少厘米？"
+        },
+        "policy": "new-assessment-version-preserve-old-session-and-reward-rights"
+      },
       "unresolved": false
     },
     {
@@ -98936,16 +99388,37 @@
       "taskId": "G3-U03-E01.r2",
       "set": "review",
       "kind": "number",
-      "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "405a863de9abdd60bcad189bfaf750c15b98d9f16e753d2828b874f3aa14634c",
+      "contentVersion": "2026-10-17.1",
+      "sourceFingerprint": "fb2c819ca4ae3f4afc79c88d7f83f664e1d6971bf446b7c1391fa403dd895a9e",
       "task": {
         "id": "G3-U03-E01.r2",
         "kind": "number",
-        "prompt": "6块各12厘米板依次搭接，每处2厘米，总长多少厘米？",
+        "prompt": "6块木板各长12厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。每处重叠2厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "expected": "62",
         "unit": "厘米",
         "solution": "72−2×5＝62厘米。",
         "hint": "6块有5处接头。",
+        "diagnostic": "先分清“所有材料一共多长”和“拼好后最左到最右多长”。重叠区被两块材料各算一次，只减去多算的那一次。",
+        "diagram": {
+          "type": "measurement",
+          "mode": "boards",
+          "pieceLengthsMm": [
+            120,
+            120,
+            120,
+            120,
+            120,
+            120
+          ],
+          "overlapsMm": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "caption": "六块板沿同一直线搭接，五处各重叠2厘米；量最外两端的距离。"
+        },
         "level": "review",
         "objectiveId": "overlap.direct",
         "responseSpec": {
@@ -98966,12 +99439,16 @@
             "type": "solution-arithmetic-value",
             "expression": "72−2×5",
             "value": 62
+          },
+          {
+            "type": "diagram-length-oracle",
+            "value": 62
           }
         ],
         "schemaChecked": true,
         "solutionInternallyConsistent": true,
-        "independentlyDerivedFromPromptOrDiagram": false,
-        "numericProofVerified": false,
+        "independentlyDerivedFromPromptOrDiagram": true,
+        "numericProofVerified": true,
         "formalChecked": true,
         "agentSemanticReviewed": true,
         "humanTeachingApproved": false,
@@ -98987,8 +99464,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "6*12-5*2=62厘米，顺链五接头不六。",
-        "promptMeaning": "6块各12厘米板依次搭接，每处2厘米，总长多少厘米？",
+        "reason": "6*12-5*2=62厘米，顺链五接头不六。明确每处2厘米是重叠长度，六条五接头且无三重叠；图与问法都量最外两端。",
+        "promptMeaning": "6块木板各长12厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。每处重叠2厘米。拼好后，从最左端到最右端的距离是多少厘米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -98998,7 +99475,7 @@
             "unit": "厘米"
           }
         ],
-        "diagramScope": "题干已给条件；本题无额外参数图",
+        "diagramScope": "核对题干端点／段长／接头／单位，图中参数属于本题",
         "hints": "已核读提示与诊断；课堂示例明确标示为示例，不移用其数字、标记或结论",
         "assessment": "existing-exact-validator",
         "decision": "可进入V1.0题库，教学人工审批另列"
@@ -99045,7 +99522,45 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt",
+          "diagnostic",
+          "diagram"
+        ],
+        "beforeFingerprint": "405a863de9abdd60bcad189bfaf750c15b98d9f16e753d2828b874f3aa14634c",
+        "afterFingerprint": "fb2c819ca4ae3f4afc79c88d7f83f664e1d6971bf446b7c1391fa403dd895a9e",
+        "before": {
+          "prompt": "6块各12厘米板依次搭接，每处2厘米，总长多少厘米？",
+          "diagnostic": null,
+          "diagram": null
+        },
+        "after": {
+          "prompt": "6块木板各长12厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。每处重叠2厘米。拼好后，从最左端到最右端的距离是多少厘米？",
+          "diagnostic": "先分清“所有材料一共多长”和“拼好后最左到最右多长”。重叠区被两块材料各算一次，只减去多算的那一次。",
+          "diagram": {
+            "type": "measurement",
+            "mode": "boards",
+            "pieceLengthsMm": [
+              120,
+              120,
+              120,
+              120,
+              120,
+              120
+            ],
+            "overlapsMm": [
+              20,
+              20,
+              20,
+              20,
+              20
+            ],
+            "caption": "六块板沿同一直线搭接，五处各重叠2厘米；量最外两端的距离。"
+          }
+        },
+        "policy": "new-assessment-version-preserve-old-session-and-reward-rights"
+      },
       "unresolved": false
     },
     {
@@ -99163,11 +99678,11 @@
       "set": "warmup",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "f150a7c84a8824fb6b4565523e9613fe6e227eac46f4756298fded0c01f77a85",
+      "sourceFingerprint": "65b5e04f82ad5143c9cdf89ee8149b4e37d7469ee9f924d18dd22092af187458",
       "task": {
         "id": "G3-U03-E02.w2",
         "kind": "number",
-        "prompt": "两个物体相邻连接时，2个物体之间有几处接头？",
+        "prompt": "把2个链环依次连接成一条不闭合的链，有几处相邻接头？",
         "expected": "1",
         "unit": "处",
         "solution": "只在两者之间连接一次。",
@@ -99198,8 +99713,8 @@
         "authoredRelationEqualities": []
       },
       "semanticReview": {
-        "reason": "两物体相邻只一接头，端部不是另一个接头。",
-        "promptMeaning": "两个物体相邻连接时，2个物体之间有几处接头？",
+        "reason": "两物体相邻只一接头，端部不是另一个接头。明确为两个链环扣成不闭合直链，接头数不包括两端，也不是环的边。",
+        "promptMeaning": "把2个链环依次连接成一条不闭合的链，有几处相邻接头？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -99244,7 +99759,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "f150a7c84a8824fb6b4565523e9613fe6e227eac46f4756298fded0c01f77a85",
+        "afterFingerprint": "65b5e04f82ad5143c9cdf89ee8149b4e37d7469ee9f924d18dd22092af187458",
+        "before": {
+          "prompt": "两个物体相邻连接时，2个物体之间有几处接头？"
+        },
+        "after": {
+          "prompt": "把2个链环依次连接成一条不闭合的链，有几处相邻接头？"
+        },
+        "policy": "editorial-compatible-same-question-and-grading"
+      },
       "unresolved": false
     },
     {
@@ -99255,11 +99783,11 @@
       "set": "core",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "791f109d87a4872bc77784e6e0b1438ad0ee5068709e8dfaf8f4c97b86fd6f5b",
+      "sourceFingerprint": "894a84901556d2be0bb56e242bdbe97d31c2600c7eaef2c23b9c644df8ca5d8d",
       "task": {
         "id": "G3-U03-E02.c1",
         "kind": "number",
-        "prompt": "两个相同链环扣接。每环外长40毫米，每处接头重叠两个5毫米端部。总长多少毫米？",
+        "prompt": "2个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，每处接头沿拉直方向重叠两个5毫米端部。从最左外缘到最右外缘的距离是多少毫米？",
         "expected": "70",
         "unit": "毫米",
         "solution": "40×2−(5＋5)＝70毫米。",
@@ -99292,12 +99820,16 @@
             "type": "solution-equation",
             "equation": "40×2−(5＋5)＝70",
             "value": 70
+          },
+          {
+            "type": "diagram-length-oracle",
+            "value": 70
           }
         ],
         "schemaChecked": true,
         "solutionInternallyConsistent": true,
-        "independentlyDerivedFromPromptOrDiagram": false,
-        "numericProofVerified": false,
+        "independentlyDerivedFromPromptOrDiagram": true,
+        "numericProofVerified": true,
         "formalChecked": true,
         "agentSemanticReviewed": true,
         "humanTeachingApproved": false,
@@ -99313,8 +99845,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "2*40-2*5=70毫米，模型明确一接头两段厚，不自行用只扣5的链型。",
-        "promptMeaning": "两个相同链环扣接。每环外长40毫米，每处接头重叠两个5毫米端部。总长多少毫米？",
+        "reason": "2*40-2*5=70毫米，模型明确一接头两段厚，不自行用只扣5的链型。本题单独给足外长、厚度、两端部重叠和不闭合条件，量拉直后最外缘。",
+        "promptMeaning": "2个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，每处接头沿拉直方向重叠两个5毫米端部。从最左外缘到最右外缘的距离是多少毫米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -99371,7 +99903,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "791f109d87a4872bc77784e6e0b1438ad0ee5068709e8dfaf8f4c97b86fd6f5b",
+        "afterFingerprint": "894a84901556d2be0bb56e242bdbe97d31c2600c7eaef2c23b9c644df8ca5d8d",
+        "before": {
+          "prompt": "两个相同链环扣接。每环外长40毫米，每处接头重叠两个5毫米端部。总长多少毫米？"
+        },
+        "after": {
+          "prompt": "2个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，每处接头沿拉直方向重叠两个5毫米端部。从最左外缘到最右外缘的距离是多少毫米？"
+        },
+        "policy": "editorial-compatible-same-question-and-grading"
+      },
       "unresolved": false
     },
     {
@@ -99382,11 +99927,11 @@
       "set": "core",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "c83a7c0933492470086b70d8bfef8830de9a45c6a208f4933795d777eee490c5",
+      "sourceFingerprint": "750ee94f6aab5a1318a0278ce755d818558c37ecac092ab0c1c3e317c0b97565",
       "task": {
         "id": "G3-U03-E02.c2",
         "kind": "number",
-        "prompt": "4个这样的链环有几处接头？",
+        "prompt": "4个链环依次扣成一条不闭合的链，只有相邻两环扣在一起。一共有几处接头？",
         "expected": "3",
         "unit": "处",
         "solution": "4−1＝3处。",
@@ -99437,8 +99982,8 @@
         "authoredRelationEqualities": []
       },
       "semanticReview": {
-        "reason": "4环直链有3接头，图非首尾闭环。",
-        "promptMeaning": "4个这样的链环有几处接头？",
+        "reason": "4环直链有3接头，图非首尾闭环。无需引用前题的“这样的”；四环直链不首尾闭合，三处相邻接头。",
+        "promptMeaning": "4个链环依次扣成一条不闭合的链，只有相邻两环扣在一起。一共有几处接头？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -99505,7 +100050,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "c83a7c0933492470086b70d8bfef8830de9a45c6a208f4933795d777eee490c5",
+        "afterFingerprint": "750ee94f6aab5a1318a0278ce755d818558c37ecac092ab0c1c3e317c0b97565",
+        "before": {
+          "prompt": "4个这样的链环有几处接头？"
+        },
+        "after": {
+          "prompt": "4个链环依次扣成一条不闭合的链，只有相邻两环扣在一起。一共有几处接头？"
+        },
+        "policy": "editorial-compatible-same-question-and-grading"
+      },
       "unresolved": false
     },
     {
@@ -99516,11 +100074,11 @@
       "set": "core",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "f03f18c76f8009f77c1e479194310810fa5e531a6519a93ba661fb6d04424255",
+      "sourceFingerprint": "6af2d26c6b0227638617d832ba887d31756064fae501f6724d2130d8487f5715",
       "task": {
         "id": "G3-U03-E02.c3",
         "kind": "number",
-        "prompt": "4个这样的链环拉直后总长多少毫米？",
+        "prompt": "4个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。从最左外缘到最右外缘的距离是多少毫米？",
         "expected": "130",
         "unit": "毫米",
         "solution": "40×4−10×3＝130毫米。",
@@ -99583,8 +100141,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "4*40-3*2*5=130毫米，图四环外40厚5一致。",
-        "promptMeaning": "4个这样的链环拉直后总长多少毫米？",
+        "reason": "4*40-3*2*5=130毫米，图四环外40厚5一致。本题重述四环外长40、厚5、每接头重叠两段厚度和量最外缘的范围。",
+        "promptMeaning": "4个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。从最左外缘到最右外缘的距离是多少毫米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -99659,7 +100217,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "f03f18c76f8009f77c1e479194310810fa5e531a6519a93ba661fb6d04424255",
+        "afterFingerprint": "6af2d26c6b0227638617d832ba887d31756064fae501f6724d2130d8487f5715",
+        "before": {
+          "prompt": "4个这样的链环拉直后总长多少毫米？"
+        },
+        "after": {
+          "prompt": "4个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。从最左外缘到最右外缘的距离是多少毫米？"
+        },
+        "policy": "editorial-compatible-same-question-and-grading"
+      },
       "unresolved": false
     },
     {
@@ -99670,11 +100241,11 @@
       "set": "core",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "d58eba1389dc16d13958e9b46ac40e6ee96ae1db6afe8ecfaefdd64a2015fdfd",
+      "sourceFingerprint": "1e4f4526ab52d87ab2b9855da83888fe303e852500b1573bff793a4c684ebf05",
       "task": {
         "id": "G3-U03-E02.c4",
         "kind": "number",
-        "prompt": "答案130毫米等于多少厘米？",
+        "prompt": "一条链拉直后，从最左外缘到最右外缘长130毫米。这相当于多少厘米？",
         "expected": "13",
         "unit": "厘米",
         "solution": "130÷10＝13厘米。",
@@ -99720,8 +100291,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "130/10=13厘米，不更改实际覆盖。",
-        "promptMeaning": "答案130毫米等于多少厘米？",
+        "reason": "130/10=13厘米，不更改实际覆盖。130毫米在本题是已知链长，独立做单位换算，不借用上一题的答案。",
+        "promptMeaning": "一条链拉直后，从最左外缘到最右外缘长130毫米。这相当于多少厘米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -99778,7 +100349,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "d58eba1389dc16d13958e9b46ac40e6ee96ae1db6afe8ecfaefdd64a2015fdfd",
+        "afterFingerprint": "1e4f4526ab52d87ab2b9855da83888fe303e852500b1573bff793a4c684ebf05",
+        "before": {
+          "prompt": "答案130毫米等于多少厘米？"
+        },
+        "after": {
+          "prompt": "一条链拉直后，从最左外缘到最右外缘长130毫米。这相当于多少厘米？"
+        },
+        "policy": "editorial-compatible-same-question-and-grading"
+      },
       "unresolved": false
     },
     {
@@ -99789,11 +100373,11 @@
       "set": "core",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "9786d29ed15d04e108a92c45d446be2e93a28519e4d1e7e6ee5f438cad781644",
+      "sourceFingerprint": "60c6f4fb8da4f8e39f9118cfcc4ec4e415f54c62cf64eb8a52618dea051b3ac5",
       "task": {
         "id": "G3-U03-E02.c5",
         "kind": "number",
-        "prompt": "5个这样的链环总长多少毫米？",
+        "prompt": "5个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。从最左外缘到最右外缘的距离是多少毫米？",
         "expected": "160",
         "unit": "毫米",
         "solution": "40＋30×4＝160毫米。",
@@ -99856,8 +100440,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "5*40-4*10=160毫米，或首40加4次30。",
-        "promptMeaning": "5个这样的链环总长多少毫米？",
+        "reason": "5*40-4*10=160毫米，或首40加4次30。五环的尺寸与连接规则均写在本题，不依赖前题或课堂默认模型。",
+        "promptMeaning": "5个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。从最左外缘到最右外缘的距离是多少毫米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -99932,7 +100516,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "9786d29ed15d04e108a92c45d446be2e93a28519e4d1e7e6ee5f438cad781644",
+        "afterFingerprint": "60c6f4fb8da4f8e39f9118cfcc4ec4e415f54c62cf64eb8a52618dea051b3ac5",
+        "before": {
+          "prompt": "5个这样的链环总长多少毫米？"
+        },
+        "after": {
+          "prompt": "5个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。从最左外缘到最右外缘的距离是多少毫米？"
+        },
+        "policy": "editorial-compatible-same-question-and-grading"
+      },
       "unresolved": false
     },
     {
@@ -99943,11 +100540,11 @@
       "set": "transfer",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "df013773d73cb47356d9d5648e4562a01fb8006ff143763d0064b4a0169c477f",
+      "sourceFingerprint": "1dbffc456a204f319d4e2ff333cf631f7f26d23e86163d1fbee9b346bb179e4c",
       "task": {
         "id": "G3-U03-E02.t1",
         "kind": "number",
-        "prompt": "3个环，每环外长50毫米、厚4毫米；每个接头重叠两段厚度。总长多少毫米？",
+        "prompt": "3个相同链环依次扣接并拉直，不首尾闭合。每环外长50毫米，金属条厚4毫米，每处接头沿拉直方向重叠两段4毫米的端部。从最左外缘到最右外缘的距离是多少毫米？",
         "expected": "134",
         "unit": "毫米",
         "solution": "50×3−8×2＝134毫米。",
@@ -99985,12 +100582,16 @@
             "type": "solution-arithmetic-value",
             "expression": "50×3−8×2",
             "value": 134
+          },
+          {
+            "type": "diagram-length-oracle",
+            "value": 134
           }
         ],
         "schemaChecked": true,
         "solutionInternallyConsistent": true,
-        "independentlyDerivedFromPromptOrDiagram": false,
-        "numericProofVerified": false,
+        "independentlyDerivedFromPromptOrDiagram": true,
+        "numericProofVerified": true,
         "formalChecked": true,
         "agentSemanticReviewed": true,
         "humanTeachingApproved": false,
@@ -100006,8 +100607,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "3*50-2*8=134毫米，一接头两个4厚。",
-        "promptMeaning": "3个环，每环外长50毫米、厚4毫米；每个接头重叠两段厚度。总长多少毫米？",
+        "reason": "3*50-2*8=134毫米，一接头两个4厚。三环外50厚4且每接头两端部重叠，题目问拉直后外缘距离。",
+        "promptMeaning": "3个相同链环依次扣接并拉直，不首尾闭合。每环外长50毫米，金属条厚4毫米，每处接头沿拉直方向重叠两段4毫米的端部。从最左外缘到最右外缘的距离是多少毫米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -100074,7 +100675,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "df013773d73cb47356d9d5648e4562a01fb8006ff143763d0064b4a0169c477f",
+        "afterFingerprint": "1dbffc456a204f319d4e2ff333cf631f7f26d23e86163d1fbee9b346bb179e4c",
+        "before": {
+          "prompt": "3个环，每环外长50毫米、厚4毫米；每个接头重叠两段厚度。总长多少毫米？"
+        },
+        "after": {
+          "prompt": "3个相同链环依次扣接并拉直，不首尾闭合。每环外长50毫米，金属条厚4毫米，每处接头沿拉直方向重叠两段4毫米的端部。从最左外缘到最右外缘的距离是多少毫米？"
+        },
+        "policy": "editorial-compatible-same-question-and-grading"
+      },
       "unresolved": false
     },
     {
@@ -100085,11 +100699,11 @@
       "set": "transfer",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "8fb2617565fb6a6671ed8a8ab9e90104cc168c0cb66e74b18013169a6b3fce12",
+      "sourceFingerprint": "c11716fbdc1422a57607cb887b0ff2406281420adc883c99699fb9cae56ce3f2",
       "task": {
         "id": "G3-U03-E02.t2",
         "kind": "number",
-        "prompt": "6个相同环，每环外长30毫米，每添一环只增加22毫米。总长多少毫米？",
+        "prompt": "6个相同链环依次扣接成一条不闭合的链并拉直。第1个环占30毫米，此后每添1个环，链的两端距离只增加22毫米。6个环拉直后的两端距离是多少毫米？",
         "expected": "140",
         "unit": "毫米",
         "solution": "30＋22×5＝140毫米。",
@@ -100140,8 +100754,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "首30后五环各增22，30+5*22=140毫米。",
-        "promptMeaning": "6个相同环，每环外长30毫米，每添一环只增加22毫米。总长多少毫米？",
+        "reason": "首30后五环各增22，30+5*22=140毫米。明确第一环占30毫米，后五环每添一个只增加22毫米；不另假设厚度。",
+        "promptMeaning": "6个相同链环依次扣接成一条不闭合的链并拉直。第1个环占30毫米，此后每添1个环，链的两端距离只增加22毫米。6个环拉直后的两端距离是多少毫米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -100208,7 +100822,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "8fb2617565fb6a6671ed8a8ab9e90104cc168c0cb66e74b18013169a6b3fce12",
+        "afterFingerprint": "c11716fbdc1422a57607cb887b0ff2406281420adc883c99699fb9cae56ce3f2",
+        "before": {
+          "prompt": "6个相同环，每环外长30毫米，每添一环只增加22毫米。总长多少毫米？"
+        },
+        "after": {
+          "prompt": "6个相同链环依次扣接成一条不闭合的链并拉直。第1个环占30毫米，此后每添1个环，链的两端距离只增加22毫米。6个环拉直后的两端距离是多少毫米？"
+        },
+        "policy": "editorial-compatible-same-question-and-grading"
+      },
       "unresolved": false
     },
     {
@@ -100219,11 +100846,11 @@
       "set": "challenge",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "db060203c42f4f52dfcd179b509cd0889784d1e1bf95ad7f83fd635802f34cfd",
+      "sourceFingerprint": "3115e84f2c2b6d4053fdd92be5dcf66c4a64691c7a7a629077088ebf131ea5bb",
       "task": {
         "id": "G3-U03-E02.h1",
         "kind": "number",
-        "prompt": "相同链环外长40毫米，厚5毫米。拉直后总长190毫米，一共有几个环？",
+        "prompt": "相同链环依次扣接成一条不闭合的链并拉直。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。整条链的两端距离是190毫米，一共有几个环？",
         "expected": "6",
         "unit": "个",
         "solution": "第一环40，余下150毫米，每环增加30毫米；150÷30＝5，再加第一环，共6个。",
@@ -100277,8 +100904,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "(190-40)/(40-10)+1=6环，回代240-50=190。",
-        "promptMeaning": "相同链环外长40毫米，厚5毫米。拉直后总长190毫米，一共有几个环？",
+        "reason": "(190-40)/(40-10)+1=6环，回代240-50=190。单题补齐每接头两段5毫米重叠，给定190毫米是整链外缘距离，逆求环数才唯一。",
+        "promptMeaning": "相同链环依次扣接成一条不闭合的链并拉直。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。整条链的两端距离是190毫米，一共有几个环？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -100335,7 +100962,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "db060203c42f4f52dfcd179b509cd0889784d1e1bf95ad7f83fd635802f34cfd",
+        "afterFingerprint": "3115e84f2c2b6d4053fdd92be5dcf66c4a64691c7a7a629077088ebf131ea5bb",
+        "before": {
+          "prompt": "相同链环外长40毫米，厚5毫米。拉直后总长190毫米，一共有几个环？"
+        },
+        "after": {
+          "prompt": "相同链环依次扣接成一条不闭合的链并拉直。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。整条链的两端距离是190毫米，一共有几个环？"
+        },
+        "policy": "editorial-compatible-same-question-and-grading"
+      },
       "unresolved": false
     },
     {
@@ -100346,11 +100986,11 @@
       "set": "review",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "e333d5851e89ceff5fdc33db55c48c0dbeccb73810bf574cc036385f4c671697",
+      "sourceFingerprint": "dd9eae4825103f029d5b1cf254e7cc1dd86fb2918139dc4c1f2bb84947a0885a",
       "task": {
         "id": "G3-U03-E02.r1",
         "kind": "number",
-        "prompt": "3个外长40毫米、厚5毫米的链环按同一模型连接，总长多少毫米？",
+        "prompt": "3个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。从最左外缘到最右外缘的距离是多少毫米？",
         "expected": "100",
         "unit": "毫米",
         "solution": "40×3−10×2＝100毫米。",
@@ -100413,8 +101053,8 @@
         ]
       },
       "semanticReview": {
-        "reason": "3*40-2*10=100毫米，同模型两接头。",
-        "promptMeaning": "3个外长40毫米、厚5毫米的链环按同一模型连接，总长多少毫米？",
+        "reason": "3*40-2*10=100毫米，同模型两接头。删除“同一模型”，重述三环尺寸、两段端部重叠与不闭合条件。",
+        "promptMeaning": "3个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。从最左外缘到最右外缘的距离是多少毫米？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -100489,7 +101129,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "e333d5851e89ceff5fdc33db55c48c0dbeccb73810bf574cc036385f4c671697",
+        "afterFingerprint": "dd9eae4825103f029d5b1cf254e7cc1dd86fb2918139dc4c1f2bb84947a0885a",
+        "before": {
+          "prompt": "3个外长40毫米、厚5毫米的链环按同一模型连接，总长多少毫米？"
+        },
+        "after": {
+          "prompt": "3个相同链环依次扣接并拉直，不首尾闭合。每环外长40毫米，金属条厚5毫米，每处接头沿拉直方向重叠两段5毫米的端部。从最左外缘到最右外缘的距离是多少毫米？"
+        },
+        "policy": "editorial-compatible-same-question-and-grading"
+      },
       "unresolved": false
     },
     {
@@ -101601,11 +102254,11 @@
       "set": "transfer",
       "kind": "number",
       "contentVersion": "2026-10-02.1",
-      "sourceFingerprint": "65fb2a46213b92df34f74d2bbe0b51ffd4fcf2baf719d07d39a8e3f912d4d532",
+      "sourceFingerprint": "1dbe767f125ea3095be6ca21575c2c85ad584bcb07fb38b1f8b839c35e9ec5c3",
       "task": {
         "id": "G3-U03-O01.t2",
         "kind": "number",
-        "prompt": "时钟一圈有12个数字，相邻数字之间有几个间隔？",
+        "prompt": "钟面上有1到12这12个数字。沿钟面从12出发，依次经过1、2、3，直到回到12，完整走一圈。每两个相邻数字之间算1个间隔，这一整圈共有几个间隔？",
         "expected": "12",
         "unit": "个",
         "solution": "闭环点数等于间隔数。",
@@ -101636,8 +102289,8 @@
         "authoredRelationEqualities": []
       },
       "semanticReview": {
-        "reason": "十二钟数绕环共有12间隔，12至1也一段。",
-        "promptMeaning": "时钟一圈有12个数字，相邻数字之间有几个间隔？",
+        "reason": "十二钟数绕环共有12间隔，12至1也一段。明确从12出发经过所有数字回到12，问整圈12个间隔，不是任意相邻两数之间的1个间隔。",
+        "promptMeaning": "钟面上有1到12这12个数字。沿钟面从12出发，依次经过1、2、3，直到回到12，完整走一圈。每两个相邻数字之间算1个间隔，这一整圈共有几个间隔？",
         "answerScope": "固定单位下的精确等值数，单位不另选",
         "acceptableAlternative": null,
         "choiceChecks": [],
@@ -101682,7 +102335,20 @@
           "humanTeachingApproved": false
         }
       },
-      "revision": null,
+      "revision": {
+        "fields": [
+          "prompt"
+        ],
+        "beforeFingerprint": "65fb2a46213b92df34f74d2bbe0b51ffd4fcf2baf719d07d39a8e3f912d4d532",
+        "afterFingerprint": "1dbe767f125ea3095be6ca21575c2c85ad584bcb07fb38b1f8b839c35e9ec5c3",
+        "before": {
+          "prompt": "时钟一圈有12个数字，相邻数字之间有几个间隔？"
+        },
+        "after": {
+          "prompt": "钟面上有1到12这12个数字。沿钟面从12出发，依次经过1、2、3，直到回到12，完整走一圈。每两个相邻数字之间算1个间隔，这一整圈共有几个间隔？"
+        },
+        "policy": "editorial-compatible-same-question-and-grading"
+      },
       "unresolved": false
     },
     {

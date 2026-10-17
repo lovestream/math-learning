@@ -40,7 +40,8 @@ export function auditTask(t){
   if(d.mode==='boards'){mm=d.pieceLengthsMm.reduce((a,b)=>a+b,0)-(d.overlapsMm??[]).reduce((a,b)=>a+b,0);unit='length';}
   if(d.mode==='ruler'){mm=d.endMm-d.startMm;unit='length';}
   // Only assert total-length questions; joint counts and newly gained length are distinct targets.
-  if(unit&&/总长|端到端|这根.*长多少|物体长多少/.test(t.prompt)&&!(/新增|增加|几个|多少个|接头|总共有几/.test(t.prompt))){
+  const explicitSpan=/从最左(?:外缘|端)到最右(?:外缘|端)的(?:长度|距离)(?:是)?多少/.test(t.prompt);
+  if(unit&&(explicitSpan||/总长|端到端|这根.*长多少|物体长多少/.test(t.prompt)&&!(/新增|增加|几个|多少个|接头|总共有几/.test(t.prompt)))){
    const converted=t.unit==='厘米'?mm/10:t.unit==='米'?mm/1000:mm;if(!auditSame(target,converted))errors.push('独立题图长度oracle不符');else proofs.push({type:'diagram-length-oracle',value:converted});
   }
  }
