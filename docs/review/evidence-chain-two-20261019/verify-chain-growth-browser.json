@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "geometry": {
+    "previousAtRight": true,
+    "nextAtLeft": true,
+    "metalEndsTouch": true
+  },
+  "bothMethods": true,
+  "fullRingBarsEqual": true,
+  "fullLengthDimensionAtBothEnds": true,
+  "jointDetailWithoutExtraClick": true,
+  "equalRingCountWidths": {
+    "counts": [
+      3,
+      4,
+      5
+    ],
+    "widths": [
+      390,
+      768,
+      1440
+    ]
+  },
+  "counts": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "inverseTasks": 11,
+  "firstAnswerPreserved": true,
+  "noModelReward": true,
+  "refresh": true,
+  "threeChecksOnly": true,
+  "widths": [
+    1440,
+    768,
+    390
+  ],
+  "reducedMotion": true,
+  "keyboard": true,
+  "screenshots": [
+    "output/playwright/v2-audit/chain-prediction-joint-1440.png",
+    "output/playwright/v2-audit/chain-growth-1440.png",
+    "output/playwright/v2-audit/chain-growth-768.png",
+    "output/playwright/v2-audit/chain-growth-390.png",
+    "output/playwright/v2-audit/chain-equal-rings-3-1440.png",
+    "output/playwright/v2-audit/chain-equal-rings-3-768.png",
+    "output/playwright/v2-audit/chain-equal-rings-3-390.png",
+    "output/playwright/v2-audit/chain-equal-rings-4-1440.png",
+    "output/playwright/v2-audit/chain-equal-rings-4-768.png",
+    "output/playwright/v2-audit/chain-equal-rings-4-390.png",
+    "output/playwright/v2-audit/chain-equal-rings-5-1440.png",
+    "output/playwright/v2-audit/chain-equal-rings-5-768.png",
+    "output/playwright/v2-audit/chain-equal-rings-5-390.png",
+    "output/playwright/v2-audit/chain-subtract-1440.png",
+    "output/playwright/v2-audit/chain-inverse-wrong-thickness.png",
+    "output/playwright/v2-audit/chain-inverse-G3-U03-E02.c4-390.png",
+    "output/playwright/v2-audit/chain-inverse-G3-U03-E02.c4-768.png",
+    "output/playwright/v2-audit/chain-inverse-G3-U03-E02.c4-1440.png",
+    "output/playwright/v2-audit/chain-inverse-G3-U03-E02.t2-390.png",
+    "output/playwright/v2-audit/chain-inverse-G3-U03-E02.t2-768.png",
+    "output/playwright/v2-audit/chain-inverse-G3-U03-E02.t2-1440.png",
+    "output/playwright/v2-audit/chain-inverse-G3-U06-E01-P09-390.png",
+    "output/playwright/v2-audit/chain-inverse-G3-U06-E01-P09-768.png",
+    "output/playwright/v2-audit/chain-inverse-G3-U06-E01-P09-1440.png",
+    "output/playwright/v2-audit/chain-inverse-G3-L03-E01-P09-390.png",
+    "output/playwright/v2-audit/chain-inverse-G3-L03-E01-P09-768.png",
+    "output/playwright/v2-audit/chain-inverse-G3-L03-E01-P09-1440.png",
+    "output/playwright/v2-audit/chain-inverse-G3-U03-E01.r2-390.png",
+    "output/playwright/v2-audit/chain-inverse-G3-U03-E01.r2-768.png",
+    "output/playwright/v2-audit/chain-inverse-G3-U03-E01.r2-1440.png"
+  ],
+  "errors": [],
+  "source": {
+    "prHeadSha": "c81ee7a508c9df19131c3e35f5263c96e0122efb",
+    "sha": "c81ee7a508c9df19131c3e35f5263c96e0122efb",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-18T23:49:44.351Z"
+  }
+}
