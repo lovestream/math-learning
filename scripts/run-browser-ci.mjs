@@ -19,6 +19,7 @@ import {
 } from "../server/thinking-store.mjs";
 // Run the short new workflow checks first for prompt CI feedback.
 const all = [
+  "verify-two-ring-browser",
   "verify-chain-growth-browser",
   "verify-clarity-browser",
   "verify-detective-audit-browser",
@@ -53,6 +54,7 @@ const only = process.argv.find((v) => v.startsWith("--only=")),
     : process.argv.includes("--full")
       ? all
       : [
+          "verify-two-ring-browser",
           "verify-chain-growth-browser",
           "verify-clarity-browser",
           "verify-detective-audit-browser",
@@ -232,7 +234,9 @@ try {
         const navigate=page.goto.bind(page);
         page.goto=async(url,options)=>{const result=await navigate(url,options),query=new URL(url).searchParams;if(query.has('lesson')&&!query.has('practice')){await page.locator('.lesson-article').waitFor();const step=page.getByRole('button',{name:/^3 (亲手实验|画图想一想)$/});if(await step.count())await step.click();}return result;};
       }
-      await page.goto(base);
+      // The visual-only prototype must never mount a learner session, including
+      // this harness landing page. Other suites intentionally open the full app.
+      await page.goto(name==='verify-two-ring-browser'?base+'/?preview=chain-two':base);
       const source=fs.readFileSync(`scripts/${name}.js`, "utf8").trim().replace(/;$/, "");
       const callback = new Function(`return (${source})`)();
       const result = await callback(page,{wireBundle,deliverInbox:()=>{

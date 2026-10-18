@@ -4,6 +4,7 @@ import {boundedInteger,chainMeasure} from '../../../shared/length-model.mjs';
 import type {LengthScene,WidgetState} from '../types';
 import {Dimension,LabNotice,Prediction,Ring,type LabProps} from './Primitives';
 import ChainLengthStrip from './ChainLengthStrip';
+import './two-ring.css';
 
 export default function ChainExperiment({scene,value,update}:{scene:LengthScene}&LabProps){
   const length=scene.pieceLengthsMm?.[0]??40,t=scene.thicknessMm??5,target=boundedInteger(value.target,scene.count??4,2,5);
@@ -18,6 +19,7 @@ export default function ChainExperiment({scene,value,update}:{scene:LengthScene}
   const select=(i:number)=>update({joint:i,inspected:[...new Set([...inspected,i])]});
   return <div className="lab-experiment lab-chain">
     <div className="lab-play-area">
+      <div className="chain-prototype-entry"><a href="/?preview=chain-two&from=lesson">打开双环视觉样板（待家长验收）</a><span>先看两个等长环的接头、净增量与拖动比较。样板不计分、不写入学习记录。</span></div>
       <div className="lab-controls"><label>这次接几个环？<select aria-label="目标链环个数" value={target} onChange={e=>change({target:Number(e.target.value),placed:1,inspected:[],joint:-1,guess:''})}>{[2,3,4,5].map(n=><option value={n} key={n}>{n}个环</option>)}</select></label><button className="lab-icon-action" onClick={()=>change({placed:1,joint:-1,inspected:[],guess:''})}><RotateCcw size={15}/>重新摆</button></div>
       <div className={`lab-stage ${ghost?'is-drop-ready':''}`} ref={stage}>
         <div className="lab-stage-caption"><span>连接区</span><b>已连接 {placed} / {target} 个</b></div>
