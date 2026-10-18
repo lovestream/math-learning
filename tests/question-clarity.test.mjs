@@ -13,7 +13,7 @@ test('20厘米纸条重叠4厘米：明确问两端距离，36正确、40错误�
  assert(auditTask(t).numericProofVerified);assert.deepEqual(auditTask(t).errors,[]);
 });
 test('所有搭接图独立按毫米位置求并集，避免原材料长度之和混充拼后距离',()=>{
- for(const t of lessons.flatMap(l=>Object.values(l.taskSets).flat()).filter(t=>t.diagram?.type==='measurement'&&t.diagram.mode==='boards'&&t.kind==='number')){
+ for(const t of lessons.flatMap(l=>Object.values(l.taskSets).flat()).filter(t=>t.diagram?.type==='measurement'&&t.diagram.mode==='boards'&&!t.diagram.unknown&&t.kind==='number')){
   const {pieceLengthsMm:pieces,overlapsMm:overlaps}=t.diagram,covered=new Set();let start=0;
   for(let i=0;i<pieces.length;i++){for(let x=start;x<start+pieces[i];x++)covered.add(x);if(i<pieces.length-1)start+=pieces[i]-overlaps[i];}
   const expected=t.unit==='厘米'?covered.size/10:t.unit==='米'?covered.size/1000:covered.size;

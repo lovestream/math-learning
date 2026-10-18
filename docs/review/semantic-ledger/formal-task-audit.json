@@ -5,9 +5,9 @@
     "total": 849,
     "schemaChecked": 849,
     "machineCheckedCount": 849,
-    "solutionInternallyConsistent": 290,
-    "independentlyDerivedFromPromptOrDiagram": 82,
-    "independentNumericProofCount": 82,
+    "solutionInternallyConsistent": 294,
+    "independentlyDerivedFromPromptOrDiagram": 84,
+    "independentNumericProofCount": 84,
     "agentSemanticReviewed": 849,
     "humanTeachingApproved": 0,
     "humanCheckedCount": 0,
@@ -4144,7 +4144,7 @@
     {
       "lessonId": "G3-U02-E01",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U02-E01.w1",
       "kind": "number",
@@ -4196,7 +4196,7 @@
     {
       "lessonId": "G3-U02-E01",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U02-E01.w2",
       "kind": "number",
@@ -4248,7 +4248,7 @@
     {
       "lessonId": "G3-U02-E01",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-E01.c1",
       "kind": "number",
@@ -4300,7 +4300,7 @@
     {
       "lessonId": "G3-U02-E01",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-E01.c2",
       "kind": "expression",
@@ -4332,7 +4332,7 @@
     {
       "lessonId": "G3-U02-E01",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-E01.c3",
       "kind": "number",
@@ -4388,7 +4388,7 @@
     {
       "lessonId": "G3-U02-E01",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-E01.c4",
       "kind": "expression",
@@ -4426,7 +4426,7 @@
     {
       "lessonId": "G3-U02-E01",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-E01.c5",
       "kind": "number",
@@ -4482,7 +4482,7 @@
     {
       "lessonId": "G3-U02-E01",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U02-E01.t1",
       "kind": "number",
@@ -4538,7 +4538,7 @@
     {
       "lessonId": "G3-U02-E01",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U02-E01.t2",
       "kind": "number",
@@ -4585,7 +4585,7 @@
     {
       "lessonId": "G3-U02-E01",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-10-18.1",
       "set": "challenge",
       "id": "G3-U02-E01.h1",
       "kind": "choice",
@@ -4626,33 +4626,24 @@
     {
       "lessonId": "G3-U02-E01",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-E01.r1",
       "kind": "number",
-      "sourceFingerprint": "8c09839401fee29855f58060c534bf02ad428d527b861a613fd3417821466d80",
+      "sourceFingerprint": "5d2434bd758ac88df17795a797bcded421c3c58586b3d636b2e39f5dd4336377",
       "errors": [],
       "flags": [],
       "proofs": [
         {
-          "type": "solution-equation",
-          "equation": "90－35＋5＝60",
-          "value": 60
-        },
-        {
-          "type": "prompt-arithmetic-oracle",
-          "value": 60
-        },
-        {
           "type": "solution-arithmetic-value",
-          "expression": "90－35＋5",
-          "value": 60
+          "expression": "60＋30",
+          "value": 90
         }
       ],
       "schemaChecked": true,
       "solutionInternallyConsistent": true,
-      "independentlyDerivedFromPromptOrDiagram": true,
-      "numericProofVerified": true,
+      "independentlyDerivedFromPromptOrDiagram": false,
+      "numericProofVerified": false,
       "formalChecked": true,
       "agentSemanticReviewed": true,
       "humanTeachingApproved": false,
@@ -4665,8 +4656,16 @@
           "humanTeachingApproved": false,
           "independentThirdParty": false
         },
-        "reason": "90-(35-5)=60，净支出30。",
+        "reason": "余额加回净支出才是原有金额。付35退5表示只花30；逆推90元并按原过程回查，不能把找零也算支出。 关系核算：60+(35-5)=90；90-(35-5)=60。",
         "authoredRelationEqualities": [
+          {
+            "taskId": "G3-U02-E01.r1",
+            "equation": "60+(35-5)=90",
+            "parts": [
+              "60+(35-5)",
+              "90"
+            ]
+          },
           {
             "taskId": "G3-U02-E01.r1",
             "equation": "90-(35-5)=60",
@@ -4682,7 +4681,7 @@
     {
       "lessonId": "G3-U02-E01",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-E01.r2",
       "kind": "expression",
@@ -5238,7 +5237,7 @@
     {
       "lessonId": "G3-U02-E02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U02-E02-P01",
       "kind": "number",
@@ -5294,7 +5293,7 @@
     {
       "lessonId": "G3-U02-E02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U02-E02-P02",
       "kind": "fields",
@@ -5343,7 +5342,7 @@
     {
       "lessonId": "G3-U02-E02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-E02-P03",
       "kind": "number",
@@ -5389,7 +5388,7 @@
     {
       "lessonId": "G3-U02-E02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-E02-P04",
       "kind": "choice",
@@ -5438,7 +5437,7 @@
     {
       "lessonId": "G3-U02-E02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-E02-P07",
       "kind": "expression",
@@ -5489,7 +5488,7 @@
     {
       "lessonId": "G3-U02-E02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U02-E02-P05",
       "kind": "expression",
@@ -5544,7 +5543,7 @@
     {
       "lessonId": "G3-U02-E02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U02-E02-P08",
       "kind": "fields",
@@ -5593,7 +5592,7 @@
     {
       "lessonId": "G3-U02-E02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "challenge",
       "id": "G3-U02-E02-P06",
       "kind": "fields",
@@ -5653,23 +5652,33 @@
     {
       "lessonId": "G3-U02-E02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-E02-P09",
-      "kind": "fields",
-      "sourceFingerprint": "dce73499c38b0d7ddda887d17f0e547e0ba5d99492e840111f668606852b1874",
+      "kind": "number",
+      "sourceFingerprint": "a7afe9ddfe08bb317ad7763db429a5344b0649435ff2668d09bc7bf3e6b44278",
       "errors": [],
       "flags": [],
       "proofs": [
         {
           "type": "solution-equation",
-          "equation": "5×3=15",
-          "value": 15
+          "equation": "120÷5＝24",
+          "value": 24
         },
         {
           "type": "solution-equation",
-          "equation": "120÷15=8",
-          "value": 8
+          "equation": "24÷8＝3",
+          "value": 3
+        },
+        {
+          "type": "solution-equation",
+          "equation": "5×3×8＝120",
+          "value": 120
+        },
+        {
+          "type": "solution-arithmetic-value",
+          "expression": "24÷8",
+          "value": 3
         }
       ],
       "schemaChecked": true,
@@ -5688,14 +5697,22 @@
           "humanTeachingApproved": false,
           "independentThirdParty": false
         },
-        "reason": "120/(5*3)=8，每组份数总15；合并除数应乘非加。",
+        "reason": "先把支数还原成盒数24，再分到8箱，每箱3盒。逆向求三层分组中间层，不把每箱15支写成15盒。 关系核算：120/5/8=3；5*3*8=120。",
         "authoredRelationEqualities": [
           {
             "taskId": "G3-U02-E02-P09",
-            "equation": "120/(5*3)=8",
+            "equation": "120/5/8=3",
             "parts": [
-              "120/(5*3)",
-              "8"
+              "120/5/8",
+              "3"
+            ]
+          },
+          {
+            "taskId": "G3-U02-E02-P09",
+            "equation": "5*3*8=120",
+            "parts": [
+              "5*3*8",
+              "120"
             ]
           }
         ]
@@ -5705,7 +5722,7 @@
     {
       "lessonId": "G3-U02-E02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-E02-P10",
       "kind": "fields",
@@ -5743,7 +5760,7 @@
     {
       "lessonId": "G3-U02-E02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-E02-P11",
       "kind": "fields",
@@ -5803,7 +5820,7 @@
     {
       "lessonId": "G3-U02-E02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-E02-P12",
       "kind": "fields",
@@ -5852,7 +5869,7 @@
     {
       "lessonId": "G3-U02-E04",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U02-E04-P01",
       "kind": "explanation",
@@ -5884,7 +5901,7 @@
     {
       "lessonId": "G3-U02-E04",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U02-E04-P02",
       "kind": "choice",
@@ -5916,7 +5933,7 @@
     {
       "lessonId": "G3-U02-E04",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-E04-P03",
       "kind": "fields",
@@ -5965,7 +5982,7 @@
     {
       "lessonId": "G3-U02-E04",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-E04-P04",
       "kind": "explanation",
@@ -5997,7 +6014,7 @@
     {
       "lessonId": "G3-U02-E04",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-E04-P07",
       "kind": "choice",
@@ -6029,7 +6046,7 @@
     {
       "lessonId": "G3-U02-E04",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U02-E04-P05",
       "kind": "explanation",
@@ -6070,7 +6087,7 @@
     {
       "lessonId": "G3-U02-E04",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U02-E04-P08",
       "kind": "explanation",
@@ -6119,7 +6136,7 @@
     {
       "lessonId": "G3-U02-E04",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "challenge",
       "id": "G3-U02-E04-P06",
       "kind": "fields",
@@ -6168,23 +6185,23 @@
     {
       "lessonId": "G3-U02-E04",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-E04-P09",
-      "kind": "expression",
-      "sourceFingerprint": "558466f8c5c9bbed106a870e7462dbbe0e15470cbf79a64559ea5caee65a1464",
+      "kind": "number",
+      "sourceFingerprint": "81f4d3039a5cb348833ed79cf01c9b931d80f03e10b981afd40192afc8741032",
       "errors": [],
       "flags": [],
       "proofs": [
         {
-          "type": "solution-equation",
-          "equation": "9+1+5=15",
-          "value": 15
+          "type": "solution-arithmetic-value",
+          "expression": "40÷8",
+          "value": 5
         },
         {
           "type": "solution-arithmetic-value",
-          "expression": "9+1+5",
-          "value": 15
+          "expression": "10÷2",
+          "value": 5
         }
       ],
       "schemaChecked": true,
@@ -6203,14 +6220,22 @@
           "humanTeachingApproved": false,
           "independentThirdParty": false
         },
-        "reason": "9+1+5=15，可改分组和换顺序凑十，不只报15。",
+        "reason": "先合盒数与袋数求8袋，再平均分40颗，或分两次；每袋5颗。保持层级单位，乘法不同分组是同一物品。 关系核算：40/(4*2)=5；4*(2*5)=40。",
         "authoredRelationEqualities": [
           {
             "taskId": "G3-U02-E04-P09",
-            "equation": "9+1+5=15",
+            "equation": "40/(4*2)=5",
             "parts": [
-              "9+1+5",
-              "15"
+              "40/(4*2)",
+              "5"
+            ]
+          },
+          {
+            "taskId": "G3-U02-E04-P09",
+            "equation": "4*(2*5)=40",
+            "parts": [
+              "4*(2*5)",
+              "40"
             ]
           }
         ]
@@ -6220,7 +6245,7 @@
     {
       "lessonId": "G3-U02-E04",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-E04-P10",
       "kind": "fields",
@@ -6269,7 +6294,7 @@
     {
       "lessonId": "G3-U02-E04",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-E04-P11",
       "kind": "fields",
@@ -6329,7 +6354,7 @@
     {
       "lessonId": "G3-U02-E04",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-E04-P12",
       "kind": "explanation",
@@ -7479,7 +7504,7 @@
     {
       "lessonId": "G3-U02-O02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U02-O02-P01",
       "kind": "fields",
@@ -7520,7 +7545,7 @@
     {
       "lessonId": "G3-U02-O02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U02-O02-P02",
       "kind": "number",
@@ -7561,7 +7586,7 @@
     {
       "lessonId": "G3-U02-O02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-O02-P03",
       "kind": "choice",
@@ -7593,7 +7618,7 @@
     {
       "lessonId": "G3-U02-O02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-O02-P04",
       "kind": "choice",
@@ -7625,7 +7650,7 @@
     {
       "lessonId": "G3-U02-O02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U02-O02-P07",
       "kind": "fields",
@@ -7674,7 +7699,7 @@
     {
       "lessonId": "G3-U02-O02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U02-O02-P05",
       "kind": "fields",
@@ -7721,7 +7746,7 @@
     {
       "lessonId": "G3-U02-O02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U02-O02-P08",
       "kind": "choice",
@@ -7753,7 +7778,7 @@
     {
       "lessonId": "G3-U02-O02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "challenge",
       "id": "G3-U02-O02-P06",
       "kind": "fields",
@@ -7802,16 +7827,22 @@
     {
       "lessonId": "G3-U02-O02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-O02-P09",
       "kind": "number",
-      "sourceFingerprint": "1496593b94cf153ec7bb39cfb2d51fbd31e614abb24b0401ca0d143657ede9a6",
+      "sourceFingerprint": "c60ea0689ff8899dc3e1035d673980f0a0559e177fa6f7f5bdc07817a1a85752",
       "errors": [],
       "flags": [],
-      "proofs": [],
+      "proofs": [
+        {
+          "type": "solution-arithmetic-value",
+          "expression": "24÷3",
+          "value": 8
+        }
+      ],
       "schemaChecked": true,
-      "solutionInternallyConsistent": false,
+      "solutionInternallyConsistent": true,
       "independentlyDerivedFromPromptOrDiagram": false,
       "numericProofVerified": false,
       "formalChecked": true,
@@ -7826,22 +7857,22 @@
           "humanTeachingApproved": false,
           "independentThirdParty": false
         },
-        "reason": "16+4=20整块，60-20=40。",
+        "reason": "□代表一整盒，先去掉散糖再平均分给3盒，每盒8颗；不是先30除3再扣6，也不把□当散糖。 关系核算：(30-6)/3=8；3*8+6=30。",
         "authoredRelationEqualities": [
           {
             "taskId": "G3-U02-O02-P09",
-            "equation": "16+4=20",
+            "equation": "(30-6)/3=8",
             "parts": [
-              "16+4",
-              "20"
+              "(30-6)/3",
+              "8"
             ]
           },
           {
             "taskId": "G3-U02-O02-P09",
-            "equation": "60-20=40",
+            "equation": "3*8+6=30",
             "parts": [
-              "60-20",
-              "40"
+              "3*8+6",
+              "30"
             ]
           }
         ]
@@ -7851,7 +7882,7 @@
     {
       "lessonId": "G3-U02-O02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-O02-P10",
       "kind": "fields",
@@ -7906,7 +7937,7 @@
     {
       "lessonId": "G3-U02-O02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-O02-P11",
       "kind": "fields",
@@ -7953,7 +7984,7 @@
     {
       "lessonId": "G3-U02-O02",
       "unitId": "G3-U02",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U02-O02-P12",
       "kind": "explanation",
@@ -16656,7 +16687,7 @@
     {
       "lessonId": "G3-U06-E01",
       "unitId": "G3-U06",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U06-E01-P01",
       "kind": "number",
@@ -16703,7 +16734,7 @@
     {
       "lessonId": "G3-U06-E01",
       "unitId": "G3-U06",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U06-E01-P02",
       "kind": "number",
@@ -16741,7 +16772,7 @@
     {
       "lessonId": "G3-U06-E01",
       "unitId": "G3-U06",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U06-E01-P03",
       "kind": "number",
@@ -16779,7 +16810,7 @@
     {
       "lessonId": "G3-U06-E01",
       "unitId": "G3-U06",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U06-E01-P04",
       "kind": "explanation",
@@ -16811,7 +16842,7 @@
     {
       "lessonId": "G3-U06-E01",
       "unitId": "G3-U06",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U06-E01-P07",
       "kind": "number",
@@ -16866,7 +16897,7 @@
     {
       "lessonId": "G3-U06-E01",
       "unitId": "G3-U06",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U06-E01-P05",
       "kind": "number",
@@ -16904,7 +16935,7 @@
     {
       "lessonId": "G3-U06-E01",
       "unitId": "G3-U06",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U06-E01-P08",
       "kind": "explanation",
@@ -16945,7 +16976,7 @@
     {
       "lessonId": "G3-U06-E01",
       "unitId": "G3-U06",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "challenge",
       "id": "G3-U06-E01-P06",
       "kind": "explanation",
@@ -16977,23 +17008,23 @@
     {
       "lessonId": "G3-U06-E01",
       "unitId": "G3-U06",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U06-E01-P09",
       "kind": "explanation",
-      "sourceFingerprint": "7143bdaeaba135e9f9afdc4130fb190f3d0357139d2ba2361282563d214ed077",
+      "sourceFingerprint": "44d0e2075ebed13e95164ba9713662606b2c85061e162771400c4c35cf400054",
       "errors": [],
       "flags": [],
       "proofs": [
         {
           "type": "solution-equation",
-          "equation": "6÷2=3",
-          "value": 3
+          "equation": "4×2＝8",
+          "value": 8
         },
         {
           "type": "solution-equation",
-          "equation": "8÷2=4",
-          "value": 4
+          "equation": "3×2＝6",
+          "value": 6
         }
       ],
       "schemaChecked": true,
@@ -17012,15 +17043,40 @@
           "humanTeachingApproved": false,
           "independentThirdParty": false
         },
-        "reason": "6小蓝合3大格，全8合4，故3/4。",
-        "authoredRelationEqualities": []
+        "reason": "合并的逆过程是等分大格。整体4大格变8小格，蓝色3大格变6小格，两者同时乘2。纸带及蓝色长度不变；允许正确口头/不同表述，待家长审核。 关系核算：4*2=8；3*2=6；6/8=3/4。",
+        "authoredRelationEqualities": [
+          {
+            "taskId": "G3-U06-E01-P09",
+            "equation": "4*2=8",
+            "parts": [
+              "4*2",
+              "8"
+            ]
+          },
+          {
+            "taskId": "G3-U06-E01-P09",
+            "equation": "3*2=6",
+            "parts": [
+              "3*2",
+              "6"
+            ]
+          },
+          {
+            "taskId": "G3-U06-E01-P09",
+            "equation": "6/8=3/4",
+            "parts": [
+              "6/8",
+              "3/4"
+            ]
+          }
+        ]
       },
       "staleSemanticEvidence": false
     },
     {
       "lessonId": "G3-U06-E01",
       "unitId": "G3-U06",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U06-E01-P10",
       "kind": "explanation",
@@ -17052,7 +17108,7 @@
     {
       "lessonId": "G3-U06-E01",
       "unitId": "G3-U06",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U06-E01-P11",
       "kind": "explanation",
@@ -17084,7 +17140,7 @@
     {
       "lessonId": "G3-U06-E01",
       "unitId": "G3-U06",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U06-E01-P12",
       "kind": "explanation",
@@ -22721,7 +22777,7 @@
     {
       "lessonId": "G3-L03-E01",
       "unitId": "G3-L03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-L03-E01-P01",
       "kind": "number",
@@ -22759,7 +22815,7 @@
     {
       "lessonId": "G3-L03-E01",
       "unitId": "G3-L03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-L03-E01-P02",
       "kind": "number",
@@ -22800,7 +22856,7 @@
     {
       "lessonId": "G3-L03-E01",
       "unitId": "G3-L03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-L03-E01-P03",
       "kind": "explanation",
@@ -22832,7 +22888,7 @@
     {
       "lessonId": "G3-L03-E01",
       "unitId": "G3-L03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-L03-E01-P04",
       "kind": "explanation",
@@ -22864,7 +22920,7 @@
     {
       "lessonId": "G3-L03-E01",
       "unitId": "G3-L03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-L03-E01-P07",
       "kind": "number",
@@ -22905,7 +22961,7 @@
     {
       "lessonId": "G3-L03-E01",
       "unitId": "G3-L03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-L03-E01-P05",
       "kind": "explanation",
@@ -22937,7 +22993,7 @@
     {
       "lessonId": "G3-L03-E01",
       "unitId": "G3-L03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-L03-E01-P08",
       "kind": "explanation",
@@ -22969,7 +23025,7 @@
     {
       "lessonId": "G3-L03-E01",
       "unitId": "G3-L03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "challenge",
       "id": "G3-L03-E01-P06",
       "kind": "explanation",
@@ -23001,18 +23057,28 @@
     {
       "lessonId": "G3-L03-E01",
       "unitId": "G3-L03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-L03-E01-P09",
       "kind": "number",
-      "sourceFingerprint": "72fc1ff33ac99253705560c872156c7049f8431728471738061c2ef06a8d95d5",
+      "sourceFingerprint": "3abd56fcd048d19965c406d1cc8a0dc3c55ba5a3d2a49b6ef49536dda2344e4f",
       "errors": [],
       "flags": [],
-      "proofs": [],
+      "proofs": [
+        {
+          "type": "solution-arithmetic-value",
+          "expression": "12÷2",
+          "value": 6
+        },
+        {
+          "type": "joined-perimeter-oracle",
+          "value": 6
+        }
+      ],
       "schemaChecked": true,
-      "solutionInternallyConsistent": false,
-      "independentlyDerivedFromPromptOrDiagram": false,
-      "numericProofVerified": false,
+      "solutionInternallyConsistent": true,
+      "independentlyDerivedFromPromptOrDiagram": true,
+      "numericProofVerified": true,
       "formalChecked": true,
       "agentSemanticReviewed": true,
       "humanTeachingApproved": false,
@@ -23025,15 +23091,32 @@
           "humanTeachingApproved": false,
           "independentThirdParty": false
         },
-        "reason": "两2厘米方格角触，外边仍八条2，总16。",
-        "authoredRelationEqualities": []
+        "reason": "减少12厘米来自两个不再外露的同长边，每边6厘米；图只标周长与未知内部边、不提供边长。存在长6宽4的两块矩形满足条件，不能把减少量12直接当边长。 关系核算：(20+20-28)/2=6；40-6*2=28。",
+        "authoredRelationEqualities": [
+          {
+            "taskId": "G3-L03-E01-P09",
+            "equation": "(20+20-28)/2=6",
+            "parts": [
+              "(20+20-28)/2",
+              "6"
+            ]
+          },
+          {
+            "taskId": "G3-L03-E01-P09",
+            "equation": "40-6*2=28",
+            "parts": [
+              "40-6*2",
+              "28"
+            ]
+          }
+        ]
       },
       "staleSemanticEvidence": false
     },
     {
       "lessonId": "G3-L03-E01",
       "unitId": "G3-L03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-L03-E01-P10",
       "kind": "explanation",
@@ -23065,7 +23148,7 @@
     {
       "lessonId": "G3-L03-E01",
       "unitId": "G3-L03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-L03-E01-P11",
       "kind": "number",
@@ -23108,7 +23191,7 @@
     {
       "lessonId": "G3-L03-E01",
       "unitId": "G3-L03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-L03-E01-P12",
       "kind": "explanation",
@@ -26209,7 +26292,7 @@
     {
       "lessonId": "G3-LP01-E01",
       "unitId": "G3-LP01",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-LP01-E01-P01",
       "kind": "explanation",
@@ -26241,7 +26324,7 @@
     {
       "lessonId": "G3-LP01-E01",
       "unitId": "G3-LP01",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-LP01-E01-P02",
       "kind": "explanation",
@@ -26282,7 +26365,7 @@
     {
       "lessonId": "G3-LP01-E01",
       "unitId": "G3-LP01",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-LP01-E01-P03",
       "kind": "explanation",
@@ -26314,7 +26397,7 @@
     {
       "lessonId": "G3-LP01-E01",
       "unitId": "G3-LP01",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-LP01-E01-P04",
       "kind": "explanation",
@@ -26361,7 +26444,7 @@
     {
       "lessonId": "G3-LP01-E01",
       "unitId": "G3-LP01",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-LP01-E01-P07",
       "kind": "explanation",
@@ -26393,7 +26476,7 @@
     {
       "lessonId": "G3-LP01-E01",
       "unitId": "G3-LP01",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-LP01-E01-P05",
       "kind": "explanation",
@@ -26434,7 +26517,7 @@
     {
       "lessonId": "G3-LP01-E01",
       "unitId": "G3-LP01",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-LP01-E01-P08",
       "kind": "explanation",
@@ -26475,7 +26558,7 @@
     {
       "lessonId": "G3-LP01-E01",
       "unitId": "G3-LP01",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "challenge",
       "id": "G3-LP01-E01-P06",
       "kind": "explanation",
@@ -26507,16 +26590,22 @@
     {
       "lessonId": "G3-LP01-E01",
       "unitId": "G3-LP01",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-LP01-E01-P09",
       "kind": "explanation",
-      "sourceFingerprint": "0bff04feaa1a0c10f1784273c41a3aff47eb200bec611c925ddf4cfa56b95d6a",
+      "sourceFingerprint": "662ff05efd98885a55edfce37a105af6e7299bf474a30435417953ef1f5946ab",
       "errors": [],
       "flags": [],
-      "proofs": [],
+      "proofs": [
+        {
+          "type": "solution-equation",
+          "equation": "17＝7×2＋3",
+          "value": 17
+        }
+      ],
       "schemaChecked": true,
-      "solutionInternallyConsistent": false,
+      "solutionInternallyConsistent": true,
       "independentlyDerivedFromPromptOrDiagram": false,
       "numericProofVerified": false,
       "formalChecked": true,
@@ -26531,15 +26620,24 @@
           "humanTeachingApproved": false,
           "independentThirdParty": false
         },
-        "reason": "17模7为3，周三后3周六。",
-        "authoredRelationEqualities": []
+        "reason": "两个整周不改星期，从周六退三整天到周三；往后17天仍到周六。不是加3，也不把今天额外计一天；开放解释须家长核对。 关系核算：17=7*2+3。",
+        "authoredRelationEqualities": [
+          {
+            "taskId": "G3-LP01-E01-P09",
+            "equation": "17=7*2+3",
+            "parts": [
+              "17",
+              "7*2+3"
+            ]
+          }
+        ]
       },
       "staleSemanticEvidence": false
     },
     {
       "lessonId": "G3-LP01-E01",
       "unitId": "G3-LP01",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-LP01-E01-P10",
       "kind": "explanation",
@@ -26580,7 +26678,7 @@
     {
       "lessonId": "G3-LP01-E01",
       "unitId": "G3-LP01",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-LP01-E01-P11",
       "kind": "explanation",
@@ -26612,7 +26710,7 @@
     {
       "lessonId": "G3-LP01-E01",
       "unitId": "G3-LP01",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-LP01-E01-P12",
       "kind": "explanation",
@@ -28936,7 +29034,7 @@
     {
       "lessonId": "G3-U03-E01",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-17.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U03-E01.w1",
       "kind": "number",
@@ -28983,7 +29081,7 @@
     {
       "lessonId": "G3-U03-E01",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-17.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U03-E01.w2",
       "kind": "number",
@@ -29034,7 +29132,7 @@
     {
       "lessonId": "G3-U03-E01",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-17.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U03-E01.c1",
       "kind": "number",
@@ -29085,7 +29183,7 @@
     {
       "lessonId": "G3-U03-E01",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-17.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U03-E01.c2",
       "kind": "number",
@@ -29136,7 +29234,7 @@
     {
       "lessonId": "G3-U03-E01",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-17.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U03-E01.c3",
       "kind": "number",
@@ -29182,7 +29280,7 @@
     {
       "lessonId": "G3-U03-E01",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-17.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U03-E01.c4",
       "kind": "number",
@@ -29233,7 +29331,7 @@
     {
       "lessonId": "G3-U03-E01",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-17.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U03-E01.c5",
       "kind": "choice",
@@ -29265,7 +29363,7 @@
     {
       "lessonId": "G3-U03-E01",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-17.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U03-E01.t1",
       "kind": "number",
@@ -29312,7 +29410,7 @@
     {
       "lessonId": "G3-U03-E01",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-17.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U03-E01.t2",
       "kind": "number",
@@ -29363,7 +29461,7 @@
     {
       "lessonId": "G3-U03-E01",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-17.1",
+      "contentVersion": "2026-10-18.1",
       "set": "challenge",
       "id": "G3-U03-E01.h1",
       "kind": "number",
@@ -29410,7 +29508,7 @@
     {
       "lessonId": "G3-U03-E01",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-17.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U03-E01.r1",
       "kind": "number",
@@ -29461,22 +29559,22 @@
     {
       "lessonId": "G3-U03-E01",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-17.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U03-E01.r2",
       "kind": "number",
-      "sourceFingerprint": "fb2c819ca4ae3f4afc79c88d7f83f664e1d6971bf446b7c1391fa403dd895a9e",
+      "sourceFingerprint": "1c4603e58ee0736f5eb369d37f5325c6335cdc9f57e988a77f98ce17615d05f2",
       "errors": [],
       "flags": [],
       "proofs": [
         {
           "type": "solution-arithmetic-value",
-          "expression": "72−2×5",
-          "value": 62
+          "expression": "72÷6",
+          "value": 12
         },
         {
-          "type": "diagram-length-oracle",
-          "value": 62
+          "type": "inverse-diagram-oracle",
+          "value": 12
         }
       ],
       "schemaChecked": true,
@@ -29495,8 +29593,16 @@
           "humanTeachingApproved": false,
           "independentThirdParty": false
         },
-        "reason": "6*12-5*2=62厘米，顺链五接头不六。明确每处2厘米是重叠长度，六条五接头且无三重叠；图与问法都量最外两端。",
+        "reason": "六板五处接头，每处2厘米。先补回10厘米重叠，再72厘米平均分六块得12厘米。图用620毫米已知距离和未知单板长，不按比例，不给12厘米答案。 关系核算：(62+2*5)/6=12；6*12-5*2=62。",
         "authoredRelationEqualities": [
+          {
+            "taskId": "G3-U03-E01.r2",
+            "equation": "(62+2*5)/6=12",
+            "parts": [
+              "(62+2*5)/6",
+              "12"
+            ]
+          },
           {
             "taskId": "G3-U03-E01.r2",
             "equation": "6*12-5*2=62",
@@ -29512,7 +29618,7 @@
     {
       "lessonId": "G3-U03-E02",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U03-E02.w1",
       "kind": "number",
@@ -29549,7 +29655,7 @@
     {
       "lessonId": "G3-U03-E02",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "G3-U03-E02.w2",
       "kind": "number",
@@ -29581,7 +29687,7 @@
     {
       "lessonId": "G3-U03-E02",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U03-E02.c1",
       "kind": "number",
@@ -29632,7 +29738,7 @@
     {
       "lessonId": "G3-U03-E02",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U03-E02.c2",
       "kind": "number",
@@ -29675,7 +29781,7 @@
     {
       "lessonId": "G3-U03-E02",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U03-E02.c3",
       "kind": "number",
@@ -29731,24 +29837,53 @@
     {
       "lessonId": "G3-U03-E02",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U03-E02.c4",
       "kind": "number",
-      "sourceFingerprint": "1e4f4526ab52d87ab2b9855da83888fe303e852500b1573bff793a4c684ebf05",
+      "sourceFingerprint": "fc09ab6db3a0199d5a26c3a6a8b11f161f5446248dcf1fea3d8c89f55d9b6f60",
       "errors": [],
       "flags": [],
       "proofs": [
         {
+          "type": "solution-equation",
+          "equation": "50×4＝200",
+          "value": 200
+        },
+        {
+          "type": "solution-equation",
+          "equation": "200−176＝24",
+          "value": 24
+        },
+        {
+          "type": "solution-equation",
+          "equation": "24÷3＝8",
+          "value": 8
+        },
+        {
+          "type": "solution-equation",
+          "equation": "8÷2＝4",
+          "value": 4
+        },
+        {
+          "type": "solution-equation",
+          "equation": "50×4−(4＋4)×3＝176",
+          "value": 176
+        },
+        {
           "type": "solution-arithmetic-value",
-          "expression": "130÷10",
-          "value": 13
+          "expression": "8÷2",
+          "value": 4
+        },
+        {
+          "type": "inverse-diagram-oracle",
+          "value": 4
         }
       ],
       "schemaChecked": true,
       "solutionInternallyConsistent": true,
-      "independentlyDerivedFromPromptOrDiagram": false,
-      "numericProofVerified": false,
+      "independentlyDerivedFromPromptOrDiagram": true,
+      "numericProofVerified": true,
       "formalChecked": true,
       "agentSemanticReviewed": true,
       "humanTeachingApproved": false,
@@ -29761,14 +29896,22 @@
           "humanTeachingApproved": false,
           "independentThirdParty": false
         },
-        "reason": "130/10=13厘米，不更改实际覆盖。130毫米在本题是已知链长，独立做单位换算，不借用上一题的答案。",
+        "reason": "四环三接头，外长50毫米、拉直总长176毫米，与开头40毫米厚5毫米的例子不同。全部重叠24毫米，每接头8毫米还要分为两段同厚端部，才得厚4毫米；8是单接头重叠，24是全部重叠，均不是厚度。未知厚度不进入题图数据。 关系核算：(50*4-176)/3/2=4；50*4-(4+4)*3=176。",
         "authoredRelationEqualities": [
           {
             "taskId": "G3-U03-E02.c4",
-            "equation": "130/10=13",
+            "equation": "(50*4-176)/3/2=4",
             "parts": [
-              "130/10",
-              "13"
+              "(50*4-176)/3/2",
+              "4"
+            ]
+          },
+          {
+            "taskId": "G3-U03-E02.c4",
+            "equation": "50*4-(4+4)*3=176",
+            "parts": [
+              "50*4-(4+4)*3",
+              "176"
             ]
           }
         ]
@@ -29778,7 +29921,7 @@
     {
       "lessonId": "G3-U03-E02",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "G3-U03-E02.c5",
       "kind": "number",
@@ -29834,7 +29977,7 @@
     {
       "lessonId": "G3-U03-E02",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U03-E02.t1",
       "kind": "number",
@@ -29890,29 +30033,48 @@
     {
       "lessonId": "G3-U03-E02",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "G3-U03-E02.t2",
       "kind": "number",
-      "sourceFingerprint": "c11716fbdc1422a57607cb887b0ff2406281420adc883c99699fb9cae56ce3f2",
+      "sourceFingerprint": "4dbb7c04f68c834dfde31713db31f35f8392d79d5b084fb4ef7862e95a145748",
       "errors": [],
       "flags": [],
       "proofs": [
         {
           "type": "solution-equation",
-          "equation": "30＋22×5＝140",
+          "equation": "4＋4＝8",
+          "value": 8
+        },
+        {
+          "type": "solution-equation",
+          "equation": "140＋8×5＝180",
+          "value": 180
+        },
+        {
+          "type": "solution-equation",
+          "equation": "180÷6＝30",
+          "value": 30
+        },
+        {
+          "type": "solution-equation",
+          "equation": "30×6−8×5＝140",
           "value": 140
         },
         {
           "type": "solution-arithmetic-value",
-          "expression": "30＋22×5",
-          "value": 140
+          "expression": "180÷6",
+          "value": 30
+        },
+        {
+          "type": "inverse-diagram-oracle",
+          "value": 30
         }
       ],
       "schemaChecked": true,
       "solutionInternallyConsistent": true,
-      "independentlyDerivedFromPromptOrDiagram": false,
-      "numericProofVerified": false,
+      "independentlyDerivedFromPromptOrDiagram": true,
+      "numericProofVerified": true,
       "formalChecked": true,
       "agentSemanticReviewed": true,
       "humanTeachingApproved": false,
@@ -29925,13 +30087,21 @@
           "humanTeachingApproved": false,
           "independentThirdParty": false
         },
-        "reason": "首30后五环各增22，30+5*22=140毫米。明确第一环占30毫米，后五环每添一个只增加22毫米；不另假设厚度。",
+        "reason": "六环五接头，每接头8毫米。将40毫米重叠补回总长140，得到六个外长合计180，再平均得单环30毫米。140除6漏还原重叠；未知外长不进入图数据。 关系核算：(140+2*4*5)/6=30；30*6-8*5=140。",
         "authoredRelationEqualities": [
           {
             "taskId": "G3-U03-E02.t2",
-            "equation": "30+5*22=140",
+            "equation": "(140+2*4*5)/6=30",
             "parts": [
-              "30+5*22",
+              "(140+2*4*5)/6",
+              "30"
+            ]
+          },
+          {
+            "taskId": "G3-U03-E02.t2",
+            "equation": "30*6-8*5=140",
+            "parts": [
+              "30*6-8*5",
               "140"
             ]
           }
@@ -29942,7 +30112,7 @@
     {
       "lessonId": "G3-U03-E02",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "challenge",
       "id": "G3-U03-E02.h1",
       "kind": "number",
@@ -29997,7 +30167,7 @@
     {
       "lessonId": "G3-U03-E02",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U03-E02.r1",
       "kind": "number",
@@ -30053,7 +30223,7 @@
     {
       "lessonId": "G3-U03-E02",
       "unitId": "G3-U03",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "G3-U03-E02.r2",
       "kind": "choice",
@@ -31662,7 +31832,7 @@
     {
       "lessonId": "algebra.substitution.intro",
       "unitId": "foundation-bridge",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "algebra.substitution.intro.w1",
       "kind": "choice",
@@ -31694,7 +31864,7 @@
     {
       "lessonId": "algebra.substitution.intro",
       "unitId": "foundation-bridge",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "warmup",
       "id": "algebra.substitution.intro.w2",
       "kind": "number",
@@ -31746,7 +31916,7 @@
     {
       "lessonId": "algebra.substitution.intro",
       "unitId": "foundation-bridge",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "algebra.substitution.intro.c1",
       "kind": "expression",
@@ -31778,7 +31948,7 @@
     {
       "lessonId": "algebra.substitution.intro",
       "unitId": "foundation-bridge",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "algebra.substitution.intro.c2",
       "kind": "expression",
@@ -31810,7 +31980,7 @@
     {
       "lessonId": "algebra.substitution.intro",
       "unitId": "foundation-bridge",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "algebra.substitution.intro.c3",
       "kind": "expression",
@@ -31842,7 +32012,7 @@
     {
       "lessonId": "algebra.substitution.intro",
       "unitId": "foundation-bridge",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "algebra.substitution.intro.c4",
       "kind": "expression",
@@ -31874,7 +32044,7 @@
     {
       "lessonId": "algebra.substitution.intro",
       "unitId": "foundation-bridge",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "core",
       "id": "algebra.substitution.intro.c5",
       "kind": "choice",
@@ -31906,7 +32076,7 @@
     {
       "lessonId": "algebra.substitution.intro",
       "unitId": "foundation-bridge",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "algebra.substitution.intro.t1",
       "kind": "expression",
@@ -31938,7 +32108,7 @@
     {
       "lessonId": "algebra.substitution.intro",
       "unitId": "foundation-bridge",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "transfer",
       "id": "algebra.substitution.intro.t2",
       "kind": "expression",
@@ -31970,7 +32140,7 @@
     {
       "lessonId": "algebra.substitution.intro",
       "unitId": "foundation-bridge",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "challenge",
       "id": "algebra.substitution.intro.h1",
       "kind": "fields",
@@ -32030,7 +32200,7 @@
     {
       "lessonId": "algebra.substitution.intro",
       "unitId": "foundation-bridge",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "algebra.substitution.intro.r1",
       "kind": "expression",
@@ -32062,16 +32232,27 @@
     {
       "lessonId": "algebra.substitution.intro",
       "unitId": "foundation-bridge",
-      "contentVersion": "2026-10-02.1",
+      "contentVersion": "2026-10-18.1",
       "set": "review",
       "id": "algebra.substitution.intro.r2",
       "kind": "choice",
-      "sourceFingerprint": "461bfc1a26c499d55580b614a2f30659e73d48e898d48248cfb0d9eef3955452",
+      "sourceFingerprint": "afdabe320485fee174449edef16ff62afa4c354c45d7361cde056620b24bae7b",
       "errors": [],
       "flags": [],
-      "proofs": [],
+      "proofs": [
+        {
+          "type": "solution-equation",
+          "equation": "24÷3＝8",
+          "value": 8
+        },
+        {
+          "type": "solution-equation",
+          "equation": "3×(7＋1)＝24",
+          "value": 24
+        }
+      ],
       "schemaChecked": true,
-      "solutionInternallyConsistent": false,
+      "solutionInternallyConsistent": true,
       "independentlyDerivedFromPromptOrDiagram": false,
       "numericProofVerified": false,
       "formalChecked": true,
@@ -32086,8 +32267,25 @@
           "humanTeachingApproved": false,
           "independentThirdParty": false
         },
-        "reason": "4(乙+1)=4乙+4；4乙+1漏三份1，乙+4漏三份乙。",
-        "authoredRelationEqualities": []
+        "reason": "先还原每盒8件点心，减该盒1块饼干得7颗糖。选7成立；8是每盒总件数，21是三盒糖合计，均误认了所求量。 关系核算：24/3-1=7；3*(7+1)=24。",
+        "authoredRelationEqualities": [
+          {
+            "taskId": "algebra.substitution.intro.r2",
+            "equation": "24/3-1=7",
+            "parts": [
+              "24/3-1",
+              "7"
+            ]
+          },
+          {
+            "taskId": "algebra.substitution.intro.r2",
+            "equation": "3*(7+1)=24",
+            "parts": [
+              "3*(7+1)",
+              "24"
+            ]
+          }
+        ]
       },
       "staleSemanticEvidence": false
     },

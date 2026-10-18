@@ -4,15 +4,27 @@ import {cm,Dimension,Ring} from './Primitives';
 // Story pictures load before the interactive workbench: their diagram styles
 // must not depend on first opening that lazy-loaded experiment.
 import './measurement.css';
+import ChainJointFigure from './ChainJointFigure';
 
 export default function TaskDiagram({diagram,intro=false}:{diagram:MeasurementTaskDiagram;intro?:boolean}){
+  if(diagram.unknown){
+    const n=diagram.count??2,chain=diagram.mode==='chain',step=480/n;
+    return <figure className="measurement-question inverse-length-question"><svg viewBox="0 0 600 220" role="img" aria-label={`${n}${chain?'个环':'块板'}的逆向关系图，最外两端相距${diagram.totalMm}毫米。问号表示待求尺寸；示意图不按比例。`}>
+      {Array.from({length:n},(_,i)=><g key={i}>
+        {chain?<Ring x={40+i*step} y={50+(i%2)*14} width={step+20} height={70-(i%2)*22} thickness={8} index={i}/>:<rect x={40+i*step} y={50+(i%2)*18} width={step+20} height="38" rx="4" fill={i%2?'#b47a27':'#327c8a'}/>}
+        <text x={40+i*step+(step+20)/2} y="157" textAnchor="middle" fontSize="16">{chain?`环${i+1}`:`板${i+1}`}</text>
+      </g>)}
+      <Dimension x1={40} x2={540} y={193} label={`两端距离 ${chain?diagram.totalMm:(diagram.totalMm??0)/10}${chain?'毫米':'厘米'}`}/>
+      <text x="300" y="24" textAnchor="middle" fontSize="17">{diagram.unknown==='thickness'?`每环外长${diagram.pieceLengthMm}毫米；金属条厚？`:`每${chain?'环外长':'块板长'}？；${chain?`金属条厚${diagram.thicknessMm}毫米`:`每处重叠${(diagram.overlapsMm?.[0]??0)/10}厘米`}`}</text>
+    </svg><figcaption>只画连接关系，不按比例。{chain?'每处接头重叠两段金属厚度。':'只有相邻两板重叠。'}问号是待求量，不能拿屏幕上的长度当已知条件。</figcaption></figure>;
+  }
   if(diagram.mode==='chain'){
     const length=diagram.pieceLengthMm??40,t=diagram.thicknessMm??5,count=diagram.count??4,model=chainMeasure(length,t,count),scale=480/Math.max(model.totalMm,160),x0=46;
     return <figure className="measurement-question"><svg viewBox="0 0 620 220" role="img" aria-label={`${count}个外长${length}毫米、厚${t}毫米的链环依次扣接`}>
       {model.starts.map((start,i)=><Ring key={i} x={x0+start*scale} y={45+(i%2?16:0)} width={length*scale} height={i%2?60:88} thickness={t*scale} index={i}/>)}
       {model.joints.map((j,i)=><g key={i} className="task-joint"><rect x={x0+j.start*scale} y="38" width={(j.end-j.start)*scale} height="111"/><text x={x0+(j.start+model.overlapMm/2)*scale} y="172" textAnchor="middle">接头{i+1}</text></g>)}
       <Dimension x1={x0} x2={x0+model.totalMm*scale} y={207} label="求最左外缘到最右外缘的长度"/>
-    </svg>{intro&&<div className="chain-condition-detail"><svg viewBox="0 0 360 142" role="img" aria-label={`一个接头放大示意：两个金属端部沿拉直方向各占${t}毫米；总长尚未知`}><text x="180" y="25" textAnchor="middle" fontSize="19">看清一个接头的两个端部</text><rect x="48" y="50" width="132" height="35" rx="7" fill="#e9b44d"/><rect x="180" y="50" width="132" height="35" rx="7" fill="#527eab"/><path d="M114 90v12h66v-12m0 0v12h66v-12" fill="none" stroke="#294b53" strokeWidth="2"/><text x="147" y="125" textAnchor="middle" fontSize="19">{t}毫米</text><text x="213" y="125" textAnchor="middle" fontSize="19">{t}毫米</text></svg><p>放大图用两种颜色区分端部，不按整环比例画。每个新接头都会让这两段厚度少伸出去。</p></div>}<figcaption>{diagram.caption??`每个环外长${length}毫米，金属条厚${t}毫米；每处接头重叠两个端部。`}</figcaption></figure>;
+    </svg>{intro&&<div className="chain-condition-detail"><ChainJointFigure thickness={t}/><p>深色是端部金属，浅色是整环的左右范围。两环上下错开画，便于比较左右位置：前环右外缘到框右边，后环左外缘到框左边。两段厚度在中线处相碰，虚线框宽{t}＋{t}毫米。</p></div>}<figcaption>{diagram.caption??`每个环外长${length}毫米，金属条厚${t}毫米；每处接头重叠两个端部。`}</figcaption></figure>;
   }
   if(diagram.mode==='boards'){
     const lengths=diagram.pieceLengthsMm??[300,250],overlaps=diagram.overlapsMm??[80],model=boardMeasure(lengths,overlaps),scale=510/model.totalMm,x0=48,jointY=Math.max(185,125+(lengths.length-1)*35),dimensionY=jointY+33;

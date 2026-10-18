@@ -45,7 +45,7 @@ for(const l of lessons){
 }
 if(rows.length!==849||new Set(rows.map(r=>r.taskId)).size!==849)throw Error('849 unique task IDs required');
 const count=key=>Object.fromEntries([...Map.groupBy(rows,r=>r[key])].map(([k,v])=>[k,v.length]));
-const report={schemaVersion:3,date:'2026-10-09',lastReviewedAt:'2026-10-17',followUpReview:'docs/review/题意歧义审校台账_20261017.json',baselineSha:'499fb72500408a5686af2c798d4798a287fc069e',scope:'封闭849题，Codex语义初审与同代理另提示反驳复核；不是教师人工逐题签署',summary:{total:rows.length,agentSemanticReviewed:rows.length,humanTeachingApproved:0,unresolved:0,changedTasks:rows.filter(r=>r.revision).length,kind:count('kind'),set:count('set'),unitId:count('unitId'),authoredArithmeticEqualities:relations.length},rows};
+const report={schemaVersion:3,date:'2026-10-09',lastReviewedAt:'2026-10-18',followUpReview:'docs/review/逆向题审校修订_20261018.json',baselineSha:'499fb72500408a5686af2c798d4798a287fc069e',scope:'封闭849题，Codex语义初审与同代理另提示反驳复核；不是教师人工逐题签署',summary:{total:rows.length,agentSemanticReviewed:rows.length,humanTeachingApproved:0,unresolved:0,changedTasks:rows.filter(r=>r.revision).length,kind:count('kind'),set:count('set'),unitId:count('unitId'),authoredArithmeticEqualities:relations.length},rows};
 const out=JSON.stringify(report,null,2)+'\n';
 if(process.argv.includes('--check')){if(fs.readFileSync(path(file),'utf8')!==out)throw Error('Final register is stale; changed source requires renewed review, not automatic approval');}
 else fs.writeFileSync(path(file),out);

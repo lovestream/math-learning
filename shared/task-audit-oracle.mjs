@@ -33,8 +33,17 @@ export function auditTask(t){
   if(t.options?.some(o=>/正确值|正确答案|错误写法|这样判断不对/.test(o.text)))errors.push('选项泄漏答案标签');
   const lengths=t.options?.map(o=>[...o.text].length)??[];if(correct&&Math.max(...lengths)>24&&[...correct.text].length>Math.min(...lengths)*2)flags.push('正确选项长度显著偏长，需人工查措辞');
  }
- const d=t.diagram;
- if(d?.type==='measurement'&&t.kind==='number'){
+  const d=t.diagram;
+  if(d?.type==='joined-perimeters'&&target!==undefined){
+   const value=(2*d.eachPerimeter-d.totalPerimeter)/2;
+   if(!(value>0&&value<d.eachPerimeter/2)||!auditSame(value,target))errors.push('贴合边与两个原周长及外周长不符');else proofs.push({type:'joined-perimeter-oracle',value});
+  }
+  if(d?.type==='measurement'&&d.unknown&&target!==undefined){
+   const value=d.mode==='chain'?(d.unknown==='thickness'?(d.count*d.pieceLengthMm-d.totalMm)/(2*(d.count-1)):(d.totalMm+2*d.thicknessMm*(d.count-1))/d.count):(d.totalMm+d.overlapsMm.reduce((a,b)=>a+b,0))/d.count;
+   const converted=t.unit==='厘米'?value/10:value;
+   if(!auditSame(converted,target))errors.push('逆向题图条件与待求量不符');else proofs.push({type:'inverse-diagram-oracle',value:converted});
+  }
+  if(d?.type==='measurement'&&!d.unknown&&t.kind==='number'){
   let mm,unit;
   if(d.mode==='chain'){mm=d.pieceLengthMm+(d.count-1)*(d.pieceLengthMm-2*d.thicknessMm);unit='length';}
   if(d.mode==='boards'){mm=d.pieceLengthsMm.reduce((a,b)=>a+b,0)-(d.overlapsMm??[]).reduce((a,b)=>a+b,0);unit='length';}
@@ -45,7 +54,7 @@ export function auditTask(t){
    const converted=t.unit==='厘米'?mm/10:t.unit==='米'?mm/1000:mm;if(!auditSame(target,converted))errors.push('独立题图长度oracle不符');else proofs.push({type:'diagram-length-oracle',value:converted});
   }
  }
- const promptTypes=new Set(['prompt-arithmetic-oracle','unit-conversion-oracle','seat-ceiling-oracle','diagram-length-oracle']);
+  const promptTypes=new Set(['prompt-arithmetic-oracle','unit-conversion-oracle','seat-ceiling-oracle','diagram-length-oracle','inverse-diagram-oracle','joined-perimeter-oracle']);
  const independentlyDerivedFromPromptOrDiagram=target!==undefined&&proofs.some(p=>promptTypes.has(p.type)&&auditSame(p.value,target));
  const solutionInternallyConsistent=proofs.some(p=>p.type.startsWith('solution-'))&&!errors.some(e=>e.startsWith('答案说明'));
  // Compatibility fields are deliberately narrow: answer-key arithmetic is no

@@ -3,6 +3,8 @@ import {Plus,RotateCcw,Undo2,ZoomIn} from 'lucide-react';
 import {boundedInteger,chainMeasure} from '../../../shared/length-model.mjs';
 import type {LengthScene,WidgetState} from '../types';
 import {Dimension,LabNotice,Prediction,Ring,type LabProps} from './Primitives';
+import ChainJointFigure from './ChainJointFigure';
+import ChainLengthStrip from './ChainLengthStrip';
 
 export default function ChainExperiment({scene,value,update}:{scene:LengthScene}&LabProps){
   const length=scene.pieceLengthsMm?.[0]??40,t=scene.thicknessMm??5,target=boundedInteger(value.target,scene.count??4,2,5);
@@ -43,10 +45,15 @@ export default function ChainExperiment({scene,value,update}:{scene:LengthScene}
         <button aria-label="撤下最后一个链环" disabled={placed===1} onClick={()=>change({placed:placed-1,joint:-1,inspected:inspected.filter((i:number)=>i<placed-2)})}><Undo2 size={17}/>撤下</button>
       </div>
       {ghost&&<div className="ring-drag-ghost" style={{left:ghost.x,top:ghost.y}} aria-hidden="true"><svg viewBox="0 0 115 64"><Ring x={7} y={7} width={100} height={48} thickness={12} index={placed}/></svg></div>}
-      {joint>=0?<div className="lab-joint-lens"><div><ZoomIn size={21}/><b>放大第 {joint+1} 处接头</b><p>沿着链条的方向看：前一环的右端、后一环的左端，各占{t}毫米。</p></div><svg viewBox="0 0 380 158" role="img" aria-label={`接头重叠由两段${t}毫米组成`}><rect x="35" y="32" width="155" height="38" rx="4" fill="#3b8692"/><rect x="190" y="78" width="155" height="38" rx="4" fill="#c58b36"/><rect x="125" y="18" width="130" height="116" className="joint-lens-zone"/><path d="M190 18V134" className="joint-lens-divider"/><text x="145" y="56" textAnchor="middle" className="lens-label">{t}毫米</text><text x="228" y="104" textAnchor="middle" className="lens-label">{t}毫米</text><Dimension x1={125} x2={255} y={155} label={`${t}＋${t}＝${t*2}毫米`}/></svg></div>:<LabNotice>接上第二个环后，点一下接头的编号，看看两段厚度在哪里。</LabNotice>}
+      <div className="chain-method-toggle" role="group" aria-label="两种长度算法">
+        <button aria-pressed={value.mode!=='chain-overlap'} onClick={()=>update({mode:'chain-growth'})}>逐个接长</button>
+        <button aria-pressed={value.mode==='chain-overlap'} onClick={()=>update({mode:'chain-overlap'})}>先相加，再减重叠</button>
+      </div>
+      <ChainLengthStrip length={length} thickness={t} count={placed} subtract={value.mode==='chain-overlap'}/>
+      {joint>=0?<div className="lab-joint-lens"><div><ZoomIn size={21}/><b>放大第 {joint+1} 处接头</b><p>前环的右外缘在框的最右边；后环的左外缘在框的最左边。两段端部金属在框的中线处相碰。</p><p>深色是端部金属，浅色是整环的左右范围。上下错开画，便于比较左右位置。虚线框宽{t}＋{t}＝{t*2}毫米，这段已在前环的外长里算过了。</p></div><ChainJointFigure thickness={t} index={joint}/></div>:<LabNotice>接上第二个环后，点一下接头的编号。再看下面长度条：新环只有伸出旧链右端的部分，才增加总长。</LabNotice>}
     </div>
     <Prediction value={value} update={update} question={`${target}个环接好后，总长多少毫米？`} unit="毫米" expected={goal.totalMm} ready={all} why={`先数接头，再看每处少增加的是一段厚度，还是两段厚度。`}>
-      <div className="lab-formula"><small>办法一 · 从材料总长中去重</small><b>{length}×{target} − {2*t}×{target-1} ＝ {goal.totalMm}</b><p>{target}个环有{target-1}处接头，每处重叠{2*t}毫米。</p></div>
+      <div className="lab-formula"><small>办法一 · 各环外长相加，再去重</small><b>{length}×{target} − {2*t}×{target-1} ＝ {goal.totalMm}</b><p>{target}个环有{target-1}处接头，每处重叠{2*t}毫米。</p></div>
       <div className="lab-formula"><small>办法二 · 看每个新环增加多少</small><b>{length} ＋ {goal.addedMm}×{target-1} ＝ {goal.totalMm}</b><p>第一环完整长{length}毫米，以后每个增加{goal.addedMm}毫米。</p></div>
       <p className="lab-condition">本图规定：链环拉直绷紧，一个接头重叠两段厚度；外长和内孔长要分清。</p>
     </Prediction>

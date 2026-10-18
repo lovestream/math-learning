@@ -68,6 +68,16 @@ test('台账拒绝脏工作树、过期指纹、失败证据和静态/操作类�
  assert.equal(mapped({passed:true,source,rows:[record]}).desktopVisual,'screenshot-recorded');
 });
 
+test('单章重测按自己的SHA回填，不把旧的全量证据冒充本次运行',()=>{
+ const row=buildSemanticLedger({evidence:null}).rows.find(r=>r.lessonId==='G3-U03-E02');
+ const source={sha:'2'.repeat(40),prHeadSha:'2'.repeat(40),dirty:false};
+ const record={lessonId:row.lessonId,contentFingerprint:row.contentFingerprint,result:'pass',mathBehavior:'full-path-verified',actionsPerformed:['test-fixture-only'],assertions:[],screenshots:{},visualInspected:false};
+ const evidence={passed:true,source:{...source,sha:'1'.repeat(40)},rows:[],chapterAmendments:[{passed:true,source,rows:[record]}]};
+ const mapped=()=>buildSemanticLedger({evidence}).rows.find(r=>r.lessonId===row.lessonId).verification.evidence;
+ assert.equal(mapped().sha,source.sha);evidence.chapterAmendments[0].source.dirty=true;assert.equal(mapped(),null);
+ evidence.chapterAmendments[0].source.dirty=false;evidence.chapterAmendments[0].rows[0].contentFingerprint='stale';assert.equal(mapped(),null);
+});
+
 test('新全量证据按课回填且保留初查历史，不借开发验证代填家长和孩子',()=>{
  const ledger=buildSemanticLedger();assert.equal(ledger.verificationSummary.desktopMath,70);assert.equal(ledger.verificationSummary.fullPaths,64);assert.equal(ledger.verificationSummary.staticRelations,6);assert.equal(ledger.verificationSummary.visualInspected,70);
  for(const row of ledger.rows){assert.equal(row.sourceReview,'chapter-desktop-reviewed');assert(row.initialSourceReview);assert.equal(row.verification.parentReviewed,'no');assert.equal(row.verification.learnerMastery,'no-data');for(const t of row.independentCheck.tasks){assert(['warmup','core','transfer','challenge','review'].includes(t.sourceSet));assert(/not-certified-unseen|not-personally-unseen/.test(t.novelty));}}

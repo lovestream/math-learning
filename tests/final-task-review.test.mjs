@@ -34,7 +34,7 @@ test('849条具体理由、335题开放解释审阅范围和选择干扰项逐�
 });
 test('手写题意关系由独立Python Fraction实现复算，不读取标准答案',()=>{
  const log=execFileSync('python3',['scripts/verify-final-task-relations.py'],{encoding:'utf8'});
- assert.match(log,/499 authored equalities/);assert.match(log,/passed/);
+ assert.match(log,/513 authored equalities/);assert.match(log,/passed/);
 });
 test('改写题接受不同正确写法，但数字结果和未展开式不能冒充过程',()=>{
  const cases=[

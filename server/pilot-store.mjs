@@ -6,6 +6,7 @@ import {ensureFriend} from './pet-care.mjs';
 import {prepareReview,finishReview,validReviewSchedule} from './review-schedule.mjs';
 import {validateWidgetState} from '../shared/widget-state.mjs';
 import {correctedAssessments} from '../content/pilot/clarity-errata.mjs';
+import {inverseRevisions} from '../content/pilot/inverse-revisions.mjs';
 
 const DAY=86400000;
 const key=v=>typeof v==='string'&&/^[a-zA-Z0-9._:-]{1,180}$/.test(v)&&!['__proto__','constructor','prototype'].includes(v);
@@ -105,7 +106,7 @@ function remediateReviewEvidence(p,s,now){
 export function submitTask(p,input,lessons,now=Date.now()){
   const st=initPilot(p);return receipt(st,input.eventId,{action:'submit',...input},()=>{
     const s=sessionOf(p,input.sessionId);revision(s,input.revision);const task=s.tasks.find(t=>t.id===input.taskId);check(task,'题目不存在。');answerCheck(input.answer);s.selfChecks??={};check(s.selfChecks[task.id]?.evidenceCompletedAt,'请先完成并保存三项自查证据。');
-    const correction=correctedAssessments.get(task.id),current=lessons.find(l=>l.lessonId===s.lessonId);
+    const correction=correctedAssessments.has(task.id)||Object.hasOwn(inverseRevisions,task.id),current=lessons.find(l=>l.lessonId===s.lessonId);
     check(!correction||!current||s.contentVersion===current.contentVersion,'这道题的表述和答案已经更正。请重新打开本课；你原来的首答仍会保留，不会按旧答案继续判错。','CONTENT_UPDATED');
     const verdict=validateTask(task,input.answer);if(verdict.status==='invalidInput')return {...verdict,paid:0,revision:s.revision};
     const assisted=Boolean(s.help[task.id]),at=new Date(now).toISOString();s.answers[task.id]=input.answer;

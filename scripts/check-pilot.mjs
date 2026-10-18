@@ -4,7 +4,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {evaluateExpressionAST,formatFraction,validateTask,equivalent} from '../shared/pilot-math.mjs';
 import {measureOperationModel} from '../shared/operation-models.mjs';
-import {boardMeasure,chainMeasure,intervalMeasure,rulerReading,validateLengthScene} from '../shared/length-model.mjs';
+import {boardMeasure,chainInverse,chainMeasure,intervalMeasure,rulerReading,validateLengthScene} from '../shared/length-model.mjs';
 
 const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const lessons=JSON.parse(fs.readFileSync(path.join(root,'content/pilot/lessons.json'),'utf8'));
@@ -58,9 +58,28 @@ for(const lesson of lessons){
     if(taskIds.has(task.id))fail(`${lesson.lessonId} 任务 ID 重复：${task.id}`);taskIds.add(task.id);
     if(!lesson.objectives.some(o=>o.id===task.objectiveId))fail(`${task.id} 的目标未定义`);
     if(!task.prompt||!task.solution||!task.hint)fail(`${task.id} 缺少题干、答案说明或提示`);
+    if(task.diagram?.type==='joined-perimeters'){
+      const d=task.diagram,edge=(2*d.eachPerimeter-d.totalPerimeter)/2;
+      if(!(edge>0&&edge<d.eachPerimeter/2)||edge!==Number(task.expected))fail(`${task.id} 贴合边回代不成立`);
+    }
+    if(task.diagram?.type==='fraction'){
+      const {parts,selected}=task.diagram;
+      if(!Number.isInteger(parts)||parts<1||parts>12||!Number.isInteger(selected)||selected<0||selected>parts)fail(`${task.id} 纸带等分条件无效`);
+    }
     if(task.diagram?.type==='measurement')try{
       const d=task.diagram;
-      if(d.mode==='chain')chainMeasure(d.pieceLengthMm,d.thicknessMm,d.count);
+      if(d.unknown){
+        const answer=Number(task.expected)*(task.unit==='厘米'?10:1);
+        if(d.mode==='chain'){
+          if(d.unknown==='thickness'&&d.thicknessMm!==undefined||d.unknown==='pieceLength'&&d.pieceLengthMm!==undefined)throw Error('题图提前携带未知尺寸');
+          const solved=chainInverse({lengthMm:d.pieceLengthMm,thicknessMm:d.thicknessMm,count:d.count,totalMm:d.totalMm});
+          if(answer!==(d.unknown==='thickness'?solved.thicknessMm:solved.lengthMm))throw Error('逆向答案与条件不一致');
+        }else if(d.mode==='boards'&&d.unknown==='pieceLength'){
+          if(d.pieceLengthsMm!==undefined)throw Error('题图提前携带未知板长');
+          if(boardMeasure(Array(d.count).fill(answer),d.overlapsMm).totalMm!==d.totalMm)throw Error('逆向板长回代失败');
+        }else throw Error('未登记的逆向图');
+      }
+      else if(d.mode==='chain')chainMeasure(d.pieceLengthMm,d.thicknessMm,d.count);
       else if(d.mode==='boards')boardMeasure(d.pieceLengthsMm,d.overlapsMm);
       else if(d.mode==='ruler')rulerReading(d.startMm,d.endMm-d.startMm);
       else if(d.mode==='interval')intervalMeasure(d.lengthMm,d.spacingMm,Boolean(d.closed));
