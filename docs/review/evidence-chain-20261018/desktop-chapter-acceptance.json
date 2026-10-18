@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "source": {
+    "prHeadSha": "9d359fc81d5a859a69c03090ab45d4bf3210dc1d",
+    "sha": "9d359fc81d5a859a69c03090ab45d4bf3210dc1d",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-18T13:39:25.671Z"
+  },
+  "rows": [
+    {
+      "lessonId": "G3-U03-E02",
+      "title": "四个链环扣起来：一个接头为什么要看两段厚度",
+      "unitId": "G3-U03",
+      "actionsPerformed": [
+        "接上一个链环",
+        "放大第1处接头",
+        "撤下最后一个链环",
+        "接上一个链环",
+        "接上一个链环",
+        "接上一个链环",
+        "接上一个链环",
+        "接上一个链环",
+        "放大第1处接头",
+        "撤下最后一个链环",
+        "接上一个链环",
+        "和我的预测核对",
+        "和我的预测核对"
+      ],
+      "assertions": [
+        "长度/点数/端点单位不变量，完整与边界撤回"
+      ],
+      "mathBehavior": "full-path-verified",
+      "savedState": {
+        "target": 5,
+        "placed": 5,
+        "inspected": [
+          0
+        ],
+        "joint": -1,
+        "guess": "160",
+        "checked": true,
+        "showReason": true,
+        "sceneId": "G3-U03-E02-chain",
+        "labVersion": 2,
+        "stateKind": "legacy"
+      },
+      "screenshots": {
+        "story": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-story-1440.png",
+        "prediction": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-prediction-1440.png",
+        "initial": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-experiment-initial-1440.png",
+        "operated": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-operated-1440.png",
+        "why": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-why-1440.png",
+        "symbols": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-symbols-1440.png",
+        "verify": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-verify-1440.png"
+      },
+      "keyboardFocus": null,
+      "widths": [
+        {
+          "width": 1366,
+          "height": 768,
+          "actionsPerformed": 13,
+          "screenshot": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-operated-1366.png"
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "actionsPerformed": 13,
+          "screenshot": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-operated-1440.png"
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "actionsPerformed": 13,
+          "screenshot": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-operated-1920.png"
+        }
+      ],
+      "result": "pass",
+      "contentFingerprint": "f5553b6f799f3cafcbe189fe7bfedea6b2180bd9f44f5e797006437c49b48f58",
+      "visualInspected": true,
+      "visualInspection": {
+        "reviewer": "Codex-agent",
+        "notTeacherApproval": true,
+        "inspectedStatesAt1440": [
+          "story",
+          "prediction",
+          "initial",
+          "operated",
+          "why",
+          "symbols",
+          "verify"
+        ],
+        "finding": "端点与两段厚度正确，完整外长卡等宽；五环实验与当前算式同条件；六步与三项自查保持。"
+      }
+    }
+  ],
+  "scope": "Only G3-U03-E02 retested and visually inspected; other 69 classroom evidence sources remain unchanged."
+}

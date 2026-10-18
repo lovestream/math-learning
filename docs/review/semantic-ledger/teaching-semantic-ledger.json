@@ -39,13 +39,13 @@
     "initialSourceIssues": 33,
     "sourceRefinementNeeded": 0,
     "initiallyNoConfirmedIssue": 37,
-    "chapterVerificationNeeded": 1
+    "chapterVerificationNeeded": 0
   },
   "verificationSummary": {
-    "desktopMath": 69,
-    "fullPaths": 63,
+    "desktopMath": 70,
+    "fullPaths": 64,
     "staticRelations": 6,
-    "visualInspected": 69,
+    "visualInspected": 70,
     "parentReviewed": 0,
     "learnerMastery": 0
   },
@@ -13238,7 +13238,7 @@
       },
       "invariant": "拉直理想链的每相邻接头损失两个端部厚度",
       "nextInspection": "明确理想模型沿拉伸方向的两段5毫米；4环3接头，不能把任意真实环形均套同一公式。",
-      "sourceReview": "requires-chapter-verification",
+      "sourceReview": "chapter-desktop-reviewed",
       "sourceFinding": "no-confirmed-source-issue",
       "resolution": null,
       "issues": [],
@@ -13247,16 +13247,47 @@
       "verification": {
         "implementation": "manipulable-six-step",
         "contentReviewed": "source-checked",
-        "desktopVisual": "not-run",
-        "mathBehavior": "not-run",
+        "desktopVisual": "inspected-pass",
+        "mathBehavior": "full-path-verified",
         "parentReviewed": "no",
         "learnerMastery": "no-data",
-        "evidence": null
+        "evidence": {
+          "sha": "9d359fc81d5a859a69c03090ab45d4bf3210dc1d",
+          "prHeadSha": "9d359fc81d5a859a69c03090ab45d4bf3210dc1d",
+          "assertions": [
+            "长度/点数/端点单位不变量，完整与边界撤回"
+          ],
+          "actionsPerformed": [
+            "接上一个链环",
+            "放大第1处接头",
+            "撤下最后一个链环",
+            "接上一个链环",
+            "接上一个链环",
+            "接上一个链环",
+            "接上一个链环",
+            "接上一个链环",
+            "放大第1处接头",
+            "撤下最后一个链环",
+            "接上一个链环",
+            "和我的预测核对",
+            "和我的预测核对"
+          ],
+          "screenshots": {
+            "story": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-story-1440.png",
+            "prediction": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-prediction-1440.png",
+            "initial": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-operated-1440.png",
+            "why": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-why-1440.png",
+            "symbols": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-symbols-1440.png",
+            "verify": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-verify-1440.png"
+          },
+          "taskOnlyAmendment": null
+        }
       },
       "acceptance": {
         "sourceInspection": "recorded",
-        "mathematicalInvariants": "listed-not-individually-retested",
-        "browserSemanticEvidence": "pending-chapter-run",
+        "mathematicalInvariants": "full-path-verified",
+        "browserSemanticEvidence": "desktop-run-with-sha",
         "parentTeachingApproval": "not-verified",
         "kevinMastery": "not-assessed"
       }
