@@ -1,15 +1,15 @@
 import {useRef,useState,type PointerEvent} from 'react';
-import {Plus,RotateCcw,Undo2,ZoomIn} from 'lucide-react';
+import {Plus,RotateCcw,Undo2} from 'lucide-react';
 import {boundedInteger,chainMeasure} from '../../../shared/length-model.mjs';
 import type {LengthScene,WidgetState} from '../types';
 import {Dimension,LabNotice,Prediction,Ring,type LabProps} from './Primitives';
-import ChainJointFigure from './ChainJointFigure';
 import ChainLengthStrip from './ChainLengthStrip';
 
 export default function ChainExperiment({scene,value,update}:{scene:LengthScene}&LabProps){
   const length=scene.pieceLengthsMm?.[0]??40,t=scene.thicknessMm??5,target=boundedInteger(value.target,scene.count??4,2,5);
   const placed=boundedInteger(value.placed,1,1,target),model=chainMeasure(length,t,placed),goal=chainMeasure(length,t,target);
   const all=placed===target,joint=boundedInteger(value.joint,-1,-1,placed-2),scale=620/chainMeasure(length,t,5).totalMm,x0=54,y=86;
+  const displayJoint=joint>=0?joint:placed-2;
   const inspected=Array.isArray(value.inspected)?value.inspected.filter((n:unknown)=>Number.isInteger(n)&&Number(n)>=0&&Number(n)<placed-1):[];
   const stage=useRef<HTMLDivElement>(null),drag=useRef<{x:number;y:number;moved:boolean}|null>(null),[ghost,setGhost]=useState<{x:number;y:number}|null>(null),skipClick=useRef(false);
   const change=(patch:WidgetState)=>update({...patch,checked:false,showReason:false});
@@ -25,7 +25,7 @@ export default function ChainExperiment({scene,value,update}:{scene:LengthScene}
           <Dimension x1={x0} x2={x0+length*scale} y={61} label={`一个环外长 ${length/10}厘米`}/>
           {model.starts.map((start,i)=><g className="ring-enter" key={i}><Ring x={x0+start*scale} y={y+(i%2?18:0)} width={length*scale} height={i%2?64:100} thickness={t*scale} index={i}/><text className="lab-piece-label" x={x0+(start+length/2)*scale} y={212} textAnchor="middle">第{i+1}环</text></g>)}
           {!all&&<g className="ring-destination" aria-hidden="true"><rect x={x0+(model.totalMm-model.overlapMm)*scale} y={y+8} width={length*scale} height="84" rx="42"/><text x={x0+(model.totalMm-model.overlapMm+length/2)*scale} y="133" textAnchor="middle">把下一个环放这里</text></g>}
-          {model.joints.map((j,i)=><g role="button" tabIndex={0} key={i} aria-label={`放大第${i+1}处接头`} aria-pressed={joint===i} onClick={()=>select(i)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}}} className={`lab-joint-target ${joint===i?'selected':''} ${inspected.includes(i)?'inspected':''}`}><rect x={x0+j.start*scale-4} y={y-8} width={(j.end-j.start)*scale+8} height="117" rx="8"/><circle cx={x0+(j.start+model.overlapMm/2)*scale} cy="238" r="15"/><text x={x0+(j.start+model.overlapMm/2)*scale} y="243" textAnchor="middle">{i+1}</text></g>)}
+          {model.joints.map((j,i)=><g role="button" tabIndex={0} key={i} aria-label={`放大第${i+1}处接头`} aria-pressed={displayJoint===i} onClick={()=>select(i)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}}} className={`lab-joint-target ${displayJoint===i?'selected':''} ${inspected.includes(i)?'inspected':''}`}><rect x={x0+j.start*scale-4} y={y-8} width={(j.end-j.start)*scale+8} height="117" rx="8"/><circle cx={x0+(j.start+model.overlapMm/2)*scale} cy="238" r="15"/><text x={x0+(j.start+model.overlapMm/2)*scale} y="243" textAnchor="middle">{i+1}</text></g>)}
           <Dimension x1={x0} x2={x0+model.totalMm*scale} y={292} label={value.showReason?`这${placed}个环的总长 ${model.totalMm}毫米`:'最左外缘到最右外缘：要量这一段'} className="total-dimension"/>
         </svg>
       </div>
@@ -41,7 +41,7 @@ export default function ChainExperiment({scene,value,update}:{scene:LengthScene}
           <svg viewBox="0 0 115 64" aria-hidden="true"><Ring x={7} y={7} width={100} height={48} thickness={12} index={placed}/></svg>
           <span><Plus size={16}/>{all?'全部接好了':'接上一个环'}</span>
         </button>
-        <div><b>{all?'下一步：点图中编号，放大接头':'点一下，或把这个环拖到连接区'}</b><p>第一个环先摆好；每添一个环才多一处接头。</p></div>
+        <div><b>{all?'接好了：下方直接看等长的外长图和接头细节':'点一下，或把这个环拖到连接区'}</b><p>第一个环先摆好；每添一个环才多一处接头。</p></div>
         <button aria-label="撤下最后一个链环" disabled={placed===1} onClick={()=>change({placed:placed-1,joint:-1,inspected:inspected.filter((i:number)=>i<placed-2)})}><Undo2 size={17}/>撤下</button>
       </div>
       {ghost&&<div className="ring-drag-ghost" style={{left:ghost.x,top:ghost.y}} aria-hidden="true"><svg viewBox="0 0 115 64"><Ring x={7} y={7} width={100} height={48} thickness={12} index={placed}/></svg></div>}
@@ -49,8 +49,8 @@ export default function ChainExperiment({scene,value,update}:{scene:LengthScene}
         <button aria-pressed={value.mode!=='chain-overlap'} onClick={()=>update({mode:'chain-growth'})}>逐个接长</button>
         <button aria-pressed={value.mode==='chain-overlap'} onClick={()=>update({mode:'chain-overlap'})}>先相加，再减重叠</button>
       </div>
-      <ChainLengthStrip length={length} thickness={t} count={placed} subtract={value.mode==='chain-overlap'}/>
-      {joint>=0?<div className="lab-joint-lens"><div><ZoomIn size={21}/><b>放大第 {joint+1} 处接头</b><p>前环的右外缘在框的最右边；后环的左外缘在框的最左边。两段端部金属在框的中线处相碰。</p><p>深色是端部金属，浅色是整环的左右范围。上下错开画，便于比较左右位置。虚线框宽{t}＋{t}＝{t*2}毫米，这段已在前环的外长里算过了。</p></div><ChainJointFigure thickness={t} index={joint}/></div>:<LabNotice>接上第二个环后，点一下接头的编号。再看下面长度条：新环只有伸出旧链右端的部分，才增加总长。</LabNotice>}
+      <ChainLengthStrip length={length} thickness={t} count={placed} subtract={value.mode==='chain-overlap'} joint={displayJoint}/>
+      {placed===1&&<LabNotice>第一个环的完整外长是{length}毫米。接上第二个环，下方就会直接展开接头，说明哪一段不能重复计算。</LabNotice>}
     </div>
     <Prediction value={value} update={update} question={`${target}个环接好后，总长多少毫米？`} unit="毫米" expected={goal.totalMm} ready={all} why={`先数接头，再看每处少增加的是一段厚度，还是两段厚度。`}>
       <div className="lab-formula"><small>办法一 · 各环外长相加，再去重</small><b>{length}×{target} − {2*t}×{target-1} ＝ {goal.totalMm}</b><p>{target}个环有{target-1}处接头，每处重叠{2*t}毫米。</p></div>

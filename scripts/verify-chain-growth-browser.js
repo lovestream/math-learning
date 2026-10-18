@@ -4,6 +4,14 @@ async page=>{
  const get=async()=>await(await page.request.get(base+'/api/studio')).json();
  const shot=async(name,locator)=>{const path=`output/playwright/v2-audit/chain-${name}.png`;await locator.screenshot({path});screenshots.push(path);};
  const stage=async n=>page.locator('.classroom-route button').nth(n).click();
+ const checkEqualRows=async()=>{
+  const rows=await page.locator('.chain-ledger-math').evaluateAll(svgs=>svgs.map(svg=>{
+   const full=svg.querySelector('.chain-full-span'),dimension=svg.querySelector('.lab-dimension path'),a=full.getBBox(),b=dimension.getBBox();
+   return {width:full.getBoundingClientRect().width,fullWidth:a.width,dimensionMatches:Math.abs(a.x-b.x)<.01&&Math.abs(a.width-b.width)<.01,label:svg.querySelector('.lab-dimension text').textContent,labelsFit:[...svg.querySelectorAll('text')].every(t=>{const r=t.getBBox();return r.x>=-1&&r.x+r.width<=421;})};
+  }));
+  assert(rows.length>0&&rows.every(r=>r.fullWidth===380&&r.dimensionMatches&&r.label.includes('完整外长 40毫米')&&r.labelsFit),'40毫米未标到完整外长两端，或文字被裁掉');
+  assert(rows.every(r=>Math.abs(r.width-rows[0].width)<.6),'相同外长的完整色带实际显示不等长');
+ };
  await page.goto(base+'/?lesson=G3-U03-E02');await page.locator('.child-classroom').waitFor();
  assert(await page.locator('.classroom-route button').count()===6,'新增了必经课堂步骤');
  await stage(1);const intro=page.locator('.chain-joint-figure');await intro.waitFor();
@@ -20,6 +28,8 @@ async page=>{
    const parts=await lab.locator('.chain-growth-piece').evaluateAll(nodes=>nodes.map(n=>({start:Number(n.dataset.startMm),end:Number(n.dataset.endMm),added:Number(n.dataset.addedMm)})));
    assert(parts.length===n&&parts[0].added===40&&parts.slice(1).every(p=>p.added===30),'首环或新增长度错误');
    assert(parts.reduce((s,p)=>s+p.added,0)===40+30*(n-1),'新增条未守恒');
+   await checkEqualRows();
+   if(n>1)assert(await lab.locator('.chain-inline-joint .chain-joint-figure').isVisible(),'接头细节需要额外点击才出现');
    if(n<target)await lab.getByRole('button',{name:'接上一个链环',exact:true}).click();
   }
   await lab.getByRole('button',{name:'放大第1处接头',exact:true}).focus();await page.keyboard.press('Enter');
@@ -33,7 +43,12 @@ async page=>{
   await page.setViewportSize({width,height:width===390?844:1024});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),'链环页面溢出');
   const lens=lab.locator('.chain-joint-figure');assert(await lens.isVisible(),'放大图消失');await shot('growth-'+width,lab);layouts.push(width);
  }
- await page.setViewportSize({width:1440,height:1000});await lab.getByRole('button',{name:'先相加，再减重叠',exact:true}).click();assert(await lab.locator('.chain-strip-cut').count()===3,'4环应划去3处重叠');await shot('subtract-1440',lab);
+ await page.setViewportSize({width:1440,height:1000});await lab.getByRole('button',{name:'先相加，再减重叠',exact:true}).click();assert(await lab.locator('.chain-strip-cut').count()===3,'4环应划去3处重叠');
+ for(const target of [3,4,5]){
+  await lab.getByRole('combobox',{name:'目标链环个数'}).selectOption(String(target));for(let n=1;n<target;n++)await lab.getByRole('button',{name:'接上一个链环',exact:true}).click();
+  for(const width of [1440,768,390]){await page.setViewportSize({width,height:1024});await checkEqualRows();assert(await lab.locator('.chain-strip-cut').count()===target-1,'重复扣减接头数错误');assert(Object.values(await geometry(lab.locator('.chain-inline-joint .chain-joint-figure'))).every(Boolean),'相加去重没有使用正确接头图');await shot(`equal-rings-${target}-${width}`,lab.locator('.chain-length-strip'));}
+ }
+ await page.setViewportSize({width:1440,height:1000});await lab.getByRole('combobox',{name:'目标链环个数'}).selectOption('4');for(let n=1;n<4;n++)await lab.getByRole('button',{name:'接上一个链环',exact:true}).click();await shot('subtract-1440',lab);
  await lab.locator('.lab-guess input').fill('120');await lab.getByRole('button',{name:'和我的预测核对',exact:true}).click();await lab.getByText('发现一个值得再想的地方',{exact:true}).waitFor();
  await lab.locator('.lab-guess input').fill('130');await lab.getByRole('button',{name:'和我的预测核对',exact:true}).click();await lab.getByText('预测和实验对上了！',{exact:true}).waitFor();
  await page.waitForFunction(()=>document.querySelector('.studio-breadcrumb small')?.textContent?.includes('操作已保存'));
@@ -58,5 +73,5 @@ async page=>{
   await submit();await card.locator('.task-feedback.correct,.task-feedback.pendingReview').waitFor();
  }
  const p=(await get()).progress,s=Object.values(p.studio.sessions).find(s=>s.lessonId==='G3-U03-E02'&&s.setName==='core');assert(s.selfChecks['G3-U03-E02.c4'].firstAnswer.value==='10'&&s.results['G3-U03-E02.c4'].selfCorrection===true,'订正覆盖首答');
- assert(!errors.length,errors.join(';'));return {passed:true,geometry:{previousAtRight:true,nextAtLeft:true,metalEndsTouch:true},bothMethods:true,counts:[2,3,4,5],inverseTasks:cases.length,firstAnswerPreserved:true,noModelReward:true,refresh:true,threeChecksOnly:true,widths:layouts,reducedMotion:true,keyboard:true,screenshots,errors};
+ assert(!errors.length,errors.join(';'));return {passed:true,geometry:{previousAtRight:true,nextAtLeft:true,metalEndsTouch:true},bothMethods:true,fullRingBarsEqual:true,fullLengthDimensionAtBothEnds:true,jointDetailWithoutExtraClick:true,equalRingCountWidths:{counts:[3,4,5],widths:[390,768,1440]},counts:[2,3,4,5],inverseTasks:cases.length,firstAnswerPreserved:true,noModelReward:true,refresh:true,threeChecksOnly:true,widths:layouts,reducedMotion:true,keyboard:true,screenshots,errors};
 }

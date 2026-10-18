@@ -2,14 +2,18 @@
 .chain-method-toggle{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
 .chain-length-strip{border:1px solid #bdcfc8;border-radius:10px;padding:16px;background:#fffdf3;margin:12px 0;color:#294b53}
 .chain-length-strip h4{font-size:16px;line-height:1.7;margin:0 0 10px}
-.chain-strip-canvas{overflow-x:auto}.chain-strip-canvas svg{width:100%;min-width:520px;display:block}
 .chain-length-strip text{font:700 16px "PingFang SC",sans-serif;fill:#294b53}
 .chain-length-strip p{font-size:15px;line-height:1.8;font-weight:700;margin:12px 0 6px}.chain-length-strip small{font-size:12px;line-height:1.8;display:block;color:#59736b}
-.chain-growth-piece{animation:chain-grow .4s ease-out both;transform-box:fill-box;transform-origin:left center}
-.chain-strip-cut rect{fill:#fff4dc;stroke:#a14832;stroke-dasharray:3 3}.chain-strip-cut path{stroke:#a14832;stroke-width:2}
-.chain-new-ring{animation:chain-grow .4s ease-out}.chain-new-ring .chain-shared-zone{fill:#b47a2720;stroke:#a26935;stroke-dasharray:5 4;stroke-width:2}.chain-old-end{stroke:#a14832;stroke-width:2;stroke-dasharray:5 4}.chain-new-ring text{font-size:17px}
-.chain-strip-canvas .chain-new-ring{min-width:0;max-width:460px;margin:auto}.chain-length-cards{display:none}
-@keyframes chain-grow{from{opacity:.15;transform:scaleX(.3)}to{opacity:1;transform:scaleX(1)}}
+.chain-length-strip{container-type:inline-size}.chain-equal-ledger{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin:16px 0}
+@container(min-width:640px){.chain-equal-ledger{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.chain-ledger-row{min-width:0;padding:12px 8px;border:1px solid #cad9d1;border-radius:8px;background:#fff;animation:chain-row-enter .18s ease-out}
+.chain-ledger-heading{display:flex;align-items:center;gap:8px;padding:0 4px 6px;font-size:15px}.chain-ledger-heading>svg{width:64px;height:32px;flex:none}.chain-ledger-heading span{font-size:12px;color:#59736b;margin-left:auto}
+.chain-ledger-math{display:block;width:100%;max-width:520px;margin:auto;overflow:visible}.chain-ledger-math text,.chain-ledger-math .lab-dimension text{font-size:18px}
+.chain-ledger-math .chain-ledger-end-text{font-size:15px;fill:#fffdf3}.chain-complete-outline{fill:none;stroke:#294b53;stroke-width:1.5;pointer-events:none}
+.chain-repeat-frame{fill:none;stroke:#a14832;stroke-width:1.5;stroke-dasharray:4 3}.chain-deduction-mark{fill:none;stroke:#a14832;stroke-width:3}
+.chain-length-strip .chain-ledger-intro{font-weight:400;font-size:14px;line-height:1.9}.chain-length-strip .chain-inline-joint p{font-weight:400;font-size:14px;line-height:1.9}
+.chain-inline-joint{margin:14px 0}.chain-length-calculation{padding:10px 14px;background:#edf4ef;border-left:3px solid #327c8a}.chain-length-calculation p{margin:4px 0}
+@keyframes chain-row-enter{from{opacity:.3;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
 .chain-joint-figure{width:100%;height:auto;display:block;background:#fffdf3;border-radius:8px}
 .chain-joint-figure text{font:600 16px "PingFang SC",sans-serif;fill:#294b53}.chain-joint-figure .lab-dimension text{font-size:17px}
 .chain-joint-figure .chain-shared-zone{fill:#f5d47722;stroke:#a26935;stroke-width:2;stroke-dasharray:5 4}.chain-contact-line{stroke:#647a71;stroke-width:1.5;stroke-dasharray:3 3}
@@ -19,7 +23,8 @@
 .measurement-question .chain-condition-detail .chain-joint-figure{min-width:0;max-height:none}
 .lab-chain .lab-joint-lens{grid-template-columns:1fr}.lab-chain .lab-joint-lens>.chain-joint-figure{width:100%;max-width:520px;justify-self:center}
 @media(max-width:720px){.chain-condition-detail{grid-template-columns:1fr;padding:12px}.lab-chain .lab-joint-lens>.chain-joint-figure{max-width:none}.chain-length-strip{padding:12px}}
-@media(max-width:720px){.chain-strip-totals{display:none}.chain-length-cards{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:14px 0;padding:0}.chain-length-cards li{flex:1;min-width:65px;display:grid;text-align:center;padding:8px 3px;background:#b47a2718;border-top:5px solid #b47a27;gap:4px}.chain-length-cards li:first-child{background:#327c8a18;border-color:#327c8a}.chain-length-cards span{font-size:12px}.chain-length-cards b{font-size:20px}.chain-length-cards small{font-size:12px}.chain-joint-figure text,.chain-joint-figure .lab-dimension text{font-size:21px}}
+@media(max-width:720px){.chain-joint-figure text,.chain-joint-figure .lab-dimension text{font-size:21px}}
+
 @media(max-width:720px){.inverse-review-picture text,.inverse-length-question text,.inverse-length-question .lab-dimension text{font-size:24px}}
 .measurement-lab{--lab-ink:#173f4b;--lab-muted:#527477;--lab-paper:#f8faf4;--lab-yellow:#f2c956;--lab-blue:#327c8a;--lab-line:#c6d7d3;--lab-coral:#bd503e;--lab-wood:#c99148;margin:18px 0 0;border:1px solid #a8c0bd;border-radius:18px;background:#e8f0ed;box-shadow:0 12px 32px #163f4712;color:var(--lab-ink);overflow:hidden;font-family:"Avenir Next","PingFang SC","Microsoft YaHei",sans-serif}
 .measurement-lab *, .measurement-question *{box-sizing:border-box}
