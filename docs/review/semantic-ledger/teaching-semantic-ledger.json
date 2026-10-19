@@ -45,7 +45,7 @@
     "desktopMath": 70,
     "fullPaths": 64,
     "staticRelations": 6,
-    "visualInspected": 70,
+    "visualInspected": 69,
     "parentReviewed": 0,
     "learnerMastery": 0
   },
@@ -13247,19 +13247,20 @@
       "verification": {
         "implementation": "manipulable-six-step",
         "contentReviewed": "source-checked",
-        "desktopVisual": "inspected-pass",
+        "desktopVisual": "screenshot-recorded",
         "mathBehavior": "full-path-verified",
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "9d359fc81d5a859a69c03090ab45d4bf3210dc1d",
-          "prHeadSha": "9d359fc81d5a859a69c03090ab45d4bf3210dc1d",
+          "sha": "948a5574aface16815c8dadbda08ed70fc0d21e4",
+          "prHeadSha": "948a5574aface16815c8dadbda08ed70fc0d21e4",
           "assertions": [
             "长度/点数/端点单位不变量，完整与边界撤回"
           ],
           "actionsPerformed": [
             "接上一个链环",
-            "放大第1处接头",
+            "收起接头放大",
+            "看接头的两个5毫米",
             "撤下最后一个链环",
             "接上一个链环",
             "接上一个链环",
@@ -13273,13 +13274,13 @@
             "和我的预测核对"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-story-1440.png",
-            "prediction": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-prediction-1440.png",
-            "initial": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-experiment-initial-1440.png",
-            "operated": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-operated-1440.png",
-            "why": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-why-1440.png",
-            "symbols": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-symbols-1440.png",
-            "verify": "docs/review/evidence-chain-20261018/desktop-G3-U03-E02-verify-1440.png"
+            "story": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-story-1440.png",
+            "prediction": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-prediction-1440.png",
+            "initial": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-operated-1440.png",
+            "why": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-why-1440.png",
+            "symbols": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-symbols-1440.png",
+            "verify": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-verify-1440.png"
           },
           "taskOnlyAmendment": null
         }

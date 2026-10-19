@@ -7878,6 +7878,112 @@
   "chapterAmendments": [
     {
       "passed": true,
+      "rows": [
+        {
+          "lessonId": "G3-U03-E02",
+          "title": "四个链环扣起来：一个接头为什么要看两段厚度",
+          "unitId": "G3-U03",
+          "actionsPerformed": [
+            "接上一个链环",
+            "收起接头放大",
+            "看接头的两个5毫米",
+            "撤下最后一个链环",
+            "接上一个链环",
+            "接上一个链环",
+            "接上一个链环",
+            "接上一个链环",
+            "接上一个链环",
+            "放大第1处接头",
+            "撤下最后一个链环",
+            "接上一个链环",
+            "和我的预测核对",
+            "和我的预测核对"
+          ],
+          "assertions": [
+            "长度/点数/端点单位不变量，完整与边界撤回"
+          ],
+          "mathBehavior": "full-path-verified",
+          "savedState": {
+            "target": 5,
+            "mode": "chain-growth",
+            "placed": 5,
+            "joint": -1,
+            "inspected": [
+              0
+            ],
+            "compared": false,
+            "offset": 0,
+            "show": false,
+            "guess": "160",
+            "checked": true,
+            "showReason": false,
+            "sceneId": "G3-U03-E02-chain",
+            "labVersion": 2,
+            "stateKind": "legacy",
+            "zoom": true
+          },
+          "screenshots": {
+            "story": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-story-1440.png",
+            "prediction": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-prediction-1440.png",
+            "initial": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-operated-1440.png",
+            "why": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-why-1440.png",
+            "symbols": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-symbols-1440.png",
+            "verify": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-verify-1440.png"
+          },
+          "keyboardFocus": null,
+          "widths": [
+            {
+              "width": 1366,
+              "height": 768,
+              "actionsPerformed": 14,
+              "screenshot": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-operated-1366.png"
+            },
+            {
+              "width": 1440,
+              "height": 900,
+              "actionsPerformed": 14,
+              "screenshot": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-operated-1440.png"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "actionsPerformed": 14,
+              "screenshot": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-operated-1920.png"
+            }
+          ],
+          "result": "pass",
+          "contentFingerprint": "f5553b6f799f3cafcbe189fe7bfedea6b2180bd9f44f5e797006437c49b48f58"
+        }
+      ],
+      "opened": 1,
+      "fullMathPaths": 1,
+      "staticRelations": 0,
+      "desktopWidths": [
+        1366,
+        1440,
+        1920
+      ],
+      "desktopZoom": {
+        "status": "separate-suite",
+        "script": "scripts/verify-desktop-zoom-browser.js",
+        "method": "native Chromium profile HostZoomMap preferences, not CSS font injection or pinch"
+      },
+      "realLearnerData": false,
+      "errors": [],
+      "source": {
+        "prHeadSha": "948a5574aface16815c8dadbda08ed70fc0d21e4",
+        "sha": "948a5574aface16815c8dadbda08ed70fc0d21e4",
+        "dirty": false,
+        "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "startedAt": "2026-10-19T02:46:02.917Z"
+      },
+      "scope": "Only G3-U03-E02 reverified for §2.6; other 69 chapter evidence sources are unchanged. Two-ring visual approved; multi-ring visual awaiting parent review.",
+      "reviewEvidencePath": "docs/review/链环课堂_多环概览正式接入_20261019.md",
+      "visualReviewBoundary": "Agent inspected multi-ring and focus screenshots; parent approval covers only the earlier two-ring A–E baseline."
+    },
+    {
+      "passed": true,
       "source": {
         "prHeadSha": "9d359fc81d5a859a69c03090ab45d4bf3210dc1d",
         "sha": "9d359fc81d5a859a69c03090ab45d4bf3210dc1d",
