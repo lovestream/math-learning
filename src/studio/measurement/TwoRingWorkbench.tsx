@@ -26,7 +26,8 @@ function JointInset({view,id}:{view:ReturnType<typeof twoRingView>;id:string}){
   <svg x="836" y="36" width="240" height="480" viewBox="0 0 360 720" role="img" aria-label="上下分开看同一接头的两个金属端部">
    <defs><clipPath id={id+'-blue'}><rect x="12" y="90" width="336" height="200"/></clipPath><clipPath id={id+'-amber'}><rect x="12" y="410" width="336" height="190"/></clipPath></defs>
    <text x="180" y="23" textAnchor="middle" className="two-lens-title">同一接头，放大看</text>
-   <text x="16" y="65" className="two-blue">环①的右端</text>
+   <text x={right} y="65" textAnchor="end" className="two-blue two-previous-end-label">环①的右端</text>
+   <path d={`M${right} 73V90`} className="two-endpoint-leader two-blue"/>
    <g clipPath={`url(#${id}-blue)`}><Ring x={right-view.lengthMm*zoom} y={40} width={view.lengthMm*zoom} height={RING_H*2} thickness={view.thicknessMm*zoom} index={0}/></g>
    <text x="16" y="385" className="two-amber">环②的左端</text>
    <g clipPath={`url(#${id}-amber)`}><Ring x={left} y={360} width={view.lengthMm*zoom} height={RING_H*2} thickness={view.thicknessMm*zoom} index={1}/></g>
