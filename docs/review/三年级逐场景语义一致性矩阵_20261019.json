@@ -1,0 +1,2653 @@
+{
+  "schemaVersion": 1,
+  "scope": "70课逐场景源扫描，不冒充逐张视觉验收或Kevin掌握",
+  "lessonCount": 70,
+  "rows": [
+    {
+      "lessonId": "G3-U01-B01",
+      "sceneId": "G3-U01-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "拍三张不同方向的照片，指出观察者在哪里。",
+      "question": "Kevin给朋友寄一个玩具盒。盒子前面是红圆点，右面是蓝菱形，上面是黄星星。朋友只收到一张照片，能知道你站在哪边拍的吗？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "正前方 → 红圆点所在面",
+        "右侧 → 蓝菱形所在面",
+        "上方 → 黄星星所在面"
+      ],
+      "explanation": "盒子没有转，为什么换个站位看到的图案变了？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "sceneId": "G3-U01-B02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "保留同样的正面照片，搭出两种不同的积木总数。",
+      "question": "前排竖着叠了2块积木，后排也可以放积木。机器人只从正前方拍照，后排完全被挡住了。它说“一共只有2块”，这个结论可靠吗？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "前排2块＋后排1块＝3块",
+        "前排2块＋后排2块＝4块",
+        "正面相同 ≠ 总数相同"
+      ],
+      "explanation": "正面一样，为什么总块数却可能不同？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "sceneId": "G3-U01-B03-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "从完全展开折到一半，再折成盒子；跟踪同一个编号。",
+      "question": "Kevin给正方体礼盒的六个面贴图案。纸盒摊开以后，几个面看上去离得很远；折回去后，它们会碰到同一条棱吗？拖动折叠滑条，跟着编号找答案。",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "1 ↔ 5：上、下相对",
+        "2 ↔ 4：左、右相对",
+        "3 ↔ 6：前、后相对"
+      ],
+      "explanation": "展开图左右挨着3号的两面，为什么折后不挨着？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "sceneId": "G3-U02-B01-A",
+      "label": "场景 A · 运算顺序",
+      "mission": "按当前故事的发生顺序，先拿走，再加入；说清每一步还剩多少。",
+      "question": "车上原来有28人，到站下去9人，又上来6人。现在车上有多少人？",
+      "units": [
+        {
+          "value": 28,
+          "unit": "人",
+          "role": "原有人数"
+        },
+        {
+          "value": 9,
+          "unit": "人",
+          "role": "下车人数"
+        },
+        {
+          "value": 6,
+          "unit": "人",
+          "role": "上车人数"
+        }
+      ],
+      "geometry": "people-line",
+      "expression": "28 － 9 ＋ 6",
+      "resultUnit": "人",
+      "explanation": "先算下车后剩19人，再加上车的6人，得到25人。",
+      "review": "source-linked-math-checked; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "sceneId": "G3-U02-B01-B",
+      "label": "场景 B · 运算顺序",
+      "mission": "先把24颗珠子每6颗装一盒，再看每盒需要的标签。",
+      "question": "24颗珠子，每6颗装一盒；每盒贴2张标签。一共要贴多少张标签？",
+      "units": [
+        {
+          "value": 24,
+          "unit": "颗",
+          "role": "珠子总数"
+        },
+        {
+          "value": 6,
+          "unit": "颗/盒",
+          "role": "每盒珠子"
+        },
+        {
+          "value": 2,
+          "unit": "张/盒",
+          "role": "每盒标签"
+        }
+      ],
+      "geometry": "group-boxes",
+      "expression": "24 ÷ 6 × 2",
+      "resultUnit": "张",
+      "explanation": "先装成4盒，再算4盒各贴2张标签，共贴8张。",
+      "review": "source-linked-math-checked; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "sceneId": "G3-U02-B02-A",
+      "label": "场景 A · 运算顺序",
+      "mission": "先读清当前故事中每个数的单位，再判断第一步要解决什么。",
+      "question": "文具店有4支散铅笔，又搬来3盒，每盒6支。一共有多少支铅笔？",
+      "units": [
+        {
+          "value": 4,
+          "unit": "支",
+          "role": "散铅笔"
+        },
+        {
+          "value": 3,
+          "unit": "盒",
+          "role": "铅笔盒数"
+        },
+        {
+          "value": 6,
+          "unit": "支/盒",
+          "role": "每盒铅笔"
+        }
+      ],
+      "geometry": "boxes-and-items",
+      "expression": "4 ＋ 3 × 6",
+      "resultUnit": "支",
+      "explanation": "4支不能和3盒直接相加。先算3盒共有18支，再加4支。",
+      "review": "source-linked-math-checked; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "sceneId": "G3-U02-B03-A",
+      "label": "场景 A · 运算顺序",
+      "mission": "先想12颗红珠和8颗蓝珠是否都要装盒，再按每盒4颗分装。",
+      "question": "12颗红珠和8颗蓝珠混在一起，每4颗装一盒。需要多少盒？",
+      "units": [
+        {
+          "value": 12,
+          "unit": "颗",
+          "role": "红珠"
+        },
+        {
+          "value": 8,
+          "unit": "颗",
+          "role": "蓝珠"
+        },
+        {
+          "value": 4,
+          "unit": "颗/盒",
+          "role": "每盒珠子"
+        }
+      ],
+      "geometry": "combine-then-share",
+      "expression": "(12 ＋ 8) ÷ 4",
+      "resultUnit": "盒",
+      "explanation": "要把两种珠子都装盒，所以先合成20颗，再每4颗装一盒。",
+      "review": "source-linked-math-checked; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "sceneId": "G3-U02-B03-B",
+      "label": "场景 B · 运算顺序",
+      "mission": "原有12袋已经装好；只把8颗散珠每4颗装一袋，再求共有几袋。",
+      "question": "仓库原有12袋珠子，又有8颗散珠；每4颗散珠装1袋。装好后一共有多少袋？",
+      "units": [
+        {
+          "value": 12,
+          "unit": "袋",
+          "role": "原有整袋"
+        },
+        {
+          "value": 8,
+          "unit": "颗",
+          "role": "散珠"
+        },
+        {
+          "value": 4,
+          "unit": "颗/袋",
+          "role": "每袋珠子"
+        }
+      ],
+      "geometry": "bags-plus-loose",
+      "expression": "12 ＋ 8 ÷ 4",
+      "resultUnit": "袋",
+      "explanation": "12已经是袋数；只把8颗散珠装成2袋，再和原有12袋合起来。",
+      "review": "source-linked-math-checked; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "sceneId": "G3-U02-B04-A",
+      "label": "场景 A · 运算顺序",
+      "mission": "按当前故事的发生顺序，先拿走，再加入；说清每一步还剩多少。",
+      "question": "书架原有36本书，借走8本，又还回3本。现在有多少本？",
+      "units": [
+        {
+          "value": 36,
+          "unit": "本",
+          "role": "原有"
+        },
+        {
+          "value": 8,
+          "unit": "本",
+          "role": "借走"
+        },
+        {
+          "value": 3,
+          "unit": "本",
+          "role": "还回"
+        }
+      ],
+      "geometry": "people-line",
+      "expression": "36 － 8 ＋ 3",
+      "resultUnit": "本",
+      "explanation": "先记借走后的本数，再加还回的本数。",
+      "review": "source-linked-math-checked; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "sceneId": "G3-U02-B05-A",
+      "label": "场景 A · 运算顺序",
+      "mission": "先读清当前故事中每个数的单位，再判断第一步要解决什么。",
+      "question": "4盒彩笔，每盒6支，送给同学9支。还剩多少支？",
+      "units": [
+        {
+          "value": 4,
+          "unit": "盒",
+          "role": "彩笔盒数"
+        },
+        {
+          "value": 6,
+          "unit": "支/盒",
+          "role": "每盒彩笔"
+        },
+        {
+          "value": 9,
+          "unit": "支",
+          "role": "送出"
+        }
+      ],
+      "geometry": "boxes-and-items",
+      "expression": "4 × 6 － 9",
+      "resultUnit": "支",
+      "explanation": "题目没直接告诉总支数；先求4盒共有24支，再减送出的9支。",
+      "review": "source-linked-math-checked; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "sceneId": "G3-U02-E01-A",
+      "label": "场景 A · 等值改写",
+      "mission": "分别认清原有、付出和退回的钱，比较逐次记账与先求实际花费。",
+      "question": "Kevin有20元，买文具花8元，后来店员退回3元。最后还剩多少元？",
+      "units": [
+        {
+          "value": 20,
+          "unit": "元",
+          "role": "原有"
+        },
+        {
+          "value": 8,
+          "unit": "元",
+          "role": "付出"
+        },
+        {
+          "value": 3,
+          "unit": "元",
+          "role": "退回"
+        }
+      ],
+      "geometry": "money-flow",
+      "expression": "20 － (8 － 3)",
+      "resultUnit": "元",
+      "explanation": "实际少花的是8－3元，所以20－(8－3)=20－8＋3。",
+      "review": "source-linked-math-checked; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "sceneId": "G3-U02-E01-B",
+      "label": "场景 B · 等值改写",
+      "mission": "分别认清原有、付出和退回的钱，比较逐次记账与先求实际花费。",
+      "question": "班级有70元活动费，先垫付28元，后来退回8元。实际还剩多少元？",
+      "units": [
+        {
+          "value": 70,
+          "unit": "元",
+          "role": "活动费"
+        },
+        {
+          "value": 28,
+          "unit": "元",
+          "role": "垫付"
+        },
+        {
+          "value": 8,
+          "unit": "元",
+          "role": "退回"
+        }
+      ],
+      "geometry": "money-flow",
+      "expression": "70 － (28 － 8)",
+      "resultUnit": "元",
+      "explanation": "减去“付出后退回”的净支出，等于先减28再加8。",
+      "review": "source-linked-math-checked; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "sceneId": "G3-U02-E03-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "把净花费放进减号后的括号。",
+      "question": "有60元，先付14元又退6元。想在账本中只写一次扣款，应该扣多少？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "60−14＋6＝60−(14−6)",
+        "括号里面记录实际付出去的钱"
+      ],
+      "explanation": "把14和6放进减号后的括号，为什么不能写14＋6？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "sceneId": "G3-U02-E02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "比较分两次与一次分给所有人的结果。",
+      "question": "48张卡先平分给6组，每组再平分给2人。每人分到几张？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "48÷6÷2＝48÷(6×2)",
+        "先找总人数，而不是把组数除以2"
+      ],
+      "explanation": "分给6组后又分给每组2人，为什么等于分给6×2人？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "sceneId": "G3-U02-E04-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "比较换位置、换分组，说明什么没有改变。",
+      "question": "有3袋红珠，每袋4颗。排成3行4列，或换看成4列3行，总数会变吗？另有8颗、2颗、7颗三堆珠子，先合哪两堆方便？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "3×4＝4×3",
+        "(8＋2)＋7＝8＋(2＋7)"
+      ],
+      "explanation": "换位置与换分组分别改变了什么，为什么总数不变？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "sceneId": "G3-U02-E05-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "用同一幅点阵解释两种计数方法。",
+      "question": "教室有7排座位，每排左边5个、右边3个。先数每排还是分别数左右区，都应该得到同样座位数。",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "7×(5＋3)＝7×5＋7×3",
+        "每一排的左右两部分都重复7次"
+      ],
+      "explanation": "为什么右边的3个也要乘7，而不是只加一次3？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "sceneId": "G3-U02-O01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "还原他的错误步骤，再倒着找到方框里的数。",
+      "question": "原式是7+□×4，小乐先算加法再乘法，错误结果得到44。方框里是什么？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "错误步骤：(7＋□)×4＝44",
+        "44÷4−7＝□；再放回原式检验"
+      ],
+      "explanation": "为什么倒推44时要先除4，而不是先减7？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "sceneId": "G3-U02-O02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "整盒替换，保留三盒的乘法。",
+      "question": "一盒彩笔有12支红笔和8支蓝笔。买3个同样的盒子，式子里的“每盒支数”能先用一张卡代替吗？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "整盒卡＝12＋8",
+        "3×整盒卡＝3×(12＋8)"
+      ],
+      "explanation": "为什么换个名字后，盒子外面的乘3还要保留？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "sceneId": "G3-U03-B01-ruler",
+      "label": "原情境／可变对象",
+      "mission": "指出两端，用同一单位求它们之间的距离。",
+      "question": "尺子的零刻度坏了，物体从2厘米放到7厘米3毫米，它到底长多少？",
+      "units": "毫米（模型内部），按题目换算",
+      "geometry": "lengthWorkbench",
+      "expression": [
+        "7厘米3毫米＝73毫米",
+        "长度＝右端读数−左端读数"
+      ],
+      "explanation": "左端不在0，为什么用右端减左端还能求长度？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "sceneId": "G3-U03-B02-route",
+      "label": "原情境／可变对象",
+      "mission": "选一段已知长度，估计它重复了几次。",
+      "question": "没有一把一千米长的尺，人们怎样知道学校到公园有多远？",
+      "units": "毫米（模型内部），按题目换算",
+      "geometry": "lengthWorkbench",
+      "expression": [
+        "1千米＝1000米",
+        "10段100米与5段200米一样长"
+      ],
+      "explanation": "参照段变长了，为什么段数变少却不改变总路程？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "sceneId": "G3-UP01-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "完成换单位、杯与水、天平三个小实验，允许先试错。",
+      "question": "厨房里有一杯水，秤上的读数包含杯子。怎样求水本身有多重？先试一试换单位：同一个米袋用克或千克显示，会真的变轻吗？再分别称空杯和杯水。",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "1000克＝1千克；1000千克＝1吨",
+        "120＋260＝380（克）",
+        "380－120＝260（克）",
+        "400＝200＋200（克）"
+      ],
+      "explanation": "总质量里为什么还要扣掉空杯，才能得到水的质量？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "sceneId": "G3-UP01-B02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "自己标水线、换石块、逐块称重，核对是否满足替换条件。",
+      "question": "模型象放不进小秤，但小石块能。Kevin先让模型象上船，记下水面碰到船身的位置。把象请下船后，需要怎样放石块，才能用石块替它称重？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "船＋模型象＝船＋石块",
+        "模型象＝全部替代石块的质量之和",
+        "如果乘员上船：模型象＝石块＋乘员"
+      ],
+      "explanation": "为什么同一只船恢复同一水线，才能把象换成石块？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "sceneId": "G3-U04-B01-MODEL1",
+      "case": 1,
+      "mode": "default",
+      "label": "同类操作1",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "每盒12支笔，买3盒，一共有多少支？",
+      "units": {
+        "unit": "支",
+        "group": "盒"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        12,
+        3
+      ],
+      "expression": "12×3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "sceneId": "G3-U04-B01-MODEL1",
+      "case": 2,
+      "mode": "default",
+      "label": "同类操作2",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "每盒21支笔，买4盒，一共有多少支？",
+      "units": {
+        "unit": "支",
+        "group": "盒"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        21,
+        4
+      ],
+      "expression": "21×4",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "sceneId": "G3-U04-B01-MODEL1",
+      "case": 3,
+      "mode": "default",
+      "label": "同类操作3",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "每盒112支笔，买4盒，一共有多少支？",
+      "units": {
+        "unit": "支",
+        "group": "盒"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        112,
+        4
+      ],
+      "expression": "112×4",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "sceneId": "G3-U04-B01-MODEL1",
+      "case": 4,
+      "mode": "default",
+      "label": "同类操作4",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "每盒230支笔，买3盒，一共有多少支？",
+      "units": {
+        "unit": "支",
+        "group": "盒"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        230,
+        3
+      ],
+      "expression": "230×3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "sceneId": "G3-U04-B01-MODEL1",
+      "case": 5,
+      "mode": "default",
+      "label": "同类操作5",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "每盒102支笔，买4盒，一共有多少支？",
+      "units": {
+        "unit": "支",
+        "group": "盒"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        102,
+        4
+      ],
+      "expression": "102×4",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "sceneId": "G3-U04-B01-MODEL1",
+      "case": 6,
+      "mode": "default",
+      "label": "换情境操作",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "操场搭座位，每排32个，共3排。换成排数与每排数，还能按同一位值关系求总数吗？",
+      "units": {
+        "unit": "个",
+        "group": "排"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        32,
+        3
+      ],
+      "expression": "32×3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "sceneId": "G3-U04-B02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "把小棒拆换过程放进数位表。",
+      "question": "Kevin有3袋小棒，每袋16根。合起来有多少根？把它们放进数位表时，个位超过9个，怎么办？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "place-value",
+      "expression": [
+        "16×3：先数一，再数十",
+        "10个一＝1个十"
+      ],
+      "explanation": "把10个一捆成1个十，为什么小棒总根数没变？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "sceneId": "G3-U04-B03-MODEL1",
+      "case": 1,
+      "mode": "default",
+      "label": "同类操作1",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "8箱饮料，每箱147瓶，一共多少瓶？",
+      "units": {
+        "unit": "瓶",
+        "group": "箱"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        147,
+        8
+      ],
+      "expression": "147×8",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "sceneId": "G3-U04-B03-MODEL1",
+      "case": 2,
+      "mode": "default",
+      "label": "同类操作2",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "7箱饮料，每箱68瓶，一共多少瓶？",
+      "units": {
+        "unit": "瓶",
+        "group": "箱"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        68,
+        7
+      ],
+      "expression": "68×7",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "sceneId": "G3-U04-B03-MODEL1",
+      "case": 3,
+      "mode": "default",
+      "label": "同类操作3",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "6箱饮料，每箱186瓶，一共多少瓶？",
+      "units": {
+        "unit": "瓶",
+        "group": "箱"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        186,
+        6
+      ],
+      "expression": "186×6",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "sceneId": "G3-U04-B03-MODEL1",
+      "case": 4,
+      "mode": "default",
+      "label": "同类操作4",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "4箱饮料，每箱249瓶，一共多少瓶？",
+      "units": {
+        "unit": "瓶",
+        "group": "箱"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        249,
+        4
+      ],
+      "expression": "249×4",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "sceneId": "G3-U04-B03-MODEL1",
+      "case": 5,
+      "mode": "default",
+      "label": "同类操作5",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "3箱饮料，每箱375瓶，一共多少瓶？",
+      "units": {
+        "unit": "瓶",
+        "group": "箱"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        375,
+        3
+      ],
+      "expression": "375×3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "sceneId": "G3-U04-B03-MODEL1",
+      "case": 6,
+      "mode": "default",
+      "label": "换情境操作",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "6条纸带各长158毫米，首尾相接，不重叠、不留缝。总长多少毫米？每次满十换一是什么意思？",
+      "units": {
+        "unit": "毫米",
+        "group": "条"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        158,
+        6
+      ],
+      "expression": "158×6",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "sceneId": "G3-U04-B04-MODEL1",
+      "case": 1,
+      "mode": "default",
+      "label": "同类操作1",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "每区604个座位，共8区，一共有多少座位？",
+      "units": {
+        "unit": "个",
+        "group": "区"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        604,
+        8
+      ],
+      "expression": "604×8",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "sceneId": "G3-U04-B04-MODEL1",
+      "case": 2,
+      "mode": "default",
+      "label": "同类操作2",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "每区305个座位，共6区，一共有多少座位？",
+      "units": {
+        "unit": "个",
+        "group": "区"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        305,
+        6
+      ],
+      "expression": "305×6",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "sceneId": "G3-U04-B04-MODEL1",
+      "case": 3,
+      "mode": "default",
+      "label": "同类操作3",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "每区240个座位，共4区，一共有多少座位？",
+      "units": {
+        "unit": "个",
+        "group": "区"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        240,
+        4
+      ],
+      "expression": "240×4",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "sceneId": "G3-U04-B04-MODEL1",
+      "case": 4,
+      "mode": "default",
+      "label": "同类操作4",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "每区508个座位，共7区，一共有多少座位？",
+      "units": {
+        "unit": "个",
+        "group": "区"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        508,
+        7
+      ],
+      "expression": "508×7",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "sceneId": "G3-U04-B04-MODEL1",
+      "case": 5,
+      "mode": "default",
+      "label": "同类操作5",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "每区700个座位，共9区，一共有多少座位？",
+      "units": {
+        "unit": "个",
+        "group": "区"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        700,
+        9
+      ],
+      "expression": "700×9",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "sceneId": "G3-U04-B04-MODEL1",
+      "case": 6,
+      "mode": "default",
+      "label": "换情境操作",
+      "mission": "先按当前每份数量逐组合并，再解释每次满十换一；合并不改变总量。",
+      "question": "5袋米，每袋406克。总质量多少克？袋数变了，中间0的数位能不能省掉？",
+      "units": {
+        "unit": "克",
+        "group": "袋"
+      },
+      "geometry": "product-place",
+      "parameters": [
+        406,
+        5
+      ],
+      "expression": "406×5",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "sceneId": "G3-U04-B05-MODEL1",
+      "case": 1,
+      "mode": "default",
+      "label": "同类操作1",
+      "mission": "以当前预算为准，先选上界或下界，说明它能保证什么，再精算验证。",
+      "question": "398名同学每人票价8元，准备3200元够不够？",
+      "units": {
+        "unit": "元"
+      },
+      "geometry": "estimate-product",
+      "parameters": [
+        398,
+        8,
+        3200,
+        390,
+        400
+      ],
+      "expression": "398×8，与预算3200比较",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "sceneId": "G3-U04-B05-MODEL1",
+      "case": 2,
+      "mode": "default",
+      "label": "同类操作2",
+      "mission": "以当前预算为准，先选上界或下界，说明它能保证什么，再精算验证。",
+      "question": "203名同学每人票价4元，准备800元够不够？",
+      "units": {
+        "unit": "元"
+      },
+      "geometry": "estimate-product",
+      "parameters": [
+        203,
+        4,
+        800,
+        200,
+        210
+      ],
+      "expression": "203×4，与预算800比较",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "sceneId": "G3-U04-B05-MODEL1",
+      "case": 3,
+      "mode": "default",
+      "label": "同类操作3",
+      "mission": "以当前预算为准，先选上界或下界，说明它能保证什么，再精算验证。",
+      "question": "296名同学每人票价3元，准备900元够不够？",
+      "units": {
+        "unit": "元"
+      },
+      "geometry": "estimate-product",
+      "parameters": [
+        296,
+        3,
+        900,
+        290,
+        300
+      ],
+      "expression": "296×3，与预算900比较",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "sceneId": "G3-U04-B05-MODEL1",
+      "case": 4,
+      "mode": "default",
+      "label": "同类操作4",
+      "mission": "以当前预算为准，先选上界或下界，说明它能保证什么，再精算验证。",
+      "question": "402名同学每人票价6元，准备2400元够不够？",
+      "units": {
+        "unit": "元"
+      },
+      "geometry": "estimate-product",
+      "parameters": [
+        402,
+        6,
+        2400,
+        400,
+        410
+      ],
+      "expression": "402×6，与预算2400比较",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "sceneId": "G3-U04-B05-MODEL1",
+      "case": 5,
+      "mode": "default",
+      "label": "同类操作5",
+      "mission": "以当前预算为准，先选上界或下界，说明它能保证什么，再精算验证。",
+      "question": "487名同学每人票价5元，准备2450元够不够？",
+      "units": {
+        "unit": "元"
+      },
+      "geometry": "estimate-product",
+      "parameters": [
+        487,
+        5,
+        2450,
+        480,
+        490
+      ],
+      "expression": "487×5，与预算2450比较",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "sceneId": "G3-U04-B05-MODEL1",
+      "case": 6,
+      "mode": "default",
+      "label": "换情境操作",
+      "mission": "以当前预算为准，先选上界或下界，说明它能保证什么，再精算验证。",
+      "question": "食堂买198千克米，每千克7元，预算1400元。选择费用上界或下界，说明它能保证什么。",
+      "units": {
+        "unit": "元"
+      },
+      "geometry": "estimate-product",
+      "parameters": [
+        198,
+        7,
+        1400,
+        190,
+        200
+      ],
+      "expression": "198×7，与预算1400比较",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "sceneId": "G3-UP02-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "给每个位置一个不重复、能找到的地址。",
+      "question": "给图书馆每个书架的书贴号码，怎样避免两本书同号？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "coding",
+      "expression": [
+        "书架号—层号—格号",
+        "编号用于查找；数量用于计数"
+      ],
+      "explanation": "编号为什么能帮助找位置，却不能直接用来求图书本数？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "sceneId": "G3-U05-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "比较端点和延伸方向，指出哪种线能量长度。",
+      "question": "画一段5厘米的路线，与画一束继续照下去的光，符号应相同吗？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "线段：两个端点",
+        "射线：一个端点；直线：没有端点"
+      ],
+      "explanation": "射线在纸上只有一小段，为什么不能量它的总长度？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "sceneId": "G3-U05-B02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "只改变张口，比较转过的大小。",
+      "question": "剪刀张开一点和张开很多，哪次转得更多？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "angle",
+      "expression": [
+        "角的大小看两边张开的程度",
+        "延长边不改变角"
+      ],
+      "explanation": "为什么边画长了，角却没有变大？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "sceneId": "G3-U05-B03-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "把同一个直角当标准，比较大、小与相等。",
+      "question": "没有量角器，怎样判断墙角是否像书本角那样方正？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "angle",
+      "expression": [
+        "直角作比较标准",
+        "比直角小是锐角，比直角大且小于平角是钝角"
+      ],
+      "explanation": "为什么要先对齐，才能用同一个直角标准比较？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "sceneId": "G3-U06-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "先认整体，再检查四份是否同样大。",
+      "question": "一块饼平均给4人，每人不到一块，用什么数记录每人所得？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "fraction",
+      "expression": [
+        "1个整体平均分4份",
+        "其中1份记作1/4"
+      ],
+      "explanation": "同样分成4份，为什么不等分就不能各说成1/4？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "sceneId": "G3-U06-B02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "用总份数和涂色份数一起描述蓝色部分。",
+      "question": "一张长条贴纸平均分8格，涂3格；怎样一句话记录涂色多少？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "fraction",
+      "expression": [
+        "每小份是1/8",
+        "3个1/8记作3/8"
+      ],
+      "explanation": "3/8中的3在数什么，8为什么不是涂色格数？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "sceneId": "G3-U06-B03-MODEL1",
+      "case": 1,
+      "mode": "default",
+      "label": "同类操作1",
+      "mission": "两次都以同一整体为准，分别取2/8与3/8，不能重复拿同一份。",
+      "question": "同一块饼先吃2/8，后来吃3/8；一共吃多少，还剩多少？",
+      "units": {
+        "unit": "份"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        8,
+        2,
+        3
+      ],
+      "expression": "2/8＋3/8",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "sceneId": "G3-U06-B03-MODEL1",
+      "case": 2,
+      "mode": "default",
+      "label": "同类操作2",
+      "mission": "两次都以同一整体为准，分别取1/6与2/6，不能重复拿同一份。",
+      "question": "同一块饼先吃1/6，后来吃2/6；一共吃多少，还剩多少？",
+      "units": {
+        "unit": "份"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        6,
+        1,
+        2
+      ],
+      "expression": "1/6＋2/6",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "sceneId": "G3-U06-B03-MODEL1",
+      "case": 3,
+      "mode": "default",
+      "label": "同类操作3",
+      "mission": "两次都以同一整体为准，分别取3/10与4/10，不能重复拿同一份。",
+      "question": "同一块饼先吃3/10，后来吃4/10；一共吃多少，还剩多少？",
+      "units": {
+        "unit": "份"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        10,
+        3,
+        4
+      ],
+      "expression": "3/10＋4/10",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "sceneId": "G3-U06-B03-MODEL1",
+      "case": 4,
+      "mode": "default",
+      "label": "同类操作4",
+      "mission": "两次都以同一整体为准，分别取1/4与2/4，不能重复拿同一份。",
+      "question": "同一块饼先吃1/4，后来吃2/4；一共吃多少，还剩多少？",
+      "units": {
+        "unit": "份"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        4,
+        1,
+        2
+      ],
+      "expression": "1/4＋2/4",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "sceneId": "G3-U06-B03-MODEL1",
+      "case": 5,
+      "mode": "default",
+      "label": "同类操作5",
+      "mission": "两次都以同一整体为准，分别取3/8与5/8，不能重复拿同一份。",
+      "question": "同一块饼先吃3/8，后来吃5/8；一共吃多少，还剩多少？",
+      "units": {
+        "unit": "份"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        8,
+        3,
+        5
+      ],
+      "expression": "3/8＋5/8",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "sceneId": "G3-U06-B03-MODEL1",
+      "case": 6,
+      "mode": "default",
+      "label": "换情境操作",
+      "mission": "两次都以同一整体为准，分别取2/6与3/6，不能重复拿同一份。",
+      "question": "同一根木条，先锯下全长的2/6，再锯下原来全长的3/6。总共锯去几分之几？第二次仍以原来的整根为整体。",
+      "units": {
+        "unit": "份"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        6,
+        2,
+        3
+      ],
+      "expression": "2/6＋3/6",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "sceneId": "G3-U06-B04-MODEL1",
+      "case": 1,
+      "mode": "default",
+      "label": "同类操作1",
+      "mission": "先认清当前整体与平均份数，再求一份和指定几份的数量。",
+      "question": "一盒12颗糖，拿走整盒的1/3，是多少颗？",
+      "units": {
+        "unit": "颗"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        12,
+        3,
+        1
+      ],
+      "expression": "12÷3×1",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "sceneId": "G3-U06-B04-MODEL1",
+      "case": 2,
+      "mode": "default",
+      "label": "同类操作2",
+      "mission": "先认清当前整体与平均份数，再求一份和指定几份的数量。",
+      "question": "一盒16颗糖，拿走整盒的1/4，是多少颗？",
+      "units": {
+        "unit": "颗"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        16,
+        4,
+        1
+      ],
+      "expression": "16÷4×1",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "sceneId": "G3-U06-B04-MODEL1",
+      "case": 3,
+      "mode": "default",
+      "label": "同类操作3",
+      "mission": "先认清当前整体与平均份数，再求一份和指定几份的数量。",
+      "question": "一盒20颗糖，拿走整盒的1/5，是多少颗？",
+      "units": {
+        "unit": "颗"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        20,
+        5,
+        1
+      ],
+      "expression": "20÷5×1",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "sceneId": "G3-U06-B04-MODEL1",
+      "case": 4,
+      "mode": "default",
+      "label": "同类操作4",
+      "mission": "先认清当前整体与平均份数，再求一份和指定几份的数量。",
+      "question": "一盒18颗糖，拿走整盒的1/6，是多少颗？",
+      "units": {
+        "unit": "颗"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        18,
+        6,
+        1
+      ],
+      "expression": "18÷6×1",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "sceneId": "G3-U06-B04-MODEL1",
+      "case": 5,
+      "mode": "default",
+      "label": "同类操作5",
+      "mission": "先认清当前整体与平均份数，再求一份和指定几份的数量。",
+      "question": "一盒24颗糖，拿走整盒的1/8，是多少颗？",
+      "units": {
+        "unit": "颗"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        24,
+        8,
+        1
+      ],
+      "expression": "24÷8×1",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "sceneId": "G3-U06-B04-MODEL1",
+      "case": 6,
+      "mode": "default",
+      "label": "换情境操作",
+      "mission": "先认清当前整体与平均份数，再求一份和指定几份的数量。",
+      "question": "15名乘客平均坐3辆车，一辆车里是全体乘客的1/3。一辆有几人？这里的整体是什么？",
+      "units": {
+        "unit": "人"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        15,
+        3,
+        1
+      ],
+      "expression": "15÷3×1",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "sceneId": "G3-U06-B05-MODEL1",
+      "case": 1,
+      "mode": "default",
+      "label": "同类操作1",
+      "mission": "先认清当前整体与平均份数，再求一份和指定几份的数量。",
+      "question": "24张贴纸的3/8要送朋友，应拿出多少张？",
+      "units": {
+        "unit": "张"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        24,
+        8,
+        3
+      ],
+      "expression": "24÷8×3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "sceneId": "G3-U06-B05-MODEL1",
+      "case": 2,
+      "mode": "default",
+      "label": "同类操作2",
+      "mission": "先认清当前整体与平均份数，再求一份和指定几份的数量。",
+      "question": "18张贴纸的2/6要送朋友，应拿出多少张？",
+      "units": {
+        "unit": "张"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        18,
+        6,
+        2
+      ],
+      "expression": "18÷6×2",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "sceneId": "G3-U06-B05-MODEL1",
+      "case": 3,
+      "mode": "default",
+      "label": "同类操作3",
+      "mission": "先认清当前整体与平均份数，再求一份和指定几份的数量。",
+      "question": "20张贴纸的3/5要送朋友，应拿出多少张？",
+      "units": {
+        "unit": "张"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        20,
+        5,
+        3
+      ],
+      "expression": "20÷5×3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "sceneId": "G3-U06-B05-MODEL1",
+      "case": 4,
+      "mode": "default",
+      "label": "同类操作4",
+      "mission": "先认清当前整体与平均份数，再求一份和指定几份的数量。",
+      "question": "28张贴纸的4/7要送朋友，应拿出多少张？",
+      "units": {
+        "unit": "张"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        28,
+        7,
+        4
+      ],
+      "expression": "28÷7×4",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "sceneId": "G3-U06-B05-MODEL1",
+      "case": 5,
+      "mode": "default",
+      "label": "同类操作5",
+      "mission": "先认清当前整体与平均份数，再求一份和指定几份的数量。",
+      "question": "16张贴纸的3/4要送朋友，应拿出多少张？",
+      "units": {
+        "unit": "张"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        16,
+        4,
+        3
+      ],
+      "expression": "16÷4×3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "sceneId": "G3-U06-B05-MODEL1",
+      "case": 6,
+      "mode": "default",
+      "label": "换情境操作",
+      "mission": "先认清当前整体与平均份数，再求一份和指定几份的数量。",
+      "question": "30支笔平均放入6盒，带走其中5盒。带走的是全部的几分之几，共多少支？",
+      "units": {
+        "unit": "支"
+      },
+      "geometry": "fraction-core",
+      "parameters": [
+        30,
+        6,
+        5
+      ],
+      "expression": "30÷6×5",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "sceneId": "G3-U06-E01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "对比同一条纸带的2小份与1大份。",
+      "question": "同一条纸带从左到右平均分成6小格，前2小格涂蓝色。现在不剪纸带，也不改变蓝色部分，只把每相邻2小格看作1大格。改变分组前后，蓝色部分的实际长度一样吗？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "fraction",
+      "expression": [
+        "同一整体：2/6＝1/3",
+        "分组名称变了，实际长度没有变"
+      ],
+      "explanation": "份数名字从2/6变成1/3，为什么蓝色长度没变？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "sceneId": "G3-U07-R01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "先求总需求，再扣掉已有贴纸。",
+      "question": "班级要做36份小礼物，每份贴2张贴纸，已有20张，还需买多少？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "36×2−20",
+        "需要的总数−已有的数量＝还缺的数量"
+      ],
+      "explanation": "为什么先算36×2，而不是先用36减20？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "sceneId": "G3-U07-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "逐件固定上衣，检查搭配不重复、不遗漏。",
+      "question": "有2种上衣、3种裤子，每次各穿1件，可以组成几套？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "outfits",
+      "expression": [
+        "2×3＝6（套）",
+        "每件上衣都能配3种裤子"
+      ],
+      "explanation": "按这个顺序为什么每套只记一次，还不会漏？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "sceneId": "G3-L01-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "用对折检验窗花两边的对应关系。",
+      "question": "Kevin想剪左右相同的窗花。先用正方形、长方形纸试一试：沿选定的线对折，两边能完全重合吗？弄清后再用同样的方法检验窗花。",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "paper-fold",
+      "expression": [
+        "沿对称轴对折",
+        "对应点、对应边重合"
+      ],
+      "explanation": "为什么两边面积一样，还不能证明轴对称？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "sceneId": "G3-L01-B02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "追踪同一个点，区分平移与旋转。",
+      "question": "抽屉拉开与风车转动，都是位置变化。用纸箭头代替它们：先保持朝向向右滑，再绕尾端转动，这两种动作有什么不同？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "motion",
+      "expression": [
+        "平移：各点同方向、同距离",
+        "旋转：围绕同一个中心转"
+      ],
+      "explanation": "为什么都是换了位置，平移和旋转仍是不同动作？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "sceneId": "G3-L02-B01-MODEL1",
+      "case": 1,
+      "mode": "default",
+      "label": "同类操作1",
+      "mission": "把当前总数平均分，分完以后还要检查每份一样多。",
+      "question": "90张纸平均分给3人，每人多少张？",
+      "units": {
+        "unit": "张",
+        "group": "人"
+      },
+      "geometry": "share-place",
+      "parameters": [
+        90,
+        3
+      ],
+      "expression": "90÷3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "sceneId": "G3-L02-B01-MODEL1",
+      "case": 2,
+      "mode": "default",
+      "label": "同类操作2",
+      "mission": "把当前总数平均分，分完以后还要检查每份一样多。",
+      "question": "96张纸平均分给3人，每人多少张？",
+      "units": {
+        "unit": "张",
+        "group": "人"
+      },
+      "geometry": "share-place",
+      "parameters": [
+        96,
+        3
+      ],
+      "expression": "96÷3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "sceneId": "G3-L02-B01-MODEL1",
+      "case": 3,
+      "mode": "default",
+      "label": "同类操作3",
+      "mission": "把当前总数平均分，分完以后还要检查每份一样多。",
+      "question": "600张纸平均分给3人，每人多少张？",
+      "units": {
+        "unit": "张",
+        "group": "人"
+      },
+      "geometry": "share-place",
+      "parameters": [
+        600,
+        3
+      ],
+      "expression": "600÷3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "sceneId": "G3-L02-B01-MODEL1",
+      "case": 4,
+      "mode": "default",
+      "label": "同类操作4",
+      "mission": "把当前总数平均分，分完以后还要检查每份一样多。",
+      "question": "840张纸平均分给4人，每人多少张？",
+      "units": {
+        "unit": "张",
+        "group": "人"
+      },
+      "geometry": "share-place",
+      "parameters": [
+        840,
+        4
+      ],
+      "expression": "840÷4",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "sceneId": "G3-L02-B01-MODEL1",
+      "case": 5,
+      "mode": "default",
+      "label": "同类操作5",
+      "mission": "把当前总数平均分，分完以后还要检查每份一样多。",
+      "question": "1000张纸平均分给5人，每人多少张？",
+      "units": {
+        "unit": "张",
+        "group": "人"
+      },
+      "geometry": "share-place",
+      "parameters": [
+        1000,
+        5
+      ],
+      "expression": "1000÷5",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "sceneId": "G3-L02-B01-MODEL1",
+      "case": 6,
+      "mode": "default",
+      "label": "换情境操作",
+      "mission": "把当前总数平均分，分完以后还要检查每份一样多。",
+      "question": "168厘米丝带要平均剪成4段，不计剪口损耗，每段多长？把计数单位当厘米，平均分的关系还一样吗？",
+      "units": {
+        "unit": "厘米",
+        "group": "段"
+      },
+      "geometry": "share-place",
+      "parameters": [
+        168,
+        4
+      ],
+      "expression": "168÷4",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "sceneId": "G3-L02-B02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "保持糖总数，拆开剩下的十再平均分。",
+      "question": "52颗糖平均分4人，5捆十颗分完后剩的一捆怎么办？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "division",
+      "expression": [
+        "1个十＝10个一",
+        "52÷4：剩下的十与2个一一起分"
+      ],
+      "explanation": "剩下的十为什么不能丢掉，必须换成一继续分？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "sceneId": "G3-L02-B03-MODEL1",
+      "case": 1,
+      "mode": "default",
+      "label": "同类操作1",
+      "mission": "按当前每袋的颗数分组，剩下的还够做一完整袋吗？",
+      "question": "53颗糖，每袋装4颗，能装几满袋，还余几颗？",
+      "units": {
+        "unit": "颗",
+        "group": "袋"
+      },
+      "geometry": "pack-remainder",
+      "parameters": [
+        53,
+        4
+      ],
+      "expression": "53÷4＝□……□",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "sceneId": "G3-L02-B03-MODEL1",
+      "case": 2,
+      "mode": "default",
+      "label": "同类操作2",
+      "mission": "按当前每袋的颗数分组，剩下的还够做一完整袋吗？",
+      "question": "38颗糖，每袋装5颗，能装几满袋，还余几颗？",
+      "units": {
+        "unit": "颗",
+        "group": "袋"
+      },
+      "geometry": "pack-remainder",
+      "parameters": [
+        38,
+        5
+      ],
+      "expression": "38÷5＝□……□",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "sceneId": "G3-L02-B03-MODEL1",
+      "case": 3,
+      "mode": "default",
+      "label": "同类操作3",
+      "mission": "按当前每袋的颗数分组，剩下的还够做一完整袋吗？",
+      "question": "47颗糖，每袋装6颗，能装几满袋，还余几颗？",
+      "units": {
+        "unit": "颗",
+        "group": "袋"
+      },
+      "geometry": "pack-remainder",
+      "parameters": [
+        47,
+        6
+      ],
+      "expression": "47÷6＝□……□",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "sceneId": "G3-L02-B03-MODEL1",
+      "case": 4,
+      "mode": "default",
+      "label": "同类操作4",
+      "mission": "按当前每袋的颗数分组，剩下的还够做一完整袋吗？",
+      "question": "60颗糖，每袋装7颗，能装几满袋，还余几颗？",
+      "units": {
+        "unit": "颗",
+        "group": "袋"
+      },
+      "geometry": "pack-remainder",
+      "parameters": [
+        60,
+        7
+      ],
+      "expression": "60÷7＝□……□",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "sceneId": "G3-L02-B03-MODEL1",
+      "case": 5,
+      "mode": "default",
+      "label": "同类操作5",
+      "mission": "按当前每袋的颗数分组，剩下的还够做一完整袋吗？",
+      "question": "29颗糖，每袋装3颗，能装几满袋，还余几颗？",
+      "units": {
+        "unit": "颗",
+        "group": "袋"
+      },
+      "geometry": "pack-remainder",
+      "parameters": [
+        29,
+        3
+      ],
+      "expression": "29÷3＝□……□",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "sceneId": "G3-L02-B03-MODEL1",
+      "case": 6,
+      "mode": "default",
+      "label": "换情境操作",
+      "mission": "按当前每段的厘米数分组，剩下的还够做一完整段吗？",
+      "question": "71厘米胶带，每段剪8厘米，不计剪口损耗。能剪几段？余下为什么不能再算一段？",
+      "units": {
+        "unit": "厘米",
+        "group": "段"
+      },
+      "geometry": "pack-remainder",
+      "parameters": [
+        71,
+        8
+      ],
+      "expression": "71÷8＝□……□",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "sceneId": "G3-L02-B04-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "在每班的百、十、个位上记录所得数量。",
+      "question": "408本书平分4班，十位没有书可分，答案为何不能写12？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "division",
+      "expression": [
+        "408÷4＝102",
+        "102表示1个百、0个十、2个一"
+      ],
+      "explanation": "没有十可分，为什么仍要把商的十位0写出来？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "sceneId": "G3-L02-B05-MODEL1",
+      "case": 1,
+      "mode": "default",
+      "label": "同类操作1",
+      "mission": "按当前情境逐层记录数量，检查每个小组都恰好登记一次。",
+      "question": "2箱杯子，每箱4盒，每盒6个，一共多少个？",
+      "units": {
+        "unit": "个",
+        "outer": "箱",
+        "inner": "盒"
+      },
+      "geometry": "nested-groups",
+      "parameters": [
+        2,
+        4,
+        6
+      ],
+      "expression": "2×4×6",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "sceneId": "G3-L02-B05-MODEL1",
+      "case": 2,
+      "mode": "default",
+      "label": "同类操作2",
+      "mission": "按当前情境逐层记录数量，检查每个小组都恰好登记一次。",
+      "question": "3箱杯子，每箱2盒，每盒5个，一共多少个？",
+      "units": {
+        "unit": "个",
+        "outer": "箱",
+        "inner": "盒"
+      },
+      "geometry": "nested-groups",
+      "parameters": [
+        3,
+        2,
+        5
+      ],
+      "expression": "3×2×5",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "sceneId": "G3-L02-B05-MODEL1",
+      "case": 3,
+      "mode": "default",
+      "label": "同类操作3",
+      "mission": "按当前情境逐层记录数量，检查每个小组都恰好登记一次。",
+      "question": "2箱杯子，每箱3盒，每盒8个，一共多少个？",
+      "units": {
+        "unit": "个",
+        "outer": "箱",
+        "inner": "盒"
+      },
+      "geometry": "nested-groups",
+      "parameters": [
+        2,
+        3,
+        8
+      ],
+      "expression": "2×3×8",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "sceneId": "G3-L02-B05-MODEL1",
+      "case": 4,
+      "mode": "default",
+      "label": "同类操作4",
+      "mission": "按当前情境逐层记录数量，检查每个小组都恰好登记一次。",
+      "question": "4箱杯子，每箱2盒，每盒4个，一共多少个？",
+      "units": {
+        "unit": "个",
+        "outer": "箱",
+        "inner": "盒"
+      },
+      "geometry": "nested-groups",
+      "parameters": [
+        4,
+        2,
+        4
+      ],
+      "expression": "4×2×4",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "sceneId": "G3-L02-B05-MODEL1",
+      "case": 5,
+      "mode": "default",
+      "label": "同类操作5",
+      "mission": "按当前情境逐层记录数量，检查每个小组都恰好登记一次。",
+      "question": "3箱杯子，每箱3盒，每盒3个，一共多少个？",
+      "units": {
+        "unit": "个",
+        "outer": "箱",
+        "inner": "盒"
+      },
+      "geometry": "nested-groups",
+      "parameters": [
+        3,
+        3,
+        3
+      ],
+      "expression": "3×3×3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "sceneId": "G3-L02-B05-MODEL1",
+      "case": 6,
+      "mode": "default",
+      "label": "换情境操作",
+      "mission": "按当前情境逐层记录数量，检查每个小组都恰好登记一次。",
+      "question": "图书角有2个书架，每架5层，每层4本书。先登记各层，再把总数按架、层分回去。",
+      "units": {
+        "unit": "本",
+        "outer": "架",
+        "inner": "层"
+      },
+      "geometry": "nested-groups",
+      "parameters": [
+        2,
+        5,
+        4
+      ],
+      "expression": "2×5×4",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "sceneId": "G3-L02-B06-MODEL1",
+      "case": 1,
+      "mode": "price",
+      "label": "同类操作1",
+      "mission": "当前商品的单价不变；先求每份价格，再求新的总价。",
+      "question": "4本同价本子24元，买7本多少钱？",
+      "units": {
+        "unit": "本",
+        "outer": "箱",
+        "quantity": "本"
+      },
+      "geometry": "invariant-table",
+      "parameters": [
+        4,
+        24,
+        7,
+        6,
+        8
+      ],
+      "expression": "24÷4×7",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "sceneId": "G3-L02-B06-MODEL1",
+      "case": 1,
+      "mode": "total",
+      "label": "同类操作1",
+      "mission": "同一批材料只换分装方法；先说什么没变，再看每份数量和份数怎样变。",
+      "question": "同一批书每箱6本装4箱，改每箱8本，要几箱？",
+      "units": {
+        "unit": "本",
+        "outer": "箱",
+        "quantity": "本"
+      },
+      "geometry": "invariant-table",
+      "parameters": [
+        4,
+        24,
+        7,
+        6,
+        8
+      ],
+      "expression": "4×6÷8",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "sceneId": "G3-L02-B06-MODEL1",
+      "case": 2,
+      "mode": "price",
+      "label": "同类操作2",
+      "mission": "当前商品的单价不变；先求每份价格，再求新的总价。",
+      "question": "3本同价本子18元，买5本多少钱？",
+      "units": {
+        "unit": "本",
+        "outer": "箱",
+        "quantity": "本"
+      },
+      "geometry": "invariant-table",
+      "parameters": [
+        3,
+        18,
+        5,
+        6,
+        9
+      ],
+      "expression": "18÷3×5",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "sceneId": "G3-L02-B06-MODEL1",
+      "case": 2,
+      "mode": "total",
+      "label": "同类操作2",
+      "mission": "同一批材料只换分装方法；先说什么没变，再看每份数量和份数怎样变。",
+      "question": "同一批书每箱6本装3箱，改每箱9本，要几箱？",
+      "units": {
+        "unit": "本",
+        "outer": "箱",
+        "quantity": "本"
+      },
+      "geometry": "invariant-table",
+      "parameters": [
+        3,
+        18,
+        5,
+        6,
+        9
+      ],
+      "expression": "3×6÷9",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "sceneId": "G3-L02-B06-MODEL1",
+      "case": 3,
+      "mode": "price",
+      "label": "同类操作3",
+      "mission": "当前商品的单价不变；先求每份价格，再求新的总价。",
+      "question": "5本同价本子40元，买3本多少钱？",
+      "units": {
+        "unit": "本",
+        "outer": "箱",
+        "quantity": "本"
+      },
+      "geometry": "invariant-table",
+      "parameters": [
+        5,
+        40,
+        3,
+        8,
+        10
+      ],
+      "expression": "40÷5×3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "sceneId": "G3-L02-B06-MODEL1",
+      "case": 3,
+      "mode": "total",
+      "label": "同类操作3",
+      "mission": "同一批材料只换分装方法；先说什么没变，再看每份数量和份数怎样变。",
+      "question": "同一批书每箱8本装5箱，改每箱10本，要几箱？",
+      "units": {
+        "unit": "本",
+        "outer": "箱",
+        "quantity": "本"
+      },
+      "geometry": "invariant-table",
+      "parameters": [
+        5,
+        40,
+        3,
+        8,
+        10
+      ],
+      "expression": "5×8÷10",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "sceneId": "G3-L02-B06-MODEL1",
+      "case": 4,
+      "mode": "price",
+      "label": "同类操作4",
+      "mission": "当前商品的单价不变；先求每份价格，再求新的总价。",
+      "question": "6本同价本子30元，买9本多少钱？",
+      "units": {
+        "unit": "本",
+        "outer": "箱",
+        "quantity": "本"
+      },
+      "geometry": "invariant-table",
+      "parameters": [
+        6,
+        30,
+        9,
+        5,
+        10
+      ],
+      "expression": "30÷6×9",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "sceneId": "G3-L02-B06-MODEL1",
+      "case": 4,
+      "mode": "total",
+      "label": "同类操作4",
+      "mission": "同一批材料只换分装方法；先说什么没变，再看每份数量和份数怎样变。",
+      "question": "同一批书每箱5本装6箱，改每箱10本，要几箱？",
+      "units": {
+        "unit": "本",
+        "outer": "箱",
+        "quantity": "本"
+      },
+      "geometry": "invariant-table",
+      "parameters": [
+        6,
+        30,
+        9,
+        5,
+        10
+      ],
+      "expression": "6×5÷10",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "sceneId": "G3-L02-B06-MODEL1",
+      "case": 5,
+      "mode": "price",
+      "label": "同类操作5",
+      "mission": "当前商品的单价不变；先求每份价格，再求新的总价。",
+      "question": "4本同价本子28元，买8本多少钱？",
+      "units": {
+        "unit": "本",
+        "outer": "箱",
+        "quantity": "本"
+      },
+      "geometry": "invariant-table",
+      "parameters": [
+        4,
+        28,
+        8,
+        7,
+        14
+      ],
+      "expression": "28÷4×8",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "sceneId": "G3-L02-B06-MODEL1",
+      "case": 5,
+      "mode": "total",
+      "label": "同类操作5",
+      "mission": "同一批材料只换分装方法；先说什么没变，再看每份数量和份数怎样变。",
+      "question": "同一批书每箱7本装4箱，改每箱14本，要几箱？",
+      "units": {
+        "unit": "本",
+        "outer": "箱",
+        "quantity": "本"
+      },
+      "geometry": "invariant-table",
+      "parameters": [
+        4,
+        28,
+        8,
+        7,
+        14
+      ],
+      "expression": "4×7÷14",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "sceneId": "G3-L02-B06-MODEL1",
+      "case": 6,
+      "mode": "price",
+      "label": "换情境操作",
+      "mission": "当前商品的单价不变；先求每份价格，再求新的总价。",
+      "question": "3包同价饼干27元，买5包多少钱？先找不变的量。",
+      "units": {
+        "unit": "包",
+        "outer": "桶",
+        "quantity": "千克"
+      },
+      "geometry": "invariant-table",
+      "parameters": [
+        3,
+        27,
+        5,
+        9,
+        3
+      ],
+      "expression": "27÷3×5",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "sceneId": "G3-L02-B06-MODEL1",
+      "case": 6,
+      "mode": "total",
+      "label": "换情境操作",
+      "mission": "同一批材料只换分装方法；先说什么没变，再看每份数量和份数怎样变。",
+      "question": "3桶米，每桶9千克，改每桶3千克，要几桶？与买饼干的“不变”一样吗？",
+      "units": {
+        "unit": "包",
+        "outer": "桶",
+        "quantity": "千克"
+      },
+      "geometry": "invariant-table",
+      "parameters": [
+        3,
+        27,
+        5,
+        9,
+        3
+      ],
+      "expression": "3×9÷3",
+      "explanation": "动作、算式与反馈共用本行参数；探索不是独立判分",
+      "review": "finite-reviewed-parameters; browser-coverage-separate"
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "sceneId": "G3-L03-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "根据边和角分类，不靠摆放方向取名字。",
+      "question": "做相框前，要确定四条边和四个角满足什么条件。",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "长方形有4个直角、对边相等",
+        "正方形还要求4条边都相等"
+      ],
+      "explanation": "正方形转斜了，为什么名称仍由边和角决定？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "sceneId": "G3-L03-B02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "沿四条外边走一圈，不重复、不遗漏。",
+      "question": "给长8米宽5米的花坛装一圈围栏，要买多少米？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "boundary",
+      "expression": [
+        "8＋5＋8＋5",
+        "(长＋宽)×2＝周长"
+      ],
+      "explanation": "长加宽只走了两边，为什么一圈还要再有一份长加宽？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "sceneId": "G3-L03-E01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "指认两条被藏进内部的边，再数外圈。",
+      "question": "两块边长3厘米的实心正方形板，沿一条完整边紧紧拼在一起。外面绕一圈，还是两块原来的周长合计24厘米吗？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "joining",
+      "expression": [
+        "两个周长的和−2×接缝长",
+        "4×3×2−2×3＝18（厘米）"
+      ],
+      "explanation": "为什么算外周长时，同一接缝长度要从两块原周长中各去一次？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "sceneId": "G3-L04-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "沿外圈走，再用同样的小方块铺满里面。",
+      "question": "同一个花坛既要围栏又要铺地砖，为什么要算两个不同的数？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "周长：外边界的长度",
+        "面积：内部覆盖的大小"
+      ],
+      "explanation": "为什么同一幅花坛图，买围栏与买地砖要量不同地方？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "sceneId": "G3-L04-B02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "把逐行计数写成乘法，解释两个数各指什么。",
+      "question": "长6米宽4米的地面铺1平方米方砖，需要几块？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "tiling",
+      "expression": [
+        "6×4＝24（平方米）",
+        "长×宽＝长方形面积（长度单位相同）"
+      ],
+      "explanation": "为什么6×4既能求总块数，又能得到覆盖面积的数值？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "sceneId": "G3-L04-B03-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "沿两个方向细分，检查铺满的方格数。",
+      "question": "边长1分米的方纸，为什么能铺100个平方厘米，而不是10个？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "cut-area",
+      "expression": [
+        "1分米＝10厘米",
+        "1平方分米＝10×10＝100平方厘米"
+      ],
+      "explanation": "为什么1分米等于10厘米，1平方分米却包含100个平方厘米？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "sceneId": "G3-L05-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "先问清问题，统一记录规则后再比较票数。",
+      "question": "班级要选一次集体活动地点，怎样知道大家最想去哪儿？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "vote",
+      "expression": [
+        "同一调查要使用同一规则",
+        "分类记录→核对人数→比较票数"
+      ],
+      "explanation": "为什么要先约定单选规则，才能解释哪地最受欢迎？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "sceneId": "G3-L05-B02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "让每个时长只进一个组，检查总个数。",
+      "question": "整理8次阅读时长，直接看一串数不容易比较，怎样分组更清楚？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "data-bins",
+      "expression": [
+        "0—9；10—19；20及以上",
+        "各组个数之和＝全部记录数"
+      ],
+      "explanation": "为什么每条记录必须只进一个组，分类才不重不漏？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "sceneId": "G3-LP01-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "选月份与年份，核对月底和下一天。",
+      "question": "要做生日月历，为什么不能复制一张30天的表用12次？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "calendar",
+      "expression": [
+        "大月31天，小月30天",
+        "二月平年28天、闰年29天"
+      ],
+      "explanation": "为什么不能把一张30天月历复制给每个月？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "sceneId": "G3-LP01-B02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "区分时刻与时长，沿时间线数经过的分钟。",
+      "question": "活动写“下午3点”，用24时计时怎样避免误会？再看另一次活动：15:20开始、16:05结束。沿同一天的时间线，它经过多久？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "clock",
+      "expression": [
+        "下午3点＝15:00",
+        "1小时＝60分钟；时长量两时刻之间的间隔"
+      ],
+      "explanation": "时钟上从20分到5分，为什么不是只做5−20求时长？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "sceneId": "G3-LP01-E01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "从1日出发，按7天一轮检查星期。",
+      "question": "已知某月1日是星期二，怎样不查整张日历就知道15日是星期几？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "calendar",
+      "expression": [
+        "15−1＝14＝2×7",
+        "相隔整周，星期相同"
+      ],
+      "explanation": "为什么15日与1日相隔14天，而不是15天？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "sceneId": "G3-L06-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "对照米、分米、厘米，说明数字所在的位置。",
+      "question": "纸条长1米3分米，只用“米”怎样写，既简短又清楚？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "decimal",
+      "expression": [
+        "1米3分米＝1.3米",
+        "1米3厘米＝1.03米"
+      ],
+      "explanation": "两个数都有1和3，为什么1.3米比1.03米长？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "sceneId": "G3-L06-B02-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "把长度换成厘米，再对照各数位。",
+      "question": "两人跳高分别0.9米与0.85米，谁跳得更高？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "decimal",
+      "expression": [
+        "0.9米＝90厘米",
+        "0.85米＝85厘米"
+      ],
+      "explanation": "0.85写的数字更多，为什么仍比0.9小？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "sceneId": "G3-L06-B03-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "元与元、角与角对齐，再核对付钱和找零。",
+      "question": "一盒彩笔3.8元、一本本子2.5元，合计多少钱？付10元找回多少？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "3.8＋2.5＝6.3（元）",
+        "10−6.3＝3.7（元）"
+      ],
+      "explanation": "为什么小数点对齐，就是把相同货币单位对齐？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "sceneId": "G3-L07-R01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "把人数、张数、包数、费用与时长分开记录。",
+      "question": "24人做手工，每人2张纸，每包12张、6元，需要买齐材料（这一题不另给库存）。活动从15:10到15:50。分别需要几包、多少钱、多少分钟？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "conceptLab",
+      "expression": [
+        "24×2÷12＝4（包）",
+        "4×6＝24（元）；15:10到15:50是40分钟"
+      ],
+      "explanation": "为什么先求总张数，再算购买包数，不能把人数直接除每包张数？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "sceneId": "G3-L07-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "用同一个人的卡片说明为什么只减一次。",
+      "question": "读书组8人、绘画组7人，其中3人两个组都参加。总共有多少不同的人？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "sets",
+      "expression": [
+        "8＋7−3＝12（人）",
+        "只减掉重复计数，保留这个人一次"
+      ],
+      "explanation": "为什么加两组人数后只减共同人数一次，不能两次都删掉？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "sceneId": "G3-U03-E01-board",
+      "label": "原情境／可变对象",
+      "mission": "指出两块板、搭接段与拼好后的两端。",
+      "question": "甲木板30厘米、乙木板25厘米，开始重叠8厘米。两块搭接后，从最左端到最右端长多少？再拖动乙板，搭接变多或变少，总长怎样变化？",
+      "units": "毫米（模型内部），按题目换算",
+      "geometry": "lengthWorkbench",
+      "expression": [
+        "总长＝两块板长的和−搭接长度",
+        "材料没有变长，搭得越多，端到端越短"
+      ],
+      "explanation": "材料30＋25没变，为什么搭得越多端到端越短？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "sceneId": "G3-U03-E02-chain",
+      "label": "原情境／可变对象",
+      "mission": "放大一个接头，指出两段5毫米厚度。",
+      "question": "每个链环外长4厘米、厚5毫米，4个扣起来拉直后，为什么不是16厘米？",
+      "units": "毫米（模型内部），按题目换算",
+      "geometry": "lengthWorkbench",
+      "expression": [
+        "4厘米＝40毫米",
+        "总长＝40＋(40−5−5)×3＝130毫米"
+      ],
+      "explanation": "每添一个环，为什么只多一个接头；它为什么少伸出两段厚度？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "sceneId": "G3-U03-O01-interval",
+      "label": "原情境／可变对象",
+      "mission": "先数间隔，再检查末点是不是新位置。",
+      "question": "24米绳每4米一段。拉直时从起点开始标记，两端都做标记；接成环时，首尾是同一个标记。两种形状各有多少个不同标记？",
+      "units": "毫米（模型内部），按题目换算",
+      "geometry": "lengthWorkbench",
+      "expression": [
+        "24÷4＝6（段）",
+        "直线：6＋1个点；闭环：6个不同点"
+      ],
+      "explanation": "6段拉直有7点，接成环后为什么最后一点不能再算一个新点？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "sceneId": "numbers.fractions.meaning",
+      "label": "原情境／可变对象",
+      "mission": "指出整条彩带与拿出的部分，比较两种分组。",
+      "question": "一条1米彩带平均分成6小份，其中2小份送给朋友。把原长对齐，再把每2小份看作1大份，送出的部分还是同一段。它的份额可以怎样换一种说法？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "fraction",
+      "expression": [
+        "同一条彩带：2/6＝1/3",
+        "分母记等分总份数，分子记取走份数"
+      ],
+      "explanation": "格子名字变了，为什么送给朋友的彩带长度没变？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "sceneId": "geometry.area.perimeter",
+      "label": "原情境／可变对象",
+      "mission": "分别指出铺满的部分与绳子经过的外圈。",
+      "question": "地垫摆成3排、每排4块，没有空隙和重叠。用边长1厘米的方纸做缩小模型：数里面的方块，再沿最外一圈量长度。为什么铺地垫与绕绳子量的是两种不同的量？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "area",
+      "expression": [
+        "3×4记录方格数",
+        "4＋3＋4＋3记录外边界长度"
+      ],
+      "explanation": "为什么地垫接缝不算要绕的绳子，地垫本身却要全部数？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "sceneId": "algebra.substitution.intro",
+      "label": "原情境／可变对象",
+      "mission": "整盒替换，让每一盒的散糖都被数到。",
+      "question": "Kevin 做了3个一模一样的点心盒。每个盒子里，都放了1袋糖和另外2颗散糖。三袋糖里的颗数也都相同。",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "substitution",
+      "expression": [
+        "3×(乙＋2)＝3乙＋6",
+        "替换整个相等的量，保留外层运算"
+      ],
+      "explanation": "为什么三盒不仅有三袋糖，还要有三份2颗散糖？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "sceneId": "algebra.balance.intro",
+      "label": "原情境／可变对象",
+      "mission": "让等号两边保持相等，再找到袋里的颗数。",
+      "question": "一袋糖加袋外3颗，合起来与10颗散糖一样多。把袋和3颗放左盘、10颗放右盘：两盘同时拿走3颗，怎样找到袋里的颗数？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "balance",
+      "expression": [
+        "x＋3＝10",
+        "两边减3：x＝7"
+      ],
+      "explanation": "为什么一边拿走3颗，另一边也必须拿走3颗？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "sceneId": "numbers.quantity.intro",
+      "label": "原情境／可变对象",
+      "mission": "一一对应饭盒与苹果，记录最后的总数。",
+      "question": "桌上有7个饭盒。每个饭盒都要放1个苹果。Kevin 要去厨房拿苹果，可是把整张桌子搬过去很不方便。",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "quantity",
+      "expression": [
+        "一个饭盒对应一个苹果",
+        "摆放位置改变，数量不变"
+      ],
+      "explanation": "苹果排得更长，为什么数量仍然是7个？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "sceneId": "numbers.addition.meaning",
+      "label": "原情境／可变对象",
+      "mission": "区分合并、挪动与从外面新添一个。",
+      "question": "Kevin的篮子有3个苹果，朋友的篮子有2个，合起来有多少？从右篮挪1个到左篮，与从厨房新拿1个放进左篮，总数的变化一样吗？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "addition",
+      "expression": [
+        "3＋2＝5",
+        "挪动不改总数；新添才增加总数"
+      ],
+      "explanation": "同样往左篮放1个，为什么挪过来和新拿来对总数的影响不同？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "sceneId": "numbers.subtraction.meaning",
+      "label": "原情境／可变对象",
+      "mission": "把原来、送出与剩下三种量连起来。",
+      "question": "Kevin 有9张贴纸，送给朋友5张。原来这9张，分成了“送出的5张”和“自己剩下的贴纸”。",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "subtraction",
+      "expression": [
+        "9−5＝4",
+        "送出的5＋剩下的4＝原来的9"
+      ],
+      "explanation": "为什么送出的5加剩下的数量，应该回到原来的9？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    }
+  ]
+}

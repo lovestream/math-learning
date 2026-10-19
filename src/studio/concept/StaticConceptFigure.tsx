@@ -1,5 +1,9 @@
+import type {WidgetState} from '../types';
+import {MoneyExchangeFigure,SupplyPlanFigure} from './RelationshipFigures';
 // Six deliberately static relationship diagrams, tied to their authored lesson conditions.
-export default function StaticConceptFigure({ id }: { id: string }) {
+export default function StaticConceptFigure({ id,value={},onChange }: { id: string;value?:WidgetState;onChange?:(s:WidgetState)=>void }) {
+  if(id==='G3-L06-B03')return <MoneyExchangeFigure value={value} onChange={onChange}/>;
+  if(id==='G3-U07-R01')return <SupplyPlanFigure value={value} onChange={onChange}/>;
   const ink = "#37524e",
     blue = "#527eab",
     green = "#4b917e",
@@ -163,53 +167,13 @@ export default function StaticConceptFigure({ id }: { id: string }) {
         </text>
       </>
     );
-  else if (id === "G3-L06-B03")
-    picture = (
-      <>
-        {["金额", "元", "角"].map((label, i) => (
-          <text key={label} x={80 + i * 175} y="50">
-            {label}
-          </text>
-        ))}
-        {[
-          ["3.8元", "3", "8"],
-          ["2.5元", "2", "5"],
-        ].map((row, r) =>
-          row.map((item, i) => (
-            <g key={r + "-" + i}>
-              <rect
-                x={60 + i * 175}
-                y={80 + r * 75}
-                width="160"
-                height="65"
-                fill="#e3ebdd"
-              />
-              <text x={85 + i * 175} y={120 + r * 75}>
-                {item}
-              </text>
-            </g>
-          )),
-        )}
-        <text x="65" y="275">
-          同列对应同一种单位；10角可以换成1元。
-        </text>
-      </>
-    );
-  else if (id === "G3-U07-R01" || id === "G3-L07-R01") {
-    const upper = id === "G3-U07-R01",
-      rows = upper
-        ? [
-            ["人数／份数", "36份"],
-            ["每份用量", "2张贴纸"],
-            ["已有材料", "20张贴纸"],
-            ["需要再买", "？张贴纸"],
-          ]
-        : [
-            ["活动人数", "24人，每人2张纸"],
-            ["包装", "每包12张，6元"],
-            ["库存", "本题不另给库存，求总需求"],
-            ["活动时间", "15:10—15:50"],
-          ];
+  else if (id === "G3-L07-R01") {
+    const rows = [
+      ["活动人数", "24人，每人2张纸"],
+      ["包装", "每包12张，6元"],
+      ["库存", "本题不另给库存，求总需求"],
+      ["活动时间", "15:10—15:50"],
+    ];
     picture = rows.map(([label, value], i) => (
       <g key={label}>
         <rect

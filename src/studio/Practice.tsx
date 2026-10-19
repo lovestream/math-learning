@@ -1,3 +1,4 @@
+import {inverseTaskIndex} from '../../shared/inverse-index.mjs';
 import {navigationEvent,type NavigationEvent} from "./navigationGuard";
 import {useEffect,useRef,useState} from 'react';
 import {ArrowLeft,ChevronRight,Lightbulb,Star} from 'lucide-react';
@@ -30,7 +31,7 @@ export default function Practice({lesson,initialSet,initialTaskId,assessment,pro
   const progressRef=useRef(setProgress);progressRef.current=setProgress;
   const setSession=(value:PilotSession|null)=>{sessionRef.current=value;renderSession(value)};
   const setAnswers=(value:Record<string,Answer>)=>{answersRef.current=value;renderAnswers(value)};
-  const task=session?.tasks[session.index],answer=task?(answers[task.id]??{}):{},group=groups.find(g=>g.id===session?.setName);
+  const task=session?.tasks[session.index],inverse=task?inverseTaskIndex.find(row=>row.taskId===task.id):null,answer=task?(answers[task.id]??{}):{},group=groups.find(g=>g.id===session?.setName);
   const payload=()=>{const s=sessionRef.current;if(!s)return null;const first=s.tasks.findIndex(t=>!['correct','pendingReview'].includes(s.results[t.id]?.status));return {sessionId:s.id,index:['correct','pendingReview'].includes(s.results[s.tasks[s.index].id]?.status)&&first>=0?first:s.index,answers:answersRef.current}};
   const dirty=()=>{const p=payload();return Boolean(p&&JSON.stringify(p)!==saved.current)};
   const enqueue=(fn:()=>Promise<void>)=>{const work=queue.current.catch(()=>{}).then(fn);queue.current=work;return work};
@@ -86,7 +87,7 @@ export default function Practice({lesson,initialSet,initialTaskId,assessment,pro
     <header className="practice-heading"><div><h1>{assessment?"收起教具，独立试五题":"现在，自己来试试"}</h1><p>{assessment?"先自己答，再自查。教具已收起；使用提示会留下记录。":"选一组就能开始。答错可以改，也可以看提示，慢慢想清楚。"}</p></div></header>
     {!assessment&&<div className="set-tabs">{groups.map(g=><button disabled={busy} key={g.id} className={session?.setName===g.id?'active':''} onClick={()=>void start(g.id)}>{g.name} <small>{lesson.taskSets[g.id].length}题</small></button>)}</div>}
     {!session?<div className="practice-empty"><Lightbulb/><h2>先从哪一组开始？</h2><p>建议先试两题，熟悉后也可以直接选更难的。</p><button className="studio-primary" disabled={busy} onClick={()=>void start('warmup')}>先试两题 <ChevronRight size={16}/></button></div>:finished?<section className="practice-finished"><Star/><h2>{group?.name}，这一组做完了！</h2><p>你答对了{session.tasks.filter(t=>session.results[t.id]?.status==='correct').length}题。另有{session.tasks.filter(t=>session.results[t.id]?.status==='pendingReview').length}题解释待家长核对。可以选下一组，也可以休息一下。</p>{session.setName==='core'&&Boolean(progress.studio?.review?.[lesson.lessonId])&&<p>明天再回想这节课，复习时间已经记下。</p>}<button onClick={()=>void guard(async()=>{await saveDraft();onBack();window.scrollTo(0,0)})}>回去讲讲我的发现</button></section>:task&&<section className="task-card">
-      <header><div><span>{assessment?'撤教具小测':group?.name} · 第{session.index+1}/{session.tasks.length}题</span><p>{group?.description}</p><h2>{task.prompt}</h2></div></header>
+      <header><div><span>{assessment?'撤教具小测':group?.name} · 第{session.index+1}/{session.tasks.length}题</span><p>{group?.description}</p>{inverse&&<p className="inverse-task-direction">思考方向：{inverse.direction} · 这次求{inverse.unknown}</p>}<h2>{task.prompt}</h2></div></header>
       {task.diagram?.type==='measurement'&&'mode' in task.diagram&&<MeasurementTaskDiagram diagram={task.diagram}/>}
       {task.diagram&&['fraction','joined-perimeters'].includes(task.diagram.type)&&<InverseTaskFigure diagram={task.diagram}/>}
       {!assessment&&task.diagram?.type==='concept'&&'family' in task.diagram&&<ConceptTaskDiagram diagram={task.diagram}/>}

@@ -1,3 +1,4 @@
+import RegroupFigure from './RegroupFigure';
 import type { TextbookModel } from "../../../shared/textbook-models.mjs";
 import {
   digits4,
@@ -526,6 +527,7 @@ export default function CoreWorkbench({
                 : `每${context.outer}${c[3]}${context.quantity}，装${c[0]}${context.outer}；改成每${context.outer}${c[4]}${context.quantity}，要几${context.outer}？`}
             </b>
           </div>
+          {s.mode==='total'&&<RegroupFigure count={c[0]} oldEach={c[3]} newEach={c[4]} unit={context.quantity!} container={context.outer!} changed={!!s.checked} onToggle={()=>act('regroup-total',{checked:!s.checked})}/>}
           <table className="core-relation-table">
             <thead>
               <tr>
@@ -563,7 +565,7 @@ export default function CoreWorkbench({
                     <td>现在</td>
                     <td>？{context.outer}</td>
                     <td>{c[4]}{context.quantity}／{context.outer}</td>
-                    <td>同一批书</td>
+                    <td>同一批{context.quantity==='千克'?'米':'书'}</td>
                   </tr>
                 </>
               )}
@@ -577,6 +579,7 @@ export default function CoreWorkbench({
                   "select-fixed",
                   {
                     take: 1,
+                    checked: !!s.checked,
                     error:
                       s.mode === "price"
                         ? ""
@@ -594,6 +597,7 @@ export default function CoreWorkbench({
                   "select-fixed",
                   {
                     take: 2,
+                    checked: !!s.checked,
                     error:
                       s.mode === "total"
                         ? ""

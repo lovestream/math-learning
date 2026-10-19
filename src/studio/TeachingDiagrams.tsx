@@ -1,3 +1,4 @@
+import {mixedSceneContext} from '../../shared/scene-context.mjs';
 import type {CSSProperties,KeyboardEvent} from 'react';
 import FoundationWidget,{FoundationDiagram} from './FoundationWidgets';
 import LengthWorkbench from './LengthWorkbench';
@@ -117,6 +118,7 @@ function operationNodes(node:ExpressionAST,out:ExpressionAST[]=[]){if(node.type=
 function MixedOperationsWidget({value,onChange,scenes=[]}:{value:WidgetState;onChange:(s:WidgetState)=>void;scenes?:MathScene[]}){
   const scene=scenes.find(s=>s.sceneId===value.sceneId)??scenes[0];
   if(!scene)return <div className="hands-on mixed-operations-lab"><p>这节课的场景正在整理。</p></div>;
+  const context=mixedSceneContext(scenes,scene.sceneId)!;
   const operations=operationNodes(scene.expressionAST),step=Math.max(0,Math.min(Math.trunc(Number(value.step))||0,operations.length));
   const first=operations[0],choices=firstOperationOptions(scene.expressionAST,scene.sceneId);
   const commit=(patch:WidgetFields)=>onChange({...value,...patch,stateKind:'mixed-operations',sceneId:scene.sceneId,modelStateVersion:`${scene.contentVersion}:${scene.sceneId}`,step:patch.step??step});
@@ -132,7 +134,7 @@ function MixedOperationsWidget({value,onChange,scenes=[]}:{value:WidgetState;onC
   const onKey=(e:KeyboardEvent<HTMLDivElement>)=>{if(e.key==='Enter'&&!(e.target instanceof HTMLButtonElement)){e.preventDefault();advance()}else if(e.key==='Backspace'&&!(e.target instanceof HTMLInputElement)&&!(e.target instanceof HTMLTextAreaElement)){e.preventDefault();commit({step:Math.max(0,step-1),error:''})}};
   return <div className="hands-on mixed-operations-lab" tabIndex={0} onKeyDown={onKey}>
     {scenes.length>1&&<div className="scene-switcher" aria-label="切换完整故事">{scenes.map((s,i)=><button key={s.sceneId} aria-pressed={s.sceneId===scene.sceneId} onClick={()=>reset(s.sceneId)}>场景 {String.fromCharCode(65+i)}</button>)}</div>}
-    <div className="mixed-story"><small>{scene.taskMode==='A_order_and_model'?'A · 顺序与模型':scene.taskMode==='B_equivalent_rewrite'?'B · 等值改写':'C · 运算律'}</small><h3>{scene.story.text}</h3><div className="quantity-cards">{scene.story.quantities.map(item=><span key={item.id}><b>{item.value}</b><em>{item.unit}</em><small>{item.role}</small></span>)}</div></div>
+    <div className="mixed-story"><small>{context.label}</small><h3>{scene.story.text}</h3><div className="quantity-cards">{scene.story.quantities.map(item=><span key={item.id}><b>{item.value}</b><em>{item.unit}</em><small>{item.role}</small></span>)}</div></div>
     <div className="operation-track" aria-label={`算式 ${expressionASTText(scene.expressionAST)}`}><p>要解决：{scene.target.prompt}</p><strong>{expressionASTText(scene.expressionAST)}</strong><div>{operations.map((item,i)=><span key={i} className={i<step?'done':i===step?'current':''}>{i<step?'✓':i+1}<small>{i<step?`${expressionASTText(item)}＝${astValue(item)}`:i===step?'下一小步':'还没轮到'}</small></span>)}</div></div>
     {step===0&&<div className="prediction-panel"><b>先预测：第一步算哪一小块？</b>{choices.map(option=><button key={option.id} aria-pressed={value.prediction===option.id} onClick={()=>commit({prediction:option.id,error:''})}>{option.text}</button>)}</div>}
     {step<operations.length&&<label className="lab-prediction">这一小步得到多少？<input value={value.intermediate??''} maxLength={40} onChange={e=>commit({intermediate:e.target.value,error:''})} placeholder="自己算出中间结果，再操作核对"/></label>}

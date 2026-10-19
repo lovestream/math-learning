@@ -19,6 +19,7 @@ import {
 } from "../server/thinking-store.mjs";
 // Run the short new workflow checks first for prompt CI feedback.
 const all = [
+  "verify-remaining-visuals-browser",
   "verify-two-ring-browser",
   "verify-chain-growth-browser",
   "verify-clarity-browser",
@@ -54,6 +55,7 @@ const only = process.argv.find((v) => v.startsWith("--only=")),
     : process.argv.includes("--full")
       ? all
       : [
+          "verify-remaining-visuals-browser",
           "verify-two-ring-browser",
           "verify-chain-growth-browser",
           "verify-clarity-browser",

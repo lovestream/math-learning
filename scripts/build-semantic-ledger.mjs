@@ -6,6 +6,7 @@ import {lessons} from '../content/pilot/source.mjs';
 import {withdrawnLessons,withdrawnTasks} from '../shared/withdrawn-checks.mjs';
 import {semanticContexts} from '../docs/review/semantic-ledger/contexts.mjs';
 import {auditDocument,baselineSha,semanticNotes} from '../docs/review/semantic-ledger/notes.mjs';
+import {mixedSceneContext,coreSceneMission} from '../shared/scene-context.mjs';
 import {semanticReviewMatches} from './audit-formal-tasks.mjs';
 
 const root=new URL('../',import.meta.url);
@@ -26,6 +27,7 @@ export function buildSemanticLedger(options={}){
   const block=lesson.articleBlocks.find(b=>b.widget);
   const scene=lesson.conceptScenes?.[0];
   const model=scene?.textbookSpec??scene?.handsOnSpec??scene?.modelSpec??lesson.lengthScenes?.[0]??lesson.mathScenes?.[0]??{type:lesson.widget??block.widget};
+  const runtimeMission=lesson.mathScenes?.length?mixedSceneContext(lesson.mathScenes)?.mission:scene?.textbookSpec?.cases?coreSceneMission(scene.textbookSpec):c.mission;
   const tasks=withdrawnLessons.includes(id)?withdrawnTasks(lesson):lesson.taskSets.core;
   const picture=c.storyVisual??lesson.introVisual;
   const contextFigure=picture?{renderer:'src/studio/IntroVisual.tsx',spec:picture}:lesson.articleBlocks[0]?.diagram?{renderer:'src/studio/TeachingDiagrams.tsx',diagram:lesson.articleBlocks[0].diagram}:lesson.mathScenes?.[0]?{renderer:'src/studio/MathSceneVisual.tsx',sceneId:lesson.mathScenes[0].sceneId}:lesson.lengthScenes?.[0]?{renderer:'src/studio/measurement/TaskDiagram.tsx',sceneId:lesson.lengthScenes[0].sceneId}:{renderer:null,reason:'当前入口按文字推理题开放，是否足够直观仍需逐章教学核对'};
@@ -47,7 +49,7 @@ export function buildSemanticLedger(options={}){
    contentFingerprint:fingerprint,
    story:{text:c.story,figure:contextFigure},
    prediction:{question:c.predictQuestion,options:c.predictionOptions,figure:c.predictionVisual??contextFigure},
-   experiment:{widget:block.widget,blockId:block.blockId,classification:lesson.interactionStatus,mission:c.mission,model,sourceInitialDescription:scene?.initialState??null,sourceLearnerAction:scene?.learnerAction??null,sourceObservableChange:scene?.observableChange??null,note:'运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分'},
+   experiment:{widget:block.widget,blockId:block.blockId,classification:lesson.interactionStatus,mission:runtimeMission,...(runtimeMission!==c.mission?{originalStoryMission:c.mission,dynamicMissionSource:'shared/scene-context.mjs'}:{}),model,sourceInitialDescription:scene?.initialState??null,sourceLearnerAction:scene?.learnerAction??null,sourceObservableChange:scene?.observableChange??null,note:'运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分'},
    discovery:{statements:c.discovery,retell:c.retell},mathematicalLanguage:{statements:c.symbols,scope:'开头故事，未声明与变更后的实验条件自动同步'},
    independentCheck:{scope:'巩固及撤教具练习，可能含已见原故事；不宣称整组为未见迁移',source:withdrawnLessons.includes(id)?'withdrawn-v1-existing-task-ids':'core-existing-task-ids',tasks:tasks.map(t=>({id:t.id,kind:t.kind,prompt:t.prompt,sourceSet:Object.entries(lesson.taskSets).find(([,items])=>items.some(original=>original.id===t.id))?.[0]??'unknown',novelty:Object.entries(lesson.taskSets).find(([,items])=>items.some(original=>original.id===t.id))?.[0]==='transfer'?'designed-transfer-not-certified-unseen':'consolidation-not-certified-unseen'})),allTaskCounts:Object.fromEntries(Object.entries(lesson.taskSets).map(([set,ts])=>[set,ts.length])),selfCheckItems:3},
    review:{intervalDays:[1,3,7,21],technicalStatus:'shared-scheduler-regressions-separate-from-individual-course-delay-trials',teachingStatus:'requires-new-context-and-unassisted-trial'},
@@ -57,7 +59,7 @@ export function buildSemanticLedger(options={}){
   };
  });
  return {
-  schemaVersion:2,date:'2026-10-09',updatedAt:'2026-10-18',baselineSha,
+  schemaVersion:2,date:'2026-10-09',updatedAt:'2026-10-19',baselineSha,
   requestedAudit:{path:'docs/review/PR1_三年级70课完成度与电脑端全量审计_20261009.md',initialAudit:auditDocument,availability:'read-after-fetch-37219a5',alignment:'audit-fields-and-phase-order-recorded'},
   scope:{entrances:70,textbookLessons:63,foundationBridgeLessons:7,textbookUnits:17,formalTasks:849,staticLessons:6,publishedThinkingCards:17,deferredThinkingCards:43},
   safeguards:{classroomStages:stages,selfCheckItems:3,noAddedRequiredSteps:true,noRealLearnerDataReadsOrWrites:true,grades4To6Frozen:true,noMainMerge:true},

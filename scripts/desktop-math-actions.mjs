@@ -12,10 +12,10 @@ export async function operateDesktop(page,lesson){
   assert(await lab.locator('.static-concept-figure svg,[role=img]').count()>0,'关系图没有可见对象');
   const expected={
    'G3-U05-B01':['线段：两个端点','射线：一个端点','直线：没有端点'],
-   'G3-U07-R01':['36份','2张贴纸','20张贴纸','？张贴纸'],
+   'G3-U07-R01':['36份','每份2张','已有20张','还缺？张'],
    'G3-L03-B01':['长7，宽4','边长都是4','斜角菱形','四边相等还不够'],
    'G3-L04-B01':['围栏','每小格1平方厘米','3行，每行4格'],
-   'G3-L06-B03':['3.8元','2.5元','10角可以换成1元'],
+   'G3-L06-B03':['3.8元','2.5元','8角＋5角＝13角','把10角换成1元'],
    'G3-L07-R01':['24人，每人2张纸','每包12张，6元','本题不另给库存','15:10—15:50'],
   }[lesson.lessonId];
   for(const text of expected)assert((await lab.locator('.static-concept-figure').innerText()).includes(text),'静态关系缺少条件 '+text);
