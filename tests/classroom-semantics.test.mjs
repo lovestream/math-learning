@@ -68,3 +68,15 @@ test('空间观察不强行生成算式；称象只给有条件的等量关系�
  const live=currentClassroomExperiment(l,{handsOnVersion:2,waterlineMarked:true,passenger:true});
  assert.match(live.template,/同船同水线/);assert.match(live.template,/乘员质量/);assert(!/\d/.test(live.template));
 });
+
+
+test('归一与归总切换后当前条件、算式和不变量不混用，六组参数均可回放',()=>{
+ const lesson=get('G3-L02-B06'),model=lesson.conceptScenes[0].textbookSpec;
+ for(let choice=0;choice<6;choice++){const c=model.cases[choice],base={...initialCoreState(model,choice),stateKind:'textbook',sceneId:lesson.conceptScenes[0].sceneId};
+  for(const mode of ['price','total','price']){const live=currentClassroomExperiment(lesson,{...base,mode,checked:true});
+   assert.deepEqual(live.conditions,[mode==='total'?model.contexts[choice].alternate:model.contexts[choice].story]);
+   assert.equal(live.template,mode==='total'?`${c[0]}×${c[3]}÷${c[4]}＝□（${model.contexts[choice].outer}）`:`${c[1]}÷${c[0]}×${c[2]}＝□（元）`);
+   assert.match(live.relation,mode==='total'?/总量不变/:/单价不变/);
+  }
+ }
+});

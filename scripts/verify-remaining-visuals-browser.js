@@ -31,7 +31,7 @@ async page=>{
    }
    const result=await lab.locator('.operation-readout').innerText();assert(result.includes(scene.expected.value+scene.expected.unit),'结果标签不属于当前场景');
    if(id==='G3-U02-B03'){assert(result.includes(i===1?'14袋':'5盒'),'A/B结果单位混用');await page.locator('.experiment-mission').scrollIntoViewIfNeeded();await shot(i===1?'brackets-B':'brackets-A');const objectPath=`output/playwright/v2-audit/remaining-brackets-${i===1?'B':'A'}-objects-1440.png`;await lab.locator('.operation-stage').screenshot({path:objectPath});screenshots.push(objectPath);}
-   await lab.getByRole('button',{name:'撤销一步',exact:true}).click();await saved();await page.reload();await lab.waitFor();assert((await lab.locator('.mixed-story>small').innerText()).startsWith('场景 '+String.fromCharCode(65+i)),'刷新丢失场景');
+   await lab.getByRole('button',{name:'撤销一步',exact:true}).click();await saved();await page.reload();await lab.waitFor();assert((await lab.locator('.mixed-story>small').innerText()).startsWith('场景 '+String.fromCharCode(65+i)),'刷新丢失场景');await stage(4);assert((await page.locator('.blank-expression').innerText())===expressionASTText(scene.expressionAST)+'＝□','第5步没有采用当前故事');if(id==='G3-U02-B03')assert((await page.locator('.symbol-lines').innerText()).includes('(12＋8)÷4'),'原故事算式被场景B覆盖');await stage(2);
   }
  }
  for(const [id,relation,reveal,result]of [['G3-L06-B03','money-exchange','把10角换成1元','3.8＋2.5＝6.3（元）'],['G3-U07-R01','supply-plan','对照数量关系','36×2−20＝52（张）']]){
@@ -49,9 +49,9 @@ async page=>{
   if(i===0){await figure.scrollIntoViewIfNeeded();await shot('regroup-before');}
   await figure.getByRole('button').click();assert(await figure.getAttribute('data-arrangement')==='new','未切换分组');assert(JSON.stringify(await ids())===JSON.stringify(originalIds),'重新分组更换或丢失原对象');assert((await figure.locator('svg').getAttribute('aria-label')).includes(String(total/newEach)),'新组数不一致');
   await saved();await page.reload();await figure.waitFor();assert(await figure.getAttribute('data-arrangement')==='new','刷新丢失分组状态');
-  if(i===0){await figure.scrollIntoViewIfNeeded();await shot('regroup-after');}
+  if(i===0){await figure.scrollIntoViewIfNeeded();await shot('regroup-after');}await stage(4);assert((await page.locator('.current-experiment').innerText()).includes(model.contexts[i].alternate),'第5步重新分装仍套价格条件');assert((await page.locator('.blank-expression').innerText())===`${count}×${oldEach}÷${newEach}＝□（${model.contexts[i].outer}）`,'总量模式算式错配');if(i===0){await page.locator('.current-experiment').scrollIntoViewIfNeeded();await shot('regroup-math');}await stage(2);
   await lab.getByRole('button',{name:'撤销上次操作',exact:true}).click();assert(await figure.getAttribute('data-arrangement')==='original','撤销没有回到旧分组');
-  await lab.getByRole('button',{name:'同价商品：单价不变',exact:true}).click();assert(!await figure.count(),'商品单价场景残留同一批分装图');assert((await page.locator('.experiment-mission').innerText()).includes('单价不变'),'两类不变量顶层任务混用');
+  await lab.getByRole('button',{name:'同价商品：单价不变',exact:true}).click();assert(!await figure.count(),'商品单价场景残留同一批分装图');assert((await page.locator('.experiment-mission').innerText()).includes('单价不变'),'两类不变量顶层任务混用');await stage(4);assert((await page.locator('.current-experiment').innerText()).includes(model.contexts[i].story),'单价模式残留分装条件');await stage(2);
  }
  await open('G3-L01-B02');const motion=page.locator('[data-textbook-model="motion"]');await motion.getByRole('button',{name:'向右平移两格',exact:true}).click();assert(await motion.locator('[data-motion-trail="translation"]').count()===1,'平移缺原位置轨迹');await motion.getByRole('button',{name:'绕尾端转90°',exact:true}).click();assert(await motion.locator('[data-motion-trail="rotation"]').count()===1,'旋转缺扇形方向');await motion.scrollIntoViewIfNeeded();await shot('motion-trails');
  assert((await get()).progress.wallet.coins===initial,'观察/揭示或分组操作发放掌握积分');

@@ -841,8 +841,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "G3-U02-B01-A: AST独立计算=25",
             "G3-U02-B01-B: AST独立计算=8"
@@ -860,13 +860,13 @@
             "算下一步"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B01-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B01-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B01-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B01-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B01-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B01-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B01-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-verify-1440.png"
           },
           "taskOnlyAmendment": null
         }
@@ -1348,8 +1348,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "G3-U02-B03-A: AST独立计算=5",
             "G3-U02-B03-B: AST独立计算=14"
@@ -1367,22 +1367,15 @@
             "算下一步"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B03-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B03-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B03-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B03-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B03-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B03-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B03-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "25b185131d3fe172a3cae56be41935b86862372a1761e9bb626fc693725d3ca9",
-            "currentContentFingerprint": "eabeed836dcc5fcf56630430fd097e2160d3424ac29cc4e7d91aff4f6c665419",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -2109,8 +2102,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "G3-U02-E01-A: AST独立计算=15",
             "G3-U02-E01-B: AST独立计算=50"
@@ -2128,22 +2121,15 @@
             "算下一步"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E01-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E01-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E01-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E01-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E01-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E01-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E01-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "a4aec007648bd5cb163312a84cc85cbecdb7f71b1122c7be9d4f677559e96597",
-            "currentContentFingerprint": "9f749c1c3735581a04b136b4664a0a3b4c60d5e789a47592b707f12dae8e1ff0",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-18.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -4280,8 +4266,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "完成当前情境的数学目标及可用错误路径",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -4294,22 +4280,15 @@
             "捆10个一 → 1个十"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B01-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B01-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B01-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B01-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B01-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B01-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B01-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "1a879679594039b6c455f387e9f2ab5eccb222c8c65035cd831eef1d16f942c7",
-            "currentContentFingerprint": "b1951bc4344c98dbaa4ee42166aeef1b70411a613e624fe9ce3b718494f77991",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -4742,8 +4721,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "完成当前情境的数学目标及可用错误路径",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -4770,22 +4749,15 @@
             "捆10个一 → 1个十"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B03-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B03-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B03-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B03-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B03-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B03-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B03-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "2ebe4f90005661edc13f0087c36c2374b33a853f4d9acdb28b13f2ff46c23a1b",
-            "currentContentFingerprint": "2d78ea838e461c69c1fe5825bc3cb2b94eee9e3e133aeb594b8ebe627e817e58",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -5021,8 +4993,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "完成当前情境的数学目标及可用错误路径",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -5047,22 +5019,15 @@
             "捆10个一 → 1个十"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B04-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B04-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B04-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B04-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B04-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B04-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B04-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "dfec0c461d3e16010e8528fd66e387bc16d88ac49b07f782f96978fa713d19ef",
-            "currentContentFingerprint": "c8719f9d176060ff6d12ff5ea2130c4933289f5d93c067106cfafd45fc953045",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -5312,8 +5277,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "完成当前情境的数学目标及可用错误路径",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -5325,22 +5290,15 @@
             "精算后检验预算"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B05-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B05-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B05-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B05-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B05-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B05-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B05-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "e923e7942acff98db8dd2f41988d75f78783dcafc1ae2ef4c4f5dc35de71424d",
-            "currentContentFingerprint": "20de031bae595c7d2c0fc3b92829f7ea01dd91e8547c6e3c8b053678f10ed9c8",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -6691,8 +6649,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "完成当前情境的数学目标及可用错误路径",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -6710,22 +6668,15 @@
             "撤销上次操作"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B03-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B03-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B03-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B03-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B03-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B03-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B03-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "f8dc790ca29890ef8a4acb8f4f6b04405d5fa8fa60c1a06e0e4be0180744a1b0",
-            "currentContentFingerprint": "12b33f347707da5b5c5f8e4461e4e285b9fc5cd5a71e61f6e7e5cc3cc421814b",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -6963,8 +6914,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "完成当前情境的数学目标及可用错误路径",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -6976,22 +6927,15 @@
             "撤销上次操作"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B04-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B04-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B04-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B04-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B04-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B04-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B04-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "84b533d3d7e38050c3c6b98a78bb1f2d623f6c359752a9bcf89e6c22944bc7f7",
-            "currentContentFingerprint": "becf530ec8622079aa84eb7946cfe41198c2d686b5a21a04d9107a1eddc06913",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -7229,8 +7173,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "完成当前情境的数学目标及可用错误路径",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -7244,22 +7188,15 @@
             "撤销上次操作"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B05-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B05-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B05-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B05-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B05-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B05-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B05-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "860c46071ae50b5634980d6b1a7c9021af56be7e4ae8c80acfa4d5f2af0ef300",
-            "currentContentFingerprint": "104e8296d4a106043d59a06b388d3089551964999e08785c56f9fcfc7339dc84",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -7609,33 +7546,26 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "36份",
-            "2张贴纸",
-            "20张贴纸",
-            "？张贴纸",
+            "每份2张",
+            "已有20张",
+            "还缺？张",
             "源图形几何和数学关系已手工源审，静态对照不冒充操作"
           ],
           "actionsPerformed": [],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-R01-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-R01-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-R01-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-R01-static-relation-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-R01-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-R01-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-R01-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-static-relation-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "f2a416de342804105b6e1ee47913b89efd0c089dafe8e8adeadcbba146515b48",
-            "currentContentFingerprint": "7301ca9a34ea3f948e0eeb2993da8cd0127f5f96cbbed13bc2df96f0e8611bed",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -8174,8 +8104,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "专用教材模型完整结论与可用错误/逆操作",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -8186,22 +8116,15 @@
             "绕尾端转90°"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B02-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B02-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B02-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B02-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B02-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B02-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B02-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "6b9ab07b2fb2576803f3678c0852e31526a8be44cea3b2462cd1284c3626d7e1",
-            "currentContentFingerprint": "94356816f9be06d0160b58e6eac675e31cee57a03a5fee4ec3afb06366c93a6f",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -8439,8 +8362,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "完成当前情境的数学目标及可用错误路径",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -8450,22 +8373,15 @@
             "撤销上次操作"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B01-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B01-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B01-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B01-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B01-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B01-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B01-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "2f535ee5e6481183cfd8274feb4ced5c6d555312ec1d4d1413f3b79a229255a1",
-            "currentContentFingerprint": "14f943b494ebf581f83c3b93397b7841bd46ed32424e241bf632246f4f31dfeb",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -8905,8 +8821,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "完成当前情境的数学目标及可用错误路径",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -8935,22 +8851,15 @@
             "检验余数"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B03-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B03-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B03-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B03-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B03-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B03-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B03-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "252113ad9c07f4f635e89c2772472bd8d2669378c8112b0ba55884a6d3169cf0",
-            "currentContentFingerprint": "58874fe2e0253b73aa486ed2721cf1c0c0531e2db003eeca148001b33a25beb2",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -9393,8 +9302,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "完成当前情境的数学目标及可用错误路径",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -9413,22 +9322,15 @@
             "反过来：按箱、盒分回去"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B05-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B05-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B05-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B05-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B05-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B05-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B05-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "39361a14ec941630ee154691753a00e62b71d694d5b45676f1d521311522cfd7",
-            "currentContentFingerprint": "92e85958f128dbd6f18909071d1d1a8be827e549711ccf8d1f2b4dd3e24879c9",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -9696,8 +9598,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "完成当前情境的数学目标及可用错误路径",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -9710,22 +9612,15 @@
             "总量不变"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B06-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B06-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B06-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B06-operated-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B06-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B06-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B06-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-operated-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "3fd75a12f3698401ab141a84c9ea9f01e8721b2a8a412bff3000cdad2c11d00b",
-            "currentContentFingerprint": "fa52651c273efdbb2db74172d3e2d38795f195e94a756a94c0602d14e2a7df57",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {
@@ -12481,32 +12376,26 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
-          "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
           "assertions": [
             "3.8元",
             "2.5元",
-            "10角可以换成1元",
+            "8角＋5角＝13角",
+            "把10角换成1元",
             "源图形几何和数学关系已手工源审，静态对照不冒充操作"
           ],
           "actionsPerformed": [],
           "screenshots": {
-            "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B03-story-1440.jpg",
-            "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B03-prediction-1440.jpg",
-            "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B03-experiment-initial-1440.jpg",
-            "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B03-static-relation-1440.jpg",
-            "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B03-why-1440.jpg",
-            "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B03-symbols-1440.jpg",
-            "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B03-verify-1440.jpg"
+            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-story-1440.png",
+            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-prediction-1440.png",
+            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-static-relation-1440.png",
+            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-why-1440.png",
+            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-symbols-1440.png",
+            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-verify-1440.png"
           },
-          "taskOnlyAmendment": {
-            "scope": "classroom-and-model-unchanged; formal-task-review-separate",
-            "verifiedClassroomSourceFingerprint": "56aa7ced2780d2af814cfd34032881fa3535b14f385a1979eb351af290387645",
-            "currentContentFingerprint": "eaa61b57f4c39a400feb6641564729787c29e1e315632e28981dc51a378a7e0e",
-            "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
-            "assessmentVersion": "2026-10-02.1",
-            "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
-          }
+          "taskOnlyAmendment": null
         }
       },
       "acceptance": {

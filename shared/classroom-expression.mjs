@@ -22,9 +22,9 @@ export function currentClassroomExperiment(lesson,state={}){
   else if(model.type==='pack-remainder')template=`${c[0]}÷${c[1]}＝□ 余 □`;
   else if(model.type==='nested-groups')template=`${c[0]}×${c[1]}×${c[2]}＝□（${ctx.unit}）`;
   else if(model.type==='estimate-product')template=`${c[0]}×${c[1]} 与预算 ${c[2]} 比较：先选可靠的估计界限`;
-  else if(model.type==='invariant-table')template='先求不变的单价或总量：□；再求新条件下的结果：□';
+  else if(model.type==='invariant-table')template=normalized.mode==='total'?`${c[0]}×${c[3]}÷${c[4]}＝□（${ctx.outer}）`:`${c[1]}÷${c[0]}×${c[2]}＝□（元）`;
   else if(model.type==='fraction-core')template=model.mode==='add'?`${c[1]}/${c[0]}＋${c[2]}/${c[0]}＝□；剩下：1−□＝□`:`${c[0]}÷${c[1]}×${c[2]}＝□（${ctx.unit}）`;
-  if(template)return {conditions:[ctx.story],template,relation:model.type==='fraction-core'?'先说清这个整体和每一份；换了整体，就重新确定实际数量。':'换计数单位或分配材料不改变原总量；每个数都要指回当前条件。'};
+  if(template)return {conditions:[model.type==='invariant-table'&&normalized.mode==='total'?ctx.alternate:ctx.story],template,relation:model.type==='invariant-table'?(normalized.mode==='total'?'同一批材料的总量不变；改变每份数量，再求需要几份。':'这里单价不变；购买数量变化，总价会随之变化。'):model.type==='fraction-core'?'先说清这个整体和每一份；换了整体，就重新确定实际数量。':'换计数单位或分配材料不改变原总量；每个数都要指回当前条件。'};
  }
  const length=lesson.lengthScenes?.find(s=>s.sceneId===state.sceneId)??lesson.lengthScenes?.[0];
  if(length?.mode==='boards'){

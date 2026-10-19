@@ -165,8 +165,7 @@ export default function CoreWorkbench({
             : context.story}
         </p>
         <small>
-          图上的一个计数单位表示1{context.unit}
-          ；计数单位可以拆换，实际总量不变。
+          {model.type==='invariant-table'?(s.mode==='total'?'同一批材料只换分装方法，总量不变。':'这里比较两次购买：单价相同，数量变了，总价也会变化。'):<>图上的一个计数单位表示1{context.unit}；计数单位可以拆换，实际总量不变。</>}
         </small>
       </div>
       {["product-place", "share-place"].includes(model.type) && (
