@@ -1,11 +1,13 @@
 async page => {
  const base=new URL(page.url()).origin,assert=(ok,message)=>{if(!ok)throw Error(message)},data=await(await page.request.get(base+'/api/studio')).json(),checked=[],errors=[];
  page.on('pageerror',e=>errors.push(e.message));
+ const {mixedSceneContext,coreSceneMission}=await import(process.cwd()+'/shared/scene-context.mjs');
  const steps=['真实问题','先猜一猜','亲手实验','说出发现','写成数学','自己验证'];
  const shots=new Set(['G3-U01-B01','G3-U02-B03','G3-U03-E02','G3-U04-B03','G3-U06-B03','G3-L04-B01','numbers.quantity.intro']);
  for(const lesson of data.lessons){
   await page.goto(base+'/?lesson='+lesson.lessonId);await page.locator('.classroom-story').waitFor();
   assert((await page.locator('.story-sentence').innerText())===lesson.childClassroom.story,'故事与教案不同 '+lesson.lessonId);
+  assert((await page.locator('.classroom-mission p').innerText())===lesson.childClassroom.mission,'开头故事的任务被实验情境覆盖 '+lesson.lessonId);
   assert(await page.locator('.classroom-route button').count()===6,'六步缺失 '+lesson.lessonId);
   const graphical=lesson.introVisual||lesson.mathScenes?.length||lesson.lengthScenes?.length||lesson.articleBlocks[0]?.diagram;
   if(graphical)assert(await page.locator('.classroom-story [role=img],.classroom-story svg,.classroom-story .teaching-diagram,.classroom-story .ribbon-strip,.classroom-story .lunchboxes,.classroom-story .apple-row,.classroom-story .sticker-row,.classroom-story .tile-diagram,.classroom-story .snack-contents,.classroom-story .candy-comparison').count()>0,'真实问题缺图 '+lesson.lessonId);
@@ -15,7 +17,7 @@ async page => {
    const title=i===2&&lesson.interactionStatus==='static-visual'?'画图想一想':steps[i];
    await page.getByRole('button',{name:`${i+1} ${title}`,exact:true}).click();
    if(i===1){assert(await page.locator('.prediction-cards button').count()>=2,'缺少猜想 '+lesson.lessonId);await page.locator('.prediction-cards button').first().click();}
-   if(i===2)assert(await page.locator('.classroom-stage .experiment-mission').innerText()===lesson.childClassroom.mission,'实验目标不同 '+lesson.lessonId);
+   if(i===2){const model=lesson.conceptScenes?.[0]?.textbookSpec,expected=lesson.mathScenes?.length?mixedSceneContext(lesson.mathScenes).mission:model?.cases?coreSceneMission(model):lesson.childClassroom.mission;assert(await page.locator('.classroom-stage .experiment-mission').innerText()===expected,'当前实验指令未跟随情境 '+lesson.lessonId);}
    if(i===4){assert(await page.locator('.symbol-lines p').count()===lesson.childClassroom.symbols.length,'数学表达缺失 '+lesson.lessonId);assert((await page.locator('.classroom-symbols>p').first().innerText()).includes('第一步的故事'),'原故事表达与可切换的实验条件未区分 '+lesson.lessonId);}
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'390步骤溢出 '+lesson.lessonId+' '+i);
   }
