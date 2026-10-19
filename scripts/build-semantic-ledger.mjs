@@ -23,7 +23,6 @@ export function buildSemanticLedger(options={}){
  const rows=lessons.map(lesson=>{
   const id=lesson.lessonId,c=lesson.childClassroom,note=semanticNotes[id];
   // A changed chapter gets its own clean-SHA run; do not relabel 69 older runs.
-  const chapterEvidence=evidence?.chapterAmendments?.find(run=>run.rows?.some(row=>row.lessonId===id))??evidence;
   const block=lesson.articleBlocks.find(b=>b.widget);
   const scene=lesson.conceptScenes?.[0];
   const model=scene?.textbookSpec??scene?.handsOnSpec??scene?.modelSpec??lesson.lengthScenes?.[0]??lesson.mathScenes?.[0]??{type:lesson.widget??block.widget};
@@ -32,8 +31,14 @@ export function buildSemanticLedger(options={}){
   const contextFigure=picture?{renderer:'src/studio/IntroVisual.tsx',spec:picture}:lesson.articleBlocks[0]?.diagram?{renderer:'src/studio/TeachingDiagrams.tsx',diagram:lesson.articleBlocks[0].diagram}:lesson.mathScenes?.[0]?{renderer:'src/studio/MathSceneVisual.tsx',sceneId:lesson.mathScenes[0].sceneId}:lesson.lengthScenes?.[0]?{renderer:'src/studio/measurement/TaskDiagram.tsx',sceneId:lesson.lengthScenes[0].sceneId}:{renderer:null,reason:'当前入口按文字推理题开放，是否足够直观仍需逐章教学核对'};
   const fingerprint=sha({classroom:c,model,taskSets:lesson.taskSets});
   const original=closedBaseline.rows.find(r=>r.lessonId===id);
-  const taskOnlyCompatible=chapterEvidence?.source?.sha===closedBaseline.desktopEvidenceSource.sha&&original?.classroomFingerprint===sha(c)&&original?.modelFingerprint===sha(model)&&Object.values(lesson.taskSets).flat().every(t=>semanticReviewMatches(taskReview.rows.find(r=>r.taskId===t.id),t,lesson.contentVersion));
-  const verified=chapterEvidence?.passed===true&&chapterEvidence?.source?.dirty===false&&/^[a-f0-9]{40}$/.test(chapterEvidence.source.sha)?chapterEvidence.rows?.find(r=>r.lessonId===id&&(r.contentFingerprint===fingerprint||(taskOnlyCompatible&&r.contentFingerprint===original.contentFingerprint))&&r.result==='pass'&&(lesson.interactionStatus==='static-visual'?r.mathBehavior==='static-relation-verified':r.mathBehavior==='full-path-verified'&&r.actionsPerformed?.length>0)):null;
+  // Match the lesson fingerprint before choosing an amendment. A stale/failed
+  // record must not hide a valid run simply because it appears first in JSON.
+  const candidates=[...(evidence?.chapterAmendments??[]),evidence].filter(Boolean).flatMap(run=>{
+   if(run.passed!==true||run.source?.dirty!==false||!/^[a-f0-9]{40}$/.test(run.source?.sha??''))return [];
+   const taskOnlyCompatible=run.source.sha===closedBaseline.desktopEvidenceSource.sha&&original?.classroomFingerprint===sha(c)&&original?.modelFingerprint===sha(model)&&Object.values(lesson.taskSets).flat().every(t=>semanticReviewMatches(taskReview.rows.find(r=>r.taskId===t.id),t,lesson.contentVersion));
+   return (run.rows??[]).filter(r=>r.lessonId===id&&(r.contentFingerprint===fingerprint||(taskOnlyCompatible&&r.contentFingerprint===original.contentFingerprint))&&r.result==='pass'&&(lesson.interactionStatus==='static-visual'?r.mathBehavior==='static-relation-verified':r.mathBehavior==='full-path-verified'&&r.actionsPerformed?.length>0)).map(record=>({run,record,exact:record.contentFingerprint===fingerprint}));
+  }).sort((a,b)=>Number(b.exact)-Number(a.exact)||String(b.run.source.startedAt??'').localeCompare(String(a.run.source.startedAt??''))||b.run.source.sha.localeCompare(a.run.source.sha));
+  const chapterEvidence=candidates[0]?.run,verified=candidates[0]?.record??null;
   const taskOnlyAmendment=verified&&verified.contentFingerprint!==fingerprint?{scope:'classroom-and-model-unchanged; formal-task-review-separate',verifiedClassroomSourceFingerprint:verified.contentFingerprint,currentContentFingerprint:fingerprint,semanticRegister:'docs/review/849题最终审校清单_20261009.json',assessmentVersion:lesson.contentVersion,mathBehaviorSha:chapterEvidence.source.sha}:null;
   return {
    lessonId:id,title:lesson.title,unitId:lesson.textbookUnit?.id??'foundation-bridge',unitTitle:lesson.textbookUnit?.title??'基础与跨单元桥梁',track:lesson.track,

@@ -97,3 +97,15 @@ test('题库专项修订只复用未改课堂的原SHA证据，题目审校或�
  try{task.hint+=' unreviewed hint';assert.equal(find(evidence),null);}finally{task.hint=originalHint;}
  assert(find(evidence));
 });
+
+
+test('章节证据按有效指纹选取：交换顺序、旧版本、失败及重复回放不遮蔽有效来源',()=>{
+ const row=buildSemanticLedger({evidence:null}).rows.find(r=>r.lessonId==='G3-U03-E02');
+ const record={lessonId:row.lessonId,contentFingerprint:row.contentFingerprint,result:'pass',mathBehavior:'full-path-verified',actionsPerformed:['fixture-only'],assertions:[],screenshots:{}};
+ const run=(sha,patch={})=>({passed:true,source:{sha:sha.repeat(40),prHeadSha:sha.repeat(40),dirty:false,startedAt:'2026-10-19T00:00:00Z'},rows:[{...record}],...patch});
+ const good=run('2'),old=run('1',{rows:[{...record,contentFingerprint:'stale'}]}),failed=run('3',{passed:false}),dirty=run('4');dirty.source.dirty=true;
+ const map=amendments=>buildSemanticLedger({evidence:{passed:false,rows:[],chapterAmendments:amendments}}).rows.find(r=>r.lessonId===row.lessonId).verification.evidence;
+ for(const records of [[old,good,failed,dirty],[dirty,failed,good,old],[good,old,good]])assert.equal(map(records).sha,good.source.sha);
+ assert.equal(map([old,failed,dirty]),null);
+ const later=run('5');later.source.startedAt='2026-10-19T01:00:00Z';assert.equal(map([good,later]).sha,map([later,good]).sha);assert.equal(map([good,later]).sha,later.source.sha);
+});

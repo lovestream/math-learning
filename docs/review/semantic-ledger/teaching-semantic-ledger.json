@@ -45,7 +45,7 @@
     "desktopMath": 70,
     "fullPaths": 64,
     "staticRelations": 6,
-    "visualInspected": 69,
+    "visualInspected": 70,
     "parentReviewed": 0,
     "learnerMastery": 0
   },
@@ -13247,7 +13247,7 @@
       "verification": {
         "implementation": "manipulable-six-step",
         "contentReviewed": "source-checked",
-        "desktopVisual": "screenshot-recorded",
+        "desktopVisual": "inspected-pass",
         "mathBehavior": "full-path-verified",
         "parentReviewed": "no",
         "learnerMastery": "no-data",
