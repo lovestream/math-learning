@@ -9598,8 +9598,8 @@
         "parentReviewed": "no",
         "learnerMastery": "no-data",
         "evidence": {
-          "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
-          "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+          "sha": "68233965bf401dac5328f8b43d18e9a8e352f397",
+          "prHeadSha": "68233965bf401dac5328f8b43d18e9a8e352f397",
           "assertions": [
             "完成当前情境的数学目标及可用错误路径",
             "存档通过模型状态约束，完整目标经独立数值断言",
@@ -9612,13 +9612,13 @@
             "总量不变"
           ],
           "screenshots": {
-            "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-story-1440.png",
-            "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-prediction-1440.png",
-            "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-experiment-initial-1440.png",
-            "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-operated-1440.png",
-            "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-why-1440.png",
-            "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-symbols-1440.png",
-            "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B06-verify-1440.png"
+            "story": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-story-1440.png",
+            "prediction": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-prediction-1440.png",
+            "initial": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-experiment-initial-1440.png",
+            "operated": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-operated-1440.png",
+            "why": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-why-1440.png",
+            "symbols": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-symbols-1440.png",
+            "verify": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-verify-1440.png"
           },
           "taskOnlyAmendment": null
         }
