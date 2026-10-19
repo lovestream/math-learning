@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "balance": true,
+  "oneSidedError": true,
+  "undo": true,
+  "solidViews": true,
+  "candidateRejection": true,
+  "venn": true,
+  "refresh": true,
+  "reward": 0,
+  "errors": []
+}

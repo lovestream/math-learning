@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "checked": [
+    {
+      "id": "G3-U04-B01",
+      "type": "product-place",
+      "caseCount": 6,
+      "exercisedCases": [
+        0,
+        5
+      ],
+      "refreshed": true
+    },
+    {
+      "id": "G3-U04-B03",
+      "type": "product-place",
+      "caseCount": 6,
+      "exercisedCases": [
+        0,
+        5
+      ],
+      "refreshed": true
+    },
+    {
+      "id": "G3-U04-B04",
+      "type": "product-place",
+      "caseCount": 6,
+      "exercisedCases": [
+        0,
+        5
+      ],
+      "refreshed": true
+    },
+    {
+      "id": "G3-U04-B05",
+      "type": "estimate-product",
+      "caseCount": 6,
+      "exercisedCases": [
+        0,
+        5
+      ],
+      "refreshed": true
+    },
+    {
+      "id": "G3-U06-B03",
+      "type": "fraction-core",
+      "caseCount": 6,
+      "exercisedCases": [
+        0,
+        5
+      ],
+      "refreshed": true
+    },
+    {
+      "id": "G3-U06-B04",
+      "type": "fraction-core",
+      "caseCount": 6,
+      "exercisedCases": [
+        0,
+        5
+      ],
+      "refreshed": true
+    },
+    {
+      "id": "G3-U06-B05",
+      "type": "fraction-core",
+      "caseCount": 6,
+      "exercisedCases": [
+        0,
+        5
+      ],
+      "refreshed": true
+    },
+    {
+      "id": "G3-L02-B01",
+      "type": "share-place",
+      "caseCount": 6,
+      "exercisedCases": [
+        0,
+        5
+      ],
+      "refreshed": true
+    },
+    {
+      "id": "G3-L02-B03",
+      "type": "pack-remainder",
+      "caseCount": 6,
+      "exercisedCases": [
+        0,
+        5
+      ],
+      "refreshed": true
+    },
+    {
+      "id": "G3-L02-B05",
+      "type": "nested-groups",
+      "caseCount": 6,
+      "exercisedCases": [
+        0,
+        5
+      ],
+      "refreshed": true
+    },
+    {
+      "id": "G3-L02-B06",
+      "type": "invariant-table",
+      "caseCount": 6,
+      "exercisedCases": [
+        0,
+        5
+      ],
+      "refreshed": true
+    }
+  ],
+  "reward": 0,
+  "errors": [],
+  "source": {
+    "prHeadSha": "ce219124ed86b606f3b718517e735c38f71f4a7e",
+    "sha": "ce219124ed86b606f3b718517e735c38f71f4a7e",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-09T07:19:46.051Z"
+  }
+}

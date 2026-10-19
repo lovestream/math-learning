@@ -1,0 +1,195 @@
+{
+  "schemaVersion": "detective-inbox.v1",
+  "bundleId": "DT-FIXTURE-CARDS",
+  "bundleRevision": 1,
+  "createdAt": "2026-10-15T08:00:00Z",
+  "producer": "chatgpt-github",
+  "sourceFingerprint": "2b943a0b6d2903cd7bbd8f00a38ae6e9f7461a787e209cdf331aa7cfd4a36dae",
+  "privacy": "public-anonymized-math-only",
+  "policy": "auto-if-independently-verified",
+  "cases": [
+    {
+      "id": "DT-FIXTURE-CARDS-A",
+      "role": "original-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "卡片厚度调查",
+        "prompt": "3张相同的卡片叠在一起厚2毫米。要叠到20毫米厚，需要多少张卡片？",
+        "steps": [
+          "20÷2=10（组）",
+          "所以需要10张卡片。"
+        ],
+        "verdict": "wrong",
+        "errorStep": 1,
+        "reasons": [
+          "把组数当成了张数，还要乘每组的张数。",
+          "卡片厚度不能用除法比较。",
+          "张数只要等于目标毫米数。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "一共需要多少张卡片？",
+          "unit": "张",
+          "options": [],
+          "answer": "30"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "30张卡片，每3张为一组。一共叠起来厚多少毫米？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "20"
+        },
+        "hints": [
+          "先圈出“一组有几张”和“一组厚多少”。",
+          "目标厚度里面有几组？组数和张数相同吗？",
+          "求出组数后，每一组都要数3张；再用厚度逆查。"
+        ],
+        "solution": "20÷2=10组，10×3=30张；逆查30÷3×2=20毫米。",
+        "family": "UNIT_GROUPING",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "一组3张",
+            "一组厚2毫米",
+            "目标20毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "card-thickness-grouping-v1",
+        "parameters": {
+          "mode": "wrong",
+          "cardsPerGroup": 3,
+          "groupThicknessMm": 2,
+          "targetMm": 20
+        },
+        "firstWrongStep": 1
+      }
+    },
+    {
+      "id": "DT-FIXTURE-CARDS-B",
+      "role": "transfer-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "卡片厚度调查",
+        "prompt": "4张相同的卡片叠在一起厚3毫米。要叠到15毫米厚，需要多少张卡片？",
+        "steps": [
+          "15÷3=5（组）",
+          "所以需要5张卡片。"
+        ],
+        "verdict": "wrong",
+        "errorStep": 1,
+        "reasons": [
+          "把组数当成了张数，还要乘每组的张数。",
+          "卡片厚度不能用除法比较。",
+          "张数只要等于目标毫米数。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "一共需要多少张卡片？",
+          "unit": "张",
+          "options": [],
+          "answer": "20"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "20张卡片，每4张为一组。一共叠起来厚多少毫米？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "15"
+        },
+        "hints": [
+          "先圈出“一组有几张”和“一组厚多少”。",
+          "目标厚度里面有几组？组数和张数相同吗？",
+          "求出组数后，每一组都要数4张；再用厚度逆查。"
+        ],
+        "solution": "15÷3=5组，5×4=20张；逆查20÷4×3=15毫米。",
+        "family": "UNIT_GROUPING",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "一组4张",
+            "一组厚3毫米",
+            "目标15毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "card-thickness-grouping-v1",
+        "parameters": {
+          "mode": "wrong",
+          "cardsPerGroup": 4,
+          "groupThicknessMm": 3,
+          "targetMm": 15
+        },
+        "firstWrongStep": 1
+      }
+    },
+    {
+      "id": "DT-FIXTURE-CARDS-C",
+      "role": "correct-control",
+      "simulatedSteps": true,
+      "content": {
+        "title": "卡片厚度调查",
+        "prompt": "5张相同的卡片叠在一起厚2毫米。要叠到10毫米厚，需要多少张卡片？",
+        "steps": [
+          "10÷2=5（组）",
+          "5×5=25（张）"
+        ],
+        "verdict": "correct",
+        "errorStep": null,
+        "reasons": [
+          "先求组数，再乘每组张数，结果符合厚度条件。",
+          "卡片厚度不能用除法比较。",
+          "张数只要等于目标毫米数。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "一共需要多少张卡片？",
+          "unit": "张",
+          "options": [],
+          "answer": "25"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "25张卡片，每5张为一组。一共叠起来厚多少毫米？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "10"
+        },
+        "hints": [
+          "先圈出“一组有几张”和“一组厚多少”。",
+          "目标厚度里面有几组？组数和张数相同吗？",
+          "求出组数后，每一组都要数5张；再用厚度逆查。"
+        ],
+        "solution": "10÷2=5组，5×5=25张；逆查25÷5×2=10毫米。",
+        "family": "UNIT_GROUPING",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "一组5张",
+            "一组厚2毫米",
+            "目标10毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "card-thickness-grouping-v1",
+        "parameters": {
+          "mode": "correct",
+          "cardsPerGroup": 5,
+          "groupThicknessMm": 2,
+          "targetMm": 10
+        },
+        "firstWrongStep": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+import type {TextbookModel} from '../../../shared/textbook-models.mjs';
+import type {WidgetState} from '../types';
+import {useTextbook} from './useTextbook';
+import {Board,DragPoint,clamp,Heading,Feedback,colors} from './Primitives';
+const TOTAL=2520;
+function paintToggle(intervals:number[],a:number,b:number){
+ const full=intervals.some((start,i)=>i%2===0&&start<=a&&intervals[i+1]>=b),pairs:number[][]=[];
+ for(let i=0;i<intervals.length;i+=2){const start=intervals[i],end=intervals[i+1];if(!full||end<=a||start>=b)pairs.push([start,end]);else{if(start<a)pairs.push([start,a]);if(end>b)pairs.push([b,end])}}
+ if(!full)pairs.push([a,b]);pairs.sort((x,y)=>x[0]-y[0]);const merged:number[][]=[];for(const pair of pairs){const last=merged.at(-1);if(last&&pair[0]<=last[1])last[1]=Math.max(last[1],pair[1]);else merged.push(pair)}return merged.flat();
+}
+const gcd=(a:number,b:number):number=>b?gcd(b,a%b):a;
+export default function FractionWorkbench(props:{model:TextbookModel;sceneId:string;value:WidgetState;onChange:(s:WidgetState)=>void}){
+ const {state:s,act,toolbar,measured:m}=useTextbook(props.model,props.sceneId,props.value,props.onChange),cuts=s.cuts!,filled=s.filled!,x=(n:number)=>80+n/TOTAL*480,denom=gcd(m.length,TOTAL);
+ const move=(i:number,px:number,gestureId?:string)=>{const next=[...cuts];next[i]=clamp((px-80)/480*TOTAL,cuts[i-1]+1,cuts[i+1]-1);act('move-fold',{cuts:next},true,gestureId)};
+ const equal=()=>act('equal-folds',{cuts:Array.from({length:s.parts!+1},(_,i)=>i*TOTAL/s.parts!)});
+ return <section className="textbook-workbench" data-textbook-model="fraction"><Heading model={props.model}>先选准备分几份，再放好折痕。拖动折痕可以故意分得不一样；点一个区间涂色，再点一次放回。改变折痕不会改变已经涂色的长度。</Heading><Board title="同一条纸带的参照整体、可移动折痕与涂色" height={295}><text x="80" y="32" fill={colors.ink}>同样长的完整纸带，记作1</text><rect x="80" y="49" width="480" height="36" rx="4" fill="#eadbb1"/><rect x="80" y="139" width="480" height="58" fill="#e9e2cf" stroke={colors.ink}/>{filled.map((a,i)=>i%2===0&&<rect key={i} x={x(a)} y="139" width={x(filled[i+1])-x(a)} height="58" fill={colors.blue}/>)}{cuts.slice(1).map((b,i)=><g key={i} role="button" tabIndex={0} aria-label={`涂色或放回第${i+1}段`} onClick={()=>act('paint-segment',{filled:paintToggle(filled,cuts[i],b)})} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();act('paint-segment',{filled:paintToggle(filled,cuts[i],b)})}}}><rect x={x(cuts[i])} y="139" width={x(b)-x(cuts[i])} height="58" fill="transparent" stroke="#fff" strokeWidth="2"/><text x={(x(cuts[i])+x(b))/2} y="236" textAnchor="middle" fontSize="16" fill={colors.ink}>第{i+1}段</text></g>)}{cuts.slice(1,-1).map((n,i)=><g key={i}><line x1={x(n)} x2={x(n)} y1="113" y2="209" stroke={colors.gold} strokeDasharray="4 4"/><DragPoint x={x(n)} y={120} label={`移动第${i+1}条折痕`} onMove={(px,py,gestureId)=>move(i+1,px,gestureId)}/></g>)}</Board>
+ <div className="textbook-controls"><label>准备平均分几份<select aria-label="准备分几份" value={s.parts} onChange={e=>act('choose-parts',{parts:Number(e.target.value)})}>{[2,3,4,5,6,7,8,9,10].map(n=><option key={n}>{n}</option>)}</select></label><button onClick={equal}>把折痕等距摆好</button><button onClick={()=>{const middle=cuts.slice(1).map((b,i)=>[b-cuts[i],Math.round((b+cuts[i])/2)]).sort((a,b)=>b[0]-a[0])[0][1];if(cuts.length<12&&middle>0&&middle<TOTAL&&!cuts.includes(middle))act('add-fold',{cuts:[...cuts,middle].sort((a,b)=>a-b)})}}>在最长的一段加折痕</button><button disabled={cuts.length<=2} onClick={()=>act('remove-fold',{cuts:[0,TOTAL]})}>收起分组线</button><button onClick={()=>act('clear-paint',{filled:[]})}>全部放回</button>{props.model.regroup&&<button onClick={()=>act('regroup',{cuts:[0,840,1680,2520]})}>相邻两小格合成一大格</button>}</div>
+ <Feedback error={s.error}>{m.parts===1?'现在还没有分组线，整条仍是1个整体。':m.equal?`目前确实分成${m.parts}个相等小份。`:'现在各段不一样长，不能只数块数写“几分之几”。'} 蓝色实际长度是同一整体的{m.length===0?'0':`${m.length/denom}/${TOTAL/denom}`}，由蓝色的端点决定。</Feedback>{toolbar}</section>;
+}

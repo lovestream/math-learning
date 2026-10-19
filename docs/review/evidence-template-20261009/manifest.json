@@ -1,0 +1,29 @@
+{
+  "codeSha": "a53bb7ef88f09c50b57d987b80d1b5b6a6c09461",
+  "ciUrl": "https://github.com/lovestream/math-learning/actions/runs/37864387119",
+  "ciConclusion": "success",
+  "localBrowserSuites": 16,
+  "criticalCiBrowserSuites": 9,
+  "physicalIpadTested": false,
+  "learnerData": "isolated temporary fixtures only",
+  "files": {
+    "template-G3-U03-E02-390.png": "c5f47a0b5de35e2fce67d9725cdb5656e868ac01dee38ee9584057d70dbe9783",
+    "template-numbers.quantity.intro-390.png": "c5ae73c671c10edfcaba3880c9de02b4af876d4b72662f52de210d55e4e0c703",
+    "ci-summary.json": "c7d81d5a2ba2471bb203f1a0c53dc15fa9c680363c9bf151cf6ea244c3a93a26",
+    "verify-template-browser.json": "c0b78e346fea0a9f596b9f184b8355b9b2ff75efcd141dbeb6728b43d8abbc4e",
+    "diff-review.json": "c54b90c7b939ca2d81f50410f19ce00ac624ea0bf4b6f1c0e066398f8d77e336",
+    "static-G3-L04-B01-390.png": "ffe7a60b0dc021178824161abe5cea6e075572f233cc4fbfcd3a0a54def80245",
+    "template-final-answer-G3-U02-B03.png": "a9c334e0304f312c6c89ec91bfb9e622ba9303960fee839865ad93e048c5455b",
+    "node-tests.log": "98b566914bdaa164fd9beac4d5b493b8d0da47625a3b23fdc43723d5797ab72c",
+    "template-G3-U04-B03-390.png": "f67ac556e03462b3117f99172912f71d99e219287a8b4c643f2dc2848de17e28",
+    "verify-accessibility-browser.json": "c8781739478f924185ab01a72ad0bd79886a78482b0530822835f78f53c46fa3",
+    "source-evidence.json": "16cdf79ce66eed0793e80d419e8089734aa4a1671254fe97c3788bc3ffe8f755",
+    "verify-save-stress-browser.json": "9fa97b256e8e1134658df8abdf8d410090d4f96c531ecdccd1bacbfec935302a",
+    "verify-intro-visuals.json": "f2f56edd11470469df1db74051b09aaeb5e2f1d9c6a024f888ce29786e91c223",
+    "template-self-check-G3-U02-B03.png": "23785b711b476763b19c0cece1bfedea61414f784e4f73a24bad43d16279f324",
+    "template-G3-U02-B03-390.png": "880f5a8b1f49c338af886d99f69f899f4e05b31865ed962ffe080686c9b27a32",
+    "content-check.log": "5512c5dbdcc305b51c2a71d69858e2d938806dda5e57640037cfedb3724dd7f6",
+    "build.log": "6a1e8981982c33804d8965c7349f04a0cdda961f5b4a133b684cd6fb22fb61c5",
+    "template-G3-U01-B01-390.png": "d38de593cdea1dd107cf09525e3e6f1c452bc0efeeb68c500cb533d87197bd85"
+  }
+}

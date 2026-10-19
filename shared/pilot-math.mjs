@@ -55,14 +55,59 @@ export function expressionASTText(node){
   const body=`${expressionASTText(node.left)} ${signs[node.operator]} ${expressionASTText(node.right)}`;
   return node.grouped?`(${body})`:body;
 }
+export function buildReverseAddMultiplyFlow(addend,multiplier,target){
+  for(const [name,value] of Object.entries({addend,multiplier,target}))if(!Number.isSafeInteger(value))throw Error(`${name}必须是安全整数。`);
+  if(multiplier===0||target%multiplier!==0)throw Error('目标数必须能整除倍数，才能得到整数倒推过程。');
+  const afterAdd=target/multiplier,unknown=afterAdd-addend;
+  const n=value=>({type:'number',value});
+  const forward={type:'operation',operator:'multiply',left:{type:'operation',operator:'add',left:n(unknown),right:n(addend),grouped:true},right:n(multiplier)};
+  const evaluated=evaluateExpressionAST(forward);
+  if(evaluated.d!==1n||evaluated.n!==BigInt(target))throw Error('倒推结果代回后与目标数不一致。');
+  const intended={type:'operation',operator:'add',left:n(addend),right:{type:'operation',operator:'multiply',left:n(unknown),right:n(multiplier)}};
+  return {unknown,afterAdd,target,addend,multiplier,forward,intended,intendedValue:formatFraction(evaluateExpressionAST(intended)),inverseSteps:[`${target}÷${multiplier}＝${afterAdd}`,`${afterAdd}－${addend}＝${unknown}`],forwardText:`${expressionASTText(forward)} ＝ ${target}`};
+}
+export function firstOperationOptions(ast,seed=''){
+  validateExpressionAST(ast);
+  const operations=[],leaves=[];
+  const walk=node=>{if(node.type==='number'){leaves.push(node);return}walk(node.left);walk(node.right);operations.push(node)};walk(ast);
+  if(!operations.length)return [];
+  const first=operations[0],candidates=[{id:'first',text:expressionASTText(first),correct:true}];
+  for(const node of operations.slice(1))candidates.push({id:`branch-${candidates.length}`,text:expressionASTText(node),correct:false});
+  if(leaves.length>=3){const alternate={type:'operation',operator:ast.operator,left:leaves[0],right:leaves[1]};candidates.push({id:'adjacent',text:expressionASTText(alternate),correct:false});}
+  const unique=candidates.filter((x,i,a)=>a.findIndex(y=>y.text===x.text)===i).slice(0,3);
+  const offset=[...seed].reduce((n,c)=>n+c.charCodeAt(0),0)%unique.length;
+  return [...unique.slice(offset),...unique.slice(0,offset)];
+}
 export function validateTask(task,answer){
   try {
     if(!answer||typeof answer!=='object'||Array.isArray(answer))return {status:'invalidInput',message:'先写下你的答案。'};
+    if(task.kind==='explanation'){
+      if(typeof answer.value!=='string'||answer.value.trim().length<2)return {status:'invalidInput',message:'请写下你的结论和关键一步；一句清楚的解释就可以。'};
+      return {status:'pendingReview',message:'你的解释已保存。请和爸爸妈妈对照参考过程，确认结论、关系和理由；系统暂不自动判定文字答案。'};
+    }
     if(task.kind==='choice'){
       if(!task.options.some(o=>o.id===answer.value))return {status:'invalidInput',message:'请先选一个答案。'};
+      if(task.responseSpec?.type==='claim-evidence'){
+        if(!task.responseSpec.evidenceOptions.some(o=>o.id===answer.evidence))return {status:'invalidInput',message:'选完结论后，还要选择一条能证明它的理由。'};
+        const correct=answer.value===task.expected&&answer.evidence===task.responseSpec.expectedEvidence;
+        return {status:correct?'correct':'incorrect',message:correct?'结论和证据能够互相支持。':'把结论和证据分别放回题目检查：证据必须真正推出这个结论。'};
+      }
       return {status:answer.value===task.expected?'correct':'incorrect',message:answer.value===task.expected?'这个判断和题目的关系一致。':'再看一次条件，尤其是哪些量或操作发生了改变。'};
     }
-    if(task.kind==='expression')return {status:equivalent(answer.value,task.expected)?'correct':'incorrect',message:equivalent(answer.value,task.expected)?'你写的算式保留了原来的数量关系。看看下面的步骤，再讲讲你把哪一部分换掉了。':'再找一次要替换的那个量，把相等的全部内容一起换进去。括号外的乘法、加减法也要保留。'};
+    if(task.kind==='expression'){
+      const normalize=text=>String(text??'').replace(/\s/g,'').replace(/[×·]/g,'*').replace(/÷/g,'/').replace(/[−－]/g,'-').replace(/＋/g,'+').replace(/（/g,'(').replace(/）/g,')').replace(/＝/g,'=');
+      const text=normalize(answer.value),rules=task.responseSpec;
+      if(rules?.requireBrackets&&!text.includes('('))return {status:'invalidInput',message:'这道题要用括号表示整体，请保留你圈出的那一部分。'};
+      if(rules?.forbidBrackets&&/[()]/.test(text))return {status:'invalidInput',message:'这道题要把括号展开，请写出每一部分分别计算的式子。'};
+      if(rules?.requiredOperators?.some(operator=>!text.includes(operator)))return {status:'invalidInput',message:'请写出题目要求的完整运算关系，不能只填最后的数。'};
+      if(rules?.preserveOperands){
+        const operands=raw=>(normalize(raw).split('=')[0].match(/\d+(?:\.\d+)?/g)??[]).sort((a,b)=>Number(a)-Number(b));
+        if(JSON.stringify(operands(text))!==JSON.stringify(operands(task.expected)))return {status:'invalidInput',message:'请保留原问题中的完整数量和每份次数，展示这次改写；最后结果单独写在等号右边。'};
+      }
+      const expected=rules?.optionalResult&&!text.includes('=')?String(task.expected).split('=')[0]:task.expected;
+      const correct=equivalent(answer.value,expected);
+      return {status:correct?'correct':'incorrect',message:correct?'你写的算式保留了原来的数量关系。看看下面的步骤，再讲讲你把哪一部分换掉了。':'再找一次要替换的那个量，把相等的全部内容一起换进去。括号外的乘法、加减法也要保留。'};
+    }
     const fields=task.fields??[{key:'value',expected:task.expected,label:'答案',unit:task.unit}];
     // Units belong to the authored question and are printed beside the input.
     // Old saved unit selections do not affect a numeric answer's correctness.

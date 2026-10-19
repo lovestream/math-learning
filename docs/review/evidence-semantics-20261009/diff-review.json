@@ -1,0 +1,17 @@
+{
+  "baselineSha": "79a0f908927708e1e52fd2a0ea553761d0796ddf",
+  "verifiedCodeSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+  "lessonIdsPreserved": 70,
+  "formalTaskObjectsPreserved": 849,
+  "assessmentVersionsPreserved": true,
+  "interactionClassificationPreserved": true,
+  "grades4To6Changed": false,
+  "serverStoreChanged": false,
+  "formalPracticeUiChanged": false,
+  "realLearnerDataFilesChanged": false,
+  "verifiedCheckoutSha": "98e88b0fac628a08a843f23f4d3edbed263d74e7",
+  "onlyChangeAfterFullCodeRun": [
+    "scripts/verify-semantic-browser.js"
+  ],
+  "applicationSourcesUnchangedAfterFullCodeRun": true
+}

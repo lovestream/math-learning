@@ -1,0 +1,2198 @@
+{
+  "passed": true,
+  "method": "native Chromium HostZoomMap preference in isolated profile; measured devicePixelRatio and layout viewport, pinch scale remains 1",
+  "results": [
+    {
+      "id": "G3-U01-B01",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1988,
+          "cssWidth": 1152,
+          "cssHeight": 1590
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2126,
+          "cssWidth": 1152,
+          "cssHeight": 1700
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U02-B03",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1916,
+          "cssWidth": 1152,
+          "cssHeight": 1532
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2589,
+          "cssWidth": 1152,
+          "cssHeight": 2071
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U03-E02",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2036,
+          "cssWidth": 1152,
+          "cssHeight": 1628
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 1788,
+          "cssWidth": 1152,
+          "cssHeight": 1430
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-UP01-B02",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1930,
+          "cssWidth": 1152,
+          "cssHeight": 1544
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2199,
+          "cssWidth": 1152,
+          "cssHeight": 1759
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U04-B03",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2631,
+          "cssWidth": 1152,
+          "cssHeight": 2104
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2388,
+          "cssWidth": 1152,
+          "cssHeight": 1910
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-UP02-B01",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1880,
+          "cssWidth": 1152,
+          "cssHeight": 1504
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2009,
+          "cssWidth": 1152,
+          "cssHeight": 1607
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U05-B02",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1880,
+          "cssWidth": 1152,
+          "cssHeight": 1504
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2044,
+          "cssWidth": 1152,
+          "cssHeight": 1635
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U06-B03",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1753,
+          "cssWidth": 1152,
+          "cssHeight": 1402
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2302,
+          "cssWidth": 1152,
+          "cssHeight": 1841
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U07-B01",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1880,
+          "cssWidth": 1152,
+          "cssHeight": 1504
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 1863,
+          "cssWidth": 1152,
+          "cssHeight": 1490
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L01-B01",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1930,
+          "cssWidth": 1152,
+          "cssHeight": 1544
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 1904,
+          "cssWidth": 1152,
+          "cssHeight": 1523
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L02-B03",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1908,
+          "cssWidth": 1152,
+          "cssHeight": 1526
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2532,
+          "cssWidth": 1152,
+          "cssHeight": 2025
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L03-E01",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1930,
+          "cssWidth": 1152,
+          "cssHeight": 1544
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 1981,
+          "cssWidth": 1152,
+          "cssHeight": 1584
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L04-B03",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1880,
+          "cssWidth": 1152,
+          "cssHeight": 1504
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2763,
+          "cssWidth": 1152,
+          "cssHeight": 2210
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L05-B02",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2282,
+          "cssWidth": 1152,
+          "cssHeight": 1825
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 1846,
+          "cssWidth": 1152,
+          "cssHeight": 1476
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-LP01-B02",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1930,
+          "cssWidth": 1152,
+          "cssHeight": 1544
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 1998,
+          "cssWidth": 1152,
+          "cssHeight": 1598
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L06-B01",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1880,
+          "cssWidth": 1152,
+          "cssHeight": 1504
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2101,
+          "cssWidth": 1152,
+          "cssHeight": 1680
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L07-B01",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1880,
+          "cssWidth": 1152,
+          "cssHeight": 1504
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2136,
+          "cssWidth": 1152,
+          "cssHeight": 1708
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U02-E03",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1687,
+          "cssWidth": 1152,
+          "cssHeight": 1349
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2350,
+          "cssWidth": 1152,
+          "cssHeight": 1880
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U02-E02",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2030,
+          "cssWidth": 1152,
+          "cssHeight": 1624
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2283,
+          "cssWidth": 1152,
+          "cssHeight": 1826
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U02-O01",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1826,
+          "cssWidth": 1152,
+          "cssHeight": 1460
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2227,
+          "cssWidth": 1152,
+          "cssHeight": 1781
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U04-B05",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1854,
+          "cssWidth": 1152,
+          "cssHeight": 1483
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2339,
+          "cssWidth": 1152,
+          "cssHeight": 1871
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U07-R01",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1700,
+          "cssWidth": 1152,
+          "cssHeight": 1360
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2140,
+          "cssWidth": 1152,
+          "cssHeight": 1712
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L02-B05",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1856,
+          "cssWidth": 1152,
+          "cssHeight": 1484
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2367,
+          "cssWidth": 1152,
+          "cssHeight": 1893
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L02-B06",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1926,
+          "cssWidth": 1152,
+          "cssHeight": 1540
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2331,
+          "cssWidth": 1152,
+          "cssHeight": 1864
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L06-B03",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1873,
+          "cssWidth": 1152,
+          "cssHeight": 1498
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2140,
+          "cssWidth": 1152,
+          "cssHeight": 1712
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L07-R01",
+      "zoom": 1.25,
+      "measured": {
+        "dpr": 1.25,
+        "inner": 1152,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1787,
+          "cssWidth": 1152,
+          "cssHeight": 1429
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2140,
+          "cssWidth": 1152,
+          "cssHeight": 1712
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U01-B01",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2359,
+          "cssWidth": 960,
+          "cssHeight": 1572
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3200,
+          "cssWidth": 960,
+          "cssHeight": 2133
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U02-B03",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2273,
+          "cssWidth": 960,
+          "cssHeight": 1515
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3024,
+          "cssWidth": 960,
+          "cssHeight": 2016
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U03-E02",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2430,
+          "cssWidth": 960,
+          "cssHeight": 1620
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2721,
+          "cssWidth": 960,
+          "cssHeight": 1814
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-UP01-B02",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2289,
+          "cssWidth": 960,
+          "cssHeight": 1526
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3580,
+          "cssWidth": 960,
+          "cssHeight": 2386
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U04-B03",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3131,
+          "cssWidth": 960,
+          "cssHeight": 2087
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2830,
+          "cssWidth": 960,
+          "cssHeight": 1886
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-UP02-B01",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2229,
+          "cssWidth": 960,
+          "cssHeight": 1486
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2396,
+          "cssWidth": 960,
+          "cssHeight": 1597
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U05-B02",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2229,
+          "cssWidth": 960,
+          "cssHeight": 1486
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2435,
+          "cssWidth": 960,
+          "cssHeight": 1623
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U06-B03",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2077,
+          "cssWidth": 960,
+          "cssHeight": 1384
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2728,
+          "cssWidth": 960,
+          "cssHeight": 1818
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U07-B01",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2229,
+          "cssWidth": 960,
+          "cssHeight": 1486
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2247,
+          "cssWidth": 960,
+          "cssHeight": 1498
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L01-B01",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2289,
+          "cssWidth": 960,
+          "cssHeight": 1526
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2226,
+          "cssWidth": 960,
+          "cssHeight": 1484
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L02-B03",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2263,
+          "cssWidth": 960,
+          "cssHeight": 1508
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2980,
+          "cssWidth": 960,
+          "cssHeight": 1986
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L03-E01",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2289,
+          "cssWidth": 960,
+          "cssHeight": 1526
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2357,
+          "cssWidth": 960,
+          "cssHeight": 1571
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L04-B03",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2229,
+          "cssWidth": 960,
+          "cssHeight": 1486
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3249,
+          "cssWidth": 960,
+          "cssHeight": 2166
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L05-B02",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2712,
+          "cssWidth": 960,
+          "cssHeight": 1808
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2183,
+          "cssWidth": 960,
+          "cssHeight": 1455
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-LP01-B02",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2289,
+          "cssWidth": 960,
+          "cssHeight": 1526
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2332,
+          "cssWidth": 960,
+          "cssHeight": 1554
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L06-B01",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2229,
+          "cssWidth": 960,
+          "cssHeight": 1486
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2469,
+          "cssWidth": 960,
+          "cssHeight": 1646
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L07-B01",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2229,
+          "cssWidth": 960,
+          "cssHeight": 1486
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2530,
+          "cssWidth": 960,
+          "cssHeight": 1686
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U02-E03",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 1999,
+          "cssWidth": 960,
+          "cssHeight": 1332
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2754,
+          "cssWidth": 960,
+          "cssHeight": 1836
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U02-E02",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2411,
+          "cssWidth": 960,
+          "cssHeight": 1607
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2708,
+          "cssWidth": 960,
+          "cssHeight": 1805
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U02-O01",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2167,
+          "cssWidth": 960,
+          "cssHeight": 1444
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2613,
+          "cssWidth": 960,
+          "cssHeight": 1742
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U04-B05",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2200,
+          "cssWidth": 960,
+          "cssHeight": 1466
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2756,
+          "cssWidth": 960,
+          "cssHeight": 1837
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U07-R01",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2013,
+          "cssWidth": 960,
+          "cssHeight": 1342
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2510,
+          "cssWidth": 960,
+          "cssHeight": 1673
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L02-B05",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2198,
+          "cssWidth": 960,
+          "cssHeight": 1465
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2809,
+          "cssWidth": 960,
+          "cssHeight": 1872
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L02-B06",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2286,
+          "cssWidth": 960,
+          "cssHeight": 1524
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2762,
+          "cssWidth": 960,
+          "cssHeight": 1841
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L06-B03",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2223,
+          "cssWidth": 960,
+          "cssHeight": 1482
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2510,
+          "cssWidth": 960,
+          "cssHeight": 1673
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L07-R01",
+      "zoom": 1.5,
+      "measured": {
+        "dpr": 1.5,
+        "inner": 960,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2119,
+          "cssWidth": 960,
+          "cssHeight": 1412
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2510,
+          "cssWidth": 960,
+          "cssHeight": 1673
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U01-B01",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3927,
+          "cssWidth": 720,
+          "cssHeight": 1963
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 4154,
+          "cssWidth": 720,
+          "cssHeight": 2077
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U02-B03",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3085,
+          "cssWidth": 720,
+          "cssHeight": 1542
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 4635,
+          "cssWidth": 720,
+          "cssHeight": 2317
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U03-E02",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3374,
+          "cssWidth": 720,
+          "cssHeight": 1687
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3659,
+          "cssWidth": 720,
+          "cssHeight": 1829
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-UP01-B02",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3083,
+          "cssWidth": 720,
+          "cssHeight": 1541
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 4710,
+          "cssWidth": 720,
+          "cssHeight": 2355
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U04-B03",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 4000,
+          "cssWidth": 720,
+          "cssHeight": 2000
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3816,
+          "cssWidth": 720,
+          "cssHeight": 1908
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-UP02-B01",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2923,
+          "cssWidth": 720,
+          "cssHeight": 1461
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3157,
+          "cssWidth": 720,
+          "cssHeight": 1578
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U05-B02",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2923,
+          "cssWidth": 720,
+          "cssHeight": 1461
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3171,
+          "cssWidth": 720,
+          "cssHeight": 1585
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U06-B03",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2744,
+          "cssWidth": 720,
+          "cssHeight": 1372
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3740,
+          "cssWidth": 720,
+          "cssHeight": 1870
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U07-B01",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2923,
+          "cssWidth": 720,
+          "cssHeight": 1461
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3074,
+          "cssWidth": 720,
+          "cssHeight": 1537
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L01-B01",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3003,
+          "cssWidth": 720,
+          "cssHeight": 1501
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 2919,
+          "cssWidth": 720,
+          "cssHeight": 1459
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L02-B03",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2963,
+          "cssWidth": 720,
+          "cssHeight": 1481
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3995,
+          "cssWidth": 720,
+          "cssHeight": 1997
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L03-E01",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3003,
+          "cssWidth": 720,
+          "cssHeight": 1501
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3088,
+          "cssWidth": 720,
+          "cssHeight": 1544
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L04-B03",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2923,
+          "cssWidth": 720,
+          "cssHeight": 1461
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 4229,
+          "cssWidth": 720,
+          "cssHeight": 2114
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L05-B02",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3495,
+          "cssWidth": 720,
+          "cssHeight": 1747
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 4105,
+          "cssWidth": 720,
+          "cssHeight": 2052
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-LP01-B02",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3003,
+          "cssWidth": 720,
+          "cssHeight": 1501
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3101,
+          "cssWidth": 720,
+          "cssHeight": 1550
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L06-B01",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2923,
+          "cssWidth": 720,
+          "cssHeight": 1461
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3212,
+          "cssWidth": 720,
+          "cssHeight": 1606
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L07-B01",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3003,
+          "cssWidth": 720,
+          "cssHeight": 1501
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 4567,
+          "cssWidth": 720,
+          "cssHeight": 2283
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U02-E03",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2937,
+          "cssWidth": 720,
+          "cssHeight": 1468
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3742,
+          "cssWidth": 720,
+          "cssHeight": 1871
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U02-E02",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3237,
+          "cssWidth": 720,
+          "cssHeight": 1618
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3767,
+          "cssWidth": 720,
+          "cssHeight": 1883
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U02-O01",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3377,
+          "cssWidth": 720,
+          "cssHeight": 1688
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3572,
+          "cssWidth": 720,
+          "cssHeight": 1786
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U04-B05",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2959,
+          "cssWidth": 720,
+          "cssHeight": 1479
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3724,
+          "cssWidth": 720,
+          "cssHeight": 1862
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-U07-R01",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2709,
+          "cssWidth": 720,
+          "cssHeight": 1354
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3286,
+          "cssWidth": 720,
+          "cssHeight": 1643
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L02-B05",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3039,
+          "cssWidth": 720,
+          "cssHeight": 1519
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 4075,
+          "cssWidth": 720,
+          "cssHeight": 2037
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L02-B06",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3135,
+          "cssWidth": 720,
+          "cssHeight": 1567
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3728,
+          "cssWidth": 720,
+          "cssHeight": 1864
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L06-B03",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 2992,
+          "cssWidth": 720,
+          "cssHeight": 1496
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3286,
+          "cssWidth": 720,
+          "cssHeight": 1643
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    },
+    {
+      "id": "G3-L07-R01",
+      "zoom": 2,
+      "measured": {
+        "dpr": 2,
+        "inner": 720,
+        "outer": 1440,
+        "pinch": 1
+      },
+      "captures": [
+        {
+          "step": 0,
+          "pixelWidth": 1440,
+          "pixelHeight": 3147,
+          "cssWidth": 720,
+          "cssHeight": 1573
+        },
+        {
+          "step": 2,
+          "pixelWidth": 1440,
+          "pixelHeight": 3286,
+          "cssWidth": 720,
+          "cssHeight": 1643
+        }
+      ],
+      "sixStages": true,
+      "tabAndEscape": true
+    }
+  ],
+  "realLearnerData": false,
+  "source": {
+    "prHeadSha": "52a2265f98df92715c5f1aacf67e27089a99a9a5",
+    "sha": "52a2265f98df92715c5f1aacf67e27089a99a9a5",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-09T07:51:15.542Z"
+  }
+}

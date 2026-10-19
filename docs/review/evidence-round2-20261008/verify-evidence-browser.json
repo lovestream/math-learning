@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "A03": true,
+  "A04": true,
+  "A05": true,
+  "A06": true,
+  "A07": [
+    "G3-U04-B01",
+    "G3-U04-B03",
+    "G3-U04-B04",
+    "G3-U04-B05",
+    "G3-L02-B01",
+    "G3-L02-B03",
+    "G3-L02-B05",
+    "G3-L02-B06",
+    "G3-U06-B03",
+    "G3-U06-B04",
+    "G3-U06-B05"
+  ],
+  "A08": {
+    "staleReview409": true,
+    "firstPreserved": true,
+    "formalReview": true
+  },
+  "A11": {
+    "recoveryUi": true,
+    "learningPreserved": true,
+    "oneUse": true
+  },
+  "errors": [],
+  "source": {
+    "prHeadSha": "f48b3a89eded5993bc1be34184287696e9fce872",
+    "sha": "f48b3a89eded5993bc1be34184287696e9fce872",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-08T08:17:12.769Z"
+  }
+}
