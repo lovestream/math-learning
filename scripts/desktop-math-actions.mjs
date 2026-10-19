@@ -299,7 +299,14 @@ export async function operateDesktop(page,lesson){
  }
  async function length(){
   const s=lesson.lengthScenes[0],mode=s.mode;
-  if(mode==='chain'){for(const target of [2,5]){await lab.getByRole('combobox',{name:'目标链环个数'}).selectOption(String(target));for(let i=1;i<target;i++)await hit('接上一个链环');assert(await lab.locator('.ring-enter').count()===target,'环数错误');assert(await lab.getByRole('button',{name:/放大第.*处接头/}).count()===target-1,'接头数错误');await hit('放大第1处接头');await hit('撤下最后一个链环');assert(await lab.locator('.ring-enter').count()===target-1,'撤环错误');await hit('接上一个链环');}await lab.locator('.lab-guess input').fill('200');await hit('和我的预测核对');await has('发现一个');await lab.locator('.lab-guess input').fill('160');await hit('和我的预测核对');await has('预测和实验对上了');}
+  if(mode==='chain'){
+    for(const target of [2,5]){await lab.getByRole('combobox',{name:'目标链环个数'}).selectOption(String(target));for(let i=1;i<target;i++)await hit('接上一个链环');assert(await lab.locator('.ring-enter').count()===target,'环数错误');
+      if(target===2){await lab.locator('.two-joint-inset').waitFor();await hit('收起接头放大');await hit('看接头的两个5毫米');}
+      else{assert(await lab.getByRole('button',{name:/放大第.*处接头/}).count()===target-1,'接头数错误');await hit('放大第1处接头');await page.getByRole('dialog').waitFor();await page.keyboard.press('Escape');}
+      await hit('撤下最后一个链环');assert(await lab.locator('.ring-enter').count()===target-1,'撤环错误');await hit('接上一个链环');
+    }
+    await lab.locator('.chain-prediction summary').click();await lab.locator('.lab-guess input').fill('200');await hit('和我的预测核对');await has('发现一个');await lab.locator('.lab-guess input').fill('160');await hit('和我的预测核对');await has('预测和实验对上了');
+  }
   else if(mode==='boards'){await hit('两板首尾相接');const h=lab.getByRole('slider',{name:'拖动乙板改变重叠厘米数'});await h.press('Home');assert(await h.getAttribute('aria-valuenow')==='0','无重叠边界');await h.press('End');assert(await h.getAttribute('aria-valuenow')==='12','最大重叠');for(let i=0;i<4;i++)await h.press('ArrowRight');await lab.locator('.lab-guess input').fill('47');await hit('和我的预测核对');await has('预测和实验对上了');}
   else if(mode==='ruler'){await hit('把零刻度对齐左端');await hit('试试零刻度坏了');const h=lab.getByRole('slider',{name:'移动尺子调整小棒左端的毫米读数'});await h.press('End');assert(await h.getAttribute('aria-valuenow')==='45','起点边界');await h.press('Home');for(let i=0;i<20;i++)await h.press('ArrowLeft');assert(await h.getAttribute('aria-valuenow')==='20','非零起点');await lab.locator('.lab-guess input').fill(String(s.endMm-s.startMm));await hit('和我的预测核对');await has('预测和实验对上了');}
   else if(mode==='route'){await lab.getByRole('combobox',{name:'路线每段长度'}).selectOption('200000');await hit('回学校');for(let i=0;i<5;i++)await hit('再走200米');await has('已走 1000 米');await hit('退一段');await hit('再走200米');}

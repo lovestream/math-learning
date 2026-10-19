@@ -30,7 +30,7 @@ async (page) => {
   }else if(mode==='boards'){
    await lab.getByRole('button',{name:'两板首尾相接',exact:true}).click();const board=lab.getByRole('slider',{name:'拖动乙板改变重叠厘米数'});await board.focus();await board.press('ArrowLeft');assert(await board.getAttribute('aria-valuenow')==='1','木板重叠操作失效');
   }else if(mode==='chain'){
-   await lab.getByRole('button',{name:'重新摆',exact:true}).click();await lab.getByRole('button',{name:'接上一个链环',exact:true}).dragTo(lab.locator('.lab-stage'));assert(await lab.locator('.ring-enter').count()===2,'链环不能真实拖入');await lab.getByRole('button',{name:'放大第1处接头',exact:true}).click();assert(await lab.locator('.lab-joint-lens').count()===1,'接头放大失效');
+   await lab.getByRole('button',{name:'重新摆',exact:true}).click();await lab.getByRole('button',{name:'接上一个链环',exact:true}).dragTo(lab.locator('.two-main-figure'));assert(await lab.locator('.ring-enter').count()===2,'链环不能真实拖入');await lab.locator('.two-joint-inset').waitFor();assert(await lab.locator('.two-joint-inset').count()===1,'认可的接头放大未正式接入');
   }else if(mode==='route'){
    await lab.getByRole('button',{name:'回学校',exact:true}).click();await lab.getByRole('button',{name:/再走/}).click();assert((await lab.locator('.lab-trip-meter').innerText()).includes('走过 1'),'行走路线没有前进');
   }else if(mode==='interval'){

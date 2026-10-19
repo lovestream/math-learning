@@ -41,6 +41,6 @@ async page=>{
  await page.waitForFunction(()=>document.querySelector('[data-ring=second]')?.getAttribute('data-left-mm')==='30');await geometry();
  await page.reload();await root.waitFor();assert(await second.count()===0,'样板刷新写入了持久进度');
  assert(apiRequests.length===0,'隔离样板调用了学习API '+JSON.stringify(apiRequests));assert(!errors.length,errors.join(';'));
- assert(await root.getAttribute('data-approval-status')==='awaiting-parent-visual-approval','自动标为家长已验收');
- return {passed:true,stage:0,approval:'awaiting-parent-visual-approval',viewport:'1440x900',screenshots,apiRequests,checks:['A–E真实截图','四量同图与外缘对齐','两个5毫米端部','鼠标/键盘/按钮/撤销/越界','比较不改相扣答案','完整环移动动画','减少动态效果','刷新隔离/零学习API']};
+ assert(await root.getAttribute('data-approval-status')==='parent-visual-approved','双环批准状态未更新');
+ return {passed:true,stage:0,approval:'parent-visual-approved',viewport:'1440x900',screenshots,apiRequests,checks:['A–E真实截图','四量同图与外缘对齐','两个5毫米端部','鼠标/键盘/按钮/撤销/越界','比较不改相扣答案','完整环移动动画','减少动态效果','刷新隔离/零学习API']};
 }
