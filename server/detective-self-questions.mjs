@@ -45,8 +45,9 @@ export function selfQuestion(family,index){
  }else if(family==='UNIT_ORDERING'){
   const metres=k+2,cm=(k+1)*100+20+(index%7)*5;
   template='length-ordering-v1';p={mode:'correct',items:[{value:metres,unit:'米'},{value:cm,unit:'厘米'},{value:k+1,unit:'分米'}]};
-  question=role%2?`一条绳长${metres}米，剪去${cm}厘米后还剩多少厘米？`:`一条绳长${metres}米，另一条长${cm}厘米。较长的比另一条长多少厘米？`;
-  answer=String(metres*100-cm);unit='厘米';unknownRole=role%2?'剩下的长度':'长度差';checkPattern=`□ ＋ ${cm}`;checkTarget=String(metres*100);checkValue=x=>sum(x,cm);
+  const difference=metres*100-cm;
+  question=role%2?`长绳长${metres}米，比短绳长${difference}厘米。短绳长多少厘米？`:`一条绳长${metres}米，另一条长${cm}厘米。较长的比另一条长多少厘米？`;
+  answer=String(role%2?cm:difference);unit='厘米';unknownRole=role%2?'短绳的长度':'长度差';checkPattern=`□ ＋ ${role%2?difference:cm}`;checkTarget=String(metres*100);checkValue=x=>sum(x,role%2?difference:cm);
  }else{
   const lowTurns=2+Math.floor(index/40),highTurns=lowTurns+2,surplusDm=index%40+2,shortageDm=surplusDm+2;
   template='wrap-surplus-shortage-v1';p={mode:'correct',lowTurns,highTurns,surplusDm,shortageDm,scene:'spool'};

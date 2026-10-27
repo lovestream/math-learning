@@ -30,7 +30,7 @@ test('V2 数学：8族×256个参数精确成立；正向/逆向都可代回，�
   else if(f.id==='OPERATION_ORDER')expected=constant(i%2?String(p.a):`${p.a}+${p.b}*${p.c}`);
   else if(f.id==='UNIT_CONVERSION')expected=constant(i%2?String(p.value):`${p.value}*100`);
   else if(f.id==='EQUAL_GROUPS')expected=constant(i%2?String(p.groups):`${p.groups}*${p.each}`);
-  else if(f.id==='UNIT_ORDERING')expected=constant(`${p.items[0].value}*100-${p.items[1].value}`);
+  else if(f.id==='UNIT_ORDERING')expected=constant(i%2?String(p.items[1].value):`${p.items[0].value}*100-${p.items[1].value}`);
   else expected=constant(i%2?String(p.shortageDm):`${p.lowTurns}*((${p.surplusDm}+${p.shortageDm})/(${p.highTurns}-${p.lowTurns}))+${p.surplusDm}`);
   assert.equal(q.answer,expected,`${f.id}:${i}`);assert.equal(q.checkValue(q.answer),q.checkTarget);assert(!Object.hasOwn(publicSelfQuestion(q),'answer'));assert(!Object.hasOwn(publicSelfQuestion(q),'check'));assert(!publicSelfQuestion(q,'check','review').check);count++;
  }
