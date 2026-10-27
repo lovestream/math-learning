@@ -70,6 +70,7 @@ test('V2 L4：无反馈首答→自查；各类自主纠错和辅助不能混淆
 test('V2 首答不可变、反馈门控、幂等重放与旧页409原子拒绝',()=>{
  const p=freshProgress();let a=applySelfTraining(p,{action:'start',mode:'practice',errorFamilyId:'INITIAL_CHANGE',attemptId:'a',eventId:'s'},now);
  assert(!('result'in a)&&!('answer'in a)&&!('check'in a.question));
+ const initial=copy(p);assert.throws(()=>applySelfTraining(p,{action:'first',attemptId:'a',eventId:'not-blank',expectedRevision:a.revision,status:'blank',value:'20',reasoning:''},now));assert.deepEqual(p,initial);
  const first={action:'first',attemptId:'a',expectedRevision:a.revision,eventId:'f',value:'20',status:'answered',reasoning:''};a=applySelfTraining(p,first,now);assert(!('answer'in a)&&!('result'in a));const frozen=copy(p);
  assert.deepEqual(applySelfTraining(p,first,now),a);assert.throws(()=>applySelfTraining(p,{...first,eventId:'stale',value:'80'},now),{status:409});assert.deepEqual(p,frozen);
  assert.throws(()=>applySelfTraining(p,{action:'first',attemptId:'a',expectedRevision:a.revision,eventId:'again',value:'80',status:'answered',reasoning:''},now),{status:409});assert.deepEqual(p,frozen);
