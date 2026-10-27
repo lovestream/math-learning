@@ -1,0 +1,8 @@
+// Reviewed anonymous counterexamples. No original child work is reconstructed.
+const number=(question,answer,unit='毫米')=>({kind:'number',question,answer,unit,options:[]});
+const base={title:'答案对，过程就一定对吗？',prompt:'弹簧原长6厘米，每挂1千克伸长5毫米。挂4千克后总长多少毫米？下面是匿名模拟，不是任何孩子的原始步骤。',steps:['6厘米＝60毫米。','4×5＝20毫米，是伸长的部分。','不需要原长，因为20×4＝80，所以总长80毫米。'],verdict:'wrong',errorStep:2,reasons:['第3行用载重重复乘伸长量，数量关系不成立；答案80碰巧正确。','结果80正确，所以全部过程必定正确。','第1行把厘米换成毫米已经错了。'],reason:0,repair:number('按原长加伸长量，总长多少毫米？','80'),verify:number('80毫米减原长60毫米，再除以每千克伸长5毫米，回到几千克？','4','千克'),hints:['把“原长”和“伸长”分别标出来。','每一行算出来的是什么量？','正确关系是60＋4×5＝80毫米，不是20×4。'],solution:'第1、2行正确。第3行把两个不同的量相乘，不能说明总长；答案虽碰巧为80，理由仍无效。总长应为60＋20＝80毫米，反查(80−60)÷5＝4千克。',family:'INITIAL_CHANGE',sourceNotes:'',visual:{kind:'manual',values:['原长6厘米','每千克伸长5毫米','挂重4千克']},sourceKind:'anonymous-simulation',reasoningStatus:'invalid',diagnosticCategory:'relation'};
+export const processCases=[
+ {id:'DET-V2-PROCESS-INVALID',content:base},
+ {id:'DET-V2-PROCESS-INSUFFICIENT',content:{...base,title:'只有答案，能判断过程吗？',prompt:base.prompt+' 这次只保存了最后答案，中间过程未知。请判断这份记录能否证明推理正确。',steps:['总长80毫米。（原中间过程未知）'],verdict:'insufficient',errorStep:null,reasons:['数值可核对，但没有过程，不能判断具体哪一步怎样推理。','答案正确就说明所有中间步骤正确。','没有步骤就能断定第一步计算出错。'],reasoningStatus:'insufficient',diagnosticCategory:'expression',solution:'80毫米符合原条件，但原中间过程未知，不能编造错误行，也不能断言原推理正确。我们可以自己用60＋4×5求解，再反查。'}},
+ {id:'DET-V2-PROCESS-CORRECT',content:{...base,title:'正确的过程不用强行改',steps:['6厘米＝60毫米。','4×5＝20毫米，是增加的长度。','60＋20＝80毫米；(80−60)÷5＝4千克，符合条件。'],verdict:'correct',errorStep:null,reasons:['总长包含原长和伸长，反查也回到4千克。','凡是调查题都应该有一行错误。','只要数字大就一定算错。'],reasoningStatus:'valid',diagnosticCategory:'verification',solution:'每一步都对应原题数量。总长80毫米，反查回到4千克，不需要修改正确的过程。'}},
+];

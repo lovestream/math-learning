@@ -1,6 +1,7 @@
 import {validateInboxState,validateImportProvenance} from './detective-inbox.mjs';
 import {createHash} from 'node:crypto';
 import {parseNumber as parse} from './pilot-math.mjs';
+import {validateSelfTraining} from './detective-self-validation.mjs';
 const parseNumber=x=>{try{return parse(x);}catch{return null;}};
 
 export const fingerprint=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -21,10 +22,13 @@ function validResponse(r,publish){
   }
 }
 export function validateCase(c,publish=false){
-  insist(fields(c,['title','prompt','steps','verdict','errorStep','reasons','reason','repair','verify','hints','solution','family','sourceNotes','visual']));
+  insist(fields(c,['title','prompt','steps','verdict','errorStep','reasons','reason','repair','verify','hints','solution','family','sourceNotes','visual','reasoningStatus','diagnosticCategory','sourceKind']));
   insist(text(c.title,100)&&text(c.prompt,2000)&&text(c.family,80)&&text(c.sourceNotes,2000)&&text(c.solution,3000));
   insist(Array.isArray(c.steps)&&c.steps.length>0&&c.steps.length<=10&&c.steps.every(x=>text(x,500)));
-  insist(['wrong','correct'].includes(c.verdict)&&((c.verdict==='correct'&&c.errorStep===null)||(c.verdict==='wrong'&&Number.isInteger(c.errorStep)&&c.errorStep>=0&&c.errorStep<c.steps.length)));
+  insist(['wrong','correct','insufficient'].includes(c.verdict)&&((c.verdict!=='wrong'&&c.errorStep===null)||(c.verdict==='wrong'&&Number.isInteger(c.errorStep)&&c.errorStep>=0&&c.errorStep<c.steps.length)));
+  if(c.reasoningStatus!==undefined)insist(['valid','invalid','insufficient'].includes(c.reasoningStatus)&&c.reasoningStatus===({correct:'valid',wrong:'invalid',insufficient:'insufficient'})[c.verdict]);
+  if(c.diagnosticCategory!==undefined)insist(['question','units','calculation','relation','expression','verification'].includes(c.diagnosticCategory));
+  if(c.sourceKind!==undefined)insist(c.sourceKind==='anonymous-simulation');
   insist(Array.isArray(c.reasons)&&c.reasons.length>=2&&c.reasons.length<=5&&c.reasons.every(x=>text(x,300))&&new Set(c.reasons).size===c.reasons.length&&Number.isInteger(c.reason)&&c.reason>=0&&c.reason<c.reasons.length);
   insist(Array.isArray(c.hints)&&c.hints.length===3&&c.hints.every(x=>text(x,500)));
   insist(fields(c.visual,['kind','values'])&&['banana','lengths','cards','road','array','hundreds','expression','manual'].includes(c.visual.kind)&&Array.isArray(c.visual.values)&&c.visual.values.length<=12&&c.visual.values.every(x=>text(x,100)));
@@ -49,6 +53,7 @@ const publicResponse=r=>({kind:r.kind,question:r.question,unit:r.unit,options:r.
 export function publicCase(version,attempt){
   const c=version.content;
   const out={id:version.caseId,version:version.id,title:c.title,prompt:c.prompt,steps:c.steps,visual:c.visual};
+  if(c.reasoningStatus)out.supportsInsufficient=true;
   if(attempt?.phase==='evidence')out.reasons=orderedReasons(version).map(r=>r.text);
   if(attempt?.phase==='repair')out.response=publicResponse(c.repair);
   if(attempt?.phase==='verify')out.response=publicResponse(c.verify);
@@ -57,7 +62,8 @@ export function publicCase(version,attempt){
 }
 export function validateDetective(d){
   if(d===undefined)return;
-  insist(fields(d,['schemaVersion','cases','attempts','plans','badges','receipts','inbox'])&&d.schemaVersion===1,'侦探存档版本不受支持，请更新程序后导入。');
+  insist(fields(d,['schemaVersion','cases','attempts','plans','badges','receipts','inbox','selfTraining'])&&d.schemaVersion===1,'侦探存档版本不受支持，请更新程序后导入。');
+  validateSelfTraining(d.selfTraining);
   validateInboxState(d.inbox);
   insist(Buffer.byteLength(JSON.stringify(d),'utf8')<=3*1024*1024,'侦探案卷超过3MB，请先导出归档，勿加入图片。');
   insist(plain(d.cases)&&Object.keys(d.cases).length<=200&&plain(d.attempts)&&Object.keys(d.attempts).length<=1000&&plain(d.plans)&&Object.keys(d.plans).length<=400);
@@ -71,7 +77,7 @@ export function validateDetective(d){
   for(const [id,a]of Object.entries(d.attempts)){
     insist(validId(id)&&a.id===id&&d.cases[a.caseId]?.versions.some(v=>v.id===a.version)&&Number.isInteger(a.revision)&&a.revision>0);
     insist(['judge','evidence','repair','verify','closed'].includes(a.phase)&&['in-progress','closed-independent','closed-assisted','parent-review','needs-revisit'].includes(a.status));
-    insist(a.firstVerdict===null||['correct','wrong'].includes(a.firstVerdict));
+    insist(a.firstVerdict===null||['correct','wrong','insufficient'].includes(a.firstVerdict));
     insist(Array.isArray(a.events)&&a.events.length<=250&&new Set(a.events.map(e=>e.id)).size===a.events.length&&a.events.every(e=>validId(e.id)&&text(e.signature,10000)&&Number.isFinite(Date.parse(e.at))));
     insist(Array.isArray(a.hints)&&a.hints.length<=3&&a.hints.every(x=>Number.isInteger(x)&&x>=0&&x<3)&&Array.isArray(a.reviews)&&a.reviews.length<=50&&text(a.feedback,1000)&&text(a.draft,1000));
     insist(a.firstVerdict===a.events.find(e=>e.action==='judge')?.value||a.firstVerdict===null&&!a.events.some(e=>e.action==='judge'));

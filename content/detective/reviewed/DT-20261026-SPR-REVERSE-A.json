@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "detective-inbox.v1",
+  "bundleRevision": 1,
+  "createdAt": "2026-10-26T13:40:00.000Z",
+  "producer": "chatgpt-github",
+  "privacy": "public-anonymized-math-only",
+  "policy": "auto-if-independently-verified",
+  "bundleId": "DT-20261026-SPR-REVERSE-A",
+  "sourceFingerprint": "a8bdd06ea936c888945ceb4b9650afd9edc17c128653deafd35daca3993250a9",
+  "cases": [
+    {
+      "id": "DT-20261026-SPR-REVERSE-A-A",
+      "role": "transfer-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "逆向侦探 · 已知总长求重量",
+        "prompt": "弹簧原长6厘米，每增加1千克伸长5毫米。现在总长85毫米，称的物品重几千克？检查小智的计算（匿名模拟）。",
+        "steps": [
+          "原长6厘米＝60毫米。",
+          "85÷5＝17（千克），所以物品重17千克。"
+        ],
+        "verdict": "wrong",
+        "errorStep": 1,
+        "reasons": [
+          "必须先从总长减去原长，再用伸长量除以每千克伸长长度。",
+          "求重量只需要用最终长度除以5。",
+          "原长60毫米必须加在85毫米上才能求重量。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "物品重多少千克？",
+          "unit": "千克",
+          "options": [],
+          "answer": "5"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "反查：原长60毫米，每千克增加5毫米，称5千克总长多少毫米？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "85"
+        },
+        "hints": [
+          "最终长度包含原来的长度。",
+          "先求真正伸长了85−60毫米。",
+          "再用增加量÷5，最后正向代回验证。"
+        ],
+        "solution": "85−60＝25毫米；25÷5＝5千克；反查60＋5×5＝85毫米。",
+        "family": "SPRING_REVERSE",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "原长60毫米",
+            "每千克伸长5毫米",
+            "现在总长85毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "spring-reverse-v1",
+        "parameters": {
+          "mode": "wrong",
+          "ask": "load",
+          "originalCm": 6,
+          "mmPerKg": 5,
+          "finalMm": 85
+        },
+        "firstWrongStep": 1
+      }
+    },
+    {
+      "id": "DT-20261026-SPR-REVERSE-A-B",
+      "role": "transfer-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "逆向侦探 · 已知总长求原长",
+        "prompt": "弹簧每增加1千克伸长3毫米，挂上6千克物品后总长88毫米。它原来长多少毫米？检查小智的计算（匿名模拟）。",
+        "steps": [
+          "6×3＝18（毫米），是伸长的长度。",
+          "88＋18＝106（毫米），所以原长106毫米。"
+        ],
+        "verdict": "wrong",
+        "errorStep": 1,
+        "reasons": [
+          "最后总长已包含伸长量，求原长应从总长减去伸长量。",
+          "求原长必须把所有长度加起来。",
+          "每千克伸长3毫米，最后原长一定比88毫米长。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "弹簧原来长多少毫米？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "70"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "反查：原长70毫米，挂6千克时总长多少毫米？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "88"
+        },
+        "hints": [
+          "列出“原长＋增加量＝总长”。",
+          "增加量已算出18毫米。",
+          "把88减去18，再代入正向等式。"
+        ],
+        "solution": "原长88−6×3＝70毫米＝7厘米；反查70＋6×3＝88毫米。",
+        "family": "SPRING_REVERSE",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "挂6千克",
+            "每千克伸长3毫米",
+            "挂上后总长88毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "spring-reverse-v1",
+        "parameters": {
+          "mode": "wrong",
+          "ask": "initial",
+          "mmPerKg": 3,
+          "loadKg": 6,
+          "finalMm": 88
+        },
+        "firstWrongStep": 1
+      }
+    },
+    {
+      "id": "DT-20261026-SPR-REVERSE-A-C",
+      "role": "correct-control",
+      "simulatedSteps": true,
+      "content": {
+        "title": "逆向侦探 · 正确反推",
+        "prompt": "弹簧原长8厘米，每增加1千克伸长4毫米。挂物品后总长108毫米。检查小智求重量的过程（匿名模拟）。",
+        "steps": [
+          "原长8厘米＝80毫米。",
+          "108−80＝28（毫米），这是伸长量。",
+          "28÷4＝7（千克）。"
+        ],
+        "verdict": "correct",
+        "errorStep": null,
+        "reasons": [
+          "先用总长减原长，再除以每千克伸长量，且正向反查成立。",
+          "总长除以4就直接是重量。",
+          "正确题也必须选一处错行。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "物品重多少千克？",
+          "unit": "千克",
+          "options": [],
+          "answer": "7"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "反查：8厘米原长、每千克伸长4毫米，7千克时总长多少毫米？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "108"
+        },
+        "hints": [
+          "先统一成毫米。",
+          "先求增加了多少，再除以每千克增加的长度。",
+          "代回原长＋增加量是否为108。"
+        ],
+        "solution": "8厘米＝80毫米；108−80＝28毫米；28÷4＝7千克；反查80＋7×4＝108毫米。",
+        "family": "SPRING_REVERSE",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "原长80毫米",
+            "每千克增4毫米",
+            "挂上后总长108毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "spring-reverse-v1",
+        "parameters": {
+          "mode": "correct",
+          "ask": "load",
+          "originalCm": 8,
+          "mmPerKg": 4,
+          "finalMm": 108
+        },
+        "firstWrongStep": null
+      }
+    }
+  ]
+}

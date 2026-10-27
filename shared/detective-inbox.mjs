@@ -1,7 +1,9 @@
 import {isDeepStrictEqual} from 'node:util';
 import {fingerprint,insist,validId,validateCase} from './detective-model.mjs';
-export const ORACLE_VERSION='detective-oracle.v2';
-const storedOracle=v=>['detective-oracle.v1',ORACLE_VERSION].includes(v);
+import {MASS_SPRING_TEMPLATES,deriveMassSpringCase,massSpringFacts,equalNumber} from './detective-mass-spring.mjs';
+import reviewedEditions from '../server/detective-reviewed-editions.json' with {type:'json'};
+export const ORACLE_VERSION='detective-oracle.v3';
+const storedOracle=v=>['detective-oracle.v1','detective-oracle.v2',ORACLE_VERSION].includes(v);
 export const needsOracleRecheck=r=>r?.status==='needs-review'&&r.mathOracleVersion!==ORACLE_VERSION;
 export const INBOX_PATH='content/detective/inbox/';
 export const inboxFilename=x=>typeof x==='string'&&/^DT-[A-Za-z0-9_-]{1,90}\.json$/.test(x);
@@ -14,11 +16,12 @@ const number=(question,answer,unit='')=>({kind:'number',question,unit,options:[]
 const manual=values=>({kind:'manual',values});
 const base=(title,prompt,steps,verdict,errorStep,reasons,repair,verify,hints,solution,family,visual)=>({title,prompt,steps,verdict,errorStep,reasons,reason:0,repair,verify,hints,solution,family,sourceNotes:'',visual});
 const equal=isDeepStrictEqual;
-export const INBOX_TEMPLATES=['card-thickness-grouping-v1','arithmetic-order-v1','length-conversion-v1','equal-groups-v1','length-ordering-v1','wrap-surplus-shortage-v1'];
+export const INBOX_TEMPLATES=['card-thickness-grouping-v1','arithmetic-order-v1','length-conversion-v1','equal-groups-v1','length-ordering-v1','wrap-surplus-shortage-v1',...MASS_SPRING_TEMPLATES];
 // Each supported template owns ALL semantic text, steps, answer, inverse and figure.
 // We do not try to prove arbitrary natural-language mathematics from a claimed answer.
 export function deriveImportedCase(template,p){
  if(!INBOX_TEMPLATES.includes(template))return null;
+ if(MASS_SPRING_TEMPLATES.includes(template))return deriveMassSpringCase(template,p);
  const wrong=p?.mode==='wrong';insist(['wrong','correct'].includes(p?.mode),'模板必须指定wrong或correct。');
  if(template==='wrap-surplus-shortage-v1'){
   insist(exact(p,['mode','lowTurns','highTurns','surplusDm','shortageDm','scene'])&&[p.lowTurns,p.highTurns,p.surplusDm,p.shortageDm].every(positive)&&['bamboo','spool'].includes(p.scene),'绕线参数不合法。');
@@ -60,8 +63,17 @@ export function deriveImportedCase(template,p){
 }
 export function verifyImportedCaseMath(content,v){
  try{
+  validateCase(content,true);
   const expected=deriveImportedCase(v.template,v.parameters);if(!expected)return {status:'needs-review',reason:'暂未支持此数学模板，须家长核对。',oracleVersion:ORACLE_VERSION};
-  for(const k of Object.keys(expected))insist(equal(content[k],expected[k]),`数学契约不一致：${k}。`);
+  // Twelve original, fixed-blob editorial editions are explicitly reviewed. They
+  // are not a free-text bypass: parameters, ALL fields and exact maths must match.
+  const edition=MASS_SPRING_TEMPLATES.includes(v.template)&&reviewedEditions.find(e=>e.template===v.template&&equal(e.parameters,v.parameters)&&equal(e.content,content));
+  const reference=edition?.content??expected;
+  for(const k of Object.keys(reference))insist(equal(content[k],reference[k]),`数学契约不一致：${k}。`);
+  if(MASS_SPRING_TEMPLATES.includes(v.template)){
+   const f=massSpringFacts(v.template,v.parameters);
+   insist(equalNumber(content.repair.answer,f.answer)&&equalNumber(content.verify.answer,f.verification)&&content.repair.unit===f.unit&&content.verify.unit===f.verifyUnit&&content.errorStep===f.firstWrongStep,'称量或弹簧的答案、单位、首错未通过精确复算。');
+  }
   if(v.firstWrongStep!==undefined)insist(v.firstWrongStep===expected.errorStep,'首错位置与数学模型不一致。');
   return {status:'verified',reason:'题干、步骤、首错、答案、逆查和条件图来自同一套独立数学参数。',oracleVersion:ORACLE_VERSION};
  }catch(e){return {status:'rejected',reason:e.message,oracleVersion:ORACLE_VERSION};}

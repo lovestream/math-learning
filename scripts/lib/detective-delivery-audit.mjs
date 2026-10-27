@@ -35,6 +35,17 @@ export function auditDeliveredCase(entry){
    if(p.highTurns*circle-length===p.shortageDm)matches.push({circle,length});
   }
   assert.equal(matches.length,1);repair=String(matches[0].length);verify=String(matches[0].circle);
+ }else if(template==='batch-average-mass-v1'){
+  repair=constant(`${p.totalGrams}/${p.count}`);
+  verify=constant(Array.from({length:p.count},()=>`(${repair})`).join('+'));
+ }else if(template==='mass-average-inverse-v1'){
+  if(p.ask==='total'){repair=constant(Array.from({length:p.count},()=>String(p.averageGrams)).join('+'));verify=constant(`(${repair})/${p.count}`);}
+  else{const candidates=[];for(let n=1;n<=1000;n++){const sum=constant(`${n}*${p.averageGrams}`);if(constant(`(${sum})-${p.totalGrams}`)==='0')candidates.push(n);}assert.equal(candidates.length,1);repair=String(candidates[0]);verify=constant(Array.from({length:candidates[0]},()=>String(p.averageGrams)).join('+'));}
+ }else if(template==='spring-total-length-v1'){
+  let total=BigInt(p.originalCm)*10n;for(let n=0;n<p.loadKg;n++)total+=BigInt(p.mmPerKg);repair=String(total);verify=String((total-BigInt(p.originalCm)*10n)/BigInt(p.mmPerKg));
+ }else if(template==='spring-reverse-v1'){
+  if(p.ask==='load'){const candidates=[];for(let n=0;n<=1000;n++){let total=BigInt(p.originalCm)*10n;for(let i=0;i<n;i++)total+=BigInt(p.mmPerKg);if(total===BigInt(p.finalMm))candidates.push(n);}assert.equal(candidates.length,1);repair=String(candidates[0]);verify=String(BigInt(p.originalCm)*10n+BigInt(candidates[0])*BigInt(p.mmPerKg));}
+  else{let initial=BigInt(p.finalMm);for(let n=0;n<p.loadKg;n++)initial-=BigInt(p.mmPerKg);assert(initial>=0n);repair=String(initial);verify=String(initial+BigInt(p.loadKg)*BigInt(p.mmPerKg));}
  }else throw Error('此发布审校工具尚未覆盖该数学模板。');
  if(c.repair.kind==='ordering')assert.equal(c.repair.answer,repair);else numberIs(c.repair.answer,repair);
  numberIs(c.verify.answer,verify);

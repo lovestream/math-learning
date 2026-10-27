@@ -1,0 +1,6 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';
+const files=fs.readdirSync('dist/assets').filter(f=>f.endsWith('.js')),forbidden=['detective-self.v1','wrongDivisor','检查时既要算出反查结果，也要确认它与原题条件相同','detective-reviewed-editions'];
+for(const f of files){const code=fs.readFileSync('dist/assets/'+f,'utf8');for(const text of forbidden)assert(!code.includes(text),`私有自主题引擎进入客户端产物：${f}/${text}`);}
+const manifest=JSON.parse(fs.readFileSync('content/detective/reviewed/v2-source-manifest.json'));
+for(const [file,sha]of Object.entries(manifest.files)){const bytes=fs.readFileSync('content/detective/reviewed/'+file);assert.equal(createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex'),sha);}
+const out='output/playwright/v2-audit';fs.mkdirSync(out,{recursive:true});const result={passed:true,sha:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),clientChunks:files.length,privateServerMarkersExcluded:forbidden,dataHead:manifest.dataHead,immutableBlobs:manifest.files};fs.writeFileSync(out+'/detective-v2-boundaries.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({passed:true,clientChunks:files.length,blobs:Object.keys(manifest.files).length}));

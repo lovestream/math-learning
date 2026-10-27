@@ -92,3 +92,18 @@ node scripts/verify-detective-live-inbox.mjs
 审定三案见 `content/detective/reviewed/DT-20261016-WIRE-A.json`：原关系模拟18分米、换情境16分米、正确对照26分米。原始过程未知，不能称模拟步骤为孩子实际错法。未知模板的旧程序会保留待核对；升级后重复同步可重新数学核验，不能自动重写已被家长编辑的草稿。运行中的程序不会因GitHub加入模板源码而自行升级。
 
 新到列表与今日列表按案号＋版本去重；完整收件台账不减少。今日旧版本与新活动版本同时存在时，两者均有入口，原首答仍关联旧版本。
+
+## 2026-10-27 V2新增四模板（oracle.v3）
+
+包仍使用detective-inbox.v1，未知模板仍待审。新参数必须用create-detective-bundle生成全字段；不按题目ID硬编码数学。
+
+|模板|参数（另外都需要mode=wrong/correct）|约束|
+|---|---|---|
+|batch-average-mass-v1|item,count,totalGrams；wrong模式另有wrongDivisor|物品白名单：花生米/豆子/坚果仁/玻璃珠；颗数2～1000；质量(0,10000]且至多三位小数；错误除数必须不同于颗数|
+|mass-average-inverse-v1|item,ask=total/count,averageGrams；求total时count，求count时totalGrams|质量正且至多三位小数；颗数为正整数；不取整、不接受多余字段|
+|spring-total-length-v1|originalCm,mmPerKg,loadKg|原长和每千克增量正整数≤1000，载重0～1000；总长=10×originalCm+mmPerKg×loadKg；漏原长首错在结论行|
+|spring-reverse-v1|ask=load/initial,mmPerKg,finalMm；load另有originalCm，initial另有loadKg|总长正整数≤100000；未知量非负整数，不将不整除重量四舍五入；不能让题干提前给出未知原长|
+
+四份20261026固定blob有单独的审定文字版本，须全字段/参数完全相同且再做数值、单位、首错核验；这不是接受任意ChatGPT文案。新参数默认使用确定性生成器。独立审校工具另走精确解析、重复相加、枚举和代回路线，覆盖12案及泛化边界。旧v1/v2待审回执会绕开ETag缓存重验；已编辑、撤回、已发布或归档的案不覆盖，相同blob的编辑冲突只记录一次稳定待人工说明，其他健康包继续处理。
+
+匿名投递仍禁止原照片、真实笔迹、姓名、学校和学习记录。真实题只提供错因归纳；“10颗共6克”等是模拟参数，不能记作原作业实测值。

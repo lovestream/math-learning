@@ -1,5 +1,6 @@
 import {createDetectiveInboxSync} from './detective-inbox-sync.mjs';
-import {parentDetective,manageDetective,detectiveToday,detectiveAttempt,gradeDetective} from './detective-store.mjs';
+import {selfTrainingData,applySelfTraining,manageSelfTraining} from './detective-self-store.mjs';
+import {parentDetective,manageDetective,detectiveToday,detectiveAttempt,gradeDetective,enableProcessCases} from './detective-store.mjs';
 import {parentFormalTasks, reviewFormalTask} from "./pilot-store.mjs";
 import {thinkingCards,publicThinkingCard} from '../content/pilot/thinking-source.mjs';
 import {applyThinking,applyThinkingReview,parentThinkingCards} from './thinking-store.mjs';
@@ -60,6 +61,8 @@ async function api(req,res,url){
     if(/^\/api\/parent\/(export|import(?:\/preview)?|backups\/[^/]+\/restore)$/.test(url.pathname)){parentAccess.requireParent(req);url.pathname=url.pathname.replace('/api/parent/','/api/');}
     if(url.pathname.startsWith('/api/parent/detective/')){
       parentAccess.requireParent(req);
+      if(req.method==='GET'&&url.pathname==='/api/parent/detective/self')return json(res,200,selfTrainingData(store.get(),Date.now(),true));
+      if(req.method==='POST'&&url.pathname==='/api/parent/detective/self'){const b=await readJson(req);return json(res,200,store.mutate(p=>manageSelfTraining(p,b)).result);}
       if(req.method==='GET'&&url.pathname==='/api/parent/detective/sync')return json(res,200,inboxSync.status());
       if(req.method==='POST'&&url.pathname==='/api/parent/detective/sync'){const b=await readJson(req);if(Object.hasOwn(b,'autoPublish'))return json(res,200,inboxSync.setAutoPublish(b.autoPublish));return json(res,200,await inboxSync.sync({force:true}));}
       if(req.method==='GET'&&url.pathname==='/api/parent/detective/cases')return json(res,200,store.mutate(p=>parentDetective(p)).result);
@@ -67,7 +70,10 @@ async function api(req,res,url){
       if(req.method==='POST'&&url.pathname==='/api/parent/detective/grade'){const b=await readJson(req);return json(res,200,store.mutate(p=>gradeDetective(p,b)).result);}
     }
     if(req.method==='GET'&&url.pathname==='/api/detective/today'){if(syncEnabled)inboxSync.touch();return json(res,200,store.mutate(p=>detectiveToday(p)).result);}
+    if(req.method==='GET'&&url.pathname==='/api/detective/self')return json(res,200,selfTrainingData(store.get()));
+    if(req.method==='POST'&&url.pathname==='/api/detective/self'){const b=await readJson(req);return json(res,200,store.mutate(p=>applySelfTraining(p,b)).result);}
     if(req.method==='POST'&&url.pathname==='/api/detective/attempt'){const b=await readJson(req);return json(res,200,store.mutate(p=>detectiveAttempt(p,b)).result);}
+    if(req.method==='POST'&&url.pathname==='/api/detective/examples'){const b=await readJson(req);return json(res,200,store.mutate(p=>enableProcessCases(p,Date.now(),b.errorFamilyId??null)).result);}
     if(url.pathname.startsWith('/api/parent/')){parentAccess.requireParent(req);if(req.method==='GET'&&url.pathname==='/api/parent/formal')return json(res,200,{tasks:parentFormalTasks(store.get())});if(req.method==='POST'&&url.pathname==='/api/parent/formal/review'){const body=await readJson(req);const out=store.mutate(p=>reviewFormalTask(p,body));return json(res,200,{result:out.result,progress:out.progress});}if(req.method==='GET'&&url.pathname==='/api/parent/thinking')return json(res,200,{cards:parentThinkingCards(store.get())});if(req.method==='POST'&&url.pathname==='/api/parent/thinking/review'){const body=await readJson(req);const out=store.mutate(p=>applyThinkingReview(p,body));return json(res,200,{result:out.result,progress:out.progress});}}
     if(req.method==='GET'&&url.pathname==='/api/studio')return json(res,200,{progress:clientProgress(store.get()),lessons:pilotLessons.map(publicLesson),design:pilotDesign});
     const pilotActions={

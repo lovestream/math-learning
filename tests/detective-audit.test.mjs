@@ -61,7 +61,7 @@ test('旧oracle待审回执绕过304并重验，已编辑草稿不覆盖，已�
    const before=store.export(),calls=[];
    const sync=createDetectiveInboxSync({store,fetcher:async(url,options)=>{calls.push(options.headers);if(url.includes('/contents/'))return Response.json([{name:wireBundle.bundleId+'.json',path:source.path,sha,type:'file',size:Buffer.byteLength(bytes)}],{headers:{etag:'"already-seen"'}});return Response.json({encoding:'base64',content:Buffer.from(bytes).toString('base64')});}});
    try{await sync.sync();assert(!calls[0]['If-None-Match']);const d=store.get().studio.detective;
-    if(edited){assert(sync.status().lastError.includes('本机编辑'));assert.deepEqual(d.cases,before.progress.studio.detective.cases);}
+    if(edited){assert.equal(sync.status().lastError,null);assert.match(d.inbox.files[source.path].reason,/本机已编辑或审核/);assert.equal(d.inbox.files[source.path].status,'needs-review');assert.deepEqual(d.cases,before.progress.studio.detective.cases);await sync.sync({force:true});assert.deepEqual(store.get().studio.detective.cases,before.progress.studio.detective.cases);}
     else{assert.equal(sync.status().lastError,null);assert.equal(d.inbox.files[source.path].status,'auto-published');assert(wireBundle.cases.every(c=>d.cases[c.id].versions.length===1));const saved=store.export();store.import(saved);assert.deepEqual(store.get(),saved.progress);await sync.sync({force:true});assert.deepEqual(store.get().studio.detective.cases,d.cases);}
    }finally{await sync.stop();}
   }finally{store.close();fs.rmSync(dir,{recursive:true,force:true});}

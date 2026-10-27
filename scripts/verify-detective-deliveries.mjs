@@ -3,6 +3,7 @@
 import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {execFileSync,spawn} from 'node:child_process';import net from 'node:net';import {once} from 'node:events';import {chromium} from 'playwright';import assert from 'node:assert/strict';
 import {parseInboxBundle,inboxFilename,INBOX_PATH} from '../shared/detective-inbox.mjs';
 import {auditDeliveredBundle} from './lib/detective-delivery-audit.mjs';
+import {parseNumber,add,rational,formatFraction} from '../shared/pilot-math.mjs';
 const git=(...args)=>execFileSync('git',args,{encoding:'utf8',maxBuffer:1024*1024}).trim();
 export async function verifyDeliveries({base,dataDir,prefix='DT-',output='output/playwright/detective-deliveries'}){
  assert(/^http:\/\/127\.0\.0\.1:\d+$/.test(base));assert(fs.existsSync(path.join(dataDir,'.detective-live-test')),'Only explicitly marked isolated test data may be used.');fs.mkdirSync(output,{recursive:true});
@@ -44,7 +45,7 @@ export async function verifyDeliveries({base,dataDir,prefix='DT-',output='output
     assert.deepEqual(await rows.locator('b').allTextContents(),target);
    }else{
     if(!wrongTested&&c.verdict==='wrong'){
-     await panel.getByLabel('你的答案',{exact:true}).fill(String(BigInt(ref.repair)+1n));await panel.getByRole('button',{name:/保存结果，去验证/}).click();await panel.getByText('这个结果还不能符合全部条件。请回看题目里的数量和单位，再试一次。',{exact:true}).waitFor();await panel.screenshot({path:`${output}/incorrect-repair.png`});wrongTested=true;
+     await panel.getByLabel('你的答案',{exact:true}).fill(formatFraction(add(parseNumber(ref.repair),rational(1))));await panel.getByRole('button',{name:/保存结果，去验证/}).click();await panel.getByText('这个结果还不能符合全部条件。请回看题目里的数量和单位，再试一次。',{exact:true}).waitFor();await panel.screenshot({path:`${output}/incorrect-repair.png`});wrongTested=true;
     }
     await panel.getByLabel('你的答案',{exact:true}).fill(ref.repair);
    }

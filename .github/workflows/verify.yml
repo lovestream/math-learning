@@ -16,6 +16,8 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npm run content:check
+      - name: Verify detective answer boundary and immutable delivery blobs
+        run: node scripts/verify-detective-v2-boundaries.mjs
       - name: Install browser for locked Playwright version
         run: npx playwright install --with-deps chromium
       - name: Critical browser regression (isolated learner data)
@@ -26,7 +28,9 @@ jobs:
         run: |
           git fetch --no-tags --depth=1 origin 1d9c68197449e45dd273978f30fa3844bc4f562e
           git fetch --no-tags --depth=1 origin c6e6eaedca53c0976af3ab6e187e2980e4e94430
+          git fetch --no-tags --depth=1 origin a7c05aaa8d9c5eabae4f3453807f830da1cbf279
           npm run test:detective:upgrade
+          node scripts/verify-detective-v2-upgrade.mjs
         env:
           AUDIT_PR_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
       - name: Preserve browser summaries, logs, screenshots and traces

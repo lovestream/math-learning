@@ -1,6 +1,6 @@
 import {createHash} from 'node:crypto';
 import {ensureInbox,getDetectiveSyncStatus,importVerifiedBundle} from './detective-inbox-store.mjs';
-import {parseInboxBundle,needsOracleRecheck,INBOX_PATH,inboxFilename} from '../shared/detective-inbox.mjs';
+import {parseInboxBundle,needsOracleRecheck,ORACLE_VERSION,INBOX_PATH,inboxFilename} from '../shared/detective-inbox.mjs';
 import {insist} from '../shared/detective-model.mjs';
 import {validateStored} from './detective-store.mjs';
 const API='https://api.github.com/repos/lovestream/math-learning';
@@ -42,7 +42,12 @@ export function createDetectiveInboxSync({store,fetcher=fetch,clock=Date.now}){
      insist(buffer.length===file.size&&createHash('sha1').update(`blob ${buffer.length}\0`).update(buffer).digest('hex')===file.sha,'GitHub文件内容与blob SHA不一致。');
      const bundle=parseInboxBundle(buffer.toString('utf8'));
      store.mutate(p=>importVerifiedBundle(p,bundle,{branch:BRANCH,path:file.path,sha:file.sha},clock()));
-     }catch(e){errors.push(`${inboxFilename(file.name)?file.name:'不合规收件项'}：${e.message}`);}
+     }catch(e){
+      const previous=status().files[file.path];
+      if(e.status===409&&previous?.sourceBlobSha===file.sha&&needsOracleRecheck(previous)){
+       save(x=>{const r=x.files[file.path];r.mathOracleVersion=ORACLE_VERSION;r.reason='本机已编辑或审核：保留原案，不自动覆盖；请家长在案卷柜核对。';});
+      }else errors.push(`${inboxFilename(file.name)?file.name:'不合规收件项'}：${e.message}`);
+     }
     }
     if(errors.length)throw Error(errors.slice(0,3).join('；').slice(0,500));
     save(x=>{x.etag=r.headers.get('etag');});

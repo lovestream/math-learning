@@ -19,6 +19,7 @@ import {
 } from "../server/thinking-store.mjs";
 // Run the short new workflow checks first for prompt CI feedback.
 const all = [
+  "verify-detective-v2-browser",
   "verify-remaining-visuals-browser",
   "verify-two-ring-browser",
   "verify-chain-growth-browser",
@@ -55,6 +56,7 @@ const only = process.argv.find((v) => v.startsWith("--only=")),
     : process.argv.includes("--full")
       ? all
       : [
+          "verify-detective-v2-browser",
           "verify-remaining-visuals-browser",
           "verify-two-ring-browser",
           "verify-chain-growth-browser",
@@ -110,6 +112,11 @@ try {
       fixture.mutate(p=>{manageDetective(p,{action:'enable-seeds',eventId:'fixture-enable',checks:[true,true,true]});for(const c of Object.values(p.studio.detective.cases).filter(c=>c.status==='published'&&!['DET-G3-001','DET-G3-002','DET-G3-011'].includes(c.id)))manageDetective(p,{action:'withdraw',eventId:'fixture-withdraw-'+c.id,caseId:c.id,expectedRevision:c.revision});});fixture.close();
     }
     let mockInbox=null;
+    const v2Bundles=fs.readdirSync('content/detective/reviewed').filter(f=>f.startsWith('DT-20261026')).map(f=>JSON.parse(fs.readFileSync('content/detective/reviewed/'+f,'utf8')));
+    if(name==='verify-detective-v2-browser'){
+      mockInbox=fs.mkdtempSync(path.join(os.tmpdir(),'kevin-v2-inbox-'));
+      for(const b of v2Bundles)fs.writeFileSync(path.join(mockInbox,b.bundleId+'.json'),fs.readFileSync('content/detective/reviewed/'+b.bundleId+'.json'));
+    }
     const wireBundle=JSON.parse(fs.readFileSync('content/detective/reviewed/DT-20261016-WIRE-A.json','utf8'));
     if(name==='verify-detective-audit-browser'){
       mockInbox=fs.mkdtempSync(path.join(os.tmpdir(),'kevin-wire-inbox-'));
@@ -241,7 +248,7 @@ try {
       await page.goto(name==='verify-two-ring-browser'?base+'/?preview=chain-two':base);
       const source=fs.readFileSync(`scripts/${name}.js`, "utf8").trim().replace(/;$/, "");
       const callback = new Function(`return (${source})`)();
-      const result = await callback(page,{wireBundle,deliverInbox:()=>{
+      const result = await callback(page,{wireBundle,v2Bundles,advanceDetectiveClock:days=>{if(!mockInbox)throw Error('Not isolated detective suite');fs.writeFileSync(path.join(mockInbox,'.clock-offset'),String(days*86400000));},deliverInbox:()=>{
         if(!mockInbox)throw Error('Not an inbox suite');
         const cases=[['original-error','wrong',6],['transfer-error','wrong',8],['correct-control','correct',9]].map(([role,mode,value])=>({role,template:'length-conversion-v1',parameters:{mode,value,from:'分米',to:'厘米'}}));
         const bundle=createBundle({bundleId:'DT-RUNNING-LENGTHS',cases});fs.writeFileSync(path.join(mockInbox,bundle.bundleId+'.json'),JSON.stringify(bundle));fs.writeFileSync(path.join(mockInbox,'.clock-offset'),String(16*60000));return bundle;

@@ -1,0 +1,197 @@
+{
+  "schemaVersion": "detective-inbox.v1",
+  "bundleRevision": 1,
+  "createdAt": "2026-10-26T13:40:00.000Z",
+  "producer": "chatgpt-github",
+  "privacy": "public-anonymized-math-only",
+  "policy": "auto-if-independently-verified",
+  "bundleId": "DT-20261026-AVG-FOUNDATION-A",
+  "sourceFingerprint": "14570fcad7a54009801a3a565fe28721f0c34a3545defe445d2505b09cea37bf",
+  "cases": [
+    {
+      "id": "DT-20261026-AVG-FOUNDATION-A-A",
+      "role": "original-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "称重小侦探 · 平均质量",
+        "prompt": "10颗差不多大的花生米一起称得6克。估算每颗平均重多少克？小智的过程如下（匿名模拟）。",
+        "steps": [
+          "10颗合计6克。",
+          "6÷2＝3（克），所以每颗平均3克。"
+        ],
+        "verdict": "wrong",
+        "errorStep": 1,
+        "reasons": [
+          "求每颗平均质量，应该用总质量除以10颗，而不是除以2。",
+          "总质量6克，应当除以题目中出现的最小数字。",
+          "只有质量单位要统一，不必注意颗数。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "正确的每颗平均质量是多少？",
+          "unit": "克",
+          "options": [],
+          "answer": "0.6"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "反查：10颗每颗平均0.6克，合起来共多少克？",
+          "unit": "克",
+          "options": [],
+          "answer": "6"
+        },
+        "hints": [
+          "找到总质量与总颗数。",
+          "把全部质量平均分给10颗，每颗是多少？",
+          "6÷10＝0.6，再用0.6×10反查。"
+        ],
+        "solution": "6÷10＝0.6克。反查0.6×10＝6克。若误除以2，3×10＝30克，与实际总质量6克矛盾。",
+        "family": "MASS_AVERAGE",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "数量：10颗花生米",
+            "总质量：6克",
+            "所求：每颗平均质量"
+          ]
+        }
+      },
+      "verification": {
+        "template": "batch-average-mass-v1",
+        "parameters": {
+          "mode": "wrong",
+          "item": "花生米",
+          "count": 10,
+          "totalGrams": 6,
+          "wrongDivisor": 2
+        },
+        "firstWrongStep": 1
+      }
+    },
+    {
+      "id": "DT-20261026-AVG-FOUNDATION-A-B",
+      "role": "transfer-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "称重小侦探 · 同类迁移",
+        "prompt": "12颗差不多大的豆子一起称得6克。每颗平均多少克？检查小智的答案（匿名模拟）。",
+        "steps": [
+          "12颗共6克。",
+          "6÷3＝2（克），每颗平均2克。"
+        ],
+        "verdict": "wrong",
+        "errorStep": 1,
+        "reasons": [
+          "测的是12颗，必须将总质量平均分成12份。",
+          "豆子很小，所以一定要除以3。",
+          "估计的平均质量可以比总质量还大。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "每颗平均质量是多少？",
+          "unit": "克",
+          "options": [],
+          "answer": "0.5"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "反查：12颗每颗平均0.5克，总质量多少克？",
+          "unit": "克",
+          "options": [],
+          "answer": "6"
+        },
+        "hints": [
+          "圈出“一共有12颗”。",
+          "每颗平均＝全部质量÷颗数。",
+          "先算6÷12，再乘12检查。"
+        ],
+        "solution": "6÷12＝0.5克；0.5×12＝6克，结果正确。",
+        "family": "MASS_AVERAGE",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "数量：12颗豆子",
+            "总质量：6克",
+            "所求：平均每颗质量"
+          ]
+        }
+      },
+      "verification": {
+        "template": "batch-average-mass-v1",
+        "parameters": {
+          "mode": "wrong",
+          "item": "豆子",
+          "count": 12,
+          "totalGrams": 6,
+          "wrongDivisor": 3
+        },
+        "firstWrongStep": 1
+      }
+    },
+    {
+      "id": "DT-20261026-AVG-FOUNDATION-A-C",
+      "role": "correct-control",
+      "simulatedSteps": true,
+      "content": {
+        "title": "称重小侦探 · 无错对照",
+        "prompt": "8颗大小相近的坚果仁合计4克。小智估算每颗平均质量（匿名模拟）。",
+        "steps": [
+          "8颗共4克。",
+          "4÷8＝0.5（克）。"
+        ],
+        "verdict": "correct",
+        "errorStep": null,
+        "reasons": [
+          "总质量除以称量颗数，且0.5×8＝4克，符合条件。",
+          "只要是小物品，答案一定是0.5克。",
+          "写了除法就一定正确，无须确认除数。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "每颗平均质量是多少？",
+          "unit": "克",
+          "options": [],
+          "answer": "0.5"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "反查：8颗共多少克？",
+          "unit": "克",
+          "options": [],
+          "answer": "4"
+        },
+        "hints": [
+          "先确认是否8颗均分4克。",
+          "计算4÷8。",
+          "再算0.5×8是否回到总质量。"
+        ],
+        "solution": "4÷8＝0.5克；反查0.5×8＝4克。因此过程正确，不应该强行找错。",
+        "family": "MASS_AVERAGE",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "数量：8颗坚果仁",
+            "合计质量：4克",
+            "结果：每颗0.5克"
+          ]
+        }
+      },
+      "verification": {
+        "template": "batch-average-mass-v1",
+        "parameters": {
+          "mode": "correct",
+          "item": "坚果仁",
+          "count": 8,
+          "totalGrams": 4
+        },
+        "firstWrongStep": null
+      }
+    }
+  ]
+}

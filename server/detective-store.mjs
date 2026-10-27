@@ -1,10 +1,13 @@
 import {seedCases,pendingCase,legacyPendingCase} from '../content/detective/seed-cases.mjs';
+import {processCases} from '../content/detective/process-cases.mjs';
+import {familyExamples} from './detective-self-questions.mjs';
+import {validateSelfIntegrity} from './detective-self-integrity.mjs';
 import {fingerprint,insist,validId,validateCase,publicCase,matchesResponse,matchesReason,orderedReasons,validateDetective} from '../shared/detective-model.mjs';
 const iso=now=>new Date(now).toISOString();
 const day=now=>new Date(now+8*3600000).toISOString().slice(0,10);
 const conflict=()=>insist(false,'另一页已经保存了更新。请重新载入，再继续；你的输入仍保留在本页。',409);
 const clone=x=>structuredClone(x);
-export const validateStored=p=>{validateDetective(p.studio.detective);insist(Buffer.byteLength(JSON.stringify(p.studio),'utf8')<6*1024*1024,'互动课程存档接近容量上限，请先导出备份。');};
+export const validateStored=p=>{validateDetective(p.studio.detective);validateSelfIntegrity(p.studio.detective?.selfTraining);insist(Buffer.byteLength(JSON.stringify(p.studio),'utf8')<6*1024*1024,'互动课程存档接近容量上限，请先导出备份。');};
 export function ensureDetective(p){
   p.studio??={version:1,reading:{},sessions:{},notes:[],events:[],entitlements:{},daily:{},review:{}};
   if(p.studio.detective){
@@ -29,6 +32,15 @@ export function publicAttempt(a){
   return {id,caseId,version,revision,phase,status,startedAt,completedAt,firstVerdict,decision,hintsViewed:hints.length,feedback,assisted,draft,evidence,repair,verification,publicFeedback:reviews.map(r=>({at:r.at,verdict:r.verdict,comment:r.comment}))};
 }
 export function parentDetective(p){const d=ensureDetective(p);validateStored(p);return {cases:Object.values(d.cases),attempts:Object.values(d.attempts),badges:d.badges};}
+export function enableProcessCases(p,now=Date.now(),errorFamilyId=null){
+ const d=ensureDetective(p);
+ for(const {id,content}of errorFamilyId?familyExamples(errorFamilyId):processCases)if(!d.cases[id]){
+  insist(Object.keys(d.cases).length<200,'案卷容量已满，请先备份。');validateCase(content,true);
+  const c={id,revision:1,status:'review',draft:clone(content),versions:[],activeVersion:null,trainingSource:'v2-reviewed-sample'};
+  d.cases[id]=c;publish(c,now,'');
+ }
+ validateStored(p);return detectiveToday(p,now);
+}
 function anonymize(content,name){
   const copy=clone(content);
   const names=[name,'Kevin','凯文'].filter(x=>typeof x==='string'&&x.length>1);
@@ -92,7 +104,7 @@ export function detectiveToday(p,now=Date.now()){
     return {case:publicCase(versionFor(d,ref),a),attempt:a?publicAttempt(a):null};
   });
   validateStored(p);
-  const newCases=Object.values(d.cases).filter(c=>c.status==='published'&&c.importSource).sort((a,b)=>b.importSource.importedAt.localeCompare(a.importSource.importedAt)).slice(0,30).map(c=>{const a=Object.values(d.attempts).find(a=>a.version===c.activeVersion);return {case:publicCase(active(c),a),attempt:a?publicAttempt(a):null};});
+  const newCases=Object.values(d.cases).filter(c=>c.status==='published'&&(c.importSource||c.trainingSource)).sort((a,b)=>(b.importSource?.importedAt??active(b)?.publishedAt??'').localeCompare(a.importSource?.importedAt??active(a)?.publishedAt??'')).slice(0,40).map(c=>{const a=Object.values(d.attempts).find(a=>a.version===c.activeVersion);return {case:publicCase(active(c),a),attempt:a?publicAttempt(a):null};});
   return {day:today,cases,newCases,badges:d.badges.length,history:Object.values(d.attempts).sort((a,b)=>b.startedAt.localeCompare(a.startedAt)).slice(0,100).map(a=>({title:versionOf(d,a).content.title,...reference(d,a)}))};
 }
 export function detectiveAttempt(p,b,now=Date.now()){
@@ -101,7 +113,7 @@ export function detectiveAttempt(p,b,now=Date.now()){
   if(a&&prior(a.events,b,signature))return reference(d,a);
   if(b.action==='start'){
     insist(!a,'调查记录已经存在。',409);
-    const plan=d.plans[day(now)]??[];const c=d.cases[b.caseId];const ref=plan.find(x=>x.caseId===b.caseId&&x.version===b.version)??(c?.importSource&&c.status==='published'&&c.activeVersion===b.version?{caseId:c.id,version:c.activeVersion}:null);
+    const plan=d.plans[day(now)]??[];const c=d.cases[b.caseId];const ref=plan.find(x=>x.caseId===b.caseId&&x.version===b.version)??((c?.importSource||c?.trainingSource)&&c.status==='published'&&c.activeVersion===b.version?{caseId:c.id,version:c.activeVersion}:null);
     insist(ref&&d.cases[ref.caseId].status==='published','这宗案件尚未发布或已撤回，请回到今日案卷。');
     const old=Object.values(d.attempts).find(a=>a.version===b.version);if(old)return reference(d,old);
     insist(Object.keys(d.attempts).length<1000,'调查记录达到首版1000次上限，请家长先导出备份。');
@@ -121,15 +133,17 @@ export function detectiveAttempt(p,b,now=Date.now()){
     }else{
       insist(a.phase!=='closed'&&a.status==='in-progress','本次调查已提交，不能改写历史。');
       if(b.action==='judge'){
-        insist(a.phase==='judge'&&['wrong','correct'].includes(b.value),'请先判断这份做法有没有问题。');
+        insist(a.phase==='judge'&&['wrong','correct','insufficient'].includes(b.value),'请先判断这份做法有没有问题或过程是否不足。');
         a.firstVerdict??=b.value;a.decision=b.value;
         if(b.value===c.verdict){a.phase='evidence';a.feedback='请用证据支持这个判断。';}
         else{a.assisted=true;a.feedback=b.value==='wrong'?'这次可能是误报：先核对原条件，这份做法并非一定有错。可以重新判断，第一次选择会保留。':'这次漏掉了一个问题。请逐行核对，重新判断，第一次选择会保留。';}
       }else if(b.action==='evidence'){
         insist(a.phase==='evidence','请按当前调查步骤作答。');
-        insist(Number.isInteger(b.reason)&&b.reason>=0&&b.reason<c.reasons.length&&(c.verdict==='correct'||Number.isInteger(b.step)&&b.step>=0&&b.step<c.steps.length),'请选择有效的步骤与依据。');
-        const ok=(c.verdict==='correct'||b.step===c.errorStep)&&matchesReason(versionOf(d,a),b.reason);
-        a.evidence={step:c.verdict==='correct'?null:b.step,stepText:c.verdict==='correct'?'没有错误行':c.steps[b.step],reason:b.reason,reasonText:orderedReasons(versionOf(d,a))[b.reason].text,at:iso(now)};
+        insist(Number.isInteger(b.reason)&&b.reason>=0&&b.reason<c.reasons.length&&(c.verdict!=='wrong'||Number.isInteger(b.step)&&b.step>=0&&b.step<c.steps.length),'请选择有效的步骤与依据。');
+        const ok=(c.verdict!=='wrong'||b.step===c.errorStep)&&matchesReason(versionOf(d,a),b.reason);
+        if(b.category!==undefined)insist(['question','units','calculation','relation','expression','verification'].includes(b.category),'请选择观察到的数学问题类型。');
+        a.evidence={step:c.verdict!=='wrong'?null:b.step,stepText:c.verdict==='correct'?'没有错误行':c.verdict==='insufficient'?'原中间过程未知，不能定位':c.steps[b.step],reason:b.reason,reasonText:orderedReasons(versionOf(d,a))[b.reason].text,category:b.category??c.diagnosticCategory??null,categoryConfirmed:c.diagnosticCategory?b.category===c.diagnosticCategory:null,at:iso(now)};
+        a.firstEvidence??={...clone(a.evidence),correct:ok};
         if(ok){a.evidencePassed=true;a.phase='repair';a.feedback=c.verdict==='correct'?'这份做法有依据。继续写出你核对的结果。':'定位完成。现在由你改正。';}
         else{a.assisted=true;a.feedback=c.verdict==='correct'?'这个依据还不能证明做法正确，请换一条能核对条件的依据。':'还没有找到第一处可证明的问题。前面正确的步骤不需要改，请逐行核对。';}
       }else if(b.action==='repair'||b.action==='verify'){

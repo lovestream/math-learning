@@ -22,8 +22,15 @@ test('真实临时HTTP：PIN、同源、公开API不泄漏、完整备份保护�
  const t=await(await req('/api/detective/today')).json();assert.equal(t.cases.length,3);const c=t.cases[0].case;assert(!Object.hasOwn(c,'verdict'));assert(!Object.hasOwn(c,'solution'));assert(!Object.hasOwn(c,'sourceNotes'));
  let r=await(await req('/api/detective/attempt',{action:'start',attemptId:'http-a',eventId:'http-start',caseId:c.id,version:c.version})).json();const verdict=bank.cases.find(x=>x.id===c.id).draft.verdict;
  r=await(await req('/api/detective/attempt',{action:'judge',attemptId:'http-a',eventId:'http-judge',expectedRevision:r.attempt.revision,value:verdict})).json();assert.equal(r.attempt.firstVerdict,verdict);
+ assert.equal((await req('/api/parent/detective/self')).status,403);
+ assert.equal((await req('/api/detective/self',{action:'start',attemptId:'evil',eventId:'evil',mode:'practice',errorFamilyId:'MASS_AVERAGE'},false,'https://evil.example')).status,403);
+ let self=await(await req('/api/detective/self',{action:'start',attemptId:'self-http',eventId:'self-http-s',mode:'practice',errorFamilyId:'MASS_AVERAGE'})).json();assert.equal(self.phase,'first');assert(!Object.hasOwn(self,'answer')&&!Object.hasOwn(self,'result')&&!self.question.check);
+ self=await(await req('/api/detective/self',{action:'first',attemptId:'self-http',eventId:'self-http-f',expectedRevision:self.revision,status:'answered',value:'5',reasoning:''})).json();assert.equal(self.phase,'check');assert(!Object.hasOwn(self,'answer')&&!Object.hasOwn(self,'result'));
+ assert.equal((await req('/api/detective/self',{action:'first',attemptId:'self-http',eventId:'self-http-overwrite',expectedRevision:1,status:'answered',value:'0.5',reasoning:''})).status,409);
+ for(const endpoint of ['/api/data','/api/studio']){const x=await(await req(endpoint)).json();assert(!x.progress.studio.detective,'L4私有存档未过滤');}
  assert.equal((await req('/api/detective/attempt',{action:'judge',attemptId:'http-a',eventId:'http-stale',expectedRevision:1,value:verdict==='wrong'?'correct':'wrong'})).status,409);
  const envelope=await(await req('/api/parent/export',undefined,true)).json();assert.equal(envelope.progress.studio.detective.attempts['http-a'].firstVerdict,verdict);assert((await req('/api/parent/import/preview',envelope,true)).ok);assert((await req('/api/parent/import',envelope,true)).ok);
+ assert.equal(envelope.progress.studio.detective.selfTraining.attempts['self-http'].firstAnswer.value,'5');
  await stop();await launch();assert.equal((await req('/api/parent/detective/cases',undefined,true)).status,403);const restored=await(await req('/api/detective/today')).json();assert.equal(restored.history[0].attempt.firstVerdict,verdict);
  const unlock=await req('/api/parent/access',{action:'unlock',pin:'912345'});cookie=unlock.headers.get('set-cookie').split(';')[0];assert((await req('/api/import',old,true)).ok);assert.equal((await(await req('/api/detective/today')).json()).cases.length,0);assert.deepEqual((await(await req('/api/data')).json()).progress.wallet,old.progress.wallet);
  await stop();server=null;
