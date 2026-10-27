@@ -136,14 +136,14 @@ export function detectiveAttempt(p,b,now=Date.now()){
         insist(a.phase==='judge'&&['wrong','correct','insufficient'].includes(b.value),'请先判断这份做法有没有问题或过程是否不足。');
         a.firstVerdict??=b.value;a.decision=b.value;
         if(b.value===c.verdict){a.phase='evidence';a.feedback='请用证据支持这个判断。';}
-        else{a.assisted=true;a.feedback=b.value==='wrong'?'这次可能是误报：先核对原条件，这份做法并非一定有错。可以重新判断，第一次选择会保留。':'这次漏掉了一个问题。请逐行核对，重新判断，第一次选择会保留。';}
+        else{a.assisted=true;a.feedback=b.value==='insufficient'?'请再核对：现有步骤是否已经提供足够依据？不熟悉某种做法，不等于它缺少步骤。第一次判断会保留。':c.verdict==='insufficient'?'最后的数值可以核对，但原中间过程未知，不能据此断言原推理正确或定位错误。第一次判断会保留。':b.value==='wrong'?'这次可能是误报：先核对原条件，这份做法并非一定有错。可以重新判断，第一次选择会保留。':'这次漏掉了一个问题。请逐行核对，重新判断，第一次选择会保留。';}
       }else if(b.action==='evidence'){
         insist(a.phase==='evidence','请按当前调查步骤作答。');
         insist(Number.isInteger(b.reason)&&b.reason>=0&&b.reason<c.reasons.length&&(c.verdict!=='wrong'||Number.isInteger(b.step)&&b.step>=0&&b.step<c.steps.length),'请选择有效的步骤与依据。');
         const ok=(c.verdict!=='wrong'||b.step===c.errorStep)&&matchesReason(versionOf(d,a),b.reason);
         if(b.category!==undefined)insist(['question','units','calculation','relation','expression','verification'].includes(b.category),'请选择观察到的数学问题类型。');
         a.evidence={step:c.verdict!=='wrong'?null:b.step,stepText:c.verdict==='correct'?'没有错误行':c.verdict==='insufficient'?'原中间过程未知，不能定位':c.steps[b.step],reason:b.reason,reasonText:orderedReasons(versionOf(d,a))[b.reason].text,category:b.category??c.diagnosticCategory??null,categoryConfirmed:c.diagnosticCategory?b.category===c.diagnosticCategory:null,at:iso(now)};
-        a.firstEvidence??={...clone(a.evidence),correct:ok};
+        a.firstEvidence??={...clone(a.evidence),correct:ok,caseVerdict:c.verdict};
         if(ok){a.evidencePassed=true;a.phase='repair';a.feedback=c.verdict==='correct'?'这份做法有依据。继续写出你核对的结果。':'定位完成。现在由你改正。';}
         else{a.assisted=true;a.feedback=c.verdict==='correct'?'这个依据还不能证明做法正确，请换一条能核对条件的依据。':'还没有找到第一处可证明的问题。前面正确的步骤不需要改，请逐行核对。';}
       }else if(b.action==='repair'||b.action==='verify'){
