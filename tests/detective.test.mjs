@@ -45,7 +45,7 @@ test('卡厚案必须定位第三行；不能只凭30这个最终答案跳过证
  r=send(p,r,'evidence',{step:1,reason});assert.equal(r.attempt.phase,'evidence');assert(r.attempt.assisted);r=send(p,r,'evidence',{step:2,reason});assert.equal(r.attempt.phase,'repair');r=send(p,r,'repair',{value:'10'});assert.equal(r.attempt.phase,'repair');r=send(p,r,'repair',{value:'30'});assert.equal(r.attempt.phase,'verify');
 });
 test('服务端分阶段白名单投影：题面、证据、输入规格没有私有答案或来源',()=>{
- const p=setup();for(const c of Object.values(p.studio.detective.cases).filter(c=>c.status==='published')){const v=c.versions[0];const pub=publicCase(v);assert.deepEqual(Object.keys(pub).sort(),['id','version','title','prompt','steps','visual'].sort());for(const phase of ['evidence','repair','verify']){const s=JSON.stringify(publicCase(v,{phase}));for(const key of ['"answer":','firstWrongStep','sourceNotes','"reason":','"verdict":','"hints":','"solution":'])assert(!s.includes(key),key);}}
+ const p=setup();for(const c of Object.values(p.studio.detective.cases).filter(c=>c.status==='published')){const v=c.versions[0];const pub=publicCase(v);assert.deepEqual(Object.keys(pub).sort(),['id','version','title','prompt','steps','visual','supportsInsufficient'].sort());for(const phase of ['evidence','repair','verify']){const s=JSON.stringify(publicCase(v,{phase}));for(const key of ['"answer":','firstWrongStep','sourceNotes','"reason":','"verdict":','"hints":','"solution":'])assert(!s.includes(key),key);}}
 });
 test('回执重复100次只保留一次勋章，旧页409不覆盖首判和新版本',()=>{
  const p=setup();let r=begin(p,'DET-G3-003');r=send(p,r,'judge',{value:'wrong'});const stale={action:'judge',eventId:id(),attemptId:r.attempt.id,expectedRevision:1,value:'correct'};assert.throws(()=>detectiveAttempt(p,stale,NOW),e=>e.status===409);

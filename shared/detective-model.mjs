@@ -53,7 +53,9 @@ const publicResponse=r=>({kind:r.kind,question:r.question,unit:r.unit,options:r.
 export function publicCase(version,attempt){
   const c=version.content;
   const out={id:version.caseId,version:version.id,title:c.title,prompt:c.prompt,steps:c.steps,visual:c.visual};
-  if(c.reasoningStatus)out.supportsInsufficient=true;
+  // Always offer the third choice. Its presence must not reveal the verdict,
+  // and manually authored insufficient-process cases use the same public API.
+  out.supportsInsufficient=true;
   if(attempt?.phase==='evidence')out.reasons=orderedReasons(version).map(r=>r.text);
   if(attempt?.phase==='repair')out.response=publicResponse(c.repair);
   if(attempt?.phase==='verify')out.response=publicResponse(c.verify);
