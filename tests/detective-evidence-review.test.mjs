@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {freshProgress,exportEnvelope,validateEnvelope} from '../server/store.mjs';
 import {applySelfTraining,manageSelfTraining,selfTrainingData} from '../server/detective-self-store.mjs';
 import {SELF_FAMILIES,selfQuestion} from '../server/detective-self-questions.mjs';
-import {evaluateCheckEvidence} from '../server/detective-check-evidence.mjs';
+import {evaluateCheckEvidence,hasReviewableCheckEvidence} from '../server/detective-check-evidence.mjs';
 const now=Date.parse('2026-10-27T04:00:00Z'),DAY=86400000;
 const copy=x=>structuredClone(x);
 function attempt(p,{mode='practice',at=now,expression,explanation='',value,help=false,status='answered',complete='complete'}={}){
@@ -25,6 +25,15 @@ test('A：抄目标＋空解释在普通练习/迁移均只算答案改对，不
   const d=selfTrainingData(p,now);assert.equal(d.stats.preFeedbackCorrection.numerator,1);assert.equal(d.stats.effectiveCorrection.numerator,0);assert.equal(d.stats.transfer.numerator,0);assert.match(d.families[0].evidence,/证据不足/);
   const before=copy(p);assert.throws(()=>review(p,a),/空白证据/);assert.deepEqual(p,before);
  }
+});
+test('A：裸数值、带单位或括号的抄写不能靠家长勾选升级；计算与文字方法仍可核对',()=>{
+ for(const [expression,explanation]of [['12.5',''],['','12.5'],['12.5克',''],['(12.5)','']]){
+  const p=freshProgress(),{a}=attempt(p,{expression,explanation});
+  assert(!a.result.independent);assert(!a.currentCheckEvidence.reviewable);
+  const before=copy(p);assert.throws(()=>review(p,a));assert.deepEqual(p,before);
+ }
+ assert(hasReviewableCheckEvidence('25×0.5',''));
+ assert(hasReviewableCheckEvidence('','我把25份分成20份和5份，分别求重再合并。'));
 });
 test('A：实际检验式可支持独立纠错，辅助与未确认检查不能混入',()=>{
  for(const [opts,independent]of [[{},true],[{help:true},false],[{complete:'uncertain'},false],[{status:'blank'},false]]){

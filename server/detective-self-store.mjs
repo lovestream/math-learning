@@ -5,7 +5,7 @@ import {equalNumber} from '../shared/detective-mass-spring.mjs';
 import {SELF_FAMILIES,SELF_ENGINE_VERSION,selfQuestion,publicSelfQuestion} from './detective-self-questions.mjs';
 import {validateSelfTraining} from '../shared/detective-self-validation.mjs';
 import {parseLinear} from '../shared/pilot-math.mjs';
-import {CHECK_POLICY_VERSION,evaluateCheckEvidence} from './detective-check-evidence.mjs';
+import {CHECK_POLICY_VERSION,evaluateCheckEvidence,hasReviewableCheckEvidence} from './detective-check-evidence.mjs';
 
 const DAY=86400000,intervals=[1,3,7,14],hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 const iso=n=>new Date(n).toISOString();
@@ -16,13 +16,13 @@ function ensure(p){const d=ensureDetective(p);return d.selfTraining??={schemaVer
 function clock(s,now){insist(Number.isFinite(now)&&now>=Date.parse('2026-01-01')&&now<=Date.parse('2100-01-01'),'设备日期异常，请核对系统时间。');const old=s.lastObservedAt&&Date.parse(s.lastObservedAt);insist(!old||now>=old-5*60000,'设备时间明显倒退。原记录保留，请校准时间后重试。');insist(!old||now-old<=366*DAY,'设备日期跳跃超过一年；请核对日期并在家长端导出备份。');s.lastObservedAt=iso(Math.max(now,old||0));}
 function exposure(a){return a.hintExposure.length>0;}
 const decision=a=>a.parentReviews.findLast(r=>['supported','needs-practice','check-confirmed'].includes(r.verdict));
-const hasSealedEvidence=a=>!!(a.selfCheckActions?.expression?.trim()||a.selfCheckActions?.explanation?.trim());
+const hasSealedEvidence=a=>hasReviewableCheckEvidence(a.selfCheckActions?.expression,a.selfCheckActions?.explanation);
 const baseEligible=a=>!!a.result?.finalCorrect&&!exposure(a)&&a.selfCheckActions?.status==='complete'&&a.firstAnswer?.status==='answered';
 export function currentCheckEvidence(a){
  if(a.phase!=='feedback')return null;
  const q=selfQuestion(a.errorFamilyId,a.index),proof=evaluateCheckEvidence(q,a.preFeedbackRevision.value,a.selfCheckActions.value,a.selfCheckActions.expression);
  const review=decision(a),blocked=['supported','needs-practice'].includes(review?.verdict),confirmed=review?.verdict==='check-confirmed'&&review.confirmPreFeedbackEvidence===true&&hasSealedEvidence(a);
- return {eligible:baseEligible(a)&&!blocked&&(proof.verified||confirmed),source:blocked?'parent-remediation':exposure(a)?'assisted':confirmed?'parent-confirmed':proof.verified?'automatic':'pending-parent',reason:proof.reason,legacySnapshot:!a.result.checkPolicyVersion};
+ return {eligible:baseEligible(a)&&!blocked&&(proof.verified||confirmed),source:blocked?'parent-remediation':exposure(a)?'assisted':confirmed?'parent-confirmed':proof.verified?'automatic':'pending-parent',reviewable:hasSealedEvidence(a),reason:proof.reason,legacySnapshot:!a.result.checkPolicyVersion};
 }
 const eligible=a=>!!currentCheckEvidence(a)?.eligible;
 export function checkEvidence(q,a,answer,value,expression){

@@ -21,7 +21,8 @@ async(page,{advanceDetectiveClock})=>{
  };
  const back=()=>self.getByRole('button',{name:/保存完成，回题族列表/}).click();
  let row=await open('自己解一题');assert(row.question.prompt.includes('25颗')&&row.question.check.target==='12.5','抄目标反例条件不同');
- let result=await finish(row,'0.5','12.5');assert(result.result.finalCorrect&&!result.result.independent&&!result.currentEvidenceEligible&&result.result.category==='answer-correct-check-unproven','抄目标被误计独立');
+ let result=await finish(row,'0.5','12.5','12.5');assert(result.result.finalCorrect&&!result.result.independent&&!result.currentEvidenceEligible&&result.result.category==='answer-correct-check-unproven','抄目标被误计独立');
+ const copiedPrompt=row.question.prompt;assert(!result.currentCheckEvidence.reviewable,'裸数值可被家长补认');
  let data=await api('/api/detective/self');assert(data.stats.preFeedbackCorrection.numerator===1&&data.stats.effectiveCorrection.numerator===0,'答案改对与独立检查未拆开');
  await self.screenshot({path:out+'/detective-evidence-copy-target-unproven-1440.png'});await back();
  row=await open('自己解一题');result=await finish(row,'26','26','26×1');assert(result.result.independent,'无辅助实际检验未成立');await back();
@@ -39,6 +40,7 @@ async(page,{advanceDetectiveClock})=>{
  assert(await card.getByRole('button',{name:'确认封存的独立检验证据',exact:true}).isDisabled(),'未填写依据即可确认');
  const fillReview=async(scope)=>{await scope.getByLabel('我核对的是反馈前封存的独立检验，不是揭晓答案后补做',{exact:true}).check();await scope.getByLabel('给孩子的反馈与具体核对依据（孩子可见）',{exact:true}).fill('核对原先画格说明：每格1克，30格共30克，符合原条件；未给辅助。');};
  await fillReview(parent);
+ const copiedCard=parent.locator('article').filter({has:page.getByRole('heading',{name:copiedPrompt,exact:true})});assert(await copiedCard.getByRole('button',{name:'确认封存的独立检验证据',exact:true}).isDisabled(),'勾选与评语让裸数值取得确认资格');
  const other=await page.context().newPage();await other.goto(base+'/?view=parent');const stale=other.locator('.det-self-parent');await stale.locator('summary').first().click();await fillReview(stale);
  await card.getByRole('button',{name:'确认封存的独立检验证据',exact:true}).click();await parent.getByText('复测阶段 3/4',{exact:false}).waitFor();
  const staleCard=stale.locator('article').filter({has:other.getByRole('heading',{name:row.question.prompt,exact:true})});await staleCard.getByRole('button',{name:'确认封存的独立检验证据',exact:true}).click();await stale.getByRole('alert').waitFor();await other.close();
@@ -53,5 +55,5 @@ async(page,{advanceDetectiveClock})=>{
  await api('/api/parent/access',{action:'unlock',pin:'913456'});const backup=await api('/api/parent/export');await api('/api/parent/import/preview',backup);await api('/api/parent/import',backup);const restored=await api('/api/parent/export');
  assert(JSON.stringify(backup.progress.studio.detective.selfTraining)===JSON.stringify(restored.progress.studio.detective.selfTraining),'带批阅的新证据备份损坏');
  assert(JSON.stringify(before.progress.wallet)===JSON.stringify(restored.progress.wallet)&&restored.progress.studio.detective.badges.length===0,'自查误发奖励');
- return {passed:true,syntheticOnly:true,assertions:['抄目标空解释不授予独立','首答封存前后无反馈','普通检验式无提示可核验','交换/括号/多方法复测','其他方法待家长而非判错','家长确认推进一次','双标签409不改历史','四轮复测与备份恢复','钱包与勋章不变'],viewports:[390,768,1440]};
+ return {passed:true,syntheticOnly:true,assertions:['抄目标进检验式仍不授予独立或家长补认','首答封存前后无反馈','普通检验式无提示可核验','交换/括号/多方法复测','其他方法待家长而非判错','家长确认推进一次','双标签409不改历史','四轮复测与备份恢复','钱包与勋章不变'],viewports:[390,768,1440]};
 }

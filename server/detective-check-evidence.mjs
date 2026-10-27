@@ -69,6 +69,17 @@ function answerBindings(tree,answer){
 }
 const containsKnownAnswer=(t,a)=>!usesAnswer(t)&&same(evaluate(t,a),a)||!!(t.left&&containsKnownAnswer(t.left,a))||!!(t.right&&containsKnownAnswer(t.right,a));
 
+export function hasReviewableCheckEvidence(expression,explanation){
+ const reviewable=raw=>{
+  if(typeof raw!=='string'||!raw.trim())return false;
+  const text=normalize(raw.trim());
+  // A quantity copied into a different box is still not a mathematical action.
+  if(/^[+-]?\d+(?:\.\d+)?(?:克|千克|毫米|厘米|分米|米|颗|张|块|袋|圈)?[。.]?$/.test(text))return false;
+  try{return hasCalculation(parse(text));}catch{return true;} // Equations/prose: a parent must judge the saved method.
+ };
+ return reviewable(expression)||reviewable(explanation);
+}
+
 export function evaluateCheckEvidence(q,answer,value,expression){
  const pending=reason=>({verified:false,status:'pending-parent',reason,policyVersion:CHECK_POLICY_VERSION});
  if(typeof expression!=='string'||!expression.trim())return pending('未留下检验式；答案是否改对与是否有独立检验证据分开记录。');
