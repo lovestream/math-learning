@@ -5,7 +5,7 @@ import {execFileSync} from 'node:child_process';
 import {freshProgress,createStore,exportEnvelope,validateEnvelope} from '../server/store.mjs';
 import {SELF_FAMILIES,selfQuestion,publicSelfQuestion,familyExamples} from '../server/detective-self-questions.mjs';
 import {applySelfTraining,selfTrainingData,manageSelfTraining,selfLocalDay} from '../server/detective-self-store.mjs';
-import {enableProcessCases,detectiveAttempt} from '../server/detective-store.mjs';
+import {enableProcessCases,detectiveAttempt,manageDetective} from '../server/detective-store.mjs';
 import {orderedReasons,validateDetective,fingerprint} from '../shared/detective-model.mjs';
 import {deriveImportedCase,verifyImportedCaseMath,ORACLE_VERSION} from '../shared/detective-inbox.mjs';
 import {importVerifiedBundle} from '../server/detective-inbox-store.mjs';
@@ -57,10 +57,11 @@ test('V2 新模板泛化：非整数定点、零载重、逆向边界和恶意�
  for(const [t,p]of [['mass-average-inverse-v1',{mode:'correct',ask:'count',item:'豆子',totalGrams:1,averageGrams:0.3}],['spring-reverse-v1',{mode:'correct',ask:'load',originalCm:6,mmPerKg:5,finalMm:62}],['spring-reverse-v1',{mode:'correct',ask:'initial',loadKg:5,mmPerKg:5,finalMm:20}],['batch-average-mass-v1',{mode:'wrong',item:'豆子',count:10,totalGrams:6,wrongDivisor:10}]])assert.throws(()=>deriveImportedCase(t,p));
 });
 test('V2 L1/L2：结果对但推理错、未知中间过程、正确无需改，三态首判与首证据冻结',()=>{
- const p=freshProgress();const d=enableProcessCases(p,now);assert.equal(d.newCases.length,3);
+ const p=freshProgress();const d=enableProcessCases(p,now);assert.equal(d.newCases.length,3);assert(Object.values(p.studio.detective.cases).filter(c=>c.trainingSource).every(c=>c.versions[0].approvalSource==='builtin-reviewed'));
  for(const entry of d.newCases){const v=p.studio.detective.cases[entry.case.id].versions[0],c=v.content;let pair=detectiveAttempt(p,{action:'start',caseId:entry.case.id,version:v.id,attemptId:entry.case.id,eventId:crypto.randomUUID()},now);const send=(action,extra)=>pair=detectiveAttempt(p,{action,attemptId:entry.case.id,expectedRevision:pair.attempt.revision,eventId:crypto.randomUUID(),...extra},now);
  send('judge',{value:c.verdict});send('evidence',{step:c.errorStep,reason:orderedReasons(v).findIndex(x=>x.index===c.reason),category:c.diagnosticCategory});send('repair',{value:c.repair.answer});send('verify',{value:c.verify.answer});assert.equal(pair.attempt.phase,'closed');assert.equal(pair.attempt.firstVerdict,c.verdict);assert(p.studio.detective.attempts[entry.case.id].firstEvidence.correct);
  }validateDetective(p.studio.detective);assert.equal(selfTrainingData(p,now).stats.diagnosis.denominator,3);
+ const record=p.studio.detective.cases['DET-V2-PROCESS-CORRECT'];manageDetective(p,{action:'save',caseId:record.id,expectedRevision:record.revision,eventId:'parent-edit',content:{...record.draft,title:'家长核对后的匿名对照'}},now);manageDetective(p,{action:'publish',caseId:record.id,expectedRevision:record.revision,eventId:'parent-publish',checks:[true,true,true]},now);assert.equal(record.versions[0].approvalSource,'builtin-reviewed');assert.equal(record.versions[1].approvalSource,'parent');
 });
 test('V2 L4：无反馈首答→自查；各类自主纠错和辅助不能混淆',()=>{
  const p=freshProgress();const snapshots=copy({wallet:p.wallet,pets:p.pets,lessons:p.lessons});
@@ -85,6 +86,7 @@ test('V2 到期1/3/7/14：新参数、未知量变化、无预填反查、当天
  const before=copy(p.studio.detective.selfTraining);assert.throws(()=>applySelfTraining(p,{action:'hint',attemptId:Object.keys(before.attempts).at(-1),expectedRevision:Object.values(before.attempts).at(-1).revision,eventId:'late'},at));assert.deepEqual(p.studio.detective.selfTraining,before);
 });
 test('V2 多次失败不循环熟题；辅助复测不推进；暂停、顺延、跨午夜和时间异常',()=>{
+ const slight=freshProgress();run(slight,{first:'right'});const adjusted=run(slight,{first:'right',at:now-60000});assert.equal(adjusted.a.startedAt,new Date(now).toISOString());assert.equal(adjusted.a.feedbackReleasedAt,new Date(now).toISOString());
  const p=freshProgress();run(p,{first:'right'});for(let n=1;n<=7;n++)run(p,{mode:'review',at:now+n*DAY,final:'wrong'});
  const s=p.studio.detective.selfTraining;assert.equal(new Set(Object.values(s.attempts).map(a=>a.questionVariantId)).size,8);assert.equal(s.schedules.MASS_AVERAGE.stage,0);
  let r=s.schedules.MASS_AVERAGE;manageSelfTraining(p,{action:'schedule',errorFamilyId:'MASS_AVERAGE',expectedRevision:r.revision,eventId:'pause',paused:true,dueDay:'2026-11-05'},now+7*DAY);assert.throws(()=>run(p,{mode:'review',at:now+9*DAY}));

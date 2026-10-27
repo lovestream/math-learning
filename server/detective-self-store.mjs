@@ -53,7 +53,7 @@ function apply(p,b,now){
  const s=ensure(p);insist(b&&validId(b.eventId)&&validId(b.attemptId),'缺少有效操作编号。');
  let a=s.attempts[b.attemptId];const signature=hash(b),prior=a?.events.find(e=>e.id===b.eventId);
  if(prior){insist(prior.signature===signature,'操作编号被用于不同内容。',409);return publicAttempt(a);}
- clock(s,now);const at=iso(now),day=selfLocalDay(now);
+ clock(s,now);const at=s.lastObservedAt,day=selfLocalDay(Date.parse(at));
  if(b.action==='start'){
   family(b.errorFamilyId);insist(!a,'调查编号已存在。',409);
   const old=Object.values(s.attempts).find(x=>x.errorFamilyId===b.errorFamilyId&&x.phase!=='feedback');if(old)return publicAttempt(old);
@@ -103,7 +103,7 @@ function apply(p,b,now){
 // Atomic even for direct library callers; disk transaction is provided by createStore.
 export function applySelfTraining(p,b,now=Date.now()){const next=structuredClone(p),result=apply(next,b,now);p.studio=next.studio;return result;}
 export function manageSelfTraining(p,b,now=Date.now()){
- const next=structuredClone(p),s=ensure(next);clock(s,now);
+ const next=structuredClone(p),s=ensure(next);clock(s,now);now=Date.parse(s.lastObservedAt);
  if(b.action==='schedule'){
   family(b.errorFamilyId);const r=s.schedules[b.errorFamilyId];insist(r,'还没有复测安排。');
   insist(validId(b.eventId)&&typeof b.paused==='boolean','暂停或顺延记录无效。');const signature=hash(b),old=r.adjustments.find(e=>e.id===b.eventId);if(old){insist(old.signature===signature,'操作编号冲突。',409);return selfTrainingData(p,now,true);}

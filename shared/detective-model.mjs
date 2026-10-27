@@ -72,7 +72,7 @@ export function validateDetective(d){
   for(const [id,c]of Object.entries(d.cases)){
     insist(validId(id)&&c.id===id&&Number.isInteger(c.revision)&&c.revision>0&&['draft','review','published','withdrawn','archived'].includes(c.status));
     validateCase(c.draft);validateImportProvenance(c.importSource);validateImportProvenance(c.pendingImport);insist(Array.isArray(c.versions)&&c.versions.length<=20);
-    const ids=new Set();for(const v of c.versions){validateCase(v.content,true);validateImportProvenance(v.provenance,v.content);if(v.approvalSource!==undefined)insist(['parent','deterministic-import'].includes(v.approvalSource));if(v.approvalSource==='deterministic-import')insist(v.provenance?.importDisposition==='auto-published');insist(validId(v.id)&&v.caseId===id&&!ids.has(v.id)&&v.hash===fingerprint(v.content)&&Number.isFinite(Date.parse(v.publishedAt))&&v.approved===true);ids.add(v.id);}
+    const ids=new Set();for(const v of c.versions){validateCase(v.content,true);validateImportProvenance(v.provenance,v.content);if(v.approvalSource!==undefined)insist(['parent','deterministic-import','builtin-reviewed'].includes(v.approvalSource));if(v.approvalSource==='deterministic-import')insist(v.provenance?.importDisposition==='auto-published');if(v.approvalSource==='builtin-reviewed')insist(c.trainingSource==='v2-reviewed-sample');insist(validId(v.id)&&v.caseId===id&&!ids.has(v.id)&&v.hash===fingerprint(v.content)&&Number.isFinite(Date.parse(v.publishedAt))&&v.approved===true);ids.add(v.id);}
     insist(c.activeVersion===null||ids.has(c.activeVersion));if(c.status==='published')insist(ids.has(c.activeVersion));
   }
   if(d.inbox)for(const r of Object.values(d.inbox.files))insist(r.caseIds.every(id=>validId(id)&&d.cases[id]),'收件记录引用了不存在的案卷。');

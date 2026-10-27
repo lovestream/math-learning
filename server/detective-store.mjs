@@ -37,7 +37,7 @@ export function enableProcessCases(p,now=Date.now(),errorFamilyId=null){
  for(const {id,content}of errorFamilyId?familyExamples(errorFamilyId):processCases)if(!d.cases[id]){
   insist(Object.keys(d.cases).length<200,'案卷容量已满，请先备份。');validateCase(content,true);
   const c={id,revision:1,status:'review',draft:clone(content),versions:[],activeVersion:null,trainingSource:'v2-reviewed-sample'};
-  d.cases[id]=c;publish(c,now,'');
+  d.cases[id]=c;publish(c,now,'','builtin-reviewed');
  }
  validateStored(p);return detectiveToday(p,now);
 }
@@ -56,10 +56,10 @@ export function publishImported(c,content,now,provenance){
   const hash=fingerprint(content);if(active(c)?.hash!==hash){c.versions.push({id:`${c.id}:v${c.versions.length+1}`,caseId:c.id,content:clone(content),hash,publishedAt:iso(now),approved:true,approvalSource:'deterministic-import',provenance});c.activeVersion=c.versions.at(-1).id;}
   c.status='published';c.revision++;
 }
-function publish(c,now,name){
+function publish(c,now,name,approvalSource='parent'){
   validateCase(c.draft,true);insist(c.versions.length<20,'此案已有20个版本，请另建新案。');
   const content=anonymize(c.draft,name);validateCase(content,true);const hash=fingerprint(content);
-  if(active(c)?.hash!==hash){c.versions.push({id:`${c.id}:v${c.versions.length+1}`,caseId:c.id,content,hash,publishedAt:iso(now),approved:true,approvalSource:'parent'});c.activeVersion=c.versions.at(-1).id;}
+  if(active(c)?.hash!==hash){c.versions.push({id:`${c.id}:v${c.versions.length+1}`,caseId:c.id,content,hash,publishedAt:iso(now),approved:true,approvalSource});c.activeVersion=c.versions.at(-1).id;}
   c.status='published';c.revision++;
 }
 function checked(b){insist(Array.isArray(b.checks)&&b.checks.length===3&&b.checks.every(x=>x===true),'发布前请核对题意与答案、首错或正确依据、匿名与验证方法。');}
