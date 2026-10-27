@@ -5,6 +5,7 @@ import {equalNumber} from '../shared/detective-mass-spring.mjs';
 import {SELF_FAMILIES,SELF_ENGINE_VERSION,selfQuestion,publicSelfQuestion} from './detective-self-questions.mjs';
 import {validateSelfTraining} from '../shared/detective-self-validation.mjs';
 import {parseLinear} from '../shared/pilot-math.mjs';
+import {CHECK_POLICY_VERSION,evaluateCheckEvidence} from './detective-check-evidence.mjs';
 
 const DAY=86400000,intervals=[1,3,7,14],hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 const iso=n=>new Date(n).toISOString();
@@ -14,29 +15,29 @@ const family=f=>insist(SELF_FAMILIES.some(x=>x.id===f),'这个数学题族尚未
 function ensure(p){const d=ensureDetective(p);return d.selfTraining??={schemaVersion:1,engineVersion:SELF_ENGINE_VERSION,timeZone:'Asia/Shanghai',attempts:{},schedules:{},seen:{},lastObservedAt:null};}
 function clock(s,now){insist(Number.isFinite(now)&&now>=Date.parse('2026-01-01')&&now<=Date.parse('2100-01-01'),'设备日期异常，请核对系统时间。');const old=s.lastObservedAt&&Date.parse(s.lastObservedAt);insist(!old||now>=old-5*60000,'设备时间明显倒退。原记录保留，请校准时间后重试。');insist(!old||now-old<=366*DAY,'设备日期跳跃超过一年；请核对日期并在家长端导出备份。');s.lastObservedAt=iso(Math.max(now,old||0));}
 function exposure(a){return a.hintExposure.length>0;}
-const eligible=a=>!!a.result?.independent&&!['supported','needs-practice'].includes(a.parentReviews.at(-1)?.verdict);
+const decision=a=>a.parentReviews.findLast(r=>['supported','needs-practice','check-confirmed'].includes(r.verdict));
+const hasSealedEvidence=a=>!!(a.selfCheckActions?.expression?.trim()||a.selfCheckActions?.explanation?.trim());
+const baseEligible=a=>!!a.result?.finalCorrect&&!exposure(a)&&a.selfCheckActions?.status==='complete'&&a.firstAnswer?.status==='answered';
+export function currentCheckEvidence(a){
+ if(a.phase!=='feedback')return null;
+ const q=selfQuestion(a.errorFamilyId,a.index),proof=evaluateCheckEvidence(q,a.preFeedbackRevision.value,a.selfCheckActions.value,a.selfCheckActions.expression);
+ const review=decision(a),blocked=['supported','needs-practice'].includes(review?.verdict),confirmed=review?.verdict==='check-confirmed'&&review.confirmPreFeedbackEvidence===true&&hasSealedEvidence(a);
+ return {eligible:baseEligible(a)&&!blocked&&(proof.verified||confirmed),source:blocked?'parent-remediation':exposure(a)?'assisted':confirmed?'parent-confirmed':proof.verified?'automatic':'pending-parent',reason:proof.reason,legacySnapshot:!a.result.checkPolicyVersion};
+}
+const eligible=a=>!!currentCheckEvidence(a)?.eligible;
 export function checkEvidence(q,a,answer,value,expression){
- try{
-  if(!equalNumber(q.checkValue(answer),value)||!equalNumber(value,q.checkTarget))return false;
-  if(a.mode!=='review')return true;
-  const normalize=x=>x.replace(/[\s（）]/g,c=>c==='（'?'(':c==='）'?')':'').replace(/[×·]/g,'*').replace(/÷/g,'/').replace(/[−－]/g,'-').replace(/＋/g,'+');
-  const canonical=normalize(q.checkPattern.replaceAll('□',answer)),typed=normalize(expression??'');
-  // This intentionally narrow exact relation checker does not pretend to grade
-  // arbitrary prose/proofs. Other valid methods are kept for parent review.
-  if(typed!==canonical)return false;
-  const result=parseLinear(expression);return !Object.keys(result.terms).length&&equalNumber(`${result.constant.n}/${result.constant.d}`,value);
- }catch{return false;}
+ return evaluateCheckEvidence(q,answer,value,expression).verified;
 }
 function publicAttempt(a){
  const q=selfQuestion(a.errorFamilyId,a.index),out={id:a.id,revision:a.revision,phase:a.phase,mode:a.mode,startedAt:a.startedAt,question:publicSelfQuestion(q,a.phase,a.mode),draft:a.draft,firstAnswer:a.firstAnswer??null,firstReasoning:a.firstReasoning??'',hintExposure:a.hintExposure,hintText:exposure(a)?q.hint:null,parentReviews:a.parentReviews.map(({at,verdict,comment})=>({at,verdict,comment}))};
- if(a.phase==='feedback')Object.assign(out,{preFeedbackRevision:a.preFeedbackRevision,selfCheckActions:a.selfCheckActions,feedbackReleasedAt:a.feedbackReleasedAt,result:a.result,currentEvidenceEligible:eligible(a),answer:q.answer,explanation:q.explanation});
+ if(a.phase==='feedback')Object.assign(out,{preFeedbackRevision:a.preFeedbackRevision,selfCheckActions:a.selfCheckActions,feedbackReleasedAt:a.feedbackReleasedAt,result:a.result,currentEvidenceEligible:eligible(a),currentCheckEvidence:currentCheckEvidence(a),answer:q.answer,explanation:q.explanation});
  if(a.hintExposure.some(e=>e.kind==='visual'))out.visual={kind:'manual',values:[q.question,'已知条件和所求对象可以分开画在纸上']};
  return out;
 }
 export function selfStats(s){
  const all=Object.values(s?.attempts??{}).filter(a=>a.phase==='feedback'),scored=all.filter(a=>a.firstAnswer.status==='answered'),firstWrong=scored.filter(a=>!a.result.firstCorrect),firstRight=scored.filter(a=>a.result.firstCorrect);
  const rate=(n,d)=>({numerator:n,denominator:d,rate:d?n/d:null});
- return {firstCorrect:rate(scored.filter(a=>a.result.firstCorrect).length,scored.length),afterCheck:rate(all.filter(a=>a.result.finalCorrect).length,all.length),effectiveCorrection:rate(firstWrong.filter(a=>eligible(a)).length,firstWrong.length),changedWrong:rate(firstRight.filter(a=>!a.result.finalCorrect).length,firstRight.length),transfer:rate(all.filter(a=>a.mode==='transfer'&&eligible(a)).length,all.filter(a=>a.mode==='transfer').length),delayed:intervals.map((days,i)=>({days,...rate(all.filter(a=>a.mode==='review'&&a.reviewStage===i&&eligible(a)).length,all.filter(a=>a.mode==='review'&&a.reviewStage===i).length)})),explanation:'有效纠错分母：已完成反馈前自查的可评分首答错误次数。空白或不确定首答不纳入首次正确率；未到期或未作答不计复测失败。解释文本另由家长核对，家长标记辅助或回补后不计独立证据；历史快照保留。'};
+ return {firstCorrect:rate(scored.filter(a=>a.result.firstCorrect).length,scored.length),afterCheck:rate(all.filter(a=>a.result.finalCorrect).length,all.length),preFeedbackCorrection:rate(firstWrong.filter(a=>a.result.finalCorrect).length,firstWrong.length),effectiveCorrection:rate(firstWrong.filter(a=>eligible(a)).length,firstWrong.length),changedWrong:rate(firstRight.filter(a=>!a.result.finalCorrect).length,firstRight.length),transfer:rate(all.filter(a=>a.mode==='transfer'&&eligible(a)).length,all.filter(a=>a.mode==='transfer').length),delayed:intervals.map((days,i)=>({days,...rate(all.filter(a=>a.mode==='review'&&a.reviewStage===i&&eligible(a)).length,all.filter(a=>a.mode==='review'&&a.reviewStage===i).length)})),explanation:'反馈前答案改对包含辅助和待核对；有效自主纠错另需无辅助且有可核验的反馈前检验式，或家长确认原先封存的独立检验证据。两者分母都是完成自查的可评分首答错误次数。空白或不确定不计首次正确率；未到期或未做不计失败。旧版只有核对值的记录保留原快照，但不自动计作当前独立证据。'};
 }
 export function selfTrainingData(p,now=Date.now(),parent=false){
  const s=p.studio?.detective?.selfTraining;
@@ -82,13 +83,13 @@ function apply(p,b,now){
   }else if(b.action==='final'){
    insist(a.phase==='check','先封存首答，再提交自查。');
    insist(typeof b.value==='string'&&b.value.length>0&&b.value.length<=80&&typeof b.checkValue==='string'&&b.checkValue.length>0&&b.checkValue.length<=80&&['complete','uncertain'].includes(b.checkStatus)&&typeof b.explanation==='string'&&b.explanation.length<=500,'请提交第二次答案和实际算出的反查结果；不确定也可以如实提交。');
-   if(a.mode==='review')insist(typeof b.checkExpression==='string'&&b.checkExpression.trim()&&b.checkExpression.length<=160,'复测请自己写一条反查算式，不提供预填算式。');
-   a.preFeedbackRevision={value:b.value,at};a.selfCheckActions={kind:'reverse-substitution',pattern:q.checkPattern,value:b.checkValue,expression:a.mode==='review'?b.checkExpression:null,status:b.checkStatus,explanation:b.explanation,at};
+   insist(b.checkExpression===undefined||typeof b.checkExpression==='string'&&b.checkExpression.length<=160,'检验式请限制在160字内；其他方法可写在解释中交家长核对。');
+   a.preFeedbackRevision={value:b.value,at};a.selfCheckActions={kind:'reverse-substitution',pattern:q.checkPattern,value:b.checkValue,expression:b.checkExpression??'',status:b.checkStatus,explanation:b.explanation,at};
    const firstCorrect=a.firstAnswer.status==='answered'&&equalNumber(a.firstAnswer.value,q.answer),finalCorrect=equalNumber(b.value,q.answer);
    const checkValid=checkEvidence(q,a,b.value,b.checkValue,a.selfCheckActions.expression);
    const independent=finalCorrect&&checkValid&&!exposure(a)&&b.checkStatus==='complete'&&a.firstAnswer.status==='answered';
    const category=exposure(a)?'assisted':a.firstAnswer.status!=='answered'?'first-unscored':firstCorrect?(finalCorrect?'first-correct':'changed-wrong'):(finalCorrect?(checkValid&&b.checkStatus==='complete'?'self-corrected':'answer-correct-check-unproven'):'not-corrected');
-   a.result={firstCorrect,finalCorrect,checkValid,independent,category,at,explanationStatus:'parent-review',assistance:structuredClone(a.hintExposure)};a.feedbackReleasedAt=at;a.phase='feedback';a.draft='';
+   a.result={firstCorrect,finalCorrect,checkValid,independent,category,at,checkPolicyVersion:CHECK_POLICY_VERSION,checkEvidence:evaluateCheckEvidence(q,b.value,b.checkValue,a.selfCheckActions.expression),explanationStatus:'parent-review',assistance:structuredClone(a.hintExposure)};a.feedbackReleasedAt=at;a.phase='feedback';a.draft='';
    const r=s.schedules[a.errorFamilyId];
    if(!r)s.schedules[a.errorFamilyId]={revision:1,stage:0,anchorDay:day,dueDay:plus(day,1),paused:false,lastCompletedDay:null,adjustments:[]};
    else if(a.mode==='review'){
@@ -112,12 +113,25 @@ export function manageSelfTraining(p,b,now=Date.now()){
   r.dueDay=b.dueDay;r.paused=b.paused;r.revision++;r.adjustments.push({id:b.eventId,signature,at:iso(now),dueDay:r.dueDay,paused:r.paused});
  }else if(b.action==='review'){
   const a=s.attempts[b.attemptId];insist(a?.phase==='feedback','请先提交自查。');
-  insist(['supported','needs-practice','explanation-confirmed'].includes(b.verdict)&&typeof b.comment==='string'&&b.comment.length<=500&&a.parentReviews.length<30&&validId(b.eventId),'批阅内容无效。');
+  insist(['supported','needs-practice','explanation-confirmed','check-confirmed'].includes(b.verdict)&&typeof b.comment==='string'&&b.comment.length<=500&&validId(b.eventId),'批阅内容无效。');
   const old=a.events.find(e=>e.id===b.eventId);if(old){insist(old.signature===hash(b),'操作编号冲突。',409);return selfTrainingData(p,now,true);}
+  insist(a.parentReviews.length<30&&a.events.length<80,'本题批阅记录接近上限，请先导出备份；原记录保留。');
   insist(a.revision===b.expectedRevision,'请载入最新记录后再批阅。',409);
-  a.parentReviews.push({at:iso(now),verdict:b.verdict,comment:b.comment,reviewer:'local-parent'});a.events.push({id:b.eventId,signature:hash(b),action:'parent-review',at:iso(now)});a.revision++;
+  const r=s.schedules[a.errorFamilyId];
+  const seen=s.seen[a.errorFamilyId]??[];
+  const latestReview=Object.values(s.attempts).filter(x=>x.errorFamilyId===a.errorFamilyId&&x.mode==='review').sort((x,y)=>seen.indexOf(x.index)-seen.indexOf(y.index)).at(-1);
+  const credit=b.verdict==='check-confirmed'&&a.mode==='review'&&latestReview?.id===a.id&&r?.stage===a.reviewStage&&!r.adjustments.some(x=>x.reason==='parent-check-confirmed'&&x.attemptId===a.id);
+  if(b.verdict==='check-confirmed'){
+   insist(baseEligible(a)&&hasSealedEvidence(a)&&b.confirmPreFeedbackEvidence===true&&b.comment.trim().length>0,'只能确认反馈前已封存的独立检验证据，请填写具体核对依据；空白证据、辅助作答或错误答案不能补记为独立。');
+   if(credit){insist(b.expectedScheduleRevision===r.revision,'复测安排已有更新，请载入最新记录后再确认。',409);insist(r.adjustments.length<50,'复测调整记录已满，请先导出备份。');}
+  }
+  a.parentReviews.push({at:iso(now),verdict:b.verdict,comment:b.comment,reviewer:'local-parent',...(b.verdict==='check-confirmed'?{confirmPreFeedbackEvidence:true}:{})});a.events.push({id:b.eventId,signature:hash(b),action:'parent-review',at:iso(now)});a.revision++;
+  if(credit){
+   r.stage=Math.min(4,r.stage+1);r.dueDay=r.stage===4?null:plus(selfLocalDay(now),intervals[r.stage]-intervals[Math.max(0,r.stage-1)]);r.revision++;
+   r.adjustments.push({id:b.eventId,signature:hash(b),at:iso(now),dueDay:r.dueDay,paused:r.paused,reason:'parent-check-confirmed',attemptId:a.id});
+  }
   if(['supported','needs-practice'].includes(b.verdict)){
-   const r=s.schedules[a.errorFamilyId];if(r){insist(r.adjustments.length<50,'复测调整记录已满，请先导出备份。');r.stage=0;r.anchorDay=selfLocalDay(now);r.dueDay=plus(r.anchorDay,1);r.revision++;r.adjustments.push({id:b.eventId,signature:hash(b),at:iso(now),dueDay:r.dueDay,paused:r.paused,reason:'explicit-parent-remediation'});}
+   if(r){insist(r.adjustments.length<50,'复测调整记录已满，请先导出备份。');r.stage=0;r.anchorDay=selfLocalDay(now);r.dueDay=plus(r.anchorDay,1);r.revision++;r.adjustments.push({id:b.eventId,signature:hash(b),at:iso(now),dueDay:r.dueDay,paused:r.paused,reason:'explicit-parent-remediation'});}
   }
  }else insist(false,'不支持这个管理操作。');
  validateStored(next);p.studio=next.studio;return selfTrainingData(p,now,true);

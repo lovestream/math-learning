@@ -16,7 +16,7 @@ try{
  store=createStore(data,[]);assert.deepEqual(store.get(),before.progress);for(const {file,bundle}of bundles)assert.equal(store.mutate(p=>importVerifiedBundle(p,bundle,source(file),at)).result.status,'auto-published');
  const q=selfQuestion('INITIAL_CHANGE',0);let a=store.mutate(p=>applySelfTraining(p,{action:'start',mode:'practice',errorFamilyId:q.family,attemptId:'rollback-v2',eventId:'start'},at)).result;
  a=store.mutate(p=>applySelfTraining(p,{action:'first',attemptId:a.id,eventId:'first',expectedRevision:a.revision,value:'6',status:'answered',reasoning:'匿名升级测试'},at)).result;
- store.mutate(p=>applySelfTraining(p,{action:'final',attemptId:a.id,eventId:'final',expectedRevision:a.revision,value:q.answer,checkValue:q.checkTarget,checkStatus:'complete',explanation:'模拟反查'},at));
+ store.mutate(p=>applySelfTraining(p,{action:'final',attemptId:a.id,eventId:'final',expectedRevision:a.revision,value:q.answer,checkValue:q.checkTarget,checkExpression:q.checkPattern.replaceAll('□',`(${q.answer})`),checkStatus:'complete',explanation:'模拟反查'},at));
  const after=store.export();store.import(after);assert.deepEqual(store.get(),after.progress);assert.deepEqual(after.progress.wallet,before.progress.wallet);assert.deepEqual(after.progress.pets,before.progress.pets);assert.deepEqual(after.progress.studio.detective.attempts,before.progress.studio.detective.attempts);
  evidence.steps.push({name:'v3-recheck-and-self-correction-backup-restore',passed:true,newSelfAttempts:1,walletPetsOldHistoryUnchanged:true});
  assert.throws(()=>oldStore.validateEnvelope(after,[]),'Older code must reject the new namespace instead of silently deleting it');store.close();store=null;

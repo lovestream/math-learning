@@ -11,6 +11,7 @@ import {deriveImportedCase,verifyImportedCaseMath,ORACLE_VERSION} from '../share
 import {importVerifiedBundle} from '../server/detective-inbox-store.mjs';
 import {auditDeliveredBundle,auditDeliveredCase} from '../scripts/lib/detective-delivery-audit.mjs';
 import {parseLinear,formatFraction,parseNumber} from '../shared/pilot-math.mjs';
+import {evaluateCheckEvidence} from '../server/detective-check-evidence.mjs';
 const now=Date.parse('2026-10-27T04:00:00Z'),DAY=86400000,copy=x=>structuredClone(x);
 function run(p,{f='MASS_AVERAGE',mode='practice',at=now,first='wrong',final='right',help=false,status='answered',check='right',complete='complete'}={}){
  let a=applySelfTraining(p,{action:'start',mode,errorFamilyId:f,attemptId:'self-'+crypto.randomUUID(),eventId:crypto.randomUUID()},at);
@@ -127,7 +128,8 @@ test('V2 有界容量：240个参数用完就停止；1000次上限与2MiB错误
  const p=freshProgress();run(p,{first:'right'});const s=p.studio.detective.selfTraining;s.seen.MASS_AVERAGE=Array.from({length:240},(_,i)=>i);const saved=copy(p);assert.throws(()=>run(p),/新参数已用完/);assert.deepEqual(p,saved);
  const full=freshProgress();run(full,{first:'right'});const st=full.studio.detective.selfTraining,sample=copy(Object.values(st.attempts)[0]);st.attempts={};st.seen={};
  for(let n=0;n<1000;n++){
-  const f=SELF_FAMILIES[Math.floor(n/128)].id,index=n%128,q=selfQuestion(f,index),id='capacity-'+n,at=sample.firstAnswer.at,a={...copy(sample),id,errorFamilyId:f,index,questionVariantId:q.id,unknownRole:q.unknownRole,firstAnswer:{value:q.answer,status:'answered',at},firstReasoning:'',preFeedbackRevision:{value:q.answer,at},selfCheckActions:{kind:'reverse-substitution',pattern:q.checkPattern,value:q.checkTarget,expression:null,status:'complete',explanation:'',at},events:[]};
+  const f=SELF_FAMILIES[Math.floor(n/128)].id,index=n%128,q=selfQuestion(f,index),id='capacity-'+n,at=sample.firstAnswer.at,a={...copy(sample),id,errorFamilyId:f,index,questionVariantId:q.id,unknownRole:q.unknownRole,firstAnswer:{value:q.answer,status:'answered',at},firstReasoning:'',preFeedbackRevision:{value:q.answer,at},selfCheckActions:{kind:'reverse-substitution',pattern:q.checkPattern,value:q.checkTarget,expression:q.checkPattern.replaceAll('□',`(${q.answer})`),status:'complete',explanation:'',at},events:[]};
+  a.result.checkEvidence=evaluateCheckEvidence(q,q.answer,q.checkTarget,a.selfCheckActions.expression);
   a.firstHash=createHash('sha256').update(JSON.stringify({firstAnswer:a.firstAnswer,firstReasoning:a.firstReasoning})).digest('hex');st.attempts[id]=a;(st.seen[f]??=[]).push(index);
  }
  const bytes=Buffer.byteLength(JSON.stringify(st));t.diagnostic(`1000条紧凑模拟证据：${bytes}字节；模块上限2097152字节，整侦探库3145728字节。`);

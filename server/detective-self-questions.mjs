@@ -73,7 +73,19 @@ export function selfQuestion(family,index){
  }
  visual=c.visual;
  const checkUnit=family==='UNIT_GROUPING'&&role%2?'张':family==='UNIT_CONVERSION'&&role%2?'厘米':family==='EQUAL_GROUPS'&&role%2?'块':family==='UNIT_ORDERING'?'厘米':c.verify.unit;
- return {id:`${SELF_ENGINE_VERSION}:${family}:${index}`,family,index,template,parameters:p,sourceKind:'self-answer',unknownRole,question,unit,answer:rationalValue(answer),checkTarget:rationalValue(checkTarget),checkTargetDisplay:String(checkTarget),checkUnit,checkPattern,checkValue,visual,
+ const checkRelations=[{pattern:checkPattern,target:String(checkTarget)}],also=(pattern,target)=>checkRelations.push({pattern,target:String(target)});
+ // Authored reverse relations, not equations inferred merely from a matching numeric result.
+ if(template==='batch-average-mass-v1')also(`${p.totalGrams} ÷ □`,p.count);
+ else if(template==='mass-average-inverse-v1')also(p.ask==='total'?`□ ÷ ${p.averageGrams}`:`${p.totalGrams} ÷ □`,p.ask==='total'?p.count:p.averageGrams);
+ else if(template==='spring-total-length-v1')also(`□ − ${p.loadKg} × ${p.mmPerKg}`,p.originalCm*10);
+ else if(template==='spring-reverse-v1')also(p.ask==='load'?`(${p.finalMm} − ${p.originalCm*10}) ÷ □`:`(${p.finalMm} − □) ÷ ${p.mmPerKg}`,p.ask==='load'?p.mmPerKg:p.loadKg);
+ else if(family==='UNIT_GROUPING')also(`□ ÷ (${p.targetMm} ÷ ${p.groupThicknessMm})`,role%2?p.groupThicknessMm:p.cardsPerGroup);
+ else if(family==='OPERATION_ORDER')also(role%2?`(${p.a+p.b*p.c} − □) ÷ ${p.c}`:`□ − ${p.b} × ${p.c}`,role%2?p.b:p.a);
+ else if(family==='UNIT_CONVERSION')also(role%2?`${p.value*100} ÷ □`:`□ ÷ ${p.value}`,100);
+ else if(family==='EQUAL_GROUPS')also(role%2?`${p.groups*p.each} ÷ □`:`□ ÷ ${p.groups}`,p.each);
+ else if(family==='UNIT_ORDERING')also(`${p.items[0].value*100} − □`,role%2?p.items[0].value*100-p.items[1].value:p.items[1].value);
+ else if(family==='WRAP_RELATION')also(role%2?`(${p.lowTurns*((p.surplusDm+p.shortageDm)/(p.highTurns-p.lowTurns))+p.surplusDm} ＋ □) ÷ ${(p.surplusDm+p.shortageDm)/(p.highTurns-p.lowTurns)}`:`(□ − ${p.surplusDm}) ÷ ${(p.surplusDm+p.shortageDm)/(p.highTurns-p.lowTurns)}`,role%2?p.highTurns:p.lowTurns);
+ return {id:`${SELF_ENGINE_VERSION}:${family}:${index}`,family,index,template,parameters:p,sourceKind:'self-answer',unknownRole,question,unit,answer:rationalValue(answer),checkTarget:rationalValue(checkTarget),checkTargetDisplay:String(checkTarget),checkUnit,checkPattern,checkValue,checkRelations,visual,
   hint:'圈出所求的量，再把已知量的单位写在旁边。提示已经记录；可以继续学习，这次不算无提示复测。',
   explanation:`本题所求是${unknownRole}，结果为${answer}${unit}。将答案代入“${checkPattern}”，应回到已知条件${checkTarget}。检查时既要算出反查结果，也要确认它与原题条件相同。`};
 }

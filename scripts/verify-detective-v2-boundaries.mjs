@@ -1,5 +1,5 @@
 import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';
-const files=fs.readdirSync('dist/assets').filter(f=>f.endsWith('.js')),forbidden=['detective-self.v1','wrongDivisor','检查时既要算出反查结果，也要确认它与原题条件相同','detective-reviewed-editions'];
+const files=fs.readdirSync('dist/assets').filter(f=>f.endsWith('.js')),forbidden=['detective-self.v1','wrongDivisor','检查时既要算出反查结果，也要确认它与原题条件相同','detective-reviewed-editions','detective-check.v2'];
 for(const f of files){const code=fs.readFileSync('dist/assets/'+f,'utf8');for(const text of forbidden)assert(!code.includes(text),`私有自主题引擎进入客户端产物：${f}/${text}`);}
 const manifest=JSON.parse(fs.readFileSync('content/detective/reviewed/v2-source-manifest.json'));
 for(const [file,sha]of Object.entries(manifest.files)){const bytes=fs.readFileSync('content/detective/reviewed/'+file);assert.equal(createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex'),sha);}

@@ -16,7 +16,11 @@ export function validateSelfTraining(s){
   if(a.phase!=='first')fail(obj(a.firstAnswer)&&text(a.firstAnswer.value,80)&&['answered','blank','uncertain'].includes(a.firstAnswer.status)&&text(a.firstReasoning,500)&&date(a.firstAnswer.at)&&/^[a-f0-9]{64}$/.test(a.firstHash));
   if(a.phase==='feedback')fail(obj(a.preFeedbackRevision)&&text(a.preFeedbackRevision.value,80)&&date(a.feedbackReleasedAt)&&obj(a.selfCheckActions)&&text(a.selfCheckActions.value,80)&&['complete','uncertain'].includes(a.selfCheckActions.status)&&obj(a.result)&&typeof a.result.firstCorrect==='boolean'&&typeof a.result.finalCorrect==='boolean'&&typeof a.result.checkValid==='boolean'&&typeof a.result.independent==='boolean'&&date(a.result.at)&&a.result.at===a.feedbackReleasedAt&&date(a.preFeedbackRevision.at)&&a.preFeedbackRevision.at===a.feedbackReleasedAt);
   if(a.selfCheckActions?.expression!==undefined)fail(a.selfCheckActions.expression===null||text(a.selfCheckActions.expression,160));
-  for(const r of a.parentReviews)fail(date(r.at)&&['supported','needs-practice','explanation-confirmed'].includes(r.verdict)&&text(r.comment)&&typeof r.reviewer==='string'&&r.reviewer==='local-parent');
+  if(a.result?.checkPolicyVersion!==undefined)fail(a.result.checkPolicyVersion==='detective-check.v2'&&obj(a.result.checkEvidence));
+  for(const r of a.parentReviews){
+   fail(date(r.at)&&['supported','needs-practice','explanation-confirmed','check-confirmed'].includes(r.verdict)&&text(r.comment)&&r.reviewer==='local-parent');
+   if(r.verdict==='check-confirmed')fail(r.confirmPreFeedbackEvidence===true&&r.comment.trim().length>0);
+  }
  }
  for(const [f,seen]of Object.entries(s.seen))fail(id(f)&&Array.isArray(seen)&&seen.length<=256&&new Set(seen).size===seen.length&&seen.every(n=>Number.isInteger(n)&&n>=0&&n<256));
  for(const [f,r] of Object.entries(s.schedules))fail(id(f)&&Number.isInteger(r.revision)&&r.revision>=1&&Number.isInteger(r.stage)&&r.stage>=0&&r.stage<=4&&typeof r.paused==='boolean'&&day(r.anchorDay)&&(r.dueDay===null||day(r.dueDay))&&(r.lastCompletedDay===null||day(r.lastCompletedDay))&&Array.isArray(r.adjustments)&&r.adjustments.length<=50&&r.adjustments.every(x=>date(x.at)&&typeof x.paused==='boolean'&&(x.dueDay===null||day(x.dueDay))));

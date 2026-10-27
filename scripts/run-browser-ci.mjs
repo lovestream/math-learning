@@ -19,6 +19,7 @@ import {
 } from "../server/thinking-store.mjs";
 // Run the short new workflow checks first for prompt CI feedback.
 const all = [
+  "verify-detective-evidence-browser",
   "verify-detective-v2-browser",
   "verify-remaining-visuals-browser",
   "verify-two-ring-browser",
@@ -56,7 +57,8 @@ const only = process.argv.find((v) => v.startsWith("--only=")),
     : process.argv.includes("--full")
       ? all
       : [
-          "verify-detective-v2-browser",
+          "verify-detective-evidence-browser",
+  "verify-detective-v2-browser",
           "verify-remaining-visuals-browser",
           "verify-two-ring-browser",
           "verify-chain-growth-browser",
@@ -113,7 +115,7 @@ try {
     }
     let mockInbox=null;
     const v2Bundles=fs.readdirSync('content/detective/reviewed').filter(f=>f.startsWith('DT-20261026')).map(f=>JSON.parse(fs.readFileSync('content/detective/reviewed/'+f,'utf8')));
-    if(name==='verify-detective-v2-browser'){
+    if(['verify-detective-v2-browser','verify-detective-evidence-browser'].includes(name)){
       mockInbox=fs.mkdtempSync(path.join(os.tmpdir(),'kevin-v2-inbox-'));
       for(const b of v2Bundles)fs.writeFileSync(path.join(mockInbox,b.bundleId+'.json'),fs.readFileSync('content/detective/reviewed/'+b.bundleId+'.json'));
     }
