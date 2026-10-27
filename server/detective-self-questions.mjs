@@ -72,14 +72,15 @@ export function selfQuestion(family,index){
   else if(family==='WRAP_RELATION'){checkPattern=`(${p.highTurns} × ((${p.surplusDm} ＋ ${p.shortageDm}) ÷ ${p.highTurns-p.lowTurns})) − □`;checkTarget=String(p.shortageDm);checkValue=x=>sum(p.highTurns*((p.surplusDm+p.shortageDm)/(p.highTurns-p.lowTurns)),`-${x}`);}
  }
  visual=c.visual;
- return {id:`${SELF_ENGINE_VERSION}:${family}:${index}`,family,index,template,parameters:p,sourceKind:'self-answer',unknownRole,question,unit,answer:rationalValue(answer),checkTarget:rationalValue(checkTarget),checkPattern,checkValue,visual,
+ const checkUnit=family==='UNIT_GROUPING'&&role%2?'张':family==='UNIT_CONVERSION'&&role%2?'厘米':family==='EQUAL_GROUPS'&&role%2?'块':family==='UNIT_ORDERING'?'厘米':c.verify.unit;
+ return {id:`${SELF_ENGINE_VERSION}:${family}:${index}`,family,index,template,parameters:p,sourceKind:'self-answer',unknownRole,question,unit,answer:rationalValue(answer),checkTarget:rationalValue(checkTarget),checkTargetDisplay:String(checkTarget),checkUnit,checkPattern,checkValue,visual,
   hint:'圈出所求的量，再把已知量的单位写在旁边。提示已经记录；可以继续学习，这次不算无提示复测。',
   explanation:`本题所求是${unknownRole}，结果为${answer}${unit}。将答案代入“${checkPattern}”，应回到已知条件${checkTarget}。检查时既要算出反查结果，也要确认它与原题条件相同。`};
 }
 export function publicSelfQuestion(q,phase='first',mode='practice'){
  const out={id:q.id,errorFamilyId:q.family,questionVariantId:q.id,unknownRole:q.unknownRole,prompt:q.question,unit:q.unit,sourceKind:q.sourceKind};
  // No answer, examples, model, hidden correctness, or solution before feedback.
- if(phase!=='first'&&mode!=='review')out.check={pattern:q.checkPattern,target:q.checkTarget,instruction:'□代表你自查后的答案。亲自算出左边的值，和右边的已知条件比较。'};
+ if(phase!=='first'&&mode!=='review')out.check={pattern:q.checkPattern,target:q.checkTargetDisplay,unit:q.checkUnit,instruction:'□代表你自查后的答案。亲自算出左边的值，和右边的已知条件比较。'};
  return out;
 }
 export function familyExamples(family){

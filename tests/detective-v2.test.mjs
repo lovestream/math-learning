@@ -34,7 +34,7 @@ test('V2 数学：8族×256个参数精确成立；正向/逆向都可代回，�
   else expected=constant(i%2?String(p.shortageDm):`${p.lowTurns}*((${p.surplusDm}+${p.shortageDm})/(${p.highTurns}-${p.lowTurns}))+${p.surplusDm}`);
   assert.equal(q.answer,expected,`${f.id}:${i}`);assert.equal(q.checkValue(q.answer),q.checkTarget);assert(!Object.hasOwn(publicSelfQuestion(q),'answer'));assert(!Object.hasOwn(publicSelfQuestion(q),'check'));assert(!publicSelfQuestion(q,'check','review').check);count++;
  }
- assert.equal(count,2048);for(const f of SELF_FAMILIES){const examples=familyExamples(f.id);assert.equal(examples.length,2);assert.equal(examples[0].content.verdict,'wrong');assert.equal(examples[1].content.verdict,'correct');}
+ assert.equal(count,2048);assert.equal(publicSelfQuestion(selfQuestion('MASS_AVERAGE',0),'check').check.target,'12.5');assert.equal(publicSelfQuestion(selfQuestion('MASS_AVERAGE',0),'check').check.unit,'克');for(const f of SELF_FAMILIES){const examples=familyExamples(f.id);assert.equal(examples.length,2);assert.equal(examples[0].content.verdict,'wrong');assert.equal(examples[1].content.verdict,'correct');}
 });
 test('V2 四包12案：原始固定Git blob、全字段审校、独立oracle及四步结案',()=>{
  const p=freshProgress(),before=copy(p.wallet);let count=0;
