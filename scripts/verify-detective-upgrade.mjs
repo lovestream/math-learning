@@ -4,6 +4,7 @@ import fs from 'node:fs';import os from 'node:os';import path from 'node:path';
 import {execFileSync,spawn} from 'node:child_process';import {once} from 'node:events';import net from 'node:net';
 import {pathToFileURL} from 'node:url';import {createHash} from 'node:crypto';import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
+import {ORACLE_VERSION} from '../shared/detective-inbox.mjs';
 const root=process.cwd(),baseSha='1d9c68197449e45dd273978f30fa3844bc4f562e',dataSha='c6e6eaedca53c0976af3ab6e187e2980e4e94430';
 const git=(...args)=>execFileSync('git',args,{encoding:'utf8',maxBuffer:24*1024*1024});
 const temp=fs.mkdtempSync(path.join(os.tmpdir(),'kevin-upgrade-rehearsal-')),old=path.join(temp,'old-program'),data=path.join(temp,'isolated-data'),checkpoint=path.join(temp,'stopped-checkpoint'),inbox=path.join(temp,'mock-inbox');
@@ -64,7 +65,7 @@ try{
  const corrupt=structuredClone(before);corrupt.progress.wallet.coins++;const rejected=await context.request.post(base+'/api/parent/import',{data:corrupt});assert(!rejected.ok());assert.deepEqual((await exportAt(base)).progress,before.progress);assert.equal(hash(fs.readFileSync(path.join(data,'parent-access.json'))),pinHash);
  evidence.steps.push({name:'upgrade-and-backup-restore',passed:true,protectedFieldsEqual:true,pinUnchanged:true,onlyExpectedDraftMetadataChanged:true,corruptBackupRejectedWithoutWrite:true});await stop();
  fs.copyFileSync('content/detective/reviewed/DT-20261016-WIRE-A.json',path.join(inbox,'DT-20261016-WIRE-A.json'));
- base=await start(root,true);await unlock(base);let sync;for(let i=0;i<100;i++){sync=await json(base,'/api/parent/detective/sync');if(!sync.syncing&&Object.keys(sync.files).length===6)break;await new Promise(r=>setTimeout(r,100));}assert(!sync.lastError);assert.equal(Object.keys(sync.files).length,6);assert(Object.values(sync.files).every(r=>r.status==='auto-published'));assert.equal(sync.files['content/detective/inbox/DT-20261016-WIRE-A.json'].mathOracleVersion,'detective-oracle.v2');
+ base=await start(root,true);await unlock(base);let sync;for(let i=0;i<100;i++){sync=await json(base,'/api/parent/detective/sync');if(!sync.syncing&&Object.keys(sync.files).length===6)break;await new Promise(r=>setTimeout(r,100));}assert(!sync.lastError);assert.equal(Object.keys(sync.files).length,6);assert(Object.values(sync.files).every(r=>r.status==='auto-published'));assert.equal(sync.files['content/detective/inbox/DT-20261016-WIRE-A.json'].mathOracleVersion,ORACLE_VERSION);
  const after=await exportAt(base);for(const field of ['wallet','pets','inventory','attempts','lessons','reviews'])assert.deepEqual(after.progress[field],before.progress[field]);for(const field of ['sessions','events','entitlements'])assert.deepEqual(after.progress.studio[field],before.progress.studio[field]);for(const field of ['attempts','plans','badges'])assert.deepEqual(after.progress.studio.detective[field],before.progress.studio.detective[field]);
  const page=await context.newPage();await page.goto(base+'/?view=detective');await page.locator('.det-arrivals .det-case-ticket').first().waitFor();
  for(const width of [1440,390]){await page.setViewportSize({width,height:width===390?844:1000});await page.screenshot({path:`${out}/detective-upgrade-${width}.png`});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));}
