@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "cases": [
+    "DT-20261026-AVG-FOUNDATION-A-A",
+    "DT-20261026-AVG-FOUNDATION-A-B",
+    "DT-20261026-AVG-FOUNDATION-A-C",
+    "DT-20261026-AVG-REVERSE-A-A",
+    "DT-20261026-AVG-REVERSE-A-B",
+    "DT-20261026-AVG-REVERSE-A-C",
+    "DT-20261026-SPR-FORWARD-A-A",
+    "DT-20261026-SPR-FORWARD-A-B",
+    "DT-20261026-SPR-FORWARD-A-C",
+    "DT-20261026-SPR-REVERSE-A-A",
+    "DT-20261026-SPR-REVERSE-A-B",
+    "DT-20261026-SPR-REVERSE-A-C"
+  ],
+  "templates": 4,
+  "processBranches": 3,
+  "viewports": [
+    390,
+    768,
+    1440
+  ],
+  "delayDays": [
+    1,
+    3,
+    7,
+    14
+  ],
+  "assertions": [
+    "12/12自动收件真实四步",
+    "L1/L2推理不足和首错",
+    "L3对照/换未知量",
+    "L4首答冻结和无反馈自查",
+    "自改正确与改错",
+    "断网重试和刷新",
+    "409输入保留",
+    "无支架延迟四轮",
+    "公开API无答案",
+    "备份恢复与钱包/勋章不变"
+  ],
+  "data": "仅匿名合成临时库，不代表Kevin学习",
+  "source": {
+    "prHeadSha": "58e9faec79b9ce6acf0062b9d8882ebc2f0b9681",
+    "sha": "58e9faec79b9ce6acf0062b9d8882ebc2f0b9681",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-27T11:54:26.077Z"
+  }
+}
