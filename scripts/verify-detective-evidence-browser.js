@@ -46,6 +46,7 @@ async(page,{advanceDetectiveClock})=>{
  assert(result.currentEvidenceEligible&&result.currentCheckEvidence.source==='parent-confirmed'&&data.families[0].schedule.stage===3,'家长确认未形成复测闭环');
  assert(result.parentReviews.length===1,'旧标签重复批阅');assert(sealed===JSON.stringify({firstAnswer:result.firstAnswer,preFeedbackRevision:result.preFeedbackRevision,selfCheckActions:result.selfCheckActions,result:result.result}),'追溯改写历史判分');
  await parent.screenshot({path:out+'/detective-evidence-parent-confirmed-1440.png'});
+ await show();await self.locator('.det-self-records summary').click();await self.locator('.det-self-records button').filter({hasText:row.question.prompt}).click();await self.getByRole('heading',{name:'家长已核对反馈前的检验证据',exact:true}).waitFor();await self.getByText('原自动反馈：',{exact:false}).waitFor();await self.screenshot({path:out+'/detective-evidence-child-parent-confirmed-1440.png'});
  advanceDetectiveClock(14);await show();row=await open('做今天到期的新题');result=await finish(row,'1.5','46.5','31×1.5');assert(result.result.independent,'最后复测未通过');
  for(const width of [390,768,1440]){await page.setViewportSize({width,height:width===390?844:1024});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),`${width}横向溢出`);}
  data=await api('/api/detective/self');assert(data.families[0].schedule.stage===4&&data.families[0].evidence.includes('有迁移证据'),'四轮复测闭环未成立');
