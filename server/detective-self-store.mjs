@@ -74,6 +74,7 @@ function apply(p,b,now){
    insist(a.phase==='first'&&!a.firstAnswer,'首次答案已经封存，不可覆盖。',409);
    insist(['answered','blank','uncertain'].includes(b.status)&&typeof b.value==='string'&&b.value.length<=80&&typeof b.reasoning==='string'&&b.reasoning.length<=500,'请保存答案状态和简短思路。');
    insist(b.status!=='answered'||b.value.trim().length>0,'已作答时请填入答案。');
+   insist(b.status!=='blank'||b.value.trim()==='','选择保留空白时不保存数值；已有想法可选择仍不确定。');
    if(b.status==='answered')try{parseLinear(b.value);insist(/^[-+]?\d+(?:\.\d+)?(?:\/[-+]?\d+(?:\.\d+)?)?$/.test(b.value.trim()),'请写整数、小数或分数；暂不会做可以保留空白。');}catch{insist(false,'请写整数、小数或分数；暂不会做可以保留空白。');}
    a.firstAnswer={value:b.value,status:b.status,at};a.firstReasoning=b.reasoning;a.firstHash=hash({firstAnswer:a.firstAnswer,firstReasoning:a.firstReasoning});a.phase='check';a.draft='';
   }else if(['hint','visual','parent-help'].includes(b.action)){
