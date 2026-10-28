@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "sha": "58e9faec79b9ce6acf0062b9d8882ebc2f0b9681",
+  "clientChunks": 13,
+  "privateServerMarkersExcluded": [
+    "detective-self.v1",
+    "wrongDivisor",
+    "检查时既要算出反查结果，也要确认它与原题条件相同",
+    "detective-reviewed-editions"
+  ],
+  "dataHead": "8a9bd699ba88385e9336590fe70a8b3ecec4bd85",
+  "immutableBlobs": {
+    "DT-20261026-AVG-REVERSE-A.json": "b430c15bb733f278135629dd586503551b524574",
+    "DT-20261026-SPR-FORWARD-A.json": "01f67fa1c42b0c76bfd4256e9d0455faca6cc6a0",
+    "DT-20261026-AVG-FOUNDATION-A.json": "974a4eb717c8720a01388eb73cf7607199801b0a",
+    "DT-20261026-SPR-REVERSE-A.json": "f8b32e2bf424ebe2c5fe0ad7948069a1cd246c4e"
+  }
+}

@@ -1,3 +1,10 @@
+import {createDetectiveInboxSync} from './detective-inbox-sync.mjs';
+import {selfTrainingData,applySelfTraining,manageSelfTraining} from './detective-self-store.mjs';
+import {parentDetective,manageDetective,detectiveToday,detectiveAttempt,gradeDetective,enableProcessCases} from './detective-store.mjs';
+import {parentFormalTasks, reviewFormalTask} from "./pilot-store.mjs";
+import {thinkingCards,publicThinkingCard} from '../content/pilot/thinking-source.mjs';
+import {applyThinking,applyThinkingReview,parentThinkingCards} from './thinking-store.mjs';
+import {createParentAccess,assertLocalWrite} from './parent-access.mjs';
 import http from 'node:http';
 import { applyFeed, applyInteract, applyHome, applyPetReward, petMissions, ensureFriend } from './pet-care.mjs';
 import fs from 'node:fs';
@@ -16,14 +23,18 @@ const shouldOpen = process.argv.includes('--open');
 const portArg = process.argv.find(v => v.startsWith('--port='));
 const port = portArg ? Number(portArg.slice(7)) : 4177;
 const dataArg = process.argv.find(v => v.startsWith('--data-dir='));
-const store = createStore(dataArg ? path.resolve(dataArg.slice(11)) : path.join(root, 'data'), courses);
+const dataDir=dataArg ? path.resolve(dataArg.slice(11)) : path.join(root,'data');
+const store = createStore(dataDir, courses);
+const parentAccess=createParentAccess(dataDir);
+const inboxSync=createDetectiveInboxSync({store});
+const syncEnabled=!process.argv.includes('--detective-sync=off');
 let vite;
 if (isDev) {
   const { createServer } = await import('vite');
   vite = await createServer({root, server:{middlewareMode:true}, appType:'spa'});
 }
 
-const clientProgress=p=>{const copy=structuredClone(p);if(copy.studio?.sessions)for(const [id,s] of Object.entries(copy.studio.sessions))copy.studio.sessions[id]=publicSession(s);return copy;};
+const clientProgress=p=>{const copy=structuredClone(p);if(copy.studio)delete copy.studio.detective;if(copy.studio?.events)copy.studio.events=copy.studio.events.filter(e=>!e.signature?.includes('parent-thinking-review')&&!e.signature?.includes('\"kind\":\"thinking\"'));if(copy.studio?.sessions)for(const [id,s] of Object.entries(copy.studio.sessions))copy.studio.sessions[id]=publicSession(s);return copy;};
 const json = (res, status, body, headers={}) => {
   res.writeHead(status, {'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store',...headers});
   const safe=body&&typeof body==='object'&&body.progress?{...body,progress:clientProgress(body.progress)}:body;
@@ -35,14 +46,38 @@ const readJson = req => new Promise((resolve,reject)=>{
   req.on('data',chunk=>{size+=chunk.length;if(size>8*1024*1024){reject(new Error('文件超过 8MB，请选择正确的学习备份。'));req.destroy();}else chunks.push(chunk);});
   req.on('end',()=>{try{resolve(JSON.parse(Buffer.concat(chunks).toString('utf8')||'{}'));}catch{reject(new Error('内容不是有效的 JSON 文件。'));}});req.on('error',reject);
 });
-const snapshot = () => ({progress:clientProgress(store.get()),courses,articleCourses:pilotLessons.map(publicLesson),serverTime:new Date().toISOString(),catalogVersion:CATALOG_VERSION});
+const snapshot = () => ({progress:clientProgress(store.get()),courses,articleCourses:pilotLessons.map(publicLesson),thinkingCards:thinkingCards.map(publicThinkingCard),serverTime:new Date().toISOString(),catalogVersion:CATALOG_VERSION});
 const importSummary = p => ({name:p.profile.name,grade:p.profile.grade,attempts:p.attempts.length+(p.studio?.events??[]).filter(e=>['correct','incorrect'].includes(e.result?.status)).length,completed:new Set([...Object.entries(p.lessons).filter(([,l])=>l.completedAt).map(([id])=>id),...Object.values(p.studio?.sessions??{}).filter(s=>s.setName==='core'&&s.completedAt).map(s=>s.lessonId)]).size,coins:p.wallet.coins,pets:p.pets.owned.length,reviews:new Set([...Object.keys(p.reviews),...Object.keys(p.studio?.review??{})]).size});
 const contentTypes = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.svg':'image/svg+xml','.mp3':'audio/mpeg','.mp4':'video/mp4','.webp':'image/webp','.jpg':'image/jpeg','.gif':'image/gif','.ico':'image/x-icon','.webmanifest':'application/manifest+json'};
 
 async function api(req,res,url){
   try{
+    if(url.pathname==='/api/parent/access'){
+      if(req.method==='GET')return json(res,200,parentAccess.status(req));
+      if(req.method==='POST'){const b=await readJson(req);if(b.action==='recovery-code')return json(res,200,{recoveryCode:parentAccess.issueRecovery(req)});const cookie=b.action==='lock'?parentAccess.lock(req):b.action==='recover'?parentAccess.recover(req,b.code,b.pin):parentAccess.unlock(req,b.pin,b.action==='setup');return json(res,200,parentAccess.status({...req,headers:{...req.headers,cookie:cookie.split(';')[0]}}),{'Set-Cookie':cookie});}
+    }
+    // Keep the existing PIN cookie scoped to /api/parent; private backups use
+    // authenticated aliases instead of broadening the cookie to student routes.
+    if(/^\/api\/parent\/(export|import(?:\/preview)?|backups\/[^/]+\/restore)$/.test(url.pathname)){parentAccess.requireParent(req);url.pathname=url.pathname.replace('/api/parent/','/api/');}
+    if(url.pathname.startsWith('/api/parent/detective/')){
+      parentAccess.requireParent(req);
+      if(req.method==='GET'&&url.pathname==='/api/parent/detective/self')return json(res,200,selfTrainingData(store.get(),Date.now(),true));
+      if(req.method==='POST'&&url.pathname==='/api/parent/detective/self'){const b=await readJson(req);return json(res,200,store.mutate(p=>manageSelfTraining(p,b)).result);}
+      if(req.method==='GET'&&url.pathname==='/api/parent/detective/sync')return json(res,200,inboxSync.status());
+      if(req.method==='POST'&&url.pathname==='/api/parent/detective/sync'){const b=await readJson(req);if(Object.hasOwn(b,'autoPublish'))return json(res,200,inboxSync.setAutoPublish(b.autoPublish));return json(res,200,await inboxSync.sync({force:true}));}
+      if(req.method==='GET'&&url.pathname==='/api/parent/detective/cases')return json(res,200,store.mutate(p=>parentDetective(p)).result);
+      if(req.method==='POST'&&url.pathname==='/api/parent/detective/cases'){const b=await readJson(req);return json(res,200,store.mutate(p=>manageDetective(p,b)).result);}
+      if(req.method==='POST'&&url.pathname==='/api/parent/detective/grade'){const b=await readJson(req);return json(res,200,store.mutate(p=>gradeDetective(p,b)).result);}
+    }
+    if(req.method==='GET'&&url.pathname==='/api/detective/today'){if(syncEnabled)inboxSync.touch();return json(res,200,store.mutate(p=>detectiveToday(p)).result);}
+    if(req.method==='GET'&&url.pathname==='/api/detective/self')return json(res,200,selfTrainingData(store.get()));
+    if(req.method==='POST'&&url.pathname==='/api/detective/self'){const b=await readJson(req);return json(res,200,store.mutate(p=>applySelfTraining(p,b)).result);}
+    if(req.method==='POST'&&url.pathname==='/api/detective/attempt'){const b=await readJson(req);return json(res,200,store.mutate(p=>detectiveAttempt(p,b)).result);}
+    if(req.method==='POST'&&url.pathname==='/api/detective/examples'){const b=await readJson(req);return json(res,200,store.mutate(p=>enableProcessCases(p,Date.now(),b.errorFamilyId??null)).result);}
+    if(url.pathname.startsWith('/api/parent/')){parentAccess.requireParent(req);if(req.method==='GET'&&url.pathname==='/api/parent/formal')return json(res,200,{tasks:parentFormalTasks(store.get())});if(req.method==='POST'&&url.pathname==='/api/parent/formal/review'){const body=await readJson(req);const out=store.mutate(p=>reviewFormalTask(p,body));return json(res,200,{result:out.result,progress:out.progress});}if(req.method==='GET'&&url.pathname==='/api/parent/thinking')return json(res,200,{cards:parentThinkingCards(store.get())});if(req.method==='POST'&&url.pathname==='/api/parent/thinking/review'){const body=await readJson(req);const out=store.mutate(p=>applyThinkingReview(p,body));return json(res,200,{result:out.result,progress:out.progress});}}
     if(req.method==='GET'&&url.pathname==='/api/studio')return json(res,200,{progress:clientProgress(store.get()),lessons:pilotLessons.map(publicLesson),design:pilotDesign});
     const pilotActions={
+      '/api/studio/thinking':(p,b)=>applyThinking(p,b),
       '/api/studio/reading':(p,b)=>saveReading(p,b,pilotLessons),
       '/api/studio/sessions':(p,b)=>createSession(p,b,pilotLessons),
       '/api/studio/draft':(p,b)=>saveSession(p,b),
@@ -64,12 +99,12 @@ async function api(req,res,url){
     if(req.method==='POST'&&url.pathname==='/api/pet/home'){const body=await readJson(req);const out=store.mutate(p=>applyHome(p,body));return json(res,200,{...out.result,progress:out.progress});}
     if(req.method==='POST'&&url.pathname==='/api/accessory'){const body=await readJson(req);const out=store.mutate(p=>{if(body.item!==null&&(!['scarf'].includes(body.item)||!p.inventory[body.item]))throw new Error('还没有这件装扮。');p.pets.accessory=body.item;return {ok:true};});return json(res,200,{...out.result,progress:out.progress});}
     if(req.method==='POST'&&url.pathname==='/api/settings'){const body=await readJson(req);const out=store.mutate(p=>{if(body.dailyMinutes!==undefined){if(![30,45,60].includes(body.dailyMinutes))throw new Error('学习时长只能选择 30、45 或 60 分钟。');p.settings.dailyMinutes=body.dailyMinutes;}if(body.sound!==undefined)p.settings.sound=Boolean(body.sound);if(body.grade!==undefined){if(!Number.isInteger(body.grade)||body.grade<1||body.grade>6)throw new Error('请选择1到6年级。');p.profile.selectedGrade=body.grade;p.profile.grade=body.grade;}return {ok:true};});return json(res,200,{...out.result,progress:out.progress});}
-    if(req.method==='GET'&&url.pathname==='/api/export'){const body=JSON.stringify(store.export(),null,2);res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Content-Disposition':`attachment; filename="kevin-progress-${new Date().toISOString().slice(0,10)}.json"`,'Content-Length':Buffer.byteLength(body)});return res.end(body);}
-    if(req.method==='POST'&&url.pathname==='/api/import/preview'){const body=await readJson(req);const p=store.validate(body);return json(res,200,{summary:importSummary(p),catalogVersion:body.catalogVersion??'未知'});}
-    if(req.method==='POST'&&url.pathname==='/api/import'){const body=await readJson(req);const out=store.import(body);return json(res,200,{progress:out.progress,backup:out.backup});}
+    if(req.method==='GET'&&url.pathname==='/api/export'){if(store.get().studio?.detective)parentAccess.requireParent(req);const body=JSON.stringify(store.export(),null,2);res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','Content-Disposition':`attachment; filename="kevin-progress-${new Date().toISOString().slice(0,10)}.json"`,'Content-Length':Buffer.byteLength(body)});return res.end(body);}
+    if(req.method==='POST'&&url.pathname==='/api/import/preview'){const body=await readJson(req);const p=store.validate(body);if(p.studio?.detective||store.get().studio?.detective)parentAccess.requireParent(req);return json(res,200,{summary:importSummary(p),catalogVersion:body.catalogVersion??'未知'});}
+    if(req.method==='POST'&&url.pathname==='/api/import'){const body=await readJson(req);if(body?.progress?.studio?.detective||store.get().studio?.detective)parentAccess.requireParent(req);const out=store.import(body);return json(res,200,{progress:out.progress,backup:out.backup});}
     if(req.method==='GET'&&url.pathname==='/api/backups')return json(res,200,{backups:store.listBackups()});
     const restore=url.pathname.match(/^\/api\/backups\/([^/]+)\/restore$/);
-    if(req.method==='POST'&&restore){const envelope=store.readBackup(decodeURIComponent(restore[1]));const out=store.import(envelope);return json(res,200,{progress:out.progress,backup:out.backup});}
+    if(req.method==='POST'&&restore){const envelope=store.readBackup(decodeURIComponent(restore[1]));if(envelope?.progress?.studio?.detective||store.get().studio?.detective)parentAccess.requireParent(req);const out=store.import(envelope);return json(res,200,{progress:out.progress,backup:out.backup});}
     return fail(res,new Error('没有找到这个本地接口。'),404);
   }catch(error){return fail(res,error);}
 }
@@ -80,13 +115,14 @@ const server=http.createServer(async(req,res)=>{
   const host=req.headers.host??'';
   if(!/^(127\.0\.0\.1|localhost)(:\d+)?$/.test(host))return fail(res,new Error('这个本地服务只接受本机访问。'),403);
   const url=new URL(req.url??'/',`http://${host}`);
-  if(url.pathname.startsWith('/api/'))return api(req,res,url);
+  if(url.pathname.startsWith('/api/')){try{assertLocalWrite(req)}catch(e){return fail(res,e)}return api(req,res,url);}
   if(vite)return vite.middlewares(req,res);
   return serveStatic(req,res,url);
 });
 server.listen(port,'127.0.0.1',()=>{
   const localUrl=`http://127.0.0.1:${port}`;
   console.log(`Kevin Math Lab 已启动：${localUrl}`);
+  if(syncEnabled)inboxSync.start();
   if(shouldOpen)spawn('open',[localUrl],{detached:true,stdio:'ignore'}).unref();
 });
-for(const signal of ['SIGINT','SIGTERM'])process.on(signal,async()=>{store.close();if(vite)await vite.close();server.close(()=>process.exit(0));});
+for(const signal of ['SIGINT','SIGTERM'])process.on(signal,async()=>{await inboxSync.stop();store.close();if(vite)await vite.close();server.close(()=>process.exit(0));});

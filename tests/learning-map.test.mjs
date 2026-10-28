@@ -1,10 +1,11 @@
+import {completeSelfCheck as selfCheckTask} from './fixtures/self-check.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {learningEntries,learningReviews,articleMistakes,articleAttempts} from '../src/learningMap.ts';
 import {freshProgress} from '../server/store.mjs';
 import {lessons} from '../content/pilot/source.mjs';
-import {createSession,selfCheckTask,submitTask,revealHelp} from '../server/pilot-store.mjs';
+import {createSession,submitTask,revealHelp} from '../server/pilot-store.mjs';
 const courses=JSON.parse(fs.readFileSync(new URL('../content/catalog.json',import.meta.url),'utf8'));
 const data=p=>({progress:p,courses,articleCourses:lessons});
 const now=Date.UTC(2026,8,12,7);

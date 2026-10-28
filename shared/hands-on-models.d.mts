@@ -1,0 +1,17 @@
+export type HandsOnModel={type:'spatial'|'mass';mode:'observe'|'hidden'|'fold'|'weigh'|'boat';version:string;dimensions?:number[];frontHeight?:number;maxRearHeight?:number;net?:string;elephantMass?:number;boatMass?:number;passengerMass?:number;requiredEvidence:string[]};
+export type SolidFace={id:number;points:number[][]};
+export const handsOnModels:Record<string,HandsOnModel>;
+export const scaleObjects:{id:number;name:string;mass:number}[];
+export const containerObjects:typeof scaleObjects;
+export const stones:typeof scaleObjects;
+export const balanceWeights:number[];
+export const faces:{id:number;name:string;color:string;mark:string}[];
+export function projectPoint(point:number[],azimuth?:number,elevation?:number):{x:number;y:number;depth:number};
+export function boxFaces(width?:number,height?:number,depth?:number,origin?:number[]):SolidFace[];
+export function foldedFaces(progress:number):SolidFace[];
+export function faceRelation(a:number,b:number):'same'|'opposite'|'adjacent';
+export function hiddenCubes(rearHeight:number):{x:number;y:number;z:number}[];
+export function cubeProjection(rearHeight:number,view:'front'|'right'|'top'):string[];
+export function scaleMass(ids:number[],mode?:string):number;
+export function balanceState(ids:number[],objectMass?:number):{leftMass:number;rightMass:number;difference:number;angle:number;balanced:boolean};
+export function boatState(model:HandsOnModel,state?:{boatStones?:number[];elephant?:boolean;passenger?:boolean}):{stoneMass:number;load:number;sink:number;targetSink:number;sameWaterline:boolean;replacementValid:boolean;boatMass:number};

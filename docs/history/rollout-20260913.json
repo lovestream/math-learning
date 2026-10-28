@@ -1,0 +1,26 @@
+{
+  "version": "2026-09-13.1",
+  "sourceBlueprint": "Kevin_数学课程结构清单.json",
+  "currentBatch": "B01",
+  "nextBatch": "B02",
+  "currentFocus": "完成B00/B01本机验证，并优先补齐功能核查中的保存、复习与奖励一致性",
+  "quotaPolicy": {"checkAt": ["batchStart", "batchEnd"], "stopOpeningNewLessonsAtFiveHourUsedPercent": 80, "stopOpeningNewLessonsAtWeeklyUsedPercent": 70, "purpose": "项目自定的收尾余量，并非平台规则或用量保证"},
+  "batches": [
+    {"id":"B00","title":"修订四节样板的文字、操作与答题","status":"verified-local","lessonIds":["numbers.fractions.meaning","geometry.area.perimeter","algebra.substitution.intro","algebra.balance.intro"]},
+    {"id":"B01","title":"数数、加法、减法的现实需要","status":"verified-local","lessonIds":["numbers.quantity.intro","numbers.addition.meaning","numbers.subtraction.meaning"]},
+    {"id":"B02","title":"数位、数线、等号","status":"planned","lessonIds":["numbers.place_value.intro","numbers.number_line.intro","algebra.equality.intro"]},
+    {"id":"B03","title":"乘法、两种除法、互逆检查","status":"planned","lessonIds":["numbers.multiplication.meaning","numbers.division.meaning","numbers.inverse_operations"]},
+    {"id":"B04","title":"运算律、未知数、线段图","status":"planned","lessonIds":["numbers.operation_laws","algebra.unknowns.intro","algebra.bar_models"]},
+    {"id":"B05","title":"消元、余数、搭配计数","status":"planned","lessonIds":["algebra.elimination.intro","number_theory.remainders","counting.ordered_choices"]},
+    {"id":"B06","title":"立体视图、真假条件、数据平均","status":"planned","lessonIds":["geometry.solids.views","logic.truth_constraints","data.mean_and_charts"]},
+    {"id":"B07","title":"测量实践与比例缩放","status":"planned","lessonIds":["practice.measure_and_estimate","algebra.ratio_scaling"]}
+  ],
+  "fullPrimaryPhases": [
+    {"id":"P1","title":"数与运算","units":["N01","N02","N03","N04","N05","N06","N07","N08","N09"]},
+    {"id":"P2","title":"数量关系与代数","units":["A01","A02","A03","A04","A05","A06","A07","A08","A09"]},
+    {"id":"P3","title":"几何与空间","units":["G01","G02","G03","G04","G05","G06","G07","G08","G09"]},
+    {"id":"P4","title":"数论","units":["T01","T02","T03","T04","T05","T06","T07"]},
+    {"id":"P5","title":"计数与逻辑","units":["C01","C02","C03","C04","C05","C06","C07","L01","L02","L03","L04","L05","L06"]},
+    {"id":"P6","title":"数据、概率与数学实践","units":["S01","S02","S03","S04","S05","S06","P01","P02","P03","P04","P05","P06"]}
+  ]
+}

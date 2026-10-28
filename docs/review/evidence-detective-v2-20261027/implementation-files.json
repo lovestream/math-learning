@@ -1,0 +1,174 @@
+{
+  "baseline": "4da0e4ba46f7c2448c201ef69401a4728b8dd217",
+  "sourceSha": "58e9faec79b9ce6acf0062b9d8882ebc2f0b9681",
+  "files": [
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "d4ad23f02316395fa831ad1ec2c3e1d3698de0dd8a5eccec51768e1ab61345bd"
+    },
+    {
+      "path": "content/detective/process-cases.mjs",
+      "sha256": "15f875df5ef38f3ac367a22c57c36c83300ce8b241251f8f8ff85b95d285a91e"
+    },
+    {
+      "path": "content/detective/reviewed/DT-20261026-AVG-FOUNDATION-A.json",
+      "sha256": "afecec0987f74de321ecfb4403b7a1f0227fb809ca5a22083fb79bc8194959cf"
+    },
+    {
+      "path": "content/detective/reviewed/DT-20261026-AVG-REVERSE-A.json",
+      "sha256": "f54086f5d4306de32a44207fd9b52b58c4a0a1f0d05814e63dd5056956c4146f"
+    },
+    {
+      "path": "content/detective/reviewed/DT-20261026-SPR-FORWARD-A.json",
+      "sha256": "329f924ad9f7fa9b863a1f65015835888a6af1c0b49d1730a5302a44b86bc9b7"
+    },
+    {
+      "path": "content/detective/reviewed/DT-20261026-SPR-REVERSE-A.json",
+      "sha256": "62823d20052feea32cf388b7ff11c0fd892564f729395e781cb362a45f4d4345"
+    },
+    {
+      "path": "content/detective/reviewed/v2-source-manifest.json",
+      "sha256": "313e5b14e55c472867922fff1dd06f18cbe14f813f19b0861b49083a67ad3cdb"
+    },
+    {
+      "path": "docs/design/数学小侦探_ChatGPT投递开发指南.md",
+      "sha256": "9c57f807a9c1de273539bf31ae17e968c62c051cef322a239f8ff2bacc2cf6f5"
+    },
+    {
+      "path": "docs/design/数学小侦探_V2只读接口与迁移契约.md",
+      "sha256": "8cdd37038e663913b514d6144061fdcac43cce2e091b1fffa6f17c45776f22c1"
+    },
+    {
+      "path": "docs/数学小侦探_V2儿童使用说明.md",
+      "sha256": "d282942957227ff594ace2f148c24425a6975cc6b4af12e6408cfd4294a99340"
+    },
+    {
+      "path": "docs/数学小侦探_安全升级与回滚.md",
+      "sha256": "3ccd558dbe493614ba00c1e9fd9f683083a97c84e595176e43c06c6f4c7fb61a"
+    },
+    {
+      "path": "docs/数学小侦探_家长使用说明.md",
+      "sha256": "553609b3dd2312d7a4b8127485216b51b4f261ba042cad182b3c5214e68e624e"
+    },
+    {
+      "path": "scripts/lib/detective-delivery-audit.mjs",
+      "sha256": "aee6dc2b081a87bd5d5ce912d9d7269b4bcd7760dc81e35af868b3e4bf60c4c0"
+    },
+    {
+      "path": "scripts/run-browser-ci.mjs",
+      "sha256": "9d49b214568453b99ddb57b84f69d9db31ae5f2033eeb7adf0de06655bfaa9fd"
+    },
+    {
+      "path": "scripts/verify-detective-deliveries.mjs",
+      "sha256": "240593ad3e833ca646b93fb08525e89aa1eb89292f3e9e45bb1b7a442d0f1833"
+    },
+    {
+      "path": "scripts/verify-detective-upgrade.mjs",
+      "sha256": "b0e7b381d90dfb5e1b4814de504357c6f4f4617ecc4a862124fbecfaa79b464c"
+    },
+    {
+      "path": "scripts/verify-detective-v2-boundaries.mjs",
+      "sha256": "a1e0cef9edb0645a8b611ed5ba31b129cf5f6a731d682203acb31f73b2a2d23e"
+    },
+    {
+      "path": "scripts/verify-detective-v2-browser.js",
+      "sha256": "71beeb785043799aa1675bc52d13d88f4d0fe26e425c568bdd03b186dec53508"
+    },
+    {
+      "path": "scripts/verify-detective-v2-upgrade.mjs",
+      "sha256": "12d7134c5e0d8296d2462ab6b4168db075715dc7b3bffe28568aee2fc1c92478"
+    },
+    {
+      "path": "server/detective-inbox-sync.mjs",
+      "sha256": "b018397600dbdad16c1f2383150848dc1bb82e4b27b3aee986f43a06adb4a892"
+    },
+    {
+      "path": "server/detective-reviewed-editions.json",
+      "sha256": "94f862b1dcca0be44ada5e898cc6fac943518c9638da6c2ddb9fd3ec9624503b"
+    },
+    {
+      "path": "server/detective-self-integrity.mjs",
+      "sha256": "05bd6225fcc2a9a8ce3ffc8c0a48e50abea8dc7f8c4b5df831016351c99e8116"
+    },
+    {
+      "path": "server/detective-self-questions.mjs",
+      "sha256": "9db645adcaac50422f752ca5082822cf6ffc7e3fbbeb8bfa8ed491cf6d6c07e0"
+    },
+    {
+      "path": "server/detective-self-store.mjs",
+      "sha256": "fcdae950d4ef7606fdff554cc7563a487623977221af8dc5439306a5afc6750b"
+    },
+    {
+      "path": "server/detective-store.mjs",
+      "sha256": "f1a880fa2889899bb444ccbeb22eb35c9a337ad7a300ed2db3cb84fd0e62d5e2"
+    },
+    {
+      "path": "server/index.mjs",
+      "sha256": "5bb93c313fbe6556309880854220e7134259d81bce98f578ddded81023e93bda"
+    },
+    {
+      "path": "server/store.mjs",
+      "sha256": "ea282edb4326c0417a115a4ceb27f4beac2c6877c8bfb3a325508b3d4d78e3b8"
+    },
+    {
+      "path": "shared/detective-inbox.mjs",
+      "sha256": "b1b20237794b38e6b5878ff9f41f5acbfe3fa9cfc0a6e21e0f16e86552c8de0f"
+    },
+    {
+      "path": "shared/detective-mass-spring.mjs",
+      "sha256": "0be656cbf3ebedd95b2d58dbbaf99d2f0520a7978317edbb2792a9d6735f81e0"
+    },
+    {
+      "path": "shared/detective-model.mjs",
+      "sha256": "23d959a846d26a4db3c6834e6d4259018a9de9ec32ff1fc51a20b44ae18a7f91"
+    },
+    {
+      "path": "shared/detective-self-validation.mjs",
+      "sha256": "8aa48fbdda490733bd2dcd118fb1ba647a193c7588783d1552dc3adbb939c7d3"
+    },
+    {
+      "path": "src/detective/DetectivePanel.tsx",
+      "sha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090"
+    },
+    {
+      "path": "src/detective/ParentDetectiveCases.tsx",
+      "sha256": "608441ed300dff0b01ab9796a16184afd1eb1ea390776a344a254af37c4a6301"
+    },
+    {
+      "path": "src/detective/ParentSelfTraining.tsx",
+      "sha256": "b8c8ffe36dd5cf0d695622c80080b0dd8feecbc283c6592023af75ebc1ef9558"
+    },
+    {
+      "path": "src/detective/SelfTraining.tsx",
+      "sha256": "73e3ca28341a8641e2ec0e7af2b01e8fcc47e760bd085b4a847de6ddd83f9d48"
+    },
+    {
+      "path": "src/detective/api.ts",
+      "sha256": "0f821463fe298c6b00c6a06c34c7c79e8780f6189669b5ddaa45aeab703d97eb"
+    },
+    {
+      "path": "src/detective/self-api.ts",
+      "sha256": "410e6b5e680ab96db8452467d8692dc23f55a11d62ca5730f09c43c9dad05f05"
+    },
+    {
+      "path": "src/detective/self-training.css",
+      "sha256": "8e40d74165da1e7fc8cf58b8d6287fa44317248eb5876058ba922167752fcfe6"
+    },
+    {
+      "path": "tests/detective-audit.test.mjs",
+      "sha256": "edd5a74d325e03abf931dc71ebd69b34ef925203252dbbfd3a143f0355e9ac6e"
+    },
+    {
+      "path": "tests/detective-http.test.mjs",
+      "sha256": "56c4960f8c585d628fa3261b3ae621ae02f7419331230e4f5b46d4eeda7e2c72"
+    },
+    {
+      "path": "tests/detective-v2.test.mjs",
+      "sha256": "10b2c9c78c0a75def5a4cc25e1db098650eaa5897e868c6b10281f8d31330b2d"
+    },
+    {
+      "path": "tests/detective.test.mjs",
+      "sha256": "9dfee570675e5dc539435001ca6932cbe17cc27e0ebe68d54f5aaa8fdd9a1ba3"
+    }
+  ]
+}

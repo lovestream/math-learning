@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "illustratedCards": 17,
+  "classifiedCards": 60,
+  "firstAnswerPreserved": true,
+  "helpPreserved": true,
+  "parentReview": true,
+  "amendment": true,
+  "dueVariant": true,
+  "privateRubric": true,
+  "crossOriginRejected": true,
+  "reward": 0,
+  "errors": [],
+  "source": {
+    "prHeadSha": "58e9faec79b9ce6acf0062b9d8882ebc2f0b9681",
+    "sha": "58e9faec79b9ce6acf0062b9d8882ebc2f0b9681",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-27T11:54:26.077Z"
+  }
+}

@@ -1,0 +1,112 @@
+✖ 正式复习组最后解释获批后推进1/3/7/21调度，回放或重复审批不重复留存 (5.762125ms)
+✖ 需要回补推进至次日，订正获批不冒充本轮独立成功，首答和批阅历史保留 (0.396417ms)
+✖ 含解释的核心完成建首次学习锚点，但人工批阅不补发逐题或每日完成奖励 (0.218375ms)
+✖ 提示后获批复习仍为辅助成功，预览复习不推进到期记录 (0.328167ms)
+✖ 审批409、旧存档恢复及评分版本切换不丢批阅/首答/复习历史或重复积分 (2.2245ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 0
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 68.823459
+
+✖ failing tests:
+
+test at tests/formal-review-schedule.test.mjs:27:1
+✖ 正式复习组最后解释获批后推进1/3/7/21调度，回放或重复审批不重复留存 (5.762125ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///Users/yako/Downloads/codex/math-learning/tests/formal-review-schedule.test.mjs:30:59)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/formal-review-schedule.test.mjs:34:1
+✖ 需要回补推进至次日，订正获批不冒充本轮独立成功，首答和批阅历史保留 (0.396417ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///Users/yako/Downloads/codex/math-learning/tests/formal-review-schedule.test.mjs:36:82)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/formal-review-schedule.test.mjs:40:1
+✖ 含解释的核心完成建首次学习锚点，但人工批阅不补发逐题或每日完成奖励 (0.218375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - '2026-10-01T01:00:00.000Z'
+  
+      at TestContext.<anonymous> (file:///Users/yako/Downloads/codex/math-learning/tests/formal-review-schedule.test.mjs:43:37)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: '2026-10-01T01:00:00.000Z',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/formal-review-schedule.test.mjs:47:1
+✖ 提示后获批复习仍为辅助成功，预览复习不推进到期记录 (0.328167ms)
+  TypeError: Cannot read properties of undefined (reading 'independent')
+      at TestContext.<anonymous> (file:///Users/yako/Downloads/codex/math-learning/tests/formal-review-schedule.test.mjs:51:46)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7)
+
+test at tests/formal-review-schedule.test.mjs:56:1
+✖ 审批409、旧存档恢复及评分版本切换不丢批阅/首答/复习历史或重复积分 (2.2245ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '2026-10-02T01:00:00.000Z'
+  - null
+  
+      at TestContext.<anonymous> (file:///Users/yako/Downloads/codex/math-learning/tests/formal-review-schedule.test.mjs:61:231)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '2026-10-02T01:00:00.000Z',
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

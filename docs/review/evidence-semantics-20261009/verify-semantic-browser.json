@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "chapters": [
+    {
+      "id": "G3-U01-B01",
+      "chapter": "G3-U01",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-U02-B03",
+      "chapter": "G3-U02",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-U03-E02",
+      "chapter": "G3-U03",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-UP01-B02",
+      "chapter": "G3-UP01",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-U04-B03",
+      "chapter": "G3-U04",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-UP02-B01",
+      "chapter": "G3-UP02",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-U05-B02",
+      "chapter": "G3-U05",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-U06-B03",
+      "chapter": "G3-U06",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-U07-B01",
+      "chapter": "G3-U07",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-L01-B01",
+      "chapter": "G3-L01",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-L02-B03",
+      "chapter": "G3-L02",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-L03-E01",
+      "chapter": "G3-L03",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-L04-B03",
+      "chapter": "G3-L04",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-L05-B02",
+      "chapter": "G3-L05",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-LP01-B02",
+      "chapter": "G3-LP01",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-L06-B01",
+      "chapter": "G3-L06",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    },
+    {
+      "id": "G3-L07-B01",
+      "chapter": "G3-L07",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true
+    }
+  ],
+  "representativeCount": 17,
+  "widths": [
+    390,
+    768,
+    1440
+  ],
+  "coldChainStoryNotClipped": true,
+  "font200": true,
+  "fontSample": {
+    "original": 18,
+    "enlarged": 36,
+    "inline": "36px",
+    "priority": "important"
+  },
+  "realIpad": false,
+  "kevinTrial": false,
+  "errors": [],
+  "source": {
+    "prHeadSha": "98e88b0fac628a08a843f23f4d3edbed263d74e7",
+    "sha": "98e88b0fac628a08a843f23f4d3edbed263d74e7",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-09T02:15:57.391Z"
+  }
+}

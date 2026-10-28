@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "interactionChecks": [
+    "camera-drag",
+    "three-projections",
+    "photo-restore",
+    "hidden-cube-counterexample",
+    "continuous-fold-drag",
+    "opposite-faces",
+    "scale-drag",
+    "unit-conservation",
+    "net-mass",
+    "balance-weight-drag",
+    "balance-undo",
+    "boat-elephant-drag",
+    "waterline",
+    "stone-weighing",
+    "passenger-counterexample",
+    "state-reload",
+    "parent-mode",
+    "three-independent-tasks"
+  ],
+  "visuals": [
+    {
+      "lesson": "G3-U01-B01",
+      "screens": [
+        390,
+        768,
+        1440
+      ]
+    },
+    {
+      "lesson": "G3-U01-B02",
+      "screens": [
+        390,
+        768,
+        1440
+      ]
+    },
+    {
+      "lesson": "G3-U01-B03",
+      "screens": [
+        390,
+        768,
+        1440
+      ]
+    },
+    {
+      "lesson": "G3-UP01-B01",
+      "screens": [
+        390,
+        768,
+        1440
+      ]
+    },
+    {
+      "lesson": "G3-UP01-B02",
+      "screens": [
+        390,
+        768,
+        1440
+      ]
+    }
+  ],
+  "errors": [],
+  "source": {
+    "prHeadSha": "037d8124ab04d4c07a71dbdd1634bd3242ead386",
+    "sha": "037d8124ab04d4c07a71dbdd1634bd3242ead386",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-27T23:40:52.328Z"
+  }
+}

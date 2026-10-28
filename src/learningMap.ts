@@ -1,7 +1,8 @@
 import type {Data,Lesson,Progress} from './types';
 import type {PilotLesson,PilotSession,SetName} from './studio/types';
+import {lessonEvidence} from '../shared/learning-evidence.mjs';
 
-type Meta={id:string;title:string;subtitle:string;world:string;kind:'foundation'|'thinking';track:'foundation'|'enhancement'|'olympiad';minutes:number;skills:string[];completed:boolean;questionCount:number;recommended:boolean};
+type Meta={id:string;title:string;subtitle:string;world:string;kind:'foundation'|'thinking';track:'foundation'|'enhancement'|'olympiad';minutes:number;skills:string[];completed:boolean;questionCount:number;recommended:boolean;evidence?:ReturnType<typeof lessonEvidence>};
 export type LearningEntry=Meta&({source:'article';lesson:PilotLesson}|{source:'legacy';lesson:Lesson});
 export type OpenLearning=(entry:LearningEntry,mode?:'learn'|'review',task?:{set:SetName;id:string})=>void;
 const names:Record<string,string>={F01:'抽象与多种表示',F02:'数形结合',F03:'单位量与整体',F04:'关系建模',F05:'分解与组合',F07:'等价转化',F08:'整体与等量替换',F11:'逆向与还原',F14:'一一对应',F15:'不变量与守恒',F27:'论证与检验'};
@@ -17,7 +18,7 @@ export function learningEntries(data:Data,grade?:number):LearningEntry[]{
     world:lesson.lessonId.includes('.fractions.')?'fractions':({numbers:'numbers',algebra:'relations',geometry:'geometry',number_theory:'patterns',counting:'logic',logic:'logic'} as Record<string,string>)[lesson.strand]??lesson.strand,
     kind:lesson.track==='olympiad'||lesson.track==='enhancement'?'thinking':'foundation',track:lesson.track as Meta['track'],minutes:lesson.estimatedActiveMinutes,
     skills:lesson.thinkingSkills.map(id=>names[id]).filter(Boolean),questionCount:Object.values(lesson.taskSets).flat().length,
-    completed:sessions(data.progress).some(s=>s.lessonId===lesson.lessonId&&s.setName==='core'&&Boolean(s.completedAt)),recommended:true
+    completed:lessonEvidence(data.progress,lesson.lessonId,lesson.contentVersion).practiced,evidence:lessonEvidence(data.progress,lesson.lessonId,lesson.contentVersion),recommended:true
   }));
   const legacy=data.courses.filter(l=>(!hasCompleteGrade3||(l.grade??3)!==3)&&(grade===undefined||(l.grade??3)===grade)).map((lesson):LearningEntry=>({
     source:'legacy',lesson,id:lesson.id,title:lesson.title,subtitle:lesson.subtitle,world:lesson.world,kind:lesson.kind,track:lesson.kind==='thinking'?'olympiad':'foundation',minutes:lesson.minutes,skills:lesson.thinkingSkills,questionCount:lesson.questions.length,
@@ -32,7 +33,7 @@ export function learningReviews(data:Data){
   }).sort((a,b)=>Date.parse(a.review.dueAt)-Date.parse(b.review.dueAt));
 }
 export function unfinishedLearning(data:Data){
-  const recent=sessions(data.progress).filter(s=>!s.completedAt).sort((a,b)=>Date.parse(b.savedAt)-Date.parse(a.savedAt))[0];
+  const recent=sessions(data.progress).filter(s=>!s.completedAt&&!s.submittedAt).sort((a,b)=>Date.parse(b.savedAt)-Date.parse(a.savedAt))[0];
   if(!recent)return null;
   const entry=learningEntries(data).find(e=>e.id===recent.lessonId),task=recent.tasks[recent.index];
   return entry&&task?{entry,set:recent.setName,taskId:task.id,savedAt:recent.savedAt}:null;

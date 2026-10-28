@@ -1,0 +1,298 @@
+import {createBundle} from './create-detective-bundle.mjs';
+import {detectiveToday} from '../server/detective-store.mjs';
+import {manageDetective} from '../server/detective-store.mjs';
+import {execFileSync} from "node:child_process";
+import {createHash} from "node:crypto";
+import {prepareReview} from "../server/review-schedule.mjs";
+// Reuse the same checked-in browser callbacks locally and in CI. No real learner data.
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import net from "node:net";
+import { spawn } from "node:child_process";
+import { once } from "node:events";
+import { chromium } from "playwright";
+import { createStore } from "../server/store.mjs";
+import {
+  applyThinking,
+  applyThinkingReview,
+} from "../server/thinking-store.mjs";
+// Run the short new workflow checks first for prompt CI feedback.
+const all = [
+  "verify-detective-evidence-browser",
+  "verify-detective-v2-browser",
+  "verify-remaining-visuals-browser",
+  "verify-two-ring-browser",
+  "verify-chain-growth-browser",
+  "verify-clarity-browser",
+  "verify-detective-audit-browser",
+  "verify-detective-inbox-browser",
+  "verify-detective-browser",
+  "verify-detective-recovery-browser",
+  "verify-hands-on-browser",
+  "verify-classroom-flow",
+  "verify-motion-browser",
+  "verify-lab-inventory",
+  "verify-intro-visuals",
+  "verify-textbook-browser",
+  "verify-thinking-browser",
+  "verify-division-browser",
+  "verify-core-browser",
+  "verify-save-stress-browser",
+  "verify-thinking-tools-browser",
+  "verify-performance-browser",
+  "verify-evidence-browser",
+  "verify-accessibility-browser",
+  "verify-variants-browser",
+  "verify-template-browser",
+  "verify-semantic-browser",
+  "verify-desktop-semantic-browser",
+  "verify-desktop-zoom-browser",
+  "verify-final-tasks-browser",
+  "verify-formal-review-browser",
+];
+const only = process.argv.find((v) => v.startsWith("--only=")),
+  names = only
+    ? only.slice(7).split(",")
+    : process.argv.includes("--full")
+      ? all
+      : [
+          "verify-detective-evidence-browser",
+  "verify-detective-v2-browser",
+          "verify-remaining-visuals-browser",
+          "verify-two-ring-browser",
+          "verify-chain-growth-browser",
+          "verify-clarity-browser",
+          "verify-detective-audit-browser",
+          "verify-detective-inbox-browser",
+          "verify-detective-browser",
+          "verify-detective-recovery-browser",          "verify-thinking-browser",
+          "verify-division-browser",
+          "verify-core-browser",
+          "verify-save-stress-browser",
+          "verify-thinking-tools-browser",
+          "verify-evidence-browser",
+          "verify-accessibility-browser",
+          "verify-variants-browser",
+          "verify-template-browser",
+  "verify-semantic-browser",
+  "verify-desktop-semantic-browser",
+  "verify-desktop-zoom-browser",
+  "verify-final-tasks-browser",
+  "verify-formal-review-browser",
+        ];
+if (names.some((n) => !all.includes(n)))
+  throw Error("Unknown browser callback");
+const out = "output/playwright/v2-audit";
+fs.mkdirSync(out, { recursive: true });
+const summary = [];
+const checkoutSha=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
+const sourceEvidence={prHeadSha:process.env.AUDIT_PR_HEAD_SHA ?? checkoutSha,sha:checkoutSha,dirty:Boolean(execFileSync('git',['status','--porcelain'],{encoding:'utf8'}).trim()),diffHash:createHash('sha256').update(execFileSync('git',['diff','HEAD'],{maxBuffer:32*1024*1024})).digest('hex'),startedAt:new Date().toISOString()};
+fs.writeFileSync(`${out}/source-evidence.json`,JSON.stringify(sourceEvidence,null,2));
+let browser;
+const timeout = setTimeout(() => {
+  console.error("Browser audit exceeded 36 minutes");
+  process.exitCode = 1;
+  void browser?.close();
+}, 36 * 60000);
+try {
+  browser = await chromium.launch({
+    headless: true,
+    ...(process.env.PLAYWRIGHT_CHANNEL
+      ? { channel: process.env.PLAYWRIGHT_CHANNEL }
+      : {}),
+  });
+  for (const name of names) {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), "kevin-browser-ci-")),
+      probe = net.createServer();
+    probe.listen(0, "127.0.0.1");
+    await once(probe, "listening");
+    const port = probe.address().port;
+    await new Promise((r) => probe.close(r));
+    if(name==='verify-detective-recovery-browser'){
+      const fixture=createStore(dir,[]);
+      fixture.mutate(p=>{manageDetective(p,{action:'enable-seeds',eventId:'fixture-enable',checks:[true,true,true]});for(const c of Object.values(p.studio.detective.cases).filter(c=>c.status==='published'&&!['DET-G3-001','DET-G3-002','DET-G3-011'].includes(c.id)))manageDetective(p,{action:'withdraw',eventId:'fixture-withdraw-'+c.id,caseId:c.id,expectedRevision:c.revision});});fixture.close();
+    }
+    let mockInbox=null;
+    const v2Bundles=fs.readdirSync('content/detective/reviewed').filter(f=>f.startsWith('DT-20261026')).map(f=>JSON.parse(fs.readFileSync('content/detective/reviewed/'+f,'utf8')));
+    if(['verify-detective-v2-browser','verify-detective-evidence-browser'].includes(name)){
+      mockInbox=fs.mkdtempSync(path.join(os.tmpdir(),'kevin-v2-inbox-'));
+      for(const b of v2Bundles)fs.writeFileSync(path.join(mockInbox,b.bundleId+'.json'),fs.readFileSync('content/detective/reviewed/'+b.bundleId+'.json'));
+    }
+    const wireBundle=JSON.parse(fs.readFileSync('content/detective/reviewed/DT-20261016-WIRE-A.json','utf8'));
+    if(name==='verify-detective-audit-browser'){
+      mockInbox=fs.mkdtempSync(path.join(os.tmpdir(),'kevin-wire-inbox-'));
+      fs.writeFileSync(path.join(mockInbox,wireBundle.bundleId+'.json'),JSON.stringify(wireBundle));
+    }
+    if(name==='verify-detective-inbox-browser'){
+      mockInbox=fs.mkdtempSync(path.join(os.tmpdir(),'kevin-mock-inbox-'));
+      const fixture=createStore(dir,[]);fixture.mutate(p=>{manageDetective(p,{action:'enable-seeds',eventId:'fixture-enable',checks:[true,true,true]});detectiveToday(p);});fixture.close();
+      const bundle=JSON.parse(fs.readFileSync('tests/fixtures/detective-inbox-v1.json','utf8'));bundle.bundleId='DT-START-CARDS';bundle.cases.forEach((c,i)=>c.id='DT-START-CARDS-'+i);fs.writeFileSync(path.join(mockInbox,bundle.bundleId+'.json'),JSON.stringify(bundle));
+    }
+    // A visibly named simulated old review allows testing the due-review UI without
+    // changing production clocks, adding test APIs, or importing real Kevin records.
+    if (name === "verify-thinking-browser") {
+      const store = createStore(dir, []),
+        now = Date.now() - 2 * 86400000,
+        id = "G3-UP01-TH1";
+      store.mutate((p) => {
+        const send = (action, extra = {}) =>
+          applyThinking(
+            p,
+            {
+              taskId: id,
+              eventId: crypto.randomUUID(),
+              revision: p.studio.thinking?.[id]?.revision ?? 0,
+              action,
+              ...extra,
+            },
+            now,
+          );
+        send("first", {
+          answer: "自动化夹具：两边同时去掉两个盒子，再去20克。",
+        });
+        send("check", {
+          checks: [true, true, true],
+          reflection: "测试夹具的等量操作核对。",
+        });
+        send("final", { answer: "测试夹具：一盒150克。" });
+        return applyThinkingReview(
+          p,
+          {
+            taskId: id,
+            eventId: crypto.randomUUID(),
+            revision: p.studio.thinking[id].revision,
+            verdict: "independent-mastered",
+            comment: "仅自动化测试数据，不代表Kevin掌握。",
+            reviewer: "自动化测试夹具",
+            causes: [],
+          },
+          now,
+        );
+      });
+      store.close();
+    }
+    if(name === "verify-formal-review-browser") {
+      const store=createStore(dir,[]),now=Date.now(),learned=now-86400000;
+      store.mutate(p=>{p.studio.review['G3-U06-E01']=prepareReview({stage:0,dueAt:new Date(now-1000).toISOString()},learned,new Date(learned).toISOString());});
+      store.close();
+    }
+    if(name === "verify-evidence-browser") {
+      const store=createStore(dir,[]),start=Date.now()-60*86400000;
+      store.mutate(p=>{
+        const complete=(id,at)=>{
+          const send=(action,extra={})=>applyThinking(p,{taskId:id,revision:p.studio.thinking?.[id]?.revision??0,eventId:crypto.randomUUID(),action,...extra},at);
+          send('first',{answer:'自动化夹具：独立推理，不代表Kevin学习。'});send('check',{checks:[true,true,true],reflection:'仅测试：核对每个条件。'});send('final',{answer:'自动化夹具最终解释。'});
+        };
+        for(const [id,rounds,verdict] of [['G3-U02-TH1',4,'independent-mastered'],['G3-U03-TH1',4,'needs-remediation'],['G3-U06-TH1',12,'needs-remediation']]) {
+          let at=start;complete(id,at);
+          const grade=()=>applyThinkingReview(p,{taskId:id,revision:p.studio.thinking[id].revision,eventId:crypto.randomUUID(),verdict,comment:'自动化夹具：不代表Kevin掌握。',reviewer:'测试夹具',causes:[]},at);
+          grade();
+          for(let i=0;i<rounds;i++){at=Date.parse(p.studio.thinking[id].review.dueAt);applyThinking(p,{taskId:id,revision:p.studio.thinking[id].revision,eventId:crypto.randomUUID(),action:'review-start'},at);complete(id,at);grade();}
+        }
+      });store.close();
+    }
+    if(name === "verify-variants-browser") {
+      const store=createStore(dir,[]),start=Date.now()-60*86400000;
+      const {thinkingCards}=await import('../content/pilot/thinking-source.mjs');
+      store.mutate(p=>{for(const [n,card] of thinkingCards.filter(t=>t.publicationStatus==='guided-study').entries()){
+        const id=card.id,target=n%2===0?9:12;let at=start;
+        const send=(action,extra={})=>applyThinking(p,{taskId:id,revision:p.studio.thinking?.[id]?.revision??0,eventId:crypto.randomUUID(),action,...extra},at);
+        for(let i=0;i<target;i++){
+          send('first',{answer:'自动化夹具的真实首答字段，不代表Kevin。'});send('check',{checks:[true,true,true],reflection:'自动化夹具：核对条件。'});send('final',{answer:'自动化夹具最终解释。'});
+          applyThinkingReview(p,{taskId:id,revision:p.studio.thinking[id].revision,eventId:crypto.randomUUID(),verdict:'needs-remediation',comment:'仅自动化测试夹具。',reviewer:'测试夹具',causes:[]},at);
+          at=Date.parse(p.studio.thinking[id].review.dueAt);send('review-start');
+        }
+      }});store.close();
+    }
+    const log = fs.createWriteStream(`${out}/${name}-server.log`),
+      child = spawn(
+        process.execPath,
+        [...(mockInbox?["--import","./scripts/fixtures/detective-inbox-fetch.mjs"]:[]),"server/index.mjs",...(mockInbox?[]:["--detective-sync=off"]), `--port=${port}`, `--data-dir=${dir}`],
+        { stdio: ["ignore", "pipe", "pipe"],env:{...process.env,...(mockInbox?{DETECTIVE_MOCK_INBOX_DIR:mockInbox}:{})} },
+      );
+    child.stdout.pipe(log);
+    child.stderr.pipe(log);
+    const context = await browser.newContext(),
+      page = await context.newPage(),
+      messages = [];
+    page.on("console", (m) => messages.push(`${m.type()}: ${m.text()}`));
+    page.on("pageerror", (e) => messages.push(`pageerror: ${e.stack}`));
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    page.setDefaultTimeout(12000);
+    const base = `http://127.0.0.1:${port}`;
+    try {
+      let ready = false;
+      for (let i = 0; i < 80; i++) {
+        try {
+          if ((await fetch(base + "/api/data")).ok) {
+            ready = true;
+            break;
+          }
+        } catch {}
+        await new Promise((r) => setTimeout(r, 100));
+      }
+      if (!ready) throw Error("Isolated server did not start");
+      await context.tracing.start({
+        screenshots: true,
+        snapshots: true,
+        sources: true,
+      });
+      // Legacy suites explicitly exercise the experiment. Default lesson screens
+      // are separately covered for all 70 entries by verify-template-browser.
+      const experimentSuites=new Set(["verify-hands-on-browser","verify-motion-browser","verify-lab-inventory","verify-textbook-browser","verify-division-browser","verify-core-browser","verify-save-stress-browser","verify-performance-browser","verify-accessibility-browser","verify-evidence-browser"]);
+      if(experimentSuites.has(name)){
+        const navigate=page.goto.bind(page);
+        page.goto=async(url,options)=>{const result=await navigate(url,options),query=new URL(url).searchParams;if(query.has('lesson')&&!query.has('practice')){await page.locator('.lesson-article').waitFor();const step=page.getByRole('button',{name:/^3 (亲手实验|画图想一想)$/});if(await step.count())await step.click();}return result;};
+      }
+      // The visual-only prototype must never mount a learner session, including
+      // this harness landing page. Other suites intentionally open the full app.
+      await page.goto(name==='verify-two-ring-browser'?base+'/?preview=chain-two':base);
+      const source=fs.readFileSync(`scripts/${name}.js`, "utf8").trim().replace(/;$/, "");
+      const callback = new Function(`return (${source})`)();
+      const result = await callback(page,{wireBundle,v2Bundles,advanceDetectiveClock:days=>{if(!mockInbox)throw Error('Not isolated detective suite');fs.writeFileSync(path.join(mockInbox,'.clock-offset'),String(days*86400000));},deliverInbox:()=>{
+        if(!mockInbox)throw Error('Not an inbox suite');
+        const cases=[['original-error','wrong',6],['transfer-error','wrong',8],['correct-control','correct',9]].map(([role,mode,value])=>({role,template:'length-conversion-v1',parameters:{mode,value,from:'分米',to:'厘米'}}));
+        const bundle=createBundle({bundleId:'DT-RUNNING-LENGTHS',cases});fs.writeFileSync(path.join(mockInbox,bundle.bundleId+'.json'),JSON.stringify(bundle));fs.writeFileSync(path.join(mockInbox,'.clock-offset'),String(16*60000));return bundle;
+      }});
+      if (!result?.passed) throw Error("Callback did not report success");
+      summary.push({ name, ...result, source:sourceEvidence });
+      fs.writeFileSync(
+        `${out}/${name}.json`,
+        JSON.stringify({...result,source:sourceEvidence}, null, 2) + "\n",
+      );
+      console.log(`${name}: passed`);
+    } catch (e) {
+      await page
+        .screenshot({ path: `${out}/${name}-failed.png`, fullPage: true })
+        .catch(() => {});
+      messages.push(e.stack);
+      summary.push({ name, passed: false, error: e.message });
+      process.exitCode = 1;
+      console.error(`${name}: ${e.message}`);
+    } finally {
+      fs.writeFileSync(`${out}/${name}-browser.log`, messages.join("\n"));
+      await context.tracing
+        .stop({ path: `${out}/${name}-trace.zip` })
+        .catch(() => {});
+      await context.close();
+      const exited = once(child, "exit");
+      child.kill("SIGTERM");
+      await exited;
+      log.end();
+      fs.rmSync(dir, { recursive: true, force: true });if(mockInbox)fs.rmSync(mockInbox,{recursive:true,force:true});
+      fs.writeFileSync(
+        `${out}/ci-summary.json`,
+        JSON.stringify(summary, null, 2) + "\n",
+      );
+    }
+    if (process.exitCode) break;
+  }
+} finally {
+  clearTimeout(timeout);
+  await browser?.close();
+  fs.writeFileSync(
+    `${out}/ci-summary.json`,
+    JSON.stringify(summary, null, 2) + "\n",
+  );
+}

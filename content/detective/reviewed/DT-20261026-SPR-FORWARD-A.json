@@ -1,0 +1,198 @@
+{
+  "schemaVersion": "detective-inbox.v1",
+  "bundleRevision": 1,
+  "createdAt": "2026-10-26T13:40:00.000Z",
+  "producer": "chatgpt-github",
+  "privacy": "public-anonymized-math-only",
+  "policy": "auto-if-independently-verified",
+  "bundleId": "DT-20261026-SPR-FORWARD-A",
+  "sourceFingerprint": "a938b83e755a6b53d56dd5551a29b97d3b032a4e0f4e97c46b9cb099137b792d",
+  "cases": [
+    {
+      "id": "DT-20261026-SPR-FORWARD-A-A",
+      "role": "original-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "弹簧长度侦探 · 只算了伸长",
+        "prompt": "一根弹簧原长6厘米，所称物品每增加1千克，弹簧伸长5毫米。称4千克物品时，弹簧总长多少毫米？检查下面的匿名模拟过程。",
+        "steps": [
+          "原长6厘米＝60毫米。",
+          "4×5＝20（毫米），这是伸长量。",
+          "因此弹簧总长20毫米。"
+        ],
+        "verdict": "wrong",
+        "errorStep": 2,
+        "reasons": [
+          "20毫米只表示增加了多长；总长还要加原来的60毫米。",
+          "只要题目出现“增加”，原长就可以丢掉。",
+          "弹簧有重量时，长度一定小于原长。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "称4千克时弹簧的总长是多少毫米？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "80"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "逆查：总长80毫米、原长60毫米、每千克伸长5毫米，对应几千克？",
+          "unit": "千克",
+          "options": [],
+          "answer": "4"
+        },
+        "hints": [
+          "先确认题目问的是伸长量还是总长。",
+          "原来的6厘米要先变成60毫米。",
+          "总长＝原长60毫米＋伸长20毫米，再反向减去原长。"
+        ],
+        "solution": "4×5＝20毫米是伸长量；6厘米＝60毫米；总长60＋20＝80毫米＝8厘米。反查(80−60)÷5＝4千克。",
+        "family": "SPRING_BASE_CHANGE",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "原长6厘米＝60毫米",
+            "每千克增加5毫米",
+            "挂4千克时先伸长20毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "spring-total-length-v1",
+        "parameters": {
+          "mode": "wrong",
+          "originalCm": 6,
+          "mmPerKg": 5,
+          "loadKg": 4
+        },
+        "firstWrongStep": 2
+      }
+    },
+    {
+      "id": "DT-20261026-SPR-FORWARD-A-B",
+      "role": "transfer-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "弹簧长度侦探 · 同题换条件",
+        "prompt": "弹簧原长6厘米，每增加1千克伸长5毫米。称8千克时，弹簧总长多少毫米？检查匿名模拟。",
+        "steps": [
+          "原长60毫米。",
+          "8×5＝40（毫米）。",
+          "所以弹簧总长40毫米。"
+        ],
+        "verdict": "wrong",
+        "errorStep": 2,
+        "reasons": [
+          "40毫米是伸长部分，总长是原长加伸长量。",
+          "每增加1千克都伸长，原长就会消失。",
+          "总长应等于千克数乘以5。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "称8千克时总长多少毫米？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "100"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "逆查：总长100毫米、原长60毫米，每千克伸长5毫米，对应几千克？",
+          "unit": "千克",
+          "options": [],
+          "answer": "8"
+        },
+        "hints": [
+          "先计算新增加的长度。",
+          "题中原长6厘米仍然存在。",
+          "换成毫米后将60＋40相加，反查增加量。"
+        ],
+        "solution": "8×5＝40毫米是伸长量；60＋40＝100毫米＝10厘米。反查(100−60)÷5＝8千克。",
+        "family": "SPRING_BASE_CHANGE",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "原长6厘米＝60毫米",
+            "每千克增5毫米",
+            "挂8千克增加40毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "spring-total-length-v1",
+        "parameters": {
+          "mode": "wrong",
+          "originalCm": 6,
+          "mmPerKg": 5,
+          "loadKg": 8
+        },
+        "firstWrongStep": 2
+      }
+    },
+    {
+      "id": "DT-20261026-SPR-FORWARD-A-C",
+      "role": "correct-control",
+      "simulatedSteps": true,
+      "content": {
+        "title": "弹簧长度侦探 · 正确对照",
+        "prompt": "另一根弹簧原长8厘米，每增加1千克伸长4毫米。称3千克时，判断小智求得的总长对不对（匿名模拟）。",
+        "steps": [
+          "原长8厘米＝80毫米。",
+          "3×4＝12（毫米），是伸长量。",
+          "80＋12＝92（毫米），这是总长。"
+        ],
+        "verdict": "correct",
+        "errorStep": null,
+        "reasons": [
+          "先统一毫米、再把原长与伸长量相加，反查也成立。",
+          "总长就是3×4＝12毫米。",
+          "写成毫米就不必验算。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "总长是多少毫米？",
+          "unit": "毫米",
+          "options": [],
+          "answer": "92"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "逆查：(92−80)÷4对应多少千克？",
+          "unit": "千克",
+          "options": [],
+          "answer": "3"
+        },
+        "hints": [
+          "先算原长毫米数。",
+          "分开算原长和增加量。",
+          "检查92−80是否等于3×4。"
+        ],
+        "solution": "8厘米＝80毫米；3×4＝12毫米；总长80＋12＝92毫米；反查(92−80)÷4＝3千克。",
+        "family": "SPRING_BASE_CHANGE",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "原长8厘米＝80毫米",
+            "每千克增4毫米",
+            "3千克增加12毫米"
+          ]
+        }
+      },
+      "verification": {
+        "template": "spring-total-length-v1",
+        "parameters": {
+          "mode": "correct",
+          "originalCm": 8,
+          "mmPerKg": 4,
+          "loadKg": 3
+        },
+        "firstWrongStep": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "oldSha": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "newSha": "037d8124ab04d4c07a71dbdd1634bd3242ead386",
+  "syntheticOnly": true,
+  "steps": [
+    {
+      "name": "old-v2-oracle-12-pending-checkpoint",
+      "passed": true,
+      "cases": 12
+    },
+    {
+      "name": "v3-recheck-and-self-correction-backup-restore",
+      "passed": true,
+      "newSelfAttempts": 1,
+      "walletPetsOldHistoryUnchanged": true
+    },
+    {
+      "name": "rollback-executable-plus-pre-upgrade-checkpoint",
+      "passed": true,
+      "oldPending12Unchanged": true
+    }
+  ]
+}

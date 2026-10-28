@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 840 1188" role="img" aria-label="正方体展开图 · 试验 1">
+<rect width="840" height="1188" fill="white"/>
+<g fill="#152e50" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<text x="60" y="70" font-size="18" text-anchor="start" font-weight="600">KEVIN  /  动手折一折</text>
+<text x="60" y="130" font-size="34" text-anchor="start" font-weight="700">正方体展开图 · 试验 1</text>
+<text x="60" y="174" font-size="22" text-anchor="start" font-weight="400">每个正方形边长 2.5 厘米。先猜一猜，再折一折。</text>
+<rect x="220.0" y="360" width="100" height="100" fill="#fff0ab"/>
+<text x="270.0" y="422.0" font-size="34" text-anchor="middle" font-weight="600">E</text>
+<rect x="220.0" y="460" width="100" height="100" fill="#d9eaff"/>
+<text x="270.0" y="522.0" font-size="34" text-anchor="middle" font-weight="600">A</text>
+<rect x="320.0" y="460" width="100" height="100" fill="#d9eaff"/>
+<text x="370.0" y="522.0" font-size="34" text-anchor="middle" font-weight="600">B</text>
+<rect x="420.0" y="460" width="100" height="100" fill="#d9eaff"/>
+<text x="470.0" y="522.0" font-size="34" text-anchor="middle" font-weight="600">C</text>
+<rect x="520.0" y="460" width="100" height="100" fill="#d9eaff"/>
+<text x="570.0" y="522.0" font-size="34" text-anchor="middle" font-weight="600">D</text>
+<rect x="520.0" y="560" width="100" height="100" fill="#ffd2c7"/>
+<text x="570.0" y="622.0" font-size="34" text-anchor="middle" font-weight="600">F</text>
+<line x1="220.0" y1="360" x2="320.0" y2="360" stroke="#152e50" stroke-width="2"/>
+<line x1="320.0" y1="360" x2="320.0" y2="460" stroke="#152e50" stroke-width="2"/>
+<line x1="220.0" y1="460" x2="320.0" y2="460" stroke="#152e50" stroke-width="2" stroke-dasharray="9 7"/>
+<line x1="220.0" y1="360" x2="220.0" y2="460" stroke="#152e50" stroke-width="2"/>
+<line x1="320.0" y1="460" x2="320.0" y2="560" stroke="#152e50" stroke-width="2" stroke-dasharray="9 7"/>
+<line x1="220.0" y1="560" x2="320.0" y2="560" stroke="#152e50" stroke-width="2"/>
+<line x1="220.0" y1="460" x2="220.0" y2="560" stroke="#152e50" stroke-width="2"/>
+<line x1="320.0" y1="460" x2="420.0" y2="460" stroke="#152e50" stroke-width="2"/>
+<line x1="420.0" y1="460" x2="420.0" y2="560" stroke="#152e50" stroke-width="2" stroke-dasharray="9 7"/>
+<line x1="320.0" y1="560" x2="420.0" y2="560" stroke="#152e50" stroke-width="2"/>
+<line x1="420.0" y1="460" x2="520.0" y2="460" stroke="#152e50" stroke-width="2"/>
+<line x1="520.0" y1="460" x2="520.0" y2="560" stroke="#152e50" stroke-width="2" stroke-dasharray="9 7"/>
+<line x1="420.0" y1="560" x2="520.0" y2="560" stroke="#152e50" stroke-width="2"/>
+<line x1="520.0" y1="460" x2="620.0" y2="460" stroke="#152e50" stroke-width="2"/>
+<line x1="620.0" y1="460" x2="620.0" y2="560" stroke="#152e50" stroke-width="2"/>
+<line x1="520.0" y1="560" x2="620.0" y2="560" stroke="#152e50" stroke-width="2" stroke-dasharray="9 7"/>
+<line x1="620.0" y1="560" x2="620.0" y2="660" stroke="#152e50" stroke-width="2"/>
+<line x1="520.0" y1="660" x2="620.0" y2="660" stroke="#152e50" stroke-width="2"/>
+<line x1="520.0" y1="560" x2="520.0" y2="660" stroke="#152e50" stroke-width="2"/>
+<line x1="60" y1="918" x2="125" y2="918" stroke="#152e50" stroke-width="2"/>
+<text x="142" y="926" font-size="21" text-anchor="start" font-weight="400">实线：沿外轮廓剪下</text>
+<line x1="455" y1="918" x2="520" y2="918" stroke="#152e50" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="536" y="926" font-size="21" text-anchor="start" font-weight="400">虚线：保留并折叠</text>
+<text x="60" y="990" font-size="21" text-anchor="start" font-weight="400">检查：6 个面有没有重叠？有没有哪一面留下缺口？</text>
+<text x="60" y="1034" font-size="21" text-anchor="start" font-weight="400">先折出形状，需要固定时再用少量透明胶带。</text>
+<text x="60" y="1117" font-size="18" text-anchor="start" font-weight="400">A4 等比例模板 · 打印选择“实际大小 / 100%”</text>
+</g></svg>

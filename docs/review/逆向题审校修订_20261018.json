@@ -1,0 +1,1703 @@
+{
+  "date": "2026-10-18",
+  "beforeSha": "11abed197cfc9cc88a2b7a656b09373aac4b9434",
+  "scope": "11题逐题逆向修订；10课新评估版本；仍849题；教师人工审批另列",
+  "humanTeachingApproved": false,
+  "renewedRows": [
+    {
+      "taskId": "G3-U02-E01.w1",
+      "lessonId": "G3-U02-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "cbbf005778f7119d4445ae25d4eab992e67ed689f6976a26d5c4e9697c33efcb",
+      "afterFingerprint": "cbbf005778f7119d4445ae25d4eab992e67ed689f6976a26d5c4e9697c33efcb",
+      "beforeVersion": "2026-10-09.4",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E01.w2",
+      "lessonId": "G3-U02-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "ace18ee41401d09b6b6c81ad97551957e289583a9d328aa38ee13435e1ba9921",
+      "afterFingerprint": "ace18ee41401d09b6b6c81ad97551957e289583a9d328aa38ee13435e1ba9921",
+      "beforeVersion": "2026-10-09.4",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E01.c1",
+      "lessonId": "G3-U02-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "b014b13d0b50d2c7ab6f4a77ae044db94caa615bd701e47974413da2e66913d8",
+      "afterFingerprint": "b014b13d0b50d2c7ab6f4a77ae044db94caa615bd701e47974413da2e66913d8",
+      "beforeVersion": "2026-10-09.4",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E01.c2",
+      "lessonId": "G3-U02-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "b81ed5af3c4030bafc1c22ba5da9feffc698193696bc0ad78231b92ff29f17ca",
+      "afterFingerprint": "b81ed5af3c4030bafc1c22ba5da9feffc698193696bc0ad78231b92ff29f17ca",
+      "beforeVersion": "2026-10-09.4",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E01.c3",
+      "lessonId": "G3-U02-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "3fd6b404dbb80a54795e1c0ce6e98c3f8eba64e802607c7ec5cf0a3e011a2945",
+      "afterFingerprint": "3fd6b404dbb80a54795e1c0ce6e98c3f8eba64e802607c7ec5cf0a3e011a2945",
+      "beforeVersion": "2026-10-09.4",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E01.c4",
+      "lessonId": "G3-U02-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "03346891eb0514e1afdb0433a2444f8b40d7a722c3f410829f0d7c59b7ec3e43",
+      "afterFingerprint": "03346891eb0514e1afdb0433a2444f8b40d7a722c3f410829f0d7c59b7ec3e43",
+      "beforeVersion": "2026-10-09.4",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E01.c5",
+      "lessonId": "G3-U02-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "e479ff91db012937a45831f54e1e15fee764b9c58c8ad1130eadf40f7b738bfa",
+      "afterFingerprint": "e479ff91db012937a45831f54e1e15fee764b9c58c8ad1130eadf40f7b738bfa",
+      "beforeVersion": "2026-10-09.4",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E01.t1",
+      "lessonId": "G3-U02-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "536c1d9a5bc2d9e891ef62214fe9af974c20f85ee850b78d9cbed9bde3c66d2e",
+      "afterFingerprint": "536c1d9a5bc2d9e891ef62214fe9af974c20f85ee850b78d9cbed9bde3c66d2e",
+      "beforeVersion": "2026-10-09.4",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E01.t2",
+      "lessonId": "G3-U02-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "b28dc08b65dbe096d13d7658873fb8940f0288f46baa8a5c93bac02ba68bdb98",
+      "afterFingerprint": "b28dc08b65dbe096d13d7658873fb8940f0288f46baa8a5c93bac02ba68bdb98",
+      "beforeVersion": "2026-10-09.4",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E01.h1",
+      "lessonId": "G3-U02-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "eec72b2309b34dbda58f9f79b74cbd0036f0deea88d39446fb661cb5af874d22",
+      "afterFingerprint": "eec72b2309b34dbda58f9f79b74cbd0036f0deea88d39446fb661cb5af874d22",
+      "beforeVersion": "2026-10-09.4",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E01.r1",
+      "lessonId": "G3-U02-E01",
+      "kind": "reviewed-inverse-replacement",
+      "beforeFingerprint": "8c09839401fee29855f58060c534bf02ad428d527b861a613fd3417821466d80",
+      "afterFingerprint": "5d2434bd758ac88df17795a797bcded421c3c58586b3d636b2e39f5dd4336377",
+      "beforeVersion": "2026-10-09.4",
+      "afterVersion": "2026-10-18.1",
+      "beforeTask": {
+        "id": "G3-U02-E01.r1",
+        "kind": "number",
+        "prompt": "90－(35－5)等于多少？",
+        "expected": "60",
+        "unit": "",
+        "solution": "90－35＋5＝60。",
+        "hint": "退款加回来。",
+        "level": "review",
+        "objectiveId": "rewrite",
+        "responseSpec": {
+          "type": "number"
+        }
+      },
+      "afterTask": {
+        "id": "G3-U02-E01.r1",
+        "level": "review",
+        "objectiveId": "rewrite",
+        "kind": "number",
+        "prompt": "泡泡付出35元，又收到5元找零，最后还剩60元。泡泡原来有多少元？",
+        "expected": "90",
+        "unit": "元",
+        "solution": "实际花了35−5＝30元；原来有60＋30＝90元。代回：90−(35−5)＝60元。",
+        "hint": "先把付款和找零合成净支出，再把已经花掉的补回去。",
+        "responseSpec": {
+          "type": "number"
+        },
+        "diagnostic": "先把付款和找零合成净支出，再把已经花掉的补回去。"
+      },
+      "reason": "余额加回净支出才是原有金额。付35退5表示只花30；逆推90元并按原过程回查，不能把找零也算支出。"
+    },
+    {
+      "taskId": "G3-U02-E01.r2",
+      "lessonId": "G3-U02-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "c3013876098430c48e855c6bfb62365029b3a58f8abb7ca34f1d5e32e1e05bc1",
+      "afterFingerprint": "c3013876098430c48e855c6bfb62365029b3a58f8abb7ca34f1d5e32e1e05bc1",
+      "beforeVersion": "2026-10-09.4",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E02-P01",
+      "lessonId": "G3-U02-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "c095ea3bffe42a0a96e622c21e79a400eddb547af0611ab359cf97ee8693459d",
+      "afterFingerprint": "c095ea3bffe42a0a96e622c21e79a400eddb547af0611ab359cf97ee8693459d",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E02-P02",
+      "lessonId": "G3-U02-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "5b3a9a5318a1c7e05466ca8165f53c8490a0da165ea29ce699bfa3025898d793",
+      "afterFingerprint": "5b3a9a5318a1c7e05466ca8165f53c8490a0da165ea29ce699bfa3025898d793",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E02-P03",
+      "lessonId": "G3-U02-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "a4fd103776ba93f1664dbd3d87cdf41b9f206bff56174cba7fb1ff9dee5fbb85",
+      "afterFingerprint": "a4fd103776ba93f1664dbd3d87cdf41b9f206bff56174cba7fb1ff9dee5fbb85",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E02-P04",
+      "lessonId": "G3-U02-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "d0b3894261e10ce42a7e84e6335daf7f6fd2d6e9f230f7838b513a8cee4b5a4c",
+      "afterFingerprint": "d0b3894261e10ce42a7e84e6335daf7f6fd2d6e9f230f7838b513a8cee4b5a4c",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E02-P07",
+      "lessonId": "G3-U02-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "b9d1050c6fb9cfa2f447ec88dca20c08e483c1e24b6bbea1066a2e8fd8cebcbe",
+      "afterFingerprint": "b9d1050c6fb9cfa2f447ec88dca20c08e483c1e24b6bbea1066a2e8fd8cebcbe",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E02-P05",
+      "lessonId": "G3-U02-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "b1ff296dce21035544b5550006cf350882d96d61e3a359da24d41e8133d51aaf",
+      "afterFingerprint": "b1ff296dce21035544b5550006cf350882d96d61e3a359da24d41e8133d51aaf",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E02-P08",
+      "lessonId": "G3-U02-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "1f750f9bf7eba554a5e3e9c1893d676f90c0f0b495f0d1e9074fb090f214cd68",
+      "afterFingerprint": "1f750f9bf7eba554a5e3e9c1893d676f90c0f0b495f0d1e9074fb090f214cd68",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E02-P06",
+      "lessonId": "G3-U02-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "39d79b6b6ce8c321d7a9a5309669427059ec782d2545af33ef0370301d743b3a",
+      "afterFingerprint": "39d79b6b6ce8c321d7a9a5309669427059ec782d2545af33ef0370301d743b3a",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E02-P09",
+      "lessonId": "G3-U02-E02",
+      "kind": "reviewed-inverse-replacement",
+      "beforeFingerprint": "dce73499c38b0d7ddda887d17f0e547e0ba5d99492e840111f668606852b1874",
+      "afterFingerprint": "a7afe9ddfe08bb317ad7763db429a5344b0649435ff2668d09bc7bf3e6b44278",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "beforeTask": {
+        "id": "G3-U02-E02-P09",
+        "level": "review",
+        "objectiveId": "G3-U02-E02-OBJ1",
+        "prompt": "计算120÷5÷3，先合并哪两个数最合适？",
+        "solution": "先算5×3=15，再120÷15=8。连续两次分组相当于按两组大小的积来分。",
+        "hint": "课堂例子是“画6组、每组2人，共12个相等份；再比较只分给6÷2=3组的另一情境”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+        "diagnostic": "连续除等于除以除数的积，不等于把两个除数先相除。 圈出括号并标出第一步；每次只替换刚算完的部分。",
+        "diagram": {
+          "type": "concept",
+          "family": "operations",
+          "variant": "G3-U02-E02:task-static",
+          "values": [],
+          "labels": [
+            "计算120÷5÷3，先合并哪两个数最合适？",
+            "连续除与括号里的乘除，为什么有关联"
+          ],
+          "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+        },
+        "kind": "fields",
+        "fields": [
+          {
+            "key": "divisor",
+            "label": "合并后的除数",
+            "expected": "15"
+          },
+          {
+            "key": "result",
+            "label": "120÷15",
+            "expected": "8"
+          }
+        ],
+        "responseSpec": {
+          "type": "fields"
+        }
+      },
+      "afterTask": {
+        "id": "G3-U02-E02-P09",
+        "level": "review",
+        "objectiveId": "G3-U02-E02-OBJ1",
+        "kind": "number",
+        "prompt": "120支笔全部装盒，每盒5支。再把这些盒子平均装进8箱，正好装完。每箱有几盒？",
+        "expected": "3",
+        "unit": "盒",
+        "solution": "先求一共120÷5＝24盒，再24÷8＝3盒。代回：5×3×8＝120支。",
+        "hint": "题目问每箱盒数，不是支数；先还原一共有几盒。",
+        "responseSpec": {
+          "type": "number"
+        },
+        "diagnostic": "题目问每箱盒数，不是支数；先还原一共有几盒。"
+      },
+      "reason": "先把支数还原成盒数24，再分到8箱，每箱3盒。逆向求三层分组中间层，不把每箱15支写成15盒。"
+    },
+    {
+      "taskId": "G3-U02-E02-P10",
+      "lessonId": "G3-U02-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "2e1d9cfbd131d17c4047a2e7584c6c8015379b1f91c7654683235acd304f480b",
+      "afterFingerprint": "2e1d9cfbd131d17c4047a2e7584c6c8015379b1f91c7654683235acd304f480b",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E02-P11",
+      "lessonId": "G3-U02-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "5efb19937fc0370ed56489328e318cad31b9fd664189ed6e89142c819f072236",
+      "afterFingerprint": "5efb19937fc0370ed56489328e318cad31b9fd664189ed6e89142c819f072236",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E02-P12",
+      "lessonId": "G3-U02-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "6ead7e473fc36cb9c542617dfb1e0c488ec6c50fcf3120b490e1b4c8750f8b3d",
+      "afterFingerprint": "6ead7e473fc36cb9c542617dfb1e0c488ec6c50fcf3120b490e1b4c8750f8b3d",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E04-P01",
+      "lessonId": "G3-U02-E04",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "ca51532d408fa7eeed930e281287045dadb562dc8e806f4c76d90b26a924c473",
+      "afterFingerprint": "ca51532d408fa7eeed930e281287045dadb562dc8e806f4c76d90b26a924c473",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E04-P02",
+      "lessonId": "G3-U02-E04",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "2494e0f6cfbdcbd97a18a838cdcb0354dfe64d759f5b53494c7bfc80f017b731",
+      "afterFingerprint": "2494e0f6cfbdcbd97a18a838cdcb0354dfe64d759f5b53494c7bfc80f017b731",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E04-P03",
+      "lessonId": "G3-U02-E04",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "8948e64fac1c44980826c3de14e37a67064ad38e391e0c431a41a2ce1877bf80",
+      "afterFingerprint": "8948e64fac1c44980826c3de14e37a67064ad38e391e0c431a41a2ce1877bf80",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E04-P04",
+      "lessonId": "G3-U02-E04",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "fc56c8a5b461208430fe93a42b32bb9452c056c0bf519a1d8558d58d5641d3d3",
+      "afterFingerprint": "fc56c8a5b461208430fe93a42b32bb9452c056c0bf519a1d8558d58d5641d3d3",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E04-P07",
+      "lessonId": "G3-U02-E04",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "8d4148954ff39aac87f8021400358c83d5d99baf2160a712a778a10b38a9554f",
+      "afterFingerprint": "8d4148954ff39aac87f8021400358c83d5d99baf2160a712a778a10b38a9554f",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E04-P05",
+      "lessonId": "G3-U02-E04",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "584b8f12bac7ccb33acde135a175ed9d8f63487d9bd1814f6146be12cfa7ff6b",
+      "afterFingerprint": "584b8f12bac7ccb33acde135a175ed9d8f63487d9bd1814f6146be12cfa7ff6b",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E04-P08",
+      "lessonId": "G3-U02-E04",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "11adf729fb1f06599de4531faab963352c728a9712080141f6cd1051617554f9",
+      "afterFingerprint": "11adf729fb1f06599de4531faab963352c728a9712080141f6cd1051617554f9",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E04-P06",
+      "lessonId": "G3-U02-E04",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "f6df71da963e353ad5c400e9e41a7177d62f63d30ab311aa17ee68a106e9c135",
+      "afterFingerprint": "f6df71da963e353ad5c400e9e41a7177d62f63d30ab311aa17ee68a106e9c135",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E04-P09",
+      "lessonId": "G3-U02-E04",
+      "kind": "reviewed-inverse-replacement",
+      "beforeFingerprint": "558466f8c5c9bbed106a870e7462dbbe0e15470cbf79a64559ea5caee65a1464",
+      "afterFingerprint": "81f4d3039a5cb348833ed79cf01c9b931d80f03e10b981afd40192afc8741032",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "beforeTask": {
+        "id": "G3-U02-E04-P09",
+        "level": "review",
+        "objectiveId": "G3-U02-E04-OBJ1",
+        "prompt": "算9+5+1，说明怎样先凑10。 请保留题目原来的数字，写出完整改写式；如果计算结果，把结果写在等号后。",
+        "solution": "9+1+5=15。先交换，再先合9和1。",
+        "hint": "课堂例子是“12点排成3行4列可切换逐行/逐列计数；三堆8、2、7只切换大括号框住哪两堆，不移动单点”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+        "diagnostic": "保持值需要依据，减法除法的反例直接否定随意套用。 圈出括号并标出第一步；每次只替换刚算完的部分。",
+        "diagram": {
+          "type": "concept",
+          "family": "operations",
+          "variant": "G3-U02-E04:task-static",
+          "values": [],
+          "labels": [
+            "算9+5+1，说明怎样先凑10。 请保留题目原来的数字，写出完整改写式；如果计算结果，把结果写在等号后。",
+            "换位置、换分组：交换律和结合律的具体体验"
+          ],
+          "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+        },
+        "kind": "expression",
+        "expected": "9+1+5=15",
+        "responseSpec": {
+          "type": "expression",
+          "preserveOperands": true,
+          "optionalResult": true,
+          "requiredOperators": [
+            "+"
+          ]
+        }
+      },
+      "afterTask": {
+        "id": "G3-U02-E04-P09",
+        "level": "review",
+        "objectiveId": "G3-U02-E04-OBJ1",
+        "kind": "number",
+        "prompt": "4个同样的盒子里，每盒有2袋糖。一共40颗糖，每袋的颗数都相同。每袋有多少颗？",
+        "expected": "5",
+        "unit": "颗",
+        "solution": "一共有4×2＝8袋，40÷8＝5颗。也可先40÷4＝10颗每盒，再10÷2＝5颗。代回：4×(2×5)＝40颗。",
+        "hint": "先想先求总袋数，或先求每盒颗数；两条路线都要回到每袋。",
+        "responseSpec": {
+          "type": "number"
+        },
+        "diagnostic": "先想先求总袋数，或先求每盒颗数；两条路线都要回到每袋。"
+      },
+      "reason": "先合盒数与袋数求8袋，再平均分40颗，或分两次；每袋5颗。保持层级单位，乘法不同分组是同一物品。"
+    },
+    {
+      "taskId": "G3-U02-E04-P10",
+      "lessonId": "G3-U02-E04",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "ed96866679408e1a16a72beba4796eae896090f8d61491f7b5b453479ec7bc08",
+      "afterFingerprint": "ed96866679408e1a16a72beba4796eae896090f8d61491f7b5b453479ec7bc08",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E04-P11",
+      "lessonId": "G3-U02-E04",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "8c0fbb2d49ac3f1104d38c666a418ae7eb67309cf1708bb16719f82ba01daf97",
+      "afterFingerprint": "8c0fbb2d49ac3f1104d38c666a418ae7eb67309cf1708bb16719f82ba01daf97",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-E04-P12",
+      "lessonId": "G3-U02-E04",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "22e2d417a705f1d5668a8cf0d7329a172318c10d305c85f822e600ed91fb633c",
+      "afterFingerprint": "22e2d417a705f1d5668a8cf0d7329a172318c10d305c85f822e600ed91fb633c",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-O02-P01",
+      "lessonId": "G3-U02-O02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "76ffb26b49bf870f012c1a19c690f5a06d0dc6c243858820a1a5390c5ba5a344",
+      "afterFingerprint": "76ffb26b49bf870f012c1a19c690f5a06d0dc6c243858820a1a5390c5ba5a344",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-O02-P02",
+      "lessonId": "G3-U02-O02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "0458d904ddff3817947f283268e84e2a710bdd963aec9a397b4469b62643f219",
+      "afterFingerprint": "0458d904ddff3817947f283268e84e2a710bdd963aec9a397b4469b62643f219",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-O02-P03",
+      "lessonId": "G3-U02-O02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "623651d3664c9e97c3ac22d29d3b9d5386d3cf356982884a8008704f5c8affc2",
+      "afterFingerprint": "623651d3664c9e97c3ac22d29d3b9d5386d3cf356982884a8008704f5c8affc2",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-O02-P04",
+      "lessonId": "G3-U02-O02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "9a4e027bf47b0b525b84fccc3c6b4eef77983e5085a4cdc7ea4f2ea19694322c",
+      "afterFingerprint": "9a4e027bf47b0b525b84fccc3c6b4eef77983e5085a4cdc7ea4f2ea19694322c",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-O02-P07",
+      "lessonId": "G3-U02-O02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "d7ff443fd6b3b6572cdea65ac28e6a854342c1a314a4fe8879855f0184a63dcc",
+      "afterFingerprint": "d7ff443fd6b3b6572cdea65ac28e6a854342c1a314a4fe8879855f0184a63dcc",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-O02-P05",
+      "lessonId": "G3-U02-O02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "7ff5b8b4e575cb3b99440323436a76da11cbc12d44dac84a190e0c7511fe7f07",
+      "afterFingerprint": "7ff5b8b4e575cb3b99440323436a76da11cbc12d44dac84a190e0c7511fe7f07",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-O02-P08",
+      "lessonId": "G3-U02-O02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "cd03e70a932556b8925218dd0c1727bf2af3ceb59df33ee47455a8a09913d582",
+      "afterFingerprint": "cd03e70a932556b8925218dd0c1727bf2af3ceb59df33ee47455a8a09913d582",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-O02-P06",
+      "lessonId": "G3-U02-O02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "abfc6cd1738f85b23d69e7d31be87b0e79afbaabf712cbfc3e18f2881140832f",
+      "afterFingerprint": "abfc6cd1738f85b23d69e7d31be87b0e79afbaabf712cbfc3e18f2881140832f",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-O02-P09",
+      "lessonId": "G3-U02-O02",
+      "kind": "reviewed-inverse-replacement",
+      "beforeFingerprint": "1496593b94cf153ec7bb39cfb2d51fbd31e614abb24b0401ca0d143657ede9a6",
+      "afterFingerprint": "c60ea0689ff8899dc3e1035d673980f0a0559e177fa6f7f5bdc07817a1a85752",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "beforeTask": {
+        "id": "G3-U02-O02-P09",
+        "level": "review",
+        "objectiveId": "G3-U02-O02-OBJ1",
+        "prompt": "让□表示16+4，求60−□。",
+        "solution": "40。整体是20，从60扣去20。",
+        "hint": "课堂例子是“框卡盖住完整12+8，卡旁写“每盒支数”；式子由(12+8)×3变成□×3，翻卡见20”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+        "diagnostic": "每题先定义代表的完整数量，再计算或替换。 圈出括号并标出第一步；每次只替换刚算完的部分。",
+        "diagram": {
+          "type": "concept",
+          "family": "operations",
+          "variant": "G3-U02-O02:task-static",
+          "values": [],
+          "labels": [
+            "让□表示16+4，求60−□。",
+            "把一整包数量临时换个名字"
+          ],
+          "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+        },
+        "kind": "number",
+        "responseSpec": {
+          "type": "number"
+        },
+        "expected": "40"
+      },
+      "afterTask": {
+        "id": "G3-U02-O02-P09",
+        "level": "review",
+        "objectiveId": "G3-U02-O02-OBJ1",
+        "kind": "number",
+        "prompt": "用□表示一盒糖的颗数。3盒这样的糖和6颗散糖合起来有30颗，即3×□＋6＝30。每盒有多少颗糖？",
+        "expected": "8",
+        "unit": "颗",
+        "solution": "先把6颗散糖拿走：30−6＝24颗；3盒平均分：24÷3＝8颗。代回：3×8＋6＝30颗。",
+        "hint": "□表示完整的一盒，先拿掉不在盒子里的散糖。",
+        "responseSpec": {
+          "type": "number"
+        },
+        "diagnostic": "□表示完整的一盒，先拿掉不在盒子里的散糖。"
+      },
+      "reason": "□代表一整盒，先去掉散糖再平均分给3盒，每盒8颗；不是先30除3再扣6，也不把□当散糖。"
+    },
+    {
+      "taskId": "G3-U02-O02-P10",
+      "lessonId": "G3-U02-O02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "ac25a98bfff27b36941e0a806319202ad61037cc0d3e2423d9b5e712adea25fe",
+      "afterFingerprint": "ac25a98bfff27b36941e0a806319202ad61037cc0d3e2423d9b5e712adea25fe",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-O02-P11",
+      "lessonId": "G3-U02-O02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "5ae949571f23326048e9fab27584a75edb23dfe65eb741ccf9444b85aba378d2",
+      "afterFingerprint": "5ae949571f23326048e9fab27584a75edb23dfe65eb741ccf9444b85aba378d2",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U02-O02-P12",
+      "lessonId": "G3-U02-O02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "d397fc46e86a0132d2f526c4c70015dfdba68e1d48717abff26ad3cba8b50f2a",
+      "afterFingerprint": "d397fc46e86a0132d2f526c4c70015dfdba68e1d48717abff26ad3cba8b50f2a",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U06-E01-P01",
+      "lessonId": "G3-U06-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "747b2e7e98e39b562750493148adff67407e447cf225f862374da2205a5d763a",
+      "afterFingerprint": "747b2e7e98e39b562750493148adff67407e447cf225f862374da2205a5d763a",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U06-E01-P02",
+      "lessonId": "G3-U06-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "940454aba86e19caa67983b1160af8c56b3541bcd6787008e09e0658b12ee3cc",
+      "afterFingerprint": "940454aba86e19caa67983b1160af8c56b3541bcd6787008e09e0658b12ee3cc",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U06-E01-P03",
+      "lessonId": "G3-U06-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "ba9a4c82ae29649634818f07f5276e488958f7fe7df8d84d373590f5d242ff63",
+      "afterFingerprint": "ba9a4c82ae29649634818f07f5276e488958f7fe7df8d84d373590f5d242ff63",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U06-E01-P04",
+      "lessonId": "G3-U06-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "594bee23700e85259f4c93bfd0ff9016ce64921ecce4172f39da907677df316f",
+      "afterFingerprint": "594bee23700e85259f4c93bfd0ff9016ce64921ecce4172f39da907677df316f",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U06-E01-P07",
+      "lessonId": "G3-U06-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "9af042bb6824d5405452a38586ec7658523d3b67f70d11d3b1664dcc2098df70",
+      "afterFingerprint": "9af042bb6824d5405452a38586ec7658523d3b67f70d11d3b1664dcc2098df70",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U06-E01-P05",
+      "lessonId": "G3-U06-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "d02d3e217ebb84beb1b6a18f2d74fcb8abf2083b2bcf5ba98d60647d46fa90d9",
+      "afterFingerprint": "d02d3e217ebb84beb1b6a18f2d74fcb8abf2083b2bcf5ba98d60647d46fa90d9",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U06-E01-P08",
+      "lessonId": "G3-U06-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "981770899f3751cdd191920721be57299fb2db42b58165187c18c96049227f4f",
+      "afterFingerprint": "981770899f3751cdd191920721be57299fb2db42b58165187c18c96049227f4f",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U06-E01-P06",
+      "lessonId": "G3-U06-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "912cd3a51e156e4576f79ee25aad7a0abdf33099721d22333fa315d80c18550a",
+      "afterFingerprint": "912cd3a51e156e4576f79ee25aad7a0abdf33099721d22333fa315d80c18550a",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U06-E01-P09",
+      "lessonId": "G3-U06-E01",
+      "kind": "reviewed-inverse-replacement",
+      "beforeFingerprint": "7143bdaeaba135e9f9afdc4130fb190f3d0357139d2ba2361282563d214ed077",
+      "afterFingerprint": "44d0e2075ebed13e95164ba9713662606b2c85061e162771400c4c35cf400054",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "beforeTask": {
+        "id": "G3-U06-E01-P09",
+        "level": "review",
+        "objectiveId": "G3-U06-E01-OBJ1",
+        "prompt": "一条纸带平均分8格，前6格涂色。每相邻2格合成大格后，涂色占几大格，共几大格？",
+        "solution": "涂3大格，共4大格，即3/4。6÷2=3，8÷2=4。",
+        "hint": "课堂例子是“保留同一条纸带和同一段涂色，把6小格两两合成3大格；涂色恰好1大格”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+        "diagnostic": "明确比较重分组前后同一段涂色，边界不动、长度不变。 先圈出整体，再检查是否平均分，最后解释分子和分母。",
+        "diagram": {
+          "type": "concept",
+          "family": "fractions",
+          "variant": "G3-U06-E01:task-static",
+          "values": [],
+          "labels": [
+            "一条纸带平均分8格，前6格涂色。每相邻2格合成大格后，涂色占几大格，共几大格？",
+            "合并格子，已经涂色的长度会变吗"
+          ],
+          "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+        },
+        "kind": "explanation",
+        "responseSpec": {
+          "type": "self-explanation",
+          "rubric": [
+            "回答题目所问的结论",
+            "写出算式、图示关系或关键一步",
+            "说明这一步为什么符合题目条件"
+          ]
+        },
+        "editorialStatus": "parent-assessment"
+      },
+      "afterTask": {
+        "id": "G3-U06-E01-P09",
+        "level": "review",
+        "objectiveId": "G3-U06-E01-OBJ1",
+        "kind": "explanation",
+        "prompt": "同一条纸带平均分成4大格，前3大格涂蓝色。现在把每一大格再平均分成2小格，蓝色部分不变。整条有几小格，蓝色占几小格？用小格计数的分数是什么？",
+        "solution": "整条4×2＝8小格，蓝色3×2＝6小格，用6/8表示。反过来每2小格合成1大格，仍是涂3大格、共4大格，即3/4。同一整体和涂色长度都没变。",
+        "hint": "合并小格要除，反过来拆小格要乘；整体与蓝色部分必须一起拆。",
+        "diagram": {
+          "type": "fraction",
+          "parts": 4,
+          "selected": 3
+        },
+        "responseSpec": {
+          "type": "self-explanation"
+        },
+        "diagnostic": "合并小格要除，反过来拆小格要乘；整体与蓝色部分必须一起拆。"
+      },
+      "reason": "合并的逆过程是等分大格。整体4大格变8小格，蓝色3大格变6小格，两者同时乘2。纸带及蓝色长度不变；允许正确口头/不同表述，待家长审核。"
+    },
+    {
+      "taskId": "G3-U06-E01-P10",
+      "lessonId": "G3-U06-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "0e5c936731a4021341207a13ded14de8ffa0f6c906ca117d5101a57de306ed5b",
+      "afterFingerprint": "0e5c936731a4021341207a13ded14de8ffa0f6c906ca117d5101a57de306ed5b",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U06-E01-P11",
+      "lessonId": "G3-U06-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "7e96729aca176c0f9a6836180e3549e70f9c4e678a242aa9c142a9b9ad585e3e",
+      "afterFingerprint": "7e96729aca176c0f9a6836180e3549e70f9c4e678a242aa9c142a9b9ad585e3e",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U06-E01-P12",
+      "lessonId": "G3-U06-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "09d64f21f1e1cb8552958696443cec39d5ea72b0962fc6e611f7f27309d9d01a",
+      "afterFingerprint": "09d64f21f1e1cb8552958696443cec39d5ea72b0962fc6e611f7f27309d9d01a",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-L03-E01-P01",
+      "lessonId": "G3-L03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "1fb64fac88f5e662035eddab5601dfa66c122baaa5647b6586dcb42a47c3da48",
+      "afterFingerprint": "1fb64fac88f5e662035eddab5601dfa66c122baaa5647b6586dcb42a47c3da48",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-L03-E01-P02",
+      "lessonId": "G3-L03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "4a92df8d95314e852b69e9123db5f53182dba7cfbfbc206f434eead0b27739ec",
+      "afterFingerprint": "4a92df8d95314e852b69e9123db5f53182dba7cfbfbc206f434eead0b27739ec",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-L03-E01-P03",
+      "lessonId": "G3-L03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "241d2131cef9e822562a868ee54f6657cec9ab0bd33d670378f443d001aedf68",
+      "afterFingerprint": "241d2131cef9e822562a868ee54f6657cec9ab0bd33d670378f443d001aedf68",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-L03-E01-P04",
+      "lessonId": "G3-L03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "8cba0ae13d4b7d80a21db4dd665031c03a73cb5852cccd57e746f2430df012f6",
+      "afterFingerprint": "8cba0ae13d4b7d80a21db4dd665031c03a73cb5852cccd57e746f2430df012f6",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-L03-E01-P07",
+      "lessonId": "G3-L03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "a5c60fc1dfaa93de67833350ea32e2361f49fa43dad70dbbe2081680b07769e0",
+      "afterFingerprint": "a5c60fc1dfaa93de67833350ea32e2361f49fa43dad70dbbe2081680b07769e0",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-L03-E01-P05",
+      "lessonId": "G3-L03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "5a959fc413ae237ecf92115e042f55e467d02546e13fcbdb5827e64507d52b29",
+      "afterFingerprint": "5a959fc413ae237ecf92115e042f55e467d02546e13fcbdb5827e64507d52b29",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-L03-E01-P08",
+      "lessonId": "G3-L03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "37851c5cc88a852b06f0bc2595f2339c980458dc02ad069d92f24ea91fb185aa",
+      "afterFingerprint": "37851c5cc88a852b06f0bc2595f2339c980458dc02ad069d92f24ea91fb185aa",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-L03-E01-P06",
+      "lessonId": "G3-L03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "428e31b237f39f48feeff23883e29e3ba020ce7a4e23aa489163225344dda4b7",
+      "afterFingerprint": "428e31b237f39f48feeff23883e29e3ba020ce7a4e23aa489163225344dda4b7",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-L03-E01-P09",
+      "lessonId": "G3-L03-E01",
+      "kind": "reviewed-inverse-replacement",
+      "beforeFingerprint": "72fc1ff33ac99253705560c872156c7049f8431728471738061c2ef06a8d95d5",
+      "afterFingerprint": "3abd56fcd048d19965c406d1cc8a0dc3c55ba5a3d2a49b6ef49536dda2344e4f",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "beforeTask": {
+        "id": "G3-L03-E01-P09",
+        "level": "review",
+        "objectiveId": "G3-L03-E01-OBJ1",
+        "prompt": "两个边长2厘米的小正方形仅在一个顶点接触，外露边总长度是多少？",
+        "solution": "16厘米。没有共用完整边，原来8条边都仍外露。",
+        "hint": "课堂例子是“两个3×3正方形沿整边拼成长6宽3长方形；把两条接缝标记再从外圈中划去”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+        "diagnostic": "一周边界与内部占地是两种量；要分别追踪。 先用手指描外边一圈，再判断题目问周长还是面积。",
+        "diagram": {
+          "type": "concept",
+          "family": "boundary",
+          "variant": "G3-L03-E01:task-static",
+          "values": [],
+          "labels": [
+            "两个边长2厘米的小正方形仅在一个顶点接触，外露边总长度是多少？",
+            "拼在一起以后，哪些边不再露在外面"
+          ],
+          "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+        },
+        "kind": "number",
+        "responseSpec": {
+          "type": "number"
+        },
+        "expected": "16",
+        "unit": "厘米"
+      },
+      "afterTask": {
+        "id": "G3-L03-E01-P09",
+        "level": "review",
+        "objectiveId": "G3-L03-E01-OBJ1",
+        "kind": "number",
+        "prompt": "两块相同的长方形纸片，每块周长20厘米。沿两块纸片上一样长的一整条边贴合，没有重叠，拼成的大长方形周长28厘米。贴合的那条边长多少厘米？",
+        "expected": "6",
+        "unit": "厘米",
+        "solution": "原周长合计20＋20＝40厘米，减少40−28＝12厘米。贴合边在原来的两块纸片上各算过一次，所以12÷2＝6厘米。代回：40−6×2＝28厘米。",
+        "hint": "先求少了多少周长；少掉的是两条同样长的边，不是一条。",
+        "diagram": {
+          "type": "joined-perimeters",
+          "eachPerimeter": 20,
+          "totalPerimeter": 28
+        },
+        "responseSpec": {
+          "type": "number"
+        },
+        "diagnostic": "先求少了多少周长；少掉的是两条同样长的边，不是一条。"
+      },
+      "reason": "减少12厘米来自两个不再外露的同长边，每边6厘米；图只标周长与未知内部边、不提供边长。存在长6宽4的两块矩形满足条件，不能把减少量12直接当边长。"
+    },
+    {
+      "taskId": "G3-L03-E01-P10",
+      "lessonId": "G3-L03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "fa337a6fda4049b5b5ae04edfe6b189d9de9a4f115bacc06cab86e3465ca4b3a",
+      "afterFingerprint": "fa337a6fda4049b5b5ae04edfe6b189d9de9a4f115bacc06cab86e3465ca4b3a",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-L03-E01-P11",
+      "lessonId": "G3-L03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "7e88acd53ac9dca9f644b74844a4f324275503869004d7f89b54e38a3ca11abc",
+      "afterFingerprint": "7e88acd53ac9dca9f644b74844a4f324275503869004d7f89b54e38a3ca11abc",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-L03-E01-P12",
+      "lessonId": "G3-L03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "48e703323643d88e5d921c2fcb3ef11190ed4426f696011e10c1b5b71fc97fa8",
+      "afterFingerprint": "48e703323643d88e5d921c2fcb3ef11190ed4426f696011e10c1b5b71fc97fa8",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-LP01-E01-P01",
+      "lessonId": "G3-LP01-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "7d41aa425718939281a279276a4e861b0921bd1bcd013930ef8fa1268dd992a5",
+      "afterFingerprint": "7d41aa425718939281a279276a4e861b0921bd1bcd013930ef8fa1268dd992a5",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-LP01-E01-P02",
+      "lessonId": "G3-LP01-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "22e9a803b5bdb6d368f6527a37975eab4de66aad94e5e04aaf24fd775ef42f56",
+      "afterFingerprint": "22e9a803b5bdb6d368f6527a37975eab4de66aad94e5e04aaf24fd775ef42f56",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-LP01-E01-P03",
+      "lessonId": "G3-LP01-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "f52d36ef17b56b53eca8b11027cbe1e0b3dfb963a2c43b2ca84dec4664e545db",
+      "afterFingerprint": "f52d36ef17b56b53eca8b11027cbe1e0b3dfb963a2c43b2ca84dec4664e545db",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-LP01-E01-P04",
+      "lessonId": "G3-LP01-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "cf5b707a36cf3cdaffee2bc6911d22d12a79cde15e3391cdfc58402c70812506",
+      "afterFingerprint": "cf5b707a36cf3cdaffee2bc6911d22d12a79cde15e3391cdfc58402c70812506",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-LP01-E01-P07",
+      "lessonId": "G3-LP01-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "1467822235b8cc7b5c6c75589bdfdf42f7fd66b1cf0111a6f94ebf4e25412e35",
+      "afterFingerprint": "1467822235b8cc7b5c6c75589bdfdf42f7fd66b1cf0111a6f94ebf4e25412e35",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-LP01-E01-P05",
+      "lessonId": "G3-LP01-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "e70f3121ad060f961efb1d9bcd35992067452e0f20b58a2d573136732bc36912",
+      "afterFingerprint": "e70f3121ad060f961efb1d9bcd35992067452e0f20b58a2d573136732bc36912",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-LP01-E01-P08",
+      "lessonId": "G3-LP01-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "eb47adcdf737a54c6e1b5afcfe8c40d8fd2a0b63a5555913dfdf9c60221db142",
+      "afterFingerprint": "eb47adcdf737a54c6e1b5afcfe8c40d8fd2a0b63a5555913dfdf9c60221db142",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-LP01-E01-P06",
+      "lessonId": "G3-LP01-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "ebffc00e6e999ada55724072e149bca795869117899b3dbb1f8f8c1bc28e6027",
+      "afterFingerprint": "ebffc00e6e999ada55724072e149bca795869117899b3dbb1f8f8c1bc28e6027",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-LP01-E01-P09",
+      "lessonId": "G3-LP01-E01",
+      "kind": "reviewed-inverse-replacement",
+      "beforeFingerprint": "0bff04feaa1a0c10f1784273c41a3aff47eb200bec611c925ddf4cfa56b95d6a",
+      "afterFingerprint": "662ff05efd98885a55edfce37a105af6e7299bf474a30435417953ef1f5946ab",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "beforeTask": {
+        "id": "G3-LP01-E01-P09",
+        "level": "review",
+        "objectiveId": "G3-LP01-E01-OBJ1",
+        "prompt": "今天星期三，17天后星期几？",
+        "solution": "星期六。17除以7余3，从星期三向后3天。",
+        "hint": "课堂例子是“七个格按周一到周日排成一圈；再画真实月历，区别循环位置和日期编号”。只借用它的表示方法，不照搬例子的数字或标记；解这道题请以上面的题干为准。",
+        "diagnostic": "先找与已知日期的间隔，再取周期余数。 在时间轴上标出起点、终点和经过的每一段。",
+        "diagram": {
+          "type": "concept",
+          "family": "time",
+          "variant": "G3-LP01-E01:task-static",
+          "values": [],
+          "labels": [
+            "今天星期三，17天后星期几？",
+            "星期循环与制作月历"
+          ],
+          "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+        },
+        "kind": "explanation",
+        "responseSpec": {
+          "type": "self-explanation",
+          "rubric": [
+            "回答题目所问的结论",
+            "写出算式、图示关系或关键一步",
+            "说明这一步为什么符合题目条件"
+          ]
+        },
+        "editorialStatus": "parent-assessment"
+      },
+      "afterTask": {
+        "id": "G3-LP01-E01-P09",
+        "level": "review",
+        "objectiveId": "G3-LP01-E01-OBJ1",
+        "kind": "explanation",
+        "prompt": "今天是星期六，17天前是星期几？“17天前”表示从今天往前退17个整天，不把今天额外算一天。",
+        "solution": "17＝7×2＋3，往前退两个整周还是星期六，再退3天：星期五、星期四、星期三。所以是星期三。向后17天又到星期六，可回查。",
+        "hint": "星期每7天循环；这次是往前退，不是往后走。",
+        "responseSpec": {
+          "type": "self-explanation"
+        },
+        "diagnostic": "星期每7天循环；这次是往前退，不是往后走。"
+      },
+      "reason": "两个整周不改星期，从周六退三整天到周三；往后17天仍到周六。不是加3，也不把今天额外计一天；开放解释须家长核对。"
+    },
+    {
+      "taskId": "G3-LP01-E01-P10",
+      "lessonId": "G3-LP01-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "862cca2164739065dfa228bccc79297070fbdf854fe57ab6c37a9d37a6702298",
+      "afterFingerprint": "862cca2164739065dfa228bccc79297070fbdf854fe57ab6c37a9d37a6702298",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-LP01-E01-P11",
+      "lessonId": "G3-LP01-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "04dfc94d340d3dc7c6a33d913f5527c46d05f40a92ca5b2d29ba3b7a0b838e0f",
+      "afterFingerprint": "04dfc94d340d3dc7c6a33d913f5527c46d05f40a92ca5b2d29ba3b7a0b838e0f",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-LP01-E01-P12",
+      "lessonId": "G3-LP01-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "904195c959ff99629ab4d166326eb9b6249d98ceebd4dcce94430b7087ce0fa9",
+      "afterFingerprint": "904195c959ff99629ab4d166326eb9b6249d98ceebd4dcce94430b7087ce0fa9",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E01.w1",
+      "lessonId": "G3-U03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "b8107d766199c31c976865d8c36a2282abd30be5b4065adf71a96b76e0996ce0",
+      "afterFingerprint": "b8107d766199c31c976865d8c36a2282abd30be5b4065adf71a96b76e0996ce0",
+      "beforeVersion": "2026-10-17.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E01.w2",
+      "lessonId": "G3-U03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "9bebd2da0bb0bb526d984d2ab1efd1b517b32bc28b30778692f5de90044852d2",
+      "afterFingerprint": "9bebd2da0bb0bb526d984d2ab1efd1b517b32bc28b30778692f5de90044852d2",
+      "beforeVersion": "2026-10-17.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E01.c1",
+      "lessonId": "G3-U03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "26786f0deae40712503d47fecae6f59746679177cf6c5c9b64329967a46c20aa",
+      "afterFingerprint": "26786f0deae40712503d47fecae6f59746679177cf6c5c9b64329967a46c20aa",
+      "beforeVersion": "2026-10-17.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E01.c2",
+      "lessonId": "G3-U03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "daa8c238fa3e4ca40e8b149e3013df99bc732e9a88a6ef25e735228faef77cb0",
+      "afterFingerprint": "daa8c238fa3e4ca40e8b149e3013df99bc732e9a88a6ef25e735228faef77cb0",
+      "beforeVersion": "2026-10-17.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E01.c3",
+      "lessonId": "G3-U03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "fc36bc7de5e607bedfe51cd24509fcf1d7604f28edb8ffd5d8504f8570be4303",
+      "afterFingerprint": "fc36bc7de5e607bedfe51cd24509fcf1d7604f28edb8ffd5d8504f8570be4303",
+      "beforeVersion": "2026-10-17.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E01.c4",
+      "lessonId": "G3-U03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "5c1108885159f955b17d907f8b3c9555b61c627fd9ae70224aa483bcfddb3a5c",
+      "afterFingerprint": "5c1108885159f955b17d907f8b3c9555b61c627fd9ae70224aa483bcfddb3a5c",
+      "beforeVersion": "2026-10-17.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E01.c5",
+      "lessonId": "G3-U03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "1fe5353fe8cffd06c8b213f6451c69713e316e8c0181015bed897e555a116692",
+      "afterFingerprint": "1fe5353fe8cffd06c8b213f6451c69713e316e8c0181015bed897e555a116692",
+      "beforeVersion": "2026-10-17.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E01.t1",
+      "lessonId": "G3-U03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "aa241c7d2c0fc8b1d8a03ae3d31c80579bc66ea18e066fef45e9db9491434aa5",
+      "afterFingerprint": "aa241c7d2c0fc8b1d8a03ae3d31c80579bc66ea18e066fef45e9db9491434aa5",
+      "beforeVersion": "2026-10-17.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E01.t2",
+      "lessonId": "G3-U03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "dc9b6e9f78b39097379cda19d461c86232fbfe99a36dafe97e131e0ff2011d1b",
+      "afterFingerprint": "dc9b6e9f78b39097379cda19d461c86232fbfe99a36dafe97e131e0ff2011d1b",
+      "beforeVersion": "2026-10-17.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E01.h1",
+      "lessonId": "G3-U03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "78a80d03a87ef814578cffc7603b937345253cdc128955b323d054126e2f80f2",
+      "afterFingerprint": "78a80d03a87ef814578cffc7603b937345253cdc128955b323d054126e2f80f2",
+      "beforeVersion": "2026-10-17.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E01.r1",
+      "lessonId": "G3-U03-E01",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "e3629af7b2fb07dcb9ae6695b621c2fe20c345eb6054dfe9ddc7f47a850cd211",
+      "afterFingerprint": "e3629af7b2fb07dcb9ae6695b621c2fe20c345eb6054dfe9ddc7f47a850cd211",
+      "beforeVersion": "2026-10-17.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E01.r2",
+      "lessonId": "G3-U03-E01",
+      "kind": "reviewed-inverse-replacement",
+      "beforeFingerprint": "fb2c819ca4ae3f4afc79c88d7f83f664e1d6971bf446b7c1391fa403dd895a9e",
+      "afterFingerprint": "1c4603e58ee0736f5eb369d37f5325c6335cdc9f57e988a77f98ce17615d05f2",
+      "beforeVersion": "2026-10-17.1",
+      "afterVersion": "2026-10-18.1",
+      "beforeTask": {
+        "id": "G3-U03-E01.r2",
+        "kind": "number",
+        "prompt": "6块木板各长12厘米，沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。每处重叠2厘米。拼好后，从最左端到最右端的距离是多少厘米？",
+        "expected": "62",
+        "unit": "厘米",
+        "solution": "72−2×5＝62厘米。",
+        "hint": "6块有5处接头。",
+        "diagnostic": "先分清“所有材料一共多长”和“拼好后最左到最右多长”。重叠区被两块材料各算一次，只减去多算的那一次。",
+        "diagram": {
+          "type": "measurement",
+          "mode": "boards",
+          "pieceLengthsMm": [
+            120,
+            120,
+            120,
+            120,
+            120,
+            120
+          ],
+          "overlapsMm": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "caption": "六块板沿同一直线搭接，五处各重叠2厘米；量最外两端的距离。"
+        },
+        "level": "review",
+        "objectiveId": "overlap.direct",
+        "responseSpec": {
+          "type": "number"
+        }
+      },
+      "afterTask": {
+        "id": "G3-U03-E01.r2",
+        "level": "review",
+        "objectiveId": "overlap.inverse",
+        "kind": "number",
+        "prompt": "6块同样长的木板沿同一直线依次搭接，只有相邻两板重叠，没有三块叠在一起。每处重叠2厘米，拼好后的最外两端相距62厘米。每块木板长多少厘米？",
+        "expected": "12",
+        "unit": "厘米",
+        "solution": "6块板有5处接头，重叠合计2×5＝10厘米。还原6块板的长度和：62＋10＝72厘米，再72÷6＝12厘米。代回：12×6−2×5＝62厘米。",
+        "hint": "先把少算的重叠补回材料合计，再平均分成6块。",
+        "diagram": {
+          "type": "measurement",
+          "mode": "boards",
+          "unknown": "pieceLength",
+          "count": 6,
+          "totalMm": 620,
+          "overlapsMm": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ]
+        },
+        "responseSpec": {
+          "type": "number"
+        },
+        "diagnostic": "先把少算的重叠补回材料合计，再平均分成6块。"
+      },
+      "reason": "六板五处接头，每处2厘米。先补回10厘米重叠，再72厘米平均分六块得12厘米。图用620毫米已知距离和未知单板长，不按比例，不给12厘米答案。"
+    },
+    {
+      "taskId": "G3-U03-E02.w1",
+      "lessonId": "G3-U03-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "5cf7987da6118a22b22d01dfbeecaa285a6fe13656d51c91dfe92e5fef540c9c",
+      "afterFingerprint": "5cf7987da6118a22b22d01dfbeecaa285a6fe13656d51c91dfe92e5fef540c9c",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E02.w2",
+      "lessonId": "G3-U03-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "65b5e04f82ad5143c9cdf89ee8149b4e37d7469ee9f924d18dd22092af187458",
+      "afterFingerprint": "65b5e04f82ad5143c9cdf89ee8149b4e37d7469ee9f924d18dd22092af187458",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E02.c1",
+      "lessonId": "G3-U03-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "894a84901556d2be0bb56e242bdbe97d31c2600c7eaef2c23b9c644df8ca5d8d",
+      "afterFingerprint": "894a84901556d2be0bb56e242bdbe97d31c2600c7eaef2c23b9c644df8ca5d8d",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E02.c2",
+      "lessonId": "G3-U03-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "750ee94f6aab5a1318a0278ce755d818558c37ecac092ab0c1c3e317c0b97565",
+      "afterFingerprint": "750ee94f6aab5a1318a0278ce755d818558c37ecac092ab0c1c3e317c0b97565",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E02.c3",
+      "lessonId": "G3-U03-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "6af2d26c6b0227638617d832ba887d31756064fae501f6724d2130d8487f5715",
+      "afterFingerprint": "6af2d26c6b0227638617d832ba887d31756064fae501f6724d2130d8487f5715",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E02.c4",
+      "lessonId": "G3-U03-E02",
+      "kind": "reviewed-inverse-replacement",
+      "beforeFingerprint": "1e4f4526ab52d87ab2b9855da83888fe303e852500b1573bff793a4c684ebf05",
+      "afterFingerprint": "fc09ab6db3a0199d5a26c3a6a8b11f161f5446248dcf1fea3d8c89f55d9b6f60",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "beforeTask": {
+        "id": "G3-U03-E02.c4",
+        "kind": "number",
+        "prompt": "一条链拉直后，从最左外缘到最右外缘长130毫米。这相当于多少厘米？",
+        "expected": "13",
+        "unit": "厘米",
+        "solution": "130÷10＝13厘米。",
+        "hint": "10毫米是1厘米。",
+        "level": "core",
+        "objectiveId": "chain.joint",
+        "responseSpec": {
+          "type": "number"
+        }
+      },
+      "afterTask": {
+        "id": "G3-U03-E02.c4",
+        "level": "core",
+        "objectiveId": "chain.inverse",
+        "kind": "number",
+        "prompt": "4个相同链环依次扣接并拉直，不首尾闭合。每环外长50毫米，整条链最左外缘到最右外缘相距176毫米。每处接头重叠两个端部的厚度，金属条处处一样厚。金属条厚多少毫米？",
+        "expected": "4",
+        "unit": "毫米",
+        "solution": "4个外长合计50×4＝200毫米，3处接头重叠合计200−176＝24毫米；每处24÷3＝8毫米，包含两段同厚的端部，所以8÷2＝4毫米。代回：50×4−(4＋4)×3＝176毫米。",
+        "hint": "先求所有接头合计重叠多少，再分到3处接头，最后一处还要分成两段厚度。",
+        "diagram": {
+          "type": "measurement",
+          "mode": "chain",
+          "pieceLengthMm": 50,
+          "count": 4,
+          "totalMm": 176,
+          "unknown": "thickness"
+        },
+        "responseSpec": {
+          "type": "number"
+        },
+        "diagnostic": "先求所有接头合计重叠多少，再分到3处接头，最后一处还要分成两段厚度。"
+      },
+      "reason": "四环三接头，外长50毫米、拉直总长176毫米，与开头40毫米厚5毫米的例子不同。全部重叠24毫米，每接头8毫米还要分为两段同厚端部，才得厚4毫米；8是单接头重叠，24是全部重叠，均不是厚度。未知厚度不进入题图数据。"
+    },
+    {
+      "taskId": "G3-U03-E02.c5",
+      "lessonId": "G3-U03-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "60c6f4fb8da4f8e39f9118cfcc4ec4e415f54c62cf64eb8a52618dea051b3ac5",
+      "afterFingerprint": "60c6f4fb8da4f8e39f9118cfcc4ec4e415f54c62cf64eb8a52618dea051b3ac5",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E02.t1",
+      "lessonId": "G3-U03-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "1dbffc456a204f319d4e2ff333cf631f7f26d23e86163d1fbee9b346bb179e4c",
+      "afterFingerprint": "1dbffc456a204f319d4e2ff333cf631f7f26d23e86163d1fbee9b346bb179e4c",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E02.t2",
+      "lessonId": "G3-U03-E02",
+      "kind": "reviewed-inverse-replacement",
+      "beforeFingerprint": "c11716fbdc1422a57607cb887b0ff2406281420adc883c99699fb9cae56ce3f2",
+      "afterFingerprint": "4dbb7c04f68c834dfde31713db31f35f8392d79d5b084fb4ef7862e95a145748",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "beforeTask": {
+        "id": "G3-U03-E02.t2",
+        "kind": "number",
+        "prompt": "6个相同链环依次扣接成一条不闭合的链并拉直。第1个环占30毫米，此后每添1个环，链的两端距离只增加22毫米。6个环拉直后的两端距离是多少毫米？",
+        "expected": "140",
+        "unit": "毫米",
+        "solution": "30＋22×5＝140毫米。",
+        "hint": "首环完整，后面5环按新增量。",
+        "level": "transfer",
+        "objectiveId": "chain.generalize",
+        "responseSpec": {
+          "type": "number"
+        }
+      },
+      "afterTask": {
+        "id": "G3-U03-E02.t2",
+        "level": "transfer",
+        "objectiveId": "chain.inverse",
+        "kind": "number",
+        "prompt": "6个相同链环依次扣接并拉直，不首尾闭合。金属条厚4毫米，每处接头重叠两段4毫米的端部。整条链最左外缘到最右外缘相距140毫米。一个链环的外长是多少毫米？",
+        "expected": "30",
+        "unit": "毫米",
+        "solution": "6个环有5处接头，每处4＋4＝8毫米。先补回重叠：140＋8×5＝180毫米，得到6个环的外长和；180÷6＝30毫米。代回：30×6−8×5＝140毫米。",
+        "hint": "总长不是6个外长的和；先把5处接头的重叠补回，再除以6。",
+        "diagram": {
+          "type": "measurement",
+          "mode": "chain",
+          "thicknessMm": 4,
+          "count": 6,
+          "totalMm": 140,
+          "unknown": "pieceLength"
+        },
+        "responseSpec": {
+          "type": "number"
+        },
+        "diagnostic": "总长不是6个外长的和；先把5处接头的重叠补回，再除以6。"
+      },
+      "reason": "六环五接头，每接头8毫米。将40毫米重叠补回总长140，得到六个外长合计180，再平均得单环30毫米。140除6漏还原重叠；未知外长不进入图数据。"
+    },
+    {
+      "taskId": "G3-U03-E02.h1",
+      "lessonId": "G3-U03-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "3115e84f2c2b6d4053fdd92be5dcf66c4a64691c7a7a629077088ebf131ea5bb",
+      "afterFingerprint": "3115e84f2c2b6d4053fdd92be5dcf66c4a64691c7a7a629077088ebf131ea5bb",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E02.r1",
+      "lessonId": "G3-U03-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "dd9eae4825103f029d5b1cf254e7cc1dd86fb2918139dc4c1f2bb84947a0885a",
+      "afterFingerprint": "dd9eae4825103f029d5b1cf254e7cc1dd86fb2918139dc4c1f2bb84947a0885a",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "G3-U03-E02.r2",
+      "lessonId": "G3-U03-E02",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "2c914a5a89b3154b9392f40a3dc1d3558a03fe54b425c608f00b85020883a1b3",
+      "afterFingerprint": "2c914a5a89b3154b9392f40a3dc1d3558a03fe54b425c608f00b85020883a1b3",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "algebra.substitution.intro.w1",
+      "lessonId": "algebra.substitution.intro",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "a1f157d737533fad7f09836d295264f33aae3ca32b70d893f684eb6a512ab1e6",
+      "afterFingerprint": "a1f157d737533fad7f09836d295264f33aae3ca32b70d893f684eb6a512ab1e6",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "algebra.substitution.intro.w2",
+      "lessonId": "algebra.substitution.intro",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "683fea4f4f277083afd76f6aa97ffab8e0b2ccbd37205392a0789cd85173d58e",
+      "afterFingerprint": "683fea4f4f277083afd76f6aa97ffab8e0b2ccbd37205392a0789cd85173d58e",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "algebra.substitution.intro.c1",
+      "lessonId": "algebra.substitution.intro",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "bae54b966723bb08169dd095aac35d7938ac36966e6fd5d0dfb5e5ffefb18feb",
+      "afterFingerprint": "bae54b966723bb08169dd095aac35d7938ac36966e6fd5d0dfb5e5ffefb18feb",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "algebra.substitution.intro.c2",
+      "lessonId": "algebra.substitution.intro",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "5641da1d3790862cf09034f384ef2af7b6f828c2d8d362e30de4f37ada367493",
+      "afterFingerprint": "5641da1d3790862cf09034f384ef2af7b6f828c2d8d362e30de4f37ada367493",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "algebra.substitution.intro.c3",
+      "lessonId": "algebra.substitution.intro",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "84d632eeeb6104770c2f18de9a4c545b963cf150c8638efc4026008b6d63bb4c",
+      "afterFingerprint": "84d632eeeb6104770c2f18de9a4c545b963cf150c8638efc4026008b6d63bb4c",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "algebra.substitution.intro.c4",
+      "lessonId": "algebra.substitution.intro",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "27297ab6fbce34645667d3c1993fbab3b17364e72464860cfb7677a513e31e01",
+      "afterFingerprint": "27297ab6fbce34645667d3c1993fbab3b17364e72464860cfb7677a513e31e01",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "algebra.substitution.intro.c5",
+      "lessonId": "algebra.substitution.intro",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "83a25a4fa37690f8128e39d851eef5f3fac9539b3c8ea80acc61d83e8ed47988",
+      "afterFingerprint": "83a25a4fa37690f8128e39d851eef5f3fac9539b3c8ea80acc61d83e8ed47988",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "algebra.substitution.intro.t1",
+      "lessonId": "algebra.substitution.intro",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "ef625b1c2e590271cc3d884e7922524f09c136e8bd20a8aa2cf36a4f4061d93d",
+      "afterFingerprint": "ef625b1c2e590271cc3d884e7922524f09c136e8bd20a8aa2cf36a4f4061d93d",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "algebra.substitution.intro.t2",
+      "lessonId": "algebra.substitution.intro",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "a59ab8284bca3db60e9627b5224b21f970d6baccaf30e98e13f43b8cc5e5e9da",
+      "afterFingerprint": "a59ab8284bca3db60e9627b5224b21f970d6baccaf30e98e13f43b8cc5e5e9da",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "algebra.substitution.intro.h1",
+      "lessonId": "algebra.substitution.intro",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "95aa6d1d8e4bebe03ac8950df425a5f9ffd504c7c7a1b7f15d17e28660d80480",
+      "afterFingerprint": "95aa6d1d8e4bebe03ac8950df425a5f9ffd504c7c7a1b7f15d17e28660d80480",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "algebra.substitution.intro.r1",
+      "lessonId": "algebra.substitution.intro",
+      "kind": "assessment-version-only",
+      "beforeFingerprint": "da6fcf39352ad7c9eb11bd7106e2545574970e534b591e460a60536f672e78a4",
+      "afterFingerprint": "da6fcf39352ad7c9eb11bd7106e2545574970e534b591e460a60536f672e78a4",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "reason": "本课评估版本更新，题目原样保留；旧会话继续归档，不冒充新版本证据。"
+    },
+    {
+      "taskId": "algebra.substitution.intro.r2",
+      "lessonId": "algebra.substitution.intro",
+      "kind": "reviewed-inverse-replacement",
+      "beforeFingerprint": "461bfc1a26c499d55580b614a2f30659e73d48e898d48248cfb0d9eef3955452",
+      "afterFingerprint": "afdabe320485fee174449edef16ff62afa4c354c45d7361cde056620b24bae7b",
+      "beforeVersion": "2026-10-02.1",
+      "afterVersion": "2026-10-18.1",
+      "beforeTask": {
+        "id": "algebra.substitution.intro.r2",
+        "kind": "choice",
+        "prompt": "4×(乙+1)正确展开是哪一个？",
+        "options": [
+          {
+            "id": "1",
+            "text": "4乙+1"
+          },
+          {
+            "id": "2",
+            "text": "乙+4"
+          },
+          {
+            "id": "3",
+            "text": "4乙+4"
+          }
+        ],
+        "expected": "3",
+        "solution": "每份都有乙和1，共4份；两部分都乘4。",
+        "hint": "先圈出题目让你换掉的那个字，把它换成已知相等的全部内容。外面的加减、乘几份和等号右边也要保留。",
+        "level": "review",
+        "objectiveId": "substitution.outer",
+        "responseSpec": {
+          "type": "choice"
+        }
+      },
+      "afterTask": {
+        "id": "algebra.substitution.intro.r2",
+        "level": "review",
+        "objectiveId": "substitution.outer",
+        "kind": "choice",
+        "prompt": "3盒相同的点心，每盒有1块饼干和同样多的糖。饼干和糖合起来共24件。每盒有几颗糖？",
+        "options": [
+          {
+            "id": "1",
+            "text": "7颗"
+          },
+          {
+            "id": "2",
+            "text": "8颗"
+          },
+          {
+            "id": "3",
+            "text": "21颗"
+          }
+        ],
+        "expected": "1",
+        "solution": "先求每盒共有24÷3＝8件点心，再减去每盒1块饼干，8−1＝7颗糖。8是每盒点心总件数，21是3盒糖总颗数，都不是每盒糖数。代回：3×(7＋1)＝24件。",
+        "hint": "先把“一盒点心”作为整体，再从一盒中去掉那1块饼干。",
+        "responseSpec": {
+          "type": "choice"
+        },
+        "diagnostic": "先把“一盒点心”作为整体，再从一盒中去掉那1块饼干。"
+      },
+      "reason": "先还原每盒8件点心，减该盒1块饼干得7颗糖。选7成立；8是每盒总件数，21是三盒糖合计，均误认了所求量。"
+    }
+  ]
+}

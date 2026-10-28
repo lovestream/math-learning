@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "source": {
+    "sha": "1ac14c25f7825c63764fec78b7e11e1bd98edf75",
+    "dirty": false
+  },
+  "checkedAt": "2026-10-15T08:56:50.726Z",
+  "repo": "lovestream/math-learning",
+  "branch": "detective-inbox",
+  "sourcePath": "content/detective/inbox/DT-DEMO-CARDS-20261015.json",
+  "sourceBlobSha": "e640f2ca22c08bc960a164fdcc17e4822536623f",
+  "bundleId": "DT-DEMO-CARDS-20261015",
+  "status": "auto-published",
+  "caseIds": [
+    "DT-DEMO-CARDS-20261015-A",
+    "DT-DEMO-CARDS-20261015-B",
+    "DT-DEMO-CARDS-20261015-C"
+  ],
+  "mathOracleVersion": "detective-oracle.v1",
+  "scope": "真实GitHub只读→启动自动导入→本机回执→浏览器新案可见；数据仅匿名演示，非Kevin新作业。"
+}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checked": [
+    "expression-structure-first-answer-refresh",
+    "replacement-mass-unique-parallel-options",
+    "code-parent-review-no-reward",
+    "equivalent-fraction-no-repeat-reward"
+  ],
+  "threeChecksOnly": true,
+  "firstAnswerPreserved": true,
+  "isolatedLearnerData": true,
+  "errors": [],
+  "source": {
+    "prHeadSha": "028e5ad2cd2ae2d6abf1a47abdbe6c875e071ebc",
+    "sha": "028e5ad2cd2ae2d6abf1a47abdbe6c875e071ebc",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-11T15:40:19.095Z"
+  }
+}
