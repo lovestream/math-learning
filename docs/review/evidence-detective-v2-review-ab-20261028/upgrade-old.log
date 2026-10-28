@@ -1,0 +1,5 @@
+
+> kevin-math-lab@0.1.0 test:detective:upgrade
+> node scripts/verify-detective-upgrade.mjs
+
+Upgrade, restore, corruption refusal, six-bundle sync and old-program rollback: passed (synthetic data only)

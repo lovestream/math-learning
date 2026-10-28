@@ -1,0 +1,167 @@
+{
+  "baseline": "0d7fdf3e606eeae53ccbcc57f9c1887433a074c3",
+  "sourceSha": "037d8124ab04d4c07a71dbdd1634bd3242ead386",
+  "syntheticOnly": true,
+  "rows": [
+    {
+      "id": "A01",
+      "scene": "普通练习与迁移抄目标、空解释",
+      "input": "first9/final0.5/check12.5/无式",
+      "expected": "只算答案改对，checkValid与独立均false；家长不能空补",
+      "evidence": "tests/detective-evidence-review.test.mjs; verify-detective-evidence-browser.json",
+      "status": "passed"
+    },
+    {
+      "id": "A04",
+      "scene": "裸数值伪装检验式",
+      "input": "12.5、12.5克、(12.5)放进式子/说明",
+      "expected": "不能自动独立，家长确认按钮禁用，服务端原子拒绝",
+      "evidence": "tests/detective-evidence-review.test.mjs; verify-detective-evidence-browser.json",
+      "status": "passed"
+    },
+    {
+      "id": "A02",
+      "scene": "实际运算与辅助区分",
+      "input": "25×0.5；帮助/不确定/空白",
+      "expected": "无提示有效计算可留证；辅助不升级",
+      "evidence": "tests/detective-evidence-review.test.mjs; verify-detective-v2-browser.json",
+      "status": "passed"
+    },
+    {
+      "id": "A03",
+      "scene": "统计语义",
+      "input": "反馈前改对与有效独立纠错分列",
+      "expected": "分子分母可追溯，不混入弱证据",
+      "evidence": "node-tests.log; verify-detective-evidence-browser.json",
+      "status": "passed"
+    },
+    {
+      "id": "B01",
+      "scene": "等价写法",
+      "input": "交换、括号、分配、分数、□代入",
+      "expected": "数学函数等价接受，无唯一标准字符串",
+      "evidence": "tests/detective-evidence-review.test.mjs",
+      "status": "passed"
+    },
+    {
+      "id": "B02",
+      "scene": "同值不等价",
+      "input": "裸12.5、抵消凑数、错误运算、注入/除零",
+      "expected": "不执行输入、不授予独立资格",
+      "evidence": "tests/detective-evidence-review.test.mjs",
+      "status": "passed"
+    },
+    {
+      "id": "B03",
+      "scene": "反向多方法",
+      "input": "12.5÷0.5=25",
+      "expected": "合法另一反向关系可通过",
+      "evidence": "verify-detective-evidence-browser.json",
+      "status": "passed"
+    },
+    {
+      "id": "B04",
+      "scene": "全参数",
+      "input": "8族256参数各2反向关系",
+      "expected": "4096关系通过，原2048答案oracle保留",
+      "evidence": "node-tests.log",
+      "status": "passed"
+    },
+    {
+      "id": "B05",
+      "scene": "同值不同角色",
+      "input": "26克/26颗、12＋4×3",
+      "expected": "数学角色不混淆，不误拒",
+      "evidence": "tests/detective-evidence-review.test.mjs",
+      "status": "passed"
+    },
+    {
+      "id": "B06",
+      "scene": "家长确认闭环",
+      "input": "反馈前文字/其他方法，家长依据与确认",
+      "expected": "当前资格及最新复测可确认，原result/两答不变",
+      "evidence": "verify-detective-evidence-browser.json; detective-evidence-upgrade.json",
+      "status": "passed"
+    },
+    {
+      "id": "B07",
+      "scene": "冲突与幂等",
+      "input": "旧标签、计划旧revision、重复event/重复确认",
+      "expected": "409原子拒绝；至多一次推进",
+      "evidence": "tests/detective-evidence-review.test.mjs; verify-detective-evidence-browser.json",
+      "status": "passed"
+    },
+    {
+      "id": "B08",
+      "scene": "更正与容量",
+      "input": "回补更正、较早记录、30条批阅上限",
+      "expected": "历史保留，不跳过新复测；满后旧event仍能回放",
+      "evidence": "tests/detective-evidence-review.test.mjs",
+      "status": "passed"
+    },
+    {
+      "id": "B09",
+      "scene": "儿童当前/历史显示",
+      "input": "家长确认后重新打开儿童记录",
+      "expected": "当前家长已核对，原自动反馈单列",
+      "evidence": "detective-evidence-child-parent-confirmed-1440.png",
+      "status": "passed"
+    },
+    {
+      "id": "C01",
+      "scene": "旧记录与旧未结题",
+      "input": "真实0d7fdf3旧程序生成数据",
+      "expected": "只读升级不改原库；旧弱证据不自动继承，未结题可完成",
+      "evidence": "detective-evidence-upgrade.json",
+      "status": "passed"
+    },
+    {
+      "id": "C03",
+      "scene": "真实旧版误拒等价式",
+      "input": "0d7fdf3将1×26拒作26×1",
+      "expected": "新版只读重核、家长修复复测、原结果和检查点不变",
+      "evidence": "detective-legacy-equivalence.json; verify-legacy-equivalence.mjs",
+      "status": "passed"
+    },
+    {
+      "id": "C02",
+      "scene": "备份与回滚",
+      "input": "三个固定旧程序和升级前检查点",
+      "expected": "整库恢复与实际旧程序回滚通过",
+      "evidence": "detective-upgrade.json; detective-v2-upgrade.json; detective-evidence-upgrade.json",
+      "status": "passed"
+    },
+    {
+      "id": "R01",
+      "scene": "全部原回归与新增",
+      "input": "252Node、31浏览器、build/content",
+      "expected": "全部通过；70课849题不扩展",
+      "evidence": "ci-summary.json; node-tests.log; content.log",
+      "status": "passed"
+    },
+    {
+      "id": "R02",
+      "scene": "GitHub实际投递",
+      "input": "10包30案固定源blob",
+      "expected": "全部四步回放通过，均为匿名模拟",
+      "evidence": "deliveries.json",
+      "status": "passed"
+    },
+    {
+      "id": "R03",
+      "scene": "隐私与访问",
+      "input": "API/DOM/客户端bundle、家长权限、固定blob",
+      "expected": "自查前不泄漏标准答案，服务端证明器不进产物",
+      "evidence": "detective-v2-boundaries.json; verify-detective-v2-browser.json",
+      "status": "passed"
+    },
+    {
+      "id": "R04",
+      "scene": "操作与视觉",
+      "input": "390/768/1440、键盘、模拟触控、200%缩放",
+      "expected": "可操作无横溢；不冒充实机iPad",
+      "evidence": "detective-evidence-keyboard.json; verify-detective-evidence-browser.json",
+      "status": "passed"
+    }
+  ]
+}

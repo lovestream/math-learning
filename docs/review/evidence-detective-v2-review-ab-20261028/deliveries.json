@@ -1,0 +1,797 @@
+{
+  "passed": true,
+  "source": {
+    "sha": "037d8124ab04d4c07a71dbdd1634bd3242ead386",
+    "dirty": false,
+    "dataHead": "8a9bd699ba88385e9336590fe70a8b3ecec4bd85"
+  },
+  "prefix": "DT-",
+  "repo": "lovestream/math-learning",
+  "branch": "detective-inbox",
+  "checkedAt": "2026-10-27T23:40:54.818Z",
+  "bundles": [
+    {
+      "bundleId": "DT-20261015-ARITH-A",
+      "path": "content/detective/inbox/DT-20261015-ARITH-A.json",
+      "blobSha": "487495c16239bf991d4d8ae2900aa84b1e113a1b",
+      "disposition": "auto-published",
+      "revision": 1,
+      "composition": {
+        "wrong": 2,
+        "correct": 1
+      },
+      "cases": [
+        {
+          "id": "DT-20261015-ARITH-A-A",
+          "template": "arithmetic-order-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 0,
+          "repair": "99",
+          "verify": "9",
+          "passed": true
+        },
+        {
+          "id": "DT-20261015-ARITH-A-B",
+          "template": "arithmetic-order-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 0,
+          "repair": "85",
+          "verify": "42",
+          "passed": true
+        },
+        {
+          "id": "DT-20261015-ARITH-A-C",
+          "template": "arithmetic-order-v1",
+          "verdict": "correct",
+          "firstWrongStep": null,
+          "repair": "115",
+          "verify": "8",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "bundleId": "DT-20261015-CARD-A",
+      "path": "content/detective/inbox/DT-20261015-CARD-A.json",
+      "blobSha": "7d8afd779c25606d97f338399a753269458b088a",
+      "disposition": "auto-published",
+      "revision": 1,
+      "composition": {
+        "wrong": 2,
+        "correct": 1
+      },
+      "cases": [
+        {
+          "id": "DT-20261015-CARD-A-A",
+          "template": "card-thickness-grouping-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 1,
+          "repair": "32",
+          "verify": "24",
+          "passed": true
+        },
+        {
+          "id": "DT-20261015-CARD-A-B",
+          "template": "card-thickness-grouping-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 1,
+          "repair": "25",
+          "verify": "20",
+          "passed": true
+        },
+        {
+          "id": "DT-20261015-CARD-A-C",
+          "template": "card-thickness-grouping-v1",
+          "verdict": "correct",
+          "firstWrongStep": null,
+          "repair": "18",
+          "verify": "12",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "bundleId": "DT-20261015-EQUAL-A",
+      "path": "content/detective/inbox/DT-20261015-EQUAL-A.json",
+      "blobSha": "0e431dc831a0130c9c1d8ba2a9d9da57b515da43",
+      "disposition": "auto-published",
+      "revision": 1,
+      "composition": {
+        "wrong": 2,
+        "correct": 1
+      },
+      "cases": [
+        {
+          "id": "DT-20261015-EQUAL-A-A",
+          "template": "equal-groups-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 0,
+          "repair": "42",
+          "verify": "7",
+          "passed": true
+        },
+        {
+          "id": "DT-20261015-EQUAL-A-B",
+          "template": "equal-groups-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 0,
+          "repair": "36",
+          "verify": "9",
+          "passed": true
+        },
+        {
+          "id": "DT-20261015-EQUAL-A-C",
+          "template": "equal-groups-v1",
+          "verdict": "correct",
+          "firstWrongStep": null,
+          "repair": "40",
+          "verify": "8",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "bundleId": "DT-20261015-ORDER-A",
+      "path": "content/detective/inbox/DT-20261015-ORDER-A.json",
+      "blobSha": "4762400997021be1d635ac89fb654e6fb1a3349f",
+      "disposition": "auto-published",
+      "revision": 1,
+      "composition": {
+        "wrong": 2,
+        "correct": 1
+      },
+      "cases": [
+        {
+          "id": "DT-20261015-ORDER-A-A",
+          "template": "length-ordering-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 0,
+          "repair": "9000毫米|75分米|6米|420厘米",
+          "verify": "9000",
+          "passed": true
+        },
+        {
+          "id": "DT-20261015-ORDER-A-B",
+          "template": "length-ordering-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 0,
+          "repair": "4900毫米|450厘米|4米|38分米",
+          "verify": "4900",
+          "passed": true
+        },
+        {
+          "id": "DT-20261015-ORDER-A-C",
+          "template": "length-ordering-v1",
+          "verdict": "correct",
+          "firstWrongStep": null,
+          "repair": "3米|29分米|2800毫米|240厘米",
+          "verify": "3000",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "bundleId": "DT-20261015-UNIT-A",
+      "path": "content/detective/inbox/DT-20261015-UNIT-A.json",
+      "blobSha": "bbb424436eef7438c307c551bd3da97c1fc20934",
+      "disposition": "auto-published",
+      "revision": 1,
+      "composition": {
+        "wrong": 2,
+        "correct": 1
+      },
+      "cases": [
+        {
+          "id": "DT-20261015-UNIT-A-A",
+          "template": "length-conversion-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 1,
+          "repair": "7000",
+          "verify": "7",
+          "passed": true
+        },
+        {
+          "id": "DT-20261015-UNIT-A-B",
+          "template": "length-conversion-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 1,
+          "repair": "800",
+          "verify": "8",
+          "passed": true
+        },
+        {
+          "id": "DT-20261015-UNIT-A-C",
+          "template": "length-conversion-v1",
+          "verdict": "correct",
+          "firstWrongStep": null,
+          "repair": "540",
+          "verify": "54",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "bundleId": "DT-20261016-WIRE-A",
+      "path": "content/detective/inbox/DT-20261016-WIRE-A.json",
+      "blobSha": "e00e2ac22b5d7a263c389a92866a44630e5b442c",
+      "disposition": "auto-published",
+      "revision": 1,
+      "composition": {
+        "wrong": 2,
+        "correct": 1
+      },
+      "cases": [
+        {
+          "id": "DT-20261016-WIRE-A-A",
+          "template": "wrap-surplus-shortage-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 2,
+          "repair": "18",
+          "verify": "5",
+          "passed": true
+        },
+        {
+          "id": "DT-20261016-WIRE-A-B",
+          "template": "wrap-surplus-shortage-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 2,
+          "repair": "16",
+          "verify": "6",
+          "passed": true
+        },
+        {
+          "id": "DT-20261016-WIRE-A-C",
+          "template": "wrap-surplus-shortage-v1",
+          "verdict": "correct",
+          "firstWrongStep": null,
+          "repair": "26",
+          "verify": "6",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "bundleId": "DT-20261026-AVG-FOUNDATION-A",
+      "path": "content/detective/inbox/DT-20261026-AVG-FOUNDATION-A.json",
+      "blobSha": "974a4eb717c8720a01388eb73cf7607199801b0a",
+      "disposition": "auto-published",
+      "revision": 1,
+      "composition": {
+        "wrong": 2,
+        "correct": 1
+      },
+      "cases": [
+        {
+          "id": "DT-20261026-AVG-FOUNDATION-A-A",
+          "template": "batch-average-mass-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 1,
+          "repair": "3/5",
+          "verify": "6",
+          "passed": true
+        },
+        {
+          "id": "DT-20261026-AVG-FOUNDATION-A-B",
+          "template": "batch-average-mass-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 1,
+          "repair": "1/2",
+          "verify": "6",
+          "passed": true
+        },
+        {
+          "id": "DT-20261026-AVG-FOUNDATION-A-C",
+          "template": "batch-average-mass-v1",
+          "verdict": "correct",
+          "firstWrongStep": null,
+          "repair": "1/2",
+          "verify": "4",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "bundleId": "DT-20261026-AVG-REVERSE-A",
+      "path": "content/detective/inbox/DT-20261026-AVG-REVERSE-A.json",
+      "blobSha": "b430c15bb733f278135629dd586503551b524574",
+      "disposition": "auto-published",
+      "revision": 1,
+      "composition": {
+        "wrong": 2,
+        "correct": 1
+      },
+      "cases": [
+        {
+          "id": "DT-20261026-AVG-REVERSE-A-A",
+          "template": "mass-average-inverse-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 1,
+          "repair": "24",
+          "verify": "2",
+          "passed": true
+        },
+        {
+          "id": "DT-20261026-AVG-REVERSE-A-B",
+          "template": "mass-average-inverse-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 1,
+          "repair": "16",
+          "verify": "8",
+          "passed": true
+        },
+        {
+          "id": "DT-20261026-AVG-REVERSE-A-C",
+          "template": "mass-average-inverse-v1",
+          "verdict": "correct",
+          "firstWrongStep": null,
+          "repair": "6",
+          "verify": "36",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "bundleId": "DT-20261026-SPR-FORWARD-A",
+      "path": "content/detective/inbox/DT-20261026-SPR-FORWARD-A.json",
+      "blobSha": "01f67fa1c42b0c76bfd4256e9d0455faca6cc6a0",
+      "disposition": "auto-published",
+      "revision": 1,
+      "composition": {
+        "wrong": 2,
+        "correct": 1
+      },
+      "cases": [
+        {
+          "id": "DT-20261026-SPR-FORWARD-A-A",
+          "template": "spring-total-length-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 2,
+          "repair": "80",
+          "verify": "4",
+          "passed": true
+        },
+        {
+          "id": "DT-20261026-SPR-FORWARD-A-B",
+          "template": "spring-total-length-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 2,
+          "repair": "100",
+          "verify": "8",
+          "passed": true
+        },
+        {
+          "id": "DT-20261026-SPR-FORWARD-A-C",
+          "template": "spring-total-length-v1",
+          "verdict": "correct",
+          "firstWrongStep": null,
+          "repair": "92",
+          "verify": "3",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "bundleId": "DT-20261026-SPR-REVERSE-A",
+      "path": "content/detective/inbox/DT-20261026-SPR-REVERSE-A.json",
+      "blobSha": "f8b32e2bf424ebe2c5fe0ad7948069a1cd246c4e",
+      "disposition": "auto-published",
+      "revision": 1,
+      "composition": {
+        "wrong": 2,
+        "correct": 1
+      },
+      "cases": [
+        {
+          "id": "DT-20261026-SPR-REVERSE-A-A",
+          "template": "spring-reverse-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 1,
+          "repair": "5",
+          "verify": "85",
+          "passed": true
+        },
+        {
+          "id": "DT-20261026-SPR-REVERSE-A-B",
+          "template": "spring-reverse-v1",
+          "verdict": "wrong",
+          "firstWrongStep": 1,
+          "repair": "70",
+          "verify": "88",
+          "passed": true
+        },
+        {
+          "id": "DT-20261026-SPR-REVERSE-A-C",
+          "template": "spring-reverse-v1",
+          "verdict": "correct",
+          "firstWrongStep": null,
+          "repair": "7",
+          "verify": "108",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "id": "DT-20261015-ARITH-A-A",
+      "template": "arithmetic-order-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 0,
+      "repair": "99",
+      "verify": "9",
+      "passed": true,
+      "bundleId": "DT-20261015-ARITH-A",
+      "status": "closed-assisted",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261015-ARITH-A-B",
+      "template": "arithmetic-order-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 0,
+      "repair": "85",
+      "verify": "42",
+      "passed": true,
+      "bundleId": "DT-20261015-ARITH-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261015-ARITH-A-C",
+      "template": "arithmetic-order-v1",
+      "verdict": "correct",
+      "firstWrongStep": null,
+      "repair": "115",
+      "verify": "8",
+      "passed": true,
+      "bundleId": "DT-20261015-ARITH-A",
+      "status": "closed-independent",
+      "firstVerdict": "correct"
+    },
+    {
+      "id": "DT-20261015-CARD-A-A",
+      "template": "card-thickness-grouping-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 1,
+      "repair": "32",
+      "verify": "24",
+      "passed": true,
+      "bundleId": "DT-20261015-CARD-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261015-CARD-A-B",
+      "template": "card-thickness-grouping-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 1,
+      "repair": "25",
+      "verify": "20",
+      "passed": true,
+      "bundleId": "DT-20261015-CARD-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261015-CARD-A-C",
+      "template": "card-thickness-grouping-v1",
+      "verdict": "correct",
+      "firstWrongStep": null,
+      "repair": "18",
+      "verify": "12",
+      "passed": true,
+      "bundleId": "DT-20261015-CARD-A",
+      "status": "closed-independent",
+      "firstVerdict": "correct"
+    },
+    {
+      "id": "DT-20261015-EQUAL-A-A",
+      "template": "equal-groups-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 0,
+      "repair": "42",
+      "verify": "7",
+      "passed": true,
+      "bundleId": "DT-20261015-EQUAL-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261015-EQUAL-A-B",
+      "template": "equal-groups-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 0,
+      "repair": "36",
+      "verify": "9",
+      "passed": true,
+      "bundleId": "DT-20261015-EQUAL-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261015-EQUAL-A-C",
+      "template": "equal-groups-v1",
+      "verdict": "correct",
+      "firstWrongStep": null,
+      "repair": "40",
+      "verify": "8",
+      "passed": true,
+      "bundleId": "DT-20261015-EQUAL-A",
+      "status": "closed-independent",
+      "firstVerdict": "correct"
+    },
+    {
+      "id": "DT-20261015-ORDER-A-A",
+      "template": "length-ordering-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 0,
+      "repair": "9000毫米|75分米|6米|420厘米",
+      "verify": "9000",
+      "passed": true,
+      "bundleId": "DT-20261015-ORDER-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261015-ORDER-A-B",
+      "template": "length-ordering-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 0,
+      "repair": "4900毫米|450厘米|4米|38分米",
+      "verify": "4900",
+      "passed": true,
+      "bundleId": "DT-20261015-ORDER-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261015-ORDER-A-C",
+      "template": "length-ordering-v1",
+      "verdict": "correct",
+      "firstWrongStep": null,
+      "repair": "3米|29分米|2800毫米|240厘米",
+      "verify": "3000",
+      "passed": true,
+      "bundleId": "DT-20261015-ORDER-A",
+      "status": "closed-independent",
+      "firstVerdict": "correct"
+    },
+    {
+      "id": "DT-20261015-UNIT-A-A",
+      "template": "length-conversion-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 1,
+      "repair": "7000",
+      "verify": "7",
+      "passed": true,
+      "bundleId": "DT-20261015-UNIT-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261015-UNIT-A-B",
+      "template": "length-conversion-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 1,
+      "repair": "800",
+      "verify": "8",
+      "passed": true,
+      "bundleId": "DT-20261015-UNIT-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261015-UNIT-A-C",
+      "template": "length-conversion-v1",
+      "verdict": "correct",
+      "firstWrongStep": null,
+      "repair": "540",
+      "verify": "54",
+      "passed": true,
+      "bundleId": "DT-20261015-UNIT-A",
+      "status": "closed-independent",
+      "firstVerdict": "correct"
+    },
+    {
+      "id": "DT-20261016-WIRE-A-A",
+      "template": "wrap-surplus-shortage-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 2,
+      "repair": "18",
+      "verify": "5",
+      "passed": true,
+      "bundleId": "DT-20261016-WIRE-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261016-WIRE-A-B",
+      "template": "wrap-surplus-shortage-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 2,
+      "repair": "16",
+      "verify": "6",
+      "passed": true,
+      "bundleId": "DT-20261016-WIRE-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261016-WIRE-A-C",
+      "template": "wrap-surplus-shortage-v1",
+      "verdict": "correct",
+      "firstWrongStep": null,
+      "repair": "26",
+      "verify": "6",
+      "passed": true,
+      "bundleId": "DT-20261016-WIRE-A",
+      "status": "closed-independent",
+      "firstVerdict": "correct"
+    },
+    {
+      "id": "DT-20261026-AVG-FOUNDATION-A-A",
+      "template": "batch-average-mass-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 1,
+      "repair": "3/5",
+      "verify": "6",
+      "passed": true,
+      "bundleId": "DT-20261026-AVG-FOUNDATION-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261026-AVG-FOUNDATION-A-B",
+      "template": "batch-average-mass-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 1,
+      "repair": "1/2",
+      "verify": "6",
+      "passed": true,
+      "bundleId": "DT-20261026-AVG-FOUNDATION-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261026-AVG-FOUNDATION-A-C",
+      "template": "batch-average-mass-v1",
+      "verdict": "correct",
+      "firstWrongStep": null,
+      "repair": "1/2",
+      "verify": "4",
+      "passed": true,
+      "bundleId": "DT-20261026-AVG-FOUNDATION-A",
+      "status": "closed-independent",
+      "firstVerdict": "correct"
+    },
+    {
+      "id": "DT-20261026-AVG-REVERSE-A-A",
+      "template": "mass-average-inverse-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 1,
+      "repair": "24",
+      "verify": "2",
+      "passed": true,
+      "bundleId": "DT-20261026-AVG-REVERSE-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261026-AVG-REVERSE-A-B",
+      "template": "mass-average-inverse-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 1,
+      "repair": "16",
+      "verify": "8",
+      "passed": true,
+      "bundleId": "DT-20261026-AVG-REVERSE-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261026-AVG-REVERSE-A-C",
+      "template": "mass-average-inverse-v1",
+      "verdict": "correct",
+      "firstWrongStep": null,
+      "repair": "6",
+      "verify": "36",
+      "passed": true,
+      "bundleId": "DT-20261026-AVG-REVERSE-A",
+      "status": "closed-independent",
+      "firstVerdict": "correct"
+    },
+    {
+      "id": "DT-20261026-SPR-FORWARD-A-A",
+      "template": "spring-total-length-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 2,
+      "repair": "80",
+      "verify": "4",
+      "passed": true,
+      "bundleId": "DT-20261026-SPR-FORWARD-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261026-SPR-FORWARD-A-B",
+      "template": "spring-total-length-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 2,
+      "repair": "100",
+      "verify": "8",
+      "passed": true,
+      "bundleId": "DT-20261026-SPR-FORWARD-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261026-SPR-FORWARD-A-C",
+      "template": "spring-total-length-v1",
+      "verdict": "correct",
+      "firstWrongStep": null,
+      "repair": "92",
+      "verify": "3",
+      "passed": true,
+      "bundleId": "DT-20261026-SPR-FORWARD-A",
+      "status": "closed-independent",
+      "firstVerdict": "correct"
+    },
+    {
+      "id": "DT-20261026-SPR-REVERSE-A-A",
+      "template": "spring-reverse-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 1,
+      "repair": "5",
+      "verify": "85",
+      "passed": true,
+      "bundleId": "DT-20261026-SPR-REVERSE-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261026-SPR-REVERSE-A-B",
+      "template": "spring-reverse-v1",
+      "verdict": "wrong",
+      "firstWrongStep": 1,
+      "repair": "70",
+      "verify": "88",
+      "passed": true,
+      "bundleId": "DT-20261026-SPR-REVERSE-A",
+      "status": "closed-independent",
+      "firstVerdict": "wrong"
+    },
+    {
+      "id": "DT-20261026-SPR-REVERSE-A-C",
+      "template": "spring-reverse-v1",
+      "verdict": "correct",
+      "firstWrongStep": null,
+      "repair": "7",
+      "verify": "108",
+      "passed": true,
+      "bundleId": "DT-20261026-SPR-REVERSE-A",
+      "status": "closed-independent",
+      "firstVerdict": "correct"
+    }
+  ],
+  "notes": [
+    "真实GitHub自动接收，与本地不可变blob逐一对照",
+    "独立数学复算；全部案件四步浏览器走通",
+    "同名题的今日与历史题面可识别",
+    "实际拖动与上移按钮排序",
+    "错误答案拒绝；刷新恢复",
+    "今日三案与首判保留",
+    "重复同步不多建案，不多奖励",
+    "备份恢复与原钱包不变",
+    "仅临时学习库，不代表Kevin作答"
+  ]
+}
