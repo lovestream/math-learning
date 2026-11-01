@@ -66,7 +66,7 @@ export default function CodingExploration(){
    <div className="coding-detail" role="status"><strong>{idParts[idIndex].name}</strong><p>{idParts[idIndex].detail}</p></div>
    <div className="coding-example"><span>第15—17位顺序码试验</span>
     <div className="coding-selectors"><button type="button" onClick={()=>setSequence(3)} aria-pressed={sequence===3}>003</button><button type="button" onClick={()=>setSequence(4)} aria-pressed={sequence===4}>004</button></div>
-    <p>当前顺序码：<strong>00{sequence}</strong>。第17位是 <strong>{sequence}</strong>（{sequence%2?'奇数，按规则对应男性':'偶数，按规则对应女性'}）。**注意是第17位，不是最后的校验码。**</p>
+    <p>当前顺序码：<strong>00{sequence}</strong>。第17位是 <strong>{sequence}</strong>（{sequence%2?'奇数，按规则对应男性':'偶数，按规则对应女性'}）。注意是第17位，不是最后的校验码。</p>
    </div>
    <div className="coding-caveat">第1—6位是行政区划代码，不等于现在住的地址；第18位校验码符合公式，也不能单独证明一个人身份真实。<strong>计算结果是10时，才用X代替。</strong></div>
   </section>}
