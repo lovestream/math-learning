@@ -11,7 +11,7 @@ import {grade3CompleteLessons,grade3UnitMetadata} from './grade3-complete.mjs';
 import {applyFormalTaskErrata,assessmentRevisions} from './formal-task-errata.mjs';
 import {applyClarityErrata,clarityVersion,clarityLessonIds} from './clarity-errata.mjs';
 import {applyInverseRevision,inverseVersion,inverseLessonIds} from './inverse-revisions.mjs';
-import {enrichCodingLesson,codingClassroom,codingVersion} from './coding-supplement.mjs';
+import {enrichCodingLesson,codingClassroom,codingVersion,codingFormalOverrides} from './coding-supplement.mjs';
 const number=(id,prompt,expected,unit,solution,hint)=>({id,kind:'number',prompt,expected,unit,solution,hint});
 const choice=(id,prompt,options,expected,solution,hint)=>({id,kind:'choice',prompt,options:options.map((text,i)=>({id:String(i+1),text})),expected:String(expected),solution,hint,reasonEvidence:true});
 const expression=(id,prompt,expected,solution,hint)=>({id,kind:'expression',prompt,expected,solution,hint});
@@ -74,6 +74,6 @@ export const lessons=[...compiledGrade3,...extraLessons].map(item=>{
     contentVersion:item.lessonId==='G3-UP02-B01'?codingVersion:inverseLessonIds.has(item.lessonId)?inverseVersion:item.lessonId==='G3-U03-E01'?clarityVersion:assessmentRevisions.has(item.lessonId)?'2026-10-09.4':item.childClassroom?'2026-10-07.2':'2026-10-02.1',
     editorialRevision:item.lessonId==='G3-UP02-B01'?codingVersion:inverseLessonIds.has(item.lessonId)?inverseVersion:clarityLessonIds.has(item.lessonId)?clarityVersion:'2026-10-09.4',
     taskSets:Object.fromEntries(Object.entries(item.taskSets).map(([set,tasks])=>[
-      set,tasks.map(t=>applyInverseRevision(applyClarityErrata(applyFormalTaskErrata({...t,responseSpec:t.responseSpec??{type:t.kind},reasonEvidence:undefined}))))
+      set,tasks.map(t=>{const reviewed=applyInverseRevision(applyClarityErrata(applyFormalTaskErrata({...t,responseSpec:t.responseSpec??{type:t.kind},reasonEvidence:undefined})));return item.lessonId==='G3-UP02-B01'&&codingFormalOverrides[reviewed.id]?{...reviewed,...codingFormalOverrides[reviewed.id]}:reviewed;})
     ]))};
 });
