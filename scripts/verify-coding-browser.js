@@ -39,6 +39,15 @@ async page=>{
  const operated=await operateDesktop(page,lesson);actions.push(...operated.actionsPerformed);await shot('shelf-operated-1440');
  for(const n of [3,4,5]){await move(n);await shot(['','','','discovery-1440','math-language-1440','verification-1440'][n]);}
  assert(await stage.locator('.parent-task-preview li').count()===3,'核心题组不是3题');
+ // Each of the six screens must work at all three requested viewport sizes.
+ for(const [width,height]of [[1366,768],[1440,900],[390,844]]){
+  await page.setViewportSize({width,height});
+  for(let n=0;n<6;n++){
+   await move(n);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),`第${n+1}步在${width}横向溢出`);
+   await shot(['story','prediction','experiment','discovery','math-language','verification'][n]+'-'+width);
+  }
+ }
+ await page.setViewportSize({width:1440,height:900});
  const afterExplore=(await get()).progress;assert(afterExplore.wallet.coins===initial.wallet.coins,'探索误发积分');assert(Object.keys(afterExplore.studio.sessions).length===Object.keys(initial.studio.sessions).length,'探索误开正式会话');
  // No identity-number entry exists: only fixed segments ending ?, class selectors, and an optional fictional discussion.
  await move(2);assert(await stage.locator('input').count()===0,'出现要求填写完整身份号码的输入框');
