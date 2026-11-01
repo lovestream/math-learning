@@ -1,0 +1,40 @@
+{
+  "baselineSha": "c246c098e4df7ad68f94fd41f5582caea3d5127c",
+  "crop": {
+    "x": 96,
+    "y": 187,
+    "width": 1248,
+    "height": 503
+  },
+  "scope": "mathematical figure only; approval badge intentionally updated",
+  "results": [
+    {
+      "state": "A-first",
+      "changedPixels": 0
+    },
+    {
+      "state": "B-coupled-four-quantities",
+      "changedPixels": 0
+    },
+    {
+      "state": "C-comparison-start",
+      "changedPixels": 0
+    },
+    {
+      "state": "D-adjacent-80",
+      "changedPixels": 0
+    },
+    {
+      "state": "E-back-to-coupled",
+      "changedPixels": 0
+    }
+  ],
+  "source": {
+    "prHeadSha": "948a5574aface16815c8dadbda08ed70fc0d21e4",
+    "sha": "948a5574aface16815c8dadbda08ed70fc0d21e4",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-19T02:46:02.917Z"
+  },
+  "passed": true
+}

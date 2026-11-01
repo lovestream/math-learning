@@ -1,0 +1,308 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Detective inbox v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "bundleId",
+    "bundleRevision",
+    "createdAt",
+    "producer",
+    "sourceFingerprint",
+    "privacy",
+    "policy",
+    "cases"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "detective-inbox.v1"
+    },
+    "bundleId": {
+      "type": "string",
+      "pattern": "^DT-[A-Za-z0-9_-]{1,90}$"
+    },
+    "bundleRevision": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "producer": {
+      "const": "chatgpt-github"
+    },
+    "sourceFingerprint": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "privacy": {
+      "const": "public-anonymized-math-only"
+    },
+    "policy": {
+      "const": "auto-if-independently-verified"
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "role",
+          "simulatedSteps",
+          "content",
+          "verification"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9:_-]{1,100}$"
+          },
+          "role": {
+            "enum": [
+              "original-error",
+              "transfer-error",
+              "correct-control"
+            ]
+          },
+          "simulatedSteps": {
+            "const": true
+          },
+          "content": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "prompt",
+              "steps",
+              "verdict",
+              "errorStep",
+              "reasons",
+              "reason",
+              "repair",
+              "verify",
+              "hints",
+              "solution",
+              "family",
+              "sourceNotes",
+              "visual"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "maxLength": 100
+              },
+              "prompt": {
+                "type": "string",
+                "maxLength": 2000
+              },
+              "steps": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 500
+                },
+                "maxItems": 10,
+                "minItems": 1
+              },
+              "verdict": {
+                "enum": [
+                  "wrong",
+                  "correct"
+                ]
+              },
+              "errorStep": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 9
+              },
+              "reasons": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 300
+                },
+                "maxItems": 5,
+                "minItems": 2
+              },
+              "reason": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4
+              },
+              "repair": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "kind",
+                  "question",
+                  "unit",
+                  "options",
+                  "answer"
+                ],
+                "properties": {
+                  "kind": {
+                    "enum": [
+                      "number",
+                      "choice",
+                      "ordering",
+                      "oral"
+                    ]
+                  },
+                  "question": {
+                    "type": "string",
+                    "maxLength": 500
+                  },
+                  "unit": {
+                    "type": "string",
+                    "maxLength": 20
+                  },
+                  "options": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 200
+                    },
+                    "maxItems": 10,
+                    "minItems": 0
+                  },
+                  "answer": {
+                    "type": "string",
+                    "maxLength": 1000
+                  }
+                }
+              },
+              "verify": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "kind",
+                  "question",
+                  "unit",
+                  "options",
+                  "answer"
+                ],
+                "properties": {
+                  "kind": {
+                    "enum": [
+                      "number",
+                      "choice",
+                      "ordering",
+                      "oral"
+                    ]
+                  },
+                  "question": {
+                    "type": "string",
+                    "maxLength": 500
+                  },
+                  "unit": {
+                    "type": "string",
+                    "maxLength": 20
+                  },
+                  "options": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 200
+                    },
+                    "maxItems": 10,
+                    "minItems": 0
+                  },
+                  "answer": {
+                    "type": "string",
+                    "maxLength": 1000
+                  }
+                }
+              },
+              "hints": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 500
+                },
+                "maxItems": 3,
+                "minItems": 3
+              },
+              "solution": {
+                "type": "string",
+                "maxLength": 3000
+              },
+              "family": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "sourceNotes": {
+                "const": ""
+              },
+              "visual": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "kind",
+                  "values"
+                ],
+                "properties": {
+                  "kind": {
+                    "enum": [
+                      "banana",
+                      "lengths",
+                      "cards",
+                      "road",
+                      "array",
+                      "hundreds",
+                      "expression",
+                      "manual"
+                    ]
+                  },
+                  "values": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 100
+                    },
+                    "maxItems": 12,
+                    "minItems": 0
+                  }
+                }
+              }
+            }
+          },
+          "verification": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "template",
+              "parameters"
+            ],
+            "properties": {
+              "template": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "parameters": {
+                "type": "object"
+              },
+              "firstWrongStep": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 9
+              }
+            }
+          }
+        }
+      },
+      "maxItems": 3,
+      "minItems": 1
+    }
+  },
+  "$comment": "JSON结构校验不等于数学核验；精确字段、视觉范围、匿名检查及模板参数须通过shared/detective-inbox.mjs。不得把fixture当真实投递。"
+}

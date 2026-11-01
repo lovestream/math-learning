@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "functionalSha": "948a5574aface16815c8dadbda08ed70fc0d21e4",
+  "archivedAt": "2026-10-19T06:34:37.554286+00:00",
+  "scope": "G3-U03-E02 formal step 3: approved two-ring focus, minimalist 3–5-ring overview",
+  "twoRingVisualStatus": "parent-visual-approved",
+  "multiRingVisualStatus": "awaiting-parent-visual-approval",
+  "kevinMastery": "not-assessed",
+  "realLearningDataAccessed": false,
+  "nodeTests": {
+    "passed": 213,
+    "failed": 0
+  },
+  "buildPassed": true,
+  "formalContent": {
+    "lessons": 70,
+    "tasks": 849,
+    "unchangedFrom": "dacc7d0"
+  },
+  "browserSuites": [
+    "verify-two-ring-browser",
+    "verify-chain-growth-browser",
+    "verify-template-browser",
+    "verify-lab-inventory",
+    "verify-semantic-browser",
+    "verify-desktop-semantic-browser"
+  ],
+  "desktopMathFilter": [
+    "G3-U03-E02"
+  ],
+  "evidence": [
+    {
+      "file": "chain-classroom-one-1440.png",
+      "sha256": "126d7ff306b596bd7342989c9eb068a860451806fb200085b411f4156080f55a",
+      "bytes": 104068
+    },
+    {
+      "file": "chain-classroom-two-1440.png",
+      "sha256": "d8affd85aeb765918192e5eca5149c31d615bceb0d6d22f201862b4a461dd17e",
+      "bytes": 175324
+    },
+    {
+      "file": "chain-inverse-G3-U03-E02.c4-1440.png",
+      "sha256": "10ed108b76f27267f97e43e5a10a5443669b731ef1f33dac9a392e88d324fa33",
+      "bytes": 174522
+    },
+    {
+      "file": "chain-inverse-G3-U03-E02.t2-1440.png",
+      "sha256": "0b6c8f0f1687343d4ae3dd579aa3fbae422f3428cc7454459487899ef47f1e47",
+      "bytes": 147465
+    },
+    {
+      "file": "chain-overview-3-growth-1440.png",
+      "sha256": "dff76aa00f9df109778ac611886060fdfdbdc066c75bed1328505dc023ff09a6",
+      "bytes": 130353
+    },
+    {
+      "file": "chain-overview-3-subtract-1440.png",
+      "sha256": "62b90be13ca36169e7df06441bbca923d5cd8b8883edef01e556fe6386e1c263",
+      "bytes": 126317
+    },
+    {
+      "file": "chain-overview-4-growth-1440.png",
+      "sha256": "5bc3a4e618b35c13ce567bc6b0ec943956142f709cd1f603979a163f8a8f2933",
+      "bytes": 136708
+    },
+    {
+      "file": "chain-overview-4-subtract-1440.png",
+      "sha256": "62e6c62ad8c98b9f37826fa0b6930a09a5eb38b3706a2100bdb5849d66c3ad38",
+      "bytes": 132101
+    },
+    {
+      "file": "chain-overview-5-growth-1440.png",
+      "sha256": "d3c2e089f18ae2ad28b04a3b4db7d18dd8928fc48457a33aa50c47dbad15098f",
+      "bytes": 142374
+    },
+    {
+      "file": "chain-overview-5-joint-4-1440.png",
+      "sha256": "cb4f016713b210f36377cce51474ee7fa975257640353f9ea174751a96a2d79a",
+      "bytes": 211294
+    },
+    {
+      "file": "chain-overview-5-subtract-1440.png",
+      "sha256": "953b5d936fbbac13dbd017ea48bc36466287e321d415dcc21d4f32e80d183390",
+      "bytes": 136712
+    },
+    {
+      "file": "chain-prediction-1440.png",
+      "sha256": "5fc499a3041530d5c9d04e0ec6575398cd8ccfd896a2fb6f14da9d22be138024",
+      "bytes": 152885
+    },
+    {
+      "file": "ci-summary.json",
+      "sha256": "ad5eeb546dd713ac4f4ea9e12c49528a7eaed4b7840e8c278081b62bf649b4cb",
+      "bytes": 17083
+    },
+    {
+      "file": "desktop-G3-U03-E02-experiment-initial-1440.png",
+      "sha256": "1f185382f04bc8dc2492a157c3c62f84f0341bcbc660120cfcd410513382c8cf",
+      "bytes": 91732
+    },
+    {
+      "file": "desktop-G3-U03-E02-operated-1366.png",
+      "sha256": "9530abe6fb5c26134800fef70939edca84707689ad621797fb15eb9db78b8648",
+      "bytes": 141783
+    },
+    {
+      "file": "desktop-G3-U03-E02-operated-1440.png",
+      "sha256": "66e9299daa0b9c3272da31865756a2bfdd13bac37b2678f00a1f3e546d4515ae",
+      "bytes": 145816
+    },
+    {
+      "file": "desktop-G3-U03-E02-operated-1920.png",
+      "sha256": "a39b3f2364430a06dca153bbb16fcc04663e0448cb337d61164d5bc1b60b16c3",
+      "bytes": 149646
+    },
+    {
+      "file": "desktop-G3-U03-E02-prediction-1440.png",
+      "sha256": "0abac80063bffcc3985a758be32dfb1e240951a99e119d4706206893da099b8e",
+      "bytes": 169615
+    },
+    {
+      "file": "desktop-G3-U03-E02-story-1440.png",
+      "sha256": "c049fcbea07be29468d32c98810a420a698193438aec5752505fed0a3cbb7bc6",
+      "bytes": 156316
+    },
+    {
+      "file": "desktop-G3-U03-E02-symbols-1440.png",
+      "sha256": "e3aec570f3bc7ff7eeadbd9ebc73302118120792cd3720f08bda3ade73822485",
+      "bytes": 96637
+    },
+    {
+      "file": "desktop-G3-U03-E02-verify-1440.png",
+      "sha256": "304ddd92aabd41f2640503906f42af546124aab8f856efbed72e3f2889d3a5ac",
+      "bytes": 66088
+    },
+    {
+      "file": "desktop-G3-U03-E02-why-1440.png",
+      "sha256": "513b34c2e38903d4eca725430401afbbead2c4f7d692be5e185b8f4a89cadc2d",
+      "bytes": 65963
+    },
+    {
+      "file": "source-evidence.json",
+      "sha256": "199b15d7b65ec21d072e079412473c02c6e2d4f4bb030c1a2c3878be665d6fe2",
+      "bytes": 257
+    },
+    {
+      "file": "two-ring-A-first.png",
+      "sha256": "f888180804e9446e4c6b2c16fde3a6dcab0af3629f44dd33015eed4dc0b3fe6b",
+      "bytes": 102747
+    },
+    {
+      "file": "two-ring-B-coupled-four-quantities.png",
+      "sha256": "e2cc6d22fc2bd11e45ed6166c41094a33e67f848bbb8837a761cbc3531e4d1f1",
+      "bytes": 172549
+    },
+    {
+      "file": "two-ring-C-comparison-start.png",
+      "sha256": "c50c74b24ad8413b679f634dbe3a09a250411119425acb7938fc9e8776e48818",
+      "bytes": 171618
+    },
+    {
+      "file": "two-ring-D-adjacent-80.png",
+      "sha256": "cc8529dc4e42d05ee19177ed059dabd6f8a3238b21d5d86bb3d2e72e57521b61",
+      "bytes": 161407
+    },
+    {
+      "file": "two-ring-E-back-to-coupled.png",
+      "sha256": "4a859fb7ba5653242990abb5485f88e070c162566680c7e4515da9437cf4f93f",
+      "bytes": 171306
+    },
+    {
+      "file": "two-ring-golden-comparison.json",
+      "sha256": "90bcd99258e8ba06ff0765de6ac122ac3974cdb46377a97522cdc0741c2e15a8",
+      "bytes": 907
+    },
+    {
+      "file": "verify-chain-growth-browser.json",
+      "sha256": "beab6ac6665f642ade46de074e616dda858813c5a5295ff5990031245941e408",
+      "bytes": 2549
+    },
+    {
+      "file": "verify-desktop-semantic-browser.json",
+      "sha256": "ce957ef2304018eef46e9a2833cb87e94bbd277cfd75fa49083d42abf2782fcb",
+      "bytes": 3297
+    },
+    {
+      "file": "verify-lab-inventory.json",
+      "sha256": "b08718b60372179c37bc8bce36e667fad74bf991cb6bac50158622ca9f6b30c8",
+      "bytes": 1804
+    },
+    {
+      "file": "verify-semantic-browser.json",
+      "sha256": "5f953ee822e972f44b347c9a7864b2d196354cf2c2383c877833c61e4a2956b9",
+      "bytes": 5257
+    },
+    {
+      "file": "verify-template-browser.json",
+      "sha256": "86bb934cf8c172eea18e833aaf5a98352b61db97ec52dfaa5b63d0dee3685a33",
+      "bytes": 1843
+    },
+    {
+      "file": "verify-two-ring-browser.json",
+      "sha256": "b8d69ff586a7bfa1d3f8864d8c54502e2a726b57719aaa6c67792ab29a88bf7a",
+      "bytes": 1015
+    }
+  ],
+  "implementationFiles": [
+    {
+      "file": "scripts/desktop-math-actions.mjs",
+      "sha256": "2c334b03b5f1e6fc06ac7f9a77dada89cff0af00271a61f5520f3af34b76ab81"
+    },
+    {
+      "file": "scripts/verify-chain-growth-browser.js",
+      "sha256": "fb0ecf643277a519191d1bcde79097028156d046d15730a88fc7c8bc2eca9cd1"
+    },
+    {
+      "file": "scripts/verify-lab-inventory.js",
+      "sha256": "439129463a9c4ea2095ff08bef8023f770541db12121ebd6008ef22d8d071a65"
+    },
+    {
+      "file": "scripts/verify-semantic-browser.js",
+      "sha256": "aa95faec545c0c3abe119c73821bd92947c81055bad9575298664674aec5b70e"
+    },
+    {
+      "file": "scripts/verify-two-ring-browser.js",
+      "sha256": "0760d3cc62c4880d22c93005d5d1a96e80ea3dd3f768681598dbe01dd4349c59"
+    },
+    {
+      "file": "src/studio/LengthWorkbench.tsx",
+      "sha256": "b9707b2112f43735167be9ff7bf02d7e6fd122a86f690e45ea522737f7988b47"
+    },
+    {
+      "file": "src/studio/measurement/ChainExperiment.tsx",
+      "sha256": "b898d5679bab0d5f702cba100ec58ac88a29e651599c818bf8b67d525db59a57"
+    },
+    {
+      "file": "src/studio/measurement/ChainOverview.tsx",
+      "sha256": "dc729af247e90071175f82af63a187cba28c817c76e62f7d92a749ddf090a9f5"
+    },
+    {
+      "file": "src/studio/measurement/TwoRingWorkbench.tsx",
+      "sha256": "1148a0cbe52860c060729f084f3e41eb92a43b97aef36072a95928e2ade1de4b"
+    },
+    {
+      "file": "src/studio/measurement/chain-classroom.css",
+      "sha256": "96a93e6b925d849032c94d0f395c11ac297aa0184b1f3421416e5f3589e6ade2"
+    },
+    {
+      "file": "tests/chain-classroom.test.mjs",
+      "sha256": "e50df71e434a97e5cd17c64cc85c875bfbc43cdff899aac3e9833a971b996085"
+    }
+  ],
+  "githubActions": [
+    {
+      "id": 39191560535,
+      "headSha": "948a5574aface16815c8dadbda08ed70fc0d21e4",
+      "conclusion": "success",
+      "url": "https://github.com/lovestream/math-learning/actions/runs/39191560535"
+    },
+    {
+      "id": 39191555974,
+      "headSha": "948a5574aface16815c8dadbda08ed70fc0d21e4",
+      "conclusion": "success",
+      "url": "https://github.com/lovestream/math-learning/actions/runs/39191555974"
+    }
+  ]
+}

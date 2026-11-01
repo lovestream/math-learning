@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "threeMixedCases": true,
+  "parentManual": true,
+  "parentPublish": true,
+  "immutableFirst": true,
+  "refreshDraft": true,
+  "oralReview": true,
+  "parentCorrection": true,
+  "remediation": true,
+  "privateExport": true,
+  "isolatedWallet": true,
+  "widths": [
+    390,
+    768,
+    1440
+  ],
+  "errors": [],
+  "source": {
+    "prHeadSha": "1ac14c25f7825c63764fec78b7e11e1bd98edf75",
+    "sha": "1ac14c25f7825c63764fec78b7e11e1bd98edf75",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-15T08:56:29.284Z"
+  }
+}

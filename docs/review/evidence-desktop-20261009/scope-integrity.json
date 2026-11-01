@@ -1,0 +1,10 @@
+{
+  "auditBaseline": "37219a5cae8da0fc28dbc4be901334081aad93ac",
+  "lessonIds": 70,
+  "formalTaskObjects": 849,
+  "assessmentVersions": "unchanged",
+  "dataDirectoryReadOrWritten": false,
+  "browserStores": "isolated temporary directories",
+  "grades4To6Changed": false,
+  "deferredThinkingCardsChanged": false
+}

@@ -1,0 +1,15 @@
+{
+  "mathEvidenceSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+  "zoomEvidenceSha": "52a2265f98df92715c5f1aacf67e27089a99a9a5",
+  "applicationPaths": [
+    "src",
+    "shared",
+    "server",
+    "content",
+    "package.json",
+    "package-lock.json"
+  ],
+  "diffIsEmpty": true,
+  "captureScriptChanged": "scripts/verify-desktop-zoom-browser.js",
+  "realLearnerDataReadOrWritten": false
+}

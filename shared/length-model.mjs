@@ -11,8 +11,32 @@ export function chainMeasure(lengthMm, thicknessMm, count) {
   const overlapMm = 2 * thicknessMm, addedMm = lengthMm - overlapMm;
   const starts = Array.from({length: count}, (_, i) => i * addedMm);
   return {lengthMm, thicknessMm, count, overlapMm, addedMm, starts,
+    extensions: starts.map((start, index) => ({index, start: index === 0 ? 0 : start + overlapMm, end: start + lengthMm,
+      addedMm: index === 0 ? lengthMm : addedMm})),
     joints: starts.slice(1).map(start => ({start, end: start + overlapMm})),
     totalMm: lengthMm + (count - 1) * addedMm};
+}
+
+// Axial projection of ONE joint. The previous ring ends at the RIGHT of
+// the shared interval; the next starts at its LEFT. Their metal ends touch.
+export function chainJointGeometry(thicknessMm) {
+  positive(thicknessMm, '厚度');
+  return {left:0, middle:thicknessMm, right:2*thicknessMm,
+    previousEnd:2*thicknessMm, nextStart:0,
+    previousMetal:[thicknessMm,2*thicknessMm],nextMetal:[0,thicknessMm]};
+}
+
+// Solve exactly one missing quantity; always substitute back into the forward
+// model. A single ring cannot determine thickness, nor can a slack/closed chain.
+export function chainInverse({lengthMm,thicknessMm,count,totalMm}) {
+  positive(totalMm,'两端距离');
+  if([lengthMm,thicknessMm,count].filter(v=>v===undefined).length!==1)throw Error('只留一个待求量');
+  if(lengthMm===undefined)lengthMm=(totalMm+2*thicknessMm*(count-1))/count;
+  else if(thicknessMm===undefined){if(count<2)throw Error('一个环不能反求厚度');thicknessMm=(count*lengthMm-totalMm)/(2*(count-1));}
+  else count=1+(totalMm-lengthMm)/(lengthMm-2*thicknessMm);
+  const model=chainMeasure(lengthMm,thicknessMm,count);
+  if(Math.abs(model.totalMm-totalMm)>1e-9)throw Error('条件不能组成这种拉直的链');
+  return model;
 }
 
 export function boardMeasure(lengths, overlaps) {

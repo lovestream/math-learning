@@ -1,0 +1,22 @@
+{
+  "sourceSha": "58e9faec79b9ce6acf0062b9d8882ebc2f0b9681",
+  "gitObjects": {
+    "src": "4c6e89439fe6af675defe87b6bcbd6f0b28660f6",
+    "server": "100c93534e76d1e11c142724e7e945373356c84c",
+    "shared": "85b8b79e1df0c930defe5101414a5ae1e2d6bad2",
+    "content": "402eced476632536a4973c7f97603a22f1ddf137",
+    "tests": "cccd871242454549c0e395a16a27cf52994229c0",
+    "scripts": "492d5c2341f66fbf725ec9537c1a5553e9c61f97",
+    ".github": "1f695bfdafb1642d06adac0f33850536eb16184e",
+    "package.json": "89ec9e35b3d2a1d9f0a89a816de09d80edcc1693",
+    "package-lock.json": "d3f60e94f1edac6ff501b3aac7d7dc0404153f3a",
+    "tsconfig.json": "b60175112cc2d710de7804705aee1754070a9f4a"
+  },
+  "frozenCoursePathsUnchanged": [
+    "data/",
+    "content/pilot/",
+    "content/catalog",
+    "src/studio/",
+    "public/"
+  ]
+}

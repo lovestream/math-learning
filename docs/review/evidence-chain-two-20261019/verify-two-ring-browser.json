@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "stage": 0,
+  "approval": "awaiting-parent-visual-approval",
+  "viewport": "1440x900",
+  "screenshots": [
+    "output/playwright/v2-audit/two-ring-A-first.png",
+    "output/playwright/v2-audit/two-ring-B-coupled-four-quantities.png",
+    "output/playwright/v2-audit/two-ring-C-comparison-start.png",
+    "output/playwright/v2-audit/two-ring-D-adjacent-80.png",
+    "output/playwright/v2-audit/two-ring-E-back-to-coupled.png"
+  ],
+  "apiRequests": [],
+  "checks": [
+    "A–E真实截图",
+    "四量同图与外缘对齐",
+    "两个5毫米端部",
+    "鼠标/键盘/按钮/撤销/越界",
+    "比较不改相扣答案",
+    "完整环移动动画",
+    "减少动态效果",
+    "刷新隔离/零学习API"
+  ],
+  "source": {
+    "prHeadSha": "c81ee7a508c9df19131c3e35f5263c96e0122efb",
+    "sha": "c81ee7a508c9df19131c3e35f5263c96e0122efb",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-18T23:49:44.351Z"
+  }
+}

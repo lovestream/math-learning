@@ -5,6 +5,8 @@ import path from 'node:path';
 import { PETS as PET_CATALOG, ITEMS as ITEM_CATALOG, normalizePets, ensureFriend, learningMemory, validateCare } from './pet-care.mjs';
 import {prepareReview,finishReview,validReviewSchedule} from './review-schedule.mjs';
 import { validatePilot } from './pilot-store.mjs';
+import {validateDetective} from '../shared/detective-model.mjs';
+import {validateSelfIntegrity} from './detective-self-integrity.mjs';
 
 export const CATALOG_VERSION = '2026.09.primary.v4';
 const DAY = 86400000;
@@ -49,6 +51,8 @@ export function validateEnvelope(input,courses) {
   ensure(obj(p.inventory)&&Object.entries(p.inventory).every(([k,v])=>Object.hasOwn(ITEMS,k)&&integer(v)));
   validateCare(p);
   validatePilot(p.studio);
+  validateDetective(p.studio?.detective);
+  validateSelfIntegrity(p.studio?.detective?.selfTraining);
   return normalizePets(p);
 }
 const localDay=(now)=>new Date(now+8*3600000).toISOString().slice(0,10);

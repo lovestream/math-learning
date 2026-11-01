@@ -1,0 +1,5 @@
+
+> kevin-math-lab@0.1.0 content:check
+> node scripts/check-pilot.mjs
+
+样板内容通过：70 课，849 道任务；全量蓝图 59 单元仍标记为 planned。

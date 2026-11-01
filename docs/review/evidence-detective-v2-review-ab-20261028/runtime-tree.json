@@ -1,0 +1,16 @@
+{
+  "sourceSha": "037d8124ab04d4c07a71dbdd1634bd3242ead386",
+  "gitObjects": {
+    "src": "73ae3c5c8b30e958d86483c1cdcf2e5d5d083af6",
+    "server": "d90562ac9f4542839073d1a8dfad6609731b1541",
+    "shared": "88fb7b6bfea821ab951d2e18614cdf6f9cf90f95",
+    "content": "402eced476632536a4973c7f97603a22f1ddf137",
+    "tests": "80ee9afda71e11a9d8bf7da93e855c04aa7e1aa2",
+    "scripts": "83d647005152f41dfebc59609d8e71b5bb30b542",
+    ".github": "c02ae749e6aabc49191718e1102bd85f33796c17",
+    "package.json": "89ec9e35b3d2a1d9f0a89a816de09d80edcc1693",
+    "package-lock.json": "d3f60e94f1edac6ff501b3aac7d7dc0404153f3a",
+    "tsconfig.json": "b60175112cc2d710de7804705aee1754070a9f4a"
+  },
+  "frozenCourseAndDataPathsUnchanged": true
+}

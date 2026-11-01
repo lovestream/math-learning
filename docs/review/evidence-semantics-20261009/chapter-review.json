@@ -1,0 +1,212 @@
+{
+  "runSha": "98e88b0fac628a08a843f23f4d3edbed263d74e7",
+  "reviewer": "Codex",
+  "method": "authored source plus rendered screenshots",
+  "reviewedStages": [
+    "story",
+    "operated"
+  ],
+  "additionalKeyStages": [
+    "why",
+    "symbols"
+  ],
+  "keyLessons": [
+    "G3-U01-B01",
+    "G3-U02-B03",
+    "G3-U04-B03",
+    "G3-U03-E02"
+  ],
+  "chapters": [
+    {
+      "id": "G3-U01-B01",
+      "chapter": "G3-U01",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "换一个位置，看到的样子为什么变了",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-U02-B03",
+      "chapter": "G3-U02",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "括号：把必须先完成的事圈起来",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-U03-E02",
+      "chapter": "G3-U03",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "四个链环扣起来：一个接头为什么要看两段厚度",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-UP01-B02",
+      "chapter": "G3-UP01",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "称不了大物体，怎样换成小物体",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-U04-B03",
+      "chapter": "G3-U04",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "连续进位也只是反复“满十换一”",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-UP02-B01",
+      "chapter": "G3-UP02",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "数字有时表示身份，而不是多少",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-U05-B02",
+      "chapter": "G3-U05",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "角的大小看张口，不看边画多长",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-U06-B03",
+      "chapter": "G3-U06",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "分数加减，先确认数的是同一种小份",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-U07-B01",
+      "chapter": "G3-U07",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "每种选择都配一遍，怎样不重复不遗漏",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-L01-B01",
+      "chapter": "G3-L01",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "对折后能重合，才是轴对称",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-L02-B03",
+      "chapter": "G3-L02",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "有剩余时，怎样判断答案真的分完了",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-L03-E01",
+      "chapter": "G3-L03",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "拼在一起以后，哪些边不再露在外面",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-L04-B03",
+      "chapter": "G3-L04",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "分割、拼补和换单位，面积怎样保持一致",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-L05-B02",
+      "chapter": "G3-L05",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "按范围分组，边界上的数据放哪里",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-LP01-B02",
+      "chapter": "G3-LP01",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "时刻是一个点，时长是一段路",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-L06-B01",
+      "chapter": "G3-L06",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "不足一米的部分，仍用十进制记录",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    },
+    {
+      "id": "G3-L07-B01",
+      "chapter": "G3-L07",
+      "actualOperation": true,
+      "why": true,
+      "oldAndCurrentSeparated": true,
+      "title": "同一个人出现两次，怎样只数一次",
+      "screenshotReview": "agent-reviewed",
+      "parentTeachingApproval": "not-reviewed",
+      "kevinTrial": "not-tested-this-revision"
+    }
+  ],
+  "staticFiguresReviewed": 6,
+  "remainingEntrancesWithoutSameDepthOfVisualReview": 53,
+  "physicalIpad": false,
+  "formal849TasksManuallyReviewed": false
+}

@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "source": {
+    "prHeadSha": "041f0e0410efae6f8fe4397addf4e6d0af9d11bb",
+    "sha": "041f0e0410efae6f8fe4397addf4e6d0af9d11bb",
+    "dirty": false,
+    "baseline": "1d9c68197449e45dd273978f30fa3844bc4f562e",
+    "dataHead": "c6e6eaedca53c0976af3ab6e187e2980e4e94430"
+  },
+  "syntheticOnly": true,
+  "steps": [
+    {
+      "name": "old-program-synthetic-checkpoint",
+      "passed": true,
+      "coins": 42,
+      "formalSessions": 1,
+      "detectiveAttempts": 1,
+      "importedBundles": 5,
+      "pendingWireBundle": 1
+    },
+    {
+      "name": "upgrade-and-backup-restore",
+      "passed": true,
+      "protectedFieldsEqual": true,
+      "pinUnchanged": true,
+      "onlyExpectedDraftMetadataChanged": true,
+      "corruptBackupRejectedWithoutWrite": true
+    },
+    {
+      "name": "pinned-five-bundles-and-wire-sync",
+      "passed": true,
+      "source": "immutable Git blobs replayed through isolated fetch fixture",
+      "autoPublished": 6,
+      "protectedFieldsEqual": true
+    },
+    {
+      "name": "failed-start-and-old-program-rollback",
+      "passed": true,
+      "failedStartExit": 1,
+      "oldProgressExactlyRestored": true,
+      "pinUnchanged": true,
+      "newerExportPreservedBeforeRollback": true
+    }
+  ]
+}

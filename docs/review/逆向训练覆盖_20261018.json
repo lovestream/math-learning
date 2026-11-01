@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-18",
+  "scope": "三年级全部14节enhancement/olympiad入口；不宣称每道难题只需一条逆公式",
+  "newOrRevisedTasks": 11,
+  "preservedFormalTaskCount": 849,
+  "rows": [
+    {
+      "lessonId": "G3-U02-E01",
+      "inverseTaskIds": [
+        "G3-U02-E01.r1"
+      ],
+      "forwardRelation": "原有金额－净支出＝余额",
+      "reverseRelation": "余额＋净支出＝原有金额",
+      "scope": "先算净支出，付款减找零；不能把找零再扣一次",
+      "status": "revised"
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "inverseTaskIds": [
+        "G3-U02-E03-P02",
+        "G3-U02-E03-P06"
+      ],
+      "forwardRelation": "括号前是减号，去括号时逐项反向",
+      "reverseRelation": "连续减和减后加，反向合并为净支出的括号",
+      "scope": "保留数的意义，只改写等值式；不是任意添括号",
+      "status": "retained"
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "inverseTaskIds": [
+        "G3-U02-E02-P09"
+      ],
+      "forwardRelation": "每盒支数×每箱盒数×箱数＝总支数",
+      "reverseRelation": "总支数÷每盒支数÷箱数＝每箱盒数",
+      "scope": "全部装完、等量分装，回代检验三层单位",
+      "status": "revised"
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "inverseTaskIds": [
+        "G3-U02-E04-P09"
+      ],
+      "forwardRelation": "盒数×每盒袋数×每袋颗数＝总颗数",
+      "reverseRelation": "总颗数÷总袋数，或先求每盒颗数再求每袋颗数",
+      "scope": "分组选择不同但每一层的量一致",
+      "status": "revised"
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "inverseTaskIds": [
+        "G3-U02-E05-P04"
+      ],
+      "forwardRelation": "共同份数×每组两部分＝两部分各自重复后合计",
+      "reverseRelation": "两部分乘积的和反向合并成带括号的乘法",
+      "scope": "必须有同一个因数；保留P07不共同因数的反例",
+      "status": "retained"
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "inverseTaskIds": [
+        "G3-U02-O01-P03",
+        "G3-U02-O01-P04",
+        "G3-U02-O01-P09"
+      ],
+      "forwardRelation": "原数按顺序执行若干运算得到结果",
+      "reverseRelation": "从结果按逆序撤销原动作，再代回",
+      "scope": "运算逆序与每一步逆运算必须同时正确",
+      "status": "retained"
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "inverseTaskIds": [
+        "G3-U02-O02-P09"
+      ],
+      "forwardRelation": "一盒作为整体，三盒再加散糖得总数",
+      "reverseRelation": "先拿走散糖，再从三个等量整体求一盒",
+      "scope": "方框是整盒；不能只替换整体的一部分",
+      "status": "revised"
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "inverseTaskIds": [
+        "G3-U06-E01-P09"
+      ],
+      "forwardRelation": "整体与蓝色格数同时除以相同数来合并",
+      "reverseRelation": "整体与蓝色格数同时乘同一数来拆分",
+      "scope": "同一纸带同一蓝色长度；不推广为不同整体实长相等",
+      "status": "revised"
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "inverseTaskIds": [
+        "G3-L03-E01-P09"
+      ],
+      "forwardRelation": "原周长和－贴合边的两倍＝外周长",
+      "reverseRelation": "周长减少量÷2＝贴合边长",
+      "scope": "沿同长整边贴合、没有重叠，内部边完全不外露",
+      "status": "revised"
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "inverseTaskIds": [
+        "G3-LP01-E01-P09"
+      ],
+      "forwardRelation": "按七天循环向后推星期",
+      "reverseRelation": "去掉整周，再往前退余下的天数",
+      "scope": "17天前是17个整天，不能加算起点",
+      "status": "revised"
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "inverseTaskIds": [
+        "G3-U03-E01.h1",
+        "G3-U03-E01.r2"
+      ],
+      "forwardRelation": "各板长之和－接头重叠之和＝两端距离",
+      "reverseRelation": "先补回重叠求每块板长；或材料合计减成品长求接头",
+      "scope": "只有相邻搭接，没有三重重叠；板数与接头数区分",
+      "status": "revised"
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "inverseTaskIds": [
+        "G3-U03-E02.c4",
+        "G3-U03-E02.t2",
+        "G3-U03-E02.h1"
+      ],
+      "forwardRelation": "首环外长＋其余环数×新增量＝拉直总长",
+      "reverseRelation": "反求厚度：总重叠÷接头数÷2；反求外长：补重叠再分环数；反求环数先去首环",
+      "scope": "外长已明确、同厚同环、不闭合且拉直绷紧；一环不能反求厚度",
+      "status": "revised"
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "inverseTaskIds": [
+        "G3-U03-O01.h1"
+      ],
+      "forwardRelation": "两端都有点的直线，点数＝间隔数＋1",
+      "reverseRelation": "间隔数＝点数－1，再乘间距求路长",
+      "scope": "直路两端都有标记；闭环不加1，保留闭环比较题",
+      "status": "retained"
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "inverseTaskIds": [
+        "algebra.substitution.intro.r2"
+      ],
+      "forwardRelation": "每盒糖＋每盒饼干为一盒整体，再乘盒数得总件数",
+      "reverseRelation": "先总件数÷盒数，还原一盒整体，再减每盒饼干",
+      "scope": "同样盒子，件数合计；每盒点心与每盒糖不是同一量",
+      "status": "revised"
+    }
+  ]
+}

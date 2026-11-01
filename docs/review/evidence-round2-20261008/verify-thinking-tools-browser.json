@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "balance": true,
+  "oneSidedError": true,
+  "undo": true,
+  "solidViews": true,
+  "candidateRejection": true,
+  "venn": true,
+  "refresh": true,
+  "reward": 0,
+  "errors": [],
+  "source": {
+    "prHeadSha": "f48b3a89eded5993bc1be34184287696e9fce872",
+    "sha": "f48b3a89eded5993bc1be34184287696e9fce872",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-08T08:17:12.769Z"
+  }
+}

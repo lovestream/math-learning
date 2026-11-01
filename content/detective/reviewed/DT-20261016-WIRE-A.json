@@ -1,0 +1,207 @@
+{
+  "schemaVersion": "detective-inbox.v1",
+  "bundleId": "DT-20261016-WIRE-A",
+  "bundleRevision": 1,
+  "createdAt": "2026-10-16T02:00:00Z",
+  "producer": "chatgpt-github",
+  "sourceFingerprint": "b585fd779a4cfda864879a03af424fe5d5ec89e37bf512a61bac3b55c2dd969f",
+  "privacy": "public-anonymized-math-only",
+  "policy": "auto-if-independently-verified",
+  "cases": [
+    {
+      "id": "DT-20261016-WIRE-A-A",
+      "role": "original-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "绕线长度调查 · 匿名模拟",
+        "prompt": "一根铁丝绕竹竿3圈后多3分米，绕4圈还差2分米。这根铁丝长多少分米？下面是虚构的匿名模拟做法，并非原始作答记录。",
+        "steps": [
+          "从3圈增加到4圈，多绕1圈，需要3+2=5（分米）。",
+          "每圈长5÷1=5（分米）。",
+          "铁丝长3×5+2=17（分米）。"
+        ],
+        "verdict": "wrong",
+        "errorStep": 2,
+        "reasons": [
+          "绕3圈后还多3分米，应加回多出的3分米，不能加缺少的2分米。",
+          "多出的长度和还差的长度必须相减。",
+          "圈数增加了，原来这根线也会变长。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "这根铁丝长多少分米？",
+          "unit": "分米",
+          "options": [],
+          "answer": "18"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "换用另一条条件验证：给这根18分米的铁丝补上缺少的2分米，就够绕4圈。每圈长多少分米？",
+          "unit": "分米",
+          "options": [],
+          "answer": "5"
+        },
+        "hints": [
+          "把“绕3圈后还多”与“绕4圈还差”分别画出来。",
+          "增加的1圈，要先用掉多出的3分米，还要再补2分米。",
+          "求出一圈后，用3圈加多出的长度求总长，再用4圈减缺少的长度核对。"
+        ],
+        "solution": "一圈长(3+2)÷(4−3)=5分米。两路核对：3×5+3=18分米；4×5−2=18分米。反查：18−3×5=3分米，4×5−18=2分米。",
+        "family": "WRAP_RELATION",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "绕3圈后：还多3分米",
+            "绕4圈：还差2分米",
+            "同一根线，长度不变",
+            "示意条件；每圈绕得一样长"
+          ]
+        }
+      },
+      "verification": {
+        "template": "wrap-surplus-shortage-v1",
+        "parameters": {
+          "mode": "wrong",
+          "lowTurns": 3,
+          "highTurns": 4,
+          "surplusDm": 3,
+          "shortageDm": 2,
+          "scene": "bamboo"
+        },
+        "firstWrongStep": 2
+      }
+    },
+    {
+      "id": "DT-20261016-WIRE-A-B",
+      "role": "transfer-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "绕线长度调查 · 匿名模拟",
+        "prompt": "一根绳子绕线轴2圈后多4分米，绕3圈还差2分米。这根绳子长多少分米？下面是虚构的匿名模拟做法，并非原始作答记录。",
+        "steps": [
+          "从2圈增加到3圈，多绕1圈，需要4+2=6（分米）。",
+          "每圈长6÷1=6（分米）。",
+          "绳子长2×6+2=14（分米）。"
+        ],
+        "verdict": "wrong",
+        "errorStep": 2,
+        "reasons": [
+          "绕2圈后还多4分米，应加回多出的4分米，不能加缺少的2分米。",
+          "多出的长度和还差的长度必须相减。",
+          "圈数增加了，原来这根线也会变长。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "这根绳子长多少分米？",
+          "unit": "分米",
+          "options": [],
+          "answer": "16"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "换用另一条条件验证：给这根16分米的绳子补上缺少的2分米，就够绕3圈。每圈长多少分米？",
+          "unit": "分米",
+          "options": [],
+          "answer": "6"
+        },
+        "hints": [
+          "把“绕2圈后还多”与“绕3圈还差”分别画出来。",
+          "增加的1圈，要先用掉多出的4分米，还要再补2分米。",
+          "求出一圈后，用2圈加多出的长度求总长，再用3圈减缺少的长度核对。"
+        ],
+        "solution": "一圈长(4+2)÷(3−2)=6分米。两路核对：2×6+4=16分米；3×6−2=16分米。反查：16−2×6=4分米，3×6−16=2分米。",
+        "family": "WRAP_RELATION",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "绕2圈后：还多4分米",
+            "绕3圈：还差2分米",
+            "同一根线，长度不变",
+            "示意条件；每圈绕得一样长"
+          ]
+        }
+      },
+      "verification": {
+        "template": "wrap-surplus-shortage-v1",
+        "parameters": {
+          "mode": "wrong",
+          "lowTurns": 2,
+          "highTurns": 3,
+          "surplusDm": 4,
+          "shortageDm": 2,
+          "scene": "spool"
+        },
+        "firstWrongStep": 2
+      }
+    },
+    {
+      "id": "DT-20261016-WIRE-A-C",
+      "role": "correct-control",
+      "simulatedSteps": true,
+      "content": {
+        "title": "绕线长度调查 · 匿名模拟",
+        "prompt": "一根铁丝绕竹竿4圈后多2分米，绕5圈还差4分米。这根铁丝长多少分米？下面是虚构的匿名模拟做法，并非原始作答记录。",
+        "steps": [
+          "从4圈增加到5圈，多绕1圈，需要2+4=6（分米）。",
+          "每圈长6÷1=6（分米）。",
+          "铁丝长4×6+2=26（分米）。"
+        ],
+        "verdict": "correct",
+        "errorStep": null,
+        "reasons": [
+          "按4圈加上多出的2分米求总长，两种绕法都符合条件。",
+          "多出的长度和还差的长度必须相减。",
+          "圈数增加了，原来这根线也会变长。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "这根铁丝长多少分米？",
+          "unit": "分米",
+          "options": [],
+          "answer": "26"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "换用另一条条件验证：给这根26分米的铁丝补上缺少的4分米，就够绕5圈。每圈长多少分米？",
+          "unit": "分米",
+          "options": [],
+          "answer": "6"
+        },
+        "hints": [
+          "把“绕4圈后还多”与“绕5圈还差”分别画出来。",
+          "增加的1圈，要先用掉多出的2分米，还要再补4分米。",
+          "求出一圈后，用4圈加多出的长度求总长，再用5圈减缺少的长度核对。"
+        ],
+        "solution": "一圈长(2+4)÷(5−4)=6分米。两路核对：4×6+2=26分米；5×6−4=26分米。反查：26−4×6=2分米，5×6−26=4分米。",
+        "family": "WRAP_RELATION",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "绕4圈后：还多2分米",
+            "绕5圈：还差4分米",
+            "同一根线，长度不变",
+            "示意条件；每圈绕得一样长"
+          ]
+        }
+      },
+      "verification": {
+        "template": "wrap-surplus-shortage-v1",
+        "parameters": {
+          "mode": "correct",
+          "lowTurns": 4,
+          "highTurns": 5,
+          "surplusDm": 2,
+          "shortageDm": 4,
+          "scene": "bamboo"
+        },
+        "firstWrongStep": null
+      }
+    }
+  ]
+}

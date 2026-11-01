@@ -1,0 +1,125 @@
+{
+  "sourceSha": "68233965bf401dac5328f8b43d18e9a8e352f397",
+  "files": [
+    {
+      "path": "scripts/build-inverse-index.mjs",
+      "sha256": "0b03825d3d83bc1c4f48e60f5b65462c92680594889d35d583c5387dd7b310c9"
+    },
+    {
+      "path": "scripts/build-scene-matrix.mjs",
+      "sha256": "ed1bab77272d0f4af4e2d8a340bfc4331944ba635ddd332e26bee814fce3101d"
+    },
+    {
+      "path": "scripts/build-semantic-ledger.mjs",
+      "sha256": "dcd025951c04ffec78cebc6086455b1d4e51f7855ace9a49789253196343bd22"
+    },
+    {
+      "path": "scripts/desktop-math-actions.mjs",
+      "sha256": "b2ac5d9ee6ecb5d8311e8b04c7cd311feecba60ac26f991b46020c709d265048"
+    },
+    {
+      "path": "scripts/run-browser-ci.mjs",
+      "sha256": "12bc722cc29dcb426cecc88014f25681323a89873152ed85dde1b5246947cc0d"
+    },
+    {
+      "path": "scripts/verify-remaining-visuals-browser.js",
+      "sha256": "15430c4847b37d0989ef296a67933345fb51e41bf29bd18cf8ada04d5c820680"
+    },
+    {
+      "path": "scripts/verify-template-browser.js",
+      "sha256": "6887eebc55662fe52600b629ed7cce42c437f4ace68fc3586dd33e80ebf407c3"
+    },
+    {
+      "path": "shared/classroom-expression.mjs",
+      "sha256": "e291d2e3d4cc9ba509606719d35419c5016b9375db091176b82487564641e571"
+    },
+    {
+      "path": "shared/inverse-index.d.mts",
+      "sha256": "df54dd514d35e40934bbbda1a108bb709a62cb583f476238850978537ee63de0"
+    },
+    {
+      "path": "shared/inverse-index.mjs",
+      "sha256": "a33e81a9c440b1efaef4f151f0699dd6a2a5dc50c8987df27e3dde511e4d7306"
+    },
+    {
+      "path": "shared/scene-context.d.mts",
+      "sha256": "a9298d304e58826bc7860fb175317ee4a139d0fac6319cfee7271b6d7db3f100"
+    },
+    {
+      "path": "shared/scene-context.mjs",
+      "sha256": "1afa28e73e496f378a7631460705b0171f981830d2eaffac08336abefa047a92"
+    },
+    {
+      "path": "shared/visual-relations.d.mts",
+      "sha256": "44bc6d97887b128d69e05c97acf77157f47981e148406bc80a974260b9ae3edc"
+    },
+    {
+      "path": "shared/visual-relations.mjs",
+      "sha256": "e675690a1d71e42b99e20fcfd591e3081a10c5b81ea49c99cac2f6df84d7a887"
+    },
+    {
+      "path": "src/InversePracticeIndex.css",
+      "sha256": "bcbc5031a36d4e7de2bdf04dc7395d8eceba1fecefd12740449972e35d3f0902"
+    },
+    {
+      "path": "src/InversePracticeIndex.tsx",
+      "sha256": "1aad5d622940cfa71e59004997b4664a1ec86f197c59a74653b66bb6b6a55f90"
+    },
+    {
+      "path": "src/LearningReviewView.tsx",
+      "sha256": "129b1b203ea1392ba2000cf75e7ccfce4e9b449cd2f9ad0bbeef0e0db9475e2d"
+    },
+    {
+      "path": "src/studio/ChildClassroom.tsx",
+      "sha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd"
+    },
+    {
+      "path": "src/studio/Practice.tsx",
+      "sha256": "9848554a7a70152f99625d55fd0afee5d95e425620716e8677fb50d5c31d9ea2"
+    },
+    {
+      "path": "src/studio/TeachingDiagrams.tsx",
+      "sha256": "8fc91b61a090c2e5f57d7f3c19cf74c510eaef872768834ede1b86b4ba4afbd4"
+    },
+    {
+      "path": "src/studio/concept/ConceptWorkbench.tsx",
+      "sha256": "67c62241f68b572b0cc539f3981f4102696dd5bbac14c6f415fcbba25e457f7b"
+    },
+    {
+      "path": "src/studio/concept/RelationshipFigures.tsx",
+      "sha256": "5f4b390301e7ddb7695585b7ef01f79df1b2e436a6323a186d8e679765ad65da"
+    },
+    {
+      "path": "src/studio/concept/StaticConceptFigure.tsx",
+      "sha256": "d8a98dd76fdf16307e5b01b15e221356d39430140b13bde8ef514ebe9f4f09af"
+    },
+    {
+      "path": "src/studio/concept/relationships.css",
+      "sha256": "69a310cdea6aca38eac43e537c955dfbf13005df89693366e2ade1cb733d9543"
+    },
+    {
+      "path": "src/studio/textbook/CoreWorkbench.tsx",
+      "sha256": "07363103792ed0f18f9cc77ea619e4f5c931f48e7953dc0131cbbd50a30f15cd"
+    },
+    {
+      "path": "src/studio/textbook/MotionWorkbench.tsx",
+      "sha256": "39044c3ec9d2d462b31d643c0861941817568f6529c5470597ff68f935b695aa"
+    },
+    {
+      "path": "src/studio/textbook/RegroupFigure.tsx",
+      "sha256": "f789c240c4c1441a49b67af4cbc7c2f77134a28545eb2e3d86dfe2683ff66078"
+    },
+    {
+      "path": "tests/classroom-semantics.test.mjs",
+      "sha256": "e8ba701843832b5816de3d0f832af2f4c088c59fe52ca6d0c0169a18a6484f54"
+    },
+    {
+      "path": "tests/remaining-visuals.test.mjs",
+      "sha256": "4eb7da24c4a2d5bd1abb1a62281ac0fb0e85a1aa9ecf22f58241c8061c715710"
+    },
+    {
+      "path": "tests/teaching-semantic-ledger.test.mjs",
+      "sha256": "b211357036cea3f076f959f0a69dcf6cbc232a5372e88a3bef8a06e285521404"
+    }
+  ]
+}

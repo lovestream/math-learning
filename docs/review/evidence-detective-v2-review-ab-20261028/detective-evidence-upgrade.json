@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "sourceSha": "037d8124ab04d4c07a71dbdd1634bd3242ead386",
+  "baseline": "0d7fdf3e606eeae53ccbcc57f9c1887433a074c3",
+  "syntheticOnly": true,
+  "steps": [
+    {
+      "name": "execute-0d7fdf3-old-weak-proper-and-open-records",
+      "passed": true
+    },
+    {
+      "name": "upgrade-read-only-evidence-requalification-and-open-attempt-completion",
+      "passed": true,
+      "oldFeedbackUntouched": true,
+      "parentEvidenceRestored": true
+    },
+    {
+      "name": "actual-old-code-rollback-to-pre-upgrade-checkpoint",
+      "passed": true
+    }
+  ]
+}

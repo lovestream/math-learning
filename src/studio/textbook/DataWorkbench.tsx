@@ -1,0 +1,16 @@
+import type {TextbookModel} from '../../../shared/textbook-models.mjs';
+import type {WidgetState} from '../types';
+import {useTextbook} from './useTextbook';
+import {Token,dropCode,Heading,Feedback} from './Primitives';
+const names=['安安','贝贝','晨晨','多多','恩恩','芳芳','果果','欢欢','佳佳','可可','乐乐','萌萌','宁宁','平平','琪琪','然然','森森','甜甜'];
+export default function DataWorkbench(props:{model:TextbookModel;sceneId:string;value:WidgetState;onChange:(s:WidgetState)=>void}){
+ const {model}=props,{state:s,act,toolbar,measured:m}=useTextbook(model,props.sceneId,props.value,props.onChange),alloc=s.alloc!,kind=model.type,labels=kind==='vote'?model.options!:kind==='data-bins'?model.bins!.map(([lo,hi])=>hi===100?`${lo}分钟及以上`:`${lo}–${hi}分钟`):['只参加读书组','两个组都参加','只参加绘画组'],label=(i:number)=>kind==='data-bins'?`${model.data![i]}分钟`:names[i],prefix=kind==='vote'?'vote':kind==='data-bins'?'data':'name';
+ const place=(i:number,zone:number)=>{if(!Number.isInteger(i)||i<0||i>=alloc.length||zone<1||zone>labels.length)return;if(kind==='vote'&&alloc[i]!==0){act('duplicate-vote',{error:`${names[i]}已经投过票；一人一票，不能重复累计。`},false);return}const next=[...alloc];next[i]=zone;act('place-record',{alloc:next})};
+ const choose=(i:number)=>act('choose-record',{choice:i});
+ return <section className="textbook-workbench" data-textbook-model={kind}><Heading model={model}>{kind==='vote'?'选择一个同学，把姓名拖到活动地点。一人一票；撤销后可以改变他的选择。':kind==='data-bins'?'每张卡是一次记录，把它拖到一个分组。10和20应放在哪里？允许先放错，再用条件核对。':'两份名单有共同名字。把同一个人的姓名卡拖进一个区域；中间区域代表他同时在两个组。'}</Heading>
+ {kind==='sets'&&<div className="source-name-lists"><p>读书组8人：{model.left!.map(i=>names[i]).join('、')}</p><p>绘画组7人：{model.right!.map(i=>names[i]).join('、')}</p></div>}
+ <div className="textbook-record-tray" aria-label="尚未分组的记录">{alloc.map((zone,i)=>!zone&&<Token key={i} code={`${prefix}:${i}`} label={`选择${label(i)}`} onClick={()=>choose(i)}><span aria-pressed={s.choice===i}>{label(i)}</span></Token>)}</div>
+ <div className={`textbook-bin-grid ${kind==='sets'?'set-regions':''}`}>{labels.map((name,z)=><article key={name} className="textbook-dropzone" data-bin={z+1} onDragOver={e=>e.preventDefault()} onDrop={e=>{const code=dropCode(e);if(new RegExp(`^${prefix}:\\d{1,2}$`).test(code))place(Number(code.split(':')[1]),z+1)}}><h4>{name}</h4><b className="bin-count">{m.counts[z]}</b><button onClick={()=>place(s.choice??0,z+1)}>把选中的{kind==='data-bins'?'分钟卡':'姓名'}放这里</button><div>{alloc.map((zone,i)=>zone===z+1&&<Token key={i} code={`${prefix}:${i}`} label={`移动或选择${label(i)}`} onClick={()=>choose(i)}>{label(i)}</Token>)}</div></article>)}</div>
+ <div className="textbook-controls"><button onClick={()=>act('check-records',{checked:true})}>核对一人一次与分组条件</button>{kind==='vote'&&<button onClick={()=>{const i=s.choice??0;if(alloc[i])place(i,1);else act('duplicate-vote',{error:'先让选中的同学投一票，再试重复投票。'},false)}}>试试给选中同学再投一票</button>}</div>
+ <Feedback error={s.error}>{s.checked?(m.incorrect?.length?`需要重新核对：${m.incorrect.map(label).join('、')}。请回到题目的范围或两份名单。`:m.assigned<alloc.length?`已记录${m.assigned}，还剩${alloc.length-m.assigned}条；不能把尚未记录的人自动当成某个答案。`:`全部${m.assigned}条各出现一次，各区是${m.counts.join('、')}。${kind==='sets'?'中间的人保留一份，没有删掉，也没有计两遍。':''}`):`已放${m.assigned}条，还剩${alloc.length-m.assigned}条。先操作，再核对。`}</Feedback>{toolbar}</section>;
+}

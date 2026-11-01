@@ -1,0 +1,1013 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-01",
+  "lessonId": "G3-UP02-B01",
+  "contentVersion": "2026-11-01.2",
+  "scope": "追加12题新版代理源审校；不覆盖旧849题历史记录，不代表教师审批或Kevin掌握",
+  "officialSources": {
+    "identity": "https://gaj.beijing.gov.cn/hudong/rddf/202003/t20200331_1771804.html",
+    "parity": "https://www.hh.gov.cn/info/12321/746362.htm",
+    "check": "https://sjj.pingliang.gov.cn/sjzc/ywjl/art/2023/art_e975e765957c44ac9e934637119a1ffd.html",
+    "post": "https://www.spb.gov.cn/gjyzj/c200041/202510/745c2008e015403eb27fd9726f6bea07.shtml",
+    "postLevels": "https://www.xinhuanet.com/politics/2019-08/08/c_1124850664.htm",
+    "school": "https://www.moe.gov.cn/srcsite/A06/jcys_jyzb/202502/t20250207_1177647.html"
+  },
+  "summary": {
+    "total": 12,
+    "agentSemanticReviewed": 12,
+    "humanTeachingApproved": 0
+  },
+  "rows": [
+    {
+      "lessonId": "G3-UP02-B01",
+      "unitId": "G3-UP02",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "taskId": "G3-UP02-B01-P01",
+      "set": "warmup",
+      "kind": "choice",
+      "contentVersion": "2026-11-01.2",
+      "sourceFingerprint": "54ae68bbcd42286bc9a7ae50c660acfcecd43db2a4c6beb2fd65304259f450db",
+      "task": {
+        "id": "G3-UP02-B01-P01",
+        "level": "warmup",
+        "objectiveId": "G3-UP02-B01-OBJ1",
+        "prompt": "图书编号“02-03-05”和书的数量有什么关系？",
+        "solution": "它表示地址/身份，不是数本数的算式。",
+        "hint": "想想每段写的是架、层还是格。",
+        "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+        "kind": "choice",
+        "responseSpec": {
+          "type": "choice"
+        },
+        "editorialStatus": "parent-assessment",
+        "options": [
+          {
+            "id": "1",
+            "text": "把三段数字相加，就得到书的总本数"
+          },
+          {
+            "id": "2",
+            "text": "按第2架、第3层、第5格找到位置"
+          },
+          {
+            "id": "3",
+            "text": "比较编号大小，就能知道书的多少"
+          }
+        ],
+        "expected": "2"
+      },
+      "reviewer": {
+        "kind": "Codex-agent",
+        "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+        "independentThirdParty": false,
+        "humanTeachingApproved": false
+      },
+      "evidence": {
+        "errors": [],
+        "flags": [],
+        "proofs": [],
+        "schemaChecked": true,
+        "solutionInternallyConsistent": false,
+        "independentlyDerivedFromPromptOrDiagram": false,
+        "numericProofVerified": false,
+        "formalChecked": true,
+        "agentSemanticReviewed": true,
+        "humanTeachingApproved": false,
+        "authoredRelationEqualities": []
+      },
+      "semanticReview": {
+        "reason": "给定02-03-05按题中架／层／格读取，表示第2架第3层第5格；编码没有说明书的数量。三段相加以及比较编号大小都不能推出本数。",
+        "promptMeaning": "图书编号“02-03-05”和书的数量有什么关系？",
+        "answerScope": "逐项依据下方choiceChecks判断",
+        "acceptableAlternative": null,
+        "choiceChecks": [
+          {
+            "id": "1",
+            "text": "把三段数字相加，就得到书的总本数",
+            "claim": "不成立",
+            "mathematicalBasis": "错误：把标识字段相加并不能求书的数量。"
+          },
+          {
+            "id": "2",
+            "text": "按第2架、第3层、第5格找到位置",
+            "claim": "成立",
+            "mathematicalBasis": "正确：三个字段分别定位架、层、格，保留前导0。"
+          },
+          {
+            "id": "3",
+            "text": "比较编号大小，就能知道书的多少",
+            "claim": "不成立",
+            "mathematicalBasis": "错误：位置编号的大小不能说明该格有多少本书。"
+          }
+        ],
+        "assessment": "existing-exact-validator",
+        "sourceReferences": [],
+        "diagramScope": "已移除旧书架题关系卡；使用当前文字给定条件，无混用旧四位限制",
+        "decision": "代理源语义审校通过；家长教学试学另列"
+      },
+      "priorEvidence": {
+        "source": "docs/review/849题最终审校清单_20261009.json",
+        "sourceFingerprint": "6dce131ca50862d10651f43ff513a09eb5de0d7f195e3fdc91e2d42a2871e57a",
+        "contentVersion": "2026-10-09.4"
+      },
+      "unresolved": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "unitId": "G3-UP02",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "taskId": "G3-UP02-B01-P02",
+      "set": "warmup",
+      "kind": "choice",
+      "contentVersion": "2026-11-01.2",
+      "sourceFingerprint": "64fad553fb8f3dcfff7d5a16209619916390b25326804c957d114c2c4b21749c",
+      "task": {
+        "id": "G3-UP02-B01-P02",
+        "level": "warmup",
+        "objectiveId": "G3-UP02-B01-OBJ1",
+        "prompt": "一串数字要成为可用的班级编号，下面哪组规则最必要？",
+        "solution": "编码的三条重要条件是约定字段、能准确解读、能区分对象。",
+        "hint": "如果两个人编成完全一样的号会怎样？",
+        "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+        "kind": "choice",
+        "responseSpec": {
+          "type": "choice"
+        },
+        "editorialStatus": "parent-assessment",
+        "options": [
+          {
+            "id": "1",
+            "text": "字段含义清楚、位数约定一致、不重号"
+          },
+          {
+            "id": "2",
+            "text": "编号尽量长，长度越长就一定越好"
+          },
+          {
+            "id": "3",
+            "text": "各人随意选，只要是喜欢的数字就好"
+          }
+        ],
+        "expected": "1"
+      },
+      "reviewer": {
+        "kind": "Codex-agent",
+        "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+        "independentThirdParty": false,
+        "humanTeachingApproved": false
+      },
+      "evidence": {
+        "errors": [],
+        "flags": [],
+        "proofs": [],
+        "schemaChecked": true,
+        "solutionInternallyConsistent": false,
+        "independentlyDerivedFromPromptOrDiagram": false,
+        "numericProofVerified": false,
+        "formalChecked": true,
+        "agentSemanticReviewed": true,
+        "humanTeachingApproved": false,
+        "authoredRelationEqualities": []
+      },
+      "semanticReview": {
+        "reason": "本题限定按字段设计班级编号：需约定可解读的字段、各段长度和不重号的识别范围。长并非充分条件，喜欢的数字也不保证唯一；不是断言所有现实编码都必须固定长度。",
+        "promptMeaning": "一串数字要成为可用的班级编号，下面哪组规则最必要？",
+        "answerScope": "逐项依据下方choiceChecks判断",
+        "acceptableAlternative": null,
+        "choiceChecks": [
+          {
+            "id": "1",
+            "text": "字段含义清楚、位数约定一致、不重号",
+            "claim": "成立",
+            "mathematicalBasis": "正确：在本课采用的固定字段方案中，这三点共同支持准确区分学生。"
+          },
+          {
+            "id": "2",
+            "text": "编号尽量长，长度越长就一定越好",
+            "claim": "不成立",
+            "mathematicalBasis": "错误：长度增加仍可能重复或无法解释字段。"
+          },
+          {
+            "id": "3",
+            "text": "各人随意选，只要是喜欢的数字就好",
+            "claim": "不成立",
+            "mathematicalBasis": "错误：自行挑选可能重号，且没有统一的解码规则。"
+          }
+        ],
+        "assessment": "existing-exact-validator",
+        "sourceReferences": [],
+        "diagramScope": "已移除旧书架题关系卡；使用当前文字给定条件，无混用旧四位限制",
+        "decision": "代理源语义审校通过；家长教学试学另列"
+      },
+      "priorEvidence": {
+        "source": "docs/review/849题最终审校清单_20261009.json",
+        "sourceFingerprint": "90aed2e7bf605ebd187a8dca69940306ac6b250519b60fa0d7394147bafa276b",
+        "contentVersion": "2026-10-09.4"
+      },
+      "unresolved": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "unitId": "G3-UP02",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "taskId": "G3-UP02-B01-P03",
+      "set": "core",
+      "kind": "explanation",
+      "contentVersion": "2026-11-01.2",
+      "sourceFingerprint": "8699de83aa0af07bf8d1846afe3ee5f54044e33882ce9b928464b2ef06659c82",
+      "task": {
+        "id": "G3-UP02-B01-P03",
+        "level": "core",
+        "objectiveId": "G3-UP02-B01-OBJ1",
+        "prompt": "教学用号码片段“44 01 06｜2015 05 16｜003｜？”中，分别指出6位地址码、8位出生日期码、3位顺序码和最后校验码的位置；示例中的日期是哪一年哪一月哪一日？不要填写自己的生日；“？”不是有效校验码。",
+        "solution": "地址码440106；日期2015年5月16日；顺序码003；最后1位是待计算的校验码。中间01是行政区划中间层级，不能直接推断持号人的现居住地。",
+        "hint": "先按6＋8＋3＋1切，再把8位日期分成4＋2＋2。",
+        "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+        "kind": "explanation",
+        "responseSpec": {
+          "type": "self-explanation",
+          "rubric": [
+            "定位并说明四个字段",
+            "只读题中虚构日期，不填写真实生日",
+            "说明问号用途和地址码的解释范围"
+          ]
+        },
+        "editorialStatus": "parent-assessment"
+      },
+      "reviewer": {
+        "kind": "Codex-agent",
+        "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+        "independentThirdParty": false,
+        "humanTeachingApproved": false
+      },
+      "evidence": {
+        "errors": [],
+        "flags": [],
+        "proofs": [],
+        "schemaChecked": true,
+        "solutionInternallyConsistent": false,
+        "independentlyDerivedFromPromptOrDiagram": false,
+        "numericProofVerified": false,
+        "formalChecked": true,
+        "agentSemanticReviewed": true,
+        "humanTeachingApproved": false,
+        "authoredRelationEqualities": []
+      },
+      "semanticReview": {
+        "reason": "只读给定虚构片段：440106为位置1—6；20150516为位置7—14，读为2015年5月16日；003为15—17；末位问号表示校验码未给出。前6位不是现居地，不要求计算校验码，也不索取孩子生日。",
+        "promptMeaning": "教学用号码片段“44 01 06｜2015 05 16｜003｜？”中，分别指出6位地址码、8位出生日期码、3位顺序码和最后校验码的位置；示例中的日期是哪一年哪一月哪一日？不要填写自己的生日；“？”不是有效校验码。",
+        "answerScope": "以明确约定、条件与推理为准；不同合理方案可接受，必须家长实际核对，不按关键词或数字自动判分",
+        "acceptableAlternative": "前6位44 01 06；中间8位2015 05 16是2015年5月16日；接着003是顺序码；最后？是还没给出的校验码。",
+        "choiceChecks": [],
+        "assessment": "pending-parent-review-no-automatic-grade-or-points",
+        "sourceReferences": [
+          "https://gaj.beijing.gov.cn/hudong/rddf/202003/t20200331_1771804.html",
+          "https://www.hh.gov.cn/info/12321/746362.htm"
+        ],
+        "diagramScope": "已移除旧书架题关系卡；使用当前文字给定条件，无混用旧四位限制",
+        "decision": "代理源语义审校通过；家长教学试学另列"
+      },
+      "priorEvidence": {
+        "source": "docs/review/849题最终审校清单_20261009.json",
+        "sourceFingerprint": "9c422e8297eb029686d60bb76eaae9c952e8c2d40bc1ddf624b9ea3d5254f86d",
+        "contentVersion": "2026-10-09.4"
+      },
+      "unresolved": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "unitId": "G3-UP02",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "taskId": "G3-UP02-B01-P04",
+      "set": "core",
+      "kind": "choice",
+      "contentVersion": "2026-11-01.2",
+      "sourceFingerprint": "0c06602f1b7e413aa16fed505eb2867aa44874c06c1b552e1bf9142d2743e9b5",
+      "task": {
+        "id": "G3-UP02-B01-P04",
+        "level": "core",
+        "objectiveId": "G3-UP02-B01-OBJ1",
+        "prompt": "一段身份证号码的顺序码是004（对应第15—17位）。按这套编码规则，第17位数字代表什么？",
+        "solution": "第15—17位是顺序码，取它最后一位即整个号码第17位；偶数对应女性。性别不是靠第18位校验码判断。",
+        "hint": "定位第17位，而不是数最后一个校验位。",
+        "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+        "kind": "choice",
+        "responseSpec": {
+          "type": "choice"
+        },
+        "editorialStatus": "parent-assessment",
+        "options": [
+          {
+            "id": "1",
+            "text": "第17位为4，是偶数，对应女性"
+          },
+          {
+            "id": "2",
+            "text": "倒数第一位4对应男性"
+          },
+          {
+            "id": "3",
+            "text": "第17位就是出生年份"
+          }
+        ],
+        "expected": "1"
+      },
+      "reviewer": {
+        "kind": "Codex-agent",
+        "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+        "independentThirdParty": false,
+        "humanTeachingApproved": false
+      },
+      "evidence": {
+        "errors": [],
+        "flags": [],
+        "proofs": [],
+        "schemaChecked": true,
+        "solutionInternallyConsistent": false,
+        "independentlyDerivedFromPromptOrDiagram": false,
+        "numericProofVerified": false,
+        "formalChecked": true,
+        "agentSemanticReviewed": true,
+        "humanTeachingApproved": false,
+        "authoredRelationEqualities": []
+      },
+      "semanticReview": {
+        "reason": "顺序码004占15、16、17位，所以第17位为4，是偶数，按规则对应女性；第18位校验码没有在题目给出。顺序码既不是出生年，也不是整个号码最后一位。",
+        "promptMeaning": "一段身份证号码的顺序码是004（对应第15—17位）。按这套编码规则，第17位数字代表什么？",
+        "answerScope": "逐项依据下方choiceChecks判断",
+        "acceptableAlternative": null,
+        "choiceChecks": [
+          {
+            "id": "1",
+            "text": "第17位为4，是偶数，对应女性",
+            "claim": "成立",
+            "mathematicalBasis": "正确：004最后一位是第17位，4为偶数。"
+          },
+          {
+            "id": "2",
+            "text": "倒数第一位4对应男性",
+            "claim": "不成立",
+            "mathematicalBasis": "错误：混淆了顺序码末位与第18位校验码；题目并未给出最后校验位。"
+          },
+          {
+            "id": "3",
+            "text": "第17位就是出生年份",
+            "claim": "不成立",
+            "mathematicalBasis": "错误：出生年份应在第7—10位，不能由顺序码推断。"
+          }
+        ],
+        "assessment": "existing-exact-validator",
+        "sourceReferences": [
+          "https://gaj.beijing.gov.cn/hudong/rddf/202003/t20200331_1771804.html",
+          "https://www.hh.gov.cn/info/12321/746362.htm"
+        ],
+        "diagramScope": "已移除旧书架题关系卡；使用当前文字给定条件，无混用旧四位限制",
+        "decision": "代理源语义审校通过；家长教学试学另列"
+      },
+      "priorEvidence": {
+        "source": "docs/review/849题最终审校清单_20261009.json",
+        "sourceFingerprint": "1f561b11f1ed32345f4ebf2d9374a1515c903454b79ec259fff291e999546a78",
+        "contentVersion": "2026-10-09.4"
+      },
+      "unresolved": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "unitId": "G3-UP02",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "taskId": "G3-UP02-B01-P07",
+      "set": "core",
+      "kind": "explanation",
+      "contentVersion": "2026-11-01.2",
+      "sourceFingerprint": "136243189fd5a84db7e8bed7f71c4a67a8237ac3561a38ebf138e62bd58ab0da",
+      "task": {
+        "id": "G3-UP02-B01-P07",
+        "level": "core",
+        "objectiveId": "G3-UP02-B01-OBJ1",
+        "prompt": "为三年级2班7号同学设计一个班级学号。请给出一套自己的编码格式、各段含义和补零规则，再说明为什么只写“07”可能重号。",
+        "solution": "合理示例：03-02-07（年级两位、班级两位、序号两位），或者3-02-07（年级一位、班级两位、序号两位）；只写07会与其他班级第7号重复。要提前写明位数和分隔规则。",
+        "hint": "答案不只有一个；需要清楚可解码、不重号。",
+        "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+        "kind": "explanation",
+        "responseSpec": {
+          "type": "self-explanation",
+          "rubric": [
+            "给出可解码的自定格式，不要求唯一写法",
+            "解释字段含义、位数、分隔与补零约定",
+            "用跨班同序号检验识别范围"
+          ]
+        },
+        "editorialStatus": "parent-assessment"
+      },
+      "reviewer": {
+        "kind": "Codex-agent",
+        "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+        "independentThirdParty": false,
+        "humanTeachingApproved": false
+      },
+      "evidence": {
+        "errors": [],
+        "flags": [],
+        "proofs": [],
+        "schemaChecked": true,
+        "solutionInternallyConsistent": false,
+        "independentlyDerivedFromPromptOrDiagram": false,
+        "numericProofVerified": false,
+        "formalChecked": true,
+        "agentSemanticReviewed": true,
+        "humanTeachingApproved": false,
+        "authoredRelationEqualities": []
+      },
+      "semanticReview": {
+        "reason": "这是开放题，不沿用旧版必须3207的限制。3207、3-2-07、3-02-07、03-02-07等均可，需解释年级／班级／序号和固定长度或分隔规则。只写07在跨班识别时会撞号；本班内部限定范围时07本可区分，因此必须说明范围。",
+        "promptMeaning": "为三年级2班7号同学设计一个班级学号。请给出一套自己的编码格式、各段含义和补零规则，再说明为什么只写“07”可能重号。",
+        "answerScope": "以明确约定、条件与推理为准；不同合理方案可接受，必须家长实际核对，不按关键词或数字自动判分",
+        "acceptableAlternative": "我用03-02-07，三段各两位表示年级、班级、班内序号，不足两位补0。三年级1班7号为03-01-07。只写07时跨班不能区分。",
+        "choiceChecks": [],
+        "assessment": "pending-parent-review-no-automatic-grade-or-points",
+        "sourceReferences": [],
+        "diagramScope": "已移除旧书架题关系卡；使用当前文字给定条件，无混用旧四位限制",
+        "decision": "代理源语义审校通过；家长教学试学另列"
+      },
+      "priorEvidence": {
+        "source": "docs/review/849题最终审校清单_20261009.json",
+        "sourceFingerprint": "85bd80c479567b7a56d0b93524f011c3aeecd2232020f34da7bc7e656de68e97",
+        "contentVersion": "2026-10-09.4"
+      },
+      "unresolved": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "unitId": "G3-UP02",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "taskId": "G3-UP02-B01-P05",
+      "set": "transfer",
+      "kind": "choice",
+      "contentVersion": "2026-11-01.2",
+      "sourceFingerprint": "32ee517902296a8509c9c23dade58b23164b56e70b0b95cec9010a7fa1edc6f8",
+      "task": {
+        "id": "G3-UP02-B01-P05",
+        "level": "transfer",
+        "objectiveId": "G3-UP02-B01-OBJ1",
+        "prompt": "寄信时，邮政编码和详细收件地址有什么区别？",
+        "solution": "邮政编码主要帮助邮件分拣和确定投递范围，不等于身份证行政区划代码，更不能替代收件人详细地址。",
+        "hint": "想想同一片投递区域是否可能有很多住户。",
+        "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+        "kind": "choice",
+        "responseSpec": {
+          "type": "choice"
+        },
+        "expected": "1",
+        "unit": "个",
+        "options": [
+          {
+            "id": "1",
+            "text": "邮政编码6位用于邮区/投递分拣，详细地址还要写清"
+          },
+          {
+            "id": "2",
+            "text": "只写邮编就能找到任意具体门牌"
+          },
+          {
+            "id": "3",
+            "text": "邮编与身份证前6位总是一模一样"
+          }
+        ]
+      },
+      "reviewer": {
+        "kind": "Codex-agent",
+        "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+        "independentThirdParty": false,
+        "humanTeachingApproved": false
+      },
+      "evidence": {
+        "errors": [],
+        "flags": [],
+        "proofs": [],
+        "schemaChecked": true,
+        "solutionInternallyConsistent": false,
+        "independentlyDerivedFromPromptOrDiagram": false,
+        "numericProofVerified": false,
+        "formalChecked": true,
+        "agentSemanticReviewed": true,
+        "humanTeachingApproved": false,
+        "authoredRelationEqualities": []
+      },
+      "semanticReview": {
+        "reason": "传统邮编是投递区域专用代号。同一投递区域能有许多住户，故还要详细地址；与身份证行政区划码属于不同用途的体系，不能相互照抄。",
+        "promptMeaning": "寄信时，邮政编码和详细收件地址有什么区别？",
+        "answerScope": "逐项依据下方choiceChecks判断",
+        "acceptableAlternative": null,
+        "choiceChecks": [
+          {
+            "id": "1",
+            "text": "邮政编码6位用于邮区/投递分拣，详细地址还要写清",
+            "claim": "成立",
+            "mathematicalBasis": "正确：邮编协助分拣投递，仍需要完整地址定位具体收件人。"
+          },
+          {
+            "id": "2",
+            "text": "只写邮编就能找到任意具体门牌",
+            "claim": "不成立",
+            "mathematicalBasis": "错误：同一邮编覆盖多处地址，单靠邮编不能确定任意门牌。"
+          },
+          {
+            "id": "3",
+            "text": "邮编与身份证前6位总是一模一样",
+            "claim": "不成立",
+            "mathematicalBasis": "错误：身份证地址码和邮编并非同一映射；同为6位不表示内容相同。"
+          }
+        ],
+        "assessment": "existing-exact-validator",
+        "sourceReferences": [
+          "https://www.spb.gov.cn/gjyzj/c200041/202510/745c2008e015403eb27fd9726f6bea07.shtml",
+          "https://www.xinhuanet.com/politics/2019-08/08/c_1124850664.htm"
+        ],
+        "diagramScope": "已移除旧书架题关系卡；使用当前文字给定条件，无混用旧四位限制",
+        "decision": "代理源语义审校通过；家长教学试学另列"
+      },
+      "priorEvidence": {
+        "source": "docs/review/849题最终审校清单_20261009.json",
+        "sourceFingerprint": "e55f951836d0de32da6e2f51626d60624b2b66401da302feb1e0a31fad9573d3",
+        "contentVersion": "2026-10-09.4"
+      },
+      "unresolved": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "unitId": "G3-UP02",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "taskId": "G3-UP02-B01-P08",
+      "set": "transfer",
+      "kind": "explanation",
+      "contentVersion": "2026-11-01.2",
+      "sourceFingerprint": "524b5870f824826dbedea0ea4a5d1ffa474003319fb462be09979258801f33bb",
+      "task": {
+        "id": "G3-UP02-B01-P08",
+        "level": "transfer",
+        "objectiveId": "G3-UP02-B01-OBJ1",
+        "prompt": "学校想用同一编号跟踪学生从三年级升到四年级的情况。现有“03-02-07”含年级字段，怎样改成更稳定的校内编号？说明新方案为什么不因升年级而改变。",
+        "solution": "示例：入学年度2024＋当年校内唯一流水0007，编号2024-0007，班级另存，不随升年级改变。必须保证每年内部流水不重复，且不同年度以年份区分；这只是自编校内号，不是全国学籍号。",
+        "hint": "把会变化的年级/班级从固定身份号里拿走。",
+        "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+        "kind": "explanation",
+        "responseSpec": {
+          "type": "self-explanation",
+          "rubric": [
+            "选用不会随升年级而变化的字段",
+            "解释同一学校跨班和跨入学年的唯一性",
+            "区分模拟校内编号与正式学籍号"
+          ]
+        },
+        "editorialStatus": "parent-assessment"
+      },
+      "reviewer": {
+        "kind": "Codex-agent",
+        "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+        "independentThirdParty": false,
+        "humanTeachingApproved": false
+      },
+      "evidence": {
+        "errors": [],
+        "flags": [],
+        "proofs": [],
+        "schemaChecked": true,
+        "solutionInternallyConsistent": false,
+        "independentlyDerivedFromPromptOrDiagram": false,
+        "numericProofVerified": false,
+        "formalChecked": true,
+        "agentSemanticReviewed": true,
+        "humanTeachingApproved": false,
+        "authoredRelationEqualities": []
+      },
+      "semanticReview": {
+        "reason": "长效模拟校内号需用稳定字段：入学年2024＋当年全校唯一流水0007可得2024-0007；换班升年级不改这两段。同年不能每班重置流水；跨年由入学年区分。随机唯一标识等其他清楚保证稳定唯一的方案也可，不能冒称国家学籍号。",
+        "promptMeaning": "学校想用同一编号跟踪学生从三年级升到四年级的情况。现有“03-02-07”含年级字段，怎样改成更稳定的校内编号？说明新方案为什么不因升年级而改变。",
+        "answerScope": "以明确约定、条件与推理为准；不同合理方案可接受，必须家长实际核对，不按关键词或数字自动判分",
+        "acceptableAlternative": "采用入学年2024加全校该年唯一流水0007，写2024-0007；班级另记。另一个班的学生不能也分到0007，另一入学年由年份区分；升年级不改号。这只是校内模拟号。",
+        "choiceChecks": [],
+        "assessment": "pending-parent-review-no-automatic-grade-or-points",
+        "sourceReferences": [
+          "https://www.moe.gov.cn/srcsite/A06/jcys_jyzb/202502/t20250207_1177647.html"
+        ],
+        "diagramScope": "已移除旧书架题关系卡；使用当前文字给定条件，无混用旧四位限制",
+        "decision": "代理源语义审校通过；家长教学试学另列"
+      },
+      "priorEvidence": {
+        "source": "docs/review/849题最终审校清单_20261009.json",
+        "sourceFingerprint": "e959113a6b990f853d224c687d4b548a390684babbecc1b75e18ea85272cc1f3",
+        "contentVersion": "2026-10-09.4"
+      },
+      "unresolved": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "unitId": "G3-UP02",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "taskId": "G3-UP02-B01-P06",
+      "set": "challenge",
+      "kind": "explanation",
+      "contentVersion": "2026-11-01.2",
+      "sourceFingerprint": "7b0d66fc77888dd1bb6ceff2c691c165158a12b339c030798317fbb6b276af9c",
+      "task": {
+        "id": "G3-UP02-B01-P06",
+        "level": "challenge",
+        "objectiveId": "G3-UP02-B01-OBJ1",
+        "prompt": "开放设计：模拟学校设一、二、三年级，每年级最多6个班，每班最多45人。请给每名学生设计“年级＋班级＋班内序号”编码，写出每段位数、两个样例，并证明同班和不同班都不会重号。指出升年级后该编号是否会变化。",
+        "solution": "示例：年级1位＋班级2位＋序号2位；3年级2班7号→3-02-07，3年级6班45号→3-06-45。不同年级、不同班级或不同序号至少有一段不同，所以不重号；升级会使年级标签改变，因此它是当前班级标签，不适合作为终身不变编号。不要求位数最少；也可用年级1位、班级1位、序号2位，只要清楚约定并能容纳全部学生。其他合理方案由家长核对。",
+        "hint": "先定字段与最大容量，再试跨班同号和升年级的边界。",
+        "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+        "kind": "explanation",
+        "responseSpec": {
+          "type": "self-explanation",
+          "rubric": [
+            "格式容纳3个年级、6个班、45人；明确字段与补零规则",
+            "两个样例可解码，并说明同班、跨班、跨年级如何区分",
+            "说明升年级会改变当前班级标签；不把它冒充正式学籍号"
+          ]
+        },
+        "editorialStatus": "parent-assessment"
+      },
+      "reviewer": {
+        "kind": "Codex-agent",
+        "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+        "independentThirdParty": false,
+        "humanTeachingApproved": false
+      },
+      "evidence": {
+        "errors": [],
+        "flags": [],
+        "proofs": [],
+        "schemaChecked": true,
+        "solutionInternallyConsistent": false,
+        "independentlyDerivedFromPromptOrDiagram": false,
+        "numericProofVerified": false,
+        "formalChecked": true,
+        "agentSemanticReviewed": true,
+        "humanTeachingApproved": false,
+        "authoredRelationEqualities": []
+      },
+      "semanticReview": {
+        "reason": "条件为年级1—3、班级1—6、序号1—45，容量3×6×45＝810。1＋1＋2位的3207与3645或1＋2＋2位的3-02-07与3-06-45都可解码；不强制最短位数。同班序号唯一、跨班班级字段不同、跨年级年级不同。升年级会改变该标签，不能称终身学籍号。",
+        "promptMeaning": "开放设计：模拟学校设一、二、三年级，每年级最多6个班，每班最多45人。请给每名学生设计“年级＋班级＋班内序号”编码，写出每段位数、两个样例，并证明同班和不同班都不会重号。指出升年级后该编号是否会变化。",
+        "answerScope": "以明确约定、条件与推理为准；不同合理方案可接受，必须家长实际核对，不按关键词或数字自动判分",
+        "acceptableAlternative": "年级1位、班级1位、序号2位。3207是3年级2班7号，3645是3年级6班45号。班内序号不重复，跨班或跨年级至少有一个字段不同。升年级时年级字段改变。",
+        "choiceChecks": [],
+        "assessment": "pending-parent-review-no-automatic-grade-or-points",
+        "sourceReferences": [
+          "https://www.moe.gov.cn/srcsite/A06/jcys_jyzb/202502/t20250207_1177647.html"
+        ],
+        "diagramScope": "已移除旧书架题关系卡；使用当前文字给定条件，无混用旧四位限制",
+        "decision": "代理源语义审校通过；家长教学试学另列"
+      },
+      "priorEvidence": {
+        "source": "docs/review/849题最终审校清单_20261009.json",
+        "sourceFingerprint": "ba9569f8d4d8822f6b686db23dabc617e50417f35bb9543523e3072e678828b9",
+        "contentVersion": "2026-10-09.4"
+      },
+      "unresolved": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "unitId": "G3-UP02",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "taskId": "G3-UP02-B01-P09",
+      "set": "review",
+      "kind": "number",
+      "contentVersion": "2026-11-01.2",
+      "sourceFingerprint": "8bbdeccafe17a602a9af842869547c0bb3005f68a94096cf9f96df3f75de40ee",
+      "task": {
+        "id": "G3-UP02-B01-P09",
+        "level": "review",
+        "objectiveId": "G3-UP02-B01-OBJ1",
+        "prompt": "教学用身份号码分成地址码6位、出生日期码8位、顺序码3位和校验码1位。一共多少个字符位置？",
+        "solution": "6位地址码＋8位日期码＋3位顺序码＋1位校验码＝18位。最后一位可能是X。",
+        "hint": "数6、8、3、1，不是只数数字字符。",
+        "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+        "kind": "number",
+        "responseSpec": {
+          "type": "number"
+        },
+        "editorialStatus": "parent-assessment",
+        "expected": "18"
+      },
+      "reviewer": {
+        "kind": "Codex-agent",
+        "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+        "independentThirdParty": false,
+        "humanTeachingApproved": false
+      },
+      "evidence": {
+        "errors": [],
+        "flags": [],
+        "proofs": [],
+        "schemaChecked": true,
+        "solutionInternallyConsistent": false,
+        "independentlyDerivedFromPromptOrDiagram": false,
+        "numericProofVerified": false,
+        "formalChecked": true,
+        "agentSemanticReviewed": true,
+        "humanTeachingApproved": false,
+        "authoredRelationEqualities": []
+      },
+      "semanticReview": {
+        "reason": "从题干明确给出的6、8、3、1四段独立相加：6＋8＋3＋1＝18；X也只占一个字符位置。题干不直接报出总长度，检验分段计数而不只是抄出18。",
+        "promptMeaning": "教学用身份号码分成地址码6位、出生日期码8位、顺序码3位和校验码1位。一共多少个字符位置？",
+        "answerScope": "精确等值18；不另选单位",
+        "acceptableAlternative": null,
+        "choiceChecks": [],
+        "assessment": "existing-exact-validator",
+        "sourceReferences": [
+          "https://gaj.beijing.gov.cn/hudong/rddf/202003/t20200331_1771804.html"
+        ],
+        "diagramScope": "已移除旧书架题关系卡；使用当前文字给定条件，无混用旧四位限制",
+        "decision": "代理源语义审校通过；家长教学试学另列"
+      },
+      "priorEvidence": {
+        "source": "docs/review/849题最终审校清单_20261009.json",
+        "sourceFingerprint": "65e76ef9b685f55de6c49afc88e4d6668f05f373f5c3dd499eb66d5ce8389d1a",
+        "contentVersion": "2026-10-09.4"
+      },
+      "unresolved": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "unitId": "G3-UP02",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "taskId": "G3-UP02-B01-P10",
+      "set": "review",
+      "kind": "choice",
+      "contentVersion": "2026-11-01.2",
+      "sourceFingerprint": "0b7569eb002d6a36257f1607e6e2ee0c3217bc8f71eb7806c1c7900f5f375a6f",
+      "task": {
+        "id": "G3-UP02-B01-P10",
+        "level": "review",
+        "objectiveId": "G3-UP02-B01-OBJ1",
+        "prompt": "某教学示意编号的最后校验值计算为10，为什么身份证最后一位写X？",
+        "solution": "身份证校验码依规定由前17位计算；结果若为10，用X占1个字符位置。不是随意写X，也不是第17位。",
+        "hint": "注意最后一位是校验码，不是顺序码。",
+        "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+        "kind": "choice",
+        "responseSpec": {
+          "type": "choice"
+        },
+        "editorialStatus": "parent-assessment",
+        "options": [
+          {
+            "id": "1",
+            "text": "系统随机选择一个字母充当校验码"
+          },
+          {
+            "id": "2",
+            "text": "用一个字符X表示计算出的校验值10"
+          },
+          {
+            "id": "3",
+            "text": "用字母X表示这位持号人的出生月份"
+          }
+        ],
+        "expected": "2"
+      },
+      "reviewer": {
+        "kind": "Codex-agent",
+        "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+        "independentThirdParty": false,
+        "humanTeachingApproved": false
+      },
+      "evidence": {
+        "errors": [],
+        "flags": [],
+        "proofs": [],
+        "schemaChecked": true,
+        "solutionInternallyConsistent": false,
+        "independentlyDerivedFromPromptOrDiagram": false,
+        "numericProofVerified": false,
+        "formalChecked": true,
+        "agentSemanticReviewed": true,
+        "humanTeachingApproved": false,
+        "authoredRelationEqualities": []
+      },
+      "semanticReview": {
+        "reason": "题干明确已计算校验值10。按规定用一个字符X表示，保持18位；不是任意挑选字母，也不编码出生月份。无需孩子掌握完整加权求余算法。",
+        "promptMeaning": "某教学示意编号的最后校验值计算为10，为什么身份证最后一位写X？",
+        "answerScope": "逐项依据下方choiceChecks判断",
+        "acceptableAlternative": null,
+        "choiceChecks": [
+          {
+            "id": "1",
+            "text": "系统随机选择一个字母充当校验码",
+            "claim": "不成立",
+            "mathematicalBasis": "错误：校验码由前17位按规则决定，不随机选择。"
+          },
+          {
+            "id": "2",
+            "text": "用一个字符X表示计算出的校验值10",
+            "claim": "成立",
+            "mathematicalBasis": "正确：10以X表示，只占一个字符位置。"
+          },
+          {
+            "id": "3",
+            "text": "用字母X表示这位持号人的出生月份",
+            "claim": "不成立",
+            "mathematicalBasis": "错误：出生月份在第11—12位，X不表示月份。"
+          }
+        ],
+        "assessment": "existing-exact-validator",
+        "sourceReferences": [
+          "https://gaj.beijing.gov.cn/hudong/rddf/202003/t20200331_1771804.html",
+          "https://sjj.pingliang.gov.cn/sjzc/ywjl/art/2023/art_e975e765957c44ac9e934637119a1ffd.html"
+        ],
+        "diagramScope": "已移除旧书架题关系卡；使用当前文字给定条件，无混用旧四位限制",
+        "decision": "代理源语义审校通过；家长教学试学另列"
+      },
+      "priorEvidence": {
+        "source": "docs/review/849题最终审校清单_20261009.json",
+        "sourceFingerprint": "8f8b77653fe4b49184c50a7764af8857dfa3b67cfb91c9fcf521a584d7202bbf",
+        "contentVersion": "2026-10-09.4"
+      },
+      "unresolved": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "unitId": "G3-UP02",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "taskId": "G3-UP02-B01-P11",
+      "set": "review",
+      "kind": "choice",
+      "contentVersion": "2026-11-01.2",
+      "sourceFingerprint": "5c330faa7e7a3070bd925b38ef9749faf1d3310ddab29a9d37ca30aacd8cca0c",
+      "task": {
+        "id": "G3-UP02-B01-P11",
+        "level": "review",
+        "objectiveId": "G3-UP02-B01-OBJ1",
+        "prompt": "我国常见六位邮政编码的分段理解，下面正确的是哪一项？",
+        "solution": "邮政编码为投递服务，通常按2＋1＋1＋2理解，实际查询应以官方邮政编码服务为准。",
+        "hint": "别把邮编当作记录一个人出生和性别的代码。",
+        "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+        "kind": "choice",
+        "responseSpec": {
+          "type": "choice"
+        },
+        "editorialStatus": "parent-assessment",
+        "options": [
+          {
+            "id": "1",
+            "text": "前2位邮政省级范围｜第3位邮区｜第4位县市层级｜后2位投递局所"
+          },
+          {
+            "id": "2",
+            "text": "前2位邮政省级范围｜第3位县市层级｜第4位邮区｜后2位投递局所"
+          },
+          {
+            "id": "3",
+            "text": "前2位行政省级代码｜第3—4位行政中间层级｜后2位行政县区"
+          }
+        ],
+        "expected": "1"
+      },
+      "reviewer": {
+        "kind": "Codex-agent",
+        "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+        "independentThirdParty": false,
+        "humanTeachingApproved": false
+      },
+      "evidence": {
+        "errors": [],
+        "flags": [],
+        "proofs": [],
+        "schemaChecked": true,
+        "solutionInternallyConsistent": false,
+        "independentlyDerivedFromPromptOrDiagram": false,
+        "numericProofVerified": false,
+        "formalChecked": true,
+        "agentSemanticReviewed": true,
+        "humanTeachingApproved": false,
+        "authoredRelationEqualities": []
+      },
+      "semanticReview": {
+        "reason": "传统四级六码按2＋1＋1＋2理解：省级邮政范围、邮区、县市、投递局所。不能颠倒第3位和第4位，也不能套用身份证地址码的行政层级。实际邮编查询以官方为准。",
+        "promptMeaning": "我国常见六位邮政编码的分段理解，下面正确的是哪一项？",
+        "answerScope": "逐项依据下方choiceChecks判断",
+        "acceptableAlternative": null,
+        "choiceChecks": [
+          {
+            "id": "1",
+            "text": "前2位邮政省级范围｜第3位邮区｜第4位县市层级｜后2位投递局所",
+            "claim": "成立",
+            "mathematicalBasis": "正确：2＋1＋1＋2的邮政分拣层次与本课来源一致。"
+          },
+          {
+            "id": "2",
+            "text": "前2位邮政省级范围｜第3位县市层级｜第4位邮区｜后2位投递局所",
+            "claim": "不成立",
+            "mathematicalBasis": "错误：第3位邮区和第4位县市被交换，固定位置不可调换。"
+          },
+          {
+            "id": "3",
+            "text": "前2位行政省级代码｜第3—4位行政中间层级｜后2位行政县区",
+            "claim": "不成立",
+            "mathematicalBasis": "错误：这是把身份证行政地址码的2＋2＋2错套给邮政编码。"
+          }
+        ],
+        "assessment": "existing-exact-validator",
+        "sourceReferences": [
+          "https://www.spb.gov.cn/gjyzj/c200041/202510/745c2008e015403eb27fd9726f6bea07.shtml",
+          "https://www.xinhuanet.com/politics/2019-08/08/c_1124850664.htm"
+        ],
+        "diagramScope": "已移除旧书架题关系卡；使用当前文字给定条件，无混用旧四位限制",
+        "decision": "代理源语义审校通过；家长教学试学另列"
+      },
+      "priorEvidence": {
+        "source": "docs/review/849题最终审校清单_20261009.json",
+        "sourceFingerprint": "4c991007c2f649d57fc0ed118b34db428c6379d5bc5b6a65b949a7128d087c3f",
+        "contentVersion": "2026-10-09.4"
+      },
+      "unresolved": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "unitId": "G3-UP02",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "taskId": "G3-UP02-B01-P12",
+      "set": "review",
+      "kind": "explanation",
+      "contentVersion": "2026-11-01.2",
+      "sourceFingerprint": "b40d227b5253922303747b43cf7194ec31773c7d82fa92701c4d8d46b8f5548b",
+      "task": {
+        "id": "G3-UP02-B01-P12",
+        "level": "review",
+        "objectiveId": "G3-UP02-B01-OBJ1",
+        "prompt": "比较三个情境：图书馆只写“格号05”、班级只写“序号07”、信封只写六位邮编。分别说出可能缺少什么信息。再回答：校验码通过能否证明身份证号码一定真实、有效？",
+        "solution": "格号缺书架/层；序号07缺班级/年级等区分范围；邮编只能辅助分拣，缺收件人详细地址。校验通过只说明它满足某种计算关系，不能证明真实身份或所有信息真实。",
+        "hint": "检查编号的识别范围；再想校验码到底检验了什么。",
+        "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+        "kind": "explanation",
+        "responseSpec": {
+          "type": "self-explanation",
+          "rubric": [
+            "分别检查三种情境的识别范围和所缺信息",
+            "说明不同用途的编码不能相互替代",
+            "说明校验通过能够证明什么、不能证明什么"
+          ]
+        },
+        "editorialStatus": "parent-assessment"
+      },
+      "reviewer": {
+        "kind": "Codex-agent",
+        "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+        "independentThirdParty": false,
+        "humanTeachingApproved": false
+      },
+      "evidence": {
+        "errors": [],
+        "flags": [],
+        "proofs": [],
+        "schemaChecked": true,
+        "solutionInternallyConsistent": false,
+        "independentlyDerivedFromPromptOrDiagram": false,
+        "numericProofVerified": false,
+        "formalChecked": true,
+        "agentSemanticReviewed": true,
+        "humanTeachingApproved": false,
+        "authoredRelationEqualities": []
+      },
+      "semanticReview": {
+        "reason": "分别限定识别范围：图书格号缺架／层，跨班序号缺班／年级，传统邮编缺具体收件地址与收件人。仅通过查错算法不证明号码真实有效、身份真实或全部资料正确；不要求给出真实姓名、地址或证件。",
+        "promptMeaning": "比较三个情境：图书馆只写“格号05”、班级只写“序号07”、信封只写六位邮编。分别说出可能缺少什么信息。再回答：校验码通过能否证明身份证号码一定真实、有效？",
+        "answerScope": "以明确约定、条件与推理为准；不同合理方案可接受，必须家长实际核对，不按关键词或数字自动判分",
+        "acceptableAlternative": "只写05还不知道哪个书架哪一层；只写07还不知道哪个班或年级；同一邮编有许多人，要写详细收件地址。校验通过只说明计算关系符合，不能证明身份真实。",
+        "choiceChecks": [],
+        "assessment": "pending-parent-review-no-automatic-grade-or-points",
+        "sourceReferences": [
+          "https://gaj.beijing.gov.cn/hudong/rddf/202003/t20200331_1771804.html",
+          "https://www.spb.gov.cn/gjyzj/c200041/202510/745c2008e015403eb27fd9726f6bea07.shtml",
+          "https://sjj.pingliang.gov.cn/sjzc/ywjl/art/2023/art_e975e765957c44ac9e934637119a1ffd.html"
+        ],
+        "diagramScope": "已移除旧书架题关系卡；使用当前文字给定条件，无混用旧四位限制",
+        "decision": "代理源语义审校通过；家长教学试学另列"
+      },
+      "priorEvidence": {
+        "source": "docs/review/849题最终审校清单_20261009.json",
+        "sourceFingerprint": "16941de9aca094341dd0865c04d07cedb9864e018f1a55bc91d860a69139e39c",
+        "contentVersion": "2026-10-09.4"
+      },
+      "unresolved": false
+    }
+  ],
+  "historicalRegisterSha256": "775cebc7250fb8f45284d6754f13340a1dbaf162242cbe417a35b2ecaf9a1465",
+  "sourceFiles": {
+    "content/pilot/coding-supplement.mjs": "d2b2852f6cb0580b3d8762386e0b8e7fd53e299791ec8005fd2280edfa0e3f00",
+    "content/pilot/source.mjs": "25db030b71664ec0d40fb0eda703ae40c148d88974360f0370758f5f62c6a487",
+    "shared/coding-model.mjs": "3ba282cd5a4b37bb30ee58bc994a3b6247968c537d63d6a794209d06837c5c92",
+    "src/studio/textbook/CodingExploration.tsx": "ac2c82e5db754688696d778f6b49e92514e800f7874391510a1cdf3c4009f965",
+    "src/studio/textbook/CodingOverview.tsx": "c60252cfef9cf06734bd20148bec813072de0870117b25b817372c5f1199b289",
+    "src/studio/textbook/SymbolWorkbench.tsx": "cc75e8cbd587b254f88b777cc8300bf7e0b0adac6c8e6ecaf5fd59f3262370d8"
+  },
+  "sourceVerification": {
+    "date": "2026-11-01",
+    "identity": "北京市公安局全文可访问；平凉市审计局和红河州政府说明交叉核对",
+    "post": "国家邮政局2025年答复可访问；四级六码分段另对照新华社所载报道",
+    "education": "教育部2025年学籍办法官方搜索索引可核对第八条；网页直开出现重定向，未伪称全文已下载",
+    "unavailableOriginalLink": "上海民政原链接本轮无法读取，未将其作为唯一依据"
+  }
+}
