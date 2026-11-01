@@ -13,8 +13,8 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci
-      - run: npm test
       - run: npm run build
+      - run: npm test
       - run: npm run content:check
       - name: Verify detective answer boundary and immutable delivery blobs
         run: node scripts/verify-detective-v2-boundaries.mjs
