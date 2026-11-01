@@ -7,6 +7,7 @@ import {withdrawnLessons,withdrawnTasks} from '../shared/withdrawn-checks.mjs';
 import {semanticContexts} from '../docs/review/semantic-ledger/contexts.mjs';
 import {auditDocument,baselineSha,semanticNotes} from '../docs/review/semantic-ledger/notes.mjs';
 import {mixedSceneContext,coreSceneMission} from '../shared/scene-context.mjs';
+import {readCurrentTaskReviews} from './task-review-registry.mjs';
 import {semanticReviewMatches} from './audit-formal-tasks.mjs';
 
 const root=new URL('../',import.meta.url);
@@ -20,7 +21,7 @@ export function buildSemanticLedger(options={}){
  const evidencePath=relative('docs/review/semantic-ledger/desktop-verification.json');
  const evidence=Object.hasOwn(options,'evidence')?options.evidence:existsSync(evidencePath)?JSON.parse(readFileSync(evidencePath,'utf8')):null;
  const closedBaseline=JSON.parse(readFileSync(relative('docs/review/final-task-review/classroom-baseline.json'),'utf8'));
- const taskReview=JSON.parse(readFileSync(relative('docs/review/849题最终审校清单_20261009.json'),'utf8'));
+ const taskReview={rows:readCurrentTaskReviews()};
  const rows=lessons.map(lesson=>{
   const id=lesson.lessonId,c=lesson.childClassroom,note=semanticNotes[id];
   // A changed chapter gets its own clean-SHA run; do not relabel 69 older runs.
@@ -31,7 +32,7 @@ export function buildSemanticLedger(options={}){
   const tasks=withdrawnLessons.includes(id)?withdrawnTasks(lesson):lesson.taskSets.core;
   const picture=c.storyVisual??lesson.introVisual;
   const contextFigure=picture?{renderer:'src/studio/IntroVisual.tsx',spec:picture}:lesson.articleBlocks[0]?.diagram?{renderer:'src/studio/TeachingDiagrams.tsx',diagram:lesson.articleBlocks[0].diagram}:lesson.mathScenes?.[0]?{renderer:'src/studio/MathSceneVisual.tsx',sceneId:lesson.mathScenes[0].sceneId}:lesson.lengthScenes?.[0]?{renderer:'src/studio/measurement/TaskDiagram.tsx',sceneId:lesson.lengthScenes[0].sceneId}:{renderer:null,reason:'当前入口按文字推理题开放，是否足够直观仍需逐章教学核对'};
-  const fingerprint=sha({classroom:c,model,taskSets:lesson.taskSets});
+  const fingerprint=sha({classroom:c,model,taskSets:lesson.taskSets,...(lesson.codingExploration?{codingExploration:lesson.codingExploration}:{})});
   const original=closedBaseline.rows.find(r=>r.lessonId===id);
   // Match the lesson fingerprint before choosing an amendment. A stale/failed
   // record must not hide a valid run simply because it appears first in JSON.
@@ -49,7 +50,7 @@ export function buildSemanticLedger(options={}){
    contentFingerprint:fingerprint,
    story:{text:c.story,figure:contextFigure},
    prediction:{question:c.predictQuestion,options:c.predictionOptions,figure:c.predictionVisual??contextFigure},
-   experiment:{widget:block.widget,blockId:block.blockId,classification:lesson.interactionStatus,mission:runtimeMission,...(runtimeMission!==c.mission?{originalStoryMission:c.mission,dynamicMissionSource:'shared/scene-context.mjs'}:{}),model,sourceInitialDescription:scene?.initialState??null,sourceLearnerAction:scene?.learnerAction??null,sourceObservableChange:scene?.observableChange??null,note:'运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分'},
+   experiment:{widget:block.widget,blockId:block.blockId,classification:lesson.interactionStatus,mission:runtimeMission,...(runtimeMission!==c.mission?{originalStoryMission:c.mission,dynamicMissionSource:'shared/scene-context.mjs'}:{}),model,...(lesson.codingExploration?{supplementalModels:lesson.codingExploration}:{}),sourceInitialDescription:scene?.initialState??null,sourceLearnerAction:scene?.learnerAction??null,sourceObservableChange:scene?.observableChange??null,note:'运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分'},
    discovery:{statements:c.discovery,retell:c.retell},mathematicalLanguage:{statements:c.symbols,scope:'开头故事，未声明与变更后的实验条件自动同步'},
    independentCheck:{scope:'巩固及撤教具练习，可能含已见原故事；不宣称整组为未见迁移',source:withdrawnLessons.includes(id)?'withdrawn-v1-existing-task-ids':'core-existing-task-ids',tasks:tasks.map(t=>({id:t.id,kind:t.kind,prompt:t.prompt,sourceSet:Object.entries(lesson.taskSets).find(([,items])=>items.some(original=>original.id===t.id))?.[0]??'unknown',novelty:Object.entries(lesson.taskSets).find(([,items])=>items.some(original=>original.id===t.id))?.[0]==='transfer'?'designed-transfer-not-certified-unseen':'consolidation-not-certified-unseen'})),allTaskCounts:Object.fromEntries(Object.entries(lesson.taskSets).map(([set,ts])=>[set,ts.length])),selfCheckItems:3},
    review:{intervalDays:[1,3,7,21],technicalStatus:'shared-scheduler-regressions-separate-from-individual-course-delay-trials',teachingStatus:'requires-new-context-and-unassisted-trial'},
@@ -59,7 +60,7 @@ export function buildSemanticLedger(options={}){
   };
  });
  return {
-  schemaVersion:2,date:'2026-10-09',updatedAt:'2026-10-19',baselineSha,
+  schemaVersion:2,date:'2026-10-09',updatedAt:'2026-11-01',baselineSha,
   requestedAudit:{path:'docs/review/PR1_三年级70课完成度与电脑端全量审计_20261009.md',initialAudit:auditDocument,availability:'read-after-fetch-37219a5',alignment:'audit-fields-and-phase-order-recorded'},
   scope:{entrances:70,textbookLessons:63,foundationBridgeLessons:7,textbookUnits:17,formalTasks:849,staticLessons:6,publishedThinkingCards:17,deferredThinkingCards:43},
   safeguards:{classroomStages:stages,selfCheckItems:3,noAddedRequiredSteps:true,noRealLearnerDataReadsOrWrites:true,grades4To6Frozen:true,noMainMerge:true},
@@ -71,7 +72,7 @@ export function buildSemanticLedger(options={}){
 }
 const cell=s=>String(s??'').replaceAll('|','／').replaceAll('\n',' ');
 export function renderSemanticLedger(ledger){
- let out=`# 三年级70课教学语义台账（2026-10-09）\n\n初查基线：\`${ledger.baselineSha}\`。保留初次源核对历史，当前电脑端结果按指纹从已归档验证记录生成。\n\n**已读取指定复审文档**：\`${ledger.requestedAudit.path}\`。历史源编排基线79a0f90，最新全量审计要求来自37219a5；每课实际验收SHA与状态如下，不能混用旧版本结论。\n\n70入口＝17教材单元63课＋7基础／桥梁课；849道正式题与11课的66组操作情境分开统计。保留六步课堂和三项自查；台账阶段先提交，随后课堂文案／图形在展示修订2026-10-09.2精修、2026-10-09.3补齐九节条件图；当前状态来自全量电脑验证。课堂和数学模型保留原样；2026-10-09封闭终审已另列849题逐题记录，并修正实际题库表述及原三课评分版本。2026-10-17根据真实试学反馈补清29题题意，其中纸带重叠题明确问拼接后两端距离，答案改为36厘米并单独升级评估版本；其余数学模型和六步课堂不重做，题目新证据另列题意歧义审校台账。2026-10-18按试学反馈修正链环接头、增加逐环增长图，并在14节提升／奥数课中核对正逆关系，11题替换重复题；10课更新评估版本，逐题修订和数学核算另列。链环新证据作为chapterAmendments绑定新SHA，其余课堂保留原证据来源，不改写历史。Kevin学习数据、四至六年级和43张暂缓卡均不变。\n\n检查的是问题→对象→动作→发现→数学语言→独立新题之间的联系。\n\n- 初次核对发现${ledger.summary.initialSourceIssues}课存在文字、条件、对象过渡或模型主题衔接项；保留原发现与修正说明，当前逐课验收结果在下文verification状态列中，不重复沿用初查pending。\n- ${ledger.summary.initiallyNoConfirmedIssue}课尚无本次源核对确认的衔接缺陷，当前电脑端结果由新证据映射，不能用初查pending覆盖后来的有效验证。\n- 电脑端结果按课程内容指纹从desktop-verification.json映射；源内容改变会自动失效。家长核对与孩子迁移独立记录，均不代填通过。\n\n机器台账：[teaching-semantic-ledger.json](semantic-ledger/teaching-semantic-ledger.json)。人工逐课批注：[notes.mjs](semantic-ledger/notes.mjs)。生成／查新：\`node scripts/build-semantic-ledger.mjs\` ／ \`node scripts/build-semantic-ledger.mjs --check\`。生成器仅导入课程源，不读取或写入学习数据库。\n\n## 按章总览\n\n|章节|课数|初查需精修（历史）|当前状态|\n|---|---:|---:|---|\n`;
+ let out=`# 三年级70课教学语义台账（2026-10-09）\n\n初查基线：\`${ledger.baselineSha}\`。保留初次源核对历史，当前电脑端结果按指纹从已归档验证记录生成。\n\n**已读取指定复审文档**：\`${ledger.requestedAudit.path}\`。历史源编排基线79a0f90，最新全量审计要求来自37219a5；每课实际验收SHA与状态如下，不能混用旧版本结论。\n\n70入口＝17教材单元63课＋7基础／桥梁课；849道正式题与11课的66组操作情境分开统计。保留六步课堂和三项自查；台账阶段先提交，随后课堂文案／图形在展示修订2026-10-09.2精修、2026-10-09.3补齐九节条件图；当前状态来自全量电脑验证。课堂和数学模型保留原样；2026-10-09封闭终审已另列849题逐题记录，并修正实际题库表述及原三课评分版本。2026-10-17根据真实试学反馈补清29题题意，其中纸带重叠题明确问拼接后两端距离，答案改为36厘米并单独升级评估版本；其余数学模型和六步课堂不重做，题目新证据另列题意歧义审校台账。2026-10-18按试学反馈修正链环接头、增加逐环增长图，并在14节提升／奥数课中核对正逆关系，11题替换重复题；10课更新评估版本，逐题修订和数学核算另列。链环新证据作为chapterAmendments绑定新SHA，其余课堂保留原证据来源，不改写历史。2026-11-01数字编码扩为身份号码、邮编和自编学号，12题以独立版本追加审校，旧题答案与旧课堂证据保留。新课堂须按自己的内容指纹实测后才能回填通过。Kevin学习数据、四至六年级和43张暂缓卡均不变。\n\n检查的是问题→对象→动作→发现→数学语言→独立新题之间的联系。\n\n- 初次核对发现${ledger.summary.initialSourceIssues}课存在文字、条件、对象过渡或模型主题衔接项；保留原发现与修正说明，当前逐课验收结果在下文verification状态列中，不重复沿用初查pending。\n- ${ledger.summary.initiallyNoConfirmedIssue}课尚无本次源核对确认的衔接缺陷，当前电脑端结果由新证据映射，不能用初查pending覆盖后来的有效验证。\n- 电脑端结果按课程内容指纹从desktop-verification.json映射；源内容改变会自动失效。家长核对与孩子迁移独立记录，均不代填通过。\n\n机器台账：[teaching-semantic-ledger.json](semantic-ledger/teaching-semantic-ledger.json)。人工逐课批注：[notes.mjs](semantic-ledger/notes.mjs)。生成／查新：\`node scripts/build-semantic-ledger.mjs\` ／ \`node scripts/build-semantic-ledger.mjs --check\`。生成器仅导入课程源，不读取或写入学习数据库。\n\n## 按章总览\n\n|章节|课数|初查需精修（历史）|当前状态|\n|---|---:|---:|---|\n`;
  const groups=Map.groupBy(ledger.rows,r=>r.unitId);
  for(const [id,rows] of groups)out+=`|${id} ${cell(rows[0].unitTitle)}|${rows.length}|${rows.filter(r=>r.sourceFinding==='initial-source-issue').length}|${rows.filter(r=>r.verification.evidence).length}/${rows.length}课电脑端数学行为核对；${rows.filter(r=>r.verification.desktopVisual==='inspected-pass').length}课代理看图|\n`;
  out+='\n## 逐课检查清单\n\n';

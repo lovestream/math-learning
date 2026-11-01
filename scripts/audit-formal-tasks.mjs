@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {lessons} from '../content/pilot/source.mjs';
+import {readCurrentTaskReviews} from './task-review-registry.mjs';
 import {auditTask} from '../shared/task-audit-oracle.mjs';
 export const taskFingerprint=task=>createHash('sha256').update(JSON.stringify(task)).digest('hex');
 export function semanticReviewMatches(record,task,contentVersion){
@@ -9,7 +10,7 @@ export function semanticReviewMatches(record,task,contentVersion){
   &&record.evidence.agentSemanticReviewed===true&&record.semanticReview?.reason?.length>=8&&record.unresolved===false);
 }
 export function buildFormalTaskAudit(){
- const final=JSON.parse(fs.readFileSync(new URL('../docs/review/849题最终审校清单_20261009.json',import.meta.url)));
+ const final={rows:readCurrentTaskReviews()};
  const reviewed=new Map(final.rows.map(r=>[r.taskId,r]));
  const samples=JSON.parse(fs.readFileSync(new URL('../docs/review/semantic-ledger/formal-task-manual-samples.json',import.meta.url))).rows;
  const rows=lessons.flatMap(l=>Object.entries(l.taskSets).flatMap(([set,ts])=>ts.map(task=>{
@@ -17,7 +18,7 @@ export function buildFormalTaskAudit(){
   const historical=samples.find(r=>r.id===task.id);
   return {lessonId:l.lessonId,unitId:l.textbookUnit?.id??'foundation-bridge',contentVersion:l.contentVersion,set,id:task.id,kind:task.kind,sourceFingerprint:taskFingerprint(task),...auditTask(task),
    agentSemanticReviewed:valid,humanTeachingApproved:false,historicalAgentSample:Boolean(historical),
-   semanticEvidence:valid?{source:'docs/review/849题最终审校清单_20261009.json',reviewer:review.reviewer,reason:review.semanticReview.reason,authoredRelationEqualities:review.evidence.authoredRelationEqualities}:null,
+   semanticEvidence:valid?{source:review.reviewSource??'docs/review/849题最终审校清单_20261009.json',reviewer:review.reviewer,reason:review.semanticReview.reason,authoredRelationEqualities:review.evidence.authoredRelationEqualities}:null,
    staleSemanticEvidence:Boolean(review&&!valid)};
  })));
  const summary={total:rows.length,schemaChecked:rows.filter(r=>r.schemaChecked).length,machineCheckedCount:rows.filter(r=>r.formalChecked).length,

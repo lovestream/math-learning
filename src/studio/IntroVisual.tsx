@@ -4,6 +4,7 @@ import {rhombusPoints} from '../../shared/intro-visuals.mjs';
 import {boxFaces,hiddenCubes,faces,handsOnModels,boatState,containerObjects,scaleObjects} from '../../shared/hands-on-models.mjs';
 import SolidView from './concept/SolidView';
 import './intro-visual.css';
+import CodingOverview from './textbook/CodingOverview';
 
 const ink='#294b53',blue='#527eab',green='#469684',red='#df6c4f',gold='#e9b44d';
 const text=(x:number,y:number,label:ReactNode,size=17,color=ink)=><text x={x} y={y} textAnchor="middle" fontSize={size} fill={color}>{label}</text>;
@@ -92,7 +93,7 @@ function OtherPicture({spec}:{spec:VisualSpec}){
 export default function IntroVisual({spec,prediction=false}:{spec:VisualSpec;prediction?:boolean}){
  const titleId=useId();
  return <figure className={`intro-visual intro-${spec.type}`} data-intro-visual={spec.type} data-intro-stage={prediction?'prediction':'story'} aria-labelledby={titleId}><header><span>{prediction?'带着图猜一猜':'题目里的画面'}</span><h3 id={titleId}>{spec.title}</h3></header>
-  {spec.type==='box-camera'?<BoxCamera prediction={prediction}/>:spec.type==='hidden-blocks'?<HiddenBlocks prediction={prediction}/>:spec.type==='cube-net'?<Net/>:spec.type==='cup-scale'?<Canvas label={prediction?'同一个米袋，原来显示1000克，换单位后的读数未知':'杯和水一起放在秤上，显示380克；空杯还没有称'}>{prediction?<><Rice x={185} y={115}/><Scale x={185} y={168} reading={`${scaleObjects[2].mass} g`}/><Rice x={455} y={115}/><Scale x={455} y={168} reading="？ kg"/>{text(320,78,'同一个米袋',16)}{text(320,258,'只换显示单位，没有添米或拿走米',17)}</>:<><Cup x={190} y={126} water/><Scale x={190} y={179} reading={`${containerObjects[2].mass} g`}/><Cup x={467} y={140}/>{text(467,219,'空杯：？克')}{text(190,277,'读数包含杯和水',17)}</>}</Canvas>:spec.type==='boat-replacement'?<Canvas label="同一条水面，模型象上船时船沉得低，下船后船浮高，原红色水线随船身上移"><Boat x={163} elephant/><Boat x={478} elephant={false}/>{prediction&&text(320,36,'准备放石块：放多少、放到哪里？',18)}</Canvas>:['money-flow','nested-share','reverse-routes','estimate-bound','supply-bar','nested-boxes','invariant-bars','money-columns','materials-plan'].includes(spec.type)?<RelationPicture spec={spec}/>:<OtherPicture spec={spec}/>}
+  {spec.type==='coding-overview'?<CodingOverview/>:spec.type==='box-camera'?<BoxCamera prediction={prediction}/>:spec.type==='hidden-blocks'?<HiddenBlocks prediction={prediction}/>:spec.type==='cube-net'?<Net/>:spec.type==='cup-scale'?<Canvas label={prediction?'同一个米袋，原来显示1000克，换单位后的读数未知':'杯和水一起放在秤上，显示380克；空杯还没有称'}>{prediction?<><Rice x={185} y={115}/><Scale x={185} y={168} reading={`${scaleObjects[2].mass} g`}/><Rice x={455} y={115}/><Scale x={455} y={168} reading="？ kg"/>{text(320,78,'同一个米袋',16)}{text(320,258,'只换显示单位，没有添米或拿走米',17)}</>:<><Cup x={190} y={126} water/><Scale x={190} y={179} reading={`${containerObjects[2].mass} g`}/><Cup x={467} y={140}/>{text(467,219,'空杯：？克')}{text(190,277,'读数包含杯和水',17)}</>}</Canvas>:spec.type==='boat-replacement'?<Canvas label="同一条水面，模型象上船时船沉得低，下船后船浮高，原红色水线随船身上移"><Boat x={163} elephant/><Boat x={478} elephant={false}/>{prediction&&text(320,36,'准备放石块：放多少、放到哪里？',18)}</Canvas>:['money-flow','nested-share','reverse-routes','estimate-bound','supply-bar','nested-boxes','invariant-bars','money-columns','materials-plan'].includes(spec.type)?<RelationPicture spec={spec}/>:<OtherPicture spec={spec}/>}
   <figcaption>{spec.caption}</figcaption>
  </figure>;
 }

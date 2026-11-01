@@ -7,10 +7,10 @@ async page=>{
   const current=()=>get().then(d=>Object.values(d.progress.studio.sessions).reverse().find(s=>s.lessonId===id&&s.setName===set));
   const first=await current();
   for(let i=0;i<first.tasks.length;i++){
-   await page.locator('.explanation-answer textarea').fill('仅测试批阅调度：说明题中整体、部分与条件关系，不作为数学正确证据。');
+   const task=first.tasks[i];if(task.kind==='choice')await page.locator('.task-options button').first().click();else await page.locator('.explanation-answer textarea').fill('仅测试批阅调度：说明题中整体、部分与条件关系，不作为数学正确证据。');
    await page.getByRole('button',{name:'先保存首答，自己检查',exact:true}).click();
    const ticks=page.locator('.self-check-panel input[type=checkbox]');await ticks.first().waitFor();assert(await ticks.count()===3,'自查数量变化');for(const tick of await ticks.all())await tick.check();
-   const response=page.waitForResponse(r=>r.url().endsWith('/api/studio/attempt')&&r.request().method()==='POST');await page.getByRole('button',{name:'提交最终答案',exact:true}).click();await(await response).finished();await page.locator('.task-feedback.pendingReview').waitFor();
+   const response=page.waitForResponse(r=>r.url().endsWith('/api/studio/attempt')&&r.request().method()==='POST');await page.getByRole('button',{name:'提交最终答案',exact:true}).click();await(await response).finished();await page.locator(task.kind==='choice'?'.task-feedback.correct':'.task-feedback.pendingReview').waitFor();
    if(i<first.tasks.length-1)await page.getByRole('button',{name:'继续下一题',exact:true}).click();
   }
   return current();
@@ -38,7 +38,7 @@ async page=>{
  await formal.screenshot({path:'output/playwright/v2-audit/formal-review-remediation.png'});
  const exported=await(await page.request.get(base+'/api/parent/export')).json();assert((await page.request.post(base+'/api/parent/import',{data:exported})).ok(),'导入恢复失败');assert(JSON.stringify((await get()).progress.studio.review['G3-U06-E01'])===JSON.stringify(r),'导入丢失复习历史');
  const core=await submitGroup('G3-UP02-B01','core');await page.request.post(base+'/api/parent/access',{data:{action:'unlock',pin:'912345'}});await page.goto(base+'/?view=parent');await formal.waitFor();const before=(await get()).progress.wallet.coins;
- for(const task of core.tasks)await grade(core,task);
+ for(const task of core.tasks.filter(t=>t.kind==='explanation'))await grade(core,task);
  p=(await get()).progress;r=p.studio.review['G3-UP02-B01'];s=p.studio.sessions[core.id];assert(s.completedAt&&r.firstLearnedAt===s.completedAt&&r.firstLearnedDay&&r.scheduleVersion===2,'人工核心完成未建初学日期');assert(p.wallet.coins===before,'核心人工批阅擅自加积分');
  await formal.screenshot({path:'output/playwright/v2-audit/formal-core-review-anchor.png'});
  assert(!errors.length,errors.join('\n'));return {passed:true,dueReviewAdvanced:true,anchorPreserved:true,remediationNextDay:true,noManualPoints:true,duplicateReplay:true,stale409:true,firstAnswerPreserved:true,importExport:true,coreFirstLearned:true,errors};

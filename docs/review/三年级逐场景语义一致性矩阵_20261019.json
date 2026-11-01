@@ -998,18 +998,221 @@
     },
     {
       "lessonId": "G3-UP02-B01",
-      "sceneId": "G3-UP02-B01-MODEL1",
-      "label": "原情境／可变对象",
-      "mission": "给每个位置一个不重复、能找到的地址。",
-      "question": "给图书馆每个书架的书贴号码，怎样避免两本书同号？",
-      "units": "见当前对象与正式语义台账",
-      "geometry": "coding",
-      "expression": [
-        "书架号—层号—格号",
-        "编号用于查找；数量用于计数"
-      ],
-      "explanation": "编号为什么能帮助找位置，却不能直接用来求图书本数？",
-      "review": "single-object-source-scan; prior-evidence-retained"
+      "contentVersion": "2026-11-01.2",
+      "review": "versioned-coding-source-scan; browser-and-child-approval-separate",
+      "sceneId": "G3-UP02-B01-CODING-shelf",
+      "label": "书架地址",
+      "mission": "字段缺失会不会指向多个位置？",
+      "question": "Kevin要完成四件事：找到图书馆的一格书架、读懂身份证号码怎样分段、帮一封信选邮政编码，还要给班级同学设计不重号的学号。为什么这些数字不能直接当成数量来加减？",
+      "units": "字符位置与识别范围，不是长度／重量",
+      "geometry": "coding-shelf",
+      "parameters": {
+        "fields": [
+          "架",
+          "层",
+          "格"
+        ],
+        "example": "02-03-05"
+      },
+      "expression": [],
+      "explanation": "字段缺失会不会指向多个位置？"
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "contentVersion": "2026-11-01.2",
+      "review": "versioned-coding-source-scan; browser-and-child-approval-separate",
+      "sceneId": "G3-UP02-B01-CODING-identity",
+      "label": "身份号码片段",
+      "mission": "按6＋8＋3＋1定位；比较第17与第18位，不补出完整身份证号码",
+      "question": "Kevin要完成四件事：找到图书馆的一格书架、读懂身份证号码怎样分段、帮一封信选邮政编码，还要给班级同学设计不重号的学号。为什么这些数字不能直接当成数量来加减？",
+      "units": "字符位置与识别范围，不是长度／重量",
+      "geometry": "coding-identity",
+      "parameters": {
+        "parts": [
+          {
+            "digits": "44",
+            "name": "第1—2位：省级",
+            "detail": "身份证地址码前两位表示省、自治区、直辖市等省级行政区划。此处44用作广东省的教学示意。"
+          },
+          {
+            "digits": "01",
+            "name": "第3—4位：中间层级",
+            "detail": "一般表示市、地区、自治州等行政区划层级；直辖市等存在特殊划分，不能机械理解为普通地级市。"
+          },
+          {
+            "digits": "06",
+            "name": "第5—6位：区县级",
+            "detail": "与前四位一起构成6位行政区划代码，指县、市辖区、县级市等行政单元。"
+          },
+          {
+            "digits": "2015",
+            "name": "第7—10位：出生年",
+            "detail": "四位年份，必须连同月日理解。例如这里只用2015作示范，不对应任何真实证件。"
+          },
+          {
+            "digits": "05",
+            "name": "第11—12位：出生月",
+            "detail": "月份占两位，5月写05，不能省去前导0，否则后面所有位置就会改变。"
+          },
+          {
+            "digits": "16",
+            "name": "第13—14位：出生日",
+            "detail": "日期占两位，示例16表示当月16日。年月日合起来是8位。"
+          },
+          {
+            "digits": "003",
+            "name": "第15—17位：顺序码",
+            "detail": "这三位用于区分同一地址码及同年同月同日出生的人员。第17位（整个身份证倒数第二位）是3，奇数对应男性；若为004，末位4是偶数，对应女性。"
+          },
+          {
+            "digits": "?",
+            "name": "第18位：校验码",
+            "detail": "最后一位按前17位算出。结果若是10，就用一个字母X代表10；不能随便写X。此处问号表示没有提供真实校验码，本演示不是完整身份证号码。"
+          }
+        ]
+      },
+      "expression": [],
+      "explanation": "按6＋8＋3＋1定位；比较第17与第18位，不补出完整身份证号码"
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "contentVersion": "2026-11-01.2",
+      "review": "versioned-coding-source-scan; browser-and-child-approval-separate",
+      "sceneId": "G3-UP02-B01-CODING-postal",
+      "label": "六位邮编",
+      "mission": "按2＋1＋1＋2解读邮政层次，与身份证地址码区分",
+      "question": "Kevin要完成四件事：找到图书馆的一格书架、读懂身份证号码怎样分段、帮一封信选邮政编码，还要给班级同学设计不重号的学号。为什么这些数字不能直接当成数量来加减？",
+      "units": "字符位置与识别范围，不是长度／重量",
+      "geometry": "coding-postal",
+      "parameters": {
+        "parts": [
+          {
+            "digits": "10",
+            "name": "前2位：省级邮政范围",
+            "detail": "邮政编码首两位体现省、自治区、直辖市等邮政区域。邮编与身份证行政区划码是不同体系，不能互相照抄。"
+          },
+          {
+            "digits": "0",
+            "name": "第3位：邮区",
+            "detail": "继续细分邮政分拣范围，方便邮件按区域流转。"
+          },
+          {
+            "digits": "0",
+            "name": "第4位：县、市等投递层级",
+            "detail": "用来进一步细分邮政区域。具体区划和实际投递组织以邮政部门公布的信息为准。"
+          },
+          {
+            "digits": "31",
+            "name": "最后2位：投递局（所）",
+            "detail": "进一步标识投递局所/投递区域。一个邮编下仍可以有许多街道和住户，寄信还需要完整的地址。"
+          }
+        ]
+      },
+      "expression": [],
+      "explanation": "按2＋1＋1＋2解读邮政层次，与身份证地址码区分"
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "contentVersion": "2026-11-01.2",
+      "review": "versioned-coding-source-scan; browser-and-child-approval-separate",
+      "sceneId": "G3-UP02-B01-CODING-class",
+      "label": "当前班级标签",
+      "mission": "保持班内序号，改变班级／年级，比较哪个字段改变",
+      "question": "Kevin要完成四件事：找到图书馆的一格书架、读懂身份证号码怎样分段、帮一封信选邮政编码，还要给班级同学设计不重号的学号。为什么这些数字不能直接当成数量来加减？",
+      "units": "字符位置与识别范围，不是长度／重量",
+      "geometry": "coding-class",
+      "parameters": {
+        "grades": 6,
+        "classes": 6,
+        "students": 45
+      },
+      "expression": [],
+      "explanation": "保持班内序号，改变班级／年级，比较哪个字段改变"
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "contentVersion": "2026-11-01.2",
+      "review": "versioned-coding-source-scan; browser-and-child-approval-separate",
+      "sceneId": "G3-UP02-B01-CODING-stable",
+      "label": "长期模拟校内编号",
+      "mission": "同一入学年全校流水不得重复；升年级保持编号",
+      "question": "Kevin要完成四件事：找到图书馆的一格书架、读懂身份证号码怎样分段、帮一封信选邮政编码，还要给班级同学设计不重号的学号。为什么这些数字不能直接当成数量来加减？",
+      "units": "字符位置与识别范围，不是长度／重量",
+      "geometry": "coding-stable",
+      "parameters": {
+        "firstYear": 2023,
+        "lastYear": 2026,
+        "maxSerial": 9999
+      },
+      "expression": [],
+      "explanation": "同一入学年全校流水不得重复；升年级保持编号"
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "contentVersion": "2026-11-01.2",
+      "review": "versioned-coding-source-scan; browser-and-child-approval-separate",
+      "sceneId": "G3-UP02-B01-CODING-reasoning",
+      "label": "综合辨错",
+      "mission": "可以试错并重置；即时反馈不作为正式测评或独立掌握",
+      "question": "Kevin要完成四件事：找到图书馆的一格书架、读懂身份证号码怎样分段、帮一封信选邮政编码，还要给班级同学设计不重号的学号。为什么这些数字不能直接当成数量来加减？",
+      "units": "字符位置与识别范围，不是长度／重量",
+      "geometry": "coding-reasoning",
+      "parameters": {
+        "questions": [
+          {
+            "q": "身份证的出生年份占哪几位？",
+            "options": [
+              "第1—4位",
+              "第7—10位",
+              "第15—18位"
+            ],
+            "correct": 1,
+            "why": "第7—14位是日期，分成4位年＋2位月＋2位日。"
+          },
+          {
+            "q": "身份证顺序码是002，哪一位用于区分男女？",
+            "options": [
+              "第16位2",
+              "第17位2（偶数）",
+              "最后第18位"
+            ],
+            "correct": 1,
+            "why": "顺序码第15—17位，最后一位就是全号第17位；偶数按该规则对应女性。"
+          },
+          {
+            "q": "身份证校验码位置计算出10，为什么写X？",
+            "options": [
+              "X占一个字符位置表示10",
+              "系统可随机挑字母",
+              "X表示身份证无效"
+            ],
+            "correct": 0,
+            "why": "校验值10以X表示，仅占一位；其他校验值仍按规则填写。"
+          },
+          {
+            "q": "邮政编码和详细地址，哪句正确？",
+            "options": [
+              "同一邮编只能对应一个人",
+              "邮编用于邮件分拣，仍要详细地址",
+              "邮编末位可表示性别"
+            ],
+            "correct": 1,
+            "why": "邮编面向投递区域，身份信息与邮编无关。"
+          },
+          {
+            "q": "3年级1班7号和3年级2班7号，都记“307”，有什么风险？",
+            "options": [
+              "不会有任何问题",
+              "数字总和改变了",
+              "两人会撞号，编码要加足班级信息"
+            ],
+            "correct": 2,
+            "why": "编码要能区分不同对象；要规定各段含义和位数。"
+          }
+        ]
+      },
+      "expression": [],
+      "explanation": "可以试错并重置；即时反馈不作为正式测评或独立掌握"
     },
     {
       "lessonId": "G3-U05-B01",

@@ -1,5 +1,6 @@
 import {readFile,writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
+import {codingExploration} from '../content/pilot/coding-supplement.mjs';
 import {lessons} from '../content/pilot/source.mjs';
 import {mixedSceneContext,coreSceneMission} from '../shared/scene-context.mjs';
 import {expressionASTText,evaluateExpressionAST,formatFraction} from '../shared/pilot-math.mjs';
@@ -16,6 +17,19 @@ function coreExpression(model,c,mode){
 export function buildSceneMatrix(){
  const rows=[];
  for(const l of lessons){
+  if(l.lessonId==='G3-UP02-B01'){
+   const common={lessonId:l.lessonId,contentVersion:l.contentVersion,review:'versioned-coding-source-scan; browser-and-child-approval-separate'};
+   const specifications=[
+    ['shelf','书架地址',{fields:['架','层','格'],example:'02-03-05'},'字段缺失会不会指向多个位置？'],
+    ['identity','身份号码片段',{parts:codingExploration.identity},'按6＋8＋3＋1定位；比较第17与第18位，不补出完整身份证号码'],
+    ['postal','六位邮编',{parts:codingExploration.postal},'按2＋1＋1＋2解读邮政层次，与身份证地址码区分'],
+    ['class','当前班级标签',codingExploration.classBounds,'保持班内序号，改变班级／年级，比较哪个字段改变'],
+    ['stable','长期模拟校内编号',codingExploration.stableBounds,'同一入学年全校流水不得重复；升年级保持编号'],
+    ['reasoning','综合辨错',{questions:codingExploration.quiz},'可以试错并重置；即时反馈不作为正式测评或独立掌握']
+   ];
+   for(const [key,label,parameters,mission]of specifications)rows.push({...common,sceneId:l.lessonId+'-CODING-'+key,label,mission,question:l.childClassroom.story,units:'字符位置与识别范围，不是长度／重量',geometry:'coding-'+key,parameters,expression:[],explanation:mission});
+   continue;
+  }
   if(l.mathScenes?.length){for(const scene of l.mathScenes){const context=mixedSceneContext(l.mathScenes,scene.sceneId);const result=formatFraction(evaluateExpressionAST(scene.expressionAST));if(result!==String(scene.expected.value))throw Error('算式与场景答案不一致：'+scene.sceneId);
    rows.push({lessonId:l.lessonId,sceneId:scene.sceneId,label:context.label,mission:context.mission,question:scene.story.text,units:scene.story.quantities.map(q=>({value:q.value,unit:q.unit,role:q.role})),geometry:scene.model.type,expression:expressionASTText(scene.expressionAST),resultUnit:scene.expected.unit,explanation:scene.expected.explanation,review:'source-linked-math-checked; browser-coverage-separate'});
   }}else{const model=l.conceptScenes?.[0]?.textbookSpec;

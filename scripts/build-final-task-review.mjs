@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {readCurrentTaskReviews} from './task-review-registry.mjs';
 import {createHash} from 'node:crypto';
 import {lessons} from '../content/pilot/source.mjs';
 import {auditTask,calculateAuditExpression,auditSame} from '../shared/task-audit-oracle.mjs';
@@ -12,6 +13,16 @@ const inventory=JSON.parse(fs.readFileSync(path(baseline),'utf8'));
 const previous=fs.existsSync(path(file))?JSON.parse(fs.readFileSync(path(file),'utf8')):null;
 const relations=JSON.parse(fs.readFileSync(path('docs/review/final-task-review/independent-relations.json'),'utf8')).rows;
 const rows=[];
+const amendments=new Map(readCurrentTaskReviews().filter(r=>r.reviewSource).map(r=>[r.taskId,r]));
+if(amendments.size){
+ const current=new Map(readCurrentTaskReviews().map(r=>[r.taskId,r]));
+ for(const l of lessons)for(const t of Object.values(l.taskSets).flat()){
+  const row=current.get(t.id);
+  if(!row||row.contentVersion!==l.contentVersion||row.sourceFingerprint!==digest(t)||row.unresolved||!row.evidence.agentSemanticReviewed)throw Error('Renew the specific versioned review: '+t.id);
+ }
+ if(!process.argv.includes('--check'))throw Error('Historical register is sealed; append a versioned review instead of overwriting old answers. Use --check to validate current coverage.');
+ console.log('Current versioned reviews: 849; historical register preserved; coding amendment: 12.');process.exit(0);
+}
 for(const l of lessons){
  const source=inventory.rows.filter(r=>r.lessonId===l.lessonId),review=notes[l.lessonId]?.split('\n');
  const tasks=Object.entries(l.taskSets).flatMap(([set,ts])=>ts.map(task=>({set,task})));

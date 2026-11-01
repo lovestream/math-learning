@@ -79,8 +79,8 @@ test('单章重测按自己的SHA回填，不把旧的全量证据冒充本次�
 });
 
 test('新全量证据按课回填且保留初查历史，不借开发验证代填家长和孩子',()=>{
- const ledger=buildSemanticLedger();assert.equal(ledger.verificationSummary.desktopMath,70);assert.equal(ledger.verificationSummary.fullPaths,64);assert.equal(ledger.verificationSummary.staticRelations,6);assert.equal(ledger.verificationSummary.visualInspected,70);
- for(const row of ledger.rows){assert.equal(row.sourceReview,'chapter-desktop-reviewed');assert(row.initialSourceReview);assert.equal(row.verification.parentReviewed,'no');assert.equal(row.verification.learnerMastery,'no-data');for(const t of row.independentCheck.tasks){assert(['warmup','core','transfer','challenge','review'].includes(t.sourceSet));assert(/not-certified-unseen|not-personally-unseen/.test(t.novelty));}}
+ const ledger=buildSemanticLedger(),coding=ledger.rows.find(r=>r.lessonId==='G3-UP02-B01'),current=!!coding.verification.evidence;assert.equal(ledger.verificationSummary.desktopMath,current?70:69);assert.equal(ledger.verificationSummary.fullPaths,current?64:63);assert.equal(ledger.verificationSummary.staticRelations,6);assert.equal(ledger.verificationSummary.visualInspected,current?70:69);
+ for(const row of ledger.rows){if(row.lessonId!=='G3-UP02-B01'||current)assert.equal(row.sourceReview,'chapter-desktop-reviewed');else assert.equal(row.verification.evidence,null);assert(row.initialSourceReview);assert.equal(row.verification.parentReviewed,'no');assert.equal(row.verification.learnerMastery,'no-data');for(const t of row.independentCheck.tasks){assert(['warmup','core','transfer','challenge','review'].includes(t.sourceSet));assert(/not-certified-unseen|not-personally-unseen/.test(t.novelty));}}
 });
 
 

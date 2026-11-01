@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {readCurrentTaskReviews} from '../scripts/task-review-registry.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -9,7 +10,7 @@ import {semanticReviewMatches,buildFormalTaskAudit} from '../scripts/audit-forma
 import {freshProgress,exportEnvelope,validateEnvelope} from '../server/store.mjs';
 import {createSession,submitTask,validatePilot} from '../server/pilot-store.mjs';
 import {completeSelfCheck} from './fixtures/self-check.mjs';
-const register=JSON.parse(fs.readFileSync(new URL('../docs/review/849题最终审校清单_20261009.json',import.meta.url)));
+const register={rows:readCurrentTaskReviews()};
 const inventory=JSON.parse(fs.readFileSync(new URL('../docs/review/final-task-review/source-inventory.json',import.meta.url)));
 const tasks=lessons.flatMap(l=>Object.values(l.taskSets).flat()),task=id=>tasks.find(t=>t.id===id);
 
@@ -18,7 +19,7 @@ test('强弱证据分开：参考解答算得对，不证明题意的答案对',
  assert(result.schemaChecked);assert(result.solutionInternallyConsistent);
  assert(!result.independentlyDerivedFromPromptOrDiagram);assert(!result.numericProofVerified);
 });
-test('849条具体理由、335题开放解释审阅范围和选择干扰项逐题可追溯',()=>{
+test('849条具体理由、各版本开放解释范围和选择干扰项逐题可追溯',()=>{
  const report=buildFormalTaskAudit();assert.equal(report.summary.agentSemanticReviewed,849);assert.equal(report.summary.humanTeachingApproved,0);
  assert.equal(register.rows.length,849);
  for(const row of register.rows){
