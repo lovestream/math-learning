@@ -1,0 +1,97 @@
+{
+  "sourceSha": "58e9faec79b9ce6acf0062b9d8882ebc2f0b9681",
+  "syntheticOnly": true,
+  "rows": [
+    {
+      "id": "A",
+      "scope": "范围冻结",
+      "evidence": "implementation-files.json; runtime-tree.json",
+      "actual": "70课849题、课堂、积分与宠物未修改",
+      "status": "passed"
+    },
+    {
+      "id": "B-L1-L2",
+      "scope": "过程、首错、三态与首证据",
+      "evidence": "tests/detective-v2.test.mjs:59; verify-detective-v2-browser.json",
+      "actual": "正确结果与有效推理分离、首证据不覆盖",
+      "status": "passed"
+    },
+    {
+      "id": "B-L3",
+      "scope": "8族正逆/正确对照",
+      "evidence": "tests/detective-v2.test.mjs:23; verify-detective-v2-browser.json",
+      "actual": "2048受控参数oracle；逆向改变未知量",
+      "status": "passed"
+    },
+    {
+      "id": "B-L4",
+      "scope": "无反馈两答及真实自查",
+      "evidence": "tests/detective-v2.test.mjs:66; verify-detective-v2-browser.json",
+      "actual": "首答不可变；先封存证据再反馈",
+      "status": "passed"
+    },
+    {
+      "id": "C",
+      "scope": "兼容/隐私/版本",
+      "evidence": "detective-v2-boundaries.json; detective-v2-upgrade.json",
+      "actual": "私有引擎不进客户端，旧存档可导入、回滚",
+      "status": "passed"
+    },
+    {
+      "id": "D",
+      "scope": "四模板12案与原18案",
+      "evidence": "deliveries.json; tests/detective-v2.test.mjs:39",
+      "actual": "10包30宗在线读取后真实四步",
+      "status": "passed"
+    },
+    {
+      "id": "E",
+      "scope": "390/768/1440及键盘",
+      "evidence": "verify-detective-v2-browser.json; detective-v2-keyboard.json",
+      "actual": "真实浏览器；模拟触控/200%缩放；不冒充实机iPad",
+      "status": "passed"
+    },
+    {
+      "id": "F",
+      "scope": "真实分子分母和独立资格",
+      "evidence": "tests/detective-v2.test.mjs:66; verify-detective-v2-browser.json",
+      "actual": "辅助/未做/不确定分开，钱包勋章不变",
+      "status": "passed"
+    },
+    {
+      "id": "G",
+      "scope": "连续实现与一次交付",
+      "evidence": "implementation-files.json; 最终实现与验收报告",
+      "actual": "不分阶段求审；不合并、不上线",
+      "status": "passed"
+    },
+    {
+      "id": "H1",
+      "scope": "数学与教育边界",
+      "evidence": "node-tests.log; deliveries.json; verify-detective-v2-browser.json",
+      "actual": "非整数、逆向、正确过程/错误过程/未知过程、单位均校验",
+      "status": "passed"
+    },
+    {
+      "id": "H2",
+      "scope": "保存/离线/并发/容量",
+      "evidence": "tests/detective-v2.test.mjs:71,88,97,103,108,126,137; verify-detective-v2-browser.json; 两份upgrade报告",
+      "actual": "409/幂等/刷新/断网/ENOSPC/1000记录与2MiB拒绝回滚",
+      "status": "passed"
+    },
+    {
+      "id": "H3",
+      "scope": "完整回归与视觉证据",
+      "evidence": "ci-summary.json; source-ci.json; PNG与trace",
+      "actual": "239 Node、30浏览器回调、构建/内容、在线30案、升级/边界通过",
+      "status": "passed"
+    },
+    {
+      "id": "I",
+      "scope": "交付文档与唯一PR总结",
+      "evidence": "最终报告; 儿童/家长说明; 只读迁移契约",
+      "actual": "最终归档提交仅文档证据；等待ChatGPT复审",
+      "status": "passed"
+    }
+  ]
+}

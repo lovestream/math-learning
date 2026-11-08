@@ -1,0 +1,41 @@
+
+> kevin-math-lab@0.1.0 prebuild
+> npm run build:catalog
+
+
+> kevin-math-lab@0.1.0 build:catalog
+> node scripts/build-grade3-catalog.mjs && node scripts/build-upper-primary-catalog.mjs && node scripts/build-pilot.mjs
+
+Grade 3 catalog built: 54 lessons, 432 questions
+Upper primary catalogs built: 54 lessons; combined catalog: 108 lessons, 864 questions
+互动样板：70课，849道任务；全量蓝图仍为 planned。
+
+> kevin-math-lab@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 1695 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                 0.62 kB │ gzip:  0.46 kB
+dist/assets/CoreWorkbench-5XtJHjIs.css          3.64 kB │ gzip:  1.13 kB
+dist/assets/TwoRingWorkbench-CQbxiF1M.css       5.20 kB │ gzip:  1.72 kB
+dist/assets/thinking-C6yMyyj6.css               6.33 kB │ gzip:  1.82 kB
+dist/assets/detective-DtjsTv3o.css             21.61 kB │ gzip:  5.03 kB
+dist/assets/index-Co3fdAxF.css                 81.59 kB │ gzip: 18.27 kB
+dist/assets/teaching-BWBXL3ef.css             135.32 kB │ gzip: 29.98 kB
+dist/assets/plus-DmaelUER.js                    0.15 kB │ gzip:  0.15 kB
+dist/assets/arrow-left-BjKr37Bx.js              0.16 kB │ gzip:  0.16 kB
+dist/assets/detective-D4qnegZp.js               7.47 kB │ gzip:  3.32 kB
+dist/assets/useMotionValue-C9ctq0hH.js          8.76 kB │ gzip:  4.09 kB
+dist/assets/CoreWorkbench-CeA4m-S8.js          18.34 kB │ gzip:  7.03 kB
+dist/assets/CourseReader-BMK_qiac.js           18.39 kB │ gzip:  7.14 kB
+dist/assets/TwoRingWorkbench--XeUPD0z.js       21.29 kB │ gzip:  8.39 kB
+dist/assets/DetectivePanel-BYQib2m2.js         31.43 kB │ gzip: 10.54 kB
+dist/assets/QuestExperience-DYO19SFi.js        33.18 kB │ gzip: 10.37 kB
+dist/assets/ThinkingPanel-DLOTwkBm.js          33.72 kB │ gzip: 12.15 kB
+dist/assets/ParentThinkingReview-BDSnPxLq.js   36.80 kB │ gzip: 12.94 kB
+dist/assets/teaching-DV4Pr3D0.js              268.17 kB │ gzip: 95.60 kB
+dist/assets/index-B44_OT-D.js                 294.22 kB │ gzip: 95.55 kB
+✓ built in 799ms

@@ -1,0 +1,63 @@
+{
+  "sourceSha": "03dddce275b50c813a88d86f600003018dba4f2b",
+  "reviewer": "Codex agent visual inspection through view_image, 2026-11-08",
+  "inspected": [
+    "coding-story-1440.png",
+    "coding-identity-1440.png",
+    "coding-identity-390.png",
+    "coding-prediction-1440.png",
+    "coding-discovery-1440.png",
+    "coding-math-language-1440.png",
+    "coding-verification-1440.png",
+    "coding-story-1366.png",
+    "coding-experiment-1366.png",
+    "coding-verification-1366.png",
+    "coding-story-390.png",
+    "coding-verification-390.png",
+    "coding-postal-1440.png",
+    "coding-class-design-1440.png",
+    "coding-stable-design-1440.png",
+    "coding-open-task-P07-1440.png",
+    "coding-parent-review-1440.png",
+    "coding-misconceptions-1440.png",
+    "coding-experiment-390.png",
+    "coding-identity-1366.png"
+  ],
+  "sha256": {
+    "coding-story-1440.png": "cdccaf220b9bb0eacee6598554b1ac0635c056ded5cda627f07683436e7abcc6",
+    "coding-identity-1440.png": "81f3d50a3ae340bacbabc9b7f6bcf0e6b17de485a686634d13242864e971691f",
+    "coding-identity-390.png": "e723bf4cc63c6dd8319c58ca6a207cf1a1b40b5307b619eaac092c6fa8967837",
+    "coding-prediction-1440.png": "89decfd6da45c55ac9e57bef433f7f71a57b4c6acf04f2476a2dfbac1c2b4fa5",
+    "coding-discovery-1440.png": "200c6c91468bf4017a1509df4eee3342d4e16e05b1b7b6d6e568972aa151e090",
+    "coding-math-language-1440.png": "0efc166dad525f301b79c0fb8eaedc51377950d4b94bd3fce7256a490ba15e9c",
+    "coding-verification-1440.png": "dc13115e20f94bb55b6638513d22b4a3a49a3e12e8938411359afb047d622859",
+    "coding-story-1366.png": "45953fc28891f1a91a0098530b810ae52cb806ee0ea618904e33cbb7b9deaa77",
+    "coding-experiment-1366.png": "6ef976e8cac9885ac625d620a7ba69aecd334e04313e81bb9ac394f090237834",
+    "coding-verification-1366.png": "255511b197fe15e28dca2fe36e1be0a023a3cbef2928002311b4d92d9e86a1ef",
+    "coding-story-390.png": "847b376c561395c385b71f5387edbd6599f3d0051b6848de4ada4f18ffc2b9c1",
+    "coding-verification-390.png": "2b030a28f8eb467abf78437446b923a1135d58f76764e0fb273d236bbef6f07b",
+    "coding-postal-1440.png": "c5527e5b94ac97bca871aa511ce869b613a2aa42fe396047c71c1856df42b5d5",
+    "coding-class-design-1440.png": "da75de1c0c8eef3195704ec58223c6c346261de67432428b7f49c990aff15e6f",
+    "coding-stable-design-1440.png": "47e3a463ecd69e3a65f736fcbbf1346cb15b2cf0b198737377b083a88e1fbebe",
+    "coding-open-task-P07-1440.png": "63b382dd28b2ff9f407fd65af71acd205e5bab0852b83dd5ae2f4fd6e5dfd50b",
+    "coding-parent-review-1440.png": "692328e1cd0a3746d233d6c475bf6dd38192f279e4e84188f6286f8b31942531",
+    "coding-misconceptions-1440.png": "29691722cff0b344bc6f6ed784aec26635d2f1e294e45990f6b4d6767be28d12",
+    "coding-experiment-390.png": "b0df2c8ee05b91c7c1bb1dc1e084d3cc942e7e362c92ac3b4695682504801313",
+    "coding-identity-1366.png": "8e2b55a8adcf7d5358332e8dfac5fd621227221758f4575f599525223943f261"
+  },
+  "checks": [
+    "六步顺序、任务和数学对象一致",
+    "四种故事条件可见，身份证字段按6/8/3/1真实分组",
+    "1366/1440/390宽度抽看，位数说明与数字不裁切",
+    "邮编和身份证地址码对照清楚",
+    "班级变化与全校范围稳定流水说明相符",
+    "开放P07仍待家长核对，不强制四位写法",
+    "家长页区分首答、最终解释、三项自查和批阅历史"
+  ],
+  "limits": [
+    "18张六步/视口截图均由浏览器生成；代理看图抽查20张具体文件，并非全部截图逐张批准",
+    "非Kevin实际试学，非家长教学批准；未测试真实iPad"
+  ],
+  "firstInspectedSourceSha": "765b3027cb18d7dd69a793544e106dc01a2407ad",
+  "pixelIdentityVerification": "本轮新生成的20张PNG与先前实际查看的PNG逐字节SHA256一致；本轮不同SHA的变更只涉及验收脚本，非旧截图换名。"
+}

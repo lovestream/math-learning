@@ -1,0 +1,1016 @@
+verify	Set up job	﻿2026-11-08T16:01:27.2902827Z Current runner version: '2.338.2'
+verify	Set up job	2026-11-08T16:01:27.2921334Z ##[group]Runner Image Provisioner
+verify	Set up job	2026-11-08T16:01:27.2922028Z Hosted Compute Agent
+verify	Set up job	2026-11-08T16:01:27.2922457Z Version: 20261028.624
+verify	Set up job	2026-11-08T16:01:27.2922996Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+verify	Set up job	2026-11-08T16:01:27.2923558Z Build Date: 2026-10-28T21:51:42Z
+verify	Set up job	2026-11-08T16:01:27.2924089Z Worker ID: {5a141ee5-ec7f-4482-9068-3fe8c3561a0d}
+verify	Set up job	2026-11-08T16:01:27.2924637Z Region: centralus
+verify	Set up job	2026-11-08T16:01:27.2925069Z Cloud: Azure
+verify	Set up job	2026-11-08T16:01:27.2925506Z ##[endgroup]
+verify	Set up job	2026-11-08T16:01:27.2926658Z ##[group]Operating System
+verify	Set up job	2026-11-08T16:01:27.2927166Z Ubuntu
+verify	Set up job	2026-11-08T16:01:27.2927611Z 26.04.1
+verify	Set up job	2026-11-08T16:01:27.2928017Z LTS
+verify	Set up job	2026-11-08T16:01:27.2928414Z ##[endgroup]
+verify	Set up job	2026-11-08T16:01:27.2929116Z ##[group]Runner Image
+verify	Set up job	2026-11-08T16:01:27.2929571Z Image: ubuntu-26.04
+verify	Set up job	2026-11-08T16:01:27.2930029Z Version: 20261101.186.1
+verify	Set up job	2026-11-08T16:01:27.2930833Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261101.186/images/ubuntu/Ubuntu2604-Readme.md
+verify	Set up job	2026-11-08T16:01:27.2932168Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261101.186
+verify	Set up job	2026-11-08T16:01:27.2932868Z ##[endgroup]
+verify	Set up job	2026-11-08T16:01:27.2933805Z ##[group]GITHUB_TOKEN Permissions
+verify	Set up job	2026-11-08T16:01:27.2935617Z Contents: read
+verify	Set up job	2026-11-08T16:01:27.2936095Z Metadata: read
+verify	Set up job	2026-11-08T16:01:27.2936517Z Packages: read
+verify	Set up job	2026-11-08T16:01:27.2937000Z ##[endgroup]
+verify	Set up job	2026-11-08T16:01:27.2938792Z Secret source: Actions
+verify	Set up job	2026-11-08T16:01:27.2939508Z Cache mode: write
+verify	Set up job	2026-11-08T16:01:27.2940310Z Prepare workflow directory
+verify	Set up job	2026-11-08T16:01:27.3199319Z Prepare all required actions
+verify	Set up job	2026-11-08T16:01:27.3237643Z Getting action download info
+verify	Set up job	2026-11-08T16:01:27.5467512Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify	Set up job	2026-11-08T16:01:27.6823071Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+verify	Set up job	2026-11-08T16:01:27.7894688Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+verify	Set up job	2026-11-08T16:01:27.9417936Z Complete job name: verify
+verify	Run actions/checkout@v4	﻿2026-11-08T16:01:28.0003583Z ##[group]Run actions/checkout@v4
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0004250Z with:
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0004617Z   repository: lovestream/math-learning
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0007546Z   token: ***
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0007937Z   ssh-strict: true
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0008294Z   ssh-user: git
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0008945Z   persist-credentials: true
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0009367Z   clean: true
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0009720Z   sparse-checkout-cone-mode: true
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0010189Z   fetch-depth: 1
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0010571Z   fetch-tags: false
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0010940Z   show-progress: true
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0011295Z   lfs: false
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0011645Z   submodules: false
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0012036Z   set-safe-directory: true
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0012436Z   allow-unsafe-pr-checkout: false
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.0013012Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2101639Z Syncing repository: lovestream/math-learning
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2104075Z ##[group]Getting Git version info
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2104874Z Working directory is '/home/runner/work/math-learning/math-learning'
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2106130Z [command]/usr/bin/git version
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2112138Z git version 2.56.0
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2124805Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2134672Z Temporarily overriding HOME='/home/runner/work/_temp/bb0c720c-bc24-4058-a155-637a64a0e5f4' before making global git config changes
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2136230Z Adding repository directory to the temporary git global config as a safe directory
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2139752Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/math-learning/math-learning
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2189245Z Deleting the contents of '/home/runner/work/math-learning/math-learning'
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2191748Z ##[group]Initializing the repository
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2196603Z [command]/usr/bin/git init /home/runner/work/math-learning/math-learning
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2283190Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2284723Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2285977Z hint: to use in all of your new repositories, which will suppress this warning,
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2286874Z hint: call:
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2287603Z hint:
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2288393Z hint: 	git config --global init.defaultBranch <name>
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2289688Z hint:
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2290625Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2292040Z hint: 'development'. The just-created branch can be renamed via this command:
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2293398Z hint:
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2294115Z hint: 	git branch -m <name>
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2294883Z hint:
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2295873Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2297317Z Initialized empty Git repository in /home/runner/work/math-learning/math-learning/.git/
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2300383Z [command]/usr/bin/git remote add origin https://github.com/lovestream/math-learning
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2334884Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2335941Z ##[group]Disabling automatic garbage collection
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2338220Z [command]/usr/bin/git config --local gc.auto 0
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2362081Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2362963Z ##[group]Setting up auth
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2367099Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2388819Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2758413Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2777841Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2953500Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.2976370Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.3149149Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.3183259Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.3183930Z ##[group]Fetching the repository
+verify	Run actions/checkout@v4	2026-11-08T16:01:28.3192731Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f6b1311d99492fa3eb9d1f7ea517d070996866d0:refs/remotes/pull/1/merge
+verify	Run actions/checkout@v4	2026-11-08T16:01:38.4405116Z From https://github.com/lovestream/math-learning
+verify	Run actions/checkout@v4	2026-11-08T16:01:38.4407190Z  * [new ref]         f6b1311d99492fa3eb9d1f7ea517d070996866d0 -> pull/1/merge
+verify	Run actions/checkout@v4	2026-11-08T16:01:38.4410824Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-08T16:01:38.4412206Z ##[group]Determining the checkout info
+verify	Run actions/checkout@v4	2026-11-08T16:01:38.4413583Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-08T16:01:38.4417781Z [command]/usr/bin/git sparse-checkout disable
+verify	Run actions/checkout@v4	2026-11-08T16:01:38.4467716Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify	Run actions/checkout@v4	2026-11-08T16:01:38.4492462Z ##[group]Checking out the ref
+verify	Run actions/checkout@v4	2026-11-08T16:01:38.4494232Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.4672041Z Updating files:  78% (2081/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.5078904Z Updating files:  79% (2088/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.5164586Z Updating files:  80% (2115/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.5232241Z Updating files:  81% (2141/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.5316262Z Updating files:  82% (2168/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.5406321Z Updating files:  83% (2194/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.5528356Z Updating files:  84% (2221/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.5663671Z Updating files:  85% (2247/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.5790402Z Updating files:  86% (2273/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.5924438Z Updating files:  87% (2300/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.5969703Z Updating files:  88% (2326/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6016522Z Updating files:  89% (2353/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6034695Z Updating files:  90% (2379/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6046713Z Updating files:  91% (2406/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6061031Z Updating files:  92% (2432/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6069280Z Updating files:  93% (2458/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6079403Z Updating files:  94% (2485/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6094345Z Updating files:  95% (2511/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6106770Z Updating files:  96% (2538/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6121446Z Updating files:  97% (2564/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6135080Z Updating files:  98% (2591/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6145447Z Updating files:  99% (2617/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6145999Z Updating files: 100% (2643/2643)
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6146363Z Updating files: 100% (2643/2643), done.
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6167305Z Note: switching to 'refs/remotes/pull/1/merge'.
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6167763Z 
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6168085Z You are in 'detached HEAD' state. You can look around, make experimental
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6169067Z changes and commit them, and you can discard any commits you make in this
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6169764Z state without impacting any branches by switching back to a branch.
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6170098Z 
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6170370Z If you want to create a new branch to retain commits you create, you may
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6171068Z do so (now or later) by using -c with the switch command. Example:
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6171436Z 
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6171621Z   git switch -c <new-branch-name>
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6171903Z 
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6172127Z Or undo this operation with:
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6172316Z 
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6172475Z   git switch -
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6172625Z 
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6172892Z Turn off this advice by setting config variable advice.detachedHead to false
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6173204Z 
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6173589Z HEAD is now at f6b1311 Merge 03dddce275b50c813a88d86f600003018dba4f2b into 1e8199dd2963c70f539b23300a86e7e645350798
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6217271Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6260350Z [command]/usr/bin/git log -1 --format=%H
+verify	Run actions/checkout@v4	2026-11-08T16:01:39.6283951Z f6b1311d99492fa3eb9d1f7ea517d070996866d0
+verify	Run actions/setup-node@v4	﻿2026-11-08T16:01:39.6541900Z ##[group]Run actions/setup-node@v4
+verify	Run actions/setup-node@v4	2026-11-08T16:01:39.6542268Z with:
+verify	Run actions/setup-node@v4	2026-11-08T16:01:39.6542549Z   node-version: 24
+verify	Run actions/setup-node@v4	2026-11-08T16:01:39.6542880Z   cache: npm
+verify	Run actions/setup-node@v4	2026-11-08T16:01:39.6543177Z   always-auth: false
+verify	Run actions/setup-node@v4	2026-11-08T16:01:39.6543495Z   check-latest: false
+verify	Run actions/setup-node@v4	2026-11-08T16:01:39.6545601Z   token: ***
+verify	Run actions/setup-node@v4	2026-11-08T16:01:39.6545884Z ##[endgroup]
+verify	Run actions/setup-node@v4	2026-11-08T16:01:39.7669641Z Found in cache @ /opt/hostedtoolcache/node/24.22.2/x64
+verify	Run actions/setup-node@v4	2026-11-08T16:01:39.7671185Z (node:2186) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Run actions/setup-node@v4	2026-11-08T16:01:39.7671883Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Run actions/setup-node@v4	2026-11-08T16:01:39.7673289Z ##[group]Environment details
+verify	Run actions/setup-node@v4	2026-11-08T16:01:40.0989919Z node: v24.22.2
+verify	Run actions/setup-node@v4	2026-11-08T16:01:40.0990662Z npm: 11.19.1
+verify	Run actions/setup-node@v4	2026-11-08T16:01:40.0990977Z yarn: 1.22.22
+verify	Run actions/setup-node@v4	2026-11-08T16:01:40.0991810Z ##[endgroup]
+verify	Run actions/setup-node@v4	2026-11-08T16:01:40.1010064Z [command]/opt/hostedtoolcache/node/24.22.2/x64/bin/npm config get cache
+verify	Run actions/setup-node@v4	2026-11-08T16:01:40.2341120Z /home/runner/.npm
+verify	Run actions/setup-node@v4	2026-11-08T16:01:40.4012850Z npm cache is not found
+verify	Run npm ci	﻿2026-11-08T16:01:40.4141196Z ##[group]Run npm ci
+verify	Run npm ci	2026-11-08T16:01:40.4141577Z ^[[36;1mnpm ci^[[0m
+verify	Run npm ci	2026-11-08T16:01:40.4180412Z shell: /usr/bin/bash -e {0}
+verify	Run npm ci	2026-11-08T16:01:40.4180743Z ##[endgroup]
+verify	Run npm ci	2026-11-08T16:01:43.9282609Z 
+verify	Run npm ci	2026-11-08T16:01:43.9288578Z added 24 packages, and audited 25 packages in 3s
+verify	Run npm ci	2026-11-08T16:01:43.9289149Z 
+verify	Run npm ci	2026-11-08T16:01:43.9289392Z 5 packages are looking for funding
+verify	Run npm ci	2026-11-08T16:01:43.9289822Z   run `npm fund` for details
+verify	Run npm ci	2026-11-08T16:01:43.9364140Z 
+verify	Run npm ci	2026-11-08T16:01:43.9365130Z 2 high severity vulnerabilities
+verify	Run npm ci	2026-11-08T16:01:43.9369759Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+verify	Run npm ci	2026-11-08T16:01:43.9370699Z npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)
+verify	Run npm ci	2026-11-08T16:01:43.9371120Z npm warn install-scripts
+verify	Run npm ci	2026-11-08T16:01:43.9371604Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+verify	Run npm ci	2026-11-08T16:01:43.9371903Z 
+verify	Run npm ci	2026-11-08T16:01:43.9372070Z To address all issues, run:
+verify	Run npm ci	2026-11-08T16:01:43.9372458Z   npm audit fix
+verify	Run npm ci	2026-11-08T16:01:43.9372603Z 
+verify	Run npm ci	2026-11-08T16:01:43.9372716Z Run `npm audit` for details.
+verify	Run npm run build	﻿2026-11-08T16:01:43.9600412Z ##[group]Run npm run build
+verify	Run npm run build	2026-11-08T16:01:43.9600721Z ^[[36;1mnpm run build^[[0m
+verify	Run npm run build	2026-11-08T16:01:43.9630139Z shell: /usr/bin/bash -e {0}
+verify	Run npm run build	2026-11-08T16:01:43.9630566Z ##[endgroup]
+verify	Run npm run build	2026-11-08T16:01:44.0389441Z 
+verify	Run npm run build	2026-11-08T16:01:44.0389849Z > kevin-math-lab@0.1.0 prebuild
+verify	Run npm run build	2026-11-08T16:01:44.0390226Z > npm run build:catalog
+verify	Run npm run build	2026-11-08T16:01:44.0390433Z 
+verify	Run npm run build	2026-11-08T16:01:44.1094713Z 
+verify	Run npm run build	2026-11-08T16:01:44.1095259Z > kevin-math-lab@0.1.0 build:catalog
+verify	Run npm run build	2026-11-08T16:01:44.1096176Z > node scripts/build-grade3-catalog.mjs && node scripts/build-upper-primary-catalog.mjs && node scripts/build-pilot.mjs
+verify	Run npm run build	2026-11-08T16:01:44.1096704Z 
+verify	Run npm run build	2026-11-08T16:01:44.1428002Z Grade 3 catalog built: 54 lessons, 432 questions
+verify	Run npm run build	2026-11-08T16:01:44.1781913Z Upper primary catalogs built: 54 lessons; combined catalog: 108 lessons, 864 questions
+verify	Run npm run build	2026-11-08T16:01:44.2555280Z 互动样板：70课，849道任务；全量蓝图仍为 planned。
+verify	Run npm run build	2026-11-08T16:01:44.2646192Z 
+verify	Run npm run build	2026-11-08T16:01:44.2646602Z > kevin-math-lab@0.1.0 build
+verify	Run npm run build	2026-11-08T16:01:44.2647001Z > tsc --noEmit && vite build
+verify	Run npm run build	2026-11-08T16:01:44.2647312Z 
+verify	Run npm run build	2026-11-08T16:01:48.8788465Z ^[[36mvite v7.3.6 ^[[32mbuilding client environment for production...^[[36m^[[39m
+verify	Run npm run build	2026-11-08T16:01:48.9316658Z transforming...
+verify	Run npm run build	2026-11-08T16:01:50.4388421Z ^[[32m✓^[[39m 1695 modules transformed.
+verify	Run npm run build	2026-11-08T16:01:50.5725224Z rendering chunks...
+verify	Run npm run build	2026-11-08T16:01:50.6819968Z computing gzip size...
+verify	Run npm run build	2026-11-08T16:01:50.7111109Z ^[[2mdist/^[[22m^[[32mindex.html                               ^[[39m^[[1m^[[2m  0.62 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  0.46 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7120021Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[35mCoreWorkbench-5XtJHjIs.css        ^[[39m^[[1m^[[2m  3.64 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  1.13 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7174678Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[35mTwoRingWorkbench-CQbxiF1M.css     ^[[39m^[[1m^[[2m  5.20 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  1.72 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7200278Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[35mthinking-C6yMyyj6.css             ^[[39m^[[1m^[[2m  6.33 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  1.82 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7201451Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[35mdetective-DtjsTv3o.css            ^[[39m^[[1m^[[2m 21.61 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  5.03 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7202390Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[35mindex-Co3fdAxF.css                ^[[39m^[[1m^[[2m 81.59 kB^[[22m^[[1m^[[22m^[[2m │ gzip: 18.27 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7203270Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[35mteaching-BWBXL3ef.css             ^[[39m^[[1m^[[2m135.32 kB^[[22m^[[1m^[[22m^[[2m │ gzip: 29.98 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7204163Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36mplus-DmaelUER.js                  ^[[39m^[[1m^[[2m  0.15 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  0.15 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7205063Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36marrow-left-BjKr37Bx.js            ^[[39m^[[1m^[[2m  0.16 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  0.16 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7205929Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36mdetective-D4qnegZp.js             ^[[39m^[[1m^[[2m  7.47 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  3.32 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7206812Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36museMotionValue-C9ctq0hH.js        ^[[39m^[[1m^[[2m  8.76 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  4.09 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7207783Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36mCoreWorkbench-CeA4m-S8.js         ^[[39m^[[1m^[[2m 18.34 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  7.03 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7208869Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36mCourseReader-BMK_qiac.js          ^[[39m^[[1m^[[2m 18.39 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  7.14 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7210100Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36mTwoRingWorkbench--XeUPD0z.js      ^[[39m^[[1m^[[2m 21.29 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  8.39 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7211003Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36mDetectivePanel-BYQib2m2.js        ^[[39m^[[1m^[[2m 31.43 kB^[[22m^[[1m^[[22m^[[2m │ gzip: 10.54 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7211933Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36mQuestExperience-DYO19SFi.js       ^[[39m^[[1m^[[2m 33.18 kB^[[22m^[[1m^[[22m^[[2m │ gzip: 10.37 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7212835Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36mThinkingPanel-DLOTwkBm.js         ^[[39m^[[1m^[[2m 33.72 kB^[[22m^[[1m^[[22m^[[2m │ gzip: 12.15 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7213978Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36mParentThinkingReview-BDSnPxLq.js  ^[[39m^[[1m^[[2m 36.80 kB^[[22m^[[1m^[[22m^[[2m │ gzip: 12.94 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7214878Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36mteaching-DV4Pr3D0.js              ^[[39m^[[1m^[[2m268.17 kB^[[22m^[[1m^[[22m^[[2m │ gzip: 95.60 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7215718Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36mindex-B44_OT-D.js                 ^[[39m^[[1m^[[2m294.22 kB^[[22m^[[1m^[[22m^[[2m │ gzip: 95.55 kB^[[22m
+verify	Run npm run build	2026-11-08T16:01:50.7216373Z ^[[32m✓ built in 1.81s^[[39m
+verify	Run npm test	﻿2026-11-08T16:01:50.7938173Z ##[group]Run npm test
+verify	Run npm test	2026-11-08T16:01:50.7938470Z ^[[36;1mnpm test^[[0m
+verify	Run npm test	2026-11-08T16:01:50.7966953Z shell: /usr/bin/bash -e {0}
+verify	Run npm test	2026-11-08T16:01:50.7967256Z ##[endgroup]
+verify	Run npm test	2026-11-08T16:01:50.8756462Z 
+verify	Run npm test	2026-11-08T16:01:50.8757228Z > kevin-math-lab@0.1.0 pretest
+verify	Run npm test	2026-11-08T16:01:50.8757914Z > npm run build:catalog
+verify	Run npm test	2026-11-08T16:01:50.8758147Z 
+verify	Run npm test	2026-11-08T16:01:50.9455278Z 
+verify	Run npm test	2026-11-08T16:01:50.9456066Z > kevin-math-lab@0.1.0 build:catalog
+verify	Run npm test	2026-11-08T16:01:50.9456721Z > node scripts/build-grade3-catalog.mjs && node scripts/build-upper-primary-catalog.mjs && node scripts/build-pilot.mjs
+verify	Run npm test	2026-11-08T16:01:50.9775559Z 
+verify	Run npm test	2026-11-08T16:01:50.9776070Z Grade 3 catalog built: 54 lessons, 432 questions
+verify	Run npm test	2026-11-08T16:01:51.0158921Z Upper primary catalogs built: 54 lessons; combined catalog: 108 lessons, 864 questions
+verify	Run npm test	2026-11-08T16:01:51.0994778Z 互动样板：70课，849道任务；全量蓝图仍为 planned。
+verify	Run npm test	2026-11-08T16:01:51.1092920Z 
+verify	Run npm test	2026-11-08T16:01:51.1093362Z > kevin-math-lab@0.1.0 test
+verify	Run npm test	2026-11-08T16:01:51.1093748Z > node --test tests/*.test.mjs
+verify	Run npm test	2026-11-08T16:01:51.1094018Z 
+verify	Run npm test	2026-11-08T16:01:51.3140557Z ✔ 新模型有限状态拒绝越界参数、错误模型、任意动作；旧状态保留导入兼容 (1.748842ms)
+verify	Run npm test	2026-11-08T16:01:51.3163158Z ✔ 倒推同时验证错算流程44和题目原式23，两者不能混称 (16.33325ms)
+verify	Run npm test	2026-11-08T16:01:51.3171700Z ✔ 点阵切割按每个点的区域计数，所有合法参数满足守恒且漏乘有明确漏数 (6.077229ms)
+verify	Run npm test	2026-11-08T16:01:51.3178129Z ✔ 付款退回、连续除法、整体替换的例题与反例从模型求值 (0.243036ms)
+verify	Run npm test	2026-11-08T16:01:51.3179016Z ✔ 第一步选项不显示中间答案；不同选择对应不同算式结构 (0.769449ms)
+verify	Run npm test	2026-11-08T16:01:51.3179753Z ✔ 结论正确但证据缺失或不支持，不算理由正确；答案键不送到客户端 (0.450579ms)
+verify	Run npm test	2026-11-08T16:01:51.3180419Z ✔ 仅保存首答不能越过自查门槛，检查草稿不制造自我订正 (4.941079ms)
+verify	Run npm test	2026-11-08T16:01:51.3181156Z ✔ 解释题保存为待核对，既不冒充正确，也不获得理由积分 (0.980809ms)
+verify	Run npm test	2026-11-08T16:01:51.3181806Z ✔ 逐题编写的响应规格含一致的算式事实，正确结论必须配正确证据 (4.212377ms)
+verify	Run npm test	2026-11-08T16:01:51.3183794Z ✔ 中途提交错答后改回首答，不冒充全组独立迁移 (1.200806ms)
+verify	Run npm test	2026-11-08T16:01:51.3184426Z ✔ 无提示完成核心只是已练习，首答订正或当天复习不能冒充独立留存 (2.111237ms)
+verify	Run npm test	2026-11-08T16:01:51.3186284Z ✔ 响应版本变化保留旧会话、首答与奖励权利，新版本不能重复领取同题奖励 (0.555311ms)
+verify	Run npm test	2026-11-08T16:01:51.3275347Z ✔ multi-ring addition and overlap counting agree without shortening a complete ring (1.259675ms)
+verify	Run npm test	2026-11-08T16:01:51.3276881Z ✔ old chain states round-trip unchanged; the 80mm comparison never enters current classroom arithmetic (1.591613ms)
+verify	Run npm test	2026-11-08T16:01:51.3324094Z ✔ 接头两端正确延伸到共同范围边缘；两段金属相碰，不画成错位的孤立色块 (0.86334ms)
+verify	Run npm test	2026-11-08T16:01:51.3324884Z ✔ 两种算法、每次实际新增范围、环的外缘与三种逆算在多参数下始终一致 (8.553398ms)
+verify	Run npm test	2026-11-08T16:01:51.3325563Z ✔ 反求厚度与单环外长：把结果代回独立的原关系；图不携带未知尺寸答案 (3.622424ms)
+verify	Run npm test	2026-11-08T16:01:51.3326196Z ✔ 14节提升/奥数课都有明确逆向任务；11道更新保持849个任务和原ID (5.610219ms)
+verify	Run npm test	2026-11-08T16:01:51.3326781Z ✔ 新题不在旧版本页面评分；旧首答、审核和奖励权利可导出恢复且不被改写 (32.331387ms)
+verify	Run npm test	2026-11-08T16:01:51.3327355Z ✔ 条件图、初态和因果问题来自同一数量条件；数据课不预先分类或给票数答案 (1.664428ms)
+verify	Run npm test	2026-11-08T16:01:51.3327987Z ✔ 70课有针对动作的因果追问、可观察证据和反例，发现不再复用混合运算通用段落 (0.436663ms)
+verify	Run npm test	2026-11-08T16:01:51.3328585Z ✔ 11课66组参数的当前实验表达来自模型条件，只留空白结果，不取实时测量答案 (2.541381ms)
+verify	Run npm test	2026-11-08T16:01:51.3329945Z ✔ 括号课切换情境后，当前算式和单位随结构化条件切换，原式单独保留 (0.449874ms)
+verify	Run npm test	2026-11-08T16:01:51.3330823Z ✔ 链环按实际已扣环数，木板按实际搭接；单位统一，边界不伪造目标答案 (0.391886ms)
+verify	Run npm test	2026-11-08T16:01:51.3331484Z ✔ 空间观察不强行生成算式；称象只给有条件的等量关系，不捏造质量数值 (0.199112ms)
+verify	Run npm test	2026-11-08T16:01:51.3332569Z ✔ 归一与归总切换后当前条件、算式和不变量不混用，六组参数均可回放 (0.409404ms)
+verify	Run npm test	2026-11-08T16:01:51.4490244Z ✔ 70个入口保留六步教案，原三课终审与纸带题修正各自维护评估版本 (1.5438ms)
+verify	Run npm test	2026-11-08T16:01:51.4539820Z ✔ 三项勾选可提交混合运算且无需说明或中间步骤；首答、订正和旧存档均保留 (9.680549ms)
+verify	Run npm test	2026-11-08T16:01:51.4547506Z ✔ 自查勾选不使错误答案变正确，不凭空记录文字解释或删除积分权益 (0.560556ms)
+verify	Run npm test	2026-11-08T16:01:51.6226684Z ✔ 数字编码仍然是原70课中的一个入口，原12题各自有版本和唯一ID (1.658275ms)
+verify	Run npm test	2026-11-08T16:01:51.6270447Z ✔ 身份证6＋8＋3＋1、末位X与第17位奇偶的知识描述一致 (0.377529ms)
+verify	Run npm test	2026-11-08T16:01:51.6271468Z ✔ 邮政编码与校内编号出题，不把真实学籍号当作自编号 (0.32062ms)
+verify	Run npm test	2026-11-08T16:01:51.6279133Z ✔ 原书架三字段操作仍能测量和验证；活动不替代正式测评 (0.814716ms)
+verify	Run npm test	2026-11-08T16:01:51.6280397Z ✔ 字段位置不跑位：18字符含问号、6位邮编与第17/18位分别定位 (0.344218ms)
+verify	Run npm test	2026-11-08T16:01:51.6281093Z ✔ 自编字段可独立解码：全校1620个班级标签及跨入学年流水不撞号，边界不能溢出 (25.1054ms)
+verify	Run npm test	2026-11-08T16:01:51.6281789Z ✔ 十二题没有继承旧图、旧四位限制；开放解释或随便写数字都不能自动通过 (0.829616ms)
+verify	Run npm test	2026-11-08T16:01:51.6282407Z ✔ 追加新版本十二题审校，不改旧849题字节和原837条当前证据 (95.157817ms)
+verify	Run npm test	2026-11-08T16:01:51.6283071Z ✔ 旧版与早期扩充版会话仍可导出还原；新版不覆写首答、不重复奖励同题 (37.444896ms)
+verify	Run npm test	2026-11-08T16:01:51.6283777Z ✔ 其余69课逐字节序列化指纹不变，不用新截图替换它们的旧证据 (8.923412ms)
+verify	Run npm test	2026-11-08T16:01:51.6284401Z ✔ 旧扩充版核心题即使全部批阅完成，也不能拼入新版练习或独立达标 (3.237237ms)
+verify	Run npm test	2026-11-08T16:01:51.6388240Z ✔ 11课×6情境均限定参数域、守恒、分组和正确复原，含连续进位、商中0、千位 (7.117804ms)
+verify	Run npm test	2026-11-08T16:01:51.6389011Z ✔ 长会话30条操作、导入导出、并发冲突和重复保存不改变数学状态与奖励 (3.865957ms)
+verify	Run npm test	2026-11-08T16:01:51.6389703Z ✔ 九节新条件图与文字从结构化条件共生，70课全部有首屏关系图 (3.442053ms)
+verify	Run npm test	2026-11-08T16:01:51.6390282Z ✔ 独立审校oracle遵循运算序、不执行代码；单位、余数、文字符号不误判 (1.541254ms)
+verify	Run npm test	2026-11-08T16:01:51.6390903Z ✔ 849题代理语义审校与历史97样本、题干oracle、人类审批分别统计 (44.102606ms)
+verify	Run npm test	2026-11-08T16:01:51.6391467Z ✔ 浏览、初始状态、实际日志与独立练习分开，不补造旧操作和掌握 (0.285255ms)
+verify	Run npm test	2026-11-08T16:01:51.6799408Z ✔ 铁丝18分米：明确模拟首错、两路逆查、换场景16与正确对照26 (4.978993ms)
+verify	Run npm test	2026-11-08T16:01:51.6825234Z ✔ 绕线参数族：不同圈差、正误与两条件守恒，恶意/歧义参数拒绝 (22.78949ms)
+verify	Run npm test	2026-11-08T16:01:51.6829571Z ✔ 今日与新到按案号和版本去重，不隐藏新版本，也不改写输入及首答 (0.310675ms)
+verify	Run npm test	2026-11-08T16:01:51.6849993Z ✔ 只更正未动过的系统铁丝草稿说明，不改编辑过的草稿或历史版本 (5.907026ms)
+verify	Run npm test	2026-11-08T16:01:51.6851627Z ✔ 旧oracle待审回执绕过304并重验，已编辑草稿不覆盖，已发布旧证据不改写 (110.727934ms)
+verify	Run npm test	2026-11-08T16:01:51.6908192Z ✔ 投递审校用另一种算法复算五类模型，含正误、换算与反向检查 (8.265304ms)
+verify	Run npm test	2026-11-08T16:01:51.6914286Z ✔ 新投递的错行、修复答案、逆查答案与题图篡改都会被拦截 (2.110018ms)
+verify	Run npm test	2026-11-08T16:01:52.0116068Z ✔ A：抄目标＋空解释在普通练习/迁移均只算答案改对，不算独立纠错或晋级 (21.082498ms)
+verify	Run npm test	2026-11-08T16:01:52.0170951Z ✔ A：裸数值、带单位或括号的抄写不能靠家长勾选升级；计算与文字方法仍可核对 (18.090797ms)
+verify	Run npm test	2026-11-08T16:01:52.0202929Z ✔ A：实际检验式可支持独立纠错，辅助与未确认检查不能混入 (13.037951ms)
+verify	Run npm test	2026-11-08T16:01:52.0230000Z ✔ B：乘法交换、括号拆分、分配、分数、代入与另一反向方法均按关系核验 (3.378041ms)
+verify	Run npm test	2026-11-08T16:01:52.0246042Z ✔ B：8族256参数的两条独立反向关系均有证明，不靠某一固定标准字符串 (133.82927ms)
+verify	Run npm test	2026-11-08T16:01:52.0252272Z ✔ B：延迟复测接受交换和拆分的等价式并推进，不把单一写法当标准答案 (7.956642ms)
+verify	Run npm test	2026-11-08T16:01:52.0270502Z ✔ B：家长能确认反馈前其他方法，推进最新待核对复测一次；历史与首答二答不变 (8.652188ms)
+verify	Run npm test	2026-11-08T16:01:52.0271154Z ✔ B：批阅更正/重复/双标签及计划409不覆盖证据、不重复推进 (16.033896ms)
+verify	Run npm test	2026-11-08T16:01:52.0271907Z ✔ B：旧版反馈不可追溯改写；旧薄弱记录不自动继承独立资格 (6.387804ms)
+verify	Run npm test	2026-11-08T16:01:52.0272613Z ✔ B：相同数值的不同数学角色不混淆，重复答案的凑数仍不能冒充检验 (0.536659ms)
+verify	Run npm test	2026-11-08T16:01:52.0273177Z ✔ B：家长确认需具体依据与反馈前证据；不确定与辅助不能升级 (12.214907ms)
+verify	Run npm test	2026-11-08T16:01:52.0273668Z ✔ B：确认早期记录不跳过较新的待核对复测，最新记录一次推进 (16.657761ms)
+verify	Run npm test	2026-11-08T16:01:52.0274249Z ✔ B：批阅容量耗尽仍可回放同一事件，拒绝新事件且不丢历史 (35.660098ms)
+verify	Run npm test	2026-11-08T16:01:52.0285017Z ✔ 收件浏览器夹具覆盖全天运行时刻：16分钟同步不意外越过UTC+8的午夜 (5.943208ms)
+verify	Run npm test	2026-11-08T16:01:52.0299786Z ✔ 同日收件验证只冻结测试起点；真实跨天仍建立下一日计划而不覆盖旧计划 (8.987714ms)
+verify	Run npm test	2026-11-08T16:01:52.4895783Z ✔ 真实临时HTTP：PIN、同源、公开API不泄漏、完整备份保护、存档持久化与恢复 (735.682552ms)
+verify	Run npm test	2026-11-08T16:01:52.5520275Z ✔ 独立数学oracle：五类模板正反、边界与首错、题图和逆查一致 (39.036016ms)
+verify	Run npm test	2026-11-08T16:01:52.5563427Z ✔ 严格契约：额外字段、私人内容、HTML、URL、错误版本、超长、原型键均拒绝 (3.223109ms)
+verify	Run npm test	2026-11-08T16:01:52.5639577Z ✔ 三案事务导入、可信审核来源、首次即练、今日2错1对与旧记录保持稳定 (41.964535ms)
+verify	Run npm test	2026-11-08T16:01:52.5690200Z ✔ 不知道的模板整包待审；假approved/机器已验证字符串无效；明确数学错包零发布 (10.010154ms)
+verify	Run npm test	2026-11-08T16:01:52.5691065Z ✔ 同ID、修订号、来源冲突不覆盖；新版本不变更进行中的首判与旧案 (6.918214ms)
+verify	Run npm test	2026-11-08T16:01:52.5691758Z ✔ 自动发布暂停、撤回、本机手动修改、满容量均不被远端覆盖 (511.744942ms)
+verify	Run npm test	2026-11-08T16:01:52.5692343Z ✔ 只读GitHub同步：启动接收、ETag增量、断网退避、恢复、运行中不重启收新包 (57.094322ms)
+verify	Run npm test	2026-11-08T16:01:52.5693312Z ✔ 同步拒绝错误blob、目录路径、超大文件；未知未来备份拒绝，旧版无收件字段兼容 (41.971967ms)
+verify	Run npm test	2026-11-08T16:01:52.5694106Z ✔ 新到案与每日案共用单版本一次、每日三枚上限；发布版本变更不重复首答 (11.850349ms)
+verify	Run npm test	2026-11-08T16:01:52.5694961Z ✔ GitHub blob限流时仅固定原文件后备；SHA不符拒绝，不执行任意远端URL (27.276169ms)
+verify	Run npm test	2026-11-08T16:01:52.5696075Z ✔ 混合新旧内容逐案去重，只复用当前同条件版本，避免复用已经改题的旧案 (5.879884ms)
+verify	Run npm test	2026-11-08T16:01:52.6864151Z ✔ V2 数学：8族×256个参数精确成立；正向/逆向都可代回，公开题不携带答案 (51.587357ms)
+verify	Run npm test	2026-11-08T16:01:52.6901911Z ✔ V2 四包12案：原始固定Git blob、全字段审校、独立oracle及四步结案 (102.323224ms)
+verify	Run npm test	2026-11-08T16:01:52.6939546Z ✔ V2 新模板泛化：非整数定点、零载重、逆向边界和恶意参数均验证 (12.144018ms)
+verify	Run npm test	2026-11-08T16:01:52.6950360Z ✔ V2 L1/L2：结果对但推理错、未知中间过程、正确无需改，三态首判与首证据冻结 (9.687158ms)
+verify	Run npm test	2026-11-08T16:01:52.6951385Z ✔ V2 L4：无反馈首答→自查；各类自主纠错和辅助不能混淆 (24.916571ms)
+verify	Run npm test	2026-11-08T16:01:52.6952104Z ✔ V2 首答不可变、反馈门控、幂等重放与旧页409原子拒绝 (5.463277ms)
+verify	Run npm test	2026-11-08T16:01:52.6952993Z ✔ V2 到期1/3/7/14：新参数、未知量变化、无预填反查、当天不重复推进 (18.632332ms)
+verify	Run npm test	2026-11-08T16:01:52.6953697Z ✔ V2 多次失败不循环熟题；辅助复测不推进；暂停、顺延、跨午夜和时间异常 (25.674769ms)
+verify	Run npm test	2026-11-08T16:01:52.6954329Z ✔ V2 旧needs-review重验至v3且原case版本与历史不改写 (2.807858ms)
+verify	Run npm test	2026-11-08T16:01:52.6955095Z ✔ V2 备份、旧版缺命名空间、未来版拒绝、篡改首答和伪造正确状态均拒绝 (22.390254ms)
+verify	Run npm test	2026-11-08T16:01:52.6955739Z ✔ V2 家长批阅和更正只追加；冲突不覆盖孩子首答、反馈和既成历史 (3.826165ms)
+verify	Run npm test	2026-11-08T16:01:52.6956783Z ✔ V2 延迟复测不透露反查公式，抄一个已知数字不能冒充检验 (4.137869ms)
+verify	Run npm test	2026-11-08T16:01:52.6957404Z ✔ V2 家长管理幂等、复评不能改写既成反馈；调整日期边界严格 (6.00711ms)
+verify	Run npm test	2026-11-08T16:01:52.6958122Z ✔ V2 有界容量：240个参数用完就停止；1000次上限与2MiB错误不丢已有证据 (277.164377ms)
+verify	Run npm test	2026-11-08T16:01:52.6959085Z ℹ 1000条紧凑模拟证据：1346463字节；模块上限2097152字节，整侦探库3145728字节。
+verify	Run npm test	2026-11-08T16:01:52.6960000Z ✔ V2 磁盘备份失败不提交任何首答；恢复后可安全重试 (10.23406ms)
+verify	Run npm test	2026-11-08T16:01:52.7970666Z ✔ 14宗完整模拟案：10错4对；铁丝缺原始过程留草稿，未审核不可发布 (5.917517ms)
+verify	Run npm test	2026-11-08T16:01:52.7986516Z ✔ 首批数学oracle：长度顺序、30张、千米、混合运算、位值；香蕉没有唯一厘米值 (0.464657ms)
+verify	Run npm test	2026-11-08T16:01:52.7990881Z ✔ 每天2错1对、跨类别、顺序可复现且正确案位置变化，不重复生成计划 (32.363145ms)
+verify	Run npm test	2026-11-08T16:01:52.8007604Z ✔ 全部14案真实走完四步，正确案不选不存在的错行；与原进度和钱包隔离 (55.361661ms)
+verify	Run npm test	2026-11-08T16:01:52.8008478Z ✔ 误报、漏报分别反馈，首判冻结，订正不冒充独立；提示均留痕 (15.487435ms)
+verify	Run npm test	2026-11-08T16:01:52.8009333Z ✔ 卡厚案必须定位第三行；不能只凭30这个最终答案跳过证据 (5.14425ms)
+verify	Run npm test	2026-11-08T16:01:52.8010062Z ✔ 服务端分阶段白名单投影：题面、证据、输入规格没有私有答案或来源 (2.608584ms)
+verify	Run npm test	2026-11-08T16:01:52.8010720Z ✔ 回执重复100次只保留一次勋章，旧页409不覆盖首判和新版本 (5.324913ms)
+verify	Run npm test	2026-11-08T16:01:52.8011411Z ✔ 发布新版本和撤回归档不改旧题及旧解；家长编辑也有幂等和409保护 (10.007442ms)
+verify	Run npm test	2026-11-08T16:01:52.8012050Z ✔ 手工开放解释必须家长核对，批阅更正保留历史、首判、版本，不能靠勾选发勋章 (14.22157ms)
+verify	Run npm test	2026-11-08T16:01:52.8012706Z ✔ 新旧备份兼容、哈希和版本引用受校验；字段污染、超限拒绝 (9.375101ms)
+verify	Run npm test	2026-11-08T16:01:52.8013323Z ✔ 案卷增长至200宗仍能生成小型儿童投影；超量和3MiB字节预算明确拒绝 (54.445501ms)
+verify	Run npm test	2026-11-08T16:01:52.8014006Z ℹ 200宗临时案卷；儿童初始投影981字节；本机校验与投影11ms，仅作环境记录。
+verify	Run npm test	2026-11-08T16:01:53.0357340Z ✔ A01：旧核心v1不拼接新版迁移及复习 (1.556522ms)
+verify	Run npm test	2026-11-08T16:01:53.0370822Z ✔ A02：复习必须在迁移之后至少24小时，核心不能晚于迁移 (0.410772ms)
+verify	Run npm test	2026-11-08T16:01:53.0371782Z ✔ A03：调到积木匹配后提交不能隐瞒支架；撤销不会清零验证证据 (3.636447ms)
+verify	Run npm test	2026-11-08T16:01:53.0372391Z ✔ A04：四轮通过后看解析不改写历史结论、完成状态和到期安排 (11.885889ms)
+verify	Run npm test	2026-11-08T16:01:53.0373122Z ✔ A05：新作答前用提示，本轮降低独立性；独立新题拒绝教具自动反馈 (1.797572ms)
+verify	Run npm test	2026-11-08T16:01:53.0373773Z ✔ A06：12轮失败仍不循环；全部用完明确回补，不伪造全新题 (33.71801ms)
+verify	Run npm test	2026-11-08T16:01:53.0374390Z ✔ A08：批阅更正幂等且旧标签页409不能覆盖首答或最新历史 (0.703351ms)
+verify	Run npm test	2026-11-08T16:01:53.0375395Z ✔ A07：11节各5道既有题，解释必须人工批阅；没有平行任务与奖励 (5.714545ms)
+verify	Run npm test	2026-11-08T16:01:53.0375986Z ✔ 旧、当前及模拟未来导出：旧记录保留，未来格式拒绝，无自动清空 (3.407316ms)
+verify	Run npm test	2026-11-08T16:01:53.0376787Z ✔ A11：恢复码单次使用，旧PIN与会话失效；只备份家长凭据 (315.061401ms)
+verify	Run npm test	2026-11-08T16:01:53.0377430Z ✔ 17张卡专用双层提示与204组变式的约束、唯一性和公开图一致 (5.344743ms)
+verify	Run npm test	2026-11-08T16:01:53.0378062Z ✔ 五题小测刷新恢复原会话；映射题不再重复领分，人工更正不改首答 (1.143403ms)
+verify	Run npm test	2026-11-08T16:01:53.0378869Z ✔ 68组反向/结构迁移：由已知条件独立还原答案，不向图提供未知目标 (0.783362ms)
+verify	Run npm test	2026-11-08T16:01:53.0379524Z ✔ 固定ea9984a的68组公开情境保持逐字段兼容，新增不改写旧作答题意 (0.95918ms)
+verify	Run npm test	2026-11-08T16:01:53.0390995Z ✔ 导出fixture：旧版与当前校验后逐字段保留，模拟未来版本明确拒绝 (1.089173ms)
+verify	Run npm test	2026-11-08T16:01:53.0571860Z ✔ 强弱证据分开：参考解答算得对，不证明题意的答案对 (2.130575ms)
+verify	Run npm test	2026-11-08T16:01:53.0572853Z ✔ 849条具体理由、各版本开放解释范围和选择干扰项逐题可追溯 (61.796475ms)
+verify	Run npm test	2026-11-08T16:01:53.0579396Z ✔ 手写题意关系由独立Python Fraction实现复算，不读取标准答案 (40.984729ms)
+verify	Run npm test	2026-11-08T16:01:53.0580317Z ✔ 改写题接受不同正确写法，但数字结果和未展开式不能冒充过程 (1.692959ms)
+verify	Run npm test	2026-11-08T16:01:53.0581064Z ✔ 替换测量的三项长度平行，体积相同和只称一块不能证明质量 (0.290792ms)
+verify	Run npm test	2026-11-08T16:01:53.0582025Z ✔ 分数边界、双字段与倒推错误路径不混同 (0.393317ms)
+verify	Run npm test	2026-11-08T16:01:53.0582579Z ✔ 评分升级不覆盖旧首答或重发相同题的积分，旧存档可完整恢复 (5.691659ms)
+verify	Run npm test	2026-11-08T16:01:53.0583196Z ✔ 身份编号转家长核对，提交和三项自查不会自动发积分 (0.373178ms)
+verify	Run npm test	2026-11-08T16:01:53.0583838Z ✔ 正式复习组最后解释获批后推进1/3/7/21调度，回放或重复审批不重复留存 (6.242677ms)
+verify	Run npm test	2026-11-08T16:01:53.0584459Z ✔ 需要回补推进至次日，订正获批不冒充本轮独立成功，首答和批阅历史保留 (1.965499ms)
+verify	Run npm test	2026-11-08T16:01:53.0585025Z ✔ 含解释的核心完成建首次学习锚点，但人工批阅不补发逐题或每日完成奖励 (1.166548ms)
+verify	Run npm test	2026-11-08T16:01:53.0585574Z ✔ 提示后获批复习仍为辅助成功，预览复习不推进到期记录 (0.993078ms)
+verify	Run npm test	2026-11-08T16:01:53.0586170Z ✔ 审批409、旧存档恢复及评分版本切换不丢批阅/首答/复习历史或重复积分 (3.010063ms)
+verify	Run npm test	2026-11-08T16:01:53.0586742Z ✔ 已批阅完成后更正为回补：保留原审核与复习历史，次日回补不重发积分 (0.864035ms)
+verify	Run npm test	2026-11-08T16:01:53.0587376Z ✔ numbers.quantity.intro：15道不同结构的答案都能正确判定 (1.569082ms)
+verify	Run npm test	2026-11-08T16:01:53.0588066Z ✔ numbers.addition.meaning：15道不同结构的答案都能正确判定 (0.320646ms)
+verify	Run npm test	2026-11-08T16:01:53.0589012Z ✔ numbers.subtraction.meaning：15道不同结构的答案都能正确判定 (0.227076ms)
+verify	Run npm test	2026-11-08T16:01:53.0669768Z ✔ 三年级完整教案60课、720题全部进入可编译课程源 (0.83703ms)
+verify	Run npm test	2026-11-08T16:01:53.0679679Z ✔ 课程保留12道分层任务，精修课撤掉教具，静态课不冒充操作模型 (0.502764ms)
+verify	Run npm test	2026-11-08T16:01:53.0699680Z ✔ 三年级内容覆盖16个分类，不等同16种已验收模型 (0.636931ms)
+verify	Run npm test	2026-11-08T16:01:53.0716335Z ✔ 非数值题保持解释响应，编译器不制造提示答案的模板选项 (4.68958ms)
+verify	Run npm test	2026-11-08T16:01:53.0740281Z ✔ 例题保留实际过程而非第N步占位；专用模型和静态审阅状态明确 (0.5405ms)
+verify	Run npm test	2026-11-08T16:01:53.0769900Z ✔ 编译后的纯数值例题等号两边相等，乘数和完整括号不被截断 (1.909486ms)
+verify	Run npm test	2026-11-08T16:01:53.1401535Z ✔ 连续折叠保持六个面的编号、边长、面积及真实连接边 (6.560822ms)
+verify	Run npm test	2026-11-08T16:01:53.1404291Z ✔ 折成盒子后正好8个顶点12条棱，相对面无公共顶点，相邻面共用棱 (0.701918ms)
+verify	Run npm test	2026-11-08T16:01:53.1405024Z ✔ 观察者转动改变投影，物体三维坐标不变；正投影尺寸符合盒子的宽高深 (0.441913ms)
+verify	Run npm test	2026-11-08T16:01:53.1405588Z ✔ 隐藏积木允许3块和4块具有相同正面、顶面，但侧面证据不同 (0.296554ms)
+verify	Run npm test	2026-11-08T16:01:53.1406078Z ✔ 称重守恒、单位换算、净重、天平角度方向与质量差一致 (0.391874ms)
+verify	Run npm test	2026-11-08T16:01:53.1418593Z ✔ 称象同水线代表总载重相同，新增乘员时不可把石块和象直接等同 (0.641993ms)
+verify	Run npm test	2026-11-08T16:01:53.1419448Z ✔ 五课具有明确模型、六屏教材桥接、3道可判定核心题与不同迁移题 (0.663876ms)
+verify	Run npm test	2026-11-08T16:01:53.1420661Z ✔ 模型状态有限且按课程约束，拒绝越界、错版本、错模型动作与重复物体 (0.907813ms)
+verify	Run npm test	2026-11-08T16:01:53.1424346Z ✔ 读课、模型和屏幕可导出导入，但点击和操作不会直接产生掌握或积分 (2.078336ms)
+verify	Run npm test	2026-11-08T16:01:53.1427894Z ✔ 五课可以从自查到核心练习提交，首答、证据保留；核心不冒充独立迁移 (9.133685ms)
+verify	Run npm test	2026-11-08T16:01:53.1428953Z ✔ 五课的独立迁移与次日到期复习均能闭环，当天做完仍不算延迟掌握 (4.904149ms)
+verify	Run npm test	2026-11-08T16:01:53.1617245Z ✔ 每个已开放课程入口经图形或明确文字题审核，短课堂故事和预测都有图 (1.360626ms)
+verify	Run npm test	2026-11-08T16:01:53.1617909Z ✔ 删除必要图形、新图形课程未声明或分数整体错误时构建必须拒绝 (0.67265ms)
+verify	Run npm test	2026-11-08T16:01:53.1618352Z ✔ 故事图与实验对象共用身份与数量，不用例题答案反推物体 (1.06085ms)
+verify	Run npm test	2026-11-08T16:01:53.1618952Z ✔ 分类图中菱形四边确实相等，而且相邻边不是直角 (0.194724ms)
+verify	Run npm test	2026-11-08T16:01:53.3251786Z ✔ 同一地图按年级包含新旧课，低年级可从数数开始 (3.616014ms)
+verify	Run npm test	2026-11-08T16:01:53.3310385Z ✔ 长度单元把基础、提升和奥数做成五节可见课程 (1.068511ms)
+verify	Run npm test	2026-11-08T16:01:53.3312953Z ✔ 新课错答进入同一复习站与错题分组，订正不抹掉历史 (5.129104ms)
+verify	Run npm test	2026-11-08T16:01:53.3340080Z ✔ 格式错误不会制造错题或复习记录 (0.888806ms)
+verify	Run npm test	2026-11-08T16:01:53.3356300Z ✔ 看提示完成复习不冒充独立保持，独立再做才能推进 (1.821362ms)
+verify	Run npm test	2026-11-08T16:01:53.3597684Z ✔ 链环长度由同一模型生成位置、接头与答案 (1.179084ms)
+verify	Run npm test	2026-11-08T16:01:53.3609793Z ✔ 木板拖动时重叠越多，端到端越短且图形起点一致 (0.388445ms)
+verify	Run npm test	2026-11-08T16:01:53.3610758Z ✔ 断尺、直线与闭环分别保持长度和点段关系 (0.234084ms)
+verify	Run npm test	2026-11-08T16:01:53.3620583Z ✔ 五节长度课的场景图与预期答案逐一一致 (0.208389ms)
+verify	Run npm test	2026-11-08T16:01:53.3621437Z ✔ 每节长度课都把图形带进迁移或复习题 (0.294189ms)
+verify	Run npm test	2026-11-08T16:01:53.3622397Z ✔ 家长资料需要解锁，密码哈希与会话不进入进度，退出与重启锁定 (84.21454ms)
+verify	Run npm test	2026-11-08T16:01:53.3623091Z ✔ 所有本地JSON写入要求同源，拒绝恶意来源、null源、跨站与表单写入 (0.51922ms)
+verify	Run npm test	2026-11-08T16:01:53.3623805Z ✔ 老存档预览不修改校验数据；欢迎礼物只迁移一次 (3.367857ms)
+verify	Run npm test	2026-11-08T16:01:53.3624420Z ✔ 升级真实格式 SQLite 前保存旧备份；关闭重开不会重发食物 (19.363337ms)
+verify	Run npm test	2026-11-08T16:01:53.3625044Z ✔ 分享最爱有额外亲密度；重试不重复吃掉食物或成长 (0.842812ms)
+verify	Run npm test	2026-11-08T16:01:53.3625570Z ✔ 食物用尽的失败操作不改动存档 (0.454828ms)
+verify	Run npm test	2026-11-08T16:01:53.3626120Z ✔ 摸摸每日全伙伴共用 3 点奖励；北京时间跨日刷新；不扣离线成长 (0.630917ms)
+verify	Run npm test	2026-11-08T16:01:53.3626807Z ✔ 接星星奖励每日一次，不产生学习积分或完成记录 (0.206518ms)
+verify	Run npm test	2026-11-08T16:01:53.3627339Z ✔ 实际过关驱动成长、回忆与约定礼物；请求重复不重发 (1.676694ms)
+verify	Run npm test	2026-11-08T16:01:53.3627877Z ✔ 到期复习和思维课程有各自礼物，次日不把旧完成当新任务 (3.547217ms)
+verify	Run npm test	2026-11-08T16:01:53.3628427Z ✔ 积分邀请真实伙伴：扣款一致，各自成长独立，导入导出完整 (1.887648ms)
+verify	Run npm test	2026-11-08T16:01:53.3629255Z ✔ 成长礼物和场景按阈值解锁；摆放和收起持久保存 (5.955057ms)
+verify	Run npm test	2026-11-08T16:01:53.3629821Z ✔ 格式合法但内容异常的宠物备份也会被拒绝 (1.818175ms)
+verify	Run npm test	2026-11-08T16:01:53.3630372Z ✔ 分数使用精确有理数而不是浮点近似 (1.412311ms)
+verify	Run npm test	2026-11-08T16:01:53.3630864Z ✔ 等量替换检查括号与展开保持等价 (1.815872ms)
+verify	Run npm test	2026-11-08T16:01:53.3631396Z ✔ 网格面积与外边界分开计算 (0.747867ms)
+verify	Run npm test	2026-11-08T16:01:53.3631846Z ✔ 非法输入不会被当作答错 (0.386497ms)
+verify	Run npm test	2026-11-08T16:01:53.3632606Z ✔ 单位由题目给定，只填数值即可，旧存档的单位选择不影响判分 (0.281329ms)
+verify	Run npm test	2026-11-08T16:01:53.3633182Z ✔ 混合运算受限AST精确计算审计要求的主例与反例 (0.357374ms)
+verify	Run npm test	2026-11-08T16:01:53.4804927Z ✔ 文字修订同步到未完成的练习，答案、积分和题目版本保留 (2.569294ms)
+verify	Run npm test	2026-11-08T16:01:53.4822312Z ✔ 样板课程能创建会话并区分首答、自查、提示和最终答案 (10.003757ms)
+verify	Run npm test	2026-11-08T16:01:53.4823115Z ✔ 重复事件不会重复发放积分 (0.816764ms)
+verify	Run npm test	2026-11-08T16:01:53.4823799Z ✔ 阅读记录与发现手册会保存为待确认 (1.176881ms)
+verify	Run npm test	2026-11-08T16:01:53.4824339Z ✔ 完成样板核心练习后，带有课程回忆的存档仍能完整导入 (3.955527ms)
+verify	Run npm test	2026-11-08T16:01:53.4824895Z ✔ 旧页面保存阅读状态时给出冲突，不覆盖新记录 (0.71886ms)
+verify	Run npm test	2026-11-08T16:01:53.4825426Z ✔ 未提交的练习草稿可导入恢复，旧版本不能覆盖新答案 (0.628319ms)
+verify	Run npm test	2026-11-08T16:01:53.4825974Z ✔ 重启恢复首答证据且发给浏览器的题目不提前包含答案 (0.671591ms)
+verify	Run npm test	2026-11-08T16:01:53.4826598Z ✔ 测量练习只在最终错答后给结构诊断，不提前送到浏览器 (0.620376ms)
+verify	Run npm test	2026-11-08T16:01:53.4903041Z ✔ 20厘米纸条重叠4厘米：明确问两端距离，36正确、40错误，图与题干同条件 (3.253704ms)
+verify	Run npm test	2026-11-08T16:01:53.4904049Z ✔ 所有搭接图独立按毫米位置求并集，避免原材料长度之和混充拼后距离 (1.482039ms)
+verify	Run npm test	2026-11-08T16:01:53.4904791Z ✔ 链环题独立给条件，钟面问整圈，贴边周长与搭接长度的去重次数分清 (1.194729ms)
+verify	Run npm test	2026-11-08T16:01:53.4905403Z ✔ 新评估版本保留旧首答/判定，不重复奖励；旧页面不再按有歧义的40继续评分 (5.820178ms)
+verify	Run npm test	2026-11-08T16:01:53.4906097Z ✔ 本轮29题补清题意、仅1题改答案；849个任务和原有三项自查保持 (0.260983ms)
+verify	Run npm test	2026-11-08T16:01:53.4906724Z ✔ 混合运算A/B的标题、任务和单位跟随完整故事，不把内部taskMode当场景编号 (1.766944ms)
+verify	Run npm test	2026-11-08T16:01:53.4907300Z ✔ 11课66组操作的顶层指令不强留第一组数字或单位 (0.761771ms)
+verify	Run npm test	2026-11-08T16:01:53.4907840Z ✔ 元角合并和兑换价值守恒，未凑满与连续进位边界均一致 (0.571801ms)
+verify	Run npm test	2026-11-08T16:01:53.4908360Z ✔ 需求条两段相加等于需求，已有超过需求时不出现负数缺口 (0.284095ms)
+verify	Run npm test	2026-11-08T16:01:53.4909342Z ✔ 分组转换保留同一批对象ID与总量，支持六组参数、撤销和合法旧存档 (2.239955ms)
+verify	Run npm test	2026-11-08T16:01:53.4909888Z ✔ 逆向索引逐个解析已有11题，保留正式题组及独立逆推课堂，不重复题ID (2.931936ms)
+verify	Run npm test	2026-11-08T16:01:53.4910534Z ✔ 11题逆向解各自能正向代回，不依赖图的真实比例取答案 (1.371431ms)
+verify	Run npm test	2026-11-08T16:01:53.4911100Z ✔ 70课逐场景矩阵可查新，标明源扫描而非全量教学验收 (10.440873ms)
+verify	Run npm test	2026-11-08T16:01:53.4911635Z ✔ 家长逆向清单可从显式索引再生成，不把索引误作新增习题 (1.576993ms)
+verify	Run npm test	2026-11-08T16:01:53.5179721Z ✔ 1、3、7、21天始终锚定首次完成日期，之后28天再复习 (1.221209ms)
+verify	Run npm test	2026-11-08T16:01:53.5180607Z ✔ 晚来几天只复习一次，直接选未来的锚定日期 (0.184272ms)
+verify	Run npm test	2026-11-08T16:01:53.5200736Z ✔ 需要帮助后次日再测，保留等级、原锚点和成功历史 (0.280635ms)
+verify	Run npm test	2026-11-08T16:01:53.5205733Z ✔ 未完成核心课的错题修复不虚构首次学习日期 (1.166594ms)
+verify	Run npm test	2026-11-08T16:01:53.6209735Z ✔ 折叠与旋转的每一帧都完整入镜，不改变数学对象与面编号 (104.072969ms)
+verify	Run npm test	2026-11-08T16:01:53.6240971Z ✔ 闭合盒子清晰放大，斜视可见三种面方向和不同明暗，正面照片保留正投影 (0.336892ms)
+verify	Run npm test	2026-11-08T16:01:53.6241824Z ✔ 投影材质色保持合法范围，光照不改变质量、长度或数量模型 (0.328897ms)
+verify	Run npm test	2026-11-08T16:01:53.6242518Z ✔ 点阵换计数方向是刚性旋转，每一帧保持珠子间距且不坍缩为一条线 (0.70072ms)
+verify	Run npm test	2026-11-08T16:01:53.6284877Z ✔ 课程包包含基础与奥数，并且每题结构完整 (2.043166ms)
+verify	Run npm test	2026-11-08T16:01:53.6285623Z ✔ 课程前置关系没有循环，所有思想节点都能从入口到达 (0.751785ms)
+verify	Run npm test	2026-11-08T16:01:53.6286340Z ✔ 小学三至六年级课程包可按年级筛选并保持题目唯一 (0.664874ms)
+verify	Run npm test	2026-11-08T16:01:53.6286889Z ✔ 同一个作答请求只发一次奖励 (0.958156ms)
+verify	Run npm test	2026-11-08T16:01:53.6287394Z ✔ 六道分层练习后仍需复述，完成奖励和复习只结算一次 (0.696889ms)
+verify	Run npm test	2026-11-08T16:01:53.6287994Z ✔ 错误会建立复习记录，使用提示的当日订正不冒充间隔掌握 (0.286784ms)
+verify	Run npm test	2026-11-08T16:01:53.6288886Z ✔ 到期复习按不同日期推进且不能重复结算 (0.397227ms)
+verify	Run npm test	2026-11-08T16:01:53.6289567Z ✔ 购买扣分和发货保持一致，重复请求不再次扣分 (0.861558ms)
+verify	Run npm test	2026-11-08T16:01:53.6290106Z ✔ 导出校验能发现损坏与积分账目不一致 (2.933929ms)
+verify	Run npm test	2026-11-08T16:01:53.6290653Z ✔ 旧备份没有所选年级字段时会平滑迁移 (0.735698ms)
+verify	Run npm test	2026-11-08T16:01:53.6291714Z ✔ 导入失败不改动原进度，成功导入前自动备份 (11.598053ms)
+verify	Run npm test	2026-11-08T16:01:53.8042868Z ✔ 70课教学语义台账不遗漏教材、桥梁、静态课和撤教具小测入口 (73.520914ms)
+verify	Run npm test	2026-11-08T16:01:53.8051060Z ✔ 源核对状态不能假称新的浏览器验收、教学审批或Kevin掌握 (59.345997ms)
+verify	Run npm test	2026-11-08T16:01:54.1225866Z ✔ 课程或人工批注变化后，已归档机器台账和Markdown必须一起查新 (58.015146ms)
+verify	Run npm test	2026-11-08T16:01:54.1226962Z ✔ 台账拒绝脏工作树、过期指纹、失败证据和静态/操作类型错配 (191.175053ms)
+verify	Run npm test	2026-11-08T16:01:54.1227960Z ✔ 单章重测按自己的SHA回填，不把旧的全量证据冒充本次运行 (79.943249ms)
+verify	Run npm test	2026-11-08T16:01:54.1229689Z ✔ 新全量证据按课回填且保留初查历史，不借开发验证代填家长和孩子 (36.730048ms)
+verify	Run npm test	2026-11-08T16:01:54.4494485Z ✔ 题库专项修订只复用未改课堂的原SHA证据，题目审校或课堂变化均失效 (172.95408ms)
+verify	Run npm test	2026-11-08T16:01:54.4520381Z ✔ 章节证据按有效指纹选取：交换顺序、旧版本、失败及重复回放不遮蔽有效来源 (154.019057ms)
+verify	Run npm test	2026-11-08T16:01:54.4683429Z ✔ 35个教材教具的初态合法，存档按课程与模型校验，不接收越界或跨课状态 (4.906501ms)
+verify	Run npm test	2026-11-08T16:01:54.4684214Z ✔ 乘法进位与按位分配保持材料总数，未平均不能宣布完成 (0.285955ms)
+verify	Run npm test	2026-11-08T16:01:54.4684649Z ✔ 边长与整体转动不改变角，旋转单边改变分类 (0.552066ms)
+verify	Run npm test	2026-11-08T16:01:54.4685155Z ✔ 2至10等份均用精确公共刻度；改变折痕和重分组不改变蓝色长度 (0.331668ms)
+verify	Run npm test	2026-11-08T16:01:54.4685988Z ✔ 拼接内部公共边扣两次；剪块保持材料面积，重叠不可假装面积守恒 (0.502006ms)
+verify	Run npm test	2026-11-08T16:01:54.4686338Z ✔ 10和20只属于一个整数分钟分组，名单共有者只记一个身份 (0.683687ms)
+verify	Run npm test	2026-11-08T16:01:54.4686849Z ✔ 月历采用公历世纪规则；跨整点走针与小数换数位使用同一数量状态 (0.254977ms)
+verify	Run npm test	2026-11-08T16:01:54.4687176Z ✔ 新教具探索可随旧格式学习备份导出导入，不能伪造积分 (1.703359ms)
+verify	Run npm test	2026-11-08T16:01:54.4687583Z ✔ 发布必须逐ID批准，新卡即使TH1后缀也不会发布；公开结构无家长提示 (1.392565ms)
+verify	Run npm test	2026-11-08T16:01:54.4687945Z ✔ 17张卡各有4组已知条件一致的复习变式，公开题干不发送参考解释 (3.405678ms)
+verify	Run npm test	2026-11-08T16:01:54.4688335Z ✔ 家长更正保留历史、版本保护与幂等；有辅助不允许批成独立 (7.246934ms)
+verify	Run npm test	2026-11-08T16:01:54.4689003Z ✔ 从首答到审核到1/3/7/21天的4轮不同情境，未到期不得提前冒充复习 (8.395836ms)
+verify	Run npm test	2026-11-08T16:01:54.4689415Z ✔ 辅助订正下一次换新题，不重复当日题；暂缓不触发复习，误批可以更正 (3.010518ms)
+verify	Run npm test	2026-11-08T16:01:54.4689843Z ✔ 60张旧卡全部归属教材章；17章均有操作核心与一张可选迁移；43张明确暂缓 (4.380531ms)
+verify	Run npm test	2026-11-08T16:01:54.4690204Z ✔ 迁移保留真实首答、自查与最终解释，不把提示或提交当作答对和积分 (5.446435ms)
+verify	Run npm test	2026-11-08T16:01:54.4690546Z ✔ 帮助在首答前后分别记录；参考解答必须首答后按需取，不预先泄漏 (1.053049ms)
+verify	Run npm test	2026-11-08T16:01:54.4690897Z ✔ 思维卡拒绝过期页面、重复编号异义、无效备份，旧无思维卡备份兼容 (0.906395ms)
+verify	Run npm test	2026-11-08T16:01:54.4691281Z ✔ 同时取走相同盒子或砝码保持平衡，单边操作倾斜；多组参数一致 (2.153436ms)
+verify	Run npm test	2026-11-08T16:01:54.4691664Z ✔ 多视角最高数约束唯一确定三堆，正面单张照片不能排除后排高度 (5.882ms)
+verify	Run npm test	2026-11-08T16:01:54.4692033Z ✔ Venn四区每人只能一处、移动不复制；求出的四区验回三项已知总数 (1.45555ms)
+verify	Run npm test	2026-11-08T16:01:54.4692376Z ✔ 教具操作保留支架维度；撤销、刷新不清记录，也不产生掌握积分 (3.104822ms)
+verify	Run npm test	2026-11-08T16:01:54.4692722Z ✔ 长会话回执不复制全部历史；旧请求回放返回最新证据而不倒退版本 (32.435055ms)
+verify	Run npm test	2026-11-08T16:01:54.4693177Z ✔ two-ring comparison shares the chain endpoints and the two real metal ends (1.64125ms)
+verify	Run npm test	2026-11-08T16:01:54.4693773Z ✔ dragging the complete second ring changes only the virtual comparison (1.14085ms)
+verify	Run npm test	2026-11-08T16:01:54.4694330Z ✔ midpoint and adjacent states keep identical external ring dimensions (0.193937ms)
+verify	Run npm test	2026-11-08T16:01:54.4694867Z ✔ out-of-range gestures clamp without accumulating drift or changing the answer (3.56735ms)
+verify	Run npm test	2026-11-08T16:01:54.4695251Z ℹ tests 265
+verify	Run npm test	2026-11-08T16:01:54.4695475Z ℹ suites 0
+verify	Run npm test	2026-11-08T16:01:54.4695756Z ℹ pass 265
+verify	Run npm test	2026-11-08T16:01:54.4695982Z ℹ fail 0
+verify	Run npm test	2026-11-08T16:01:54.4696199Z ℹ cancelled 0
+verify	Run npm test	2026-11-08T16:01:54.4696528Z ℹ skipped 0
+verify	Run npm test	2026-11-08T16:01:54.4696743Z ℹ todo 0
+verify	Run npm test	2026-11-08T16:01:54.4697018Z ℹ duration_ms 3331.107795
+verify	Run npm run content:check	﻿2026-11-08T16:01:54.4828438Z ##[group]Run npm run content:check
+verify	Run npm run content:check	2026-11-08T16:01:54.4829554Z ^[[36;1mnpm run content:check^[[0m
+verify	Run npm run content:check	2026-11-08T16:01:54.4856487Z shell: /usr/bin/bash -e {0}
+verify	Run npm run content:check	2026-11-08T16:01:54.4856821Z ##[endgroup]
+verify	Run npm run content:check	2026-11-08T16:01:54.5557818Z 
+verify	Run npm run content:check	2026-11-08T16:01:54.5558538Z > kevin-math-lab@0.1.0 content:check
+verify	Run npm run content:check	2026-11-08T16:01:54.5559433Z > node scripts/check-pilot.mjs
+verify	Run npm run content:check	2026-11-08T16:01:54.5559655Z 
+verify	Run npm run content:check	2026-11-08T16:01:54.6053943Z 样板内容通过：70 课，849 道任务；全量蓝图 59 单元仍标记为 planned。
+verify	Verify detective answer boundary and immutable delivery blobs	﻿2026-11-08T16:01:54.6150441Z ##[group]Run node scripts/verify-detective-v2-boundaries.mjs
+verify	Verify detective answer boundary and immutable delivery blobs	2026-11-08T16:01:54.6150846Z ^[[36;1mnode scripts/verify-detective-v2-boundaries.mjs^[[0m
+verify	Verify detective answer boundary and immutable delivery blobs	2026-11-08T16:01:54.6175376Z shell: /usr/bin/bash -e {0}
+verify	Verify detective answer boundary and immutable delivery blobs	2026-11-08T16:01:54.6175733Z ##[endgroup]
+verify	Verify detective answer boundary and immutable delivery blobs	2026-11-08T16:01:54.6518299Z {"passed":true,"clientChunks":13,"blobs":4}
+verify	Install browser for locked Playwright version	﻿2026-11-08T16:01:54.6569353Z ##[group]Run npx playwright install --with-deps chromium
+verify	Install browser for locked Playwright version	2026-11-08T16:01:54.6569746Z ^[[36;1mnpx playwright install --with-deps chromium^[[0m
+verify	Install browser for locked Playwright version	2026-11-08T16:01:54.6589311Z shell: /usr/bin/bash -e {0}
+verify	Install browser for locked Playwright version	2026-11-08T16:01:54.6589646Z ##[endgroup]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.1634965Z Installing dependencies...
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.1696106Z Switching to root user to install dependencies...
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.2910981Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.3307295Z Get:6 https://packages.microsoft.com/ubuntu/26.04/prod resolute InRelease [3964 B]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.3540166Z Hit:2 http://azure.archive.ubuntu.com/ubuntu resolute InRelease
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.3555519Z Get:3 http://azure.archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.3674589Z Get:4 http://azure.archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.3775864Z Get:5 http://azure.archive.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.4118197Z Get:7 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main arm64 Packages [136 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.4214725Z Get:8 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main amd64 Packages [149 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.4370693Z Get:9 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 Packages [845 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.4428267Z Get:10 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [192 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.4443392Z Get:11 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe amd64v3 Packages [377 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.4479121Z Get:12 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [118 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.4480335Z Get:13 http://azure.archive.ubuntu.com/ubuntu resolute-updates/restricted amd64v3 Packages [573 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.4505243Z Get:14 http://azure.archive.ubuntu.com/ubuntu resolute-updates/restricted Translation-en [119 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.4518082Z Get:15 http://azure.archive.ubuntu.com/ubuntu resolute-security/main amd64v3 Packages [657 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.4551578Z Get:16 http://azure.archive.ubuntu.com/ubuntu resolute-security/main Translation-en [148 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.4564771Z Get:17 http://azure.archive.ubuntu.com/ubuntu resolute-security/universe amd64v3 Packages [208 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.4582766Z Get:18 http://azure.archive.ubuntu.com/ubuntu resolute-security/universe Translation-en [68.7 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.5000856Z Get:19 http://azure.archive.ubuntu.com/ubuntu resolute-security/restricted amd64v3 Packages [529 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:01:55.5025591Z Get:20 http://azure.archive.ubuntu.com/ubuntu resolute-security/restricted Translation-en [108 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:02:00.4471361Z Fetched 4644 kB in 0s (11.8 MB/s)
+verify	Install browser for locked Playwright version	2026-11-08T16:02:00.9304508Z Reading package lists...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:00.9502951Z Reading package lists...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0389314Z Building dependency tree...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0396736Z Reading state information...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0648213Z libasound2t64 is already the newest version (1.2.15.3-1ubuntu1.1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0649304Z libasound2t64 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0649719Z libatk-bridge2.0-0t64 is already the newest version (2.60.4-0ubuntu0.1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0650170Z libatk-bridge2.0-0t64 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0650529Z libatk1.0-0t64 is already the newest version (2.60.4-0ubuntu0.1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0650887Z libatk1.0-0t64 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0651245Z libatspi2.0-0t64 is already the newest version (2.60.4-0ubuntu0.1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0651586Z libatspi2.0-0t64 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0651942Z libcairo2 is already the newest version (1.18.4-3).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0652274Z libcairo2 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0652642Z libcups2t64 is already the newest version (2.4.16-1ubuntu1.3).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0652975Z libcups2t64 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0653308Z libdbus-1-3 is already the newest version (1.16.2-2ubuntu4).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0653860Z libdbus-1-3 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0654188Z libdrm2 is already the newest version (2.4.131-1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0654514Z libdrm2 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0654833Z libgbm1 is already the newest version (26.0.8-1ubuntu0.3).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0655147Z libgbm1 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0655512Z libglib2.0-0t64 is already the newest version (2.88.0-1ubuntu0.1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0655865Z libglib2.0-0t64 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0656267Z libnspr4 is already the newest version (2:4.38.2-1ubuntu1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0656586Z libnspr4 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0656913Z libnss3 is already the newest version (2:3.120-1ubuntu2.2).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0657257Z libnss3 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0657582Z libpango-1.0-0 is already the newest version (1.57.0-1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0657944Z libpango-1.0-0 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0658293Z libx11-6 is already the newest version (2:1.8.13-1ubuntu0.1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0658836Z libx11-6 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0659213Z libxcb1 is already the newest version (1.17.0-2ubuntu1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0659531Z libxcb1 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0659915Z libxcomposite1 is already the newest version (1:0.4.6-1build1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0660255Z libxcomposite1 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0660598Z libxdamage1 is already the newest version (1:1.1.7-1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0660917Z libxdamage1 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0661243Z libxext6 is already the newest version (2:1.3.4-1build3).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0661562Z libxext6 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0661913Z libxfixes3 is already the newest version (1:6.0.0-2build2).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0662251Z libxfixes3 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0662582Z libxkbcommon0 is already the newest version (1.13.1-1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0662904Z libxkbcommon0 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0663247Z libxrandr2 is already the newest version (2:1.5.4-1build1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0663592Z libxrandr2 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0663931Z xvfb is already the newest version (2:21.1.22-1ubuntu1.3).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0664332Z fonts-noto-color-emoji is already the newest version (2.051-1build1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0664740Z libfontconfig1 is already the newest version (2.17.1-3ubuntu1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0665082Z libfontconfig1 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0665441Z libfreetype6 is already the newest version (2.14.2+dfsg-1ubuntu0.2).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0665838Z libfreetype6 set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0666199Z fonts-liberation is already the newest version (1:2.1.5-3build1).
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0666549Z fonts-liberation set to manually installed.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.0973298Z Solving dependencies...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.1722865Z The following additional packages will be installed:
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.1723712Z   xfonts-encodings xfonts-utils
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.1729575Z Recommended packages:
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.1729933Z   fonts-ipafont-mincho fonts-tlwg-loma
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.1961119Z The following NEW packages will be installed:
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.1961594Z   fonts-freefont-ttf fonts-ipafont-gothic fonts-tlwg-loma-otf fonts-unifont
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.1966732Z   fonts-wqy-zenhei xfonts-cyrillic xfonts-encodings xfonts-scalable
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.1967166Z   xfonts-utils
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.2123013Z 0 upgraded, 9 newly installed, 0 to remove and 31 not upgraded.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.2123638Z Need to get 21.9 MB of archives.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.2124142Z After this operation, 80.2 MB of additional disk space will be used.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.2124729Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.2916729Z Get:2 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 fonts-ipafont-gothic all 00303-23ubuntu1 [3703 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.4545780Z Get:3 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 fonts-freefont-ttf all 20211204+svn4273-4build1 [5656 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.5498377Z Get:4 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 fonts-tlwg-loma-otf all 1:0.7.3-1build1 [106 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.5818581Z Get:5 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 fonts-unifont all 1:16.0.04-1build1 [3169 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.6430758Z Get:6 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 fonts-wqy-zenhei all 0.9.45-8build1 [7863 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.7376923Z Get:7 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 xfonts-encodings all 1:1.0.5-0ubuntu3 [576 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.7679197Z Get:8 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 xfonts-utils amd64 1:7.7+7build1 [97.3 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.7960926Z Get:9 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 xfonts-cyrillic all 1:1.0.5+nmu1build1 [384 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:02:01.8259810Z Get:10 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 xfonts-scalable all 1:1.0.3-1.3build1 [304 kB]
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.3281551Z Fetched 21.9 MB in 1s (35.1 MB/s)
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.4084038Z Selecting previously unselected package fonts-ipafont-gothic.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.4906849Z (Reading database ... 
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.4907364Z (Reading database ... 5%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.4907730Z (Reading database ... 10%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.4908038Z (Reading database ... 15%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.4908349Z (Reading database ... 20%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.4908859Z (Reading database ... 25%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.4909147Z (Reading database ... 30%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.4909418Z (Reading database ... 35%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.4909667Z (Reading database ... 40%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.4909912Z (Reading database ... 45%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.4910148Z (Reading database ... 50%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:02.8890454Z (Reading database ... 55%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:03.2415961Z (Reading database ... 60%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:03.5062638Z (Reading database ... 65%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:03.8303935Z (Reading database ... 70%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:04.0774147Z (Reading database ... 75%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:04.6730553Z (Reading database ... 80%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:05.4809163Z (Reading database ... 85%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:06.4372815Z (Reading database ... 90%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.1850632Z (Reading database ... 95%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.1851418Z (Reading database ... 100%
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.1851794Z (Reading database ... 213197 files and directories currently installed.)
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.1895846Z Preparing to unpack .../0-fonts-ipafont-gothic_00303-23ubuntu1_all.deb ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.2059864Z Unpacking fonts-ipafont-gothic (00303-23ubuntu1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.3385587Z Selecting previously unselected package fonts-freefont-ttf.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.3487953Z Preparing to unpack .../1-fonts-freefont-ttf_20211204+svn4273-4build1_all.deb ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.3498987Z Unpacking fonts-freefont-ttf (20211204+svn4273-4build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.4791747Z Selecting previously unselected package fonts-tlwg-loma-otf.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.4892097Z Preparing to unpack .../2-fonts-tlwg-loma-otf_1%3a0.7.3-1build1_all.deb ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.4904173Z Unpacking fonts-tlwg-loma-otf (1:0.7.3-1build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.5094119Z Selecting previously unselected package fonts-unifont.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.5196539Z Preparing to unpack .../3-fonts-unifont_1%3a16.0.04-1build1_all.deb ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.5207533Z Unpacking fonts-unifont (1:16.0.04-1build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.7428110Z Selecting previously unselected package fonts-wqy-zenhei.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.7532498Z Preparing to unpack .../4-fonts-wqy-zenhei_0.9.45-8build1_all.deb ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.7636825Z Unpacking fonts-wqy-zenhei (0.9.45-8build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.9321494Z Selecting previously unselected package xfonts-encodings.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.9425745Z Preparing to unpack .../5-xfonts-encodings_1%3a1.0.5-0ubuntu3_all.deb ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.9438981Z Unpacking xfonts-encodings (1:1.0.5-0ubuntu3) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.9753628Z Selecting previously unselected package xfonts-utils.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.9854423Z Preparing to unpack .../6-xfonts-utils_1%3a7.7+7build1_amd64v3.deb ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:07.9864267Z Unpacking xfonts-utils (1:7.7+7build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.0508586Z Selecting previously unselected package xfonts-cyrillic.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.0603282Z Preparing to unpack .../7-xfonts-cyrillic_1%3a1.0.5+nmu1build1_all.deb ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.0614593Z Unpacking xfonts-cyrillic (1:1.0.5+nmu1build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.0987660Z Selecting previously unselected package xfonts-scalable.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.1090685Z Preparing to unpack .../8-xfonts-scalable_1%3a1.0.3-1.3build1_all.deb ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.1103987Z Unpacking xfonts-scalable (1:1.0.3-1.3build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.1786247Z Setting up fonts-wqy-zenhei (0.9.45-8build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.1939028Z Setting up fonts-freefont-ttf (20211204+svn4273-4build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.1970860Z Setting up fonts-tlwg-loma-otf (1:0.7.3-1build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.2002858Z Setting up xfonts-encodings (1:1.0.5-0ubuntu3) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.2038410Z Setting up fonts-ipafont-gothic (00303-23ubuntu1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.2102441Z update-alternatives: using /usr/share/fonts/opentype/ipafont-gothic/ipag.ttf to provide /usr/share/fonts/truetype/fonts-japanese-gothic.ttf (fonts-japanese-gothic.ttf) in auto mode
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.2126523Z Setting up fonts-unifont (1:16.0.04-1build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.2161587Z Setting up xfonts-utils (1:7.7+7build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.2220841Z Setting up xfonts-cyrillic (1:1.0.5+nmu1build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.2922288Z Setting up xfonts-scalable (1:1.0.3-1.3build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.3215714Z Processing triggers for man-db (2.13.1-1build1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.3291624Z Not building database; man-db/auto-update is not 'true'.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:08.3309743Z Processing triggers for fontconfig (2.17.1-3ubuntu1) ...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6829947Z 
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6830887Z Running kernel seems to be up-to-date.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6831414Z 
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6831565Z Restarting services...
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6892688Z 
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6893203Z Service restarts being deferred:
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6896144Z  systemctl restart hosted-compute-agent.service
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6896438Z 
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6896630Z No containers need to be restarted.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6896850Z 
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6897070Z No user sessions are running outdated binaries.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6897356Z 
+verify	Install browser for locked Playwright version	2026-11-08T16:02:09.6900058Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+verify	Install browser for locked Playwright version	2026-11-08T16:02:10.3939261Z Downloading Chrome for Testing 156.0.8078.4 (playwright chromium v1248) from https://cdn.playwright.dev/builds/cft/156.0.8078.4/linux64/chrome-linux64.zip
+verify	Install browser for locked Playwright version	2026-11-08T16:02:10.7627708Z |                                                                                |   0% of 191.1 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:11.0623584Z |■■■■■■■■                                                                        |  10% of 191.1 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:11.1149756Z |■■■■■■■■■■■■■■■■                                                                |  20% of 191.1 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:11.1777860Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 191.1 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:11.2264854Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 191.1 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:11.2667532Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 191.1 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:11.3654791Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 191.1 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:11.4203596Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 191.1 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:11.4727959Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 191.1 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:11.5139146Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 191.1 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:11.5710093Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 191.1 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.2167239Z Chrome for Testing 156.0.8078.4 (playwright chromium v1248) downloaded to /home/runner/.cache/ms-playwright/chromium-1248
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.2172106Z Downloading FFmpeg (playwright ffmpeg v1013) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1013/ffmpeg-linux.zip
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.5718385Z |                                                                                |   0% of 2.2 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.6181637Z |■■■■■■■■                                                                        |  10% of 2.2 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.6391458Z |■■■■■■■■■■■■■■■■                                                                |  20% of 2.2 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.6521015Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.2 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.6617120Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.2 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.6670436Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.2 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.6727677Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.2 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.6783139Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.2 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.6860301Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.2 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.6894684Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.2 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.6921443Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.2 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.7409893Z FFmpeg (playwright ffmpeg v1013) downloaded to /home/runner/.cache/ms-playwright/ffmpeg-1013
+verify	Install browser for locked Playwright version	2026-11-08T16:02:14.7412237Z Downloading Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) from https://cdn.playwright.dev/builds/cft/156.0.8078.4/linux64/chrome-headless-shell-linux64.zip
+verify	Install browser for locked Playwright version	2026-11-08T16:02:15.1101391Z |                                                                                |   0% of 120 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:15.3699768Z |■■■■■■■■                                                                        |  10% of 120 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:15.4283570Z |■■■■■■■■■■■■■■■■                                                                |  20% of 120 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:15.4636145Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 120 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:15.5260545Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 120 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:15.5560117Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 120 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:15.5888407Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 120 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:15.6354348Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 120 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:15.6635868Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 120 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:15.6910332Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 120 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:15.7376499Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 120 MiB
+verify	Install browser for locked Playwright version	2026-11-08T16:02:17.8275881Z Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) downloaded to /home/runner/.cache/ms-playwright/chromium_headless_shell-1248
+verify	Critical browser regression (isolated learner data)	﻿2026-11-08T16:02:17.8580979Z ##[group]Run npm run test:browser:ci
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:02:17.8581372Z ^[[36;1mnpm run test:browser:ci^[[0m
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:02:17.8610984Z shell: /usr/bin/bash -e {0}
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:02:17.8611303Z env:
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:02:17.8611597Z   AUDIT_PR_HEAD_SHA: 03dddce275b50c813a88d86f600003018dba4f2b
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:02:17.8612026Z ##[endgroup]
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:02:17.9424738Z 
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:02:17.9425111Z > kevin-math-lab@0.1.0 test:browser:ci
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:02:17.9425611Z > node scripts/run-browser-ci.mjs
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:02:17.9425783Z 
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:02:41.7939731Z verify-coding-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:02:56.3411418Z verify-detective-evidence-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:03:18.4631044Z verify-detective-v2-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:04:09.5909286Z verify-remaining-visuals-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:04:14.2822482Z verify-two-ring-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:04:40.3771170Z verify-chain-growth-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:04:51.5478475Z verify-clarity-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:04:56.5301515Z verify-detective-audit-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:05:02.2192514Z verify-detective-inbox-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:05:13.8948534Z verify-detective-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:05:22.4743214Z verify-detective-recovery-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:05:46.4181804Z verify-thinking-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:05:54.6799813Z verify-division-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:06:41.4458013Z verify-core-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:06:56.1537803Z verify-save-stress-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:07:05.5947573Z verify-thinking-tools-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:07:25.3220529Z verify-evidence-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:07:34.5160989Z verify-accessibility-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:08:07.6434564Z verify-variants-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:10:42.3292487Z verify-template-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:11:38.9773099Z verify-semantic-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:11:40.9140545Z Desktop mathematical path G3-U01-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:11:44.5737060Z Desktop mathematical path G3-U01-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:11:48.1373910Z Desktop mathematical path G3-U01-B03
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:11:51.5881696Z Desktop mathematical path G3-U02-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:11:55.1721694Z Desktop mathematical path G3-U02-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:11:58.4387636Z Desktop mathematical path G3-U02-B03
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:02.6257951Z Desktop mathematical path G3-U02-B04
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:06.0049791Z Desktop mathematical path G3-U02-B05
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:09.7709804Z Desktop mathematical path G3-U02-E01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:13.5053039Z Desktop mathematical path G3-U02-E03
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:16.7800533Z Desktop mathematical path G3-U02-E02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:19.9357245Z Desktop mathematical path G3-U02-E04
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:23.7373641Z Desktop mathematical path G3-U02-E05
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:27.4521729Z Desktop mathematical path G3-U02-O01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:31.0352496Z Desktop mathematical path G3-U02-O02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:34.6203307Z Desktop mathematical path G3-U03-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:38.5672157Z Desktop mathematical path G3-U03-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:41.7189829Z Desktop mathematical path G3-UP01-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:45.1848215Z Desktop mathematical path G3-UP01-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:48.8189700Z Desktop mathematical path G3-U04-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:52.8989483Z Desktop mathematical path G3-U04-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:12:55.6178385Z Desktop mathematical path G3-U04-B03
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:00.1813569Z Desktop mathematical path G3-U04-B04
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:05.3682500Z Desktop mathematical path G3-U04-B05
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:08.5503719Z Desktop mathematical path G3-UP02-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:11.7667420Z Desktop mathematical path G3-U05-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:13.8838395Z Desktop mathematical path G3-U05-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:16.8177931Z Desktop mathematical path G3-U05-B03
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:20.1494962Z Desktop mathematical path G3-U06-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:23.5310711Z Desktop mathematical path G3-U06-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:26.3966262Z Desktop mathematical path G3-U06-B03
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:30.6635744Z Desktop mathematical path G3-U06-B04
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:34.6627619Z Desktop mathematical path G3-U06-B05
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:38.2141678Z Desktop mathematical path G3-U06-E01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:41.4788577Z Desktop mathematical path G3-U07-R01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:43.9308775Z Desktop mathematical path G3-U07-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:47.6162822Z Desktop mathematical path G3-L01-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:50.3462200Z Desktop mathematical path G3-L01-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:53.4477404Z Desktop mathematical path G3-L02-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:13:57.0138306Z Desktop mathematical path G3-L02-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:01.0286034Z Desktop mathematical path G3-L02-B03
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:05.7983063Z Desktop mathematical path G3-L02-B04
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:09.2769594Z Desktop mathematical path G3-L02-B05
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:13.4640150Z Desktop mathematical path G3-L02-B06
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:16.8457553Z Desktop mathematical path G3-L03-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:19.2985419Z Desktop mathematical path G3-L03-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:22.4778470Z Desktop mathematical path G3-L03-E01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:25.8286106Z Desktop mathematical path G3-L04-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:28.3293617Z Desktop mathematical path G3-L04-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:32.3441980Z Desktop mathematical path G3-L04-B03
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:35.6941497Z Desktop mathematical path G3-L05-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:40.0607063Z Desktop mathematical path G3-L05-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:43.4459837Z Desktop mathematical path G3-LP01-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:46.2100395Z Desktop mathematical path G3-LP01-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:49.6105239Z Desktop mathematical path G3-LP01-E01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:52.8774818Z Desktop mathematical path G3-L06-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:56.1259964Z Desktop mathematical path G3-L06-B02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:14:59.3270541Z Desktop mathematical path G3-L06-B03
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:01.7423151Z Desktop mathematical path G3-L07-R01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:04.1934945Z Desktop mathematical path G3-L07-B01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:08.3091817Z Desktop mathematical path G3-U03-E01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:11.6416851Z Desktop mathematical path G3-U03-E02
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:15.3416260Z Desktop mathematical path G3-U03-O01
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:19.0580535Z Desktop mathematical path numbers.fractions.meaning
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:22.1926830Z Desktop mathematical path geometry.area.perimeter
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:26.9257893Z Desktop mathematical path algebra.substitution.intro
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:30.0596001Z Desktop mathematical path algebra.balance.intro
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:32.7575085Z Desktop mathematical path numbers.quantity.intro
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:36.0265251Z Desktop mathematical path numbers.addition.meaning
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:39.1244385Z Desktop mathematical path numbers.subtraction.meaning
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:15:42.3937771Z verify-desktop-semantic-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:18:12.8727618Z verify-desktop-zoom-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:18:23.1691329Z verify-final-tasks-browser: passed
+verify	Critical browser regression (isolated learner data)	2026-11-08T16:18:31.7130508Z verify-formal-review-browser: passed
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	﻿2026-11-08T16:18:33.4733780Z ##[group]Run git fetch --no-tags --depth=1 origin 1d9c68197449e45dd273978f30fa3844bc4f562e
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:33.4734611Z ^[[36;1mgit fetch --no-tags --depth=1 origin 1d9c68197449e45dd273978f30fa3844bc4f562e^[[0m
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:33.4735246Z ^[[36;1mgit fetch --no-tags --depth=1 origin c6e6eaedca53c0976af3ab6e187e2980e4e94430^[[0m
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:33.4735932Z ^[[36;1mgit fetch --no-tags --depth=1 origin a7c05aaa8d9c5eabae4f3453807f830da1cbf279^[[0m
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:33.4736610Z ^[[36;1mgit fetch --no-tags --depth=1 origin 0d7fdf3e606eeae53ccbcc57f9c1887433a074c3^[[0m
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:33.4737186Z ^[[36;1mnpm run test:detective:upgrade^[[0m
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:33.4737608Z ^[[36;1mnode scripts/verify-detective-v2-upgrade.mjs^[[0m
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:33.4738110Z ^[[36;1mnode scripts/verify-detective-evidence-upgrade.mjs^[[0m
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:33.4774819Z shell: /usr/bin/bash -e {0}
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:33.4775315Z env:
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:33.4775730Z   AUDIT_PR_HEAD_SHA: 03dddce275b50c813a88d86f600003018dba4f2b
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:33.4776177Z ##[endgroup]
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:34.3356925Z From https://github.com/lovestream/math-learning
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:34.3357441Z  * branch            1d9c68197449e45dd273978f30fa3844bc4f562e -> FETCH_HEAD
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:35.1506388Z From https://github.com/lovestream/math-learning
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:35.1506967Z  * branch            c6e6eaedca53c0976af3ab6e187e2980e4e94430 -> FETCH_HEAD
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:35.6036169Z From https://github.com/lovestream/math-learning
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:35.6036760Z  * branch            a7c05aaa8d9c5eabae4f3453807f830da1cbf279 -> FETCH_HEAD
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:36.0437379Z From https://github.com/lovestream/math-learning
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:36.0437964Z  * branch            0d7fdf3e606eeae53ccbcc57f9c1887433a074c3 -> FETCH_HEAD
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:36.1174477Z 
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:36.1175116Z > kevin-math-lab@0.1.0 test:detective:upgrade
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:36.1175610Z > node scripts/verify-detective-upgrade.mjs
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:36.1175838Z 
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:38.9712258Z Upgrade, restore, corruption refusal, six-bundle sync and old-program rollback: passed (synthetic data only)
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:39.2848227Z {"passed":true,"steps":3,"oldSha":"a7c05aaa8d9c5eabae4f3453807f830da1cbf279"}
+verify	Rehearse upgrade, backup restore and rollback (synthetic data only)	2026-11-08T16:18:39.4871417Z {"passed":true,"baseline":"0d7fdf3e606eeae53ccbcc57f9c1887433a074c3","steps":3}
+verify	Preserve browser summaries, logs, screenshots and traces	﻿2026-11-08T16:18:39.5007315Z ##[group]Run actions/upload-artifact@v4
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.5007601Z with:
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.5007860Z   name: browser-audit-03dddce275b50c813a88d86f600003018dba4f2b
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.5008180Z   path: output/playwright/v2-audit/
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.5008554Z   retention-days: 14
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.5009019Z   if-no-files-found: warn
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.5009226Z   compression-level: 6
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.5009414Z   overwrite: false
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.5009603Z   include-hidden-files: false
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.5009805Z ##[endgroup]
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.6359311Z (node:4854) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.6360060Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.7580463Z With the provided path, there will be 1244 files uploaded
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.7581341Z Artifact name is valid!
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:39.7581857Z Root directory input is valid!
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:40.0578003Z Beginning upload of artifact content to blob storage
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:40.3701401Z (node:4854) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:40.8771124Z Uploaded bytes 8388608
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:41.0946933Z Uploaded bytes 16777216
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:41.1479943Z Uploaded bytes 25165824
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:41.3825175Z Uploaded bytes 33554432
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:41.6710575Z Uploaded bytes 41943040
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:41.9124828Z Uploaded bytes 50331648
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:42.1950202Z Uploaded bytes 58720256
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:42.5338045Z Uploaded bytes 67108864
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:42.7560203Z Uploaded bytes 75497472
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:42.9973459Z Uploaded bytes 83886080
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:43.2920603Z Uploaded bytes 92274688
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:43.5762739Z Uploaded bytes 100663296
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:43.7712256Z Uploaded bytes 109051904
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:44.0230566Z Uploaded bytes 117440512
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:44.3049476Z Uploaded bytes 125829120
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:44.5909862Z Uploaded bytes 134217728
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:44.8841185Z Uploaded bytes 142606336
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:45.0765996Z Uploaded bytes 150994944
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:45.3991269Z Uploaded bytes 159383552
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:45.6438196Z Uploaded bytes 167772160
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:45.8570966Z Uploaded bytes 176160768
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:46.1311309Z Uploaded bytes 184549376
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:46.3208103Z Uploaded bytes 192937984
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:46.5886929Z Uploaded bytes 201326592
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:46.7947654Z Uploaded bytes 209715200
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:47.0618980Z Uploaded bytes 218103808
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:47.2160836Z Uploaded bytes 226492416
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:47.4750652Z Uploaded bytes 234881024
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:47.6842447Z Uploaded bytes 243269632
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:47.9091355Z Uploaded bytes 251658240
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:48.1711670Z Uploaded bytes 260046848
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:48.3544347Z Uploaded bytes 268435456
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:48.6405490Z Uploaded bytes 276824064
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:48.8121046Z Uploaded bytes 285212672
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:49.0267475Z Uploaded bytes 293601280
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:49.3210045Z Uploaded bytes 301989888
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:49.6331420Z Uploaded bytes 310378496
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:49.7402470Z Uploaded bytes 318767104
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:49.9309989Z Uploaded bytes 327155712
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:50.1697593Z Uploaded bytes 335544320
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:50.3894968Z Uploaded bytes 343932928
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:50.6100848Z Uploaded bytes 352321536
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:50.8212383Z Uploaded bytes 360710144
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:51.0857955Z Uploaded bytes 369098752
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:51.2451530Z Uploaded bytes 377487360
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:51.4613640Z Uploaded bytes 385875968
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:51.7035743Z Uploaded bytes 394264576
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:51.9380318Z Uploaded bytes 402653184
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:52.1202324Z Uploaded bytes 411041792
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:52.3610479Z Uploaded bytes 419430400
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:52.5648755Z Uploaded bytes 427819008
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:52.8273462Z Uploaded bytes 436207616
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:53.0902745Z Uploaded bytes 444596224
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:53.3333025Z Uploaded bytes 452984832
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:53.5350610Z Uploaded bytes 461373440
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:53.7391504Z Uploaded bytes 469762048
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:53.9461693Z Uploaded bytes 478150656
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:54.1929181Z Uploaded bytes 486539264
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:54.4078993Z Uploaded bytes 494927872
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:54.6113199Z Uploaded bytes 503316480
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:54.8509225Z Uploaded bytes 511705088
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:55.1152446Z Uploaded bytes 520093696
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:55.3385108Z Uploaded bytes 528482304
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:55.5500202Z Uploaded bytes 536870912
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:55.8534723Z Uploaded bytes 545259520
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:56.0956495Z Uploaded bytes 553648128
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:56.3203123Z Uploaded bytes 562036736
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:56.5833636Z Uploaded bytes 570425344
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:56.7759117Z Uploaded bytes 578813952
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:57.0513044Z Uploaded bytes 587202560
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:57.2554515Z Uploaded bytes 595591168
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:57.4657405Z Uploaded bytes 603979776
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:57.7659064Z Uploaded bytes 612368384
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:58.0016890Z Uploaded bytes 620756992
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:58.1935438Z Uploaded bytes 629145600
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:58.3995139Z Uploaded bytes 637534208
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:58.6752589Z Uploaded bytes 645922816
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:58.8970283Z Uploaded bytes 654311424
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:59.1476447Z Uploaded bytes 662700032
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:59.2753026Z Uploaded bytes 666979656
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:59.3180204Z Finished uploading artifact content to blob storage!
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:59.3182206Z SHA256 digest of uploaded artifact zip is e3425a244b242425aced8796cc7a3f08b7729d6a2ae86a3e87fb7a639292f35c
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:59.3183931Z Finalizing artifact upload
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:59.7714563Z Artifact browser-audit-03dddce275b50c813a88d86f600003018dba4f2b.zip successfully finalized. Artifact ID 13624508805
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:59.7715391Z Artifact browser-audit-03dddce275b50c813a88d86f600003018dba4f2b has been successfully uploaded! Final size is 666979656 bytes. Artifact ID is 13624508805
+verify	Preserve browser summaries, logs, screenshots and traces	2026-11-08T16:18:59.7721430Z Artifact download URL: https://github.com/lovestream/math-learning/actions/runs/42497733112/artifacts/13624508805
+verify	Post Run actions/setup-node@v4	﻿2026-11-08T16:18:59.7974166Z Post job cleanup.
+verify	Post Run actions/setup-node@v4	2026-11-08T16:18:59.8948236Z (node:4875) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Post Run actions/setup-node@v4	2026-11-08T16:18:59.8949037Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Post Run actions/setup-node@v4	2026-11-08T16:18:59.9143965Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/math-learning/math-learning --files-from manifest.txt --use-compress-program zstdmt
+verify	Post Run actions/setup-node@v4	2026-11-08T16:19:00.1871156Z (node:4875) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+verify	Post Run actions/setup-node@v4	2026-11-08T16:19:00.7781436Z Sent 20888181 of 20888181 (100.0%), 33.4 MBs/sec
+verify	Post Run actions/setup-node@v4	2026-11-08T16:19:00.9776222Z Cache saved with the key: node-cache-Linux-x64-npm-f34fef80bada79915406b1853554e8243744d05de38baf67ee7fa88194b9b03f
+verify	Post Run actions/checkout@v4	﻿2026-11-08T16:19:00.9895727Z Post job cleanup.
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.0588347Z [command]/usr/bin/git version
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.0630379Z git version 2.56.0
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.0664627Z Temporarily overriding HOME='/home/runner/work/_temp/0b749d3a-b10f-40a5-bb6a-05402b11c07b' before making global git config changes
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.0665366Z Adding repository directory to the temporary git global config as a safe directory
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.0670797Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/math-learning/math-learning
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.0711713Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.0742718Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.0960778Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.0989874Z http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.0996570Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.1037476Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.1259080Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Post Run actions/checkout@v4	2026-11-08T16:19:01.1284128Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Complete job	﻿2026-11-08T16:19:01.1651033Z Cleaning up orphan processes
+verify	Complete job	2026-11-08T16:19:01.1923810Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

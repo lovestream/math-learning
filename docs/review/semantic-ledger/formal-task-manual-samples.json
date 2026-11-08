@@ -1,0 +1,1339 @@
+{
+  "boundary": "97道代理手工抽查，不能声称真实人工团队逐题审阅849题。保留来源题意/答案一致性，发布后内容变更使抽查失效。",
+  "rows": [
+    {
+      "unit": "G3-U01",
+      "lessonId": "G3-U01-B01",
+      "set": "core",
+      "id": "G3-U01-B01-P03",
+      "prompt": "人从盒子前面走到右面，盒子没有动。变的是物体还是观察方向？",
+      "expected": "c0",
+      "solution": "观察方向。不能把视图变化说成物体变形。",
+      "options": [
+        {
+          "id": "c1",
+          "text": "物体形状变了"
+        },
+        {
+          "id": "c2",
+          "text": "物体和观察方向都没变"
+        },
+        {
+          "id": "c0",
+          "text": "观察方向变了，物体没动"
+        }
+      ],
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "固定物体与观察方向、遮挡和无标记球的反例一致；不能从同物体推出同照片。"
+    },
+    {
+      "unit": "G3-U01",
+      "lessonId": "G3-U01-B01",
+      "set": "transfer",
+      "id": "G3-U01-B01-P05",
+      "prompt": "要让没见过玩具车的人了解车头和两侧，拍一张车头照够吗？",
+      "expected": "c0",
+      "solution": "不够，可补两侧照片。一张照片未提供所有方向的信息。",
+      "options": [
+        {
+          "id": "c0",
+          "text": "不够，还需要分别拍两侧"
+        },
+        {
+          "id": "c1",
+          "text": "够，只需车头一张照片"
+        },
+        {
+          "id": "c2",
+          "text": "不用拍侧面，把车头照放大即可"
+        }
+      ],
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "固定物体与观察方向、遮挡和无标记球的反例一致；不能从同物体推出同照片。"
+    },
+    {
+      "unit": "G3-U01",
+      "lessonId": "G3-U01-B01",
+      "set": "challenge",
+      "id": "G3-U01-B01-P06",
+      "prompt": "一个球表面没有标记，从不同方向看都像圆。能仅靠轮廓判断相机方向吗？",
+      "solution": "不能。球的这些视图相同。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "固定物体与观察方向、遮挡和无标记球的反例一致；不能从同物体推出同照片。"
+    },
+    {
+      "unit": "G3-U01",
+      "lessonId": "G3-U01-B01",
+      "set": "review",
+      "id": "G3-U01-B01-P09",
+      "prompt": "同一个杯子的杯把朝右。小明从右边看，小红从左边看，两人看到的样子必须相同吗？",
+      "expected": "c0",
+      "solution": "不必须相同。从杯把一侧和另一侧观察，遮挡关系不同。",
+      "options": [
+        {
+          "id": "c1",
+          "text": "必须，同一个杯子就只有一种照片"
+        },
+        {
+          "id": "c2",
+          "text": "必须，把手在右边时从各处看都在右边"
+        },
+        {
+          "id": "c0",
+          "text": "不必须，杯把在不同方向可能被遮挡"
+        }
+      ],
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "固定物体与观察方向、遮挡和无标记球的反例一致；不能从同物体推出同照片。"
+    },
+    {
+      "unit": "G3-U02",
+      "lessonId": "G3-U02-B01",
+      "set": "core",
+      "id": "G3-U02-B01.c1",
+      "prompt": "车上原有28人，下去9人，又上来6人。现在有多少人？",
+      "expected": "25",
+      "solution": "28－9＋6＝19＋6＝25。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "逐步核算28−9＋6＝25、42−15＋7＝34、48÷8×3＝18；同级运算剩下的×2必须执行。"
+    },
+    {
+      "unit": "G3-U02",
+      "lessonId": "G3-U02-B01",
+      "set": "transfer",
+      "id": "G3-U02-B01.t1",
+      "prompt": "图书角有42本书，借走15本，又还回7本。现在有多少本？",
+      "expected": "34",
+      "solution": "42－15＋7＝34。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "逐步核算28−9＋6＝25、42−15＋7＝34、48÷8×3＝18；同级运算剩下的×2必须执行。"
+    },
+    {
+      "unit": "G3-U02",
+      "lessonId": "G3-U02-B01",
+      "set": "challenge",
+      "id": "G3-U02-B01.h1",
+      "prompt": "小宇算24÷6×2，算到4就写答案。漏了什么？",
+      "expected": "2",
+      "solution": "算式还有×2没有完成。",
+      "options": [
+        {
+          "id": "1",
+          "text": "没有漏，4就是答案"
+        },
+        {
+          "id": "2",
+          "text": "还要算4×2"
+        },
+        {
+          "id": "3",
+          "text": "应该先算6×2"
+        }
+      ],
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "逐步核算28−9＋6＝25、42−15＋7＝34、48÷8×3＝18；同级运算剩下的×2必须执行。"
+    },
+    {
+      "unit": "G3-U02",
+      "lessonId": "G3-U02-B01",
+      "set": "review",
+      "id": "G3-U02-D01",
+      "prompt": "48÷8×3等于多少？",
+      "expected": "18",
+      "solution": "48÷8×3＝6×3＝18。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "逐步核算28−9＋6＝25、42−15＋7＝34、48÷8×3＝18；同级运算剩下的×2必须执行。"
+    },
+    {
+      "unit": "G3-U03",
+      "lessonId": "G3-U03-B01",
+      "set": "core",
+      "id": "G3-U03-B01.c1",
+      "prompt": "6厘米等于多少毫米？",
+      "expected": "60",
+      "solution": "6×10＝60毫米。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "厘米毫米十倍换算，非零起点读数取差；11厘米5毫米−4厘米＝7厘米5毫米。"
+    },
+    {
+      "unit": "G3-U03",
+      "lessonId": "G3-U03-B01",
+      "set": "transfer",
+      "id": "G3-U03-B01.t1",
+      "prompt": "一支铅笔从直尺3厘米刻度放到14厘米刻度，长多少厘米？",
+      "expected": "11",
+      "solution": "14−3＝11厘米。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "厘米毫米十倍换算，非零起点读数取差；11厘米5毫米−4厘米＝7厘米5毫米。"
+    },
+    {
+      "unit": "G3-U03",
+      "lessonId": "G3-U03-B01",
+      "set": "challenge",
+      "id": "G3-U03-B01.h1",
+      "prompt": "一支断尺只剩4厘米到12厘米的刻度。用它测小棒，小棒两端正好对着4厘米和11厘米5毫米。小棒长几厘米几毫米？",
+      "fields": [
+        {
+          "key": "cm",
+          "label": "整厘米",
+          "expected": "7",
+          "unit": "厘米"
+        },
+        {
+          "key": "mm",
+          "label": "剩余毫米",
+          "expected": "5",
+          "unit": "毫米"
+        }
+      ],
+      "solution": "11厘米5毫米−4厘米＝7厘米5毫米。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "厘米毫米十倍换算，非零起点读数取差；11厘米5毫米−4厘米＝7厘米5毫米。"
+    },
+    {
+      "unit": "G3-U03",
+      "lessonId": "G3-U03-B01",
+      "set": "review",
+      "id": "G3-U03-B01.r1",
+      "prompt": "90毫米等于多少厘米？",
+      "expected": "9",
+      "solution": "90÷10＝9厘米。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "厘米毫米十倍换算，非零起点读数取差；11厘米5毫米−4厘米＝7厘米5毫米。"
+    },
+    {
+      "unit": "G3-UP01",
+      "lessonId": "G3-UP01-B01",
+      "set": "core",
+      "id": "G3-UP01-B01-P03",
+      "prompt": "500克的糖两包和1千克的米哪样重？",
+      "expected": "c0",
+      "solution": "一样重。两包共1000克。",
+      "options": [
+        {
+          "id": "c2",
+          "text": "米重，因为千克总比克重"
+        },
+        {
+          "id": "c0",
+          "text": "一样重，500＋500＝1000克＝1千克"
+        },
+        {
+          "id": "c1",
+          "text": "糖重，因为500比1大"
+        }
+      ],
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "500＋500克＝1千克；水＝380−120＝260克；3千克50克＝3050克；相同体积不保证质量。"
+    },
+    {
+      "unit": "G3-UP01",
+      "lessonId": "G3-UP01-B01",
+      "set": "transfer",
+      "id": "G3-UP01-B01-P05",
+      "prompt": "杯与水共380克，杯120克，水多少克？",
+      "expected": "260",
+      "solution": "260克。扣掉容器质量。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "500＋500克＝1千克；水＝380−120＝260克；3千克50克＝3050克；相同体积不保证质量。"
+    },
+    {
+      "unit": "G3-UP01",
+      "lessonId": "G3-UP01-B01",
+      "set": "challenge",
+      "id": "G3-UP01-B01-P06",
+      "prompt": "大小相同的木块和铁块一定一样重吗？",
+      "solution": "不一定。外形相同不能决定质量。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "500＋500克＝1千克；水＝380−120＝260克；3千克50克＝3050克；相同体积不保证质量。"
+    },
+    {
+      "unit": "G3-UP01",
+      "lessonId": "G3-UP01-B01",
+      "set": "review",
+      "id": "G3-UP01-B01-P09",
+      "prompt": "3千克50克一共多少克？",
+      "expected": "3050",
+      "solution": "3050克。3千克=3000克，再加50克。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "500＋500克＝1千克；水＝380−120＝260克；3千克50克＝3050克；相同体积不保证质量。"
+    },
+    {
+      "unit": "G3-U04",
+      "lessonId": "G3-U04-B01",
+      "set": "core",
+      "id": "G3-U04-B01-P03",
+      "prompt": "14×2拆成哪两部分？",
+      "solution": "10×2与4×2。按十位和个位分。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "14×2按十与一拆；21×4＝84；19×4＝80−4＝76；203×3＝609保持中间0位值。"
+    },
+    {
+      "unit": "G3-U04",
+      "lessonId": "G3-U04-B01",
+      "set": "transfer",
+      "id": "G3-U04-B01-P05",
+      "prompt": "4袋糖每袋21颗，共多少颗？",
+      "expected": "84",
+      "solution": "84颗。20×4+1×4。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "14×2按十与一拆；21×4＝84；19×4＝80−4＝76；203×3＝609保持中间0位值。"
+    },
+    {
+      "unit": "G3-U04",
+      "lessonId": "G3-U04-B01",
+      "set": "challenge",
+      "id": "G3-U04-B01-P06",
+      "prompt": "19×4怎样借20×4来算？",
+      "solution": "80−4=76。每组多算1，共多算4。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "14×2按十与一拆；21×4＝84；19×4＝80−4＝76；203×3＝609保持中间0位值。"
+    },
+    {
+      "unit": "G3-U04",
+      "lessonId": "G3-U04-B01",
+      "set": "review",
+      "id": "G3-U04-B01-P09",
+      "prompt": "计算203×3，并说明中间的0表示什么。",
+      "solution": "609；203表示2个百、0个十、3个一。分别乘3，得到6个百和9个一。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "14×2按十与一拆；21×4＝84；19×4＝80−4＝76；203×3＝609保持中间0位值。"
+    },
+    {
+      "unit": "G3-UP02",
+      "lessonId": "G3-UP02-B01",
+      "set": "core",
+      "id": "G3-UP02-B01-P03",
+      "prompt": "不同架子的第1层第1本都只编01，可能有什么问题？",
+      "solution": "号码重复。缺少架号和层号。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "编码描述位置而非数量；2×3×5＝30个位置；同规则仍须去重分配。"
+    },
+    {
+      "unit": "G3-UP02",
+      "lessonId": "G3-UP02-B01",
+      "set": "transfer",
+      "id": "G3-UP02-B01-P05",
+      "prompt": "2个柜，每柜3层，每层5格，可编多少唯一位置？",
+      "expected": "30",
+      "solution": "30个。2×3×5。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "编码描述位置而非数量；2×3×5＝30个位置；同规则仍须去重分配。"
+    },
+    {
+      "unit": "G3-UP02",
+      "lessonId": "G3-UP02-B01",
+      "set": "challenge",
+      "id": "G3-UP02-B01-P06",
+      "prompt": "两人独立按同规则给不同书编号，还必须核对什么？",
+      "solution": "是否用了同一位置或序号。规则相同不自动防止重复分配。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "编码描述位置而非数量；2×3×5＝30个位置；同规则仍须去重分配。"
+    },
+    {
+      "unit": "G3-UP02",
+      "lessonId": "G3-UP02-B01",
+      "set": "review",
+      "id": "G3-UP02-B01-P09",
+      "prompt": "书架编号A03中，03主要表示书有3本吗？",
+      "solution": "不是，通常表示位置或序号，具体按规则解释。编码中的数字不一定是数量。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "编码描述位置而非数量；2×3×5＝30个位置；同规则仍须去重分配。"
+    },
+    {
+      "unit": "G3-U05",
+      "lessonId": "G3-U05-B01",
+      "set": "core",
+      "id": "G3-U05-B01-P03",
+      "prompt": "把纸上的射线再画长，射线本身“变长”了吗？",
+      "solution": "不能这样比较。射线原本就无限延伸。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "射线无限延伸，有限绘图不代表长度；线段接合3＋5＝8；旋转保持长度。"
+    },
+    {
+      "unit": "G3-U05",
+      "lessonId": "G3-U05-B01",
+      "set": "transfer",
+      "id": "G3-U05-B01-P05",
+      "prompt": "怎样不读尺上的数字，把一段长度搬到另一条线上？",
+      "solution": "用圆规张口取原长，再在新线上截取。保持两脚距离。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "射线无限延伸，有限绘图不代表长度；线段接合3＋5＝8；旋转保持长度。"
+    },
+    {
+      "unit": "G3-U05",
+      "lessonId": "G3-U05-B01",
+      "set": "challenge",
+      "id": "G3-U05-B01-P06",
+      "prompt": "三点A、B、C在同一直线上，B在A、C之间，AB=3，BC=5，AC多长？",
+      "expected": "8",
+      "solution": "8。相邻线段合成整段。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "射线无限延伸，有限绘图不代表长度；线段接合3＋5＝8；旋转保持长度。"
+    },
+    {
+      "unit": "G3-U05",
+      "lessonId": "G3-U05-B01",
+      "set": "review",
+      "id": "G3-U05-B01-P09",
+      "prompt": "一条线段长6厘米，把它转一个方向再量，长度会因方向改变吗？",
+      "solution": "不会。转动没有拉伸或截短线段。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "射线无限延伸，有限绘图不代表长度；线段接合3＋5＝8；旋转保持长度。"
+    },
+    {
+      "unit": "G3-U06",
+      "lessonId": "G3-U06-B01",
+      "set": "core",
+      "id": "G3-U06-B01-P03",
+      "prompt": "一张纸剪成4块但大小不同，每块都能叫1/4吗？",
+      "solution": "不能。必须平均分。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "等分和同一整体条件明确；1/5、1/8正确；8与4厘米各一半分别4、2厘米。"
+    },
+    {
+      "unit": "G3-U06",
+      "lessonId": "G3-U06-B01",
+      "set": "transfer",
+      "id": "G3-U06-B01-P05",
+      "prompt": "把一米绳平均分5段，一段占原绳多少？",
+      "expected": "1/5",
+      "solution": "1/5。基准是原来一米绳。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "等分和同一整体条件明确；1/5、1/8正确；8与4厘米各一半分别4、2厘米。"
+    },
+    {
+      "unit": "G3-U06",
+      "lessonId": "G3-U06-B01",
+      "set": "challenge",
+      "id": "G3-U06-B01-P06",
+      "prompt": "两根绳子分别长8厘米和4厘米，各取一半，取下的长度相同吗？",
+      "solution": "不同，分别4厘米和2厘米。同一个分数对应的实际长度还取决于整体；给出明确长度，避免只说大小西瓜比较什么量不清楚。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "等分和同一整体条件明确；1/5、1/8正确；8与4厘米各一半分别4、2厘米。"
+    },
+    {
+      "unit": "G3-U06",
+      "lessonId": "G3-U06-B01",
+      "set": "review",
+      "id": "G3-U06-B01-P09",
+      "prompt": "同一张纸平均分成8份，取1份，用分数表示。",
+      "expected": "1/8",
+      "solution": "1/8。把整体平均分成8份后取一份。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "等分和同一整体条件明确；1/5、1/8正确；8与4厘米各一半分别4、2厘米。"
+    },
+    {
+      "unit": "G3-U07",
+      "lessonId": "G3-U07-R01",
+      "set": "core",
+      "id": "G3-U07-R01-P03",
+      "prompt": "“已有20，还要36份每份2张”写(36−20)×2对吗？",
+      "solution": "不对。36是份数，20是张数。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "份数与张数不能直接减；12×4÷6＝8，3×8＋6＝30；缺每份用量无法求总需求。"
+    },
+    {
+      "unit": "G3-U07",
+      "lessonId": "G3-U07-R01",
+      "set": "transfer",
+      "id": "G3-U07-R01-P05",
+      "prompt": "每袋12颗糖买4袋，平均分6人，每人多少？",
+      "expected": "8",
+      "solution": "8颗。12×4÷6。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "份数与张数不能直接减；12×4÷6＝8，3×8＋6＝30；缺每份用量无法求总需求。"
+    },
+    {
+      "unit": "G3-U07",
+      "lessonId": "G3-U07-R01",
+      "set": "challenge",
+      "id": "G3-U07-R01-P06",
+      "prompt": "题目只给“有36份礼物”，能算贴纸需求吗？",
+      "solution": "不能。还需每份贴纸数。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "份数与张数不能直接减；12×4÷6＝8，3×8＋6＝30；缺每份用量无法求总需求。"
+    },
+    {
+      "unit": "G3-U07",
+      "lessonId": "G3-U07-R01",
+      "set": "review",
+      "id": "G3-U07-R01-P09",
+      "prompt": "3盒每盒8元的彩笔和一本6元的本子，一共多少钱？",
+      "expected": "30",
+      "solution": "30元。先3×8=24，再加6。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "份数与张数不能直接减；12×4÷6＝8，3×8＋6＝30；缺每份用量无法求总需求。"
+    },
+    {
+      "unit": "G3-L01",
+      "lessonId": "G3-L01-B01",
+      "set": "core",
+      "id": "G3-L01-B01-P03",
+      "prompt": "非正方形长方形共有几条对称轴？",
+      "expected": "2",
+      "solution": "2条。只有两条中线。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "非正方形长方形只有2条对称轴；正方形还需检查对角线；对折切两层得到镜像。"
+    },
+    {
+      "unit": "G3-L01",
+      "lessonId": "G3-L01-B01",
+      "set": "transfer",
+      "id": "G3-L01-B01-P05",
+      "prompt": "剪对称窗花时，为什么先对折再剪一边？",
+      "solution": "展开后形成镜像对应。同一次剪切作用到两层。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "非正方形长方形只有2条对称轴；正方形还需检查对角线；对折切两层得到镜像。"
+    },
+    {
+      "unit": "G3-L01",
+      "lessonId": "G3-L01-B01",
+      "set": "challenge",
+      "id": "G3-L01-B01-P06",
+      "prompt": "正方形折纸只试过中线，就说只有2条对称轴，哪里不充分？",
+      "solution": "没有检查对角线。需要系统枚举候选。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "非正方形长方形只有2条对称轴；正方形还需检查对角线；对折切两层得到镜像。"
+    },
+    {
+      "unit": "G3-L01",
+      "lessonId": "G3-L01-B01",
+      "set": "review",
+      "id": "G3-L01-B01-P09",
+      "prompt": "一个长宽不相等的长方形有几条对称轴？",
+      "expected": "2",
+      "solution": "2条。连接两组对边中点的直线各一条；排除正方形有4条的情况。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "非正方形长方形只有2条对称轴；正方形还需检查对角线；对折切两层得到镜像。"
+    },
+    {
+      "unit": "G3-L02",
+      "lessonId": "G3-L02-B01",
+      "set": "core",
+      "id": "G3-L02-B01-P03",
+      "prompt": "84÷4怎样拆着算？",
+      "solution": "80÷4+4÷4=21。两部分都平分给同样4份。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "84÷4＝80÷4＋4÷4＝21；250÷5＝50；96÷4适合80＋16；420÷7＝60。"
+    },
+    {
+      "unit": "G3-L02",
+      "lessonId": "G3-L02-B01",
+      "set": "transfer",
+      "id": "G3-L02-B01-P05",
+      "prompt": "5人分250张纸，每人多少？",
+      "expected": "50",
+      "solution": "50张。25个十÷5。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "84÷4＝80÷4＋4÷4＝21；250÷5＝50；96÷4适合80＋16；420÷7＝60。"
+    },
+    {
+      "unit": "G3-L02",
+      "lessonId": "G3-L02-B01",
+      "set": "challenge",
+      "id": "G3-L02-B01-P06",
+      "prompt": "把96拆成90+6容易算96÷3；若除数是4，还一定方便吗？",
+      "solution": "不一定。90÷4不能整分，可拆80+16。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "84÷4＝80÷4＋4÷4＝21；250÷5＝50；96÷4适合80＋16；420÷7＝60。"
+    },
+    {
+      "unit": "G3-L02",
+      "lessonId": "G3-L02-B01",
+      "set": "review",
+      "id": "G3-L02-B01-P09",
+      "prompt": "计算420÷7。",
+      "expected": "60",
+      "solution": "60。42个十除以7是6个十。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "84÷4＝80÷4＋4÷4＝21；250÷5＝50；96÷4适合80＋16；420÷7＝60。"
+    },
+    {
+      "unit": "G3-L03",
+      "lessonId": "G3-L03-B01",
+      "set": "core",
+      "id": "G3-L03-B01-P03",
+      "prompt": "正方形斜着放就变成另一类了吗？",
+      "solution": "没有。边与角的关系没变。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "等长边不足以保证直角；转动不改变类别；活动接头菱形反例正确。"
+    },
+    {
+      "unit": "G3-L03",
+      "lessonId": "G3-L03-B01",
+      "set": "transfer",
+      "id": "G3-L03-B01-P05",
+      "prompt": "画长6厘米宽3厘米长方形，应检查什么？",
+      "solution": "对边长度与四个直角。只量边不够。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "等长边不足以保证直角；转动不改变类别；活动接头菱形反例正确。"
+    },
+    {
+      "unit": "G3-L03",
+      "lessonId": "G3-L03-B01",
+      "set": "challenge",
+      "id": "G3-L03-B01-P06",
+      "prompt": "用4根同样长的吸管首尾连成四边形，接头可活动。它一定是正方形吗？把它轻轻推斜后，哪些条件仍满足、哪个条件可能不满足？怎样才能确定它是正方形？",
+      "solution": "不一定；边仍全等，角未必为直角。还要检查四个角都是直角。吸管长度不变只能保证四边相等。活动接头改变夹角，推斜后可以是非正方形的菱形；四个直角与四边相等同时满足才是正方形。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "等长边不足以保证直角；转动不改变类别；活动接头菱形反例正确。"
+    },
+    {
+      "unit": "G3-L03",
+      "lessonId": "G3-L03-B01",
+      "set": "review",
+      "id": "G3-L03-B01-P09",
+      "prompt": "一个图形有4条直边首尾围合，就一定是长方形吗？",
+      "solution": "不一定。四边形还可能没有四个直角。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "等长边不足以保证直角；转动不改变类别；活动接头菱形反例正确。"
+    },
+    {
+      "unit": "G3-L04",
+      "lessonId": "G3-L04-B01",
+      "set": "core",
+      "id": "G3-L04-B01-P03",
+      "prompt": "甲用10块大砖，乙用12块小砖，就能说乙面积大吗？",
+      "solution": "不能。单位砖大小不同。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "面积须同一单位；覆盖与外圈区分；不重叠剪拼保持覆盖量；7单位格＝7平方厘米。"
+    },
+    {
+      "unit": "G3-L04",
+      "lessonId": "G3-L04-B01",
+      "set": "transfer",
+      "id": "G3-L04-B01-P05",
+      "prompt": "同一个桌面铺纸要估计面积，贴桌边防撞条要估计什么？",
+      "solution": "周长或需贴的边长。材料覆盖的位置不同。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "面积须同一单位；覆盖与外圈区分；不重叠剪拼保持覆盖量；7单位格＝7平方厘米。"
+    },
+    {
+      "unit": "G3-L04",
+      "lessonId": "G3-L04-B01",
+      "set": "challenge",
+      "id": "G3-L04-B01-P06",
+      "prompt": "把同一张纸剪成两块再拼好，没有空隙重叠，面积变吗？",
+      "solution": "不变。覆盖单位的总量守恒。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "面积须同一单位；覆盖与外圈区分；不重叠剪拼保持覆盖量；7单位格＝7平方厘米。"
+    },
+    {
+      "unit": "G3-L04",
+      "lessonId": "G3-L04-B01",
+      "set": "review",
+      "id": "G3-L04-B01-P09",
+      "prompt": "一个图形由7个不重叠的1平方厘米方格组成，面积多少？",
+      "expected": "7",
+      "solution": "7平方厘米。每个单位方格覆盖1平方厘米。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "面积须同一单位；覆盖与外圈区分；不重叠剪拼保持覆盖量；7单位格＝7平方厘米。"
+    },
+    {
+      "unit": "G3-L05",
+      "lessonId": "G3-L05-B01",
+      "set": "core",
+      "id": "G3-L05-B01-P03",
+      "prompt": "18人每人只能选一次，却收到20票，应先做什么？",
+      "solution": "检查重复或记录错误。不能直接当18人的有效投票。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "一人一票须去重；两组水果票均9；样本8人不足决定全班20人；6＋4＋5＝15。"
+    },
+    {
+      "unit": "G3-L05",
+      "lessonId": "G3-L05-B01",
+      "set": "transfer",
+      "id": "G3-L05-B01-P05",
+      "prompt": "甲组苹果5香蕉3，乙组苹果4香蕉6，哪种水果总票多？",
+      "solution": "一样多，苹果和香蕉各9票。需跨行合并同一列。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "一人一票须去重；两组水果票均9；样本8人不足决定全班20人；6＋4＋5＝15。"
+    },
+    {
+      "unit": "G3-L05",
+      "lessonId": "G3-L05-B01",
+      "set": "challenge",
+      "id": "G3-L05-B01-P06",
+      "prompt": "全班20人每人选一种最喜欢的游戏。只采访了8人，其中5人选跳绳、3人选踢毽子。现在能断定跳绳在全班最多吗？请给余下12人安排一种可能的选择，让结论变成踢毽子更多。",
+      "solution": "不能；例如余下12人全选踢毽子，全班就为跳绳5、踢毽子15。当前5大于3只描述已采访8人。没采访的12人可以改变名次。构造5比15的完整数据，证明全班结论尚不能确定。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "一人一票须去重；两组水果票均9；样本8人不足决定全班20人；6＋4＋5＝15。"
+    },
+    {
+      "unit": "G3-L05",
+      "lessonId": "G3-L05-B01",
+      "set": "review",
+      "id": "G3-L05-B01-P09",
+      "prompt": "喜欢跳绳6人、踢毽子4人、跳房子5人，且每人只选一项，共调查多少人？",
+      "expected": "15",
+      "solution": "15人。三类互不重叠，6+4+5=15。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "一人一票须去重；两组水果票均9；样本8人不足决定全班20人；6＋4＋5＝15。"
+    },
+    {
+      "unit": "G3-LP01",
+      "lessonId": "G3-LP01-B01",
+      "set": "core",
+      "id": "G3-LP01-B01-P03",
+      "prompt": "2024年二月与2023年二月相差几天？",
+      "expected": "1",
+      "solution": "1天。29−28。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "2024闰年二月29、2023二月28；日期间隔与含首尾数区分；2000闰、2100非闰。"
+    },
+    {
+      "unit": "G3-LP01",
+      "lessonId": "G3-LP01-B01",
+      "set": "transfer",
+      "id": "G3-LP01-B01-P05",
+      "prompt": "从5月3日到5月8日，经过几天？若含这两个日期共记录几天？",
+      "solution": "经过5天；记录6个日期。间隔数与端点数不同。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "2024闰年二月29、2023二月28；日期间隔与含首尾数区分；2000闰、2100非闰。"
+    },
+    {
+      "unit": "G3-LP01",
+      "lessonId": "G3-LP01-B01",
+      "set": "challenge",
+      "id": "G3-LP01-B01-P06",
+      "prompt": "2000年与2100年都为整百年份，谁是闰年？",
+      "solution": "2000年是，2100年不是。2000能被400整除，2100不能。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "2024闰年二月29、2023二月28；日期间隔与含首尾数区分；2000闰、2100非闰。"
+    },
+    {
+      "unit": "G3-LP01",
+      "lessonId": "G3-LP01-B01",
+      "set": "review",
+      "id": "G3-LP01-B01-P09",
+      "prompt": "7月1日至7月5日每天做一次记录，一共记录几次？",
+      "expected": "5",
+      "solution": "5次。起止两天都包含，不能只取日期差4。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "2024闰年二月29、2023二月28；日期间隔与含首尾数区分；2000闰、2100非闰。"
+    },
+    {
+      "unit": "G3-L06",
+      "lessonId": "G3-L06-B01",
+      "set": "core",
+      "id": "G3-L06-B01-P03",
+      "prompt": "2.05米中的5代表多少？",
+      "expected": "5",
+      "solution": "5厘米。5在百分位。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "2.05米中5是5厘米；3元6角＝3.6元；0.5＝0.50；0.7米＝7分米。"
+    },
+    {
+      "unit": "G3-L06",
+      "lessonId": "G3-L06-B01",
+      "set": "transfer",
+      "id": "G3-L06-B01-P05",
+      "prompt": "标价3元6角用小数记录。",
+      "expected": "3.6",
+      "solution": "3.6元。整元加十分之一元。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "2.05米中5是5厘米；3元6角＝3.6元；0.5＝0.50；0.7米＝7分米。"
+    },
+    {
+      "unit": "G3-L06",
+      "lessonId": "G3-L06-B01",
+      "set": "challenge",
+      "id": "G3-L06-B01-P06",
+      "prompt": "0.5米和0.50米长度相同吗？",
+      "solution": "相同。5分米=50厘米；此处先用测量解释。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "2.05米中5是5厘米；3元6角＝3.6元；0.5＝0.50；0.7米＝7分米。"
+    },
+    {
+      "unit": "G3-L06",
+      "lessonId": "G3-L06-B01",
+      "set": "review",
+      "id": "G3-L06-B01-P09",
+      "prompt": "把0.7米写成分米。",
+      "expected": "7",
+      "solution": "7分米。一位小数表示十分之一米的个数。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "2.05米中5是5厘米；3元6角＝3.6元；0.5＝0.50；0.7米＝7分米。"
+    },
+    {
+      "unit": "G3-L07",
+      "lessonId": "G3-L07-R01",
+      "set": "core",
+      "id": "G3-L07-R01-P03",
+      "prompt": "长方形桌面长2米、宽1米，覆盖整个桌面的面积与围边一周的长度分别是多少？",
+      "solution": "2平方米、6米。明确桌面是长方形后，面积为2×1，周长为(2+1)×2。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "2×1＝2平方米、周长6米；1.5−0.6−0.4＝0.5米；60张两店费用24元，乙余4。"
+    },
+    {
+      "unit": "G3-L07",
+      "lessonId": "G3-L07-R01",
+      "set": "transfer",
+      "id": "G3-L07-R01-P05",
+      "prompt": "1.5米丝带剪去0.6米，又剪0.4米，剩多少？",
+      "expected": "0.5",
+      "solution": "0.5米。两次减法。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "2×1＝2平方米、周长6米；1.5−0.6−0.4＝0.5米；60张两店费用24元，乙余4。"
+    },
+    {
+      "unit": "G3-L07",
+      "lessonId": "G3-L07-R01",
+      "set": "challenge",
+      "id": "G3-L07-R01-P06",
+      "prompt": "20人做手工，每人需3张纸。甲店每包10张4元；乙店每包8张3元，两店都只卖整包。只在一家买，选哪家花钱少？还剩多少张？请同时考虑包数取整、价格和余纸。",
+      "solution": "两家都是24元；甲买6包正好60张不剩，乙买8包64张剩4张。只按费用无法区分更省。需要60张；甲60÷10=6包，6×4=24。乙7包只有56张，必须8包，8×3=24，剩4。每包便宜不代表这次总花费一定少。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "2×1＝2平方米、周长6米；1.5−0.6−0.4＝0.5米；60张两店费用24元，乙余4。"
+    },
+    {
+      "unit": "G3-L07",
+      "lessonId": "G3-L07-R01",
+      "set": "review",
+      "id": "G3-L07-R01-P09",
+      "prompt": "长方形活动区长6米、宽4米，铺垫子要覆盖整个内部，应求什么量，是多少？",
+      "solution": "面积，24平方米。覆盖长方形内部，6×4=24；不是外圈长度。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "2×1＝2平方米、周长6米；1.5−0.6−0.4＝0.5米；60张两店费用24元，乙余4。"
+    },
+    {
+      "unit": "numbers.fractions.meaning",
+      "lessonId": "numbers.fractions.meaning",
+      "set": "core",
+      "id": "numbers.fractions.meaning.c1",
+      "prompt": "1米纸带平均分成8份，取3份。取出的长度是多少米？",
+      "expected": "3/8",
+      "solution": "每份1/8米，3份就是3/8米。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "3/8、3/5按同整体等分；2/6＝1/3，整体2米对应2/3米；4/10＝2/5。"
+    },
+    {
+      "unit": "numbers.fractions.meaning",
+      "lessonId": "numbers.fractions.meaning",
+      "set": "transfer",
+      "id": "numbers.fractions.meaning.t1",
+      "prompt": "1升果汁平均装进5个同样的杯子。3杯共有多少升？",
+      "expected": "3/5",
+      "solution": "每杯1/5升，3杯3/5升。故事换了，等分结构没变。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "3/8、3/5按同整体等分；2/6＝1/3，整体2米对应2/3米；4/10＝2/5。"
+    },
+    {
+      "unit": "numbers.fractions.meaning",
+      "lessonId": "numbers.fractions.meaning",
+      "set": "challenge",
+      "id": "numbers.fractions.meaning.h1",
+      "prompt": "把2米彩带平均分成6段，每段一样长，拿其中2段。拿出的这2段合起来，是整条彩带的几分之几？这2段合起来长多少米？",
+      "fields": [
+        {
+          "key": "part",
+          "label": "占整体的比例",
+          "expected": "1/3",
+          "unit": ""
+        },
+        {
+          "key": "length",
+          "label": "实际长度",
+          "expected": "2/3",
+          "unit": "米"
+        }
+      ],
+      "solution": "比例是2/6=1/3；实际长度是2×1/3=2/3米。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "3/8、3/5按同整体等分；2/6＝1/3，整体2米对应2/3米；4/10＝2/5。"
+    },
+    {
+      "unit": "numbers.fractions.meaning",
+      "lessonId": "numbers.fractions.meaning",
+      "set": "review",
+      "id": "numbers.fractions.meaning.r1",
+      "prompt": "1米彩带等分成10份，取4份。取出多少米？",
+      "expected": "2/5",
+      "solution": "4/10米和2/5米等值。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "3/8、3/5按同整体等分；2/6＝1/3，整体2米对应2/3米；4/10＝2/5。"
+    },
+    {
+      "unit": "geometry.area.perimeter",
+      "lessonId": "geometry.area.perimeter",
+      "set": "core",
+      "id": "geometry.area.perimeter.c1",
+      "prompt": "长4厘米、宽3厘米的长方形，面积和周长分别是多少？",
+      "fields": [
+        {
+          "key": "area",
+          "label": "面积",
+          "expected": "12",
+          "unit": "平方厘米"
+        },
+        {
+          "key": "perimeter",
+          "label": "周长",
+          "expected": "14",
+          "unit": "厘米"
+        }
+      ],
+      "solution": "面积3×4=12平方厘米；周长(3+4)×2=14厘米。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "4×3＝12平方厘米、周长14；5×2米围栏14米；12面积的正整数因数对最小周长14。"
+    },
+    {
+      "unit": "geometry.area.perimeter",
+      "lessonId": "geometry.area.perimeter",
+      "set": "transfer",
+      "id": "geometry.area.perimeter.t1",
+      "prompt": "长5米、宽2米的花坛，四周全部围起来，需要多少米围栏？",
+      "expected": "14",
+      "solution": "5+2+5+2=14米。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "4×3＝12平方厘米、周长14；5×2米围栏14米；12面积的正整数因数对最小周长14。"
+    },
+    {
+      "unit": "geometry.area.perimeter",
+      "lessonId": "geometry.area.perimeter",
+      "set": "challenge",
+      "id": "geometry.area.perimeter.h1",
+      "prompt": "面积12平方厘米、边长为正整数的长方形，最小周长是多少厘米？",
+      "expected": "14",
+      "solution": "因数对只有1×12、2×6、3×4，周长依次26、16、14厘米。列全因数对后可以确定最小值。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "4×3＝12平方厘米、周长14；5×2米围栏14米；12面积的正整数因数对最小周长14。"
+    },
+    {
+      "unit": "geometry.area.perimeter",
+      "lessonId": "geometry.area.perimeter",
+      "set": "review",
+      "id": "geometry.area.perimeter.r1",
+      "prompt": "长5厘米、宽3厘米的长方形，面积和周长分别是多少？",
+      "fields": [
+        {
+          "key": "area",
+          "label": "面积",
+          "expected": "15",
+          "unit": "平方厘米"
+        },
+        {
+          "key": "perimeter",
+          "label": "周长",
+          "expected": "16",
+          "unit": "厘米"
+        }
+      ],
+      "solution": "面积15平方厘米，周长16厘米。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "4×3＝12平方厘米、周长14；5×2米围栏14米；12面积的正整数因数对最小周长14。"
+    },
+    {
+      "unit": "algebra.substitution.intro",
+      "lessonId": "algebra.substitution.intro",
+      "set": "core",
+      "id": "algebra.substitution.intro.c1",
+      "prompt": "已知甲=乙+2，把“甲+5=10”中的甲换成乙来表示。",
+      "expected": "(乙+2)+5=10",
+      "solution": "只换甲，保留外面的+5与等号右边的10。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "整体替换保留外层关系；3(4＋2)＝18与3×4＋2＝14；2(乙＋3)＝16不漏常数倍。"
+    },
+    {
+      "unit": "algebra.substitution.intro",
+      "lessonId": "algebra.substitution.intro",
+      "set": "transfer",
+      "id": "algebra.substitution.intro.t1",
+      "prompt": "已知橘=2梨，把“橘+梨=12”中的橘换掉。",
+      "expected": "2梨+梨=12",
+      "solution": "一个橘对应两份梨，原来另外的一份梨也保留。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "整体替换保留外层关系；3(4＋2)＝18与3×4＋2＝14；2(乙＋3)＝16不漏常数倍。"
+    },
+    {
+      "unit": "algebra.substitution.intro",
+      "lessonId": "algebra.substitution.intro",
+      "set": "challenge",
+      "id": "algebra.substitution.intro.h1",
+      "prompt": "令乙=4。分别计算3×(乙+2)和3乙+2，用结果检查是否漏乘。",
+      "fields": [
+        {
+          "key": "whole",
+          "label": "3×(乙+2)",
+          "expected": "18",
+          "unit": ""
+        },
+        {
+          "key": "wrong",
+          "label": "3乙+2",
+          "expected": "14",
+          "unit": ""
+        }
+      ],
+      "solution": "3×(4+2)=18；3×4+2=14。相差4，是两个+2被漏掉了。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "整体替换保留外层关系；3(4＋2)＝18与3×4＋2＝14；2(乙＋3)＝16不漏常数倍。"
+    },
+    {
+      "unit": "algebra.substitution.intro",
+      "lessonId": "algebra.substitution.intro",
+      "set": "review",
+      "id": "algebra.substitution.intro.r1",
+      "prompt": "已知甲=乙+3，把“2甲=16”中的甲换掉。",
+      "expected": "2*(乙+3)=16",
+      "solution": "2×(乙+3)=16，也可展开为2乙+6=16。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "整体替换保留外层关系；3(4＋2)＝18与3×4＋2＝14；2(乙＋3)＝16不漏常数倍。"
+    },
+    {
+      "unit": "algebra.balance.intro",
+      "lessonId": "algebra.balance.intro",
+      "set": "core",
+      "id": "algebra.balance.intro.c1",
+      "prompt": "x+3=10。两边同时减去3后，x是多少？",
+      "expected": "7",
+      "solution": "两边都减3，得到x=7。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "两边同操作；x＋3＝10得7；(19−3)÷2＝8；3x＋2＝17得5；异量减法差1。"
+    },
+    {
+      "unit": "algebra.balance.intro",
+      "lessonId": "algebra.balance.intro",
+      "set": "transfer",
+      "id": "algebra.balance.intro.t1",
+      "prompt": "两个同样的文具盒加3元包装费，共19元。每个盒子多少元？",
+      "expected": "8",
+      "solution": "设每盒x元，2x+3=19；先减3，再除2，得8元。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "两边同操作；x＋3＝10得7；(19−3)÷2＝8；3x＋2＝17得5；异量减法差1。"
+    },
+    {
+      "unit": "algebra.balance.intro",
+      "lessonId": "algebra.balance.intro",
+      "set": "challenge",
+      "id": "algebra.balance.intro.h1",
+      "prompt": "原来等式成立，为什么左边减3、右边减2不能保持相等？",
+      "expected": "1",
+      "solution": "设原来都为a，变后是a−3与a−2，两者相差1。",
+      "options": [
+        {
+          "id": "1",
+          "text": "两边减少的量不同，新左边会比新右边少1"
+        },
+        {
+          "id": "2",
+          "text": "因为方程不能做减法"
+        },
+        {
+          "id": "3",
+          "text": "因为只能移动未知数"
+        }
+      ],
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "两边同操作；x＋3＝10得7；(19−3)÷2＝8；3x＋2＝17得5；异量减法差1。"
+    },
+    {
+      "unit": "algebra.balance.intro",
+      "lessonId": "algebra.balance.intro",
+      "set": "review",
+      "id": "algebra.balance.intro.r1",
+      "prompt": "3x+2=17，x是多少？",
+      "expected": "5",
+      "solution": "两边减2得3x=15，再除以3，得x=5。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "两边同操作；x＋3＝10得7；(19−3)÷2＝8；3x＋2＝17得5；异量减法差1。"
+    },
+    {
+      "unit": "numbers.quantity.intro",
+      "lessonId": "numbers.quantity.intro",
+      "set": "core",
+      "id": "numbers.quantity.intro.c1",
+      "prompt": "7颗扣子原来挤在一起，现在把它们摆开。没有添加或拿走扣子。现在有几颗？",
+      "expected": "2",
+      "solution": "位置改变，扣子的个数没有改变。",
+      "options": [
+        {
+          "id": "1",
+          "text": "比7颗多"
+        },
+        {
+          "id": "2",
+          "text": "仍是7颗"
+        },
+        {
+          "id": "3",
+          "text": "比7颗少"
+        }
+      ],
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "一一对应与无增减守恒；9人9券；未知具体数仍可确定相等数量。"
+    },
+    {
+      "unit": "numbers.quantity.intro",
+      "lessonId": "numbers.quantity.intro",
+      "set": "transfer",
+      "id": "numbers.quantity.intro.t1",
+      "prompt": "9位同学参加活动，每人领1张入场券，不多发也不漏发。要准备几张？",
+      "expected": "9",
+      "solution": "同学和入场券一一对应。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "一一对应与无增减守恒；9人9券；未知具体数仍可确定相等数量。"
+    },
+    {
+      "unit": "numbers.quantity.intro",
+      "lessonId": "numbers.quantity.intro",
+      "set": "challenge",
+      "id": "numbers.quantity.intro.h1",
+      "prompt": "左边每个信封都恰好配着右边1张卡片，全部配完，没有剩余。现在卡片被遮住了。我们确定知道什么？",
+      "expected": "2",
+      "solution": "没有给出具体个数，但完整的一一配对能确定两组一样多。",
+      "options": [
+        {
+          "id": "1",
+          "text": "卡片一定有10张"
+        },
+        {
+          "id": "2",
+          "text": "卡片数与信封数相同"
+        },
+        {
+          "id": "3",
+          "text": "卡片比信封多"
+        }
+      ],
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "一一对应与无增减守恒；9人9券；未知具体数仍可确定相等数量。"
+    },
+    {
+      "unit": "numbers.quantity.intro",
+      "lessonId": "numbers.quantity.intro",
+      "set": "review",
+      "id": "numbers.quantity.intro.r1",
+      "prompt": "昨天把6枚硬币排成直线，今天还是这6枚，改排成圆圈。个数有变化吗？",
+      "expected": "1",
+      "solution": "形状变了，没有增减物体，数量不变。",
+      "options": [
+        {
+          "id": "1",
+          "text": "没有，仍是6枚"
+        },
+        {
+          "id": "2",
+          "text": "有，圆圈一定更多"
+        },
+        {
+          "id": "3",
+          "text": "有，直线一定更多"
+        }
+      ],
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "一一对应与无增减守恒；9人9券；未知具体数仍可确定相等数量。"
+    },
+    {
+      "unit": "numbers.addition.meaning",
+      "lessonId": "numbers.addition.meaning",
+      "set": "core",
+      "id": "numbers.addition.meaning.c1",
+      "prompt": "第一队7人，第二队4人，两个队没有重复的人。合起来共几人？",
+      "expected": "11",
+      "solution": "7＋4＝11。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "不重叠两队7＋4＝11；不同借出书4＋5＝9；内部挪动不改12；外加5＋4＝9。"
+    },
+    {
+      "unit": "numbers.addition.meaning",
+      "lessonId": "numbers.addition.meaning",
+      "set": "transfer",
+      "id": "numbers.addition.meaning.t1",
+      "prompt": "上午借出4本书，下午又借出5本。这9本都是不同的书。一天共借出几本？",
+      "expected": "9",
+      "solution": "4＋5＝9，计算的是借出的总本数。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "不重叠两队7＋4＝11；不同借出书4＋5＝9；内部挪动不改12；外加5＋4＝9。"
+    },
+    {
+      "unit": "numbers.addition.meaning",
+      "lessonId": "numbers.addition.meaning",
+      "set": "challenge",
+      "id": "numbers.addition.meaning.h1",
+      "prompt": "两篮苹果一共12个。从左篮挪2个到右篮，没有其他变动。现在两篮合起来几个？",
+      "expected": "12",
+      "solution": "一边少2，另一边多2，合起来的总数不变。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "不重叠两队7＋4＝11；不同借出书4＋5＝9；内部挪动不改12；外加5＋4＝9。"
+    },
+    {
+      "unit": "numbers.addition.meaning",
+      "lessonId": "numbers.addition.meaning",
+      "set": "review",
+      "id": "numbers.addition.meaning.r1",
+      "prompt": "花瓶原来有5枝花，新放进4枝，没有拿走花。现在共有几枝？",
+      "expected": "9",
+      "solution": "5＋4＝9。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "不重叠两队7＋4＝11；不同借出书4＋5＝9；内部挪动不改12；外加5＋4＝9。"
+    },
+    {
+      "unit": "numbers.subtraction.meaning",
+      "lessonId": "numbers.subtraction.meaning",
+      "set": "core",
+      "id": "numbers.subtraction.meaning.c1",
+      "prompt": "Kevin 有9张贴纸，朋友有5张，谁也没有送出贴纸。Kevin 比朋友多几张？",
+      "expected": "4",
+      "solution": "把5张一一配对，Kevin 还多4张，9−5＝4。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "比较9−5＝4不同于送出；剩页20−8＝12；差变化20＋3−5＝18；12−3＝9可加法回检。"
+    },
+    {
+      "unit": "numbers.subtraction.meaning",
+      "lessonId": "numbers.subtraction.meaning",
+      "set": "transfer",
+      "id": "numbers.subtraction.meaning.t1",
+      "prompt": "一本书共20页，已读8页，前8页各读过一次。还剩几页没有读？",
+      "expected": "12",
+      "solution": "20−8＝12。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "比较9−5＝4不同于送出；剩页20−8＝12；差变化20＋3−5＝18；12−3＝9可加法回检。"
+    },
+    {
+      "unit": "numbers.subtraction.meaning",
+      "lessonId": "numbers.subtraction.meaning",
+      "set": "challenge",
+      "id": "numbers.subtraction.meaning.h1",
+      "prompt": "Kevin 的积分原来比朋友多20分。后来 Kevin 增加3分，朋友增加5分。现在 Kevin 比朋友多几分？",
+      "expected": "18",
+      "solution": "Kevin 增3让差增3，朋友增5让差减5：20＋3−5＝18。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "比较9−5＝4不同于送出；剩页20−8＝12；差变化20＋3−5＝18；12−3＝9可加法回检。"
+    },
+    {
+      "unit": "numbers.subtraction.meaning",
+      "lessonId": "numbers.subtraction.meaning",
+      "set": "review",
+      "id": "numbers.subtraction.meaning.r1",
+      "prompt": "原有12块饼干，分出去3块。还剩几块？",
+      "expected": "9",
+      "solution": "12−3＝9，9＋3＝12。",
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "比较9−5＝4不同于送出；剩页20−8＝12；差变化20＋3−5＝18；12−3＝9可加法回检。"
+    },
+    {
+      "unit": "G3-UP01",
+      "lessonId": "G3-UP01-B02",
+      "set": "review",
+      "id": "G3-UP01-B02-P12",
+      "prompt": "“用能测的小物体替换大物体”最重要的条件是什么？",
+      "expected": "c0",
+      "solution": "替换前后保持用来判断相等的状态，其他负载不变，并准确测出替代物总质量。替换依靠等量关系，不是随意换一种东西。",
+      "options": [
+        {
+          "id": "c0",
+          "text": "保持判断相等的状态与其他负载不变，并准确称全部替代物"
+        },
+        {
+          "id": "c1",
+          "text": "只要求替代物能装进船舱"
+        },
+        {
+          "id": "c2",
+          "text": "只称最大的一块，其余不用称"
+        }
+      ],
+      "reviewer": "Codex 手工源语义抽查（非家长或Kevin试学）",
+      "status": "checked",
+      "judgment": "等量替换须同船同水线、额外负载不变并称全体替代物；答案数学正确。正确选项比干扰项长，措辞对称性仍可优化；本轮冻结原正式题内容与评分，保留明确的后续编辑风险。"
+    }
+  ]
+}

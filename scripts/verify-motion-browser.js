@@ -1,0 +1,29 @@
+async (page) => {
+ const base=new URL(page.url()).origin,errors=[],checks=[];
+ page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept().catch(()=>{}));
+ page.on('response',r=>{if(r.url().includes('/api/')&&r.status()>=400)errors.push(r.status()+' '+r.url())});
+ const assert=(ok,message)=>{if(!ok)throw Error(message)};
+ const open=async id=>{await page.goto(base+'/?lesson='+id);await page.locator('.lesson-article').waitFor();const short=page.getByRole('button',{name:'3 亲手实验',exact:true});if(await short.count())await short.click()};
+ const picture=async name=>{await page.locator('.hands-on-workbench,.operation-extension-lab').first().screenshot({path:'output/playwright/v2-audit/motion-'+name+'.png'})};
+ await page.setViewportSize({width:1440,height:1000});
+ await open('G3-U01-B03');await page.getByRole('button',{name:'重新开始',exact:true}).click();
+ await picture('fold-open');await page.getByRole('button',{name:'播放折盒过程',exact:true}).click();
+ await page.waitForFunction(()=>{const v=Number(document.querySelector('[data-fold-frame]')?.getAttribute('data-fold-frame'));return v>8&&v<92});
+ await page.getByRole('button',{name:'暂停在这里',exact:true}).click();const paused=Number(await page.locator('[data-fold-frame]').getAttribute('data-fold-frame'));assert(paused>0&&paused<100,'不能暂停在中间折叠状态');
+ await picture('fold-paused');await page.getByRole('button',{name:'折到一半',exact:true}).click();await page.waitForFunction(()=>Number(document.querySelector('[data-fold-frame]')?.getAttribute('data-fold-frame'))===50);await picture('fold-half');
+ await page.getByRole('button',{name:'折成盒子',exact:true}).click();await page.waitForFunction(()=>Number(document.querySelector('[data-fold-frame]')?.getAttribute('data-fold-frame'))===100);await picture('fold-closed');await page.locator('.solid-viewport').screenshot({path:'output/playwright/v2-audit/motion-fold-object.png'});
+ const polygon=page.locator('[data-face="3"]'),before=await polygon.getAttribute('points');await page.locator('.solid-viewport').focus();await page.locator('.solid-viewport').press('ArrowRight');await page.waitForFunction(old=>document.querySelector('[data-face="3"]')?.getAttribute('points')!==old,before);checks.push('fold-continuous-pause-rotate');
+ await polygon.click();assert(await page.getByRole('button',{name:'3号 · 前面',exact:true}).getAttribute('aria-pressed')==='true','点击真实纸面不能选中编号');checks.push('direct-face-picking');
+ await page.getByRole('button',{name:'从正前方看',exact:true}).click();await page.getByRole('slider',{name:'折叠程度'}).focus();await page.getByRole('slider',{name:'折叠程度'}).press('Home');await page.getByRole('slider',{name:'折叠程度'}).press('End');assert(await page.getByRole('button',{name:'立体观察',exact:true}).getAttribute('aria-pressed')==='true','从旧平面视角拖折叠后没有恢复立体观察');checks.push('flat-view-fold-recovery');
+ await page.emulateMedia({reducedMotion:'reduce'});await page.getByRole('button',{name:'完全展开',exact:true}).click();await page.waitForFunction(()=>Number(document.querySelector('[data-fold-frame]')?.getAttribute('data-fold-frame'))===0);await page.getByRole('button',{name:'折成盒子',exact:true}).click();await page.waitForFunction(()=>Number(document.querySelector('[data-fold-frame]')?.getAttribute('data-fold-frame'))===100);checks.push('reduced-motion');await page.emulateMedia({reducedMotion:'no-preference'});
+ await page.setViewportSize({width:390,height:844});await picture('fold-mobile');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'折盒手机横向溢出');await page.setViewportSize({width:1440,height:1000});
+ await open('G3-UP01-B01');await page.getByRole('button',{name:'重新开始',exact:true}).click();await page.getByRole('button',{name:'天平与砝码',exact:true}).click();
+ await page.waitForFunction(()=>Number(document.querySelector('[data-beam-angle]')?.getAttribute('data-beam-angle'))===-16);
+ await Promise.all([page.waitForFunction(()=>{const v=Number(document.querySelector('[data-beam-angle]')?.getAttribute('data-beam-angle'));return v>-15&&v<3}),page.getByRole('button',{name:'添加500克砝码',exact:true}).click()]);await page.waitForFunction(()=>Number(document.querySelector('[data-beam-angle]')?.getAttribute('data-beam-angle'))===4);checks.push('continuous-linked-balance');await picture('balance');
+ await open('G3-UP01-B02');await page.getByRole('button',{name:'重新开始',exact:true}).click();
+ await page.waitForFunction(()=>Number(document.querySelector('[data-boat-sink]')?.getAttribute('data-boat-sink'))===0);
+ await Promise.all([page.waitForFunction(()=>{const v=Number(document.querySelector('[data-boat-sink]')?.getAttribute('data-boat-sink'));return v>0&&v<18}),page.getByRole('button',{name:'模型象上船',exact:true}).dragTo(page.locator('.boat-stage'))]);await page.waitForFunction(()=>Number(document.querySelector('[data-boat-sink]')?.getAttribute('data-boat-sink'))===18);checks.push('continuous-loaded-hull');await picture('boat');
+ await open('G3-U02-E04');await page.getByRole('button',{name:'重新探索',exact:true}).click();const cut=page.locator('[data-array-cut]');await cut.scrollIntoViewIfNeeded();const r=await cut.boundingBox();await page.mouse.move(r.x+r.width/2,r.y+r.height/2);await page.mouse.down();await page.mouse.move(r.x+r.width/2+100,r.y+r.height/2,{steps:8});await page.mouse.up();assert(Number(await cut.getAttribute('data-array-cut'))>1,'红色分界线不能直接拖动');
+ const original=await page.locator('[data-bead="0"]').getAttribute('transform');await page.getByRole('button',{name:/换计数方向/}).click();await page.waitForFunction(old=>document.querySelector('[data-bead="0"]')?.getAttribute('transform')!==old,original);assert(await page.locator('[data-bead]').count()===12,'转向时珠子数改变');checks.push('direct-cut-transpose-conservation');await picture('array');
+ assert(errors.length===0,'浏览器错误：'+JSON.stringify(errors));return {passed:true,checks,errors};
+}

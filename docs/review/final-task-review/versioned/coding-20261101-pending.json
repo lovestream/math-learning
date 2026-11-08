@@ -1,0 +1,2724 @@
+{
+  "date": "2026-11-01",
+  "sourceBaseline": "4fd7fb9c0693b6a045418c509f212aa90907d068",
+  "stage": "before-new-browser-verification",
+  "verificationSummary": {
+    "desktopMath": 69,
+    "fullPaths": 63,
+    "staticRelations": 6,
+    "visualInspected": 69,
+    "parentReviewed": 0,
+    "learnerMastery": 0
+  },
+  "row": {
+    "lessonId": "G3-UP02-B01",
+    "title": "数字编码：身份证、邮编与我的学号",
+    "unitId": "G3-UP02",
+    "unitTitle": "数字编码",
+    "track": "foundation",
+    "sourceAnchor": [
+      {
+        "id": "G3-upper",
+        "purpose": "教材单元：数字编码，印刷页57–60",
+        "status": "local-textbook-reference"
+      }
+    ],
+    "contentVersion": "2026-11-01.2",
+    "editorialRevision": "2026-11-01.2",
+    "quantities": {
+      "object": "书架、身份证片段、邮编与模拟校内编号",
+      "unit": "字段位置／字符位数；不是物品数量",
+      "known": "书架02-03-05；身份片段6＋8＋3＋1；邮编2＋1＋1＋2；模拟班级3年级2班7号",
+      "unknown": "按用途解码并设计不会重号的编号；说明升年级是否变号",
+      "changes": "字段含义、长度、识别范围与稳定性"
+    },
+    "contentFingerprint": "dba1cf6ae8806aff9ad485e14937a6b97e208e34d929e27088ce7e7214c14a49",
+    "story": {
+      "text": "Kevin要完成四件事：找到图书馆的一格书架、读懂身份证号码怎样分段、帮一封信选邮政编码，还要给班级同学设计不重号的学号。为什么这些数字不能直接当成数量来加减？",
+      "figure": {
+        "renderer": "src/studio/IntroVisual.tsx",
+        "spec": {
+          "type": "coding-overview",
+          "values": [],
+          "title": "同样是数字，四种不同的用途",
+          "caption": "全部是教学示例：观察字段，猜猜它们各自帮我们找到什么。身份证示意以问号结束，不是可用证件。"
+        }
+      }
+    },
+    "prediction": {
+      "question": "下面哪句话最符合编码的用途？",
+      "options": [
+        "数字越大，东西一定越多",
+        "同样的数字在不同编码规则中，意思可能不同",
+        "所有编号都能用加减法求总数"
+      ],
+      "figure": {
+        "type": "coding-overview",
+        "values": [],
+        "title": "同样是数字，四种不同的用途",
+        "caption": "全部是教学示例：观察字段，猜猜它们各自帮我们找到什么。身份证示意以问号结束，不是可用证件。"
+      }
+    },
+    "experiment": {
+      "widget": "conceptLab",
+      "blockId": "try",
+      "classification": "verified",
+      "mission": "先比较书架、身份证、邮编和学号四种规则；点开每段看意思，再自己设计一个不会重号的编号。",
+      "model": {
+        "type": "coding",
+        "version": "textbook.v1",
+        "title": "给书架位置编一个地址",
+        "limits": [
+          3,
+          4,
+          8
+        ]
+      },
+      "supplementalModels": {
+        "identity": [
+          {
+            "digits": "44",
+            "name": "第1—2位：省级",
+            "detail": "身份证地址码前两位表示省、自治区、直辖市等省级行政区划。此处44用作广东省的教学示意。"
+          },
+          {
+            "digits": "01",
+            "name": "第3—4位：中间层级",
+            "detail": "一般表示市、地区、自治州等行政区划层级；直辖市等存在特殊划分，不能机械理解为普通地级市。"
+          },
+          {
+            "digits": "06",
+            "name": "第5—6位：区县级",
+            "detail": "与前四位一起构成6位行政区划代码，指县、市辖区、县级市等行政单元。"
+          },
+          {
+            "digits": "2015",
+            "name": "第7—10位：出生年",
+            "detail": "四位年份，必须连同月日理解。例如这里只用2015作示范，不对应任何真实证件。"
+          },
+          {
+            "digits": "05",
+            "name": "第11—12位：出生月",
+            "detail": "月份占两位，5月写05，不能省去前导0，否则后面所有位置就会改变。"
+          },
+          {
+            "digits": "16",
+            "name": "第13—14位：出生日",
+            "detail": "日期占两位，示例16表示当月16日。年月日合起来是8位。"
+          },
+          {
+            "digits": "003",
+            "name": "第15—17位：顺序码",
+            "detail": "这三位用于区分同一地址码及同年同月同日出生的人员。第17位（整个身份证倒数第二位）是3，奇数对应男性；若为004，末位4是偶数，对应女性。"
+          },
+          {
+            "digits": "?",
+            "name": "第18位：校验码",
+            "detail": "最后一位按前17位算出。结果若是10，就用一个字母X代表10；不能随便写X。此处问号表示没有提供真实校验码，本演示不是完整身份证号码。"
+          }
+        ],
+        "identityGroups": [
+          {
+            "name": "地址码",
+            "from": 0,
+            "to": 3
+          },
+          {
+            "name": "出生日期",
+            "from": 3,
+            "to": 6
+          },
+          {
+            "name": "顺序码",
+            "from": 6,
+            "to": 7
+          },
+          {
+            "name": "校验码",
+            "from": 7,
+            "to": 8
+          }
+        ],
+        "postal": [
+          {
+            "digits": "10",
+            "name": "前2位：省级邮政范围",
+            "detail": "邮政编码首两位体现省、自治区、直辖市等邮政区域。邮编与身份证行政区划码是不同体系，不能互相照抄。"
+          },
+          {
+            "digits": "0",
+            "name": "第3位：邮区",
+            "detail": "继续细分邮政分拣范围，方便邮件按区域流转。"
+          },
+          {
+            "digits": "0",
+            "name": "第4位：县、市等投递层级",
+            "detail": "用来进一步细分邮政区域。具体区划和实际投递组织以邮政部门公布的信息为准。"
+          },
+          {
+            "digits": "31",
+            "name": "最后2位：投递局（所）",
+            "detail": "进一步标识投递局所/投递区域。一个邮编下仍可以有许多街道和住户，寄信还需要完整的地址。"
+          }
+        ],
+        "quiz": [
+          {
+            "q": "身份证的出生年份占哪几位？",
+            "options": [
+              "第1—4位",
+              "第7—10位",
+              "第15—18位"
+            ],
+            "correct": 1,
+            "why": "第7—14位是日期，分成4位年＋2位月＋2位日。"
+          },
+          {
+            "q": "身份证顺序码是002，哪一位用于区分男女？",
+            "options": [
+              "第16位2",
+              "第17位2（偶数）",
+              "最后第18位"
+            ],
+            "correct": 1,
+            "why": "顺序码第15—17位，最后一位就是全号第17位；偶数按该规则对应女性。"
+          },
+          {
+            "q": "身份证校验码位置计算出10，为什么写X？",
+            "options": [
+              "X占一个字符位置表示10",
+              "系统可随机挑字母",
+              "X表示身份证无效"
+            ],
+            "correct": 0,
+            "why": "校验值10以X表示，仅占一位；其他校验值仍按规则填写。"
+          },
+          {
+            "q": "邮政编码和详细地址，哪句正确？",
+            "options": [
+              "同一邮编只能对应一个人",
+              "邮编用于邮件分拣，仍要详细地址",
+              "邮编末位可表示性别"
+            ],
+            "correct": 1,
+            "why": "邮编面向投递区域，身份信息与邮编无关。"
+          },
+          {
+            "q": "3年级1班7号和3年级2班7号，都记“307”，有什么风险？",
+            "options": [
+              "不会有任何问题",
+              "数字总和改变了",
+              "两人会撞号，编码要加足班级信息"
+            ],
+            "correct": 2,
+            "why": "编码要能区分不同对象；要规定各段含义和位数。"
+          }
+        ],
+        "classBounds": {
+          "grades": 6,
+          "classes": 6,
+          "students": 45
+        },
+        "stableBounds": {
+          "firstYear": 2023,
+          "lastYear": 2026,
+          "maxSerial": 9999
+        }
+      },
+      "sourceInitialDescription": "3架4层8格的虚拟书架，字段架-层-格，例02-03-05。",
+      "sourceLearnerAction": "按编号定位，再给另一格编号并检查冲突。",
+      "sourceObservableChange": "每个三字段组合唯一定位，最多96位置；相同格不得领两种身份。",
+      "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
+    },
+    "discovery": {
+      "statements": [
+        "数字编码是按约定规则给位置、对象或事物建立标识；它不是用来直接表示多少的数量。",
+        "身份证号码共18位：前6位行政区划，接着8位出生日期，第15—17位顺序码，最后1位校验码。第17位奇数对应男性、偶数对应女性；校验值为10时写X。",
+        "地址码前两位为省级、中间两位为行政区划中间层级、后两位为县区级；直辖市等情况不能机械说中间两位一定是普通城市。号码不代表现居地址。",
+        "邮政编码通常6位，逐层标识邮区和投递范围。它帮助分拣和投递，不是身份证地址码，也不能代替完整收件地址。",
+        "自己设计班级学号时，要写出每段代表什么、每段占几位、编号能否重复；年级和班级会变化，长期学号最好用不会随升年级改变的字段。",
+        "正式国家学籍号由国家学籍系统生成，一人一号，终身不变；课堂里自己设计的是模拟的学校/班级编号，不是正式学籍号。"
+      ],
+      "retell": "先从身份证、邮编、学号中选一种，说清每段代表什么；再举一个“少写字段会重号”的例子。课堂自编学号和正式学籍号有什么不同？"
+    },
+    "mathematicalLanguage": {
+      "statements": [
+        "编码不直接表示数量；本课先约定字段含义与长度，再核对识别范围内是否唯一",
+        "身份证：6位行政区划｜8位出生日期｜3位顺序码｜1位校验码＝18位",
+        "第17位（倒数第二位）：奇数→男，偶数→女；第18位为校验码，可能是X",
+        "邮编：前2位邮政省级范围｜第3位邮区｜第4位县市投递层级｜最后2位投递局（所）",
+        "班级标签例：03-02-07；如果只写03-07，两个班的7号可能重号",
+        "校内长期编号例：2024-0007；升年级后尽量不改号码",
+        "校验码负责帮助发现部分录入错误，并不保证号码属于真实的人或数据一定正确"
+      ],
+      "scope": "开头故事，未声明与变更后的实验条件自动同步"
+    },
+    "independentCheck": {
+      "scope": "巩固及撤教具练习，可能含已见原故事；不宣称整组为未见迁移",
+      "source": "core-existing-task-ids",
+      "tasks": [
+        {
+          "id": "G3-UP02-B01-P03",
+          "kind": "explanation",
+          "prompt": "教学用号码片段“44 01 06｜2015 05 16｜003｜？”中，分别指出6位地址码、8位出生日期码、3位顺序码和最后校验码的位置；示例中的日期是哪一年哪一月哪一日？不要填写自己的生日；“？”不是有效校验码。",
+          "sourceSet": "core",
+          "novelty": "consolidation-not-certified-unseen"
+        },
+        {
+          "id": "G3-UP02-B01-P04",
+          "kind": "choice",
+          "prompt": "一段身份证号码的顺序码是004（对应第15—17位）。按这套编码规则，第17位数字代表什么？",
+          "sourceSet": "core",
+          "novelty": "consolidation-not-certified-unseen"
+        },
+        {
+          "id": "G3-UP02-B01-P07",
+          "kind": "explanation",
+          "prompt": "为三年级2班7号同学设计一个班级学号。请给出一套自己的编码格式、各段含义和补零规则，再说明为什么只写“07”可能重号。",
+          "sourceSet": "core",
+          "novelty": "consolidation-not-certified-unseen"
+        }
+      ],
+      "allTaskCounts": {
+        "warmup": 2,
+        "core": 3,
+        "transfer": 2,
+        "challenge": 1,
+        "review": 4
+      },
+      "selfCheckItems": 3
+    },
+    "review": {
+      "intervalDays": [
+        1,
+        3,
+        7,
+        21
+      ],
+      "technicalStatus": "shared-scheduler-regressions-separate-from-individual-course-delay-trials",
+      "teachingStatus": "requires-new-context-and-unassisted-trial"
+    },
+    "invariant": "字段规则、识别范围与唯一性决定编码含义，不把身份号码、邮编和校内编号混为一套规则",
+    "nextInspection": "逐段核对18位示意、第17与18位、X规则、六位邮编；用跨班同号和升年级反例检验自编方案。",
+    "sourceReview": "requires-chapter-verification",
+    "sourceFinding": "no-confirmed-source-issue",
+    "resolution": null,
+    "issues": [],
+    "classroomTrial": "not-verified",
+    "initialSourceReview": "requires-chapter-verification",
+    "verification": {
+      "implementation": "manipulable-six-step",
+      "contentReviewed": "source-checked",
+      "desktopVisual": "not-run",
+      "mathBehavior": "not-run",
+      "parentReviewed": "no",
+      "learnerMastery": "no-data",
+      "evidence": null
+    },
+    "acceptance": {
+      "sourceInspection": "recorded",
+      "mathematicalInvariants": "listed-not-individually-retested",
+      "browserSemanticEvidence": "pending-chapter-run",
+      "parentTeachingApproval": "not-verified",
+      "kevinMastery": "not-assessed"
+    }
+  },
+  "unchangedLessonEvidence": [
+    {
+      "lessonId": "G3-U01-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "实物模型的目标关系、照片或等量替换经最终状态断言"
+        ],
+        "actionsPerformed": [
+          "从正前方看",
+          "拍下当前方向",
+          "从右侧看",
+          "拍下当前方向",
+          "从上方看",
+          "拍下当前方向"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "a43994e6fd2ff22a883d7e2bb49cc5921a318cb12407276d523bb7bf99fa259a",
+          "currentContentFingerprint": "c88f10e69142679168508f11d405c32b640beae1cdc10a4589239f55380e8010",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-07.2",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "实物模型的目标关系、照片或等量替换经最终状态断言"
+        ],
+        "actionsPerformed": [
+          "后排加1块",
+          "我选正面",
+          "用照片核对我的选择",
+          "我选右面",
+          "用照片核对我的选择"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "c1cc119d384778a90ed199b4a9efad4e3e153b0c31ff12314f25c6bc7f89cf2a",
+          "currentContentFingerprint": "5a2c0c36dd74b0498645286ec48db592ceda3d05c811edd3c22f8f2bd9b56736",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-07.2",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "实物模型的目标关系、照片或等量替换经最终状态断言"
+        ],
+        "actionsPerformed": [
+          "折成盒子",
+          "2号 · 左面",
+          "我认为相邻",
+          "折好后核对两面",
+          "我认为相对",
+          "折好后核对两面"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B03-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B03-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B03-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B03-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B03-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B03-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U01-B03-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "c2188325bc5c2d41a4db856020aa5e98d76ac1fab56e203d2d63b496d4cf3d03",
+          "currentContentFingerprint": "64e4f25930e5f3dcd9402548394e43f3bd30c8af0b8c1281b1a7516f41b73491",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-07.2",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "G3-U02-B01-A: AST独立计算=25",
+          "G3-U02-B01-B: AST独立计算=8"
+        ],
+        "actionsPerformed": [
+          "场景 A",
+          "28 － 9",
+          "按预测算第一步",
+          "按预测算第一步",
+          "算下一步",
+          "场景 B",
+          "24 ÷ 6",
+          "按预测算第一步",
+          "按预测算第一步",
+          "算下一步"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B01-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "G3-U02-B02-A: AST独立计算=22"
+        ],
+        "actionsPerformed": [
+          "恢复初始状态",
+          "3 × 6",
+          "按预测算第一步",
+          "按预测算第一步",
+          "算下一步"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "310f8819122907b0841fe855340b75ac007c31b6fd23148ff80bf14e5c65a713",
+          "currentContentFingerprint": "11c0bcf7beb064b4de9597c6e00bb5ce0cfdced05ed749dfbd5c006cac868980",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "G3-U02-B03-A: AST独立计算=5",
+          "G3-U02-B03-B: AST独立计算=14"
+        ],
+        "actionsPerformed": [
+          "场景 A",
+          "(12 ＋ 8)",
+          "按预测算第一步",
+          "按预测算第一步",
+          "算下一步",
+          "场景 B",
+          "8 ÷ 4",
+          "按预测算第一步",
+          "按预测算第一步",
+          "算下一步"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-B03-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "G3-U02-B04-A: AST独立计算=31"
+        ],
+        "actionsPerformed": [
+          "恢复初始状态",
+          "36 － 8",
+          "按预测算第一步",
+          "按预测算第一步",
+          "算下一步"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B04-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B04-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B04-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B04-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B04-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B04-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B04-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "afc2b81602e94b0093762b01a5c1aebcd8b0061f85d3659aaf76486c78c365e1",
+          "currentContentFingerprint": "48474dc225600c168018af477b82aeab68b9dd3dd87f4989aa816a9597ae4601",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-09.4",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "G3-U02-B05-A: AST独立计算=15"
+        ],
+        "actionsPerformed": [
+          "恢复初始状态",
+          "4 × 6",
+          "按预测算第一步",
+          "按预测算第一步",
+          "算下一步"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B05-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B05-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B05-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B05-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B05-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B05-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-B05-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "G3-U02-E01-A: AST独立计算=15",
+          "G3-U02-E01-B: AST独立计算=50"
+        ],
+        "actionsPerformed": [
+          "场景 A",
+          "(8 － 3)",
+          "按预测算第一步",
+          "按预测算第一步",
+          "算下一步",
+          "场景 B",
+          "(28 － 8)",
+          "按预测算第一步",
+          "按预测算第一步",
+          "算下一步"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U02-E01-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "完整推理/不变量和典型错误纠正"
+        ],
+        "actionsPerformed": [
+          "重新探索",
+          "14＋6",
+          "把净支出放进钱袋",
+          "14－6",
+          "把净支出放进钱袋"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E03-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E03-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E03-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E03-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E03-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E03-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E03-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "abc8c0b70254cfafe155fb9e133cf06de92c1d870e2b0622839c44deb8d77628",
+          "currentContentFingerprint": "d5c2cc6d028736e8bff1c28399104c1ba75a4db29162a8c7cd33ebdb82012200",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "完整推理/不变量和典型错误纠正"
+        ],
+        "actionsPerformed": [
+          "重新探索",
+          "总人数＝6÷2",
+          "按选择平均分",
+          "总人数＝6×2",
+          "按选择平均分"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "6a9e62124e9765635418763df014cc738cf28b47ee88fdce6cf43166efa1a364",
+          "currentContentFingerprint": "17664a13128750e429fb89ac60bb02050c82af08d71c77925775e6f8d52e3c98",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-18.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "完整推理/不变量和典型错误纠正"
+        ],
+        "actionsPerformed": [
+          "重新探索",
+          "换计数方向：3组，每组4",
+          "执行并核对预测"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E04-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E04-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E04-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E04-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E04-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E04-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E04-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "854d98e61442834560823b80d68472bdfda6dfc89368cf3222ccbe6073d4ebc5",
+          "currentContentFingerprint": "9ce8699aa9faba2f0d7d9d7ff283fd88364d69b1d74a227700aff50854063125",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-18.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "完整推理/不变量和典型错误纠正"
+        ],
+        "actionsPerformed": [
+          "重新探索",
+          "执行并核对预测"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E05-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E05-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E05-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E05-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E05-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E05-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-E05-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "6e561b5953e8aafa5635a51cbde28092088d570affb5eee593b3a9f704bd00e2",
+          "currentContentFingerprint": "e470cd10540e09ebf5b36c5cb59f962803caeda4f771d3ba0472d20f20e6ebc9",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "完整推理/不变量和典型错误纠正"
+        ],
+        "actionsPerformed": [
+          "重新探索",
+          "减去7",
+          "除以4",
+          "减去7"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "7cfe5676caea9d65b107100558ed8c3e0e48edc0959a27f98dc42116b751b1af",
+          "currentContentFingerprint": "95a97901d3f6f69556fc86d0e549015468d7ff0d6eb6e2f0fa238b660ccf447b",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "完整推理/不变量和典型错误纠正"
+        ],
+        "actionsPerformed": [
+          "重新探索",
+          "□只包住8",
+          "替换所选对象",
+          "□包住（12＋8）",
+          "替换所选对象"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U02-O02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "035bf9c4a1b3f65b79a6432e9a542b3b57b814b28c6c7c6194062a48349db0a9",
+          "currentContentFingerprint": "1e401b383627e0114ebd098992e4959346838975c297119f7d5bee3fb8c3b377",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-18.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "长度/点数/端点单位不变量，完整与边界撤回"
+        ],
+        "actionsPerformed": [
+          "把零刻度对齐左端",
+          "试试零刻度坏了",
+          "和我的预测核对"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "长度/点数/端点单位不变量，完整与边界撤回"
+        ],
+        "actionsPerformed": [
+          "回学校",
+          "再走200米",
+          "再走200米",
+          "再走200米",
+          "再走200米",
+          "再走200米",
+          "退一段",
+          "再走200米"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "实物模型的目标关系、照片或等量替换经最终状态断言"
+        ],
+        "actionsPerformed": [
+          "称米袋",
+          "用千克显示",
+          "杯、水与净重",
+          "称完整的一杯水",
+          "拆开称：空杯＋水",
+          "从秤上拿走单独的水",
+          "天平与砝码",
+          "添加200克砝码",
+          "添加200克砝码",
+          "添加500克砝码",
+          "撤销上次操作"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "868e8092bf89edeb956275ebc2be5eebb0aadb43413dad88a0b18ef9a2a12767",
+          "currentContentFingerprint": "487695c9300405c8bb3fb9d04e775f25e3aeab6d1997a3bdd0209a588805a1ee",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-07.2",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "实物模型的目标关系、照片或等量替换经最终状态断言"
+        ],
+        "actionsPerformed": [
+          "模型象上船",
+          "标记模型象的水线",
+          "把模型象请下船",
+          "石块2上船",
+          "石块4上船",
+          "石块5上船",
+          "称这一块，记下读数",
+          "称这一块，记下读数",
+          "称这一块，记下读数",
+          "用水线与读数验证替换",
+          "试试多上一名乘员",
+          "用水线与读数验证替换",
+          "请乘员下船",
+          "用水线与读数验证替换"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP01-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "b6cb1b57c6bd1ed4bc29e6a85a66cb4ab3843e76288c3b779fce3fa5f4a6fb80",
+          "currentContentFingerprint": "a7d0b21577ebf7d5a6d5b1854e210381cd3a269ae291dddc8bd7d406ea26c6f9",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-07.2",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "完成当前情境的数学目标及可用错误路径",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"total\":36,\"target\":36,\"normalized\":true}"
+        ],
+        "actionsPerformed": [
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "捆10个一 → 1个十"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B01-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"pending\":48,\"shares\":[],\"total\":48,\"equal\":false,\"normalized\":true}"
+        ],
+        "actionsPerformed": [
+          "捆10个一 → 1个十",
+          "捆10个一 → 1个十",
+          "撤销上次操作"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U04-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "94bf611bd185f5f3fef1eb234d852e6dbbae52111f055d44e8f123be0c51da4a",
+          "currentContentFingerprint": "f037ef0aafd1ccc06efdccd09b41b7b463fd03d22558b250d9a29a7683a797cf",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "完成当前情境的数学目标及可用错误路径",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"total\":1176,\"target\":1176,\"normalized\":true}"
+        ],
+        "actionsPerformed": [
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "捆10个一 → 1个十",
+          "捆10个一 → 1个十",
+          "捆10个一 → 1个十",
+          "捆10个一 → 1个十",
+          "捆10个一 → 1个十",
+          "捆10个十 → 1个百",
+          "捆10个十 → 1个百",
+          "捆10个十 → 1个百",
+          "捆10个百 → 1个千",
+          "捆10个一 → 1个十"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B03-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "完成当前情境的数学目标及可用错误路径",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"total\":4832,\"target\":4832,\"normalized\":true}"
+        ],
+        "actionsPerformed": [
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "再放入一组",
+          "捆10个一 → 1个十",
+          "捆10个一 → 1个十",
+          "捆10个一 → 1个十",
+          "捆10个百 → 1个千",
+          "捆10个百 → 1个千",
+          "捆10个百 → 1个千",
+          "捆10个百 → 1个千",
+          "捆10个一 → 1个十"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B04-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "完成当前情境的数学目标及可用错误路径",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"exact\":3184,\"low\":3120,\"high\":3200,\"budget\":3200,\"reference\":3200,\"guarantee\":\"sure-enough\"}"
+        ],
+        "actionsPerformed": [
+          "把人数估成390",
+          "把人数估成400",
+          "精算后检验预算"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U04-B05-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "线段：两个端点",
+          "射线：一个端点",
+          "直线：没有端点",
+          "源图形几何和数学关系已手工源审，静态对照不冒充操作"
+        ],
+        "actionsPerformed": [],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B01-static-relation-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "0e30c181c44f30f15a0b88eb8f770a870b63930f99d8ff4b6d7b33e375d69a77",
+          "currentContentFingerprint": "9f50faf4896fe1961e7a7fcbb6a8f0ed2ecfc886e7fc2911a1f62f1dc735a845",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"degrees\":90,\"kind\":\"直角\"}"
+        ],
+        "actionsPerformed": [
+          "叠上直角工具",
+          "让上边对齐直角边",
+          "让上边对齐直角边"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "0a3147c5e396f1aa1fbfb531139616d0ee3ac32996ebe7f66a8672f2681b423d",
+          "currentContentFingerprint": "25fb5db50d520bc735fa5fbb289b729db168ca954656b4b5ccbd825352d89514",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"degrees\":90,\"kind\":\"直角\"}"
+        ],
+        "actionsPerformed": [
+          "叠上直角工具",
+          "让上边对齐直角边",
+          "让上边对齐直角边"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B03-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B03-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B03-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B03-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B03-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B03-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U05-B03-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "ea3c8161b13e03f13d18a8a2d458f8adee00b9cd11a23dc1d88272ccfec84454",
+          "currentContentFingerprint": "4417b689cf50060b85b351775b892d3285d0ab39629df174268064942d869769",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"equal\":true,\"parts\":4,\"selected\":1,\"length\":630,\"whole\":2520}"
+        ],
+        "actionsPerformed": [
+          "把折痕等距摆好",
+          "把折痕等距摆好",
+          "涂色或放回第1段"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "cad5211fb6cb4d7c2d946064a1241d7cfb8b8f6ca6f1112bf78f078e0c47e8a1",
+          "currentContentFingerprint": "5bc546f361c73e0a77a78a7b8232050e86df96177ed07878648a3129e1230d88",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"equal\":true,\"parts\":8,\"selected\":3,\"length\":945,\"whole\":2520}"
+        ],
+        "actionsPerformed": [
+          "把折痕等距摆好",
+          "把折痕等距摆好",
+          "涂色或放回第1段",
+          "涂色或放回第2段",
+          "涂色或放回第3段"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "6341c90e10380fd8dfb9e237302b21a556f436b7decec68cb95d6c1651817616",
+          "currentContentFingerprint": "161c9e5f09e9aa30cd2db3a22c8019f82a0ab154516b28672e01ebe58d595b10",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "完成当前情境的数学目标及可用错误路径",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"equal\":true,\"parts\":8,\"unit\":1,\"taken\":5,\"takenQuantity\":5,\"rest\":3,\"target\":5,\"complete\":true}"
+        ],
+        "actionsPerformed": [
+          "选择第1份",
+          "选择第2份",
+          "选择第3份",
+          "选择第4份",
+          "选择第5份",
+          "放回第2次取出的1份",
+          "选择第5份",
+          "选择第1份",
+          "撤销上次操作"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B03-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "完成当前情境的数学目标及可用错误路径",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"equal\":true,\"parts\":3,\"unit\":4,\"taken\":1,\"takenQuantity\":4,\"rest\":2,\"target\":1,\"complete\":true}"
+        ],
+        "actionsPerformed": [
+          "选择第1份",
+          "选择第1份",
+          "撤销上次操作"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B04-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "完成当前情境的数学目标及可用错误路径",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"equal\":true,\"parts\":8,\"unit\":3,\"taken\":3,\"takenQuantity\":9,\"rest\":5,\"target\":3,\"complete\":true}"
+        ],
+        "actionsPerformed": [
+          "选择第1份",
+          "选择第2份",
+          "选择第3份",
+          "选择第1份",
+          "撤销上次操作"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U06-B05-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"equal\":true,\"parts\":3,\"selected\":1,\"length\":840,\"whole\":2520}"
+        ],
+        "actionsPerformed": [
+          "把折痕等距摆好",
+          "把折痕等距摆好",
+          "相邻两小格合成一大格"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-E01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-E01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-E01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-E01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-E01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-E01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U06-E01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "acd7c3c8cc5fc6e2a7e4f91ed993125a7b8a19acfd1b4b41901d8c0218bc3b04",
+          "currentContentFingerprint": "a67a5dff734bd7c21476408b26981733478ee567fbcebce928e76267dbdabe53",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-18.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "36份",
+          "每份2张",
+          "已有20张",
+          "还缺？张",
+          "源图形几何和数学关系已手工源审，静态对照不冒充操作"
+        ],
+        "actionsPerformed": [],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-static-relation-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-U07-R01-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"count\":6,\"total\":6}"
+        ],
+        "actionsPerformed": [
+          "登记这套搭配",
+          "登记这套搭配",
+          "选上衣A",
+          "选裤子1",
+          "登记这套搭配",
+          "选上衣A",
+          "选裤子2",
+          "登记这套搭配",
+          "选上衣A",
+          "选裤子3",
+          "登记这套搭配",
+          "选上衣B",
+          "选裤子1",
+          "登记这套搭配",
+          "选上衣B",
+          "选裤子2",
+          "登记这套搭配",
+          "选上衣B",
+          "选裤子3",
+          "登记这套搭配"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-B01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U07-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "c64b9df9992926fdd88f0959c4ebb78f827a47232b7ed5684d52daf4df1a4801",
+          "currentContentFingerprint": "c9dbbf181dc8297e1616b6a3e98320665ad9cd2d52aa1b820ebc2d5667646f1f",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"holes\":2,\"folded\":false}"
+        ],
+        "actionsPerformed": [
+          "穿透两层打一孔",
+          "完全对折",
+          "穿透两层打一孔",
+          "完全展开"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L01-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "e3323fa609ce04891dc0adc8e90fd775aa619307b0472807016ce0baae168823",
+          "currentContentFingerprint": "84883abbe09afe81e666c8e2f75eed442a1220fb8e4f5cd718844fac05b7acf7",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"direction\":90,\"distance\":50}"
+        ],
+        "actionsPerformed": [
+          "向右平移两格",
+          "绕尾端转90°"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L01-B02-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "完成当前情境的数学目标及可用错误路径",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"shares\":[30,30,30],\"pending\":0,\"equal\":true,\"quotient\":30}"
+        ],
+        "actionsPerformed": [
+          "撤销上次操作"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B01-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"pending\":0,\"shares\":[13,13,13,13],\"total\":52,\"equal\":true,\"normalized\":true}"
+        ],
+        "actionsPerformed": [
+          "拆1个十 → 10个一",
+          "撤销上次操作",
+          "全部分配、故意不均分、退回修复"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "ea18a6f7f28d410e176136db76a995a154220140a15eee6bc0a8afb1b47a1a5e",
+          "currentContentFingerprint": "a24d7c5546a8567f166e45ea17055f53efcce5c4e2ba3b86dc4a79e0f713a246",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "完成当前情境的数学目标及可用错误路径",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"bags\":13,\"remainder\":1,\"complete\":true,\"total\":53}"
+        ],
+        "actionsPerformed": [
+          "检验余数",
+          "装一满袋",
+          "装一满袋",
+          "装一满袋",
+          "装一满袋",
+          "装一满袋",
+          "装一满袋",
+          "装一满袋",
+          "装一满袋",
+          "装一满袋",
+          "装一满袋",
+          "装一满袋",
+          "装一满袋",
+          "装一满袋",
+          "装一满袋",
+          "检验余数",
+          "拆回一袋",
+          "检验余数",
+          "装一满袋",
+          "检验余数"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B03-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"pending\":0,\"shares\":[102,102,102,102],\"total\":408,\"equal\":true,\"normalized\":true}"
+        ],
+        "actionsPerformed": [
+          "撤销上次操作",
+          "全部分配、故意不均分、退回修复"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B04-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B04-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B04-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B04-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B04-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B04-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L02-B04-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "193d140231b39e2f5569f56e11155a1036597dabd70a9fea2e7e21944f720e3a",
+          "currentContentFingerprint": "3e317efc0ea251ac3610ffd16b2ba9fbc081c7b4a0da5e6a05db08e0f9dc6ed5",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "完成当前情境的数学目标及可用错误路径",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"boxes\":8,\"count\":48,\"total\":48,\"complete\":true}"
+        ],
+        "actionsPerformed": [
+          "登记第1箱第1盒",
+          "登记第1箱第1盒",
+          "登记第1箱第2盒",
+          "登记第1箱第3盒",
+          "登记第1箱第4盒",
+          "登记第2箱第1盒",
+          "登记第2箱第2盒",
+          "登记第2箱第3盒",
+          "登记第2箱第4盒",
+          "反过来：按箱、盒分回去"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-operated-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L02-B05-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "evidence": {
+        "sha": "68233965bf401dac5328f8b43d18e9a8e352f397",
+        "prHeadSha": "68233965bf401dac5328f8b43d18e9a8e352f397",
+        "assertions": [
+          "完成当前情境的数学目标及可用错误路径",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"price\":6,\"newCost\":42,\"total\":24,\"newBoxes\":3,\"correct\":true}"
+        ],
+        "actionsPerformed": [
+          "总量不变",
+          "每份数量不变",
+          "重新分装：总量不变",
+          "总量不变"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-story-1440.png",
+          "prediction": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-prediction-1440.png",
+          "initial": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-operated-1440.png",
+          "why": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-why-1440.png",
+          "symbols": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-symbols-1440.png",
+          "verify": "docs/review/evidence-invariant-context-20261019/desktop-G3-L02-B06-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "长7，宽4",
+          "边长都是4",
+          "斜角菱形",
+          "四边相等还不够",
+          "源图形几何和数学关系已手工源审，静态对照不冒充操作"
+        ],
+        "actionsPerformed": [],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B01-static-relation-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "9b0f9ae9a92dc179ac167f78958e09998d335f787be12024b6b80ddf4ed4c45d",
+          "currentContentFingerprint": "ad41969ab234e137d2ae410b83d38261ce7c43ff4f31b2abb96315ff609494ef",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"walked\":26,\"perimeter\":26,\"edges\":[8,5,8,5]}"
+        ],
+        "actionsPerformed": [
+          "逐边描完外周；不计内部接缝"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "a5e1a104888ad948a12b9f5c911039ab2c027aeb67204a71d5bcb40ee38f7cac",
+          "currentContentFingerprint": "e6d4ed91bffbbc9c0eb8d733008007ece969abcd0220f181ade116691a84d876",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"joined\":true,\"edges\":6,\"perimeter\":18,\"walked\":18}"
+        ],
+        "actionsPerformed": [
+          "两块完整拼好",
+          "逐边描完外周；不计内部接缝"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-E01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-E01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-E01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-E01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-E01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-E01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L03-E01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "8c323e79df69f0d6d83c1c452f2c45ab85a9aaa1d6d6cee35ca5991c22ec8169",
+          "currentContentFingerprint": "37100117e6e2b82c21ab28b10841b2aa50e31102028530ee04b014904883bc9f",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-18.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "围栏",
+          "每小格1平方厘米",
+          "3行，每行4格",
+          "源图形几何和数学关系已手工源审，静态对照不冒充操作"
+        ],
+        "actionsPerformed": [],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B01-static-relation-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "56cecdd9f872adb1cfbab3b12f59e06eeda58e228b34f7f61eeeab8bd3b606aa",
+          "currentContentFingerprint": "f27b23bd651a92ff536777a73806d8f21de7b6c7008a296485c269c3bdbade1d",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"area\":24,\"total\":24,\"fullRows\":[6,6,6,6]}"
+        ],
+        "actionsPerformed": [
+          "铺第1块方砖",
+          "铺第2块方砖",
+          "铺第3块方砖",
+          "铺第4块方砖",
+          "铺第5块方砖",
+          "铺第6块方砖",
+          "铺第7块方砖",
+          "铺第8块方砖",
+          "铺第9块方砖",
+          "铺第10块方砖",
+          "铺第11块方砖",
+          "铺第12块方砖",
+          "铺第13块方砖",
+          "铺第14块方砖",
+          "铺第15块方砖",
+          "铺第16块方砖",
+          "铺第17块方砖",
+          "铺第18块方砖",
+          "铺第19块方砖",
+          "铺第20块方砖",
+          "铺第21块方砖",
+          "铺第22块方砖",
+          "铺第23块方砖",
+          "铺第24块方砖",
+          "铺第1块方砖"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "76df3a9186b10d11469cd3b8acf6fc1af69b5e33a026bbd91ceca1b8777f4536",
+          "currentContentFingerprint": "a5c5f454ea45d55fc66ddd5ccf98b0b61c1a4efcb920aed5c657c1cd9b451399",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"area\":40,\"overlap\":0,\"perimeter\":32}"
+        ],
+        "actionsPerformed": [
+          "把剪块移到右边",
+          "把剪块移到右边"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B03-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B03-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B03-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B03-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B03-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B03-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L04-B03-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "6798ada519a2335f6b4947995a2a5bad6836f204c24aea724a3410244f3e0d90",
+          "currentContentFingerprint": "103a7a29a881d60da14409f9ded4a2957d149695d27366e8919c0a841c85387c",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"counts\":[6,6,6],\"assigned\":18,\"incorrect\":[]}"
+        ],
+        "actionsPerformed": [
+          "选择安安",
+          "安安→0",
+          "选择贝贝",
+          "贝贝→1",
+          "选择晨晨",
+          "晨晨→2",
+          "选择多多",
+          "多多→0",
+          "选择恩恩",
+          "恩恩→1",
+          "选择芳芳",
+          "芳芳→2",
+          "选择果果",
+          "果果→0",
+          "选择欢欢",
+          "欢欢→1",
+          "选择佳佳",
+          "佳佳→2",
+          "选择可可",
+          "可可→0",
+          "选择乐乐",
+          "乐乐→1",
+          "选择萌萌",
+          "萌萌→2",
+          "选择宁宁",
+          "宁宁→0",
+          "选择平平",
+          "平平→1",
+          "选择琪琪",
+          "琪琪→2",
+          "选择然然",
+          "然然→0",
+          "选择森森",
+          "森森→1",
+          "选择甜甜",
+          "甜甜→2",
+          "核对一人一次与分组条件",
+          "试试给选中同学再投一票",
+          "撤销上次操作"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "0c984234247cae96f32b687082233762b8f5a94db39d54d81c7d71ca6c366547",
+          "currentContentFingerprint": "2356470876560b272f7c661d4bdadee84de84e69d7c88113ed9def658dcd772e",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"counts\":[2,4,2],\"assigned\":8,\"incorrect\":[]}"
+        ],
+        "actionsPerformed": [
+          "选择5分钟",
+          "5分钟→0",
+          "选择8分钟",
+          "8分钟→0",
+          "选择10分钟",
+          "10分钟→1",
+          "选择12分钟",
+          "12分钟→1",
+          "选择15分钟",
+          "15分钟→1",
+          "选择18分钟",
+          "18分钟→1",
+          "选择20分钟",
+          "20分钟→2",
+          "选择22分钟",
+          "22分钟→2",
+          "核对一人一次与分组条件",
+          "移动或选择10分钟",
+          "核对一人一次与分组条件",
+          "移动或选择10分钟",
+          "核对一人一次与分组条件"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L05-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "20cbb602be2b4482f0383c4732aa17715b52cb7803ab203423e3c0c91884bb12",
+          "currentContentFingerprint": "5e1fa4cd5eef51ea47c2204cd2ecda6e5ba98bf0178a5b2a63de06fcf80ae56b",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"days\":29,\"offset\":3,\"leap\":true}"
+        ],
+        "actionsPerformed": [
+          "2023年2月",
+          "2024年2月",
+          "1",
+          "选中的日期向后7天",
+          "选中的日期向后7天"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "d07fa48238bce761e5701c0d2f5d0c92961a09c514073795297d7f4b58005882",
+          "currentContentFingerprint": "d3c59d3dae36f6eee859357a73e62e831b844edfac345bf9104a96ee6e8946bf",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"elapsed\":45,\"hour\":16,\"minute\":5,\"reached\":true}"
+        ],
+        "actionsPerformed": [
+          "向前40分钟",
+          "向前5分钟",
+          "撤销上次操作",
+          "向前5分钟"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "bfd94ef5fed51dc94339335200d3c23715d1db0f4ab3bf6a8b0c5051add9e732",
+          "currentContentFingerprint": "7345b3c0510b0874381919d27ff680478ecf2aa6190945e02a8ebc0bf2862b37",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"days\":31,\"offset\":1,\"leap\":true}"
+        ],
+        "actionsPerformed": [
+          "2023年2月",
+          "2024年2月",
+          "1",
+          "选中的日期向后7天",
+          "选中的日期向后7天"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-E01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-E01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-E01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-E01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-E01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-E01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-LP01-E01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "120123efe41734137ccb86b531803eb026bf99c9255d3cc5105c03709edad51a",
+          "currentContentFingerprint": "e43a4800466069ee99f9841fe3a35f3b3c829d32a2a44e20bea8ff2f37f0f065",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-18.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"cm\":133,\"dm\":13.3,\"m\":1.33}"
+        ],
+        "actionsPerformed": [
+          "数字5",
+          "数字3",
+          "数位对齐与越界拦截"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "fd1156031b15c5e1a1bc8bf4eda92c4c5296214596bd30f6a3a9faf1e26ad710",
+          "currentContentFingerprint": "fccf5f340640734687f5fcfe4dd7e3d6092c9ce8354eb8c9383f6fa17b13f688",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"cm\":93,\"dm\":9.3,\"m\":0.93}"
+        ],
+        "actionsPerformed": [
+          "数字5",
+          "数字3",
+          "数位对齐与越界拦截"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B02-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B02-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B02-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B02-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B02-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B02-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L06-B02-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "f055b97f4c995c09f85ba598097b9e5e374ec3958d8c80383b341de848af90f4",
+          "currentContentFingerprint": "69b507a6eeab751de9637837930348ccb8052bc467286046e21724f19d3646fa",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "evidence": {
+        "sha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "prHeadSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+        "assertions": [
+          "3.8元",
+          "2.5元",
+          "8角＋5角＝13角",
+          "把10角换成1元",
+          "源图形几何和数学关系已手工源审，静态对照不冒充操作"
+        ],
+        "actionsPerformed": [],
+        "screenshots": {
+          "story": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-story-1440.png",
+          "prediction": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-prediction-1440.png",
+          "initial": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-static-relation-1440.png",
+          "why": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-why-1440.png",
+          "symbols": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-symbols-1440.png",
+          "verify": "docs/review/evidence-remaining-visuals-20261019/desktop-G3-L06-B03-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "24人，每人2张纸",
+          "每包12张，6元",
+          "本题不另给库存",
+          "15:10—15:50",
+          "源图形几何和数学关系已手工源审，静态对照不冒充操作"
+        ],
+        "actionsPerformed": [],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-R01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-R01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-R01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-R01-static-relation-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-R01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-R01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-R01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "1ab8a0f74f3121a820532f47f4998f6fd30a1142d5f2185dafda7e41ca4ce8e3",
+          "currentContentFingerprint": "fc8fd9b9c517be731eb400ff6f20bab817d269b52e4cf13ed4cad03194dbc151",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"counts\":[5,3,4],\"assigned\":12,\"incorrect\":[],\"total\":12}"
+        ],
+        "actionsPerformed": [
+          "选择安安",
+          "安安→0",
+          "选择贝贝",
+          "贝贝→0",
+          "选择晨晨",
+          "晨晨→0",
+          "选择多多",
+          "多多→0",
+          "选择恩恩",
+          "恩恩→0",
+          "选择芳芳",
+          "芳芳→1",
+          "选择果果",
+          "果果→1",
+          "选择欢欢",
+          "欢欢→1",
+          "选择佳佳",
+          "佳佳→2",
+          "选择可可",
+          "可可→2",
+          "选择乐乐",
+          "乐乐→2",
+          "选择萌萌",
+          "萌萌→2",
+          "核对一人一次与分组条件",
+          "移动或选择芳芳",
+          "核对一人一次与分组条件",
+          "移动或选择芳芳",
+          "核对一人一次与分组条件"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-B01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-L07-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "b5dad135cceec6ecc60eb081d6d3cd0e71531b9296f8802b4eaa982c7c36207d",
+          "currentContentFingerprint": "257787e89ad35385b704a2a44bc3bebab3ea27f9368f5cc3e553da77b3b61d2b",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "长度/点数/端点单位不变量，完整与边界撤回"
+        ],
+        "actionsPerformed": [
+          "两板首尾相接",
+          "和我的预测核对"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-E01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "b38a479e6886a16236339145fd888ad8fda24663cf95665b7a60c138667b1158",
+          "currentContentFingerprint": "64384177bfe04ec701bad481f17a8ab4edb199bfe76dec47f68bde671785e7db",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-18.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "evidence": {
+        "sha": "948a5574aface16815c8dadbda08ed70fc0d21e4",
+        "prHeadSha": "948a5574aface16815c8dadbda08ed70fc0d21e4",
+        "assertions": [
+          "长度/点数/端点单位不变量，完整与边界撤回"
+        ],
+        "actionsPerformed": [
+          "接上一个链环",
+          "收起接头放大",
+          "看接头的两个5毫米",
+          "撤下最后一个链环",
+          "接上一个链环",
+          "接上一个链环",
+          "接上一个链环",
+          "接上一个链环",
+          "接上一个链环",
+          "放大第1处接头",
+          "撤下最后一个链环",
+          "接上一个链环",
+          "和我的预测核对",
+          "和我的预测核对"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-story-1440.png",
+          "prediction": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-prediction-1440.png",
+          "initial": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-experiment-initial-1440.png",
+          "operated": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-operated-1440.png",
+          "why": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-why-1440.png",
+          "symbols": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-symbols-1440.png",
+          "verify": "docs/review/evidence-chain-overview-20261019/desktop-G3-U03-E02-verify-1440.png"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "长度/点数/端点单位不变量，完整与边界撤回"
+        ],
+        "actionsPerformed": [
+          "一条直绳",
+          "退一段",
+          "六段全部走完与退回",
+          "把首尾接起来",
+          "退一段",
+          "六段全部走完与退回"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-O01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-O01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-O01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-O01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-O01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-O01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-U03-O01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "694c23db42f311724ebed861979774d3db51ce2167ccc1c507d098901a4cb72e",
+          "currentContentFingerprint": "c1d812acb89e49c946531214c5d5cd091ec8989d2be1488dbb46f26d37e6dec2",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-02.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "基础桥梁完整关系与逆操作/守恒对照"
+        ],
+        "actionsPerformed": [
+          "回到6份，拿2份",
+          "把每2小份合成1大份",
+          "同整体重组及不同整体实际量"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.fractions.meaning-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.fractions.meaning-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.fractions.meaning-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.fractions.meaning-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.fractions.meaning-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.fractions.meaning-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.fractions.meaning-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "基础桥梁完整关系与逆操作/守恒对照"
+        ],
+        "actionsPerformed": [
+          "重新数一次",
+          "第1块地垫",
+          "第2块地垫",
+          "第3块地垫",
+          "第4块地垫",
+          "第5块地垫",
+          "第6块地垫",
+          "第7块地垫",
+          "第8块地垫",
+          "第9块地垫",
+          "第10块地垫",
+          "第11块地垫",
+          "第12块地垫",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "2排 · 每排6块",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米",
+          "沿外圈走1厘米"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-geometry.area.perimeter-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-geometry.area.perimeter-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-geometry.area.perimeter-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-geometry.area.perimeter-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-geometry.area.perimeter-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-geometry.area.perimeter-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-geometry.area.perimeter-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "基础桥梁完整关系与逆操作/守恒对照"
+        ],
+        "actionsPerformed": [
+          "合上盒子，再数一次",
+          "打开第1盒",
+          "打开第2盒",
+          "打开第3盒"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.substitution.intro-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.substitution.intro-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.substitution.intro-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.substitution.intro-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.substitution.intro-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.substitution.intro-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.substitution.intro-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "963a23b4ba1d65400f5ad3d8dbf0bf3b6cfab7142b998c994d0ce5832ab9159b",
+          "currentContentFingerprint": "57e7705d704642fc347cb3bf36b3988cdf57a18d171f0db9b484b13d7608cfb3",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-18.1",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "基础桥梁完整关系与逆操作/守恒对照"
+        ],
+        "actionsPerformed": [
+          "1袋＋3颗，共10颗",
+          "只从左边拿走3颗",
+          "回到开始",
+          "两边各拿走3颗"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.balance.intro-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.balance.intro-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.balance.intro-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.balance.intro-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.balance.intro-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.balance.intro-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-algebra.balance.intro-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "基础桥梁完整关系与逆操作/守恒对照"
+        ],
+        "actionsPerformed": [
+          "拿出全部苹果，重新配一次",
+          "摆开一点"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.quantity.intro-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.quantity.intro-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.quantity.intro-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.quantity.intro-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.quantity.intro-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.quantity.intro-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.quantity.intro-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "基础桥梁完整关系与逆操作/守恒对照"
+        ],
+        "actionsPerformed": [
+          "回到左3、右2",
+          "右篮挪1个到左篮",
+          "左篮挪1个到右篮",
+          "从厨房新添1个到右篮"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.addition.meaning-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.addition.meaning-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.addition.meaning-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.addition.meaning-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.addition.meaning-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.addition.meaning-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.addition.meaning-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": null
+      }
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "基础桥梁完整关系与逆操作/守恒对照"
+        ],
+        "actionsPerformed": [
+          "送出贴纸：求剩下",
+          "把送出的贴纸拿回来",
+          "送出第1张贴纸",
+          "送出第2张贴纸",
+          "送出第3张贴纸",
+          "送出第4张贴纸",
+          "送出第5张贴纸",
+          "比较两人的贴纸：求相差",
+          "两人各新得1张",
+          "只有朋友新得1张"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.subtraction.meaning-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.subtraction.meaning-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.subtraction.meaning-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.subtraction.meaning-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.subtraction.meaning-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.subtraction.meaning-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-numbers.subtraction.meaning-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": null
+      }
+    }
+  ]
+}

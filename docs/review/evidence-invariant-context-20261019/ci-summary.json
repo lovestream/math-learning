@@ -1,0 +1,167 @@
+[
+  {
+    "name": "verify-remaining-visuals-browser",
+    "passed": true,
+    "sceneSwitches": "A/B/A for 3 courses; complete operations, wrong path, undo and refresh",
+    "prototypes": [
+      "money-exchange",
+      "supply-plan",
+      "fixed-total"
+    ],
+    "regroupCases": 6,
+    "stableMaterialIds": true,
+    "inverseExistingTaskLinks": 11,
+    "noExtraPoints": true,
+    "realLearnerData": false,
+    "screenshots": [
+      "output/playwright/v2-audit/remaining-brackets-A-1440.png",
+      "output/playwright/v2-audit/remaining-brackets-A-objects-1440.png",
+      "output/playwright/v2-audit/remaining-brackets-B-1440.png",
+      "output/playwright/v2-audit/remaining-brackets-B-objects-1440.png",
+      "output/playwright/v2-audit/remaining-brackets-A-1440.png",
+      "output/playwright/v2-audit/remaining-brackets-A-objects-1440.png",
+      "output/playwright/v2-audit/remaining-money-exchange-before-1440.png",
+      "output/playwright/v2-audit/remaining-money-exchange-after-1440.png",
+      "output/playwright/v2-audit/remaining-supply-plan-before-1440.png",
+      "output/playwright/v2-audit/remaining-supply-plan-after-1440.png",
+      "output/playwright/v2-audit/remaining-regroup-before-1440.png",
+      "output/playwright/v2-audit/remaining-regroup-after-1440.png",
+      "output/playwright/v2-audit/remaining-regroup-math-1440.png",
+      "output/playwright/v2-audit/remaining-motion-trails-1440.png",
+      "output/playwright/v2-audit/remaining-inverse-index-1440.png"
+    ],
+    "errors": [],
+    "source": {
+      "prHeadSha": "68233965bf401dac5328f8b43d18e9a8e352f397",
+      "sha": "68233965bf401dac5328f8b43d18e9a8e352f397",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-19T11:53:14.308Z"
+    }
+  },
+  {
+    "name": "verify-desktop-semantic-browser",
+    "passed": true,
+    "rows": [
+      {
+        "lessonId": "G3-L02-B06",
+        "title": "归一与归总：先找哪个量没有变",
+        "unitId": "G3-L02",
+        "actionsPerformed": [
+          "总量不变",
+          "每份数量不变",
+          "重新分装：总量不变",
+          "总量不变"
+        ],
+        "assertions": [
+          "完成当前情境的数学目标及可用错误路径",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"price\":6,\"newCost\":42,\"total\":24,\"newBoxes\":3,\"correct\":true}"
+        ],
+        "mathBehavior": "full-path-verified",
+        "savedState": {
+          "choice": 0,
+          "take": 2,
+          "mode": "total",
+          "error": "",
+          "checked": false,
+          "stateKind": "textbook",
+          "textbookVersion": 1,
+          "modelStateVersion": "textbook.core.v1",
+          "sceneId": "G3-L02-B06-MODEL1",
+          "actions": [
+            {
+              "action": "choose-case",
+              "before": "{\"choice\":0,\"take\":0,\"mode\":\"price\"}",
+              "after": "{\"choice\":0,\"take\":0,\"mode\":\"price\",\"error\":\"\",\"checked\":false}",
+              "valid": true,
+              "at": "2026-10-19T11:54:08.755Z"
+            },
+            {
+              "action": "select-fixed",
+              "before": "{\"choice\":0,\"take\":0,\"mode\":\"price\",\"error\":\"\",\"checked\":false}",
+              "after": "{\"choice\":0,\"take\":2,\"mode\":\"price\",\"error\":\"购买数量变了，总价会随数量变化。\",\"checked\":false}",
+              "valid": false,
+              "at": "2026-10-19T11:54:08.795Z"
+            },
+            {
+              "action": "select-fixed",
+              "before": "{\"choice\":0,\"take\":2,\"mode\":\"price\",\"error\":\"购买数量变了，总价会随数量变化。\",\"checked\":false}",
+              "after": "{\"choice\":0,\"take\":1,\"mode\":\"price\",\"error\":\"\",\"checked\":false}",
+              "valid": true,
+              "at": "2026-10-19T11:54:08.828Z"
+            },
+            {
+              "action": "choose-invariant",
+              "before": "{\"choice\":0,\"take\":1,\"mode\":\"price\",\"error\":\"\",\"checked\":false}",
+              "after": "{\"choice\":0,\"take\":0,\"mode\":\"total\",\"error\":\"\",\"checked\":false}",
+              "valid": true,
+              "at": "2026-10-19T11:54:08.861Z"
+            },
+            {
+              "action": "select-fixed",
+              "before": "{\"choice\":0,\"take\":0,\"mode\":\"total\",\"error\":\"\",\"checked\":false}",
+              "after": "{\"choice\":0,\"take\":2,\"mode\":\"total\",\"error\":\"\",\"checked\":false}",
+              "valid": true,
+              "at": "2026-10-19T11:54:08.895Z"
+            }
+          ]
+        },
+        "screenshots": {
+          "story": "output/playwright/v2-audit/desktop-G3-L02-B06-story-1440.png",
+          "prediction": "output/playwright/v2-audit/desktop-G3-L02-B06-prediction-1440.png",
+          "initial": "output/playwright/v2-audit/desktop-G3-L02-B06-experiment-initial-1440.png",
+          "operated": "output/playwright/v2-audit/desktop-G3-L02-B06-operated-1440.png",
+          "why": "output/playwright/v2-audit/desktop-G3-L02-B06-why-1440.png",
+          "symbols": "output/playwright/v2-audit/desktop-G3-L02-B06-symbols-1440.png",
+          "verify": "output/playwright/v2-audit/desktop-G3-L02-B06-verify-1440.png"
+        },
+        "keyboardFocus": null,
+        "widths": [
+          {
+            "width": 1366,
+            "height": 768,
+            "actionsPerformed": 4,
+            "screenshot": "output/playwright/v2-audit/desktop-G3-L02-B06-operated-1366.png"
+          },
+          {
+            "width": 1440,
+            "height": 900,
+            "actionsPerformed": 4,
+            "screenshot": "output/playwright/v2-audit/desktop-G3-L02-B06-operated-1440.png"
+          },
+          {
+            "width": 1920,
+            "height": 1080,
+            "actionsPerformed": 4,
+            "screenshot": "output/playwright/v2-audit/desktop-G3-L02-B06-operated-1920.png"
+          }
+        ],
+        "result": "pass",
+        "contentFingerprint": "fa52651c273efdbb2db74172d3e2d38795f195e94a756a94c0602d14e2a7df57"
+      }
+    ],
+    "opened": 1,
+    "fullMathPaths": 1,
+    "staticRelations": 0,
+    "desktopWidths": [
+      1366,
+      1440,
+      1920
+    ],
+    "desktopZoom": {
+      "status": "separate-suite",
+      "script": "scripts/verify-desktop-zoom-browser.js",
+      "method": "native Chromium profile HostZoomMap preferences, not CSS font injection or pinch"
+    },
+    "realLearnerData": false,
+    "errors": [],
+    "source": {
+      "prHeadSha": "68233965bf401dac5328f8b43d18e9a8e352f397",
+      "sha": "68233965bf401dac5328f8b43d18e9a8e352f397",
+      "dirty": false,
+      "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "startedAt": "2026-10-19T11:53:14.308Z"
+    }
+  }
+]

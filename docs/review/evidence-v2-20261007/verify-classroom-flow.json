@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "coreCorrect": 3,
+  "selfCorrection": true,
+  "first": {
+    "value": "c1"
+  },
+  "final": {
+    "value": "c0",
+    "check0": "done",
+    "check1": "done",
+    "check2": "done",
+    "checkFinal": "done",
+    "checkReflection": "同水线比较全部载重，包括新上的人。"
+  },
+  "review": {
+    "dueAt": "2026-10-08T10:24:51.744Z",
+    "stage": 0,
+    "scheduleVersion": 2,
+    "createdAt": "2026-10-07T10:24:51.744Z",
+    "history": [],
+    "successDates": [],
+    "firstLearnedAt": "2026-10-07T10:24:51.744Z",
+    "firstLearnedDay": "2026-10-07"
+  },
+  "coins": 11
+}

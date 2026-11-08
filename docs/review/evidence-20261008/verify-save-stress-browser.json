@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "pointerMoves": 65,
+  "gestureHistory": 1,
+  "operations": 44,
+  "historyBound": 30,
+  "multiTabConflict": true,
+  "offlineRetry": true,
+  "navigationBlockedOnFailure": true,
+  "browserBackBlockedOnFailure": true,
+  "importExport": true
+}

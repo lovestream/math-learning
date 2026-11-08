@@ -1,0 +1,198 @@
+{
+  "schemaVersion": "detective-inbox.v1",
+  "bundleRevision": 1,
+  "createdAt": "2026-10-26T13:40:00.000Z",
+  "producer": "chatgpt-github",
+  "privacy": "public-anonymized-math-only",
+  "policy": "auto-if-independently-verified",
+  "bundleId": "DT-20261026-AVG-REVERSE-A",
+  "sourceFingerprint": "6f000df5ee0a07644042b305825d412aed9ff3660560bde3635b24fd9bd7ab10",
+  "cases": [
+    {
+      "id": "DT-20261026-AVG-REVERSE-A-A",
+      "role": "transfer-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "逆向侦探 · 已知每颗求总量",
+        "prompt": "每颗玻璃珠平均重2克，共有12颗。总质量应是多少？检查小智的过程（匿名模拟）。",
+        "steps": [
+          "已知12颗，每颗2克。",
+          "12÷2＝6（克），所以总质量6克。"
+        ],
+        "verdict": "wrong",
+        "errorStep": 1,
+        "reasons": [
+          "求总质量要用颗数乘每颗质量，不应把12除以2。",
+          "有12颗和2克两个数字，就一定应该相除。",
+          "玻璃珠都是小物品，结果必须小于颗数。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "总质量是多少克？",
+          "unit": "克",
+          "options": [],
+          "answer": "24"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "反查：24克分给12颗，每颗平均几克？",
+          "unit": "克",
+          "options": [],
+          "answer": "2"
+        },
+        "hints": [
+          "已知的是一颗重多少。",
+          "总质量是12个2克相加。",
+          "算12×2，再除以12检查。"
+        ],
+        "solution": "12×2＝24克；24÷12＝2克。",
+        "family": "MASS_AVERAGE_INVERSE",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "数量12颗",
+            "每颗2克",
+            "求总质量"
+          ]
+        }
+      },
+      "verification": {
+        "template": "mass-average-inverse-v1",
+        "parameters": {
+          "mode": "wrong",
+          "ask": "total",
+          "item": "玻璃珠",
+          "count": 12,
+          "averageGrams": 2
+        },
+        "firstWrongStep": 1
+      }
+    },
+    {
+      "id": "DT-20261026-AVG-REVERSE-A-B",
+      "role": "transfer-error",
+      "simulatedSteps": true,
+      "content": {
+        "title": "逆向侦探 · 已知总量求颗数",
+        "prompt": "一堆差不多大的花生米合计8克，平均每颗0.5克。一共约有多少颗？检查小智的算式（匿名模拟）。",
+        "steps": [
+          "总质量8克，每颗平均0.5克。",
+          "8×0.5＝4（颗），所以约有4颗。"
+        ],
+        "verdict": "wrong",
+        "errorStep": 1,
+        "reasons": [
+          "颗数＝总质量÷每颗质量，而不是相乘。",
+          "只要有0.5就必须乘0.5。",
+          "求颗数应该先加上每颗质量。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "约有多少颗？",
+          "unit": "颗",
+          "options": [],
+          "answer": "16"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "反查：16颗每颗0.5克，共多少克？",
+          "unit": "克",
+          "options": [],
+          "answer": "8"
+        },
+        "hints": [
+          "问的是可以分成几个0.5克。",
+          "8÷0.5能得到颗数。",
+          "算16×0.5核对总质量。"
+        ],
+        "solution": "8÷0.5＝16颗；反查16×0.5＝8克。",
+        "family": "MASS_AVERAGE_INVERSE",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "总质量8克",
+            "每颗约0.5克",
+            "求颗数"
+          ]
+        }
+      },
+      "verification": {
+        "template": "mass-average-inverse-v1",
+        "parameters": {
+          "mode": "wrong",
+          "ask": "count",
+          "item": "花生米",
+          "totalGrams": 8,
+          "averageGrams": 0.5
+        },
+        "firstWrongStep": 1
+      }
+    },
+    {
+      "id": "DT-20261026-AVG-REVERSE-A-C",
+      "role": "correct-control",
+      "simulatedSteps": true,
+      "content": {
+        "title": "逆向侦探 · 正确推理",
+        "prompt": "一些同样大小的玻璃珠合计36克，每颗平均6克。小智求颗数（匿名模拟）。",
+        "steps": [
+          "总质量36克，每颗6克。",
+          "36÷6＝6（颗）。"
+        ],
+        "verdict": "correct",
+        "errorStep": null,
+        "reasons": [
+          "总质量除以每颗质量得到颗数，6×6＝36克也能验证。",
+          "因为36和6都含6，所以答案一定是6。",
+          "正确题必须找到一行改掉。"
+        ],
+        "reason": 0,
+        "repair": {
+          "kind": "number",
+          "question": "玻璃珠有多少颗？",
+          "unit": "颗",
+          "options": [],
+          "answer": "6"
+        },
+        "verify": {
+          "kind": "number",
+          "question": "反查：6颗每颗6克，一共多少克？",
+          "unit": "克",
+          "options": [],
+          "answer": "36"
+        },
+        "hints": [
+          "识别总质量和每颗质量。",
+          "问可以分成多少份6克。",
+          "再用颗数×每颗质量验证。"
+        ],
+        "solution": "36÷6＝6颗；6×6＝36克。原过程完全正确。",
+        "family": "MASS_AVERAGE_INVERSE",
+        "sourceNotes": "",
+        "visual": {
+          "kind": "manual",
+          "values": [
+            "总质量36克",
+            "每颗6克",
+            "求数量"
+          ]
+        }
+      },
+      "verification": {
+        "template": "mass-average-inverse-v1",
+        "parameters": {
+          "mode": "correct",
+          "ask": "count",
+          "item": "玻璃珠",
+          "totalGrams": 36,
+          "averageGrams": 6
+        },
+        "firstWrongStep": null
+      }
+    }
+  ]
+}

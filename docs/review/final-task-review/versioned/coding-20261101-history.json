@@ -1,0 +1,713 @@
+{
+  "baseline": "4fd7fb9c0693b6a045418c509f212aa90907d068",
+  "scope": "仅保存被改课程的旧台账与旧场景；原849题审校清单保持原字节",
+  "classroom": {
+    "lessonId": "G3-UP02-B01",
+    "title": "数字有时表示身份，而不是多少",
+    "unitId": "G3-UP02",
+    "unitTitle": "数字编码",
+    "track": "foundation",
+    "sourceAnchor": [
+      {
+        "id": "G3-upper",
+        "purpose": "教材单元：数字编码，印刷页57–60",
+        "status": "local-textbook-reference"
+      }
+    ],
+    "contentVersion": "2026-10-09.4",
+    "editorialRevision": "2026-10-09.4",
+    "quantities": {
+      "object": "图书位置编码",
+      "unit": "架／层／格",
+      "known": "3架、每架4层8格；示例02-03-05",
+      "unknown": "不重号且可定位的地址",
+      "changes": "编号字段"
+    },
+    "contentFingerprint": "931ed33bb77257b03c7b0288109df37493e568fdcada063e279acac032cb6616",
+    "story": {
+      "text": "给图书馆每个书架的书贴号码，怎样避免两本书同号？",
+      "figure": {
+        "renderer": "src/studio/IntroVisual.tsx",
+        "spec": {
+          "type": "shelves",
+          "title": "书架的位置可以变成地址",
+          "caption": "示意一个书架的4层、每层8格。编号表示位置，不表示这里有多少本书。",
+          "values": [
+            4,
+            8
+          ],
+          "labels": []
+        }
+      }
+    },
+    "prediction": {
+      "question": "书的编号相邻，能把编号相加求书数吗？",
+      "options": [
+        "能，编号就是本数",
+        "编号越大书越多",
+        "不能，编号表示位置或身份"
+      ],
+      "figure": {
+        "type": "shelves",
+        "title": "书架的位置可以变成地址",
+        "caption": "示意一个书架的4层、每层8格。编号表示位置，不表示这里有多少本书。",
+        "values": [
+          4,
+          8
+        ],
+        "labels": []
+      }
+    },
+    "experiment": {
+      "widget": "conceptLab",
+      "blockId": "try",
+      "classification": "verified",
+      "mission": "给每个位置一个不重复、能找到的地址。",
+      "model": {
+        "type": "coding",
+        "version": "textbook.v1",
+        "title": "给书架位置编一个地址",
+        "limits": [
+          3,
+          4,
+          8
+        ]
+      },
+      "sourceInitialDescription": "3架4层8格的虚拟书架，字段架-层-格，例02-03-05。",
+      "sourceLearnerAction": "按编号定位，再给另一格编号并检查冲突。",
+      "sourceObservableChange": "每个三字段组合唯一定位，最多96位置；相同格不得领两种身份。",
+      "note": "运行参数以model为准，旧场景文字也列出用于发现不一致；不把模型状态匹配当正式判分"
+    },
+    "discovery": {
+      "statements": [
+        "编码把位置和顺序组织起来，目的在于查找与区分，不是做四则运算。"
+      ],
+      "retell": "编号为什么能帮助找位置，却不能直接用来求图书本数？"
+    },
+    "mathematicalLanguage": {
+      "statements": [
+        "书架号—层号—格号",
+        "编号用于查找；数量用于计数"
+      ],
+      "scope": "开头故事，未声明与变更后的实验条件自动同步"
+    },
+    "independentCheck": {
+      "scope": "巩固及撤教具练习，可能含已见原故事；不宣称整组为未见迁移",
+      "source": "core-existing-task-ids",
+      "tasks": [
+        {
+          "id": "G3-UP02-B01-P03",
+          "kind": "explanation",
+          "prompt": "不同架子的第1层第1本都只编01，可能有什么问题？",
+          "sourceSet": "core",
+          "novelty": "consolidation-not-certified-unseen"
+        },
+        {
+          "id": "G3-UP02-B01-P04",
+          "kind": "explanation",
+          "prompt": "同一个编号去掉前导0一定不影响识别吗？",
+          "sourceSet": "core",
+          "novelty": "consolidation-not-certified-unseen"
+        },
+        {
+          "id": "G3-UP02-B01-P07",
+          "kind": "explanation",
+          "prompt": "给三年级2班的第7号同学设计“年级1位、班级1位、序号2位”的编号，应该写什么？",
+          "sourceSet": "core",
+          "novelty": "consolidation-not-certified-unseen"
+        }
+      ],
+      "allTaskCounts": {
+        "warmup": 2,
+        "core": 3,
+        "transfer": 2,
+        "challenge": 1,
+        "review": 4
+      },
+      "selfCheckItems": 3
+    },
+    "review": {
+      "intervalDays": [
+        1,
+        3,
+        7,
+        21
+      ],
+      "technicalStatus": "shared-scheduler-regressions-separate-from-individual-course-delay-trials",
+      "teachingStatus": "requires-new-context-and-unassisted-trial"
+    },
+    "invariant": "位置编码唯一且字段含义固定，不等于数量",
+    "nextInspection": "核对架/层/格地址与所指位置，换编号不改变图书本数。",
+    "sourceReview": "chapter-desktop-reviewed",
+    "sourceFinding": "no-confirmed-source-issue",
+    "resolution": null,
+    "issues": [],
+    "classroomTrial": "not-verified",
+    "initialSourceReview": "requires-chapter-verification",
+    "verification": {
+      "implementation": "manipulable-six-step",
+      "contentReviewed": "source-checked",
+      "desktopVisual": "inspected-pass",
+      "mathBehavior": "full-path-verified",
+      "parentReviewed": "no",
+      "learnerMastery": "no-data",
+      "evidence": {
+        "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+        "assertions": [
+          "专用教材模型完整结论与可用错误/逆操作",
+          "存档通过模型状态约束，完整目标经独立数值断言",
+          "{\"address\":53,\"code\":\"02-03-05\",\"fits\":true}"
+        ],
+        "actionsPerformed": [
+          "为这个位置登记编号",
+          "试试只写格号"
+        ],
+        "screenshots": {
+          "story": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP02-B01-story-1440.jpg",
+          "prediction": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP02-B01-prediction-1440.jpg",
+          "initial": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP02-B01-experiment-initial-1440.jpg",
+          "operated": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP02-B01-operated-1440.jpg",
+          "why": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP02-B01-why-1440.jpg",
+          "symbols": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP02-B01-symbols-1440.jpg",
+          "verify": "docs/review/evidence-desktop-20261009/screens/desktop-G3-UP02-B01-verify-1440.jpg"
+        },
+        "taskOnlyAmendment": {
+          "scope": "classroom-and-model-unchanged; formal-task-review-separate",
+          "verifiedClassroomSourceFingerprint": "e617735dd4f7a328c9005748519c6a923d26a592fec49aa4b63abbdacb73ed93",
+          "currentContentFingerprint": "931ed33bb77257b03c7b0288109df37493e568fdcada063e279acac032cb6616",
+          "semanticRegister": "docs/review/849题最终审校清单_20261009.json",
+          "assessmentVersion": "2026-10-09.4",
+          "mathBehaviorSha": "62f39e2887732b3451f2787abc040fee23c8b707"
+        }
+      }
+    },
+    "acceptance": {
+      "sourceInspection": "recorded",
+      "mathematicalInvariants": "full-path-verified",
+      "browserSemanticEvidence": "desktop-run-with-sha",
+      "parentTeachingApproval": "not-verified",
+      "kevinMastery": "not-assessed"
+    }
+  },
+  "scenes": [
+    {
+      "lessonId": "G3-UP02-B01",
+      "sceneId": "G3-UP02-B01-MODEL1",
+      "label": "原情境／可变对象",
+      "mission": "给每个位置一个不重复、能找到的地址。",
+      "question": "给图书馆每个书架的书贴号码，怎样避免两本书同号？",
+      "units": "见当前对象与正式语义台账",
+      "geometry": "coding",
+      "expression": [
+        "书架号—层号—格号",
+        "编号用于查找；数量用于计数"
+      ],
+      "explanation": "编号为什么能帮助找位置，却不能直接用来求图书本数？",
+      "review": "single-object-source-scan; prior-evidence-retained"
+    }
+  ],
+  "draftVersion1": {
+    "contentVersion": "2026-11-01.1",
+    "source": "4fd7fb9:content/pilot/coding-supplement.mjs",
+    "taskSets": {
+      "warmup": [
+        {
+          "id": "G3-UP02-B01-P01",
+          "level": "warmup",
+          "objectiveId": "G3-UP02-B01-OBJ1",
+          "prompt": "图书编号“02-03-05”和书的数量有什么关系？",
+          "solution": "它表示地址/身份，不是数本数的算式。",
+          "hint": "想想每段写的是架、层还是格。",
+          "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+          "diagram": {
+            "type": "concept",
+            "family": "coding",
+            "variant": "G3-UP02-B01:task-static",
+            "values": [],
+            "labels": [
+              "学号08中的8一定表示年龄吗？",
+              "数字有时表示身份，而不是多少"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          },
+          "kind": "choice",
+          "responseSpec": {
+            "type": "choice"
+          },
+          "editorialStatus": "parent-assessment",
+          "options": [
+            {
+              "id": "1",
+              "text": "02+03+05就是书的本数"
+            },
+            {
+              "id": "2",
+              "text": "这个编号主要帮助找到第2架、第3层、第5格"
+            },
+            {
+              "id": "3",
+              "text": "编号越大说明书越多"
+            }
+          ],
+          "expected": "2"
+        },
+        {
+          "id": "G3-UP02-B01-P02",
+          "level": "warmup",
+          "objectiveId": "G3-UP02-B01-OBJ1",
+          "prompt": "一串数字要成为可用的班级编号，下面哪组规则最必要？",
+          "solution": "编码的三条重要条件是约定字段、能准确解读、能区分对象。",
+          "hint": "如果两个人编成完全一样的号会怎样？",
+          "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+          "diagram": {
+            "type": "concept",
+            "family": "coding",
+            "variant": "G3-UP02-B01:task-static",
+            "values": [],
+            "labels": [
+              "02-03-05表示第几层？",
+              "数字有时表示身份，而不是多少"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          },
+          "kind": "choice",
+          "responseSpec": {
+            "type": "choice"
+          },
+          "editorialStatus": "parent-assessment",
+          "options": [
+            {
+              "id": "1",
+              "text": "知道每一段意思、固定长度、避免重号"
+            },
+            {
+              "id": "2",
+              "text": "只要数字越长越好"
+            },
+            {
+              "id": "3",
+              "text": "每人随便选最喜欢的数字"
+            }
+          ],
+          "expected": "1"
+        }
+      ],
+      "core": [
+        {
+          "id": "G3-UP02-B01-P03",
+          "level": "core",
+          "objectiveId": "G3-UP02-B01-OBJ1",
+          "prompt": "教学用号码片段“44 01 06｜2015 05 16｜003｜？”中，分别指出6位地址码、8位出生日期码、3位顺序码和最后校验码的位置；出生年月日是什么？注意“？”不是真实号码的一部分。",
+          "solution": "地址码440106；日期2015年5月16日；顺序码003；最后1位是待计算的校验码。中间01是行政区划中间层级，不能直接推断持号人的现居住地。",
+          "hint": "先按6＋8＋3＋1切，再把8位日期分成4＋2＋2。",
+          "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+          "diagram": {
+            "type": "concept",
+            "family": "coding",
+            "variant": "G3-UP02-B01:task-static",
+            "values": [],
+            "labels": [
+              "不同架子的第1层第1本都只编01，可能有什么问题？",
+              "数字有时表示身份，而不是多少"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          },
+          "kind": "explanation",
+          "responseSpec": {
+            "type": "self-explanation",
+            "rubric": [
+              "说明每个字段的含义与长度",
+              "能核对题目条件，不重号、不漏号",
+              "明确指出错误做法为什么不行"
+            ]
+          },
+          "editorialStatus": "parent-assessment"
+        },
+        {
+          "id": "G3-UP02-B01-P04",
+          "level": "core",
+          "objectiveId": "G3-UP02-B01-OBJ1",
+          "prompt": "一段身份证号码的顺序码是004（对应第15—17位）。按这套编码规则，第17位数字代表什么？",
+          "solution": "第15—17位是顺序码，取它最后一位即整个号码第17位；偶数对应女性。性别不是靠第18位校验码判断。",
+          "hint": "定位第17位，而不是数最后一个校验位。",
+          "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+          "diagram": {
+            "type": "concept",
+            "family": "coding",
+            "variant": "G3-UP02-B01:task-static",
+            "values": [],
+            "labels": [
+              "同一个编号去掉前导0一定不影响识别吗？",
+              "数字有时表示身份，而不是多少"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          },
+          "kind": "choice",
+          "responseSpec": {
+            "type": "choice"
+          },
+          "editorialStatus": "parent-assessment",
+          "options": [
+            {
+              "id": "1",
+              "text": "第17位为4，是偶数，对应女性"
+            },
+            {
+              "id": "2",
+              "text": "倒数第一位4对应男性"
+            },
+            {
+              "id": "3",
+              "text": "第17位就是出生年份"
+            }
+          ],
+          "expected": "1"
+        },
+        {
+          "id": "G3-UP02-B01-P07",
+          "level": "core",
+          "objectiveId": "G3-UP02-B01-OBJ1",
+          "prompt": "为三年级2班7号同学设计一个班级学号。请给出一套自己的编码格式、各段含义和补零规则，再说明为什么只写“07”可能重号。",
+          "solution": "合理示例：03-02-07（年级两位、班级两位、序号两位），或者3-02-07（年级一位、班级两位、序号两位）；只写07会与其他班级第7号重复。要提前写明位数和分隔规则。",
+          "hint": "答案不只有一个；需要清楚可解码、不重号。",
+          "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+          "diagram": {
+            "type": "concept",
+            "family": "coding",
+            "variant": "G3-UP02-B01:task-static",
+            "values": [],
+            "labels": [
+              "给三年级2班的第7号同学设计“年级1位、班级1位、序号2位”的编号，应该写什么？",
+              "数字有时表示身份，而不是多少"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          },
+          "kind": "explanation",
+          "responseSpec": {
+            "type": "self-explanation",
+            "rubric": [
+              "说明每个字段的含义与长度",
+              "能核对题目条件，不重号、不漏号",
+              "明确指出错误做法为什么不行"
+            ]
+          },
+          "editorialStatus": "parent-assessment"
+        }
+      ],
+      "transfer": [
+        {
+          "id": "G3-UP02-B01-P05",
+          "level": "transfer",
+          "objectiveId": "G3-UP02-B01-OBJ1",
+          "prompt": "寄信时，邮政编码和详细收件地址有什么区别？",
+          "solution": "邮政编码主要帮助邮件分拣和确定投递范围，不等于身份证行政区划代码，更不能替代收件人详细地址。",
+          "hint": "想想同一片投递区域是否可能有很多住户。",
+          "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+          "diagram": {
+            "type": "concept",
+            "family": "coding",
+            "variant": "G3-UP02-B01:task-static",
+            "values": [],
+            "labels": [
+              "2个柜，每柜3层，每层5格，可编多少唯一位置？",
+              "数字有时表示身份，而不是多少"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          },
+          "kind": "choice",
+          "responseSpec": {
+            "type": "choice"
+          },
+          "expected": "1",
+          "unit": "个",
+          "options": [
+            {
+              "id": "1",
+              "text": "邮政编码6位用于邮区/投递分拣，详细地址还要写清"
+            },
+            {
+              "id": "2",
+              "text": "只写邮编就能找到任意具体门牌"
+            },
+            {
+              "id": "3",
+              "text": "邮编与身份证前6位总是一模一样"
+            }
+          ]
+        },
+        {
+          "id": "G3-UP02-B01-P08",
+          "level": "transfer",
+          "objectiveId": "G3-UP02-B01-OBJ1",
+          "prompt": "学校想用同一编号跟踪学生从三年级升到四年级的情况。现有“03-02-07”含年级字段，怎样改成更稳定的校内编号？说明新方案为什么不因升年级而改变。",
+          "solution": "示例：入学年度2024＋当年校内唯一流水0007，编号2024-0007，班级另存，不随升年级改变。必须保证每年内部流水不重复，且不同年度以年份区分；这只是自编校内号，不是全国学籍号。",
+          "hint": "把会变化的年级/班级从固定身份号里拿走。",
+          "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+          "diagram": {
+            "type": "concept",
+            "family": "coding",
+            "variant": "G3-UP02-B01:task-static",
+            "values": [],
+            "labels": [
+              "编码规定“年级1位、班级1位、序号2位”，例如三年级2班7号写3207。若现在同年级有第12班，这条规则还能直接用吗？提出一种新规则，并写出三年级12班7号的编号，说明为什么不会与三年级1班27号混淆。",
+              "数字有时表示身份，而不是多少"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          },
+          "kind": "explanation",
+          "responseSpec": {
+            "type": "self-explanation",
+            "rubric": [
+              "说明每个字段的含义与长度",
+              "能核对题目条件，不重号、不漏号",
+              "明确指出错误做法为什么不行"
+            ]
+          },
+          "editorialStatus": "parent-assessment"
+        }
+      ],
+      "challenge": [
+        {
+          "id": "G3-UP02-B01-P06",
+          "level": "challenge",
+          "objectiveId": "G3-UP02-B01-OBJ1",
+          "prompt": "开放设计：学校有3个年级，每年级最多6个班，每班最多45人。请给每名学生设计“年级＋班级＋班内序号”编码，写出每段位数、两个样例，并证明同班和不同班都不会重号。指出升年级后该编号是否会变化。",
+          "solution": "示例：年级1位＋班级2位＋序号2位；3年级2班7号→3-02-07，3年级6班45号→3-06-45。不同年级、不同班级或不同序号至少有一段不同，所以不重号；升级会使年级标签改变，因此它是当前班级标签，不适合作为终身不变编号。其他合理方案可通过家长审阅。",
+          "hint": "先定字段与最大容量，再试跨班同号和升年级的边界。",
+          "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+          "diagram": {
+            "type": "concept",
+            "family": "coding",
+            "variant": "G3-UP02-B01:task-static",
+            "values": [],
+            "labels": [
+              "两人独立按同规则给不同书编号，还必须核对什么？",
+              "数字有时表示身份，而不是多少"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          },
+          "kind": "explanation",
+          "responseSpec": {
+            "type": "self-explanation",
+            "rubric": [
+              "说明每个字段的含义与长度",
+              "能核对题目条件，不重号、不漏号",
+              "明确指出错误做法为什么不行"
+            ]
+          },
+          "editorialStatus": "parent-assessment"
+        }
+      ],
+      "review": [
+        {
+          "id": "G3-UP02-B01-P09",
+          "level": "review",
+          "objectiveId": "G3-UP02-B01-OBJ1",
+          "prompt": "居民身份证号码（现行18位编码）一共多少个字符位置？",
+          "solution": "6位地址码＋8位日期码＋3位顺序码＋1位校验码＝18位。最后一位可能是X。",
+          "hint": "数6、8、3、1，不是只数数字字符。",
+          "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+          "diagram": {
+            "type": "concept",
+            "family": "coding",
+            "variant": "G3-UP02-B01:task-static",
+            "values": [],
+            "labels": [
+              "书架编号A03中，03主要表示书有3本吗？",
+              "数字有时表示身份，而不是多少"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          },
+          "kind": "number",
+          "responseSpec": {
+            "type": "number"
+          },
+          "editorialStatus": "parent-assessment",
+          "expected": "18"
+        },
+        {
+          "id": "G3-UP02-B01-P10",
+          "level": "review",
+          "objectiveId": "G3-UP02-B01-OBJ1",
+          "prompt": "某教学示意编号的最后校验值计算为10，为什么身份证最后一位写X？",
+          "solution": "身份证校验码依规定由前17位计算；结果若为10，用X占1个字符位置。不是随意写X，也不是第17位。",
+          "hint": "注意最后一位是校验码，不是顺序码。",
+          "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+          "diagram": {
+            "type": "concept",
+            "family": "coding",
+            "variant": "G3-UP02-B01:task-static",
+            "values": [],
+            "labels": [
+              "两个不同房间都编号101，访客会遇到什么问题？可以增加什么信息？",
+              "数字有时表示身份，而不是多少"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          },
+          "kind": "choice",
+          "responseSpec": {
+            "type": "choice"
+          },
+          "editorialStatus": "parent-assessment",
+          "options": [
+            {
+              "id": "1",
+              "text": "X表示随机字母，与10无关"
+            },
+            {
+              "id": "2",
+              "text": "用单个字符X表示计算出的10，保持编号总长18位"
+            },
+            {
+              "id": "3",
+              "text": "因为X表示出生月份"
+            }
+          ],
+          "expected": "2"
+        },
+        {
+          "id": "G3-UP02-B01-P11",
+          "level": "review",
+          "objectiveId": "G3-UP02-B01-OBJ1",
+          "prompt": "我国常见六位邮政编码的分段理解，下面正确的是哪一项？",
+          "solution": "邮政编码为投递服务，通常按2＋1＋1＋2理解，实际查询应以官方邮政编码服务为准。",
+          "hint": "别把邮编当作记录一个人出生和性别的代码。",
+          "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+          "diagram": {
+            "type": "concept",
+            "family": "coding",
+            "variant": "G3-UP02-B01:task-static",
+            "values": [],
+            "labels": [
+              "用两位编号给12个储物柜编码，从01开始，最后一个编号是什么？为什么不能只用一位？",
+              "数字有时表示身份，而不是多少"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          },
+          "kind": "choice",
+          "responseSpec": {
+            "type": "choice"
+          },
+          "editorialStatus": "parent-assessment",
+          "options": [
+            {
+              "id": "1",
+              "text": "前2位省级邮政范围，第3位邮区，第4位县市层级，后2位投递局（所）"
+            },
+            {
+              "id": "2",
+              "text": "前6位一定是持信人的身份证地址码"
+            },
+            {
+              "id": "3",
+              "text": "后2位是寄件人的年龄"
+            }
+          ],
+          "expected": "1"
+        },
+        {
+          "id": "G3-UP02-B01-P12",
+          "level": "review",
+          "objectiveId": "G3-UP02-B01-OBJ1",
+          "prompt": "比较三个情境：图书馆只写“格号05”、班级只写“序号07”、信封只写六位邮编。分别说出可能缺少什么信息。再回答：校验码通过能否证明身份证号码一定真实、有效？",
+          "solution": "格号缺书架/层；序号07缺班级/年级等区分范围；邮编只能辅助分拣，缺收件人详细地址。校验通过只说明它满足某种计算关系，不能证明真实身份或所有信息真实。",
+          "hint": "检查编号的识别范围；再想校验码到底检验了什么。",
+          "diagnostic": "号码的用途是身份或位置，不能直接比较其数量大小。 逐段说出编码规则，并检查是否会重号。",
+          "diagram": {
+            "type": "concept",
+            "family": "coding",
+            "variant": "G3-UP02-B01:task-static",
+            "values": [],
+            "labels": [
+              "为什么给两个不同对象随意使用同一编号会出问题？",
+              "数字有时表示身份，而不是多少"
+            ],
+            "caption": "这是一张关系整理卡。它不抓取题干数字、不生成计算结果；请你自己圈出对象、单位和变化。"
+          },
+          "kind": "explanation",
+          "responseSpec": {
+            "type": "self-explanation",
+            "rubric": [
+              "说明每个字段的含义与长度",
+              "能核对题目条件，不重号、不漏号",
+              "明确指出错误做法为什么不行"
+            ]
+          },
+          "editorialStatus": "parent-assessment"
+        }
+      ]
+    }
+  },
+  "siblingFingerprintById": {
+    "G3-U01-B01": "1e36d6d952627e6bba0e0c5034583c56d573ae9d2eadb15ed3338903b54d853c",
+    "G3-U01-B02": "45816d5fde43a1f1023e01f57e0b47c5b301f03986328672e1016e28f4c6397d",
+    "G3-U01-B03": "ddc5b28664dc1750a07fe08193ed7710dad1ef0b83e3aa4b1f84a058be32d940",
+    "G3-U02-B01": "8fb496054d874c5b8ccfeabf4ae4001f8f759fa2ff4f9b20cb7aa3faf06a0ea5",
+    "G3-U02-B02": "e3e06c1a7926de73e0de9ecd437404b6ef884f1b4685e4f1376f6660f580c5ae",
+    "G3-U02-B03": "53b6ce6e6ba4164273b4d9e2bac88f43f6e4eb1d0600173cc5ac10698c23e370",
+    "G3-U02-B04": "f38bd664fa05894cb74e3073c506fb55ea90ea28aee30df398f480390eea8241",
+    "G3-U02-B05": "8ae4420776a820f0b394181547d9bae87161cf5939449cf7830d8dd187a90779",
+    "G3-U02-E01": "8979682da35dc37dd22bfb0a06615e48dedbf16fd97f6ca8baa97040de04a21f",
+    "G3-U02-E03": "9c86db5a7228f13112ac0990e8dc2365effdd59fbab19502809b8e930507ac16",
+    "G3-U02-E02": "8836ca3560811368d96b5e9d777fe8a9b5f910ce31e501d86f085695a0222aec",
+    "G3-U02-E04": "b5e0a0f79420b984697281d5ae407da2e343308a728f62f0fc345027cd39e0d7",
+    "G3-U02-E05": "cdfe64f043c3838f20bd91f33179d41fc089558550eaa40b2366835e07a07326",
+    "G3-U02-O01": "2d645f5c2af056ec3884bb126ba12a30d2e7b0fef5611dc68c538dfad15bf6c1",
+    "G3-U02-O02": "9c4679bcebaa49f18fc8e3a0937e3f6040bbddb1d642d75f86161a323a3bfb0c",
+    "G3-U03-B01": "b09752d7ab18d4b3acbaa10ceea01be652af064ae71e616ba8849b97c21d8423",
+    "G3-U03-B02": "9762926ba9c13ee86e9cd8972fcbd7d603e32e43d60bf1b9e017a4f880aab1d7",
+    "G3-UP01-B01": "301939a074a3c25bd8c55a02bfc5318e95414678ee3a6a3d8891fe0814409ea8",
+    "G3-UP01-B02": "25e201bc386b6cf6578f2451d1b7ae7e739078fcc3bd99eb1f04b1254d3f5285",
+    "G3-U04-B01": "2ded9ed6df0ce3982e18fc3fbde10c098122f8fbec0add22d1318776d100e022",
+    "G3-U04-B02": "c0d7d39496c7e95609d1e65222e67e060ba4038b251a07d2e9ec79dc185c072a",
+    "G3-U04-B03": "1c41f0ce8880bf29c04e5323be628e299aaeaf51d07cff883caeb8be9fcd72d3",
+    "G3-U04-B04": "67b4a7df7c80580fad8713cfdd9e3ce94756c7d6856fa42609c07f29cc911cd4",
+    "G3-U04-B05": "28b6f82e1139f1d3dc2b36aa0fa406b68686fad8b9c7cb21f22fc74de3e509d1",
+    "G3-U05-B01": "07ecd13f0c0ed74b17510d873bf341c3a3719c6022ee4859dee80168e4f524f8",
+    "G3-U05-B02": "20e7945b33312bd77a5d57d863eda9bc0624560fe56690e27e6ee3e2dd7effd5",
+    "G3-U05-B03": "9749fcdd0ad217e7341984699abb6fff61cc541b5843855fa765bc054dee685d",
+    "G3-U06-B01": "1fff9f5d03d03777dca1336eab44631dcd4d2a0aab75a78d2cfd4cd206e4dd7b",
+    "G3-U06-B02": "f4cf0b3520a04bc92cd29713f410bf8400e2aa46a7dff655c4565481781c49d9",
+    "G3-U06-B03": "19281c784d726ea546faeaea1b6e54c2506ca11a01dd3fd90fcc0d565795abef",
+    "G3-U06-B04": "f625101e48c176fe5d1506e133d79d04edaec5d831741c8894fe323456509fd4",
+    "G3-U06-B05": "7793181965e9b79c679dec9f8ca7f94d0fcc8db13e07099775897caf397968bb",
+    "G3-U06-E01": "74dc486712945f452cbf75a14553a67a51720240e126eeebf4a09a6f4aa96a6f",
+    "G3-U07-R01": "e388a4a6811259458f14146521020a9653ad78234542b9a00504ce659187eab4",
+    "G3-U07-B01": "e7d675d05e421ecb7e78b5502e2a29a9f3607a2fdd92c2e68cb5d8efb3f7131d",
+    "G3-L01-B01": "67718fcc38a37eca59188629941abfe4408fd104f5bfba55811eb7c019056030",
+    "G3-L01-B02": "f9cf6f95f26b439518c51bf2024b92bba63241e49b56bb1404d03bc6ff01cd79",
+    "G3-L02-B01": "02e13079d020375accee106787ac32f247451a689140dac749fd214c2c68462f",
+    "G3-L02-B02": "2eb8c506f619eaf1e74ce8a2d013093bab9b05fbecf06f6d47a47eb1e3018802",
+    "G3-L02-B03": "1a7f557431567f23fbcdd2077393e6c08dc78aaf59a0d6fbcb7398539609d56f",
+    "G3-L02-B04": "6677f9e40d67f957804f48820c72f9a9755cfdd8c8efeab4a0026268218acdf4",
+    "G3-L02-B05": "5a0fb93e3c15a18d9b1c2f4b2e30a07a7d710b8d6b794c916ec11acd9ab123a7",
+    "G3-L02-B06": "4df3f6f4cb4bb2c816eefd36996c49b79ec9b2abcf87a2186ce3fc9fdf5581f8",
+    "G3-L03-B01": "bcc669c1455033338bae3841f6da616c0adbc616ac2c847667d56788203e86f7",
+    "G3-L03-B02": "b0ae3e4d186c66ab197e3fd0d815bb8eeb861f734212be05d02d291b92c1d99d",
+    "G3-L03-E01": "b32be7f6d71bd0fbaa765861b2efe4e8114d0e3cdb349c5bb397a4b6ed037688",
+    "G3-L04-B01": "479cb485aa5cf373f9755285360148f8a8b18fbbd4b48a7da32d3ecb14cd908e",
+    "G3-L04-B02": "24891d94ee789522999399f25cc82ef7f592cab55a0d62f729e7c5d08113df07",
+    "G3-L04-B03": "213b78c1193c918ecf430840f07a723ba9f4602046d1b043b9176f908450272c",
+    "G3-L05-B01": "1f9485b9466761718717c313ad4cfcaaf6ba5fa6b615dc14ddc588710083ae11",
+    "G3-L05-B02": "196a265ef85ce89d477e6f439eb4d59d346b462507936a8cf19d56004666f78f",
+    "G3-LP01-B01": "70283a262c7bd41ebb56acf7690f716e8c7766c5a050bcd5ca502e56c5cb96db",
+    "G3-LP01-B02": "2f65b23e905957b7d0276fbcdef1bb014a9e2929b6c1589c5296f9a7aac97d02",
+    "G3-LP01-E01": "cb7d06a7317e87c34cc52cc04bc42368b4ae209bf8b265f8f4327f26e59b06f0",
+    "G3-L06-B01": "7ce83cb3b55e58e44cc5d1545ab6839a7afba376afe1368ca9fa31aa3752c088",
+    "G3-L06-B02": "e2be041bf67445f7945ddc50f1ee875d1b1083b0e57b8b57528871903c6be792",
+    "G3-L06-B03": "b5b22f8f30ce3aca8df2ded47f20396d5608787a7f1acacefc9f9624486677ec",
+    "G3-L07-R01": "e0ff52bfe8d3dfe1d58908e94a5943fc024e7f06bca23b39e9603637aad9a837",
+    "G3-L07-B01": "7946502eb959621e56d04e0a0ce4c223520cb0ec9f685d3d6dc52665cd836f76",
+    "G3-U03-E01": "47acc08ee4b4c5732612c09b944c33ce62096160ee79c1978909f115b3edb15b",
+    "G3-U03-E02": "1a1fb9b182b1f2105418b842b969dc58c0711824207c09481c83e50d847d78a2",
+    "G3-U03-O01": "97346c9716932241a0e97116dbb009616e5a36dddb258aa774d5f71844f3a383",
+    "numbers.fractions.meaning": "ab4aaac351a0756cf6d1550dc9c775365160a2cdc4f6534b37226f42b305ccd3",
+    "geometry.area.perimeter": "ee5c0bca9a6d7280fb57c2ff1ff59081c53d6280234cec561a11c7d71be62f81",
+    "algebra.substitution.intro": "f2dd56a8ed8f84a764fb0fd3d6f9847b8d115ce238679b3b3c20393b958c24d5",
+    "algebra.balance.intro": "aa5121c4b202f65a544b04957594ce302d42291f3ad982847bc5c969f872e98a",
+    "numbers.quantity.intro": "90c1b798613d5c21fd92dbdb5f4f01487d28dfc7c8585897d54cf32f5ce8103e",
+    "numbers.addition.meaning": "5b15d7936ab758f2f8e1df0d7087e52305cd05d8ef37241fec674c731daf865a",
+    "numbers.subtraction.meaning": "56a9c2fb43e2b4fc4d7294f50fcd62dc08507f3818339744205273a332083f12"
+  }
+}

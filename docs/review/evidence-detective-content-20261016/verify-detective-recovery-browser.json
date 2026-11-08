@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "ordering": true,
+  "offlineRecovery": true,
+  "navigationGuard": true,
+  "staleTab409": true,
+  "draftPreserved": true,
+  "noDuplicateBadge": true,
+  "bananaRange": true,
+  "widths": [
+    390,
+    768,
+    1440
+  ],
+  "source": {
+    "prHeadSha": "ddfd854420dabae014d5f0e10f540068633b3ebc",
+    "sha": "ddfd854420dabae014d5f0e10f540068633b3ebc",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-15T23:48:19.279Z"
+  }
+}

@@ -1,14 +1,15 @@
+import {completeSelfCheck as selfCheckTask} from './fixtures/self-check.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {freshProgress,exportEnvelope,validateEnvelope} from '../server/store.mjs';
 import {lessons} from '../content/pilot/source.mjs';
-import {initPilot,publicSession,createSession,saveSession,selfCheckTask,submitTask,revealHelp,saveReading,saveNote,validatePilot} from '../server/pilot-store.mjs';
+import {initPilot,publicSession,createSession,saveSession,submitTask,revealHelp,saveReading,saveNote,validatePilot} from '../server/pilot-store.mjs';
 import {petMissions,applyPetReward} from '../server/pet-care.mjs';
 
 const lesson=lessons.find(item=>item.lessonId==='numbers.fractions.meaning');
 test('文字修订同步到未完成的练习，答案、积分和题目版本保留',()=>{
   const p=freshProgress(),s=createSession(p,{lessonId:lesson.lessonId,setName:'warmup'},lessons);
-  s.tasks[0].prompt='旧题干';s.answers[s.tasks[0].id]={value:'4'};
+  s.editorialRevision='previous-editorial';s.tasks[0].prompt='旧题干';s.answers[s.tasks[0].id]={value:'4'};
   const coins=p.wallet.coins,id=s.id;
   const resumed=createSession(p,{lessonId:lesson.lessonId,setName:'warmup'},lessons);
   assert.equal(resumed.id,id);assert.equal(resumed.tasks[0].prompt,lesson.taskSets.warmup[0].prompt);

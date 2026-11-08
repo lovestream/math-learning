@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "models": 24,
+  "checked": [
+    {
+      "lessonId": "G3-U04-B02",
+      "kind": "place-value",
+      "actions": 1
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "kind": "coding",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "kind": "angle",
+      "actions": 2
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "kind": "angle",
+      "actions": 2
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "kind": "fraction",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "kind": "fraction",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "kind": "fraction",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "kind": "outfits",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "kind": "paper-fold",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "kind": "motion",
+      "actions": 1
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "kind": "division",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "kind": "division",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "kind": "boundary",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "kind": "joining",
+      "actions": 6
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "kind": "tiling",
+      "actions": 1
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "kind": "cut-area",
+      "actions": 8
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "kind": "vote",
+      "actions": 2
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "kind": "data-bins",
+      "actions": 4
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "kind": "calendar",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "kind": "clock",
+      "actions": 1
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "kind": "calendar",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "kind": "decimal",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "kind": "decimal",
+      "actions": 3
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "kind": "sets",
+      "actions": 4
+    }
+  ],
+  "errors": [],
+  "source": {
+    "prHeadSha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+    "sha": "3d8e49b1a0919e841c3b89691d2fff0257d4d6c9",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-09T01:59:58.343Z"
+  }
+}

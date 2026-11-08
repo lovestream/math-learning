@@ -12,3 +12,6 @@ export type ExpressionAST={type:'number';value:number}|{type:'operation';operato
 export function validateExpressionAST(node:ExpressionAST):ExpressionAST;
 export function evaluateExpressionAST(node:ExpressionAST):Rational;
 export function expressionASTText(node:ExpressionAST):string;
+export function firstOperationOptions(ast:ExpressionAST,seed?:string):{id:string;text:string;correct:boolean}[];
+export function buildReverseAddMultiplyFlow(addend:number,multiplier:number,target:number):{unknown:number;afterAdd:number;target:number;addend:number;multiplier:number;forward:ExpressionAST;intended:ExpressionAST;intendedValue:string;inverseSteps:string[];forwardText:string};
+export function validateTask(task:unknown,answer:unknown):{status:'correct'|'incorrect'|'invalidInput'|'pendingReview';message:string};

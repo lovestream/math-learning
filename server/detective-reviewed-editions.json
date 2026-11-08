@@ -1,0 +1,674 @@
+[
+  {
+    "parameters": {
+      "mode": "wrong",
+      "item": "花生米",
+      "count": 10,
+      "totalGrams": 6,
+      "wrongDivisor": 2
+    },
+    "template": "batch-average-mass-v1",
+    "content": {
+      "title": "称重小侦探 · 平均质量",
+      "prompt": "10颗差不多大的花生米一起称得6克。估算每颗平均重多少克？小智的过程如下（匿名模拟）。",
+      "steps": [
+        "10颗合计6克。",
+        "6÷2＝3（克），所以每颗平均3克。"
+      ],
+      "verdict": "wrong",
+      "errorStep": 1,
+      "reasons": [
+        "求每颗平均质量，应该用总质量除以10颗，而不是除以2。",
+        "总质量6克，应当除以题目中出现的最小数字。",
+        "只有质量单位要统一，不必注意颗数。"
+      ],
+      "reason": 0,
+      "repair": {
+        "kind": "number",
+        "question": "正确的每颗平均质量是多少？",
+        "unit": "克",
+        "options": [],
+        "answer": "0.6"
+      },
+      "verify": {
+        "kind": "number",
+        "question": "反查：10颗每颗平均0.6克，合起来共多少克？",
+        "unit": "克",
+        "options": [],
+        "answer": "6"
+      },
+      "hints": [
+        "找到总质量与总颗数。",
+        "把全部质量平均分给10颗，每颗是多少？",
+        "6÷10＝0.6，再用0.6×10反查。"
+      ],
+      "solution": "6÷10＝0.6克。反查0.6×10＝6克。若误除以2，3×10＝30克，与实际总质量6克矛盾。",
+      "family": "MASS_AVERAGE",
+      "sourceNotes": "",
+      "visual": {
+        "kind": "manual",
+        "values": [
+          "数量：10颗花生米",
+          "总质量：6克",
+          "所求：每颗平均质量"
+        ]
+      }
+    }
+  },
+  {
+    "parameters": {
+      "mode": "wrong",
+      "item": "豆子",
+      "count": 12,
+      "totalGrams": 6,
+      "wrongDivisor": 3
+    },
+    "template": "batch-average-mass-v1",
+    "content": {
+      "title": "称重小侦探 · 同类迁移",
+      "prompt": "12颗差不多大的豆子一起称得6克。每颗平均多少克？检查小智的答案（匿名模拟）。",
+      "steps": [
+        "12颗共6克。",
+        "6÷3＝2（克），每颗平均2克。"
+      ],
+      "verdict": "wrong",
+      "errorStep": 1,
+      "reasons": [
+        "测的是12颗，必须将总质量平均分成12份。",
+        "豆子很小，所以一定要除以3。",
+        "估计的平均质量可以比总质量还大。"
+      ],
+      "reason": 0,
+      "repair": {
+        "kind": "number",
+        "question": "每颗平均质量是多少？",
+        "unit": "克",
+        "options": [],
+        "answer": "0.5"
+      },
+      "verify": {
+        "kind": "number",
+        "question": "反查：12颗每颗平均0.5克，总质量多少克？",
+        "unit": "克",
+        "options": [],
+        "answer": "6"
+      },
+      "hints": [
+        "圈出“一共有12颗”。",
+        "每颗平均＝全部质量÷颗数。",
+        "先算6÷12，再乘12检查。"
+      ],
+      "solution": "6÷12＝0.5克；0.5×12＝6克，结果正确。",
+      "family": "MASS_AVERAGE",
+      "sourceNotes": "",
+      "visual": {
+        "kind": "manual",
+        "values": [
+          "数量：12颗豆子",
+          "总质量：6克",
+          "所求：平均每颗质量"
+        ]
+      }
+    }
+  },
+  {
+    "parameters": {
+      "mode": "correct",
+      "item": "坚果仁",
+      "count": 8,
+      "totalGrams": 4
+    },
+    "template": "batch-average-mass-v1",
+    "content": {
+      "title": "称重小侦探 · 无错对照",
+      "prompt": "8颗大小相近的坚果仁合计4克。小智估算每颗平均质量（匿名模拟）。",
+      "steps": [
+        "8颗共4克。",
+        "4÷8＝0.5（克）。"
+      ],
+      "verdict": "correct",
+      "errorStep": null,
+      "reasons": [
+        "总质量除以称量颗数，且0.5×8＝4克，符合条件。",
+        "只要是小物品，答案一定是0.5克。",
+        "写了除法就一定正确，无须确认除数。"
+      ],
+      "reason": 0,
+      "repair": {
+        "kind": "number",
+        "question": "每颗平均质量是多少？",
+        "unit": "克",
+        "options": [],
+        "answer": "0.5"
+      },
+      "verify": {
+        "kind": "number",
+        "question": "反查：8颗共多少克？",
+        "unit": "克",
+        "options": [],
+        "answer": "4"
+      },
+      "hints": [
+        "先确认是否8颗均分4克。",
+        "计算4÷8。",
+        "再算0.5×8是否回到总质量。"
+      ],
+      "solution": "4÷8＝0.5克；反查0.5×8＝4克。因此过程正确，不应该强行找错。",
+      "family": "MASS_AVERAGE",
+      "sourceNotes": "",
+      "visual": {
+        "kind": "manual",
+        "values": [
+          "数量：8颗坚果仁",
+          "合计质量：4克",
+          "结果：每颗0.5克"
+        ]
+      }
+    }
+  },
+  {
+    "parameters": {
+      "mode": "wrong",
+      "ask": "total",
+      "item": "玻璃珠",
+      "count": 12,
+      "averageGrams": 2
+    },
+    "template": "mass-average-inverse-v1",
+    "content": {
+      "title": "逆向侦探 · 已知每颗求总量",
+      "prompt": "每颗玻璃珠平均重2克，共有12颗。总质量应是多少？检查小智的过程（匿名模拟）。",
+      "steps": [
+        "已知12颗，每颗2克。",
+        "12÷2＝6（克），所以总质量6克。"
+      ],
+      "verdict": "wrong",
+      "errorStep": 1,
+      "reasons": [
+        "求总质量要用颗数乘每颗质量，不应把12除以2。",
+        "有12颗和2克两个数字，就一定应该相除。",
+        "玻璃珠都是小物品，结果必须小于颗数。"
+      ],
+      "reason": 0,
+      "repair": {
+        "kind": "number",
+        "question": "总质量是多少克？",
+        "unit": "克",
+        "options": [],
+        "answer": "24"
+      },
+      "verify": {
+        "kind": "number",
+        "question": "反查：24克分给12颗，每颗平均几克？",
+        "unit": "克",
+        "options": [],
+        "answer": "2"
+      },
+      "hints": [
+        "已知的是一颗重多少。",
+        "总质量是12个2克相加。",
+        "算12×2，再除以12检查。"
+      ],
+      "solution": "12×2＝24克；24÷12＝2克。",
+      "family": "MASS_AVERAGE_INVERSE",
+      "sourceNotes": "",
+      "visual": {
+        "kind": "manual",
+        "values": [
+          "数量12颗",
+          "每颗2克",
+          "求总质量"
+        ]
+      }
+    }
+  },
+  {
+    "parameters": {
+      "mode": "wrong",
+      "ask": "count",
+      "item": "花生米",
+      "totalGrams": 8,
+      "averageGrams": 0.5
+    },
+    "template": "mass-average-inverse-v1",
+    "content": {
+      "title": "逆向侦探 · 已知总量求颗数",
+      "prompt": "一堆差不多大的花生米合计8克，平均每颗0.5克。一共约有多少颗？检查小智的算式（匿名模拟）。",
+      "steps": [
+        "总质量8克，每颗平均0.5克。",
+        "8×0.5＝4（颗），所以约有4颗。"
+      ],
+      "verdict": "wrong",
+      "errorStep": 1,
+      "reasons": [
+        "颗数＝总质量÷每颗质量，而不是相乘。",
+        "只要有0.5就必须乘0.5。",
+        "求颗数应该先加上每颗质量。"
+      ],
+      "reason": 0,
+      "repair": {
+        "kind": "number",
+        "question": "约有多少颗？",
+        "unit": "颗",
+        "options": [],
+        "answer": "16"
+      },
+      "verify": {
+        "kind": "number",
+        "question": "反查：16颗每颗0.5克，共多少克？",
+        "unit": "克",
+        "options": [],
+        "answer": "8"
+      },
+      "hints": [
+        "问的是可以分成几个0.5克。",
+        "8÷0.5能得到颗数。",
+        "算16×0.5核对总质量。"
+      ],
+      "solution": "8÷0.5＝16颗；反查16×0.5＝8克。",
+      "family": "MASS_AVERAGE_INVERSE",
+      "sourceNotes": "",
+      "visual": {
+        "kind": "manual",
+        "values": [
+          "总质量8克",
+          "每颗约0.5克",
+          "求颗数"
+        ]
+      }
+    }
+  },
+  {
+    "parameters": {
+      "mode": "correct",
+      "ask": "count",
+      "item": "玻璃珠",
+      "totalGrams": 36,
+      "averageGrams": 6
+    },
+    "template": "mass-average-inverse-v1",
+    "content": {
+      "title": "逆向侦探 · 正确推理",
+      "prompt": "一些同样大小的玻璃珠合计36克，每颗平均6克。小智求颗数（匿名模拟）。",
+      "steps": [
+        "总质量36克，每颗6克。",
+        "36÷6＝6（颗）。"
+      ],
+      "verdict": "correct",
+      "errorStep": null,
+      "reasons": [
+        "总质量除以每颗质量得到颗数，6×6＝36克也能验证。",
+        "因为36和6都含6，所以答案一定是6。",
+        "正确题必须找到一行改掉。"
+      ],
+      "reason": 0,
+      "repair": {
+        "kind": "number",
+        "question": "玻璃珠有多少颗？",
+        "unit": "颗",
+        "options": [],
+        "answer": "6"
+      },
+      "verify": {
+        "kind": "number",
+        "question": "反查：6颗每颗6克，一共多少克？",
+        "unit": "克",
+        "options": [],
+        "answer": "36"
+      },
+      "hints": [
+        "识别总质量和每颗质量。",
+        "问可以分成多少份6克。",
+        "再用颗数×每颗质量验证。"
+      ],
+      "solution": "36÷6＝6颗；6×6＝36克。原过程完全正确。",
+      "family": "MASS_AVERAGE_INVERSE",
+      "sourceNotes": "",
+      "visual": {
+        "kind": "manual",
+        "values": [
+          "总质量36克",
+          "每颗6克",
+          "求数量"
+        ]
+      }
+    }
+  },
+  {
+    "parameters": {
+      "mode": "wrong",
+      "originalCm": 6,
+      "mmPerKg": 5,
+      "loadKg": 4
+    },
+    "template": "spring-total-length-v1",
+    "content": {
+      "title": "弹簧长度侦探 · 只算了伸长",
+      "prompt": "一根弹簧原长6厘米，所称物品每增加1千克，弹簧伸长5毫米。称4千克物品时，弹簧总长多少毫米？检查下面的匿名模拟过程。",
+      "steps": [
+        "原长6厘米＝60毫米。",
+        "4×5＝20（毫米），这是伸长量。",
+        "因此弹簧总长20毫米。"
+      ],
+      "verdict": "wrong",
+      "errorStep": 2,
+      "reasons": [
+        "20毫米只表示增加了多长；总长还要加原来的60毫米。",
+        "只要题目出现“增加”，原长就可以丢掉。",
+        "弹簧有重量时，长度一定小于原长。"
+      ],
+      "reason": 0,
+      "repair": {
+        "kind": "number",
+        "question": "称4千克时弹簧的总长是多少毫米？",
+        "unit": "毫米",
+        "options": [],
+        "answer": "80"
+      },
+      "verify": {
+        "kind": "number",
+        "question": "逆查：总长80毫米、原长60毫米、每千克伸长5毫米，对应几千克？",
+        "unit": "千克",
+        "options": [],
+        "answer": "4"
+      },
+      "hints": [
+        "先确认题目问的是伸长量还是总长。",
+        "原来的6厘米要先变成60毫米。",
+        "总长＝原长60毫米＋伸长20毫米，再反向减去原长。"
+      ],
+      "solution": "4×5＝20毫米是伸长量；6厘米＝60毫米；总长60＋20＝80毫米＝8厘米。反查(80−60)÷5＝4千克。",
+      "family": "SPRING_BASE_CHANGE",
+      "sourceNotes": "",
+      "visual": {
+        "kind": "manual",
+        "values": [
+          "原长6厘米＝60毫米",
+          "每千克增加5毫米",
+          "挂4千克时先伸长20毫米"
+        ]
+      }
+    }
+  },
+  {
+    "parameters": {
+      "mode": "wrong",
+      "originalCm": 6,
+      "mmPerKg": 5,
+      "loadKg": 8
+    },
+    "template": "spring-total-length-v1",
+    "content": {
+      "title": "弹簧长度侦探 · 同题换条件",
+      "prompt": "弹簧原长6厘米，每增加1千克伸长5毫米。称8千克时，弹簧总长多少毫米？检查匿名模拟。",
+      "steps": [
+        "原长60毫米。",
+        "8×5＝40（毫米）。",
+        "所以弹簧总长40毫米。"
+      ],
+      "verdict": "wrong",
+      "errorStep": 2,
+      "reasons": [
+        "40毫米是伸长部分，总长是原长加伸长量。",
+        "每增加1千克都伸长，原长就会消失。",
+        "总长应等于千克数乘以5。"
+      ],
+      "reason": 0,
+      "repair": {
+        "kind": "number",
+        "question": "称8千克时总长多少毫米？",
+        "unit": "毫米",
+        "options": [],
+        "answer": "100"
+      },
+      "verify": {
+        "kind": "number",
+        "question": "逆查：总长100毫米、原长60毫米，每千克伸长5毫米，对应几千克？",
+        "unit": "千克",
+        "options": [],
+        "answer": "8"
+      },
+      "hints": [
+        "先计算新增加的长度。",
+        "题中原长6厘米仍然存在。",
+        "换成毫米后将60＋40相加，反查增加量。"
+      ],
+      "solution": "8×5＝40毫米是伸长量；60＋40＝100毫米＝10厘米。反查(100−60)÷5＝8千克。",
+      "family": "SPRING_BASE_CHANGE",
+      "sourceNotes": "",
+      "visual": {
+        "kind": "manual",
+        "values": [
+          "原长6厘米＝60毫米",
+          "每千克增5毫米",
+          "挂8千克增加40毫米"
+        ]
+      }
+    }
+  },
+  {
+    "parameters": {
+      "mode": "correct",
+      "originalCm": 8,
+      "mmPerKg": 4,
+      "loadKg": 3
+    },
+    "template": "spring-total-length-v1",
+    "content": {
+      "title": "弹簧长度侦探 · 正确对照",
+      "prompt": "另一根弹簧原长8厘米，每增加1千克伸长4毫米。称3千克时，判断小智求得的总长对不对（匿名模拟）。",
+      "steps": [
+        "原长8厘米＝80毫米。",
+        "3×4＝12（毫米），是伸长量。",
+        "80＋12＝92（毫米），这是总长。"
+      ],
+      "verdict": "correct",
+      "errorStep": null,
+      "reasons": [
+        "先统一毫米、再把原长与伸长量相加，反查也成立。",
+        "总长就是3×4＝12毫米。",
+        "写成毫米就不必验算。"
+      ],
+      "reason": 0,
+      "repair": {
+        "kind": "number",
+        "question": "总长是多少毫米？",
+        "unit": "毫米",
+        "options": [],
+        "answer": "92"
+      },
+      "verify": {
+        "kind": "number",
+        "question": "逆查：(92−80)÷4对应多少千克？",
+        "unit": "千克",
+        "options": [],
+        "answer": "3"
+      },
+      "hints": [
+        "先算原长毫米数。",
+        "分开算原长和增加量。",
+        "检查92−80是否等于3×4。"
+      ],
+      "solution": "8厘米＝80毫米；3×4＝12毫米；总长80＋12＝92毫米；反查(92−80)÷4＝3千克。",
+      "family": "SPRING_BASE_CHANGE",
+      "sourceNotes": "",
+      "visual": {
+        "kind": "manual",
+        "values": [
+          "原长8厘米＝80毫米",
+          "每千克增4毫米",
+          "3千克增加12毫米"
+        ]
+      }
+    }
+  },
+  {
+    "parameters": {
+      "mode": "wrong",
+      "ask": "load",
+      "originalCm": 6,
+      "mmPerKg": 5,
+      "finalMm": 85
+    },
+    "template": "spring-reverse-v1",
+    "content": {
+      "title": "逆向侦探 · 已知总长求重量",
+      "prompt": "弹簧原长6厘米，每增加1千克伸长5毫米。现在总长85毫米，称的物品重几千克？检查小智的计算（匿名模拟）。",
+      "steps": [
+        "原长6厘米＝60毫米。",
+        "85÷5＝17（千克），所以物品重17千克。"
+      ],
+      "verdict": "wrong",
+      "errorStep": 1,
+      "reasons": [
+        "必须先从总长减去原长，再用伸长量除以每千克伸长长度。",
+        "求重量只需要用最终长度除以5。",
+        "原长60毫米必须加在85毫米上才能求重量。"
+      ],
+      "reason": 0,
+      "repair": {
+        "kind": "number",
+        "question": "物品重多少千克？",
+        "unit": "千克",
+        "options": [],
+        "answer": "5"
+      },
+      "verify": {
+        "kind": "number",
+        "question": "反查：原长60毫米，每千克增加5毫米，称5千克总长多少毫米？",
+        "unit": "毫米",
+        "options": [],
+        "answer": "85"
+      },
+      "hints": [
+        "最终长度包含原来的长度。",
+        "先求真正伸长了85−60毫米。",
+        "再用增加量÷5，最后正向代回验证。"
+      ],
+      "solution": "85−60＝25毫米；25÷5＝5千克；反查60＋5×5＝85毫米。",
+      "family": "SPRING_REVERSE",
+      "sourceNotes": "",
+      "visual": {
+        "kind": "manual",
+        "values": [
+          "原长60毫米",
+          "每千克伸长5毫米",
+          "现在总长85毫米"
+        ]
+      }
+    }
+  },
+  {
+    "parameters": {
+      "mode": "wrong",
+      "ask": "initial",
+      "mmPerKg": 3,
+      "loadKg": 6,
+      "finalMm": 88
+    },
+    "template": "spring-reverse-v1",
+    "content": {
+      "title": "逆向侦探 · 已知总长求原长",
+      "prompt": "弹簧每增加1千克伸长3毫米，挂上6千克物品后总长88毫米。它原来长多少毫米？检查小智的计算（匿名模拟）。",
+      "steps": [
+        "6×3＝18（毫米），是伸长的长度。",
+        "88＋18＝106（毫米），所以原长106毫米。"
+      ],
+      "verdict": "wrong",
+      "errorStep": 1,
+      "reasons": [
+        "最后总长已包含伸长量，求原长应从总长减去伸长量。",
+        "求原长必须把所有长度加起来。",
+        "每千克伸长3毫米，最后原长一定比88毫米长。"
+      ],
+      "reason": 0,
+      "repair": {
+        "kind": "number",
+        "question": "弹簧原来长多少毫米？",
+        "unit": "毫米",
+        "options": [],
+        "answer": "70"
+      },
+      "verify": {
+        "kind": "number",
+        "question": "反查：原长70毫米，挂6千克时总长多少毫米？",
+        "unit": "毫米",
+        "options": [],
+        "answer": "88"
+      },
+      "hints": [
+        "列出“原长＋增加量＝总长”。",
+        "增加量已算出18毫米。",
+        "把88减去18，再代入正向等式。"
+      ],
+      "solution": "原长88−6×3＝70毫米＝7厘米；反查70＋6×3＝88毫米。",
+      "family": "SPRING_REVERSE",
+      "sourceNotes": "",
+      "visual": {
+        "kind": "manual",
+        "values": [
+          "挂6千克",
+          "每千克伸长3毫米",
+          "挂上后总长88毫米"
+        ]
+      }
+    }
+  },
+  {
+    "parameters": {
+      "mode": "correct",
+      "ask": "load",
+      "originalCm": 8,
+      "mmPerKg": 4,
+      "finalMm": 108
+    },
+    "template": "spring-reverse-v1",
+    "content": {
+      "title": "逆向侦探 · 正确反推",
+      "prompt": "弹簧原长8厘米，每增加1千克伸长4毫米。挂物品后总长108毫米。检查小智求重量的过程（匿名模拟）。",
+      "steps": [
+        "原长8厘米＝80毫米。",
+        "108−80＝28（毫米），这是伸长量。",
+        "28÷4＝7（千克）。"
+      ],
+      "verdict": "correct",
+      "errorStep": null,
+      "reasons": [
+        "先用总长减原长，再除以每千克伸长量，且正向反查成立。",
+        "总长除以4就直接是重量。",
+        "正确题也必须选一处错行。"
+      ],
+      "reason": 0,
+      "repair": {
+        "kind": "number",
+        "question": "物品重多少千克？",
+        "unit": "千克",
+        "options": [],
+        "answer": "7"
+      },
+      "verify": {
+        "kind": "number",
+        "question": "反查：8厘米原长、每千克伸长4毫米，7千克时总长多少毫米？",
+        "unit": "毫米",
+        "options": [],
+        "answer": "108"
+      },
+      "hints": [
+        "先统一成毫米。",
+        "先求增加了多少，再除以每千克增加的长度。",
+        "代回原长＋增加量是否为108。"
+      ],
+      "solution": "8厘米＝80毫米；108−80＝28毫米；28÷4＝7千克；反查80＋7×4＝108毫米。",
+      "family": "SPRING_REVERSE",
+      "sourceNotes": "",
+      "visual": {
+        "kind": "manual",
+        "values": [
+          "原长80毫米",
+          "每千克增4毫米",
+          "挂上后总长108毫米"
+        ]
+      }
+    }
+  }
+]

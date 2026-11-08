@@ -1,0 +1,1 @@
+{"passed":true,"sha":"037d8124ab04d4c07a71dbdd1634bd3242ead386","syntheticOnly":true,"hardware":"Playwright keyboard and simulated touch; not physical iPad","readyMs":478,"checks":["native Enter submit","keyboard numeric input","touch alternative buttons","200% zoom no horizontal overflow","no rewards"]}

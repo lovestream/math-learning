@@ -1,0 +1,165 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "lessonId": "G3-UP02-B01",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "contentFingerprint": "dba1cf6ae8806aff9ad485e14937a6b97e208e34d929e27088ce7e7214c14a49",
+      "result": "pass",
+      "mathBehavior": "full-path-verified",
+      "actionsPerformed": [
+        "逐段定位18字符，003/004比较第17位，说明第18位X规则与局限",
+        "六位邮编2/1/1/2分段，与身份证地址码对照",
+        "跨班同序号、升年级和六年级毕业边界；校内流水跨班唯一且可容纳810人",
+        "五道辨错的正误路径和清空，不计正式掌握",
+        "为这个位置登记编号",
+        "试试只写格号"
+      ],
+      "assertions": [
+        "四类图与六步一致",
+        "字段定位、奇偶、邮编和稳定编号真实操作",
+        "错误路径、重置与原书架操作",
+        "12题先封存再三项自查",
+        "5题开放方案仅家长批阅",
+        "旧答案与积分边界、复习、完整备份恢复"
+      ],
+      "screenshots": {
+        "story-1440": "output/playwright/v2-audit/coding-story-1440.png",
+        "prediction-1440": "output/playwright/v2-audit/coding-prediction-1440.png",
+        "identity-1366": "output/playwright/v2-audit/coding-identity-1366.png",
+        "identity-1440": "output/playwright/v2-audit/coding-identity-1440.png",
+        "identity-390": "output/playwright/v2-audit/coding-identity-390.png",
+        "postal-1440": "output/playwright/v2-audit/coding-postal-1440.png",
+        "class-design-1440": "output/playwright/v2-audit/coding-class-design-1440.png",
+        "stable-design-1440": "output/playwright/v2-audit/coding-stable-design-1440.png",
+        "misconceptions-1440": "output/playwright/v2-audit/coding-misconceptions-1440.png",
+        "shelf-operated-1440": "output/playwright/v2-audit/coding-shelf-operated-1440.png",
+        "discovery-1440": "output/playwright/v2-audit/coding-discovery-1440.png",
+        "math-language-1440": "output/playwright/v2-audit/coding-math-language-1440.png",
+        "verification-1440": "output/playwright/v2-audit/coding-verification-1440.png",
+        "story-1366": "output/playwright/v2-audit/coding-story-1366.png",
+        "prediction-1366": "output/playwright/v2-audit/coding-prediction-1366.png",
+        "experiment-1366": "output/playwright/v2-audit/coding-experiment-1366.png",
+        "discovery-1366": "output/playwright/v2-audit/coding-discovery-1366.png",
+        "math-language-1366": "output/playwright/v2-audit/coding-math-language-1366.png",
+        "verification-1366": "output/playwright/v2-audit/coding-verification-1366.png",
+        "experiment-1440": "output/playwright/v2-audit/coding-experiment-1440.png",
+        "story-390": "output/playwright/v2-audit/coding-story-390.png",
+        "prediction-390": "output/playwright/v2-audit/coding-prediction-390.png",
+        "experiment-390": "output/playwright/v2-audit/coding-experiment-390.png",
+        "discovery-390": "output/playwright/v2-audit/coding-discovery-390.png",
+        "math-language-390": "output/playwright/v2-audit/coding-math-language-390.png",
+        "verification-390": "output/playwright/v2-audit/coding-verification-390.png",
+        "open-task-P07-1440": "output/playwright/v2-audit/coding-open-task-P07-1440.png",
+        "parent-review-1440": "output/playwright/v2-audit/coding-parent-review-1440.png"
+      },
+      "visualInspected": false
+    }
+  ],
+  "taskResults": [
+    {
+      "id": "G3-UP02-B01-P01",
+      "kind": "choice",
+      "first": "1",
+      "final": "2",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P02",
+      "kind": "choice",
+      "first": "2",
+      "final": "1",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P03",
+      "kind": "explanation",
+      "first": "我还没有说明字段和规则。",
+      "final": "前6位44 01 06；中间8位2015 05 16是2015年5月16日；接着003是顺序码；最后？是还没给出的校验码。",
+      "status": "pendingReview"
+    },
+    {
+      "id": "G3-UP02-B01-P04",
+      "kind": "choice",
+      "first": "2",
+      "final": "1",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P07",
+      "kind": "explanation",
+      "first": "我还没有说明字段和规则。",
+      "final": "我用03-02-07，三段各两位表示年级、班级、班内序号，不足两位补0。三年级1班7号为03-01-07。只写07时跨班不能区分。",
+      "status": "pendingReview"
+    },
+    {
+      "id": "G3-UP02-B01-P05",
+      "kind": "choice",
+      "first": "2",
+      "final": "1",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P08",
+      "kind": "explanation",
+      "first": "我还没有说明字段和规则。",
+      "final": "采用入学年2024加全校该年唯一流水0007，写2024-0007；班级另记。另一个班的学生不能也分到0007，另一入学年由年份区分；升年级不改号。这只是校内模拟号。",
+      "status": "pendingReview"
+    },
+    {
+      "id": "G3-UP02-B01-P06",
+      "kind": "explanation",
+      "first": "我还没有说明字段和规则。",
+      "final": "年级1位、班级1位、序号2位。3207是3年级2班7号，3645是3年级6班45号。班内序号不重复，跨班或跨年级至少有一个字段不同。升年级时年级字段改变。",
+      "status": "pendingReview"
+    },
+    {
+      "id": "G3-UP02-B01-P09",
+      "kind": "number",
+      "first": "17",
+      "final": "18",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P10",
+      "kind": "choice",
+      "first": "1",
+      "final": "2",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P11",
+      "kind": "choice",
+      "first": "2",
+      "final": "1",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P12",
+      "kind": "explanation",
+      "first": "我还没有说明字段和规则。",
+      "final": "只写05还不知道哪个书架哪一层；只写07还不知道哪个班或年级；同一邮编有许多人，要写详细收件地址。校验通过只说明计算关系符合，不能证明身份真实。",
+      "status": "pendingReview"
+    }
+  ],
+  "version": "2026-11-01.2",
+  "viewports": [
+    1366,
+    1440,
+    390
+  ],
+  "syntheticOnly": true,
+  "noExplorationPoints": true,
+  "noOpenTaskAutoGrade": true,
+  "backupRestore": true,
+  "parentReviewed": "synthetic-workflow-only",
+  "kevinMastery": "not-assessed",
+  "errors": [],
+  "source": {
+    "prHeadSha": "03dddce275b50c813a88d86f600003018dba4f2b",
+    "sha": "03dddce275b50c813a88d86f600003018dba4f2b",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-11-08T16:01:18.753Z"
+  }
+}

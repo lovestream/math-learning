@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "functionalSha": "68233965bf401dac5328f8b43d18e9a8e352f397",
+  "scope": "B06 exact context correction plus original 3 mixed-story A/B/A, 3 prototypes and 11 inverse links; desktop full math path only B06",
+  "realLearningDataAccessed": false,
+  "nodeTests": {
+    "passed": 224,
+    "failed": 0
+  },
+  "browserSuites": [
+    "verify-remaining-visuals-browser",
+    "verify-desktop-semantic-browser"
+  ],
+  "prior17CourseArchive": "docs/review/evidence-remaining-visuals-20261019/manifest.json",
+  "priorSha": "afb9e8a11af2a69885141b53551aa7b1797bb901",
+  "files": [
+    {
+      "file": "ci-summary.json",
+      "sha256": "862ef81070db870090deeca412004b8650741d2b39167ba1c579b1d4201a5605",
+      "bytes": 6873
+    },
+    {
+      "file": "desktop-G3-L02-B06-experiment-initial-1440.png",
+      "sha256": "9a643f484061e33082bfbe0004ee640c5b7d2837b4fadcb59f74000a77a0777b",
+      "bytes": 156619
+    },
+    {
+      "file": "desktop-G3-L02-B06-operated-1366.png",
+      "sha256": "7e979fcba42cc4e36838d2e016393b264b4d18204bffae7794b4a451bf228d67",
+      "bytes": 214250
+    },
+    {
+      "file": "desktop-G3-L02-B06-operated-1440.png",
+      "sha256": "33afb504db20e838ee163807e7615a1280bd8493693729a63231747332d66654",
+      "bytes": 218469
+    },
+    {
+      "file": "desktop-G3-L02-B06-operated-1920.png",
+      "sha256": "64842f9a0c2652ba0a6453f50ad2af2dc68f89ade9f77aa7e735a0bf680316f5",
+      "bytes": 227613
+    },
+    {
+      "file": "desktop-G3-L02-B06-prediction-1440.png",
+      "sha256": "63d83bae5630852fc567407d1c9f451ccd34b91280f5e275d08f1a99776e1e29",
+      "bytes": 118746
+    },
+    {
+      "file": "desktop-G3-L02-B06-story-1440.png",
+      "sha256": "241edbdd99590269b08caa3797c3eec88cf8daa050b15a7570538477a024fb32",
+      "bytes": 111093
+    },
+    {
+      "file": "desktop-G3-L02-B06-symbols-1440.png",
+      "sha256": "36b4cc29f9e46d511ed07f1149b9bdb9ff335669a33a476b22983fe99d0203f6",
+      "bytes": 91623
+    },
+    {
+      "file": "desktop-G3-L02-B06-verify-1440.png",
+      "sha256": "c9ca1ed0f2cb535f64c79a73d91385de977f1531cc49b5ae8f4559b2a1b949f0",
+      "bytes": 63459
+    },
+    {
+      "file": "desktop-G3-L02-B06-why-1440.png",
+      "sha256": "2133982c6f288225addd60ddbd4028424b8e3db18af76b8d58cef4f68d321924",
+      "bytes": 66626
+    },
+    {
+      "file": "node-224.log",
+      "sha256": "27f6eb9d974a10e51e1e75369a3d9ecbb710597b1bfe55820e605708f9119757",
+      "bytes": 22377
+    },
+    {
+      "file": "remaining-brackets-A-1440.png",
+      "sha256": "4930092d9800c53279d80ff6bd9304bf4818f6556f003fc02a270ed3d4a04ae3",
+      "bytes": 156421
+    },
+    {
+      "file": "remaining-brackets-A-objects-1440.png",
+      "sha256": "7ec0f30d64f7942565c06025a49c319012cd8ba451275d494f917c1e95d6110b",
+      "bytes": 91234
+    },
+    {
+      "file": "remaining-brackets-B-1440.png",
+      "sha256": "54ba19922c883cb41f073fd3edf211bdf1212375c37eb2b4fb1dadb417a66bfa",
+      "bytes": 166646
+    },
+    {
+      "file": "remaining-brackets-B-objects-1440.png",
+      "sha256": "395ea3e152e277052eb8e0ddf333df792bfc653b77dacd96e0fe8141ce48a0fc",
+      "bytes": 97270
+    },
+    {
+      "file": "remaining-inverse-index-1440.png",
+      "sha256": "4bd5d95a49fab0f8ebba296d81444f60cc7ed9d2f8d2f1fce88db740178dca25",
+      "bytes": 214298
+    },
+    {
+      "file": "remaining-money-exchange-after-1440.png",
+      "sha256": "3a6ed2757dc2ea4d7ef179c49ed30c6c2e615bea73e098df621213d0cd0ccf38",
+      "bytes": 146979
+    },
+    {
+      "file": "remaining-money-exchange-before-1440.png",
+      "sha256": "5f7134095b2b224bb41ac765517f35bd8d032fca6a3233a7627f73a3594b26ae",
+      "bytes": 155869
+    },
+    {
+      "file": "remaining-motion-trails-1440.png",
+      "sha256": "28c42b8a21ab2f220a7db35d2ed7bb6eb434b4e8761817ed939255540a60a964",
+      "bytes": 104924
+    },
+    {
+      "file": "remaining-regroup-after-1440.png",
+      "sha256": "641ac99c68325b1a139b3392135308805e734b0d6a24413c70e293dc64e90df9",
+      "bytes": 120462
+    },
+    {
+      "file": "remaining-regroup-before-1440.png",
+      "sha256": "4fe6bbf2197728917b44deeaad236b84579957ec894c93fc6869caf5893da46b",
+      "bytes": 146107
+    },
+    {
+      "file": "remaining-regroup-math-1440.png",
+      "sha256": "3a721d6e9621225b55d18a1cfe599b09298946938183e73dcff57367672c009f",
+      "bytes": 116566
+    },
+    {
+      "file": "remaining-supply-plan-after-1440.png",
+      "sha256": "953e26f7309c25d8e2df04aa357896aafaa9050f61db817dd83812a607715e87",
+      "bytes": 134089
+    },
+    {
+      "file": "remaining-supply-plan-before-1440.png",
+      "sha256": "dcdc796234f184a0480be137522df135e3e0b887b616ed4a0fe033f0030b8f33",
+      "bytes": 130649
+    },
+    {
+      "file": "source-evidence.json",
+      "sha256": "3b611aa093f53feb40a54d4ef88b428ee1b379add17915ad0aa4be58512d37ca",
+      "bytes": 257
+    },
+    {
+      "file": "verify-desktop-semantic-browser.json",
+      "sha256": "740d8767880f7648732ad5361c20d7e8208b5acd2fe01832b89873d07b1cbab7",
+      "bytes": 4757
+    },
+    {
+      "file": "verify-remaining-visuals-browser.json",
+      "sha256": "a01cf6259ef08610dd23afd0f1eb8a3767af1e8e9c9602b875f2870b82c87f08",
+      "bytes": 1690
+    },
+    {
+      "file": "implementation-files.json",
+      "sha256": "b1ca063a4d56178d481f0e9841db08dcf557326fdde73ddcd26bd4a421790817",
+      "bytes": 4457
+    }
+  ]
+}

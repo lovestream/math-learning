@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "method": "One local sample per view. Cold map then first classroom, separate browser cache per profile. 4x CPU is a simulation, not a real phone benchmark; no speed threshold asserted.",
+  "samples": [
+    {
+      "profile": "desktop",
+      "target": "map",
+      "uiReadyMs": 57,
+      "domContentLoadedMs": 15,
+      "transferredBytes": 2274236
+    },
+    {
+      "profile": "desktop",
+      "target": "classroom-entry",
+      "uiReadyMs": 801,
+      "domContentLoadedMs": 16,
+      "transferredBytes": 2357673
+    },
+    {
+      "profile": "desktop",
+      "target": "core-experiment-after-story",
+      "uiReadyMs": 813
+    },
+    {
+      "profile": "mobile-width-cpu4",
+      "target": "map",
+      "uiReadyMs": 183,
+      "domContentLoadedMs": 44,
+      "transferredBytes": 2274394
+    },
+    {
+      "profile": "mobile-width-cpu4",
+      "target": "classroom-entry",
+      "uiReadyMs": 827,
+      "domContentLoadedMs": 11,
+      "transferredBytes": 2380416
+    },
+    {
+      "profile": "mobile-width-cpu4",
+      "target": "core-experiment-after-story",
+      "uiReadyMs": 42
+    }
+  ],
+  "source": {
+    "prHeadSha": "03dddce275b50c813a88d86f600003018dba4f2b",
+    "sha": "03dddce275b50c813a88d86f600003018dba4f2b",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-11-08T16:01:18.753Z"
+  }
+}

@@ -37,7 +37,7 @@ export function IntervalExperiment({scene,value,update}:{scene:LengthScene}&LabP
 }
 
 export function RouteExperiment({scene,value,update}:{scene:LengthScene}&LabProps){
-  const length=(scene.endMm??1000000)-(scene.startMm??0),spacing=[100000,200000].includes(value.spacing)?value.spacing:scene.spacingMm??100000;
+  const length=(scene.endMm??1000000)-(scene.startMm??0),spacing=[100000,200000].includes(Number(value.spacing))?Number(value.spacing):scene.spacingMm??100000;
   const {segments}=intervalMeasure(length,spacing,false),walk=boundedInteger(value.walk,0,0,segments),fraction=useTravel(walk/segments),traveller=pointOnRoute(fraction);
   const path=routePath.map(p=>`${p.x},${p.y}`).join(' '),fresh=(patch:Record<string,unknown>)=>update({...patch,checked:false,showReason:false});
   return <div className="lab-experiment lab-route"><div className="lab-play-area">

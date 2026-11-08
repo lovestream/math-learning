@@ -1,0 +1,37 @@
+{
+  "scope": "Only correct the ring-1 right-end label; publish updated A–E chat screenshots",
+  "functionalSha": "c246c098e4df7ad68f94fd41f5582caea3d5127c",
+  "approval": "awaiting-parent-visual-approval",
+  "passedBrowserRegression": true,
+  "apiRequests": [],
+  "evidence": [
+    {
+      "file": "source-evidence.json",
+      "sha256": "ac0a733a751876b49683d72e1275fa8521a4ce8a522ec3fc610d4b5922d853ce"
+    },
+    {
+      "file": "verify-two-ring-browser.json",
+      "sha256": "4e96af7a60a3eeb2d96ddcb2d54a5ca0abf41bfef3f020ca2a0ea506a5638276"
+    },
+    {
+      "file": "two-ring-A-first.png",
+      "sha256": "4fde431f29221eeae214893bf96318ac7970de3ecbc71457ea3d860ce62c0c42"
+    },
+    {
+      "file": "two-ring-B-coupled-four-quantities.png",
+      "sha256": "32bef33d22f390102f951a80685064d2424a8d92e07c4e6323baeade25827400"
+    },
+    {
+      "file": "two-ring-C-comparison-start.png",
+      "sha256": "c055e7ff8ee62eb6afadd74d2e809d848339eb8dc35d4a275b3e54b0165bdbf5"
+    },
+    {
+      "file": "two-ring-D-adjacent-80.png",
+      "sha256": "4f05396b4c05cf17026372527133bdeeb88dc0a9405d230347597f8d104c668d"
+    },
+    {
+      "file": "two-ring-E-back-to-coupled.png",
+      "sha256": "96a2c0568261b8f0228012f6fd6d72a53aeca51315b986f78ff211647217b8be"
+    }
+  ]
+}

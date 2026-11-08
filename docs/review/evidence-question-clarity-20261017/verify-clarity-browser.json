@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "paper36Correct": true,
+  "threeChecksOnly": true,
+  "firstAnswerPreserved": true,
+  "noRepeatReward": true,
+  "fullConditionChain": true,
+  "clockWholeCircle": true,
+  "multiPieceNoClipping": [
+    5,
+    6
+  ],
+  "widths": [
+    390,
+    1440
+  ],
+  "errors": [],
+  "source": {
+    "prHeadSha": "c440e99b36ab8387dd2dba5fec611c122a20cf9a",
+    "sha": "c440e99b36ab8387dd2dba5fec611c122a20cf9a",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-17T14:23:33.881Z"
+  }
+}

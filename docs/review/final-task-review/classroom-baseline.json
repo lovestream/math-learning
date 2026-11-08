@@ -1,0 +1,502 @@
+{
+  "sourceSha": "499fb72500408a5686af2c798d4798a287fc069e",
+  "rows": [
+    {
+      "lessonId": "G3-U01-B01",
+      "contentVersion": "2026-10-07.2",
+      "contentFingerprint": "a43994e6fd2ff22a883d7e2bb49cc5921a318cb12407276d523bb7bf99fa259a",
+      "classroomFingerprint": "e9e573d09a12308ac076e224efc85f3fe7b4102bdd622a1f7b6186971c19337c",
+      "modelFingerprint": "9be965be7f9b5eb51b437aa6ad2825b641f9d55297ac3f760d769a56ae4717c5"
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "contentVersion": "2026-10-07.2",
+      "contentFingerprint": "c1cc119d384778a90ed199b4a9efad4e3e153b0c31ff12314f25c6bc7f89cf2a",
+      "classroomFingerprint": "30766f60f381c04b520e2f7229687555891a1179fb7c533f9fcb5862e4b40afc",
+      "modelFingerprint": "fcd11c144d775bcc5958b81136c4447eaa1820ac667032eaca5008af59a793b2"
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "contentVersion": "2026-10-07.2",
+      "contentFingerprint": "c2188325bc5c2d41a4db856020aa5e98d76ac1fab56e203d2d63b496d4cf3d03",
+      "classroomFingerprint": "f631047eef650d3037abdd91fea71bb851cb892adcc19d5babb76ad95106e463",
+      "modelFingerprint": "6f6603ea447a85ad6bf02aa4a1eb7add06cdcbfb72a96d91e9b9545b8c2099b9"
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "0be5305b47a240a4314a09a112f501f416f62f9f55f1cdde3ddbd5b3460e7db7",
+      "classroomFingerprint": "9ed10ad2de2e5a1e05db838faaf3597317db1781a0920f8657ea43e0c26a49fd",
+      "modelFingerprint": "b613a7589bab10ecd73dcb0f3ed7505c6c0e32ba729023a55873dc902dee169f"
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "310f8819122907b0841fe855340b75ac007c31b6fd23148ff80bf14e5c65a713",
+      "classroomFingerprint": "50b6c41267eb1be4ae190cd386e7f6053b42f9116719130b5b3b5a4cd1f80576",
+      "modelFingerprint": "d3d63ed96cfe2cbb3741bc65832d9106761bcb72de82ce4f348d9d87ccc66069"
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "25b185131d3fe172a3cae56be41935b86862372a1761e9bb626fc693725d3ca9",
+      "classroomFingerprint": "8d6f1e0bee8abc290b74a89f4ec8581cd6789258c0bd53d677fbf0f9a5255719",
+      "modelFingerprint": "c9904bbbe301909d3cef8ea19682b90e4bd45b689e5e3573d4dbe2a3b67d0ee0"
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "afc2b81602e94b0093762b01a5c1aebcd8b0061f85d3659aaf76486c78c365e1",
+      "classroomFingerprint": "5844c6ea56b55a23d8484f7d7b5d0770b3e7b9ef330007c898ecec88cd3de180",
+      "modelFingerprint": "e6079f30178a1ca31b86228ed54c4d0daafafdffd862d81bb3c8441b74d59ee5"
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "f2887b6a36d7b3664d522ec018a52c8c2ec68bf32b8f7581f57b6c72ee6da0b3",
+      "classroomFingerprint": "083d40eaec2a8170e4e5b6b73c194f3bb7c0cc1cf40c821a5d2492334c9daed2",
+      "modelFingerprint": "25afaebd7542f9ca66b9ed630662bd86fd8b902013e694c6cb3e6e267f6e0cf8"
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "a4aec007648bd5cb163312a84cc85cbecdb7f71b1122c7be9d4f677559e96597",
+      "classroomFingerprint": "16d815913c162b2bb251a05d80a80f0a026ad01a9dec75b4e56db945028b3587",
+      "modelFingerprint": "87bbb6b2c1d388ec2a08b38b004c4978dbad720dd08e6bf0affc9a5cfb4ce059"
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "abc8c0b70254cfafe155fb9e133cf06de92c1d870e2b0622839c44deb8d77628",
+      "classroomFingerprint": "6d133f34ce309341d124b3c89e641c91fc6f4ba9fc37dcabdac4353dabfca594",
+      "modelFingerprint": "c63742c0c503a75417c4195443c6b65e920f4769114ec5a2e3f4bfac3158f47d"
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "6a9e62124e9765635418763df014cc738cf28b47ee88fdce6cf43166efa1a364",
+      "classroomFingerprint": "0cdfb3485f8fc004f3a0f8dfa8e0229d4af88a307d15b5badb90e558b8432a32",
+      "modelFingerprint": "16f99596022912a2c7659667a265b8286837f144562085acdc36ebea7680d46e"
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "854d98e61442834560823b80d68472bdfda6dfc89368cf3222ccbe6073d4ebc5",
+      "classroomFingerprint": "11537feced6fa065274721f0527ae954632c40e5995d916d856272d6672fcc22",
+      "modelFingerprint": "c4718550e670dd12e5d26164dc97be0354c577ea48f467c11fb5360a46845984"
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "6e561b5953e8aafa5635a51cbde28092088d570affb5eee593b3a9f704bd00e2",
+      "classroomFingerprint": "d884e3bf3363a0dd4b0c636126c407ed2a8849dba3d1f61adf74d4013b98e3a4",
+      "modelFingerprint": "fa2fca13df69cf97828893758f25b5683620a78618c46da1204b8343c0a88b6d"
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "7cfe5676caea9d65b107100558ed8c3e0e48edc0959a27f98dc42116b751b1af",
+      "classroomFingerprint": "5256574f1e7e4c73bf7c0457eea53fa3a4355003b39362a73ccb53d473910041",
+      "modelFingerprint": "c810c794c62d2fd15b9a33c8b571979cbd50eadf77906ef076bbda219d7c970d"
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "035bf9c4a1b3f65b79a6432e9a542b3b57b814b28c6c7c6194062a48349db0a9",
+      "classroomFingerprint": "8212244d3cb351f882c3a29368c47ebc53e61d42ef2bb2d9099810e0863f63c5",
+      "modelFingerprint": "7f6920bec19734c09d4432c9aacb8710bfdc37764b2754f691fbd2c498e9beff"
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "94accc374bf42b66cf12df4a263fd7577c1435ef40c93ee04da77d3c3d1ff003",
+      "classroomFingerprint": "5a8d5e8b5de438e6ca8254af2fac8f29dec61066bdccb0cf88bd5672ba026927",
+      "modelFingerprint": "9ddf360646b086bd51a18956b2fd6f31b995e45cb868f866ff2bac47b5438d9c"
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "6ee41f981b6f0d1ae0a00f7077fc26e8cf96f54da1236ea81f33ab6698a59d28",
+      "classroomFingerprint": "580263744711877a58997cea9a548099681eeb333731fc56653b77403bce93ca",
+      "modelFingerprint": "3b77d5f7d8e2dc5c2c5ef173e1d473412f9609d83a9fb727c2660ce53636d4af"
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "contentVersion": "2026-10-07.2",
+      "contentFingerprint": "868e8092bf89edeb956275ebc2be5eebb0aadb43413dad88a0b18ef9a2a12767",
+      "classroomFingerprint": "682c21436653d2fedeac6a4778f28e37c26a7e67d96d30b5b1e0814009664a2c",
+      "modelFingerprint": "3866e1c61146101db77dc19d1fefc1f96d038683b7bf164fefabd1fdda9c74d2"
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "contentVersion": "2026-10-07.2",
+      "contentFingerprint": "b6cb1b57c6bd1ed4bc29e6a85a66cb4ab3843e76288c3b779fce3fa5f4a6fb80",
+      "classroomFingerprint": "88cc0f1c41a4eb6274104770ffd6e2e769064dc1093e84a9d00b6b8a35cdd8e1",
+      "modelFingerprint": "78e0dcf11a6c9741d97f5938f66bdb7198243925b0beca58f97e4ebb523ec766"
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "1a879679594039b6c455f387e9f2ab5eccb222c8c65035cd831eef1d16f942c7",
+      "classroomFingerprint": "b2f9f765f6d2afdad06b1351b1055ba2a989ceb075e0dd8b4d8e2f56afcdefa8",
+      "modelFingerprint": "80d0b1862ca2ed8ec5be0b5eb72cfc61f456fad6771f2cf442a6362ee7c462bb"
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "94bf611bd185f5f3fef1eb234d852e6dbbae52111f055d44e8f123be0c51da4a",
+      "classroomFingerprint": "397288c1f1b2893fcece170f5df5adf99cb944a496ee357b21301771fd86a2e7",
+      "modelFingerprint": "e5a374865747d72ceaf53657444e8c1ce967f7f5c71e2019b7adf893f0c2c197"
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "2ebe4f90005661edc13f0087c36c2374b33a853f4d9acdb28b13f2ff46c23a1b",
+      "classroomFingerprint": "45c82c519fdbfcecff8fc6d4c42b15befe04243591e187ca7491b47467699008",
+      "modelFingerprint": "d28b15f2212317d0e8ac5dc3791ab2ee43cb35dea5188ae082608489af36cf61"
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "dfec0c461d3e16010e8528fd66e387bc16d88ac49b07f782f96978fa713d19ef",
+      "classroomFingerprint": "373fe9e49d381b196f4b97f1b090f4ac994c0f83f1f1d6bca83ed7f4fac9c26b",
+      "modelFingerprint": "208c6185119f46163f0b6681161b175b552605c2ae52bdd7e7c6a4c5ef0f51f6"
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "e923e7942acff98db8dd2f41988d75f78783dcafc1ae2ef4c4f5dc35de71424d",
+      "classroomFingerprint": "f163c5ba6c8eb2d96835734859858a1e921c456bdf9544ba526108b7df2dbd58",
+      "modelFingerprint": "d91c71b40216facf0860a265a7770a8813ae0f33ae080a2c3a89caeaa9d964ce"
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "e617735dd4f7a328c9005748519c6a923d26a592fec49aa4b63abbdacb73ed93",
+      "classroomFingerprint": "8922508a0ddd88447478452d06190e32bbff972476f96c751eb226fb96f78de2",
+      "modelFingerprint": "e647c599ac76360270ade2a6ef76d127997edf155deb814f61d990f110acbf32"
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "0e30c181c44f30f15a0b88eb8f770a870b63930f99d8ff4b6d7b33e375d69a77",
+      "classroomFingerprint": "16a8e9ba25dc4938485777afb61809a3916ca2dcf9a8bfea5a18f4a4b53947eb",
+      "modelFingerprint": "3f12368d8b5861f22570b938a35d719b191c29e110a65652172e18ae970d42b5"
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "0a3147c5e396f1aa1fbfb531139616d0ee3ac32996ebe7f66a8672f2681b423d",
+      "classroomFingerprint": "1eb739a660538db84b08aefc3c8f39e7126ef652c795c33c2c514678e313437a",
+      "modelFingerprint": "975f6eb20b7e6bf299eb0943e7fba6aa706e1c1e04e8021fc17c1a8f08ac9393"
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "ea3c8161b13e03f13d18a8a2d458f8adee00b9cd11a23dc1d88272ccfec84454",
+      "classroomFingerprint": "303b601deced7ba4da7196cefa8b0aad65f4faa8993b7779e68eab20da64aab6",
+      "modelFingerprint": "fca2ae1b6626c6f6ccbdd3365163eb8b182ae80f70f15d9995464fa75320354c"
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "cad5211fb6cb4d7c2d946064a1241d7cfb8b8f6ca6f1112bf78f078e0c47e8a1",
+      "classroomFingerprint": "42c07add2d8b96ab7f8c910ba0e76507337fc58c9f794fcd590d128a4369191a",
+      "modelFingerprint": "054310006105555700a55b3f7b5b5a5ad0236a13643084904bb493d0f191fa4f"
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "6341c90e10380fd8dfb9e237302b21a556f436b7decec68cb95d6c1651817616",
+      "classroomFingerprint": "32587ab071b21f1946390e6afb047ce7fa449e8f467065d8140c66e659b67544",
+      "modelFingerprint": "18b1ca8652cb1e3e6c40a8cf21e42499a41ec69cd89b64e0c966020b52832743"
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "f8dc790ca29890ef8a4acb8f4f6b04405d5fa8fa60c1a06e0e4be0180744a1b0",
+      "classroomFingerprint": "c5e2158de13be3b3290d1f13da195f5db1a5966aaa5577415b2f0838ae2706f1",
+      "modelFingerprint": "08fac982a0c52c5862fcde8a86dc11e27c8311b70f596af0e886ae3c72b71276"
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "84b533d3d7e38050c3c6b98a78bb1f2d623f6c359752a9bcf89e6c22944bc7f7",
+      "classroomFingerprint": "e3fda521b091c262a5a8c41026074bc9a832c3685657e468029600377fc6986b",
+      "modelFingerprint": "4c53abe5120620d669afb372607df28de8f1777bab48fba7adf95ee65a282b60"
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "860c46071ae50b5634980d6b1a7c9021af56be7e4ae8c80acfa4d5f2af0ef300",
+      "classroomFingerprint": "13a716c7abf5f87793a92b18c8e8595e18bb0341f6225d346699858731a951cd",
+      "modelFingerprint": "06ee8ae7ba8bfecc802a08d7eac802e8388dff15a0746ad8de9b37e1efced832"
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "acd7c3c8cc5fc6e2a7e4f91ed993125a7b8a19acfd1b4b41901d8c0218bc3b04",
+      "classroomFingerprint": "5ca86f50fce43aac6cc2cdba530dd1f2fa7de73a50b7fd98d64795f8e9dda678",
+      "modelFingerprint": "fd6e7f0547d616012cd9c1675f77d73be5dedab91612f0baed3e6b15fce850f6"
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "f2a416de342804105b6e1ee47913b89efd0c089dafe8e8adeadcbba146515b48",
+      "classroomFingerprint": "567d6c80016fc60711e637c05eb9f5be618b97a56023420f79f5dc7a818566e4",
+      "modelFingerprint": "3f12368d8b5861f22570b938a35d719b191c29e110a65652172e18ae970d42b5"
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "c64b9df9992926fdd88f0959c4ebb78f827a47232b7ed5684d52daf4df1a4801",
+      "classroomFingerprint": "87d34238dec91a9bbb3f9efa4273506aab11a05f5d92c7a3903b7a37d11baf86",
+      "modelFingerprint": "1010acf25f36f492128b8ee5a9bb9b49756584da5cda90928244e20d3508654f"
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "e3323fa609ce04891dc0adc8e90fd775aa619307b0472807016ce0baae168823",
+      "classroomFingerprint": "e55bb0681dc92cf84c3221e3e72b8bbf7d4b6d3715d1c8db2ac03aae2c4e7847",
+      "modelFingerprint": "ccedc1b19aed360528f89eecc3b243aae6457980d7355b6bbf34b214d9db9a0e"
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "6b9ab07b2fb2576803f3678c0852e31526a8be44cea3b2462cd1284c3626d7e1",
+      "classroomFingerprint": "06ab2a9991544eb3deda72fd6a1b9a250db4fd4bbd600245a802464f9531df0b",
+      "modelFingerprint": "9c687c458c176cb50a44e84dc21d4dad40e1ad8cf99b6bc86fc0462e3a0309b5"
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "2f535ee5e6481183cfd8274feb4ced5c6d555312ec1d4d1413f3b79a229255a1",
+      "classroomFingerprint": "4a2e33d253abb4a7427fc8803ba72adc7e3f7f103838a0580b6fab285cbead2c",
+      "modelFingerprint": "a6d846125c58c58853bee891e37266e2086a1b8bbe9e60e1a0d0ff7173193db6"
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "ea18a6f7f28d410e176136db76a995a154220140a15eee6bc0a8afb1b47a1a5e",
+      "classroomFingerprint": "18b99dcec9b21f46eb1f2717f325d9b467b9916db737117468768b9b49dbeb78",
+      "modelFingerprint": "c0330cd7898f84c4b306e6278974e76d2b9eecfda866663b2848b76a760a9dd5"
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "252113ad9c07f4f635e89c2772472bd8d2669378c8112b0ba55884a6d3169cf0",
+      "classroomFingerprint": "7ff0eb3577760822735424043f6e1f453340fcd03e49a3876da52d2baaeb48c7",
+      "modelFingerprint": "eb5002973e0f511db2e4673fdfbe9e137887d9fa3609980152525e590f545c04"
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "193d140231b39e2f5569f56e11155a1036597dabd70a9fea2e7e21944f720e3a",
+      "classroomFingerprint": "e8bf47c1ef45296293b5fd6bc4ed328c29060d85432a62f2293315fe450a2791",
+      "modelFingerprint": "65dfd86ae6f6307b37a3ef7afe9fc0e424d4c5412a53e914b2cb848dce257313"
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "39361a14ec941630ee154691753a00e62b71d694d5b45676f1d521311522cfd7",
+      "classroomFingerprint": "6321518bd319188cfbeef64a418667fda563cf6f67f04f67e001230dc58c38fd",
+      "modelFingerprint": "00506101532575075073b54550f097ca78c5d2cbc841077f5aab31cf4a3bca0a"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "3fd75a12f3698401ab141a84c9ea9f01e8721b2a8a412bff3000cdad2c11d00b",
+      "classroomFingerprint": "678573f50e8239e4a7747624ed21711da18fb7310ce3b25076e43f3726987f61",
+      "modelFingerprint": "e1728b84557212b31f93ec623e834434d27b87cd19b78f8db9c238349662ef22"
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "9b0f9ae9a92dc179ac167f78958e09998d335f787be12024b6b80ddf4ed4c45d",
+      "classroomFingerprint": "d733190ce6e144f01a576721fa27974bedcf57d4fabbc2a3b73d4696db8e12ce",
+      "modelFingerprint": "3f12368d8b5861f22570b938a35d719b191c29e110a65652172e18ae970d42b5"
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "a5e1a104888ad948a12b9f5c911039ab2c027aeb67204a71d5bcb40ee38f7cac",
+      "classroomFingerprint": "7c60c5bc11a4596501a2db967d4bee7dab36d53b328ae9c1f0fb20a8bce10a14",
+      "modelFingerprint": "ddda30fddcffed8612cc2837c78d754b936e9c763a402a6d5636e7d25e69dadc"
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "8c323e79df69f0d6d83c1c452f2c45ab85a9aaa1d6d6cee35ca5991c22ec8169",
+      "classroomFingerprint": "e967d429426cad20523add1e72055154b79c7f555b07c02cb01a9e4d4b7435ed",
+      "modelFingerprint": "282f0b777f6e50a437654b54cf0d0a0eb34b0520f685dd172524241465d46827"
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "56cecdd9f872adb1cfbab3b12f59e06eeda58e228b34f7f61eeeab8bd3b606aa",
+      "classroomFingerprint": "f45fe77a201f7d71914d38372d1fb61b922e06fc97adf64da38ce171253501da",
+      "modelFingerprint": "3f12368d8b5861f22570b938a35d719b191c29e110a65652172e18ae970d42b5"
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "76df3a9186b10d11469cd3b8acf6fc1af69b5e33a026bbd91ceca1b8777f4536",
+      "classroomFingerprint": "21c6ae11637a6553adec1172be88d8f24385d6436b65a0df39aeff905f4c3d6a",
+      "modelFingerprint": "f4df7c1eefb32c9a6b4721c9961786758b29e00ed2dce7d11115f87142927402"
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "6798ada519a2335f6b4947995a2a5bad6836f204c24aea724a3410244f3e0d90",
+      "classroomFingerprint": "1b6ca4a66bffa6a45d6dede03eef6c4f56d4a880cabff42717384f5dff0b2464",
+      "modelFingerprint": "80bf415a858e5783da3947e28e7a9cc66b3b15a643895c9d350b992ab96519ae"
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "0c984234247cae96f32b687082233762b8f5a94db39d54d81c7d71ca6c366547",
+      "classroomFingerprint": "1ef255f1c10844632df6e43b55c17aca7275788b0c0a79cc3e9cc96e3dc691f4",
+      "modelFingerprint": "229cb5e1b5687be837825f4bae2f22d4d37590de8106a4d647e13d1c271d9bac"
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "20cbb602be2b4482f0383c4732aa17715b52cb7803ab203423e3c0c91884bb12",
+      "classroomFingerprint": "00936514a85f317757c28bc5e9cc254d1c88c1812077d377ede37d21513f89e7",
+      "modelFingerprint": "30947a9f4fec6159361f72e03e785f53e00d73131dc305a3e92dac11a7aca717"
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "d07fa48238bce761e5701c0d2f5d0c92961a09c514073795297d7f4b58005882",
+      "classroomFingerprint": "1993c7543d352b3e4094a7f49b1410656754ea134237544b7f3d9eb5f35afbf1",
+      "modelFingerprint": "f392e37bb6efcceedb6917025cb4c2679444c7a1a3a943e367630e339d5f9d55"
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "bfd94ef5fed51dc94339335200d3c23715d1db0f4ab3bf6a8b0c5051add9e732",
+      "classroomFingerprint": "f1622c9772264f76e7a5591c4ef353f846fbec441b9b696175488e37d7f9a71d",
+      "modelFingerprint": "f0d41aa0315d56214e48dd010ceb6563d3ea5542566b225cfefa1412cdc574eb"
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "120123efe41734137ccb86b531803eb026bf99c9255d3cc5105c03709edad51a",
+      "classroomFingerprint": "f48f5033f7abdf474954cf6227076d12be9cd0438ee1bffb7e365b71963fea6a",
+      "modelFingerprint": "d805d5698cb9d495bef4a7c9e97aa9d7e3505a0319d3f0b781521a6461d3f872"
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "fd1156031b15c5e1a1bc8bf4eda92c4c5296214596bd30f6a3a9faf1e26ad710",
+      "classroomFingerprint": "8f9fcbe4320459c7a52e582f3c358b578f5e599cbcf49dd50b97b531c2f14e22",
+      "modelFingerprint": "3854fb0a69f995a2a7258a5f9d3dec32084609f9b1e0e9d70866cc5656e5c9fb"
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "f055b97f4c995c09f85ba598097b9e5e374ec3958d8c80383b341de848af90f4",
+      "classroomFingerprint": "ffda1c68639fd13d78e0770ce6552e1853d02bd72a98352315ecc891c2854a6b",
+      "modelFingerprint": "38f1f968ce71ae87a9be31a4de2f18766fd540f08a81d8bd4de89353aaef5cf4"
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "56aa7ced2780d2af814cfd34032881fa3535b14f385a1979eb351af290387645",
+      "classroomFingerprint": "0fe0505a7991523d5f7493c53c54bb1e27fd98af66d001867b54f155c9f07701",
+      "modelFingerprint": "3f12368d8b5861f22570b938a35d719b191c29e110a65652172e18ae970d42b5"
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "1ab8a0f74f3121a820532f47f4998f6fd30a1142d5f2185dafda7e41ca4ce8e3",
+      "classroomFingerprint": "3e143519df98890ee8d5bd8f48b23b0305977e951b74aac6137cc5a484a27df3",
+      "modelFingerprint": "3f12368d8b5861f22570b938a35d719b191c29e110a65652172e18ae970d42b5"
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "b5dad135cceec6ecc60eb081d6d3cd0e71531b9296f8802b4eaa982c7c36207d",
+      "classroomFingerprint": "521a9abe701522dd79705e5baddd6771e0c645f186f14f34970826293efe1c7e",
+      "modelFingerprint": "d8891fe827d21d764d9f8c0e3c367256b58f4537f32b882c3e1f7645796e5923"
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "b38a479e6886a16236339145fd888ad8fda24663cf95665b7a60c138667b1158",
+      "classroomFingerprint": "dbff78b8e424de676796f8ab856bb9961aa2bebe4b9e5d559524dd2a6613eda9",
+      "modelFingerprint": "75a115c56890dad75a00d49ecaa1e499de06a1ee764dba33ac5233375ad076d3"
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "9ff02da9d70e4a60d7b4608b704548e4ad6d3e94df43c7f7282aa0f25b032c4a",
+      "classroomFingerprint": "e490fa3bac3380fe356f10fde488562fc26170df1ea6787c9dfe95cb88fae383",
+      "modelFingerprint": "5cbbfa347d936c9e76ed3207a35dc7d2cce058ae096f9bca5d6c4b6fad343be9"
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "694c23db42f311724ebed861979774d3db51ce2167ccc1c507d098901a4cb72e",
+      "classroomFingerprint": "0795d83764e12a7c8edea44c835b7ee27209c767148d0550c5bf1783539e4c00",
+      "modelFingerprint": "6097910185d18131ebf09d68660ad3ee5ca6eaf882e5f4d2f94eab7256703020"
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "594d8a31e27a794f735dd5e69cff1e07db3d17b269a881952fc4f4b36883477b",
+      "classroomFingerprint": "710f62132817ef1e7e57a347a2ea6f8b3a55cc19e0cda8dc2ba0228613715919",
+      "modelFingerprint": "33d17d7ab7bf913e1acb632d3c389f159054f72cfbf831522e4410336135d8a5"
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "943e44a6c297cf490d38fc0baf8711c7e36b0aff64ea8ea114be955ac208bf78",
+      "classroomFingerprint": "b58cf9e7c3a6323df2a2485f909e54f84c043055ae7323c11fc811df0428c99b",
+      "modelFingerprint": "f8dd8d2443421646f9ac640a86f658af60abd860dcc28aee1eb7c857e0767cc3"
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "963a23b4ba1d65400f5ad3d8dbf0bf3b6cfab7142b998c994d0ce5832ab9159b",
+      "classroomFingerprint": "1ec2862649e95b492d0eb01fa7a0303367ddc56688dbb0f747327b30eca57fb7",
+      "modelFingerprint": "2faf9258a10d794d9fbfc077b0656a845a9b066f2933a23bc59d11f3c8ff0731"
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "133bfb540510044a88e0226e93f49ade125d5a11a63ed05ecbda054aa4ee473c",
+      "classroomFingerprint": "82ccbadd6ebd6815e4d07852641a9091f598d16ab5dfc366dade9429a37e4ce6",
+      "modelFingerprint": "7ea0e0154e4983c95f23d4b280b12c8d6313276d9025dc5c734e776450dd42ec"
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "f70238043045f70fd60d8b05b9064fc21cdd81669457bc240ba0c32f20ea797d",
+      "classroomFingerprint": "f36efb40d2a94fa130ca210d31d38b4e844aa18b3ac09b1ce0ab2362748c26dd",
+      "modelFingerprint": "f9ad9e3fc1f4ec1ef2a9848cb555dd4c43441e2d5e24750a03536fe5d0e8d143"
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "7037a81a067f0f16846a9d70ff938639ebba1ff209d7d1169b0e96fdceb0f97f",
+      "classroomFingerprint": "dce186a21060f9d083d743d5b87376447ce8edb52d2624ba121bb9cf26a0cb9d",
+      "modelFingerprint": "b887c832272557f5f3089fba71f23d180a068105614dde2569c47586c7c35650"
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "contentVersion": "2026-10-02.1",
+      "contentFingerprint": "62cc6479d3536425accfb8d8d66897f81ea8984e1e4f30cb1f43f53a529fca0b",
+      "classroomFingerprint": "03ce7d10165ec8c74516400cc3e9f97c6f23fa18f17b12768b8a69863d7fed80",
+      "modelFingerprint": "d77b7c000fd16f02e2474f0b71d0702684bee8d2e14e2ee11ddfa897fc61b94c"
+    }
+  ],
+  "desktopEvidenceSource": {
+    "prHeadSha": "62f39e2887732b3451f2787abc040fee23c8b707",
+    "sha": "62f39e2887732b3451f2787abc040fee23c8b707",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-10-09T07:43:07.692Z"
+  }
+}

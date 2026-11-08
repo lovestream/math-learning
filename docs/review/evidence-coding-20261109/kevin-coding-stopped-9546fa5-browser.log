@@ -1,0 +1,17 @@
+verify-coding-browser: passed
+verify-detective-evidence-browser: passed
+verify-detective-v2-browser: passed
+verify-remaining-visuals-browser: passed
+verify-two-ring-browser: passed
+verify-chain-growth-browser: passed
+verify-clarity-browser: passed
+verify-detective-audit-browser: passed
+verify-detective-inbox-browser: passed
+verify-detective-browser: passed
+verify-detective-recovery-browser: passed
+verify-hands-on-browser: passed
+verify-classroom-flow: passed
+verify-motion-browser: passed
+verify-lab-inventory: passed
+
+Stopped before completion to update obsolete intro/final-task callback assumptions. Not a passed full run.
