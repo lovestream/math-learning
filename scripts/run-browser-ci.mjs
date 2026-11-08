@@ -1,6 +1,7 @@
 import {createBundle} from './create-detective-bundle.mjs';
 import {detectiveToday} from '../server/detective-store.mjs';
 import {manageDetective} from '../server/detective-store.mjs';
+import {sameDayNoon} from './fixtures/detective-clock.mjs';
 import {execFileSync} from "node:child_process";
 import {createHash} from "node:crypto";
 import {prepareReview} from "../server/review-schedule.mjs";
@@ -105,6 +106,7 @@ try {
   });
   for (const name of names) {
     const dir = fs.mkdtempSync(path.join(os.tmpdir(), "kevin-browser-ci-")),
+      fixtureClockStart = sameDayNoon(Date.now()),
       probe = net.createServer();
     probe.listen(0, "127.0.0.1");
     await once(probe, "listening");
@@ -127,7 +129,7 @@ try {
     }
     if(name==='verify-detective-inbox-browser'){
       mockInbox=fs.mkdtempSync(path.join(os.tmpdir(),'kevin-mock-inbox-'));
-      const fixture=createStore(dir,[]);fixture.mutate(p=>{manageDetective(p,{action:'enable-seeds',eventId:'fixture-enable',checks:[true,true,true]});detectiveToday(p);});fixture.close();
+      const fixture=createStore(dir,[]);fixture.mutate(p=>{manageDetective(p,{action:'enable-seeds',eventId:'fixture-enable',checks:[true,true,true]},fixtureClockStart);detectiveToday(p,fixtureClockStart);});fixture.close();
       const bundle=JSON.parse(fs.readFileSync('tests/fixtures/detective-inbox-v1.json','utf8'));bundle.bundleId='DT-START-CARDS';bundle.cases.forEach((c,i)=>c.id='DT-START-CARDS-'+i);fs.writeFileSync(path.join(mockInbox,bundle.bundleId+'.json'),JSON.stringify(bundle));
     }
     // A visibly named simulated old review allows testing the due-review UI without
@@ -210,7 +212,7 @@ try {
       child = spawn(
         process.execPath,
         [...(mockInbox?["--import","./scripts/fixtures/detective-inbox-fetch.mjs"]:[]),"server/index.mjs",...(mockInbox?[]:["--detective-sync=off"]), `--port=${port}`, `--data-dir=${dir}`],
-        { stdio: ["ignore", "pipe", "pipe"],env:{...process.env,...(mockInbox?{DETECTIVE_MOCK_INBOX_DIR:mockInbox}:{})} },
+        { stdio: ["ignore", "pipe", "pipe"],env:{...process.env,...(mockInbox?{DETECTIVE_MOCK_INBOX_DIR:mockInbox,DETECTIVE_MOCK_CLOCK_START:String(fixtureClockStart)}:{})} },
       );
     child.stdout.pipe(log);
     child.stderr.pipe(log);

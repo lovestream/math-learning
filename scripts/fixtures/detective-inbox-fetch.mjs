@@ -3,7 +3,11 @@
 import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';
 const dir=process.env.DETECTIVE_MOCK_INBOX_DIR;if(!dir)throw Error('Missing isolated inbox fixture');
 const realNow=Date.now.bind(Date),realInterval=globalThis.setInterval;
-Date.now=()=>realNow()+Number(fs.existsSync(path.join(dir,'.clock-offset'))?fs.readFileSync(path.join(dir,'.clock-offset'),'utf8'):0);
+// Only the browser harness opts into a same-day noon anchor. Upgrade rehearsals
+// keep their real clock; this preload is never installed by the application.
+const realStart=realNow(),clockStart=Number(process.env.DETECTIVE_MOCK_CLOCK_START??realStart);
+if(!Number.isFinite(clockStart))throw Error('Invalid isolated fixture clock');
+Date.now=()=>clockStart+(realNow()-realStart)+Number(fs.existsSync(path.join(dir,'.clock-offset'))?fs.readFileSync(path.join(dir,'.clock-offset'),'utf8'):0);
 globalThis.setInterval=(fn,delay,...args)=>realInterval(fn,delay===60000?100:delay,...args);
 const nativeFetch=globalThis.fetch;globalThis.fetch=async(url,options={})=>{
  if(!String(url).startsWith('https://api.github.com/repos/lovestream/math-learning/'))return nativeFetch(url,options);
