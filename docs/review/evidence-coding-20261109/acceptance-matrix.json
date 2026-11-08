@@ -1,0 +1,114 @@
+{
+  "source": {
+    "prHeadSha": "03dddce275b50c813a88d86f600003018dba4f2b",
+    "sha": "03dddce275b50c813a88d86f600003018dba4f2b",
+    "dirty": false,
+    "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "startedAt": "2026-11-08T16:01:18.753Z"
+  },
+  "syntheticOnly": true,
+  "lessonId": "G3-UP02-B01",
+  "version": "2026-11-01.2",
+  "sixStagesAndThreeChecks": "passed; all six screens at 1366x768,1440x900,390x844",
+  "fourCodingTopics": "passed; identity/postal/class-school identifier/misconceptions",
+  "formalTaskResults": [
+    {
+      "id": "G3-UP02-B01-P01",
+      "kind": "choice",
+      "first": "1",
+      "final": "2",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P02",
+      "kind": "choice",
+      "first": "2",
+      "final": "1",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P03",
+      "kind": "explanation",
+      "first": "我还没有说明字段和规则。",
+      "final": "前6位44 01 06；中间8位2015 05 16是2015年5月16日；接着003是顺序码；最后？是还没给出的校验码。",
+      "status": "pendingReview"
+    },
+    {
+      "id": "G3-UP02-B01-P04",
+      "kind": "choice",
+      "first": "2",
+      "final": "1",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P07",
+      "kind": "explanation",
+      "first": "我还没有说明字段和规则。",
+      "final": "我用03-02-07，三段各两位表示年级、班级、班内序号，不足两位补0。三年级1班7号为03-01-07。只写07时跨班不能区分。",
+      "status": "pendingReview"
+    },
+    {
+      "id": "G3-UP02-B01-P05",
+      "kind": "choice",
+      "first": "2",
+      "final": "1",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P08",
+      "kind": "explanation",
+      "first": "我还没有说明字段和规则。",
+      "final": "采用入学年2024加全校该年唯一流水0007，写2024-0007；班级另记。另一个班的学生不能也分到0007，另一入学年由年份区分；升年级不改号。这只是校内模拟号。",
+      "status": "pendingReview"
+    },
+    {
+      "id": "G3-UP02-B01-P06",
+      "kind": "explanation",
+      "first": "我还没有说明字段和规则。",
+      "final": "年级1位、班级1位、序号2位。3207是3年级2班7号，3645是3年级6班45号。班内序号不重复，跨班或跨年级至少有一个字段不同。升年级时年级字段改变。",
+      "status": "pendingReview"
+    },
+    {
+      "id": "G3-UP02-B01-P09",
+      "kind": "number",
+      "first": "17",
+      "final": "18",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P10",
+      "kind": "choice",
+      "first": "1",
+      "final": "2",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P11",
+      "kind": "choice",
+      "first": "2",
+      "final": "1",
+      "status": "correct"
+    },
+    {
+      "id": "G3-UP02-B01-P12",
+      "kind": "explanation",
+      "first": "我还没有说明字段和规则。",
+      "final": "只写05还不知道哪个书架哪一层；只写07还不知道哪个班或年级；同一邮编有许多人，要写详细收件地址。校验通过只说明计算关系符合，不能证明身份真实。",
+      "status": "pendingReview"
+    }
+  ],
+  "parentReview": "5 open tasks only pending before explicit synthetic parent review; replay idempotent",
+  "versionMigration": "265 Node suite includes 2026-10-09.4 and 2026-11-01.1 to .2; first answers/restore/rewards retained",
+  "historical849Sha256": "775cebc7250fb8f45284d6754f13340a1dbaf162242cbe417a35b2ecaf9a1465",
+  "unchangedSiblings": 69,
+  "nodeTests": 265,
+  "browserSuites": 32,
+  "content": "70 lessons / 849 formal IDs",
+  "sourceCI": [
+    "https://github.com/lovestream/math-learning/actions/runs/42497733112",
+    "https://github.com/lovestream/math-learning/actions/runs/42497726627"
+  ],
+  "visualInspection": "Agent viewed current-source screenshots listed in visual-review.json; no claim of human teaching approval",
+  "realKevinTrial": "not-performed; eight teaching questions in original task document remain for parent",
+  "deployment": "not-performed; Draft PR, no main merge, no NAS or real learner-data modification"
+}

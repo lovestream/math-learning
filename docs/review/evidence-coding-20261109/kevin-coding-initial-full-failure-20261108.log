@@ -1,0 +1,9 @@
+verify-coding-browser: passed
+verify-detective-evidence-browser: passed
+verify-detective-v2-browser: passed
+verify-remaining-visuals-browser: passed
+verify-two-ring-browser: passed
+verify-chain-growth-browser: passed
+verify-clarity-browser: passed
+verify-detective-audit-browser: passed
+verify-detective-inbox-browser: 新投递替换了今日计划

@@ -1,0 +1,158 @@
+{
+  "baseline": "4fd7fb9c0693b6a045418c509f212aa90907d068",
+  "source": "03dddce275b50c813a88d86f600003018dba4f2b",
+  "files": [
+    {
+      "path": "content/pilot/coding-supplement.mjs",
+      "sha256": "d2b2852f6cb0580b3d8762386e0b8e7fd53e299791ec8005fd2280edfa0e3f00"
+    },
+    {
+      "path": "content/pilot/lessons.json",
+      "sha256": "f4157d60a768657b5e79d1fa3a2e24642d8d499457949e9501b1268f1babbf05"
+    },
+    {
+      "path": "content/pilot/source.mjs",
+      "sha256": "25db030b71664ec0d40fb0eda703ae40c148d88974360f0370758f5f62c6a487"
+    },
+    {
+      "path": "docs/review/final-task-review/versioned/coding-20261101-history.json",
+      "sha256": "ad735bba3d5e4b0d6282c052e4d7bd7015ef09ea9f8d1980b125b528add3e15e"
+    },
+    {
+      "path": "docs/review/final-task-review/versioned/coding-20261101-pending.json",
+      "sha256": "ec35e19234af09200d8714e877b4ae2e8dd23b326f3b5ab5d5b46bccd3c8cc03"
+    },
+    {
+      "path": "docs/review/final-task-review/versioned/coding-20261101.json",
+      "sha256": "94ddd711808ef487ffed9c9ae275b7674316f00873af19cdcd99e04bce1bf56a"
+    },
+    {
+      "path": "docs/review/semantic-ledger/contexts.mjs",
+      "sha256": "f0014beea9a60f10e2f6d6d0ad37c3377cc598fb8b8ae32812ccf24c3c50e3e6"
+    },
+    {
+      "path": "docs/review/semantic-ledger/notes.mjs",
+      "sha256": "d2e210b198acef70abd0b5a6cf747ebcbbe235e5c635d892c46e636c949fd9e6"
+    },
+    {
+      "path": "docs/review/semantic-ledger/teaching-semantic-ledger.json",
+      "sha256": "27ec927c3e006d561b46708356da3088429a4adb22220ec61a3b748266ded2d4"
+    },
+    {
+      "path": "docs/review/三年级70课_六步教学语义台账.md",
+      "sha256": "5656d6cc3626df8eb78367835a364223d41491cfda60225d6c6c49da4694fbce"
+    },
+    {
+      "path": "docs/review/三年级逐场景语义一致性矩阵_20261019.json",
+      "sha256": "3b81cd6d26fffa208dae5c84295cb25dfc6ed6cd4b8e7d82cde3821721e7754b"
+    },
+    {
+      "path": "scripts/audit-formal-tasks.mjs",
+      "sha256": "4738027bc045f318f91ffe8aa5f007e3db990d8a68d30617947fef5939ff7d7f"
+    },
+    {
+      "path": "scripts/build-final-task-review.mjs",
+      "sha256": "82fccd8489fafb6dc74d05055c8152feb4b795966672e309896483cd24153ac2"
+    },
+    {
+      "path": "scripts/build-scene-matrix.mjs",
+      "sha256": "d4b0db735a3323a0db91d6c874ae4492be5fa0c264ad08cec9125dbbacbb5457"
+    },
+    {
+      "path": "scripts/build-semantic-ledger.mjs",
+      "sha256": "cdc4685b9bd7bd7d9b6ed6db87767b923cba34e98edb1e4575e922f1b6fd1590"
+    },
+    {
+      "path": "scripts/fixtures/detective-clock.mjs",
+      "sha256": "457bb78a2c39435be1d6394b4417d20ee6ffbcebad4966c1cc0c83a20e80f597"
+    },
+    {
+      "path": "scripts/fixtures/detective-inbox-fetch.mjs",
+      "sha256": "e95d45cbfd74b6dfe21830b2cc3ae31a5f13f0dfe9ede3a882eca6decb420faa"
+    },
+    {
+      "path": "scripts/run-browser-ci.mjs",
+      "sha256": "33bc3ede8d0d4af448a3f04554bc188270068e02047ee980c629e1bb5b8f19b7"
+    },
+    {
+      "path": "scripts/task-review-registry.mjs",
+      "sha256": "cedcf46b710107b45b1f5399357d3dd24fbd01099f44b8290499404cdc3dddb0"
+    },
+    {
+      "path": "scripts/verify-coding-browser.js",
+      "sha256": "0d4330363faab006c9286a2673d105288f1743614e416538785d76afcecbcc31"
+    },
+    {
+      "path": "scripts/verify-final-tasks-browser.js",
+      "sha256": "b2d474ff31b54c65f892fa52ab031c5dc82f9481f22b605bdfb02b434f54065a"
+    },
+    {
+      "path": "scripts/verify-formal-review-browser.js",
+      "sha256": "57574fede14e34a0d0e7471364e2394e605f8861cea99733a70869ed19e36dd4"
+    },
+    {
+      "path": "scripts/verify-intro-visuals.js",
+      "sha256": "268134beb63f2947a8ac05f595159e7a3ea7796ae117e08c1bfa4803e7f1fcf1"
+    },
+    {
+      "path": "scripts/verify-template-browser.js",
+      "sha256": "241fb2199ee93ebe937d093f995ea6eb96dfdfda464c3f52c124ac7b5003142c"
+    },
+    {
+      "path": "shared/coding-model.d.mts",
+      "sha256": "131e056fa2498b6c280164097b1c46b4743d9e20b130a33e1c0263092623ec7e"
+    },
+    {
+      "path": "shared/coding-model.mjs",
+      "sha256": "3ba282cd5a4b37bb30ee58bc994a3b6247968c537d63d6a794209d06837c5c92"
+    },
+    {
+      "path": "shared/intro-visuals.d.mts",
+      "sha256": "0e97d770249bf7f5b9cc79e249a32d39ed5fa728dd494c6c5a3a9505b4cff581"
+    },
+    {
+      "path": "shared/intro-visuals.mjs",
+      "sha256": "6c46a5c65cfbf86e59aa0b99210e66ae2f3480bdfc123509b51b862cf7e1b672"
+    },
+    {
+      "path": "src/studio/IntroVisual.tsx",
+      "sha256": "f5dffbd967b121aeefbe01dce1ef31b5207514c5f97ff64b21f07263902bf433"
+    },
+    {
+      "path": "src/studio/textbook/CodingExploration.tsx",
+      "sha256": "ac2c82e5db754688696d778f6b49e92514e800f7874391510a1cdf3c4009f965"
+    },
+    {
+      "path": "src/studio/textbook/CodingOverview.tsx",
+      "sha256": "c60252cfef9cf06734bd20148bec813072de0870117b25b817372c5f1199b289"
+    },
+    {
+      "path": "src/studio/textbook/SymbolWorkbench.tsx",
+      "sha256": "cc75e8cbd587b254f88b777cc8300bf7e0b0adac6c8e6ecaf5fd59f3262370d8"
+    },
+    {
+      "path": "src/studio/textbook/coding-exploration.css",
+      "sha256": "f3669078f2e7feed709eaf4a51f56a4ce20916e31ffa70730a35f068f0abe758"
+    },
+    {
+      "path": "tests/classroom-template.test.mjs",
+      "sha256": "3d7d61412603809c72e7ee067de394a92a357d081c3c58137733293fa5e6a1e4"
+    },
+    {
+      "path": "tests/coding-supplement.test.mjs",
+      "sha256": "45de532d7f41893e5d1f7d06b4664edaaad05b4e61436128ae89383246193e9d"
+    },
+    {
+      "path": "tests/detective-fixture-clock.test.mjs",
+      "sha256": "fd3d7c0cc2dcb4c48f521ae0a3d41dacd92d760f02bf7c7e0f6e862e8f1c3d73"
+    },
+    {
+      "path": "tests/final-task-review.test.mjs",
+      "sha256": "0af963cb5c57fe7528b4713161c08de4f4d304acd7cb0e9f579145389694d261"
+    },
+    {
+      "path": "tests/teaching-semantic-ledger.test.mjs",
+      "sha256": "0f12cd424e8a0afe45cc6b080a29b85509531494f108524f52ac2f021d263ebd"
+    }
+  ]
+}

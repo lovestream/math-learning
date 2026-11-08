@@ -10490,6 +10490,76 @@
         }
       ],
       "scope": "Only G3-U03-E02 retested and visually inspected; other 69 classroom evidence sources remain unchanged."
+    },
+    {
+      "passed": true,
+      "source": {
+        "prHeadSha": "03dddce275b50c813a88d86f600003018dba4f2b",
+        "sha": "03dddce275b50c813a88d86f600003018dba4f2b",
+        "dirty": false,
+        "diffHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "startedAt": "2026-11-08T16:01:18.753Z"
+      },
+      "rows": [
+        {
+          "lessonId": "G3-UP02-B01",
+          "title": "数字编码：身份证、邮编与我的学号",
+          "contentFingerprint": "dba1cf6ae8806aff9ad485e14937a6b97e208e34d929e27088ce7e7214c14a49",
+          "result": "pass",
+          "mathBehavior": "full-path-verified",
+          "actionsPerformed": [
+            "逐段定位18字符，003/004比较第17位，说明第18位X规则与局限",
+            "六位邮编2/1/1/2分段，与身份证地址码对照",
+            "跨班同序号、升年级和六年级毕业边界；校内流水跨班唯一且可容纳810人",
+            "五道辨错的正误路径和清空，不计正式掌握",
+            "为这个位置登记编号",
+            "试试只写格号"
+          ],
+          "assertions": [
+            "四类图与六步一致",
+            "字段定位、奇偶、邮编和稳定编号真实操作",
+            "错误路径、重置与原书架操作",
+            "12题先封存再三项自查",
+            "5题开放方案仅家长批阅",
+            "旧答案与积分边界、复习、完整备份恢复"
+          ],
+          "screenshots": {
+            "story-1440": "docs/review/evidence-coding-20261109/coding-story-1440.png",
+            "prediction-1440": "docs/review/evidence-coding-20261109/coding-prediction-1440.png",
+            "identity-1366": "docs/review/evidence-coding-20261109/coding-identity-1366.png",
+            "identity-1440": "docs/review/evidence-coding-20261109/coding-identity-1440.png",
+            "identity-390": "docs/review/evidence-coding-20261109/coding-identity-390.png",
+            "postal-1440": "docs/review/evidence-coding-20261109/coding-postal-1440.png",
+            "class-design-1440": "docs/review/evidence-coding-20261109/coding-class-design-1440.png",
+            "stable-design-1440": "docs/review/evidence-coding-20261109/coding-stable-design-1440.png",
+            "misconceptions-1440": "docs/review/evidence-coding-20261109/coding-misconceptions-1440.png",
+            "shelf-operated-1440": "docs/review/evidence-coding-20261109/coding-shelf-operated-1440.png",
+            "discovery-1440": "docs/review/evidence-coding-20261109/coding-discovery-1440.png",
+            "math-language-1440": "docs/review/evidence-coding-20261109/coding-math-language-1440.png",
+            "verification-1440": "docs/review/evidence-coding-20261109/coding-verification-1440.png",
+            "story-1366": "docs/review/evidence-coding-20261109/coding-story-1366.png",
+            "prediction-1366": "docs/review/evidence-coding-20261109/coding-prediction-1366.png",
+            "experiment-1366": "docs/review/evidence-coding-20261109/coding-experiment-1366.png",
+            "discovery-1366": "docs/review/evidence-coding-20261109/coding-discovery-1366.png",
+            "math-language-1366": "docs/review/evidence-coding-20261109/coding-math-language-1366.png",
+            "verification-1366": "docs/review/evidence-coding-20261109/coding-verification-1366.png",
+            "experiment-1440": "docs/review/evidence-coding-20261109/coding-experiment-1440.png",
+            "story-390": "docs/review/evidence-coding-20261109/coding-story-390.png",
+            "prediction-390": "docs/review/evidence-coding-20261109/coding-prediction-390.png",
+            "experiment-390": "docs/review/evidence-coding-20261109/coding-experiment-390.png",
+            "discovery-390": "docs/review/evidence-coding-20261109/coding-discovery-390.png",
+            "math-language-390": "docs/review/evidence-coding-20261109/coding-math-language-390.png",
+            "verification-390": "docs/review/evidence-coding-20261109/coding-verification-390.png",
+            "open-task-P07-1440": "docs/review/evidence-coding-20261109/coding-open-task-P07-1440.png",
+            "parent-review-1440": "docs/review/evidence-coding-20261109/coding-parent-review-1440.png"
+          },
+          "visualInspected": true
+        }
+      ],
+      "syntheticOnly": true,
+      "visualReviewBoundary": "Codex agent visual inspection only; no parent teaching approval or Kevin mastery",
+      "visualReview": "docs/review/evidence-coding-20261109/visual-review.json",
+      "reviewEvidencePath": "docs/review/evidence-coding-20261109"
     }
   ]
 }

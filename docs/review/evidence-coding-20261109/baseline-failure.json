@@ -1,0 +1,13 @@
+{
+  "sha": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+  "ciRun": 41272134400,
+  "conclusion": "failure",
+  "failedCheck": "verify-template-browser: 真实问题缺图 G3-UP02-B01",
+  "cause": "旧图形选择器没有识别新增的可访问编码条件组；已新增四组可见code条件的专门断言。",
+  "localPriorTimeout": "先前本地侦探验收曾超时；最终专项和完整重跑均通过，未据此改写侦探产品逻辑。",
+  "intermediate765b302": {
+    "ciRun": 42496641398,
+    "failure": "verify-detective-inbox-browser: 新投递替换了今日计划",
+    "cause": "UTC+8近午夜加16分钟跨天；已让测试夹具在同一业务日正午起步，新增全天1440个时刻与真实跨天保留计划回归，生产时钟不变。"
+  }
+}

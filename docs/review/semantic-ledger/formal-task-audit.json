@@ -5,7 +5,7 @@
     "total": 849,
     "schemaChecked": 849,
     "machineCheckedCount": 849,
-    "solutionInternallyConsistent": 294,
+    "solutionInternallyConsistent": 293,
     "independentlyDerivedFromPromptOrDiagram": 84,
     "independentNumericProofCount": 84,
     "agentSemanticReviewed": 849,
@@ -12680,11 +12680,11 @@
     {
       "lessonId": "G3-UP02-B01",
       "unitId": "G3-UP02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-11-01.2",
       "set": "warmup",
       "id": "G3-UP02-B01-P01",
-      "kind": "explanation",
-      "sourceFingerprint": "6dce131ca50862d10651f43ff513a09eb5de0d7f195e3fdc91e2d42a2871e57a",
+      "kind": "choice",
+      "sourceFingerprint": "54ae68bbcd42286bc9a7ae50c660acfcecd43db2a4c6beb2fd65304259f450db",
       "errors": [],
       "flags": [],
       "proofs": [],
@@ -12697,14 +12697,14 @@
       "humanTeachingApproved": false,
       "historicalAgentSample": false,
       "semanticEvidence": {
-        "source": "docs/review/849题最终审校清单_20261009.json",
+        "source": "docs/review/final-task-review/versioned/coding-20261101.json",
         "reviewer": {
           "kind": "Codex-agent",
-          "method": "逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险",
-          "humanTeachingApproved": false,
-          "independentThirdParty": false
+          "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+          "independentThirdParty": false,
+          "humanTeachingApproved": false
         },
-        "reason": "学号字段含义由规则定，08可为序号不是必为8岁；可说号码用来认人不量年龄。",
+        "reason": "给定02-03-05按题中架／层／格读取，表示第2架第3层第5格；编码没有说明书的数量。三段相加以及比较编号大小都不能推出本数。",
         "authoredRelationEqualities": []
       },
       "staleSemanticEvidence": false
@@ -12712,11 +12712,11 @@
     {
       "lessonId": "G3-UP02-B01",
       "unitId": "G3-UP02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-11-01.2",
       "set": "warmup",
       "id": "G3-UP02-B01-P02",
-      "kind": "explanation",
-      "sourceFingerprint": "90aed2e7bf605ebd187a8dca69940306ac6b250519b60fa0d7394147bafa276b",
+      "kind": "choice",
+      "sourceFingerprint": "64fad553fb8f3dcfff7d5a16209619916390b25326804c957d114c2c4b21749c",
       "errors": [],
       "flags": [],
       "proofs": [],
@@ -12729,14 +12729,14 @@
       "humanTeachingApproved": false,
       "historicalAgentSample": false,
       "semanticEvidence": {
-        "source": "docs/review/849题最终审校清单_20261009.json",
+        "source": "docs/review/final-task-review/versioned/coding-20261101.json",
         "reviewer": {
           "kind": "Codex-agent",
-          "method": "逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险",
-          "humanTeachingApproved": false,
-          "independentThirdParty": false
+          "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+          "independentThirdParty": false,
+          "humanTeachingApproved": false
         },
-        "reason": "02-03-05按架、层、本规则中间03是第三层，字段位置决定解释。",
+        "reason": "本题限定按字段设计班级编号：需约定可解读的字段、各段长度和不重号的识别范围。长并非充分条件，喜欢的数字也不保证唯一；不是断言所有现实编码都必须固定长度。",
         "authoredRelationEqualities": []
       },
       "staleSemanticEvidence": false
@@ -12744,11 +12744,11 @@
     {
       "lessonId": "G3-UP02-B01",
       "unitId": "G3-UP02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-11-01.2",
       "set": "core",
       "id": "G3-UP02-B01-P03",
       "kind": "explanation",
-      "sourceFingerprint": "9c422e8297eb029686d60bb76eaae9c952e8c2d40bc1ddf624b9ea3d5254f86d",
+      "sourceFingerprint": "8699de83aa0af07bf8d1846afe3ee5f54044e33882ce9b928464b2ef06659c82",
       "errors": [],
       "flags": [],
       "proofs": [],
@@ -12761,14 +12761,14 @@
       "humanTeachingApproved": false,
       "historicalAgentSample": true,
       "semanticEvidence": {
-        "source": "docs/review/849题最终审校清单_20261009.json",
+        "source": "docs/review/final-task-review/versioned/coding-20261101.json",
         "reviewer": {
           "kind": "Codex-agent",
-          "method": "逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险",
-          "humanTeachingApproved": false,
-          "independentThirdParty": false
+          "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+          "independentThirdParty": false,
+          "humanTeachingApproved": false
         },
-        "reason": "两架都只写01就冲突，不知道是哪架哪层；需增加区分字段。",
+        "reason": "只读给定虚构片段：440106为位置1—6；20150516为位置7—14，读为2015年5月16日；003为15—17；末位问号表示校验码未给出。前6位不是现居地，不要求计算校验码，也不索取孩子生日。",
         "authoredRelationEqualities": []
       },
       "staleSemanticEvidence": false
@@ -12776,11 +12776,11 @@
     {
       "lessonId": "G3-UP02-B01",
       "unitId": "G3-UP02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-11-01.2",
       "set": "core",
       "id": "G3-UP02-B01-P04",
-      "kind": "explanation",
-      "sourceFingerprint": "1f561b11f1ed32345f4ebf2d9374a1515c903454b79ec259fff291e999546a78",
+      "kind": "choice",
+      "sourceFingerprint": "0c06602f1b7e413aa16fed505eb2867aa44874c06c1b552e1bf9142d2743e9b5",
       "errors": [],
       "flags": [],
       "proofs": [],
@@ -12793,14 +12793,14 @@
       "humanTeachingApproved": false,
       "historicalAgentSample": false,
       "semanticEvidence": {
-        "source": "docs/review/849题最终审校清单_20261009.json",
+        "source": "docs/review/final-task-review/versioned/coding-20261101.json",
         "reviewer": {
           "kind": "Codex-agent",
-          "method": "逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险",
-          "humanTeachingApproved": false,
-          "independentThirdParty": false
+          "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+          "independentThirdParty": false,
+          "humanTeachingApproved": false
         },
-        "reason": "固定长度编码删前导0可失去字段边界，不能把它当普通整数约分。",
+        "reason": "顺序码004占15、16、17位，所以第17位为4，是偶数，按规则对应女性；第18位校验码没有在题目给出。顺序码既不是出生年，也不是整个号码最后一位。",
         "authoredRelationEqualities": []
       },
       "staleSemanticEvidence": false
@@ -12808,11 +12808,11 @@
     {
       "lessonId": "G3-UP02-B01",
       "unitId": "G3-UP02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-11-01.2",
       "set": "core",
       "id": "G3-UP02-B01-P07",
       "kind": "explanation",
-      "sourceFingerprint": "85bd80c479567b7a56d0b93524f011c3aeecd2232020f34da7bc7e656de68e97",
+      "sourceFingerprint": "136243189fd5a84db7e8bed7f71c4a67a8237ac3561a38ebf138e62bd58ab0da",
       "errors": [],
       "flags": [],
       "proofs": [],
@@ -12825,14 +12825,14 @@
       "humanTeachingApproved": false,
       "historicalAgentSample": false,
       "semanticEvidence": {
-        "source": "docs/review/849题最终审校清单_20261009.json",
+        "source": "docs/review/final-task-review/versioned/coding-20261101.json",
         "reviewer": {
           "kind": "Codex-agent",
-          "method": "逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险",
-          "humanTeachingApproved": false,
-          "independentThirdParty": false
+          "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+          "independentThirdParty": false,
+          "humanTeachingApproved": false
         },
-        "reason": "年级3、班2、序号07拼成四位3207；这是身份代码，3207.0不满足四位格式，应转家长核对而非数值比较。",
+        "reason": "这是开放题，不沿用旧版必须3207的限制。3207、3-2-07、3-02-07、03-02-07等均可，需解释年级／班级／序号和固定长度或分隔规则。只写07在跨班识别时会撞号；本班内部限定范围时07本可区分，因此必须说明范围。",
         "authoredRelationEqualities": []
       },
       "staleSemanticEvidence": false
@@ -12840,22 +12840,16 @@
     {
       "lessonId": "G3-UP02-B01",
       "unitId": "G3-UP02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-11-01.2",
       "set": "transfer",
       "id": "G3-UP02-B01-P05",
-      "kind": "number",
-      "sourceFingerprint": "e55f951836d0de32da6e2f51626d60624b2b66401da302feb1e0a31fad9573d3",
+      "kind": "choice",
+      "sourceFingerprint": "32ee517902296a8509c9c23dade58b23164b56e70b0b95cec9010a7fa1edc6f8",
       "errors": [],
       "flags": [],
-      "proofs": [
-        {
-          "type": "solution-arithmetic-value",
-          "expression": "2×3×5",
-          "value": 30
-        }
-      ],
+      "proofs": [],
       "schemaChecked": true,
-      "solutionInternallyConsistent": true,
+      "solutionInternallyConsistent": false,
       "independentlyDerivedFromPromptOrDiagram": false,
       "numericProofVerified": false,
       "formalChecked": true,
@@ -12863,35 +12857,26 @@
       "humanTeachingApproved": false,
       "historicalAgentSample": true,
       "semanticEvidence": {
-        "source": "docs/review/849题最终审校清单_20261009.json",
+        "source": "docs/review/final-task-review/versioned/coding-20261101.json",
         "reviewer": {
           "kind": "Codex-agent",
-          "method": "逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险",
-          "humanTeachingApproved": false,
-          "independentThirdParty": false
+          "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+          "independentThirdParty": false,
+          "humanTeachingApproved": false
         },
-        "reason": "2*3*5=30格，不同柜层格三元组逐一唯一。",
-        "authoredRelationEqualities": [
-          {
-            "taskId": "G3-UP02-B01-P05",
-            "equation": "2*3*5=30",
-            "parts": [
-              "2*3*5",
-              "30"
-            ]
-          }
-        ]
+        "reason": "传统邮编是投递区域专用代号。同一投递区域能有许多住户，故还要详细地址；与身份证行政区划码属于不同用途的体系，不能相互照抄。",
+        "authoredRelationEqualities": []
       },
       "staleSemanticEvidence": false
     },
     {
       "lessonId": "G3-UP02-B01",
       "unitId": "G3-UP02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-11-01.2",
       "set": "transfer",
       "id": "G3-UP02-B01-P08",
       "kind": "explanation",
-      "sourceFingerprint": "e959113a6b990f853d224c687d4b548a390684babbecc1b75e18ea85272cc1f3",
+      "sourceFingerprint": "524b5870f824826dbedea0ea4a5d1ffa474003319fb462be09979258801f33bb",
       "errors": [],
       "flags": [],
       "proofs": [],
@@ -12904,14 +12889,14 @@
       "humanTeachingApproved": false,
       "historicalAgentSample": false,
       "semanticEvidence": {
-        "source": "docs/review/849题最终审校清单_20261009.json",
+        "source": "docs/review/final-task-review/versioned/coding-20261101.json",
         "reviewer": {
           "kind": "Codex-agent",
-          "method": "逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险",
-          "humanTeachingApproved": false,
-          "independentThirdParty": false
+          "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+          "independentThirdParty": false,
+          "humanTeachingApproved": false
         },
-        "reason": "一位班号不能装12；可用3-12-07或固定31207，与3-01-27或30127区分，不只认唯一字符串。",
+        "reason": "长效模拟校内号需用稳定字段：入学年2024＋当年全校唯一流水0007可得2024-0007；换班升年级不改这两段。同年不能每班重置流水；跨年由入学年区分。随机唯一标识等其他清楚保证稳定唯一的方案也可，不能冒称国家学籍号。",
         "authoredRelationEqualities": []
       },
       "staleSemanticEvidence": false
@@ -12919,11 +12904,11 @@
     {
       "lessonId": "G3-UP02-B01",
       "unitId": "G3-UP02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-11-01.2",
       "set": "challenge",
       "id": "G3-UP02-B01-P06",
       "kind": "explanation",
-      "sourceFingerprint": "ba9569f8d4d8822f6b686db23dabc617e50417f35bb9543523e3072e678828b9",
+      "sourceFingerprint": "7b0d66fc77888dd1bb6ceff2c691c165158a12b339c030798317fbb6b276af9c",
       "errors": [],
       "flags": [],
       "proofs": [],
@@ -12936,14 +12921,14 @@
       "humanTeachingApproved": false,
       "historicalAgentSample": true,
       "semanticEvidence": {
-        "source": "docs/review/849题最终审校清单_20261009.json",
+        "source": "docs/review/final-task-review/versioned/coding-20261101.json",
         "reviewer": {
           "kind": "Codex-agent",
-          "method": "逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险",
-          "humanTeachingApproved": false,
-          "independentThirdParty": false
+          "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+          "independentThirdParty": false,
+          "humanTeachingApproved": false
         },
-        "reason": "统一规则之外还须唯一分配序号；两人同时给不同书用同号依旧冲突。",
+        "reason": "条件为年级1—3、班级1—6、序号1—45，容量3×6×45＝810。1＋1＋2位的3207与3645或1＋2＋2位的3-02-07与3-06-45都可解码；不强制最短位数。同班序号唯一、跨班班级字段不同、跨年级年级不同。升年级会改变该标签，不能称终身学籍号。",
         "authoredRelationEqualities": []
       },
       "staleSemanticEvidence": false
@@ -12951,11 +12936,11 @@
     {
       "lessonId": "G3-UP02-B01",
       "unitId": "G3-UP02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-11-01.2",
       "set": "review",
       "id": "G3-UP02-B01-P09",
-      "kind": "explanation",
-      "sourceFingerprint": "65e76ef9b685f55de6c49afc88e4d6668f05f373f5c3dd499eb66d5ce8389d1a",
+      "kind": "number",
+      "sourceFingerprint": "8bbdeccafe17a602a9af842869547c0bb3005f68a94096cf9f96df3f75de40ee",
       "errors": [],
       "flags": [],
       "proofs": [],
@@ -12968,14 +12953,14 @@
       "humanTeachingApproved": false,
       "historicalAgentSample": true,
       "semanticEvidence": {
-        "source": "docs/review/849题最终审校清单_20261009.json",
+        "source": "docs/review/final-task-review/versioned/coding-20261101.json",
         "reviewer": {
           "kind": "Codex-agent",
-          "method": "逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险",
-          "humanTeachingApproved": false,
-          "independentThirdParty": false
+          "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+          "independentThirdParty": false,
+          "humanTeachingApproved": false
         },
-        "reason": "A03可标第3位置但不提供书数量；可说编号标签与库存计数不同。",
+        "reason": "从题干明确给出的6、8、3、1四段独立相加：6＋8＋3＋1＝18；X也只占一个字符位置。题干不直接报出总长度，检验分段计数而不只是抄出18。",
         "authoredRelationEqualities": []
       },
       "staleSemanticEvidence": false
@@ -12983,11 +12968,11 @@
     {
       "lessonId": "G3-UP02-B01",
       "unitId": "G3-UP02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-11-01.2",
       "set": "review",
       "id": "G3-UP02-B01-P10",
-      "kind": "explanation",
-      "sourceFingerprint": "8f8b77653fe4b49184c50a7764af8857dfa3b67cfb91c9fcf521a584d7202bbf",
+      "kind": "choice",
+      "sourceFingerprint": "0b7569eb002d6a36257f1607e6e2ee0c3217bc8f71eb7806c1c7900f5f375a6f",
       "errors": [],
       "flags": [],
       "proofs": [],
@@ -13000,14 +12985,14 @@
       "humanTeachingApproved": false,
       "historicalAgentSample": false,
       "semanticEvidence": {
-        "source": "docs/review/849题最终审校清单_20261009.json",
+        "source": "docs/review/final-task-review/versioned/coding-20261101.json",
         "reviewer": {
           "kind": "Codex-agent",
-          "method": "逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险",
-          "humanTeachingApproved": false,
-          "independentThirdParty": false
+          "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+          "independentThirdParty": false,
+          "humanTeachingApproved": false
         },
-        "reason": "两房同101无法唯一定位，加楼栋等标识在规定范围内唯一；楼层字段须确实能区分两房。",
+        "reason": "题干明确已计算校验值10。按规定用一个字符X表示，保持18位；不是任意挑选字母，也不编码出生月份。无需孩子掌握完整加权求余算法。",
         "authoredRelationEqualities": []
       },
       "staleSemanticEvidence": false
@@ -13015,11 +13000,11 @@
     {
       "lessonId": "G3-UP02-B01",
       "unitId": "G3-UP02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-11-01.2",
       "set": "review",
       "id": "G3-UP02-B01-P11",
-      "kind": "explanation",
-      "sourceFingerprint": "4c991007c2f649d57fc0ed118b34db428c6379d5bc5b6a65b949a7128d087c3f",
+      "kind": "choice",
+      "sourceFingerprint": "5c330faa7e7a3070bd925b38ef9749faf1d3310ddab29a9d37ca30aacd8cca0c",
       "errors": [],
       "flags": [],
       "proofs": [],
@@ -13032,14 +13017,14 @@
       "humanTeachingApproved": false,
       "historicalAgentSample": false,
       "semanticEvidence": {
-        "source": "docs/review/849题最终审校清单_20261009.json",
+        "source": "docs/review/final-task-review/versioned/coding-20261101.json",
         "reviewer": {
           "kind": "Codex-agent",
-          "method": "逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险",
-          "humanTeachingApproved": false,
-          "independentThirdParty": false
+          "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+          "independentThirdParty": false,
+          "humanTeachingApproved": false
         },
-        "reason": "从01到12最后12，一位仅0至9十种不够12个柜；允许解释从1起编号只有九个非零码。",
+        "reason": "传统四级六码按2＋1＋1＋2理解：省级邮政范围、邮区、县市、投递局所。不能颠倒第3位和第4位，也不能套用身份证地址码的行政层级。实际邮编查询以官方为准。",
         "authoredRelationEqualities": []
       },
       "staleSemanticEvidence": false
@@ -13047,11 +13032,11 @@
     {
       "lessonId": "G3-UP02-B01",
       "unitId": "G3-UP02",
-      "contentVersion": "2026-10-09.4",
+      "contentVersion": "2026-11-01.2",
       "set": "review",
       "id": "G3-UP02-B01-P12",
       "kind": "explanation",
-      "sourceFingerprint": "16941de9aca094341dd0865c04d07cedb9864e018f1a55bc91d860a69139e39c",
+      "sourceFingerprint": "b40d227b5253922303747b43cf7194ec31773c7d82fa92701c4d8d46b8f5548b",
       "errors": [],
       "flags": [],
       "proofs": [],
@@ -13064,14 +13049,14 @@
       "humanTeachingApproved": false,
       "historicalAgentSample": false,
       "semanticEvidence": {
-        "source": "docs/review/849题最终审校清单_20261009.json",
+        "source": "docs/review/final-task-review/versioned/coding-20261101.json",
         "reviewer": {
           "kind": "Codex-agent",
-          "method": "逐题阅读题干、参考解答、选项、字段、提示、图示条件；自行建立关系；另一次反驳式复核高风险",
-          "humanTeachingApproved": false,
-          "independentThirdParty": false
+          "method": "逐题核对题干、示例与来源；独立逐个反驳选项；开放方案列出可接受范围",
+          "independentThirdParty": false,
+          "humanTeachingApproved": false
         },
-        "reason": "同号对应两个对象无法选唯一对象；编码必须在使用范围内不冲突。",
+        "reason": "分别限定识别范围：图书格号缺架／层，跨班序号缺班／年级，传统邮编缺具体收件地址与收件人。仅通过查错算法不证明号码真实有效、身份真实或全部资料正确；不要求给出真实姓名、地址或证件。",
         "authoredRelationEqualities": []
       },
       "staleSemanticEvidence": false
