@@ -10,7 +10,10 @@ async page => {
   assert((await page.locator('.classroom-mission p').innerText())===lesson.childClassroom.mission,'开头故事的任务被实验情境覆盖 '+lesson.lessonId);
   assert(await page.locator('.classroom-route button').count()===6,'六步缺失 '+lesson.lessonId);
   const graphical=lesson.introVisual||lesson.mathScenes?.length||lesson.lengthScenes?.length||lesson.articleBlocks[0]?.diagram;
-  if(graphical)assert(await page.locator('.classroom-story [role=img],.classroom-story svg,.classroom-story .teaching-diagram,.classroom-story .ribbon-strip,.classroom-story .lunchboxes,.classroom-story .apple-row,.classroom-story .sticker-row,.classroom-story .tile-diagram,.classroom-story .snack-contents,.classroom-story .candy-comparison').count()>0,'真实问题缺图 '+lesson.lessonId);
+  if(lesson.introVisual?.type==='coding-overview'){
+   const overview=page.locator('.classroom-story').getByRole('group',{name:'四种编码的条件示意',exact:true});
+   assert(await overview.isVisible()&&await overview.locator('article code').count()===4,'编码故事缺少四种条件图 '+lesson.lessonId);
+  }else if(graphical)assert(await page.locator('.classroom-story [role=img],.classroom-story svg,.classroom-story .teaching-diagram,.classroom-story .ribbon-strip,.classroom-story .lunchboxes,.classroom-story .apple-row,.classroom-story .sticker-row,.classroom-story .tile-diagram,.classroom-story .snack-contents,.classroom-story .candy-comparison').count()>0,'真实问题缺图 '+lesson.lessonId);
   await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'390故事溢出 '+lesson.lessonId);
   if(shots.has(lesson.lessonId))await page.locator('.child-classroom').screenshot({path:`output/playwright/v2-audit/template-${lesson.lessonId}-390.png`});
   for(let i=1;i<steps.length;i++){
