@@ -2,17 +2,23 @@ async (page) => {
  const base=new URL(page.url()).origin,data=await (await page.request.get(base+'/api/studio')).json(),errors=[],stories=[],predictions=[];
  page.on('pageerror',e=>errors.push(e.message));
  const assert=(ok,message)=>{if(!ok)throw Error(message)};
+ const assertFigure=async(figure,lesson,message)=>{
+  if(lesson.introVisual?.type==='coding-overview'){
+   const overview=figure.getByRole('group',{name:'四种编码的条件示意',exact:true});
+   assert(await overview.isVisible()&&await overview.locator('article code').count()===4,message+' '+lesson.lessonId);
+  }else assert(await figure.locator('svg, .ribbon-strip, .tile-diagram, .tile-grid, .candy-dots, .snack-contents, .candy-comparison, .lunchboxes, .apple-row, .sticker-row, .intro-month-card, .condition-flow, .condition-groups, .condition-money, .condition-bar, .condition-timeline').count()>0,message+' '+lesson.lessonId);
+ };
  const widths=[1440,390],shots=new Set(['G3-U01-B01','G3-U01-B03','G3-U06-E01','G3-L03-E01','G3-L04-B03','G3-LP01-B01','G3-U03-E02','G3-UP01-B02']);
  for(const lesson of data.lessons.filter(l=>l.introVisual||l.mathScenes?.length||l.lengthScenes?.length||l.articleBlocks[0]?.diagram)){
   await page.goto(base+'/?lesson='+lesson.lessonId);await page.locator('.lesson-article').waitFor();
   if(lesson.childClassroom){await page.getByRole('button',{name:'Kevin 短课堂',exact:true}).click();await page.getByRole('button',{name:'1 真实问题',exact:true}).click()}
   const picture=page.locator(lesson.childClassroom?'.classroom-story [data-intro-visual]' :'.story-opening [data-intro-visual],.story-opening .teaching-figure,.story-opening .teaching-diagram').first();await picture.waitFor().catch(()=>{throw Error("故事图不可见 "+lesson.lessonId)});
-  assert(await picture.locator('svg, .ribbon-strip, .tile-diagram, .tile-grid, .candy-dots, .snack-contents, .candy-comparison, .lunchboxes, .apple-row, .sticker-row, .intro-month-card, .condition-flow, .condition-groups, .condition-money, .condition-bar, .condition-timeline').count()>0,'只有文字没有图 '+lesson.lessonId);
+  await assertFigure(picture,lesson,'只有文字没有图');
   for(const width of widths){await page.setViewportSize({width,height:1000});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'故事图横向溢出 '+lesson.lessonId+' '+width);
    if(shots.has(lesson.lessonId))await picture.screenshot({path:'output/playwright/v2-audit/intro-'+lesson.lessonId+'-'+width+'.png'});
   }
   stories.push(lesson.lessonId);
-  if(lesson.childClassroom){await page.getByRole('button',{name:'2 先猜一猜',exact:true}).click();const prediction=page.locator('.classroom-predict [data-intro-visual]').first();await prediction.waitFor();assert(await prediction.locator('svg, .ribbon-strip, .tile-diagram, .tile-grid, .candy-dots, .snack-contents, .candy-comparison, .lunchboxes, .apple-row, .sticker-row, .intro-month-card, .condition-flow, .condition-groups, .condition-money, .condition-bar, .condition-timeline').count()>0,'预测缺图 '+lesson.lessonId);
+  if(lesson.childClassroom){await page.getByRole('button',{name:'2 先猜一猜',exact:true}).click();const prediction=page.locator('.classroom-predict [data-intro-visual]').first();await prediction.waitFor();await assertFigure(prediction,lesson,'预测缺图');
    assert(await prediction.getAttribute('data-intro-stage')==='prediction','预测阶段图形类型错了');
    if(lesson.lessonId==='G3-U01-B01'){assert(await prediction.locator('[data-prediction-unknown] svg').count()===0,'新照片提前揭晓');assert((await prediction.locator('[data-prediction-unknown]').innerText()).includes('？'),'新照片没有待猜占位')}
    if(lesson.lessonId==='G3-U01-B03')assert(await prediction.locator('[data-net-face]').count()===6,'预测展开图不是六面');

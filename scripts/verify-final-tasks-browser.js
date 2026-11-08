@@ -42,8 +42,9 @@ async page => {
  s=await session('G3-UP01-B02');assert(s.results['G3-UP01-B02-P12'].status==='correct','同载重且称全未通过');
  assert(s.selfChecks['G3-UP01-B02-P12'].firstAnswer.value==='c1','错误首答丢失');checked.push('replacement-mass-unique-parallel-options');
 
- await open('G3-UP02-B01','core');await complete('号码相同会认错架子，需要架号和层号区分。');await next();
- await complete('不一定，固定字段宽度的前导零有助于划分字段。');await next();
+ await open('G3-UP02-B01','core');await complete('前6位440106是地址码，第7—14位是2015年5月16日，15—17位003是顺序码，最后问号是未给出的校验码；不能推断现住址。这只是题中的虚构日期。');await next();
+ await page.locator('.task-options button').filter({hasText:'第17位为4，是偶数，对应女性'}).click();await self();await submit();
+ assert((await session('G3-UP02-B01')).results['G3-UP02-B01-P04'].status==='correct','新版顺序码选择题未通过');await next();
  assert(await page.locator('.explanation-answer textarea').count()===1,'身份码仍是普通数值判分');
  const before=(await data()).progress.wallet.coins;await complete('3207，3是年级，2是班，07是两位序号。');
  s=await session('G3-UP02-B01');assert(s.results['G3-UP02-B01-P07'].status==='pendingReview','编号被假自动批准');
